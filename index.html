@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Naemon.github.io : The naemon website" />
+    <meta name="description" content="Naemon : " />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Naemon.github.io</title>
+    <title>Naemon</title>
   </head>
 
   <body>
@@ -18,8 +18,8 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/naemon">View on GitHub</a>
 
-          <h1 id="project_title">Naemon.github.io</h1>
-          <h2 id="project_tagline">The naemon website</h2>
+          <h1 id="project_title">Naemon</h1>
+          <h2 id="project_tagline"></h2>
 
         </header>
     </div>
@@ -30,33 +30,28 @@
         <h2>
 <a name="welcome-to-naemon" class="anchor" href="#welcome-to-naemon"><span class="octicon octicon-link"></span></a>Welcome to Naemon</h2>
 
-<p>This is the (very) brief homepage for Naemon, a recent fork of Nagios Core.</p>
+<p>This is the homepage for the Naemon project. The Naemon project includes a monitoring core, as well as an ecosystem of add-on software.</p>
 
-<p>Naemon is originaly based on Nagios 4, with some additional patches on top. On the back end, a lot of bugs have been discovered and fixed - notably, NASA can use Naemon to monitor their supercomputer cluster without any special configuration tweaking. On the front end, Naemon gets rid of the old CGI interface in favor of the faster and more useful <a href="http://thruk.org">Thruk</a> interface. In the future, compatibility will most likely diverge, but we will make sure that external API's such as livestatus, the query handler, the object cache file and status data file remain more or less the same. Object configuration won't change hugely in the near future either. Instead we'll focus on extending existing integration points and improving performance and stability in the core.</p>
+<p>The Naemon core is our version of the Nagios 4 core, which has a lot of extra bugfixes - notably, NASA can use Naemon to monitor their supercomputer cluster without any special configuration tweaking. For the time being, it should function as a drop-in replacement for Nagios, but with additional work spent on improving performance and stability. In the future, compatibility will most likely diverge, but we will make sure that external API's behave the more or less the same, such as object configuration, livestatus, the query handler, the object cache file and status data file.</p>
 
-<h3>
-<a name="why-fork" class="anchor" href="#why-fork"><span class="octicon octicon-link"></span></a>Why fork?</h3>
+<p>The Naemon project also includes a GUI, but not the old Nagios CGI interface - instead we have a fast, modern and more useful replacement, <a href="http://thruk.org">Thruk</a>.</p>
+
+<h4>
+<a name="why-fork" class="anchor" href="#why-fork"><span class="octicon octicon-link"></span></a>Why fork?</h4>
 
 <p>Andreas Ericsson, who wrote an overwhelming majority (94.5%) of the changes that took Nagios from version 3 to version 4, got kicked out from the Nagios project once version 4 was released. The explanation was fuzzy, and suggested that the underlying reason had more to do with politics and branding, than with any technical shortcomings. In order to continue the development, he decided to launch his own project. He was quickly joined by a growing group of other interested people under the Naemon banner who wanted to help out and make it really great.</p>
 
 <h3>
-<a name="whos-doing-what" class="anchor" href="#whos-doing-what"><span class="octicon octicon-link"></span></a>Who's doing what?</h3>
-
-<ul>
-<li>Andreas Ericsson (<a href="https://github.com/ageric" class="user-mention">@ageric</a>) - Core developer</li>
-<li>Dan Wittenberg (<a href="https://github.com/dwittenberg2008" class="user-mention">@dwittenberg2008</a>) - RPM packaging and testing</li>
-<li>Robin Sonefors (<a href="https://github.com/ozamosi" class="user-mention">@ozamosi</a>) - Core developer</li>
-<li>Sven Nierlein (<a href="https://github.com/sni" class="user-mention">@sni</a>) - Core/GUI developer</li>
-<li>You - Whatever you like and can :)</li>
-</ul><h3>
-<a name="how-can-i-help" class="anchor" href="#how-can-i-help"><span class="octicon octicon-link"></span></a>How can I help?</h3>
-
-<p>Send an email to <a href="mailto:naemon-dev@monitoring-lists.org">naemon-dev@monitoring-lists.org</a> to get in touch with us. Everyone's welcome, assuming you're competent, interested and friendly. We're currently in desperate need of a logo designer and web designer/maintainer but, as with all sane opensource projects, "patches welcome" ;-)</p>
-
-<h3>
 <a name="community" class="anchor" href="#community"><span class="octicon octicon-link"></span></a>Community</h3>
 
-<p>Feel free to get in touch with other users and the Naemon developers :</p>
+<p>Naemon is created by the community, for the community. While the legal stuff isn't done quite yet, we are working toward setting up an independent, non-commercial legal entity to manage the Naemon project, in order to ensure that there will never be a Naemon XI, that the project will always be free, and that decisions will always be based on what is best for the community at large. We do encourage commercial vendors to base their own enterprise offerings on the Naemon code - it's free software, after all - but the project is to exist as its own, distinct entity.</p>
+
+<h4>
+<a name="how-can-i-help" class="anchor" href="#how-can-i-help"><span class="octicon octicon-link"></span></a>How can I help?</h4>
+
+<p>Send an email to <a href="mailto:naemon-dev@monitoring-lists.org">naemon-dev@monitoring-lists.org</a> to get in touch with us. Everyone's welcome, assuming you're competent, interested and friendly. We're currently in desperate need of a logo designer and web designer/maintainer but, as with all sane open source projects, "patches welcome" ;-)</p>
+
+<p>You can get in touch with other users and developers in several ways:</p>
 
 <ul>
 <li>Users list: <a href="https://www.monitoring-lists.org/list/listinfo/naemon-users/">https://www.monitoring-lists.org/list/listinfo/naemon-users/</a>
@@ -64,6 +59,15 @@
 <li>Developers list: <a href="https://www.monitoring-lists.org/list/listinfo/naemon-dev/">https://www.monitoring-lists.org/list/listinfo/naemon-dev/</a>
 </li>
 <li>IRC Channel: #naemon and #naemon-devel on freenode - irc://freenode.net/naemon</li>
+</ul><h4>
+<a name="whos-doing-what" class="anchor" href="#whos-doing-what"><span class="octicon octicon-link"></span></a>Who's doing what?</h4>
+
+<ul>
+<li>Andreas Ericsson (<a href="https://github.com/ageric" class="user-mention">@ageric</a>) - Core developer</li>
+<li>Dan Wittenberg (<a href="https://github.com/dwittenberg2008" class="user-mention">@dwittenberg2008</a>) - RPM packaging and testing</li>
+<li>Robin Sonefors (<a href="https://github.com/ozamosi" class="user-mention">@ozamosi</a>) - Core developer</li>
+<li>Sven Nierlein (<a href="https://github.com/sni" class="user-mention">@sni</a>) - Core/GUI developer</li>
+<li>You - Whatever you like and can :)</li>
 </ul><h3>
 <a name="online-demo" class="anchor" href="#online-demo"><span class="octicon octicon-link"></span></a>Online Demo</h3>
 
