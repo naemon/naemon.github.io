@@ -32,9 +32,9 @@
 
 <p>This is the homepage for the Naemon project. The Naemon project includes a monitoring core, as well as an ecosystem of add-on software.</p>
 
-<p>The Naemon core is our version of the Nagios 4 core, which has a lot of extra bugfixes - notably, NASA can use Naemon to monitor their supercomputer cluster without any special configuration tweaking. For the time being, it should function as a drop-in replacement for Nagios, but with additional work spent on improving performance and stability. In the future, compatibility will most likely diverge, but we will make sure that external API's behave the more or less the same, such as object configuration, livestatus, the query handler, the object cache file and status data file.</p>
+<p>The Naemon core is our version of the Nagios 4 core, which has a lot of extra bugfixes - notably, NASA can use Naemon to monitor their supercomputer cluster without any special configuration tweaking. For the time being, it should function as a drop-in replacement for Nagios, with us spending additional work on improving performance and stability. In the future, compatibility will most likely diverge, but we will make sure that external API's, such as object configuration, the query handler, the object cache file and status data file, behave the more or less the same.</p>
 
-<p>The Naemon project also includes a GUI, but not the old Nagios CGI interface - instead we have a fast, modern and more useful replacement, <a href="http://thruk.org">Thruk</a>.</p>
+<p>The Naemon project also includes a GUI, but not the old Nagios CGI interface - instead we have a fast, modern and more useful replacement, <a href="http://thruk.org">Thruk</a>. We also bundle livestatus, which is how Thruk commuicates with the core.</p>
 
 <h4>
 <a name="why-fork" class="anchor" href="#why-fork"><span class="octicon octicon-link"></span></a>Why fork?</h4>
