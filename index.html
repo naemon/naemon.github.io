@@ -27,27 +27,33 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h2>
-<a name="welcome-to-naemon" class="anchor" href="#welcome-to-naemon"><span class="octicon octicon-link"></span></a>Welcome to Naemon</h2>
+        <h1>
+<a name="naemon-the-monitoring-suite" class="anchor" href="#naemon-the-monitoring-suite"><span class="octicon octicon-link"></span></a>Naemon, the monitoring suite</h1>
 
-<p>This is the homepage for the Naemon project. The Naemon project includes a monitoring core, as well as an ecosystem of add-on software.</p>
+<p>The Naemon project includes a monitoring core, as well as an ecosystem of add-on software.</p>
 
-<p>The Naemon core is our version of the Nagios 4 core, which has a lot of extra bugfixes - notably, NASA can use Naemon to monitor their supercomputer cluster without any special configuration tweaking. For the time being, it should function as a drop-in replacement for Nagios, with us spending additional work on improving performance and stability. In the future, compatibility will most likely diverge, but we will make sure that external API's, such as object configuration, the query handler, the object cache file and status data file, behave the more or less the same.</p>
+<p>The Naemon core is our version of the Nagios 4 core, but with several improvements and bug fixes. For more details, see our <a href="https://raw.github.com/naemon/naemon-core/master/NEWS">NEWS file</a>. We intend for it to function as a drop-in replacement for current versions of Nagios, but by changing to Naemon, you'll automatically get our bug fixes, new features and performance enhancements for free.</p>
 
-<p>The Naemon project also includes a GUI, but not the old Nagios CGI interface - instead we have a fast, modern and more useful replacement, <a href="http://thruk.org">Thruk</a>. We also bundle livestatus, which is how Thruk commuicates with the core.</p>
+<p>The Naemon project also includes a GUI, but not the old Nagios CGI interface - instead we have a fast, modern and more useful replacement, <a href="http://thruk.org">Thruk</a>. We also bundle Livestatus, which is how Thruk communicates with the core. You can test the online demo of Thruk at <a href="http://demo.thruk.org">http://demo.thruk.org</a></p>
 
-<h4>
-<a name="why-fork" class="anchor" href="#why-fork"><span class="octicon octicon-link"></span></a>Why fork?</h4>
+<p>There is not yet a stable release, however, you can grab the code from <a href="https://github.com/naemon">github</a> and download nightly builds for many platforms through <a href="http://labs.consol.de/naemon/">http://labs.consol.de/naemon/</a></p>
 
-<p>Andreas Ericsson, who wrote an overwhelming majority (94.5%) of the changes that took Nagios from version 3 to version 4, got kicked out from the Nagios project once version 4 was released. The explanation was fuzzy, and suggested that the underlying reason had more to do with politics and branding, than with any technical shortcomings. In order to continue the development, he decided to launch his own project. He was quickly joined by a growing group of other interested people under the Naemon banner who wanted to help out and make it really great.</p>
+<h1>
+<a name="naemon-the-community" class="anchor" href="#naemon-the-community"><span class="octicon octicon-link"></span></a>Naemon, the community</h1>
+
+<p>Naemon is created by the community, for the community. While the legal stuff isn't done quite yet, we are working toward setting up an independent, non-commercial legal entity to manage the Naemon project. We wish to thereby ensure that decisions are based on technical merit and what we, the users, want - not what earns someone's employer the most money. We believe this can only happen through independence and transparency.</p>
+
+<p>This does not mean that we're hostile towards commercial offerings based on the Naemon code - quite the opposite: we wish to see our code used and reused in as many settings and distributions as possible, commercial as well as noncommercial, all competing on equal ground with each other.</p>
 
 <h3>
-<a name="community" class="anchor" href="#community"><span class="octicon octicon-link"></span></a>Community</h3>
+<a name="but-why-dont-you-guys-join-nagiosnagios-forknagios-rewrite" class="anchor" href="#but-why-dont-you-guys-join-nagiosnagios-forknagios-rewrite"><span class="octicon octicon-link"></span></a>But why don't you guys join $(nagios/nagios fork/nagios rewrite)?</h3>
 
-<p>Naemon is created by the community, for the community. While the legal stuff isn't done quite yet, we are working toward setting up an independent, non-commercial legal entity to manage the Naemon project, in order to ensure that there will never be a Naemon XI, that the project will always be free, and that decisions will always be based on what is best for the community at large. We do encourage commercial vendors to base their own enterprise offerings on the Naemon code - it's free software, after all - but the project is to exist as its own, distinct entity.</p>
+<p>We like Nagios Core, and we would have liked to contribute to its further development - in fact, as part of our team you'll find administrators with plenty of experience from huge Nagios installations, as well as many of the developers who contributed towards turning Nagios 3 into Nagios 4, including Andreas Ericsson, who about 94.5% of those patches. Alas, for reasons that appear to be related to politics/profit, we no longer feel welcome in the Nagios Core community.</p>
 
-<h4>
-<a name="how-can-i-help" class="anchor" href="#how-can-i-help"><span class="octicon octicon-link"></span></a>How can I help?</h4>
+<p>We do feel many of the many forks and rewrites Nagios has spawned have interesting ideas, but many of them are organized in ways that are vulnerable to creating the same kind of second-guessing of motivations. We would like to continue to explore the ideas we started to explore in Nagios 4, in terms of features, behaviour and functionality, and we would also like to explore project structure as well. Still, we believe we have much in common with many of the other projects, and hope that as we find our place in the open monitoring ecosystem, we'll be able to create a fruitful cooperation and exchange of ideas and code.</p>
+
+<h1>
+<a name="how-can-i-help" class="anchor" href="#how-can-i-help"><span class="octicon octicon-link"></span></a>How can I help?</h1>
 
 <p>You can get in touch with other users and developers in several ways:</p>
 
@@ -57,12 +63,10 @@
 <li>Developers list: <a href="https://www.monitoring-lists.org/list/listinfo/naemon-dev/">https://www.monitoring-lists.org/list/listinfo/naemon-dev/</a>
 </li>
 <li>IRC channel: #naemon and #naemon-devel on freenode - irc://freenode.net/naemon</li>
-</ul><p>We welcome everybody, regardless of background, commercial affiliations, etc. We do expect you to be interested, polite, and competent.</p>
+</ul><p>We welcome everybody, regardless of background, commercial affiliations, etc, as long as you are interested and polite.</p>
 
-<p>As you might be able to tell, we are short on designers, documentation authors, testers, and many other valuable skills.</p>
-
-<h4>
-<a name="whos-doing-what" class="anchor" href="#whos-doing-what"><span class="octicon octicon-link"></span></a>Who's doing what?</h4>
+<h3>
+<a name="whos-doing-what" class="anchor" href="#whos-doing-what"><span class="octicon octicon-link"></span></a>Who's doing what?</h3>
 
 <ul>
 <li>Andreas Ericsson (<a href="https://github.com/ageric" class="user-mention">@ageric</a>) - Core developer</li>
@@ -70,10 +74,7 @@
 <li>Robin Sonefors (<a href="https://github.com/ozamosi" class="user-mention">@ozamosi</a>) - Core developer</li>
 <li>Sven Nierlein (<a href="https://github.com/sni" class="user-mention">@sni</a>) - Core/GUI developer</li>
 <li>You - Whatever you like and can :)</li>
-</ul><h3>
-<a name="online-demo" class="anchor" href="#online-demo"><span class="octicon octicon-link"></span></a>Online Demo</h3>
-
-<p>You can test the online demo of Thruk (the web gui of Naemon) at <a href="http://demo.thruk.org">http://demo.thruk.org</a></p>
+</ul>
       </section>
     </div>
 
