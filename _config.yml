@@ -1,0 +1,5 @@
+name: Naemon
+markdown: redcarpet
+pygments: true
+paginate: 10
+paginate_path: "news/page:num"

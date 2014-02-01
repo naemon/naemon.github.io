@@ -1,91 +1,32 @@
-<!DOCTYPE html>
-<html>
+---
+layout: raw
+title: Naemon
+---
+<div class="jumbotron">
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+    <p>Naemon is the new monitoring suite that aims to be faster and more stable, while giving you a clearer view of the state of your network.</p>
+    <p><a class="btn btn-primary btn-lg" href="/download" role="button">Download &raquo;</a></p>
+  </div>
+</div>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Naemon : " />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Naemon</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/naemon">View on GitHub</a>
-
-          <h1 id="project_title">Naemon</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>The Core</h2>
+      <p>The Naemon core is a network monitoring tool based on the Nagios 4 core, but with many bug fixes, new features, and performance enhancements. If you today use Nagios, you should switch to Naemon to get bugfixes, new features, and performance enhancements.</p>
+      <p><a class="btn btn-default" href="https://raw.github.com/naemon/naemon-core/master/NEWS" role="button">View NEWS &raquo;</a></p>
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="naemon-the-monitoring-suite" class="anchor" href="#naemon-the-monitoring-suite"><span class="octicon octicon-link"></span></a>Naemon, the monitoring suite</h1>
-
-<p>The Naemon project includes a monitoring core, as well as an ecosystem of add-on software.</p>
-
-<p>The Naemon core is a drop-in replacement for Nagios 4 core, but with several improvements and bug fixes. For more details, see our <a href="https://raw.github.com/naemon/naemon-core/master/NEWS">NEWS file</a>. By changing to Naemon, you'll automatically get our bug fixes, new features and performance enhancements for free.</p>
-
-<p>The Naemon project also includes a GUI, but not the old Nagios CGI interface - instead we have a fast, modern and more useful replacement, <a href="http://thruk.org">Thruk</a>. We also bundle Livestatus, which is how Thruk communicates with the core. You can test the online demo of Thruk at <a href="http://demo.thruk.org">http://demo.thruk.org</a></p>
-
-<p>There is not yet a stable release, however, you can grab the code from <a href="https://github.com/naemon">github</a> and download nightly builds for many platforms through <a href="http://labs.consol.de/naemon/">http://labs.consol.de/naemon/</a></p>
-
-<h1>
-<a name="naemon-the-community" class="anchor" href="#naemon-the-community"><span class="octicon octicon-link"></span></a>Naemon, the community</h1>
-
-<p>Naemon is created by the community, for the community. While the legal stuff isn't done quite yet, we are working toward setting up an independent, non-commercial legal entity to manage the Naemon project. We wish to thereby ensure that decisions are based on technical merit and what we, the users, want - not what earns someone's employer the most money. We believe this can only happen through independence and transparency.</p>
-
-<p>This does not mean that we're hostile towards commercial offerings based on the Naemon code - quite the opposite: we wish to see our code used and reused in as many settings and distributions as possible, commercial as well as noncommercial, all competing on equal ground with each other.</p>
-
-<h3>
-<a name="but-why-dont-you-guys-join-nagiosnagios-forknagios-rewrite" class="anchor" href="#but-why-dont-you-guys-join-nagiosnagios-forknagios-rewrite"><span class="octicon octicon-link"></span></a>But why don't you guys join $(nagios/nagios fork/nagios rewrite)?</h3>
-
-<p>We like Nagios Core, and we would have liked to contribute to its further development - in fact, as part of our team you'll find administrators with plenty of experience from huge Nagios installations, as well as many of the developers who contributed towards turning Nagios 3 into Nagios 4, including Andreas Ericsson, who wrote about 95% of those patches. Alas, for reasons that appear to be related to politics/profit, we no longer feel welcome in the Nagios Core community.</p>
-
-<p>We do feel many of the many forks and rewrites Nagios has spawned have interesting ideas, but many of them are organized in ways that are vulnerable to creating the same kind of second-guessing of motivations. We would like to continue to explore the ideas we started to explore in Nagios 4, in terms of features, behaviour and functionality, and we would also like to explore project structure as well. Still, we believe we have much in common with many of the other projects, and hope that as we find our place in the open monitoring ecosystem, we'll be able to create a fruitful cooperation and exchange of ideas and code.</p>
-
-<h1>
-<a name="how-can-i-help" class="anchor" href="#how-can-i-help"><span class="octicon octicon-link"></span></a>How can I help?</h1>
-
-<p>You can get in touch with other users and developers in several ways:</p>
-
-<ul>
-<li>Users list: <a href="https://www.monitoring-lists.org/list/listinfo/naemon-users/">https://www.monitoring-lists.org/list/listinfo/naemon-users/</a>
-</li>
-<li>Developers list: <a href="https://www.monitoring-lists.org/list/listinfo/naemon-dev/">https://www.monitoring-lists.org/list/listinfo/naemon-dev/</a>
-</li>
-<li>IRC channel: #naemon and #naemon-devel on freenode - irc://freenode.net/naemon</li>
-</ul><p>We welcome everybody, regardless of background, commercial affiliations, etc, as long as you are interested and polite.</p>
-
-<h3>
-<a name="whos-doing-what" class="anchor" href="#whos-doing-what"><span class="octicon octicon-link"></span></a>Who's doing what?</h3>
-
-<ul>
-<li>Andreas Ericsson (<a href="https://github.com/ageric" class="user-mention">@ageric</a>) - Core developer</li>
-<li>Dan Wittenberg (<a href="https://github.com/dwittenberg2008" class="user-mention">@dwittenberg2008</a>) - RPM packaging and testing</li>
-<li>Robin Sonefors (<a href="https://github.com/ozamosi" class="user-mention">@ozamosi</a>) - Core developer</li>
-<li>Sven Nierlein (<a href="https://github.com/sni" class="user-mention">@sni</a>) - Core/GUI developer</li>
-<li>You - Whatever you like and can :)</li>
-</ul>
-      </section>
+    <div class="col-md-4">
+      <h2>The Suite</h2>
+      <p>Rather than the Nagios way of putting everything from UI to check scheduler in one package, we like to keep things more modular. The sum of all the modules that we build and ship will give you a good monitoring suite.</p>
+      <p><a class="btn btn-default" href="/suite.html" role="button">View more information &raquo;</a></p>
+   </div>
+    <div class="col-md-4">
+      <h2>The Project</h2>
+      <p>Naemon is created by the community, for the community, and (soon) owned by the community ourselves. This lets us be governed by our needs, rather than corporate profit motives.</p>
+      <p><a class="btn btn-default" href="/project.html" role="button">View more information &raquo;</a></p>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
-</html>
+  </div>
+</div>
