@@ -13,3 +13,8 @@ A IMG.icon {
 	top: -45px;
 	float: right;
 }
+
+SPAN.date {
+	float: left;
+	padding-right: 10px;
+}
