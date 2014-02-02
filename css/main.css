@@ -3,3 +3,13 @@ body {
 	padding-top: 50px;
 	padding-bottom: 20px;
 }
+
+A IMG.icon {
+	vertical-align: sub;
+}
+
+.newsbtn {
+	position: relative;
+	top: -45px;
+	float: right;
+}

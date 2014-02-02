@@ -2,8 +2,11 @@
 layout: default
 title: News
 name: News
-extra_head: <link href="/news/atom" type="application/atom+xml" rel="alternate" title="News feed">
+extra_head: <link href="/news/feed" type="application/atom+xml" rel="alternate" title="News feed">
 ---
+
+<a class="btn btn-default btn-xs newsbtn" href="/news/feed" role="button"><img src="/images/feed-icon16x16.png" class="icon" /> News Feed</a>
+
 {% for post in paginator.posts %}
 <div class="panel panel-default">
   <div class="panel-heading">
