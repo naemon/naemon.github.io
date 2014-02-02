@@ -5,7 +5,7 @@ The naemon website.
 
 Written for [Jekyll](http://jekyllrb.com/), and relying on [bootstrap](http://getbootstrap.com/).
 
-To get jekyll and all requirements in place, install bundler (`rubygems-bundler` on fedora, `bundler` on debian, `ruby-bundler` on ubuntu), and run `bundle install`. Then you should be able to should be serve the page up locally using `jekyll serve`.
+To get jekyll and all requirements in place, install bundler (`rubygems-bundler` on fedora, `bundler` on debian, `ruby-bundler` on ubuntu), and run `bundle install`. Then you should be able to should be serve the page up locally using `jekyll serve --watch`.
 
 
 Install locally
@@ -17,7 +17,7 @@ gem directly.
   * %> cd /tmp && git clone https://github.com/naemon/naemon.github.io.git
   * %> cd /tmp/naemon.github.io
   * %> GEM_HOME=.gem gem1.9.3 install github-pages
-  * %> GEM_HOME=.gem ./.gem/bin/jekyll serve
+  * %> GEM_HOME=.gem ./.gem/bin/jekyll serve --watch
 
 After the initial install, only the last step is required to start the server.
 
