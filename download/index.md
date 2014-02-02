@@ -16,3 +16,14 @@ We build nightly packages for several versions of CentOS/RedHat, Debian, SLES, a
 
 #### Source
 Download the latest development source code from [github](http://github.com/naemon/naemon).
+
+### Getting started
+After installing there are a few simple things left to do.
+
+Install any plugins you want (your distribution probably carries monitoring-plugins or nagios-plugins), and adjust the $USER1$ variable in /etc/naemon/resource.cfg to where they are.
+
+Start the naemon service, the thruk service, and your distribution's apache service.
+
+Navigate to your server with a web browser, and log in using "thrukadmin"/"thrukadmin".
+
+You should now be logged in to your new monitoring system.
