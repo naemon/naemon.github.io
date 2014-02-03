@@ -4,9 +4,9 @@ layout: nil
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title>Your Website</title>
-  <link href="http://example.com/"/>
-  <link type="application/atom+xml" rel="self" href="http://example.com/atom.xml"/>
+  <title>Naemon</title>
+  <link href="http://www.naemon.org/"/>
+  <link type="application/atom+xml" rel="self" href="http://www.naemon.org/news/feed"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>http://naemon.org/news/</id>
   <author>
@@ -16,7 +16,7 @@ layout: nil
 
   {% for post in site.posts %}
   <entry>
-    <id>http://example.com{{ post.id }}</id>
+    <id>http://naemon.org/news/{{ post.id }}</id>
     <link type="text/html" rel="alternate" href="http://naemon.org/news/{{ post.url }}"/>
     <title>{{ post.title }}</title>
     <published>{{ post.date | date_to_xmlschema }}</published>
