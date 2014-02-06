@@ -23,8 +23,12 @@ After installing there are a few simple things left to do.
 
 Install any plugins you want (your distribution probably carries monitoring-plugins or nagios-plugins), and adjust the $USER1$ variable in /etc/naemon/resource.cfg to where they are.
 
+Configure your firewall software to accept incomming port 80 requests.
+
+Configure your selinux policy.
+
 Start the naemon service, the thruk service, and your distribution's apache service.
 
-Navigate to your server with a web browser, and log in using "thrukadmin"/"thrukadmin".
+Navigate to your server (<ip>/naemon) with a web browser, and log in using "thrukadmin"/"thrukadmin".
 
 You should now be logged in to your new monitoring system.
