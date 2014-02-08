@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="row">
+    <div class="col-xs-9">
+        {{ content }}
+    </div>
+    <div class="col-xs-3" id="NaemonScrollspy">
+        <ul class="nav nav-tabs nav-stacked affix-top" data-spy="affix"></ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+<!--
+  // create side bar navigation automatically from h3/h4 tags
+  // put every h3 in the side bar
+  jQuery("DIV.container H3").each(function(nr, el) {
+    jQuery('<a id="section_'+nr+'" class="nav_anchor">').insertBefore(el);
+    var nav_section = jQuery("<li class='"+(nr==0 ? 'active' : '')+"'><a href='#section_"+nr+"'>"+el.innerHTML+"</a></li>");
+    jQuery('#NaemonScrollspy > UL').append(nav_section);
+
+    // add every h4 as sub menu entry
+    var sub_elements = jQuery(el).nextUntil('H3', 'H4');
+    if(sub_elements.size() > 1) {
+        var sub_section = jQuery('<ul></ul>');
+        jQuery(nav_section).append(sub_section);
+        sub_elements.each(function(sub_nr, sub_el) {
+            jQuery('<a name="sub_section_'+nr+'_'+sub_nr+'" class="sub_nav_anchor">').insertBefore(sub_el);
+            jQuery(sub_section).append("<li><a href='#sub_section_"+nr+"_"+sub_nr+"'>"+sub_el.innerHTML+"</a></li>");
+        });
+    }
+  });
+  // refresh affix
+  jQuery('[data-spy="affix"]').each(function () {
+    jQuery(this).affix('refresh')
+  });
+-->
+</script>
