@@ -29,6 +29,6 @@ Configure your selinux policy.
 
 Start the naemon service, the thruk service, and your distribution's apache service.
 
-Navigate to your server (<ip>/naemon) with a web browser, and log in using "thrukadmin"/"thrukadmin".
+Navigate to your server (<ip>/naemon) with a web browser, and log in using "admin"/"admin".
 
 You should now be logged in to your new monitoring system.
