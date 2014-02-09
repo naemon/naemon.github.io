@@ -80,14 +80,77 @@ topic is covered in the [Developers Guide](/documentation/developer/#buildnaemon
 
 ### Support
 
+Naemons philosophy is "from the community, for the community", so there are many
+ways to get in touch with other users.
+
+We have several of the usual means of contact:
+
+ * Mailing lists: [users list](https://www.monitoring-lists.org/list/listinfo/naemon-users/) | [developers list](https://www.monitoring-lists.org/list/listinfo/naemon-dev/)
+ * IRC channels: #naemon and #naemon-devel on freenode
+ * Support Forum: [monitoring-portal.org](http://monitoring-portal.org/wbb/index.php?page=Board&boardID=111) (english/german)
+
+
+
 ### Getting Started
+
+
+
 
 ### Configuring Naemon
 
 For now, we'll have to refer you to the [nagios documentation][nagios] for core documentation.
-So [please help](/community); writing our own documentations as soon as possible.
+So [please help](/community) writing our own documentation as soon as possible.
 
-### Running Nagios
+### Running Naemon
+
+Basically running Naemon is not a big deal.
+
+Running a config check:
+
+```
+#>/etc/init.d/naemon checkconfig
+...
+Reading configuration data...
+   Read main config file okay...
+   Read object config files okay...
+
+Running pre-flight check on configuration data...
+
+Checking objects...
+        Checked 21 services.
+        Checked 4 hosts.
+        Checked 4 host groups.
+        Checked 1 service groups.
+        Checked 1 contacts.
+        Checked 1 contact groups.
+        Checked 25 commands.
+        Checked 6 time periods.
+        Checked 0 host escalations.
+        Checked 0 service escalations.
+Checking for circular paths...
+        Checked 4 hosts
+        Checked 0 service dependencies
+        Checked 0 host dependencies
+        Checked 6 timeperiods
+Checking global event handlers...
+Checking obsessive compulsive processor commands...
+Checking misc settings...
+
+Total Warnings: 0
+Total Errors:   0
+
+Things look okay - No serious problems were detected during the pre-flight check
+```
+
+Error message are hopefully pretty self-explaining.
+
+
+Starting Naemon:
+
+```
+#>/etc/init.d/naemon start
+[ ok ] Starting naemon: :.
+```
 
 ### The Basics
 
