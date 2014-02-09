@@ -54,7 +54,7 @@ First we need to install the gpg key. This step has to be done only once:
 %> sudo gpg --armor --export F8C1CA08A57B9ED7 | apt-key add -
 ```
 
-<div class="alert alert-warning"><i class="glyphicon glyphicon-exclamation-sign"></i> As there are now release downloads yes, this howto points to the <b>testing</b> repository.</div>
+<div class="alert alert-warning"><i class="glyphicon glyphicon-exclamation-sign"></i> As there are no release downloads yet, this howto points to the <b>testing</b> repository.</div>
 
 Enable the Consol* Labs Repository. This has to be done only once too.
 
@@ -188,6 +188,8 @@ Starting Naemon:
 #### Mod-Gearman
 
 #### NDO
+
+#### OMD
 
 
 
