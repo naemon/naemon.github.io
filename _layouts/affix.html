@@ -26,12 +26,14 @@ layout: default
     if(sub_elements.size() > 1) {
         var sub_section = jQuery('<ul></ul>');
         jQuery(nav_section).append(sub_section);
-        sub_elements.each(function(sub_nr, sub_el) {
-            var sublabel = sub_el.innerHTML.replace(/[^a-zA-Z0-9]*/g, '').toLowerCase();
-            jQuery('<a name="'+sub_el+'" class="sub_nav_anchor">').insertBefore(sub_el);
-            jQuery(sub_section).append("<li><a href='#"+sublabel+"'>"+sub_el.innerHTML+"</a></li>");
-        });
     }
+    sub_elements.each(function(sub_nr, sub_el) {
+        var sublabel = sub_el.innerHTML.replace(/[^a-zA-Z0-9]*/g, '').toLowerCase();
+        jQuery('<a name="'+sublabel+'" class="sub_nav_anchor">').insertBefore(sub_el);
+        if(sub_elements.size() > 1) {
+            jQuery(sub_section).append("<li><a href='#"+sublabel+"'>"+sub_el.innerHTML+"</a></li>");
+        }
+    });
   });
   // refresh affix
   jQuery('[data-spy="affix"]').each(function () {
