@@ -20,6 +20,15 @@ SPAN.date {
 	padding-right: 10px;
 }
 
+H3 {
+	border-bottom: 1px solid #DDDDDD;
+	padding-top: 20px;
+}
+
+H4, H5 {
+	padding-top: 10px;
+}
+
 /* affix styles */
 /* Custom Styles */
 ul.nav-tabs {
