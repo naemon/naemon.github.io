@@ -11,23 +11,8 @@ or not yet written. For the latter, see [](#)
 
 #### Why A Fork?
 
-We like(d) Nagios Core, and we would have liked to contribute to its further
-development - in fact, as part of our team you'll find administrators with
-plenty of experience from huge Nagios installations, as well as many of the
-developers who contributed towards turning Nagios 3 into Nagios 4, including
-Andreas Ericsson, who wrote about 95% of those patches. Alas, for reasons that
-appear to be related to politics/profit, we no longer feel welcome in the
-Nagios Core community.
+Read [Why A Fork](/project.html) on the projects page.
 
-We do feel many of the many forks and rewrites Nagios has spawned have
-interesting ideas, but many of them are organized in ways that are vulnerable
-to creating the same kind of second-guessing of motivations. We would like to
-continue to explore the ideas we started to explore in Nagios 4, in terms of
-features, behaviour and functionality, and we would also like to explore
-project structure as well. Still, we believe we have much in common with many
-of the other projects, and hope that as we find our place in the open
-monitoring ecosystem, we'll be able to create a fruitful cooperation and
-exchange of ideas and code.
 
 #### How Can I Help?
 
