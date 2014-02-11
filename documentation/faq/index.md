@@ -38,12 +38,15 @@ first have to find that library:
   /lib/i386-linux-gnu/libpthread.so.0
 ```
 
-Then run Naemon with GDB, you will have to type 'run' after the prompt:
+On Debian/Ubuntu systems you should install the `naemon-core-dbg` package which
+contains additional debuging symbols that makes toubleshooting a lot easier.
+
+Then run Naemon with GDB, you will have to type `run` after the prompt:
 
 ```bash
- %>LD_PRELOAD=/lib/i386-linux-gnu/libpthread.so.0 gdb --args /usr/bin/naemon /etc/naemon/naemon.cfg
-   GNU gdb (GDB) 7.4.1-debian
-   Copyright (C) 2012 Free Software Foundation, Inc.
+ %>LD_PRELOAD=/lib/libpthread.so.0 gdb --args /usr/bin/naemon-dbg /etc/naemon/naemon.cfg
+   GNU gdb (GDB) 7.0.1-debian
+   Copyright (C) 2009 Free Software Foundation, Inc.
    License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
    This is free software: you are free to change and redistribute it.
    There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
@@ -51,27 +54,28 @@ Then run Naemon with GDB, you will have to type 'run' after the prompt:
    This GDB was configured as "i486-linux-gnu".
    For bug reporting instructions, please see:
    <http://www.gnu.org/software/gdb/bugs/>...
-   Reading symbols from /usr/bin/naemon...(no debugging symbols found)...done.
+   Reading symbols from /usr/bin/naemon-dbg...done.
    (gdb) run
 ```
 
 After typing 'run' you need to wait till the program crashes or exists otherwise.
-In our case we just killed the core, so we will get this message:
+In our case we just used 'kill -11' to fake a segfault in the core:
 
 ```bash
-Program received signal SIGTERM, Terminated.
-0xb7fe1424 in __kernel_vsyscall ()
+Program received signal SIGSEGV, Segmentation fault.
+0xb7fe2424 in __kernel_vsyscall ()
+(gdb)
+```
+
+By typing `bt` you will get the desired backtrace:
+
+```
 (gdb) bt
-```
-
-By typing 'bt' you will get the desired backtrace:
-
-```
-#0  0xb7fe1424 in __kernel_vsyscall ()
-#1  0xb7f061f6 in epoll_wait () from /lib/i386-linux-gnu/i686/cmov/libc.so.6
-#2  0x080c38b7 in iobroker_poll ()
-#3  0x08079f2d in event_execution_loop ()
-#4  0x0805ae62 in main ()
+#0  0xb7fe2424 in __kernel_vsyscall ()
+#1  0xb7f1b6f6 in epoll_wait () from /lib/i686/cmov/libc.so.6
+#2  0x080c3d07 in iobroker_poll (iobs=0x80ef0b0, timeout=1500) at iobroker.c:348
+#3  0x08077b18 in event_execution_loop () at events.c:1060
+#4  0x080821db in main (argc=2, argv=0xbffff644) at naemon.c:768
 ```
 
 Now go to the [naemon issues](https://github.com/naemon/naemon/issues) page and file a
