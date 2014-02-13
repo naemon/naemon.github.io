@@ -1,0 +1,159 @@
+#!/usr/bin/perl
+
+use warnings;
+use strict;
+use POSIX qw/mktime/;
+use Carp;
+
+#################################################
+# settings
+my $src_url  = 'http://tracker.nagios.org/csv_export.php';
+my $src_file = 'bugs.csv';
+my $max_age  = 86400;
+my $min_id   = 456; # hide old nagios 3 related bugs
+my $naemon_states = {
+    '563' => 'not applicable',
+    '562' => 'fixed in 0.8.0',
+    '545' => 'not applicable',
+    '544' => 'not applicable',
+    '541' => 'fixed in 0.8.0',
+    '538' => 'not applicable',
+    '534' => 'fixed in 0.8.0',
+    '524' => 'not applicable',
+    '523' => 'not applicable',
+    '511' => 'not applicable',
+    '507' => 'fixed in 0.8.0',
+    '501' => 'not applicable',
+    '497' => 'not applicable',
+    '496' => 'not applicable',
+    '485' => 'not applicable',
+    '481' => 'fixed in 0.8.0',
+    '474' => 'not applicable',
+};
+
+#################################################
+# update src file
+_fetch_csv($src_url, $src_file) if _update_required($src_file);
+
+#################################################
+die("download failed?") unless -e $src_file;
+my $bugs = parse_bugs($src_file);
+my $page = join("", <DATA>);
+open(my $fh, '>', 'index.md');
+print $fh $page,"\n";
+print $fh "| Id | Priority | Date | Summary | Reproducibility | Nagios | Nameon |\n";
+print $fh "|:---:|:---:|:---:|:--- |:---:|:---:|:---:|\n";
+for my $bug (@{$bugs}) {
+
+    # skip some known unrelated bugs
+    next unless $bug->{'Project'} eq 'Nagios Core';
+    next if $bug->{'Product Version'} and $bug->{'Product Version'} !~ m/^4/mx;
+    next if $bug->{'Id'} < $min_id;
+
+    printf($fh "| %s | %s | %s | %s | %s | %s | %s |\n",
+           "<a href='http://tracker.nagios.org/view.php?id=".$bug->{'Id'}."' target='_blank'>".$bug->{'Id'}."</a>",
+           '<span class="bug_priority">'._style_priority($bug->{'Priority'}).'</span>',
+           $bug->{'Date Submitted'},
+           "<span title='".$bug->{'Summary'}."'>".$bug->{'Short Summary'}."</span>",
+           $bug->{'Reproducibility'},
+           '<span class="bug_status">'._style_state(($bug->{'Product Version'} || '?').' / '.$bug->{'Status'}).'</span>',
+           '<span class="bug_status">'._style_state($naemon_states->{$bug->{'Id'}} || 'undecided').'</span>',
+    );
+}
+close($fh);
+print "index.md written\n";
+exit;
+
+#################################################
+# subs
+sub _fetch_csv {
+    my($src_url, $src_file) = @_;
+    print "fetching bug list\n";
+    print `wget $src_url -O $src_file`
+}
+
+#################################################
+sub _update_required {
+    my($src_file) = @_;
+    return 1 unless -e $src_file;
+    my @stats = stat($src_file);
+    if($stats[9] < time() - $max_age) {
+        return 1;
+    }
+    return 0;
+}
+
+#################################################
+sub parse_bugs {
+    my($src_file) = @_;
+    open(my $fh, '<', $src_file) or die("cannot open file $src_file: ".$!);
+    my $firstline = <$fh>;
+    chomp($firstline);
+    my @columns = split(/,/mx, $firstline);
+    my $bugs = [];
+    while(my $line = <$fh>) {
+        chomp($line);
+        my $x   = 0;
+        my $row = {};
+        while($line =~ s/"(.*?),(.*?)"/"$1_;;_$2"/gmx) {}
+        for my $col (split(/,/mx, $line)) {
+            confess("csv corrupt in line $.: ".$line) unless defined $columns[$x];
+            $row->{$columns[$x]} = $col;
+            $x++;
+        }
+        $row->{'Summary'}       =~ s/_;;_/,/gmx;
+        $row->{'Short Summary'} = $row->{'Summary'};
+        if(length($row->{'Summary'}) > 80) {
+            $row->{'Short Summary'} = substr($row->{'Summary'},0,75).'...';
+        }
+        $row->{'Summary'} =~ s/'/&quot;/gmx;
+        $row->{'Summary'} =~ s/>/&gt;/gmx;
+        $row->{'Summary'} =~ s/</&lt;/gmx;
+        $row->{'Id'}      =~ s/^0*//gmx;
+        push @{$bugs}, $row;
+    }
+    close($fh);
+
+    # sort by id
+    @{$bugs} = sort { $b->{'Id'} <=> $a->{'Id'} } @{$bugs};
+
+    return $bugs;
+}
+
+#################################################
+sub _style_state {
+    my($state) = @_;
+    if($state =~ m/^(fixed\ in|not\ applicable)/mx) {
+        return('<p class="bg-success"><i class="glyphicon glyphicon-ok"></i> '.$state.'</p>');
+    }
+    elsif($state =~ m/(resolved)$/mx) {
+        return('<p class="bg-success"><i class="glyphicon glyphicon-ok"></i> '.$state.'</p>');
+    }
+    elsif($state =~ m/(assigned|new)$/mx) {
+        return('<p class="bg-danger"><i class="glyphicon glyphicon-exclamation-sign"></i> '.$state.'</p>');
+    }
+    return($state);
+}
+
+#################################################
+sub _style_priority {
+    my($state) = @_;
+    if($state =~ m/^(high)/mx) {
+        return('<p class="bg-danger"><i class="glyphicon glyphicon-exclamation-sign"></i> '.$state.'</p>');
+    }
+    return($state);
+}
+
+#################################################
+
+__DATA__
+---
+layout: default
+title: Imported Bugs Comparison
+---
+
+### Bugs From Nagios 4
+
+Since we are a Nagios 4 fork, we share a lot of common code and with that a
+few bugs. So here is an overview over possible bugs and their status in
+Nagios and Naemon.

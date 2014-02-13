@@ -29,6 +29,23 @@ H4, H5 {
 	padding-top: 10px;
 }
 
+TABLE TH {
+    white-space: nowrap;
+    border: 1px solid #AAAAAA;
+    border-collapse: collapse;
+    padding-left: 3px;
+    padding-right: 3px;
+    vertical-align: top;
+    text-align: center;
+}
+TABLE TD {
+    border: 1px solid #AAAAAA;
+    border-collapse: collapse;
+    padding-left: 3px;
+    padding-right: 3px;
+    vertical-align: top;
+}
+
 /* affix styles */
 /* Custom Styles */
 ul.nav-tabs {
@@ -88,4 +105,24 @@ A.sub_nav_anchor {
 	padding-top: 80px;
 	margin-top: -80px;
 	min-height: 10px;
+}
+
+/* bug comparisson */
+SPAN.bug_status, SPAN.bug_priority {
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+}
+
+SPAN.bug_status I, SPAN.bug_priority I {
+    float: left;
+    padding-right: 3px;
+    padding-top: 2px;
+}
+
+SPAN.bug_status P, SPAN.bug_priority P {
+    margin: 0;
+    padding: 0;
+    padding-right: 2px;
+    padding-left: 2px;
 }
