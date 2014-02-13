@@ -5,6 +5,7 @@
 541: fixed in 0.8.0
 538: not applicable
 534: fixed in 0.8.0
+531: not applicable
 524: not applicable
 523: not applicable
 511: not applicable
@@ -14,4 +15,7 @@
 496: not applicable
 485: not applicable
 481: fixed in 0.8.0
+480: not applicable
 474: not applicable
+473: not applicable
+460: fixed in 0.8.0
