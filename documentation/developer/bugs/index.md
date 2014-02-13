@@ -3,11 +3,27 @@ layout: default
 title: Imported Bugs Comparison
 ---
 
+<!--
+************************************************
+* AUTO GENERATED PAGE - USE ./update SCRIPT
+************************************************
+-->
+
 ### Bugs From Nagios 4
 
+<p>
 Since we are a Nagios 4 fork, we share a lot of common code and with that a
 few bugs. So here is an overview over possible bugs and their status in
 Nagios and Naemon.
+</p>
+
+<p>
+Open new issues on our Github issue tracker
+</p>
+
+ * [Naemon Core](https://github.com/naemon/naemon-core/issues?state=open)
+ * [Naemon Suite](https://github.com/naemon/naemon/issues?state=open)
+
 
 | Id | Priority | Date | Summary | Reproducibility | Nagios | Nameon |
 |:---:|:---:|:---:|:--- |:---:|:---:|:---:|
@@ -69,3 +85,6 @@ Nagios and Naemon.
 | <a href='http://tracker.nagios.org/view.php?id=465' target='_blank'>465</a> | <span class="bug_priority">normal</span> | 2013-06-24 | <span title='Services aren&quot;t checked after excluded time periods'>Services aren't checked after excluded time periods</span> | always | <span class="bug_status"><p class="bg-danger"><i class="glyphicon glyphicon-exclamation-sign"></i> ? / new</p></span> | <span class="bug_status">undecided</span> |
 | <a href='http://tracker.nagios.org/view.php?id=460' target='_blank'>460</a> | <span class="bug_priority">normal</span> | 2013-06-13 | <span title='Nagios don&quot;t works in Debian'>Nagios don't works in Debian</span> | always | <span class="bug_status"><p class="bg-danger"><i class="glyphicon glyphicon-exclamation-sign"></i> 4.0.0 / new</p></span> | <span class="bug_status"><p class="bg-success"><i class="glyphicon glyphicon-ok"></i> fixed in 0.8.0</p></span> |
 | <a href='http://tracker.nagios.org/view.php?id=457' target='_blank'>457</a> | <span class="bug_priority">normal</span> | 2013-05-28 | <span title='Do not send emails'>Do not send emails</span> | always | <span class="bug_status"><p class="bg-danger"><i class="glyphicon glyphicon-exclamation-sign"></i> 4.0.0 / new</p></span> | <span class="bug_status">undecided</span> |
+
+
+

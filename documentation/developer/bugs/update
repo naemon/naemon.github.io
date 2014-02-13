@@ -22,7 +22,8 @@ die("download failed?") unless -e $src_file;
 my $bugs = parse_bugs($src_file);
 my $page = join("", <DATA>);
 open(my $fh, '>', 'index.md');
-print $fh $page,"\n";
+my($header, $footer) = split(/\Q{% content %}\E/, $page, 2);
+print $fh $header,"\n";
 print $fh "| Id | Priority | Date | Summary | Reproducibility | Nagios | Nameon |\n";
 print $fh "|:---:|:---:|:---:|:--- |:---:|:---:|:---:|\n";
 for my $bug (@{$bugs}) {
@@ -42,6 +43,7 @@ for my $bug (@{$bugs}) {
            '<span class="bug_status">'._style_state($naemon_states->{$bug->{'Id'}} || 'undecided').'</span>',
     );
 }
+print $fh $footer,"\n";
 close($fh);
 print "index.md written\n";
 exit;
@@ -150,8 +152,26 @@ layout: default
 title: Imported Bugs Comparison
 ---
 
+<!--
+************************************************
+* AUTO GENERATED PAGE - USE ./update SCRIPT
+************************************************
+-->
+
 ### Bugs From Nagios 4
 
+<p>
 Since we are a Nagios 4 fork, we share a lot of common code and with that a
 few bugs. So here is an overview over possible bugs and their status in
 Nagios and Naemon.
+</p>
+
+<p>
+Open new issues on our Github issue tracker
+</p>
+
+ * [Naemon Core](https://github.com/naemon/naemon-core/issues?state=open)
+ * [Naemon Suite](https://github.com/naemon/naemon/issues?state=open)
+
+{% content %}
+
