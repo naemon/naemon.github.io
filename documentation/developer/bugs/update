@@ -11,29 +11,11 @@ my $src_url  = 'http://tracker.nagios.org/csv_export.php';
 my $src_file = 'bugs.csv';
 my $max_age  = 86400;
 my $min_id   = 456; # hide old nagios 3 related bugs
-my $naemon_states = {
-    '563' => 'not applicable',
-    '562' => 'fixed in 0.8.0',
-    '545' => 'not applicable',
-    '544' => 'not applicable',
-    '541' => 'fixed in 0.8.0',
-    '538' => 'not applicable',
-    '534' => 'fixed in 0.8.0',
-    '524' => 'not applicable',
-    '523' => 'not applicable',
-    '511' => 'not applicable',
-    '507' => 'fixed in 0.8.0',
-    '501' => 'not applicable',
-    '497' => 'not applicable',
-    '496' => 'not applicable',
-    '485' => 'not applicable',
-    '481' => 'fixed in 0.8.0',
-    '474' => 'not applicable',
-};
 
 #################################################
 # update src file
 _fetch_csv($src_url, $src_file) if _update_required($src_file);
+my $naemon_states = _read_naemon_states();
 
 #################################################
 die("download failed?") unless -e $src_file;
@@ -142,6 +124,22 @@ sub _style_priority {
         return('<p class="bg-danger"><i class="glyphicon glyphicon-exclamation-sign"></i> '.$state.'</p>');
     }
     return($state);
+}
+
+#################################################
+sub _read_naemon_states {
+    my $states = {};
+    open(my $fh, '<', 'naemon.txt') or die("cannot open naemon.txt: ".$!);
+    while(my $line = <$fh>) {
+        chomp($line);
+        next if $line eq '';
+        if($line =~ m/^(\d+):\s*(.*?)$/) {
+            $states->{$1} = $2;
+        } else {
+            confess("wrong syntax: ".$line);
+        }
+    }
+    return $states;
 }
 
 #################################################

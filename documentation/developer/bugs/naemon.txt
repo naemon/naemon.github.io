@@ -1,0 +1,17 @@
+563: not applicable
+562: fixed in 0.8.0
+545: not applicable
+544: not applicable
+541: fixed in 0.8.0
+538: not applicable
+534: fixed in 0.8.0
+524: not applicable
+523: not applicable
+511: not applicable
+507: fixed in 0.8.0
+501: not applicable
+497: not applicable
+496: not applicable
+485: not applicable
+481: fixed in 0.8.0
+474: not applicable
