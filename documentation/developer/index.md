@@ -8,9 +8,9 @@ title: Developer Documentation
 #### Build Naemon From Scratch
 
 ##### Build Git Development Version
-Developers, Testers and arly early adopters may want to build their own packages, so here is how:
+Developers, Testers and early adopters may want to build their own packages, so here is how:
 
-We use Centos 6 in our example. For Debian based system, replace 'make rpm' with 'make deb'
+We use CentOS 6 in our example. For Debian based system, replace 'make rpm' with 'make deb'
 and install the dependencies according to your system.
 
 First install some basic dependencies:
