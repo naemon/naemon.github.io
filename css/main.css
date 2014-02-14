@@ -126,3 +126,9 @@ SPAN.bug_status P, SPAN.bug_priority P {
     padding-right: 2px;
     padding-left: 2px;
 }
+
+A.nav_label {
+	visibility: hidden;
+	position: absolute;
+	left: -10px;
+}

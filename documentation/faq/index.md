@@ -19,6 +19,13 @@ Read [Why A Fork](/project.html) on the projects page.
 Help is much appreciated and possible in many ways. Details can be found on
 the [community page](/community) page.
 
+#### What Are The Differences To Nagios
+
+A lot of open Nagios 4 issues have been fixed in Naemon. See a complete list
+in the [developers section](/documentation/developer/bugs/).
+
+Also we removed the CGIs in favor of the Thruk gui.
+
 ### Suite
 
 ### Core
@@ -38,7 +45,7 @@ first have to find that library:
   /lib/i386-linux-gnu/libpthread.so.0
 ```
 
-On Debian/Ubuntu systems you should install the `naemon-core-dbg` package which
+If available you should install the `naemon-core-dbg` package which
 contains additional debuging symbols that makes toubleshooting a lot easier.
 
 Then run Naemon with GDB, you will have to type `run` after the prompt:

@@ -72,7 +72,7 @@ last step, install Naemon.
 #### Source Installation
 
 The source installation is not recommended for normal operations. Thats why this
-topic is covered in the [Developers Guide](/documentation/developer/#buildnaemonfromscratch)
+topic is covered in the [Developers Guide](/documentation/developer/#build_naemon_from_scratch)
 
 
 
@@ -93,7 +93,40 @@ We have several of the usual means of contact:
 
 ### Getting Started
 
+#### After Installation
 
+After installing there are a few simple things left to do.
+
+Install any plugins you want (your distribution probably carries monitoring-plugins or
+nagios-plugins), and adjust the $USER1$ variable in /etc/naemon/resource.cfg to where they are.
+Debian systems install them as 'recommends', so they are probably already installed.
+
+Verify a few things:
+
+ * Configure your firewall software to accept incomming port 80 requests.
+ * Configure your selinux policy.
+ * Start the naemon service and your distribution's apache service.
+
+Navigate to your server (<ip>/naemon) with a web browser, and log in using "admin"/"admin".
+
+You should now be logged in to your new monitoring system.
+
+
+#### Migration From Nagios
+
+Migration from Nagios is usually very easy. After the installation of Naemon
+you only need to copy the conf.d folder into /etc/naemon/conf.d. Also verify
+that your USER macros in your /etc/naemon/resource.cfg point to the same locations
+as before.
+
+Compare at least those 3 files/folders with your existing installation.
+
+ * Objects: /etc/naemon/conf.d
+ * User Macros: /etc/naemon/resource.cfg
+ * CGI Settings: /etc/naemon/cgi.cfg
+ * Logfile Archive: /var/log/naemon/archive
+
+<div class="alert alert-info"><i class="glyphicon glyphicon-info-sign"></i> Naemon can coexist with your current installation, it uses different users and folders.</div>
 
 
 ### Configuring Naemon

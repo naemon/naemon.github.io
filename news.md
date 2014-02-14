@@ -3,8 +3,8 @@ layout: default
 title: Changelog
 ---
 
-0.8
-===
+0.8 - 14 Feb 2014
+=================
  * Based on nagios 4.0.2
  * Rename a lot of things, replace build system, etc.
  * The CGIs are gone - use Thruk instead.
