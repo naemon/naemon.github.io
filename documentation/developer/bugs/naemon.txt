@@ -2,6 +2,7 @@
 563: not applicable
 562: fixed in 0.8.0
 565: fixed in 0.8.0
+559: fixed in 0.8.0
 551: not applicable
 550: not applicable
 548: fixed in 0.8.0
@@ -12,6 +13,7 @@
 538: not applicable
 537: not applicable
 534: fixed in 0.8.0
+533: not applicable
 532: fixed in 0.8.0
 531: not applicable
 527: fixed in 0.8.0
@@ -25,6 +27,7 @@
 501: not applicable
 497: not applicable
 496: not applicable
+486: not applicable
 485: not applicable
 481: fixed in 0.8.0
 480: not applicable
