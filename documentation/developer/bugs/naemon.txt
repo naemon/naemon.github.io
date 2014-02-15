@@ -1,13 +1,20 @@
 563: not applicable
 562: fixed in 0.8.0
+565: fixed in 0.8.0
 545: not applicable
 544: not applicable
+543: fixed in queryhandler in 0.8.0
 541: fixed in 0.8.0
 538: not applicable
+537: not applicable
 534: fixed in 0.8.0
+532: fixed in 0.8.0
 531: not applicable
+527: fixed in 0.8.0
+525: fixed in 0.8.0
 524: not applicable
 523: not applicable
+516: fixed in 0.8.0
 511: not applicable
 507: fixed in 0.8.0
 501: not applicable
@@ -18,4 +25,5 @@
 480: not applicable
 474: not applicable
 473: not applicable
+465: fixed in 0.8.0
 460: fixed in 0.8.0
