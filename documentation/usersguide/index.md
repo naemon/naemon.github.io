@@ -50,14 +50,14 @@ For example lets install Naemon on Debian 7:
 First we need to install the gpg key. This step has to be done only once:
 
 ```bash
-%> sudo gpg --keyserver keys.gnupg.net --recv-keys F8C1CA08A57B9ED7
-%> sudo gpg --armor --export F8C1CA08A57B9ED7 | apt-key add -
+%> gpg --keyserver keys.gnupg.net --recv-keys F8C1CA08A57B9ED7
+%> gpg --armor --export F8C1CA08A57B9ED7 | sudo apt-key add -
 ```
 
 Enable the Consol* Labs Repository. This has to be done only once too.
 
 ```bash
-%> sudo echo 'deb http://labs.consol.de/repo/stable/debian wheezy main' >> /etc/apt/sources.list
+%> sudo sh -c "echo 'deb http://labs.consol.de/repo/stable/debian wheezy main' >> /etc/apt/sources.list"
 %> sudo apt-get update
 ```
 
