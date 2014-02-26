@@ -1,3 +1,4 @@
+570: fixed in head
 569: not applicable
 563: not applicable
 562: fixed in 0.8.0
