@@ -30,7 +30,7 @@ The binary packages can also be downloaded here:
    <td>
         <a href="http://labs.consol.de/naemon/release/v{{ page.release_version }}/sles11sp3/">11 SP3</a>,<br>
         <a href="http://labs.consol.de/naemon/release/v{{ page.release_version }}/sles11sp2/">11 SP2</a>,<br>
-        <a href="http://labs.consol.de/naemon/release/v{{ page.release_version }}/sles11sp2/">11 SP1</a>
+        <a href="http://labs.consol.de/naemon/release/v{{ page.release_version }}/sles11sp1/">11 SP1</a>
    </td>
  </tr>
  <tr>
