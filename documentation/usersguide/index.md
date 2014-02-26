@@ -54,12 +54,10 @@ First we need to install the gpg key. This step has to be done only once:
 %> sudo gpg --armor --export F8C1CA08A57B9ED7 | apt-key add -
 ```
 
-<div class="alert alert-warning"><i class="glyphicon glyphicon-exclamation-sign"></i> As there are no release downloads yet, this howto points to the <b>testing</b> repository.</div>
-
 Enable the Consol* Labs Repository. This has to be done only once too.
 
 ```bash
-%> sudo echo 'deb http://labs.consol.de/repo/testing/debian wheezy main' >> /etc/apt/sources.list
+%> sudo echo 'deb http://labs.consol.de/repo/stable/debian wheezy main' >> /etc/apt/sources.list
 %> sudo apt-get update
 ```
 
