@@ -27,10 +27,16 @@ Then clone our repository in any folder you like:
 %> git clone --recursive https://github.com/naemon/naemon.git
 ```
 
-Finally build your rpm package:
+Update all git submodules:
 
 ```bash
 %> cd naemon/
+%> make update
+```
+
+Finally build your rpm package:
+
+```bash
 %> ./configure --without-compress
 %> make rpm
 ```
