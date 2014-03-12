@@ -1,35 +1,35 @@
 ---
 layout: doctoc
-title: About Naemon Core
+title: About Naemon
 ---
-### Naemon Core Overview
+### Naemon Overview
 
-More information about Naemon Core - including features and technical specifications can be found online at <a href="http://www.nagios.org/about/" target="_blank"><b>www.nagios.org/about/</b></a>.
+More information about Naemon - including features and technical specifications can be found online at <a href="http://naemon.org" target="_blank"><b>naemon.org</b></a>.
 
-### What Is Naemon Core?
+### What Is Naemon?
 
-Naemon Core is an Open Source system and network monitoring application.  It watches hosts and services that you specify, alerting you when things go bad and when they get better.
+Naemon is an Open Source system and network monitoring application.  It watches hosts and services that you specify, alerting you when things go bad and when they get better. Naemon is the general term of the entire "Naemon Suite" that consist of two different parts, Naemon Core and <a href="http://thruk.org" target="_blank">Thruk Monitoring Webinterface</a>
 
-Naemon Core was originally designed to run under <a href="http://www.linux.com">Linux</a>, although it should work under most other unices as well.
+Naemon is based on Nagios 4.0.2 and aimes to be a drop replacement for Nagios
 
-Some of the many features of Naemon Core include:
+Some of the many features of Naemon include:
 
 * Monitoring of network services (SMTP, POP3, HTTP, NNTP, PING, etc.)
 * Monitoring of host resources (processor load, disk usage, etc.)
 * Simple plugin design that allows users to easily develop their own service checks
 * Parallelized service checks
+* Thruk Monitoring Webinterface to edit settings and view current network status, problem history, log files, etc.
 * Ability to define network host hierarchy using "parent" hosts, allowing detection of and distinction between hosts that are down and those that are unreachable
 * Contact notifications when service or host problems occur and get resolved (via email, pager, or user-defined method) 
 * Ability to define event handlers to be run during service or host events for proactive problem resolution
 * Automatic log file rotation
 * Support for implementing redundant monitoring hosts
-* Optional web interface for viewing current network status, notification and problem history, log file, etc.
 
 ### System Requirements
 
-The only requirement of running Naemon Core is a machine running Linux (or UNIX variant) that has network access and a C compiler installed (if installing from source code).
+The only requirement of running Naemon is a machine running Linux (or UNIX variant) that has network access and a C compiler installed (if installing from source code).
 
-You are <i>not required</i> to use the CGIs included with Naemon Core.  However, if you do decide to use them, you will need to have the following software installed...
+You are <i>not required</i> to use the CGIs included with Naemon.  However, if you do decide to use them, you will need to have the following software installed...
 
 * A web server (preferrably <a href="http://www.apache.org" target="_top">Apache</a>)
 * Thomas Boutell's <a href="http://www.boutell.com/gd">gd library</a> version 1.6.3 or higher (required by the <a href="cgis.html#statusmap_cgi">statusmap</a> and <a href="cgis.html#trends_cgi">trends</a> CGIs)
@@ -42,7 +42,7 @@ Naemon Core is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRAN
 
 ### Acknowledgements
 
-Several people have contributed to Naemon Core by either reporting bugs, suggesting improvements, writing plugins, etc.  A list of some of the many contributors to the development of Naemon Core can be found in the THANKS file in the root of the Naemon Core distribution.
+Several people have contributed to Naemon by either reporting bugs, suggesting improvements, writing plugins, etc.  A list of some of the many contributors to the development of Naemon Core can be found in the THANKS file in the root of the Naemon Core distribution.
 
 ## Downloading The Latest Version
 
