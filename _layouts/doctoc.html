@@ -1,0 +1,73 @@
+---
+layout: doc
+---
+
+<div class="row">
+    <div class="col-xs-9">
+        {{ content }}
+    </div>
+    <div class="col-xs-3" id="NaemonScrollspy">
+        <ul class="nav nav-tabs nav-stacked affix-top" data-spy="affix"></ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+<!--
+  // create side bar navigation automatically from h3/h4 tags
+  // put every h3 in the side bar
+  jQuery("DIV.container H3").each(function(nr, el) {
+    var label = el.innerHTML.replace(/[^a-zA-Z0-9\ ]*/g, '').toLowerCase();
+    label = label.replace(/ +/g, '_');
+    jQuery('<a id="'+label+'" class="nav_anchor">').insertBefore(el);
+    var nav_section = jQuery("<li class='"+(nr==0 ? 'active' : '')+"'><a href='#"+label+"'>"+el.innerHTML+"</a></li>");
+    jQuery('#NaemonScrollspy > UL').append(nav_section);
+    el.innerHTML = '<a href="#'+label+'" class="nav_label"><i class="glyphicon glyphicon-paperclip"></i></a> '+el.innerHTML;
+
+    var timer;
+    jQuery("H3").bind({
+        mouseenter: function() {
+            window.clearTimeout(timer);
+            jQuery(this).find('A.nav_label').css('visibility', 'inherit');
+        },
+        mouseleave: function() {
+            timer = window.setTimeout(function() {
+                jQuery(el).find('A.nav_label').css('visibility', 'hidden');
+            }, 150);
+        }
+    });
+
+    // add every h4 as sub menu entry
+    var sub_elements = jQuery(el).nextUntil('H3', 'H4');
+    if(sub_elements.size() > 1) {
+        var sub_section = jQuery('<ul></ul>');
+        jQuery(nav_section).append(sub_section);
+    }
+    sub_elements.each(function(sub_nr, sub_el) {
+        var sublabel = sub_el.innerHTML.replace(/[^a-zA-Z0-9\ ]*/g, '').toLowerCase();
+        sublabel = sublabel.replace(/ +/g, '_');
+        jQuery('<a name="'+sublabel+'" class="sub_nav_anchor">').insertBefore(sub_el);
+        if(sub_elements.size() > 1) {
+            jQuery(sub_section).append("<li><a href='#"+sublabel+"'>"+sub_el.innerHTML+"</a></li>");
+        }
+        sub_el.innerHTML = '<a href="#'+sublabel+'" class="nav_label"><i class="glyphicon glyphicon-paperclip"></i></a> '+sub_el.innerHTML;
+
+        var sub_timer;
+        jQuery("H4").bind({
+            mouseenter: function() {
+                window.clearTimeout(sub_timer);
+                jQuery(this).find('A.nav_label').css('visibility', 'inherit');
+            },
+            mouseleave: function() {
+                sub_timer = window.setTimeout(function() {
+                    jQuery(sub_el).find('A.nav_label').css('visibility', 'hidden');
+                }, 150);
+            }
+        });
+    });
+  });
+  // refresh affix
+  jQuery('[data-spy="affix"]').each(function () {
+    jQuery(this).affix('refresh')
+  });
+-->
+</script>
