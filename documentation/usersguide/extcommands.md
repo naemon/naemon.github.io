@@ -3,6 +3,7 @@ layout: doctoc
 title: External Commands
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="passivechecks.html">Passive Checks</a>, <a href="adaptive.html">Adaptive Monitoring</a>
@@ -33,7 +34,7 @@ In order to have Naemon process external commands, make sure you do the followin
 
 ### Using External Commands
 
-External commands can be used to accomplish a variety of things while Naemon is running.  Example of what can be done include temporarily disabling notifications for services and hosts, temporarily disabling service checks, forcing immediate service checks, adding comments to hosts and services, etc.  
+External commands can be used to accomplish a variety of things while Naemon is running.  Example of what can be done include temporarily disabling notifications for services and hosts, temporarily disabling service checks, forcing immediate service checks, adding comments to hosts and services, etc.
 
 ### Command Format
 

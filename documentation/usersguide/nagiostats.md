@@ -2,6 +2,9 @@
 layout: doctoc
 title: Using The Naemontats Utility
 ---
+
+{% include review_required.md %}
+
 <span class="glyphicon glyphicon-arrow-up"></span> <a href="toc.html">Contents</a><br>
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="mrtggraphs.html">Graphing Performance Info</a>, <a href="tuning.html">Performance Tuning</a>
@@ -83,7 +86,7 @@ Passive Service Checks Last 1/5/15 min: 0 / 0 / 0
 
 External Commands Last 1/5/15 min:      0 / 0 / 0
 
-[nagios@lanman ~]# 
+[nagios@lanman ~]#
 </pre>
 
 As you can see, the utility displays a number of different metrics pertaining to the Naemon process.  Metrics which have multiple values are (unless otherwise specified) min, max and average values for that particular metric.

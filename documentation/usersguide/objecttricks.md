@@ -3,6 +3,7 @@ layout: doctoc
 title: Time-Saving Tricks For Object Definitions
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="objectdefinitions.html">Object Configuration</a>, <a href="objectinheritance.html">Object Inheritance</a>
 
@@ -24,7 +25,7 @@ Object types that are not listed above (i.e. timeperiods, commands, etc.) do not
 ### Regular Expression Matching
 
 The examples I give below use "standard" matching of object names
-  and <b>*require*</b> <a href="configmain.html#use_regexp_matching">use_regexp_matching</a> to be <b>*disabled*</b>.  
+  and <b>*require*</b> <a href="configmain.html#use_regexp_matching">use_regexp_matching</a> to be <b>*disabled*</b>.
 
 If you wish, you can enable regular expression matching for object names by using the <a href="configmain.html#use_regexp_matching">use_regexp_matching</a> config option.  By default, regular expression matching will only be used in object names that contain <b>*</b>, <b>?</b>, <b>+</b>, or <b>\.</b>.  If you want regular expression matching to be used on all object names, enable the <a href="configmain.html#use_true_regexp_matching">use_true_regexp_matching</a> config option.  Regular expressions can be used in any of the fields used in the examples below (host names, hostgroup names, service names, and servicegroup names).
 
@@ -111,7 +112,7 @@ If you wish, you can enable regular expression matching for object names by usin
 		}
 </pre>
 
-<b>Excluding Hosts:</b><br>If you want to create identical services escalations for services on numerous hosts or hostgroups, 
+<b>Excluding Hosts:</b><br>If you want to create identical services escalations for services on numerous hosts or hostgroups,
 but would like to exclude some hosts from the definition, this can be accomplished by preceding the host or hostgroup with a ! symbol.
 
 <pre>

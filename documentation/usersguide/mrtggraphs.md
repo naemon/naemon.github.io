@@ -3,6 +3,7 @@ layout: doctoc
 title: Graphing Performance Info With MRTG
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="nagiostats.html">Naemontats Utility</a>, <a href="tuning.html">Performance Tuning</a>
 

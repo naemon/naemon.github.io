@@ -3,6 +3,7 @@ layout: doctoc
 title: Security Considerations
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="cgisecurity.html">CGI Security</a>
 

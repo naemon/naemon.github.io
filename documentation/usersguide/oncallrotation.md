@@ -3,6 +3,7 @@ layout: doctoc
 title: On-Call Rotations
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="timeperiods.html">Timeperiods</a>, <a href="notifications.html">Notifications</a>
 
@@ -12,7 +13,7 @@ title: On-Call Rotations
 
 <img src="/images/objects-timeperiods.png" border="0" style="float: right;" alt="Timeperiods" title="Timeperiods">
 
-Admins often have to shoulder the burden of answering pagers, cell phone calls, etc. when they least desire them.  No one likes to be woken up at 4 am to fix a problem.  But its often better to fix the problem in the middle of the night, rather than face the wrath of an unhappy boss when you stroll in at 9 am the next morning.  
+Admins often have to shoulder the burden of answering pagers, cell phone calls, etc. when they least desire them.  No one likes to be woken up at 4 am to fix a problem.  But its often better to fix the problem in the middle of the night, rather than face the wrath of an unhappy boss when you stroll in at 9 am the next morning.
 
 For those lucky admins who have a team of gurus who can help share the responsibility of answering alerts, on-call rotations are often setup.  Multiple admins will often alternate taking notifications on weekends, weeknights, holidays, etc.
 
@@ -24,7 +25,7 @@ Two admins - John and Bob - are responsible for responding to Naemon alerts.  Jo
 
 First, define 3 timeperiods that contains time ranges for holidays, weekdays, and weekends:
 
-<pre>	
+<pre>
 define timeperiod{
 	name			weekdays
 	timeperiod_name		weekdays
@@ -260,4 +261,4 @@ define contact{
 
 ### Other Scenarios
 
-There are a lot of other on-call notification rotation scenarios that you might have.  The date exception directive in <a href="objectdefinitions.html#timeperiod">timeperiod definitions</a> is capable of handling most dates and date ranges that you might need to use, so check out the different formats that you can use.  If you make a mistake when creating timeperiod definitions, always err on the side of giving someone else more on-call duty time. :-) 
+There are a lot of other on-call notification rotation scenarios that you might have.  The date exception directive in <a href="objectdefinitions.html#timeperiod">timeperiod definitions</a> is capable of handling most dates and date ranges that you might need to use, so check out the different formats that you can use.  If you make a mistake when creating timeperiod definitions, always err on the side of giving someone else more on-call duty time. :-)

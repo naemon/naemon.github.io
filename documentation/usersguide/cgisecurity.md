@@ -3,6 +3,7 @@ layout: doctoc
 title: Enhanced CGI Security and Authentication
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="security.html">Security Considerations</a>, <a href="config.html">Configuration Overview</a>
@@ -73,7 +74,7 @@ Then, restart the Apache service so the new settings can take effect.
 
 ### Implementing Forced TLS/SSL
 
-Make sure you've installed Apache and OpenSSL.  By default you should have <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html">mod_ssl</a> support if you are still having trouble you may find help reading Apache's <a href="http://httpd.apache.org/docs/2.0/ssl">TLS/SSL Encryption Documentation</a>.  
+Make sure you've installed Apache and OpenSSL.  By default you should have <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html">mod_ssl</a> support if you are still having trouble you may find help reading Apache's <a href="http://httpd.apache.org/docs/2.0/ssl">TLS/SSL Encryption Documentation</a>.
 
 Next, verify that TLS/SSL support is working by visiting your Naemon Web Interface using HTTPS (https://your.domain/nagios).  If it is working you can continue on to the next steps that will force using HTTPS and block all HTTP requests for the Naemon Web Interface.  If you are having trouble visit Apache's <a href="http://httpd.apache.org/docs/2.0/ssl">TLS/SSL Encryption Documentation</a> and <a href="http://www.google.com">Google</a> for troubleshooting your specific Apache installation.
 

@@ -2,6 +2,9 @@
 layout: doctoc
 title: Nagios Addons
 ---
+
+{% include review_required.md %}
+
 ### Introduction
 
 There are a lot of "addon" software packages that are available for Nagios.  Addons can be used to extend Nagios' functionality or integrate Nagios with other applications.

@@ -3,6 +3,7 @@ layout: doctoc
 title: Object Definitions
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="configobject.html">Object Configuration Overview</a>, <a href="objecttricks.html">Object Tricks</a>, <a href="objectinheritance.html">Object Inheritance</a>, <a href="customobjectvars.html">Custom Object Variables</a>
 
@@ -202,7 +203,7 @@ This directive is used to define the number of "time units" to wait before sched
 <tr>
 <td valign="top"><strong>active_checks_enabled <a href="#retention_notes" class="bg-danger">*</a></strong>:</td>
 <td>
-This directive is used to determine whether or not active checks (either regularly scheduled or on-demand) of this host are enabled. Values: 0 = disable active host checks, 1 = enable active host checks (default). 
+This directive is used to determine whether or not active checks (either regularly scheduled or on-demand) of this host are enabled. Values: 0 = disable active host checks, 1 = enable active host checks (default).
 </td>
 </tr>
 <tr>
@@ -1224,7 +1225,7 @@ This directive is used to define an email address for the contact.  Depending on
 
 <td>
 
-This directive is used to define a pager number for the contact.  It can also be an email address to a pager gateway 
+This directive is used to define a pager number for the contact.  It can also be an email address to a pager gateway
 
 (i.e. pagejoe@pagenet.com).  Depending on how you configure your notification commands, it can be used to send out an alert page to the contact.  Under the right circumstances, the $CONTACTPAGER$ <a href="macros.html">macro</a> will contain this value.
 
@@ -1474,7 +1475,7 @@ Note:  Directives in red are required, while those in black are optional.
 <pre>
 define command{
 	command_name	check_pop
-	command_line	/usr/local/nagios/libexec/check_pop -H $HOSTADDRESS$	
+	command_line	/usr/local/nagios/libexec/check_pop -H $HOSTADDRESS$
 	}
 </pre>
 
@@ -1932,7 +1933,7 @@ define hostextinfo{
 	host_name	netware1
 	notes		This is the primary Netware file server
 	notes_url	http://webserver.localhost.localdomain/hostinfo.pl?host=netware1
-	icon_image	novell40.png 
+	icon_image	novell40.png
 	icon_image_alt	IntranetWare 4.11
 	vrml_image	novell40.png
 	statusmap_image	novell40.gd2
@@ -2040,7 +2041,7 @@ define serviceextinfo{
 	service_description	Log Anomalies
 	notes			Security-related log anomalies on secondary Linux server
 	notes_url		http://webserver.localhost.localdomain/serviceinfo.pl?host=linux2&amp;service=Log+Anomalies
-	icon_image		security.png 
+	icon_image		security.png
 	icon_image_alt		Security-Related Alerts
 	}
 </pre>

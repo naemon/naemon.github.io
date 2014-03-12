@@ -3,6 +3,7 @@ layout: doctoc
 title: Monitoring Routers and Switches
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="monitoring-publicservices.html">Monitoring Publicly Available Services</a>
@@ -137,7 +138,7 @@ Add the following service definition to monitor the uptime of the switch.
 define service{
 	use			generic-service	; Inherit values from a template
 	host_name			linksys-srw224p
-	service_description	Uptime	
+	service_description	Uptime
 	check_command		check_snmp!-C public -o sysUpTime.0
 	}
 </pre>

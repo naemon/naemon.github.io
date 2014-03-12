@@ -3,6 +3,7 @@ layout: doctoc
 title: Monitoring Publicly Available Services
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guide</a>
@@ -35,7 +36,7 @@ I'll walk you through monitoring some basic services that you'll probably use so
 
 Before you can monitor a service, you first need to define a <a href="objectdefinitions.html#host">host</a> that is associated with the service.  You can place host definitions in any object configuration file specified by a <a href="configmain.html#cfg_file">cfg_file</a> directive or placed in a directory specified by a <a href="configmain.html#cfg_dir">cfg_dir</a> directive.  If you have already created a host definition, you can skip this step.
 
-For this example, lets say you want to monitor a variety of services on a remote host.  Let's call that host <i>remotehost</i>.  The host definition can be placed in its own file or added to an already exiting object configuration file.  Here's what the host definition for <i>remotehost</i> might look like:  
+For this example, lets say you want to monitor a variety of services on a remote host.  Let's call that host <i>remotehost</i>.  The host definition can be placed in its own file or added to an already exiting object configuration file.  Here's what the host definition for <i>remotehost</i> might look like:
 
 <pre>
 define host{
@@ -123,7 +124,7 @@ A more advanced service definition is shown below.  This service will check the 
 define service{
 	use		generic-service		; Inherit default values from a template
 	host_name		remotehost
-	service_description	Special FTP 
+	service_description	Special FTP
 	check_command	check_ftp!-p 1023 -t 5 -e "Pure-FTPd [TLS]"
 	}
 </pre>
@@ -158,7 +159,7 @@ A more advanced service definition is shown below.  This service will check the 
 define service{
 	use		generic-service		; Inherit default values from a template
 	host_name		remotehost
-	service_description	SSH Version Check 
+	service_description	SSH Version Check
 	check_command	check_ssh!-t 5 -r "OpenSSH_4.2"
 	}
 </pre>
@@ -193,7 +194,7 @@ A more advanced service definition is shown below.  This service will check the 
 define service{
 	use		generic-service		; Inherit default values from a template
 	host_name		remotehost
-	service_description	SMTP Response Check 
+	service_description	SMTP Response Check
 	check_command	check_smtp!-t 5 -e "mygreatmailserver.com"
 	}
 </pre>
@@ -228,7 +229,7 @@ A more advanced service definition is shown below.  This service will check the 
 define service{
 	use		generic-service		; Inherit default values from a template
 	host_name		remotehost
-	service_description	POP3 Response Check 
+	service_description	POP3 Response Check
 	check_command	check_pop!-t 5 -e "mygreatmailserver.com"
 	}
 </pre>
@@ -263,7 +264,7 @@ A more advanced service definition is shown below.  This service will check the 
 define service{
 	use		generic-service		; Inherit default values from a template
 	host_name		remotehost
-	service_description	IMAP4 Response Check 
+	service_description	IMAP4 Response Check
 	check_command	check_imap!-t 5 -e "mygreatmailserver.com"
 	}
 </pre>

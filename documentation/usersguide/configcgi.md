@@ -3,6 +3,7 @@ layout: doctoc
 title: CGI Configuration File Options
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="config.html">Configuration Overview</a>, <a href="cgis.html">Information on the CGIs</a>, <a href="cgiauth.html">Authentication And Authorization In The CGIs</a>, <a href="cgiincludes.html">CGI Footers and Headers</a>
@@ -21,7 +22,7 @@ When creating and/or editing configuration files, keep the following in mind:
 
 ### Config File Location
 
-By default, Naemon expects the CGI configuration file to be named **cgi.cfg** and located in the config file directory along with the <a href="configmain.html">main config file</a>.  If you need to change the name of the file or its location, you can configure Apache to pass an environment variable named NAGIOS_CGI_CONFIG (which points to the correct location) to the CGIs.  See the Apache documentation for information on how to do this. 
+By default, Naemon expects the CGI configuration file to be named **cgi.cfg** and located in the config file directory along with the <a href="configmain.html">main config file</a>.  If you need to change the name of the file or its location, you can configure Apache to pass an environment variable named NAGIOS_CGI_CONFIG (which points to the correct location) to the CGIs.  See the Apache documentation for information on how to do this.
 
 ### Configuration File Variables
 

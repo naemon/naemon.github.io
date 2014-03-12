@@ -3,6 +3,7 @@ layout: doctoc
 title: Ubuntu Quickstart
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guides</a>, <a href="security.html">Security Considerations</a>
 
@@ -24,7 +25,7 @@ If you follow these instructions, here's what you'll end up with:
 
 ### Required Packages
 
-Make sure you've installed the following packages on your Ubuntu installation before continuing. 
+Make sure you've installed the following packages on your Ubuntu installation before continuing.
 
 <ul>
 <li>Apache 2</li>

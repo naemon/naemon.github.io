@@ -3,6 +3,7 @@ layout: doctoc
 title: Passive Checks
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="activechecks.html">Active Checks</a>, <a href="servicechecks.html">Service Checks</a>, <a href="hostchecks.html">Host Checks</a>
 
@@ -60,7 +61,7 @@ In order to enable passive checks in Naemon, you'll need to do the following:
 
 ### Submitting Passive Service Check Results
 
-<p>External applications can submit passive service check results to Naemon by writing a PROCESS_SERVICE_CHECK_RESULT <a href="extcommands.html">external command</a> to the external command file.</p>  
+<p>External applications can submit passive service check results to Naemon by writing a PROCESS_SERVICE_CHECK_RESULT <a href="extcommands.html">external command</a> to the external command file.</p>
 
 The format of the command is as follows:
 
@@ -71,24 +72,24 @@ The format of the command is as follows:
 where...
 
 <ul>
-<li><i>timestamp</i> is the time in time_t format (seconds since the UNIX epoch) that the service check was perfomed (or submitted). Please note the single space after the right bracket. 
+<li><i>timestamp</i> is the time in time_t format (seconds since the UNIX epoch) that the service check was perfomed (or submitted). Please note the single space after the right bracket.
 <li><i>host_name</i> is the short name of the host associated with the service in the service definition
 <li><i>svc_description</i> is the description of the service as specified in the service definition
 <li><i>return_code</i> is the return code of the check (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN)
 <li><i>plugin_output</i> is the text output of the service check (i.e. the plugin output)
 </ul>
 
-<span class="glyphicon glyphicon-pencil"></span> 
+<span class="glyphicon glyphicon-pencil"></span>
 
 Note: A service must be defined in Naemon before you can submit passive check results for it!  Naemon will ignore all check results for services that had not been configured before it was last (re)started.
 
-<span class="glyphicon glyphicon-thumbs-up"></span> 
+<span class="glyphicon glyphicon-thumbs-up"></span>
 
 An example shell script of how to submit passive service check results to Naemon can be found in the documentation on <a href="volatileservices.html">volatile services</a>.
 
 ### Submitting Passive Host Check Results
 
-<p>External applications can submit passive host check results to Naemon by writing a PROCESS_HOST_CHECK_RESULT external command to the external command file.</p>  
+<p>External applications can submit passive host check results to Naemon by writing a PROCESS_HOST_CHECK_RESULT external command to the external command file.</p>
 
 The format of the command is as follows:
 
@@ -99,19 +100,19 @@ The format of the command is as follows:
 where...
 
 <ul>
-<li><i>timestamp</i> is the time in time_t format (seconds since the UNIX epoch) that the host check was perfomed (or submitted). Please note the single space after the right bracket. 
+<li><i>timestamp</i> is the time in time_t format (seconds since the UNIX epoch) that the host check was perfomed (or submitted). Please note the single space after the right bracket.
 <li><i>host_name</i> is the short name of the host (as defined in the host definition)
 <li><i>host_status</i> is the status of the host (0=UP, 1=DOWN, 2=UNREACHABLE)
 <li><i>plugin_output</i> is the text output of the host check
 </ul>
 
-<span class="glyphicon glyphicon-pencil"></span> 
+<span class="glyphicon glyphicon-pencil"></span>
 
 Note: A host must be defined in Naemon before you can submit passive check results for it!  Naemon will ignore all check results for hosts that had not been configured before it was last (re)started.
 
 ### Passive Checks and Host States
 
-Unlike with active host checks, Naemon does not (by default) attempt to determine whether or host is DOWN or UNREACHABLE with passive checks.  Rather, Naemon takes the passive check result to be the actual state the host is in and doesn't try to determine the host's actual state using the <a href="networkreachability.html">reachability logic</a>.  This can cause problems if you are submitting passive checks from a remote host or you have a <a href="distributed.html">distributed monitoring setup</a> where the parent/child host relationships are different. 
+Unlike with active host checks, Naemon does not (by default) attempt to determine whether or host is DOWN or UNREACHABLE with passive checks.  Rather, Naemon takes the passive check result to be the actual state the host is in and doesn't try to determine the host's actual state using the <a href="networkreachability.html">reachability logic</a>.  This can cause problems if you are submitting passive checks from a remote host or you have a <a href="distributed.html">distributed monitoring setup</a> where the parent/child host relationships are different.
 
 <p>You can tell Naemon to translate DOWN/UNREACHABLE passive check result states to their "proper" state by using the <a href="configmain.html#translate_passive_host_checks">translate_passive_host_checks</a> variable.  More information on how this works can be found <a href="passivestatetranslation.html">here</a>.</p>
 

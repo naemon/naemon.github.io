@@ -3,6 +3,7 @@ layout: doctoc
 title: TCP Wrapper Integration
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="integration.html">Integration Overview</a>, <a href="extcommands.html">External Commands</a>, <a href="passivechecks.html">Passive Checks</a>
@@ -87,5 +88,5 @@ Notice that the <i>handle_tcp_wrapper</i> script calls the <i>submit_check_resul
 You've now configured everything you need to, so all you have to do is restart the <i>inetd</i> process on <i>firestorm</i> and restart Naemon on your monitoring server.  That's it!  When the TCP wrappers on <i>firestorm</i> deny a connection attempt, you should be getting alerts in Naemon.  The plugin output for the alert will look something like the following:
 
 <pre>
-Denied sshd2-sdn-ar-002mnminnP321.dialsprint.net 
+Denied sshd2-sdn-ar-002mnminnP321.dialsprint.net
 </pre>

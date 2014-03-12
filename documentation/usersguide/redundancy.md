@@ -3,6 +3,8 @@ layout: doctoc
 title: Redundant and Failover Network Monitoring
 ---
 
+{% include review_required.md %}
+
 ### Introduction
 
 This section describes a few scenarios for implementing redundant monitoring hosts an various types of network layouts.  With redundant hosts, you can maintain the ability to monitor your network when the primary host that runs Naemon fails or when portions of your network become unreachable.
@@ -92,7 +94,7 @@ define command{
 	command_name	handle-master-host-event
 	command_line	/usr/local/nagios/libexec/eventhandlers/handle-master-host-event $HOSTSTATE$ $HOSTSTATETYPE$
 	}
-	
+
 define command{
 	command_name	handle-master-proc-event
 	command_line	/usr/local/nagios/libexec/eventhandlers/handle-master-proc-event $SERVICESTATE$ $SERVICESTATETYPE$
@@ -120,14 +122,14 @@ HARD)
 	DOWN)
 		# The master host has gone down!
 		# We should now become the master host and take
-		# over the responsibilities of monitoring the 
+		# over the responsibilities of monitoring the
 		# network, so enable notifications...
 		/usr/local/nagios/libexec/eventhandlers/enable_notifications
 		;;
 	UP)
 		# The master host has recovered!
 		# We should go back to being the slave host and
-		# let the master host do the monitoring, so 
+		# let the master host do the monitoring, so
 		# disable notifications...
 		/usr/local/nagios/libexec/eventhandlers/disable_notifications
 		;;
@@ -157,13 +159,13 @@ HARD)
 	UNKNOWN)
 		# The master Naemon process may or may not
 		# be running.. We won't do anything here, but
-		# to be on the safe side you may decide you 
+		# to be on the safe side you may decide you
 		# want the slave host to become the master in
 		# these situations...
 		;;
 	OK)
 		# The master Naemon process running again!
-		# We should go back to being the slave host, 
+		# We should go back to being the slave host,
 		# so disable notifications...
 		/usr/local/nagios/libexec/eventhandlers/disable_notifications
 		;;
@@ -180,7 +182,7 @@ The slave host (host E) initially has notifications disabled, so it won't send o
 The Naemon process on the slave host (host E) becomes the master host when...
 
 <ul>
-<li>The master host (host A) goes down and the <i><font color="red">handle-master-host-event</font></i> host event handler is executed.  
+<li>The master host (host A) goes down and the <i><font color="red">handle-master-host-event</font></i> host event handler is executed.
 <li>The Naemon process on the master host (host A) stops running and the <i><font color="red">handle-master-proc-event</font></i> service event handler is executed.
 </ul>
 

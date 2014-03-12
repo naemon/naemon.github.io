@@ -3,6 +3,7 @@ layout: doctoc
 title: Service and Host Check Scheduling
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="activechecks.html">Active Checks</a>

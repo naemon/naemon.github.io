@@ -3,6 +3,7 @@ layout: doctoc
 title: Developing Plugins For Use With Embedded Perl
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="embeddedperl.html">Embedded Perl Interpreter Overview</a>, <a href="pluginapi.html">Plugin API</a>
@@ -68,7 +69,7 @@ is read-only (a complicated structure for example) this is not a problem. What B
 <ul>
 <li>make the subroutine anonymous and call it via a code ref e.g.<br><br>
 <pre>
-turn this                     into  
+turn this                     into
 
 my $x = 1 ;                   my $x = 1 ;
 sub a { .. Process $x ... }   $a_cr = sub { ... Process $x ... } ;
@@ -101,7 +102,7 @@ On the basis that Lincoln Stein and Doug MacEachern know a thing or two about Pe
 <li>Be aware that your plugin may return strange values with an ePN and that this is likely to be caused by the problem in item #4 above<br><br>
 <li>Be prepared to debug via:<br><br>
 <ul>
-<li>having a test ePN and 
+<li>having a test ePN and
 <li>adding print statements to your plugin to display variable values to STDERR (can't use STDOUT)
 <li>adding print statements to p1.pl to display what ePN thinks your plugin is before it tries to run it (vi)
 <li>running the ePN in foreground mode (probably in conjunction with the former recommendations)
@@ -129,7 +130,7 @@ The following output shows how a test ePN transformed the <i>check_rpc</i> plugi
 <font color="red">
                 package main;
                 use subs 'CORE::GLOBAL::exit';
-                sub CORE::GLOBAL::exit { die "ExitTrap: $_[0] 
+                sub CORE::GLOBAL::exit { die "ExitTrap: $_[0]
 (Embed::check_5frpc)"; }
                 package Embed::check_5frpc; sub hndlr { shift(@_);
 @ARGV=@_;</font>

@@ -3,6 +3,7 @@ layout: doctoc
 title: Fedora Quickstart
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guides</a>, <a href="security.html">Security Considerations</a>
 
@@ -26,7 +27,7 @@ If you follow these instructions, here's what you'll end up with:
 
 During portions of the installation you'll need to have <b>root</b> access to your machine.
 
-Make sure you've installed the following packages on your Fedora installation before continuing. 
+Make sure you've installed the following packages on your Fedora installation before continuing.
 
 <ul>
 <li>Apache</li>
@@ -202,7 +203,7 @@ Put SELinux into Permissive mode.
 setenforce 0
 </pre>
 
-To make this change permanent, you'll have to modify the settings in <i>/etc/selinux/config</i> and reboot. 
+To make this change permanent, you'll have to modify the settings in <i>/etc/selinux/config</i> and reboot.
 
 Instead of disabling SELinux or setting it to permissive mode, you can use the following command to run the CGIs under SELinux enforcing/targeted mode:
 

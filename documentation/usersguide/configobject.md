@@ -3,6 +3,7 @@ layout: doctoc
 title: Object Configuration Overview
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="config.html">Configuration Overview</a>, <a href="objectdefinitions.html">Object Definitions</a>
 
@@ -31,7 +32,7 @@ Objects can be defined in one or more configuration files and/or directories tha
 
 ### How Are Objects Defined?
 
-Objects are defined in a flexible template format, which can make it much easier to manage your Naemon configuration in the long term.  Basic information on how to define objects in your configuration files can be found <a href="objectdefinitions.html">here</a>.  
+Objects are defined in a flexible template format, which can make it much easier to manage your Naemon configuration in the long term.  Basic information on how to define objects in your configuration files can be found <a href="objectdefinitions.html">here</a>.
 
 Once you get familiar with the basics of how to define objects, you should read up on <a href="objectinheritance.html">object inheritance</a>, as it will make your configuration more robust for the future.  Seasoned users can exploit some advanced features of object definitions as described in the documentation on <a href="objecttricks.html">object tricks</a>.
 

@@ -3,6 +3,7 @@ layout: doctoc
 title: Using The Embedded Perl Interpreter
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="epnplugins.html">Developing Plugins For Use With Embedded Perl</a>

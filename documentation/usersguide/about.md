@@ -2,6 +2,9 @@
 layout: doctoc
 title: About Naemon
 ---
+
+{% include review_required.md %}
+
 ### Naemon Overview
 
 More information about Naemon - including features and technical specifications can be found online at <a href="http://naemon.org" target="_blank"><b>naemon.org</b></a>.
@@ -20,7 +23,7 @@ Some of the many features of Naemon include:
 * Parallelized service checks
 * Thruk Monitoring Webinterface to edit settings and view current network status, problem history, log files, etc.
 * Ability to define network host hierarchy using "parent" hosts, allowing detection of and distinction between hosts that are down and those that are unreachable
-* Contact notifications when service or host problems occur and get resolved (via email, pager, or user-defined method) 
+* Contact notifications when service or host problems occur and get resolved (via email, pager, or user-defined method)
 * Ability to define event handlers to be run during service or host events for proactive problem resolution
 * Automatic log file rotation
 * Support for implementing redundant monitoring hosts

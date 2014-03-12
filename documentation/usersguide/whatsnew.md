@@ -3,6 +3,8 @@ layout: doctoc
 title: What's New
 ---
 
+{% include review_required.md %}
+
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="knownissues.html">Known Issues</a>
 

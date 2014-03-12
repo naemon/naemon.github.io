@@ -3,6 +3,7 @@ layout: doctoc
 title: Performance Data
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="plugins.html">Plugins</a>, <a href="pluginapi.html">Plugin API</a>
 
@@ -28,7 +29,7 @@ Plugin performance data is external data specific to the plugin used to perform 
 At a minimum, Naemon plugins must return a single line of human-readable text that indicates the status of some type of measurable data.  For example, the check_ping plugin might return a line of text like the following:
 
 <pre>
-PING ok - Packet loss = 0%, RTA = 0.80 ms 
+PING ok - Packet loss = 0%, RTA = 0.80 ms
 </pre>
 
 With this simple type of output, the entire line of text is available in the $HOSTOUTPUT$ or $SERVICEOUTPUT$ <a href="macros.html">macros</a> (depending on whether this plugin was used as a host check or service check).

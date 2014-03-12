@@ -3,6 +3,7 @@ layout: doctoc
 title: Main Configuration File Options
 ---
 
+{% include review_required.md %}
 
 
 ### Notes
@@ -507,7 +508,7 @@ This option determines whether or not Naemon will check the <a href="#command_fi
 </tr>
 </table>
 
-If you specify a number with an "s" appended to it (i.e. 30s), this is the number of *seconds* to wait between external command checks.  If you leave off the "s", this is the number of "time units" to wait between external command checks. Unless you've changed the <a href="#interval_length">interval_length</a> value (as defined below) from the default value of 60, this number will mean minutes.  
+If you specify a number with an "s" appended to it (i.e. 30s), this is the number of *seconds* to wait between external command checks.  If you leave off the "s", this is the number of "time units" to wait between external command checks. Unless you've changed the <a href="#interval_length">interval_length</a> value (as defined below) from the default value of 60, this number will mean minutes.
 
 Note: By setting this value to **-1**, Naemon will check for external commands as often as possible.  Each time Naemon checks for external commands it will read and process all commands present in the <a href="#command_file">command file</a> before continuing on with its other duties.  More information on external commands can be found <a href="extcommands.html">here</a>.
 
@@ -2533,7 +2534,7 @@ This option allows you to specify illegal characters that cannot be used in host
 </tr>
 </table>
 
-This option allows you to specify illegal characters that should be stripped from <a href="macros.html">macros</a> before being used in notifications, event handlers, and other commands.  This DOES NOT affect macros used in service or host check commands.  You can choose to not strip out the characters shown in the example above, but I recommend you do not do this.  Some of these characters are interpreted by the shell (i.e. the backtick) and can lead to security problems.  The following macros are stripped of the characters you specify: 
+This option allows you to specify illegal characters that should be stripped from <a href="macros.html">macros</a> before being used in notifications, event handlers, and other commands.  This DOES NOT affect macros used in service or host check commands.  You can choose to not strip out the characters shown in the example above, but I recommend you do not do this.  Some of these characters are interpreted by the shell (i.e. the backtick) and can lead to security problems.  The following macros are stripped of the characters you specify:
 
 **$HOSTOUTPUT$**, **$HOSTPERFDATA$**, **$HOSTACKAUTHOR$**, **$HOSTACKCOMMENT$**, **$SERVICEOUTPUT$**, **$SERVICEPERFDATA$**, **$SERVICEACKAUTHOR$**, and **$SERVICEACKCOMMENT$**
 

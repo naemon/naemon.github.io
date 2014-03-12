@@ -3,6 +3,7 @@ layout: doctoc
 title: State Types
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="hostchecks.html">Host Checks</a>, <a href="servicechecks.html">Service Checks</a>, <a href="eventhandlers.html">Event Handlers</a>, <a href="notifications.html">Notifications</a>
 
@@ -40,7 +41,7 @@ The following things occur when hosts or services experience SOFT state changes:
 </ul>
 
 SOFT states are only logged if you enabled the <a href="configmain.html#log_service_retries">log_service_retries</a> or <a href="configmain.html#log_host_retries">log_host_retries</a> options in your main configuration file.
-The only important thing that really happens during a soft state is the execution of event handlers.  Using event handlers can be particularly useful if you want to try and proactively fix a problem before it turns into a HARD state. 
+The only important thing that really happens during a soft state is the execution of event handlers.  Using event handlers can be particularly useful if you want to try and proactively fix a problem before it turns into a HARD state.
 The <a href="macrolist.html#hoststatetype">$HOSTSTATETYPE$</a> or <a href="macrolist.html#servicestatetype">$SERVICESTATETYPE$</a> macros will have a value of "<i>SOFT</i>" when event handlers are executed, which allows your event handler scripts to know when they should take corrective action.  More information on event handlers can be found <a href="eventhandlers.html">here</a>.
 
 ### Hard States

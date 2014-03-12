@@ -3,6 +3,7 @@ layout: doctoc
 title: Custom Object Variables
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="objectdefinitions.html">Object Configuration</a>, <a href="objectinheritance.html">Object Inheritance</a>, <a href="macros.html">Macros</a>
@@ -10,7 +11,7 @@ title: Custom Object Variables
 
 ### Introduction
 
-Users often request that new variables be added to host, service, and contact definitions.  These include variables for SNMP community, MAC address, AIM username, Skype number, and street address.  The list is endless.  The problem that I see with doing this is that it makes Naemon less generic and more infrastructure-specific.  Naemon was intended to be flexible, which meant things needed to be designed in a generic manner.  Host definitions in Naemon, for example, have a generic "address" variable that can contain anything from an IP address to human-readable driving directions - whatever is appropriate for the user's setup.  
+Users often request that new variables be added to host, service, and contact definitions.  These include variables for SNMP community, MAC address, AIM username, Skype number, and street address.  The list is endless.  The problem that I see with doing this is that it makes Naemon less generic and more infrastructure-specific.  Naemon was intended to be flexible, which meant things needed to be designed in a generic manner.  Host definitions in Naemon, for example, have a generic "address" variable that can contain anything from an IP address to human-readable driving directions - whatever is appropriate for the user's setup.
 
 Still, there needs to be a method for admins to store information about their infrastructure components in their Naemon configuration without imposing a set of specific variables on others.  Naemon attempts to solve this problem by allowing users to define custom variables in their object definitions.  Custom variables allow users to define additional properties in their host, service, and contact definitions, and use their values in notifications, event handlers, and host and service checks.
 

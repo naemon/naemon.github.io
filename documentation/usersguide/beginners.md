@@ -3,6 +3,8 @@ layout: doc
 title: Advice for Beginners
 ---
 
+{% include review_required.md %}
+
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guide</a>
 
 Congratulations on choosing Naemon!  Naemon is quite powerful and flexible, but it can take a lot of work to get it configured just the way you'd like.  Once you become familiar with how it works and what it can do for you, you'll never want to be without it. :-)  Here are some important things to keep in mind for first-time Naemon users:

@@ -3,6 +3,7 @@ layout: doctoc
 title: Cached Checks
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="hostchecks.html">Host Checks</a>, <a href="servicechecks.html">Service Checks</a>, <a href="dependencychecks.html">Predictive Dependency Checks</a>
 
@@ -38,11 +39,11 @@ If the last check was performed within the timeframe specified by the cached che
 
 ### What This Really Means
 
-Naemon performs on-demand checks because it need to know the current state of a host or service *at that exact moment* in time.  Utilizing cached checks allows you to make Naemon think that recent check results are "good enough" for determining the current state of hosts, and that it doesn't need to go out and actually re-check the status of that host or service.   
+Naemon performs on-demand checks because it need to know the current state of a host or service *at that exact moment* in time.  Utilizing cached checks allows you to make Naemon think that recent check results are "good enough" for determining the current state of hosts, and that it doesn't need to go out and actually re-check the status of that host or service.
 
 The cached check horizon tells Naemon how recent check results must be in order to reliably reflect the current state of a host or service.  For example, with a cached check horizon of 30 seconds, you are telling Naemon that if a host's state was checked sometime in the last 30 seconds, the result of that check should still be considered the current state of the host.
 
-The number of cached check results that Naemon can use versus the number of on-demand checks it has to actually execute can be considered the cached check "hit" rate.  By increasing the cached check horizon to equal the regular check interval of a host, you could theoretically achieve a cache hit rate of 100%.  In that case all on-demand checks of that host would use cached check results.  What a performance improvement!  But is it really?  Probably not.  
+The number of cached check results that Naemon can use versus the number of on-demand checks it has to actually execute can be considered the cached check "hit" rate.  By increasing the cached check horizon to equal the regular check interval of a host, you could theoretically achieve a cache hit rate of 100%.  In that case all on-demand checks of that host would use cached check results.  What a performance improvement!  But is it really?  Probably not.
 
 The reliability of cached check result information decreases over time.  Higher cache hit rates require that previous check results are considered "valid" for longer periods of time.  Things can change quickly in any network scenario, and there's no guarantee that a server that was functioning properly 30 seconds ago isn't on fire right now.  There's the tradeoff - reliability versus speed.  If you have a large cached check horizon, you risk having unreliable check result values being used in the monitoring logic.
 

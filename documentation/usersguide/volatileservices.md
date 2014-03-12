@@ -3,6 +3,7 @@ layout: doctoc
 title: Volatile Services
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="stalking.html">State Stalking</a>
 
@@ -65,20 +66,20 @@ Create a shell script in the <i>/usr/local/nagios/libexec/eventhandlers</i> dire
 
 <pre>
 	#!/bin/sh
- 
+
 	# Write a command to the Naemon command file to cause
 	# it to process a service check result
- 
+
 	echocmd="/bin/echo"
- 
+
 	CommandFile="/usr/local/nagios/var/rw/nagios.cmd"
- 
+
 	# get the current date/time in seconds since UNIX epoch
 	datetime=`date +%s`
- 
+
 	# create the command line to add to the command file
 	cmdline="[$datetime] PROCESS_SERVICE_CHECK_RESULT;$1;$2;$3;$4"
- 
+
 	# append the command to the end of the command file
 	`$echocmd $cmdline >> $CommandFile`
 </pre>
@@ -89,7 +90,7 @@ What will happen when PortSentry detects a port scan on the machine in the futur
 <li>PortSentry will firewall the host (this is a function of the PortSentry software)
 <li>PortSentry will execute the <i>submit_check_result</i> shell script and send a passive check result to Naemon
 <li>Naemon will read the external command file and see the passive service check submitted by PortSentry
-<li>Naemon will put the <i>Port Scans</i> service in a hard CRITICAL state and send notifications to contacts 
+<li>Naemon will put the <i>Port Scans</i> service in a hard CRITICAL state and send notifications to contacts
 </ul>
 
 Pretty neat, huh?

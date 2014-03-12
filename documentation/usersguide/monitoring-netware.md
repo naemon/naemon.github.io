@@ -3,13 +3,14 @@ layout: doctoc
 title: Monitoring Netware Servers
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guide</a>, <a href="monitoring-publicservices.html">Monitoring Publicly Available Services</a>
 
 ### Introduction
 
-This document provides information on how you can monitor Novell Netware servers. 
+This document provides information on how you can monitor Novell Netware servers.
 
 ### External Resources
 

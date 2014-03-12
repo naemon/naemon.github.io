@@ -3,6 +3,7 @@ layout: doctoc
 title: Fast Startup Options
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="tuning.html">Performance Tuning</a>, <a href="largeinstalltweaks.html">Large Installation Tweaks</a>
@@ -95,7 +96,7 @@ Whoa!  From <b>68 seconds</b> to just <b>5 seconds</b>?  Yep, read on for how to
 
 ### Pre-Caching Object Configuration
 
-Naemon can spend quite a bit of time parsing your config files, especially if you make use of the template features such as inheritance, etc.  In order to reduce the time it takes to parse your config, you can have Naemon pre-process and pre-cache your config files for future use.  
+Naemon can spend quite a bit of time parsing your config files, especially if you make use of the template features such as inheritance, etc.  In order to reduce the time it takes to parse your config, you can have Naemon pre-process and pre-cache your config files for future use.
 
 <table border="0" class="Default">
 <tr>

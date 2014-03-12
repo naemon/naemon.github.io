@@ -3,6 +3,7 @@ layout: doctoc
 title: Event Handlers
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="statetypes.html">State Types</a>, <a href="hostchecks.html">Host Checks</a>, <a href="servicechecks.html">Service Checks</a>
@@ -78,9 +79,9 @@ The scripts should examine the values of the arguments passed to it and take any
 
 ### Permissions For Event Handler Commands
 
-Event handler commands will normally execute with the same permissions as the user under which 
-Naemon is running on your machine.  This can present a problem if you want to write an event handler that restarts system 
-services, as root privileges are generally required to do these sorts of tasks.  
+Event handler commands will normally execute with the same permissions as the user under which
+Naemon is running on your machine.  This can present a problem if you want to write an event handler that restarts system
+services, as root privileges are generally required to do these sorts of tasks.
 
 Ideally you should evaluate the types of event handlers you will be implementing and grant just enough permissions
 to the Naemon user for executing the necessary system commands.  You might want to try using <a href="http://www.courtesan.com/sudo/sudo.html">sudo</a> to accomplish this.
@@ -143,11 +144,11 @@ CRITICAL)
 	# We're in a "soft" state, meaning that Naemon is in the middle of retrying the
 	# check before it turns into a "hard" state and contacts get notified...
 	SOFT)
-			
+
 		# What check attempt are we on?  We don't want to restart the web server on the first
 		# check, because it may just be a fluke!
 		case "$3" in
-				
+
 		# Wait until the check has been tried 3 times before restarting the web server.
 		# If the check fails on the 4th time (after we restart the web server), the state
 		# type will turn to "hard" and contacts will be notified of the problem.
@@ -161,10 +162,10 @@ CRITICAL)
 			;;
 			esac
 		;;
-				
+
 	# The HTTP service somehow managed to turn into a hard error without getting fixed.
 	# It should have been restarted by the code above, but for some reason it didn't.
-	# Let's give it one last try, shall we?  
+	# Let's give it one last try, shall we?
 	# Note: Contacts have already been notified of a problem with the service at this
 	# point (unless you disabled notifications for this service)
 	HARD)

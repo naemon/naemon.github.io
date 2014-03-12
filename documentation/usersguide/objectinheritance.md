@@ -3,6 +3,7 @@ layout: doctoc
 title: Object Inheritance
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="objectdefinitions.html">Object Configuration</a>, <a href="objecttricks.html">Object Tricks</a>, <a href="customobjectvars.html">Custom Object Variables</a>, <a href="faststartup.html">Fast Startup Options</a>
 

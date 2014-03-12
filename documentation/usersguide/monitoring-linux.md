@@ -3,13 +3,14 @@ layout: doctoc
 title: Monitoring Linux/Unix Machines
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guide</a>, <a href="monitoring-publicservices.html">Monitoring Publicly Available Services</a>
 
 ### Introduction
 
-This document describes how you can monitor "private" services and attributes of Linux/UNIX servers, such as: 
+This document describes how you can monitor "private" services and attributes of Linux/UNIX servers, such as:
 
 <ul>
 <li>CPU load</li>
@@ -22,7 +23,7 @@ This document describes how you can monitor "private" services and attributes of
 
 Publicly available services that are provided by Linux servers (HTTP, FTP, SSH, SMTP, etc.) can be monitored easily by following the documentation on <a href="monitoring-publicservices.html">monitoring publicly available services</a>.
 
-<span class="glyphicon glyphicon-pencil"></span> Note: These instructions assume that you've installed Naemon according to the <a href="quickstart.html">quickstart guide</a>.  The sample configuration entries below reference objects that are defined in the sample config files (<i>commands.cfg</i>, <i>templates.cfg</i>, etc.) that are installed if you follow the quickstart. 
+<span class="glyphicon glyphicon-pencil"></span> Note: These instructions assume that you've installed Naemon according to the <a href="quickstart.html">quickstart guide</a>.  The sample configuration entries below reference objects that are defined in the sample config files (<i>commands.cfg</i>, <i>templates.cfg</i>, etc.) that are installed if you follow the quickstart.
 
 ### Overview
 
@@ -32,4 +33,4 @@ There are several different ways to monitor attributes or remote Linux/Unix serv
 
 <img src="/images/nrpe.png" border="0" alt="NRPE" title="NRPE" style="float: right; clear: both;">
 
-Another common method of monitoring remote Linux/Unix hosts is to use the <a href="addons.html#nrpe">NRPE addon</a>.  NRPE  allows you to execute plugins on remote Linux/Unix hosts.  This is useful if you need to monitor local resources/attributes like disk usage, CPU load, memory usage, etc. on a remote host. 
+Another common method of monitoring remote Linux/Unix hosts is to use the <a href="addons.html#nrpe">NRPE addon</a>.  NRPE  allows you to execute plugins on remote Linux/Unix hosts.  This is useful if you need to monitor local resources/attributes like disk usage, CPU load, memory usage, etc. on a remote host.

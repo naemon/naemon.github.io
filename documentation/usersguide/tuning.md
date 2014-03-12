@@ -3,6 +3,7 @@ layout: doctoc
 title: Tuning Naemon For Maximum Performance
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="largeinstalltweaks.html">Large Installation Tweaks</a>, <a href="faststartup.html">Fast Startup Options</a>, <a href="mrtggraphs.html">Graphing Performance Info</a>
 

@@ -2,6 +2,9 @@
 layout: doctoc
 title: Determining Status and Reachability of Network Hosts
 ---
+
+{% include review_required.md %}
+
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="hostchecks.html">Host Checks</a>, <a href="passivestatetranslation.html">Passive Host State Translation</a>
 
 ### Introduction
@@ -35,42 +38,42 @@ define host{
 	host_name		Switch1
 	parents		Naemon
 	}
-	
+
 define host{
 	host_name		Web
 	parents		Switch1
 	}
-	
+
 define host{
 	host_name		FTP
 	parents		Switch1
 	}
-	
+
 define host{
 	host_name		Router1
 	parents		Switch1
 	}
-	
+
 define host{
 	host_name		Switch2
 	parents		Router1
 	}
-	
+
 define host{
 	host_name		Wkstn1
 	parents		Switch2
 	}
-	
+
 define host{
 	host_name		HPLJ2605
 	parents		Switch2
 	}
-	
+
 define host{
 	host_name		Router2
 	parents		Router1
 	}
-	
+
 define host{
 	host_name		somewebsite.com
 	parents		Router2

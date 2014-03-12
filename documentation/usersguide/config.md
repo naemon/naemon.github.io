@@ -3,6 +3,7 @@ layout: doctoc
 title: Configuration Overview
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="configmain.html">Main Configuration File</a>, <a href="configobject.html">Object Configuration Overview</a>, <a href="configcgi.html">CGI Configuration File</a>

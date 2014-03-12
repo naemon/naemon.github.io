@@ -3,6 +3,7 @@ layout: doctoc
 title: State Stalking
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="volatileservices.html">Volatile Services</a>
 
@@ -12,7 +13,7 @@ State "stalking" is a feature which is probably not going to used by most users.
 
 ### How Does It Work?
 
-Under normal circumstances, the result of a host or service check is only logged if the host or service has changed state since it was last checked.  There are a few exceptions to this, but for the most part, that's the rule.  
+Under normal circumstances, the result of a host or service check is only logged if the host or service has changed state since it was last checked.  There are a few exceptions to this, but for the most part, that's the rule.
 
 If you enable stalking for one or more states of a particular host or service, Naemon will log the results of the host or service check if the output from the check differs from the output from the previous check.  Take the following example of eight consecutive checks of a service:
 

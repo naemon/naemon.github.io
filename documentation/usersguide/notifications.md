@@ -3,6 +3,7 @@ layout: doctoc
 title: Notifications
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="escalations.html">Escalations</a>, <a href="timeperiods.html">Timeperiods</a>, <a href="oncallrotation.html">On-Call Rotations</a>
 
@@ -25,7 +26,7 @@ The decision to send out notifications is made in the service check and host che
 
 ### Who Gets Notified?
 
-Each host and service definition has a &lt;<i>contact_groups</i>&gt; option that specifies what contact groups receive notifications for that particular host or service.  Contact groups can contain one or more individual contacts.  
+Each host and service definition has a &lt;<i>contact_groups</i>&gt; option that specifies what contact groups receive notifications for that particular host or service.  Contact groups can contain one or more individual contacts.
 
 When Naemon sends out a host or service notification, it will notify each contact that is a member of any contact groups specified in the &lt;<i>contactgroups</i>&gt; option of the service definition.  Naemon realizes that a contact may be a member of more than one contact group, so it removes duplicate contact notifications before it does anything.
 
@@ -98,7 +99,7 @@ There are many ways you could configure Naemon to send notifications out.  Its u
 
 Basically anything you can do from a command line can be tailored for use as a notification command.
 If you're looking for an alternative to using email for sending messages to your pager or cellphone, check out these packages. They could be used in conjuction with Naemon to send out a notification via a modem when a problem
-arises.  That way you don't have to rely on email to send notifications out (remember, email may *not* work if 
+arises.  That way you don't have to rely on email to send notifications out (remember, email may *not* work if
 there are network problems).  I haven't actually tried these packages myself, but others have reported success
 using them...
 
@@ -106,7 +107,7 @@ using them...
 <li><a href="http://www.gnokii.org/">Gnokii</a> (SMS software for contacting Nokia phones via GSM network)
 <li><a href="http://www.qpage.org/" target="_top">QuickPage</a> (alphanumeric pager software)
 <li><a href="http://www.sendpage.org/" target="_top">Sendpage</a> (paging software)
-<li><a href="http://www.smsclient.org/" target="_top">SMS Client</a> (command line utility for 
+<li><a href="http://www.smsclient.org/" target="_top">SMS Client</a> (command line utility for
 sending messages to pagers and mobile phones)
 </ul>
 

@@ -3,6 +3,7 @@ layout: doctoc
 title: Integration Overview
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="extcommands.html">External Commands</a>, <a href="passivechecks.html">Passive Checks</a>, <a href="eventhandlers.html">Event Handlers</a>, <a href="plugins.html">Plugins</a>

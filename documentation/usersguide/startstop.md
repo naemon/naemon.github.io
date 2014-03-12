@@ -3,6 +3,7 @@ layout: doctoc
 title: Starting and Stopping Naemon
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="verifyconfig.html">Verifying Your Configuration</a>
 

@@ -3,6 +3,7 @@ layout: doctoc
 title: Authentication And Authorization In The CGIs
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="configcgi.html">CGI Configuration File Options</a>, <a href="cgis.html">Information on the CGIs</a>
 

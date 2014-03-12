@@ -3,6 +3,7 @@ layout: doctoc
 title: Scheduled Downtime
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="notifications.html">Notifications</a>
@@ -37,7 +38,7 @@ When a host or service is in a period of scheduled downtime, Naemon will not all
 
 When the scheduled downtime is over, Naemon will allow normal notifications to be sent out for the host or service again.  A "DOWNTIMEEND" notification will get sent out notifying admins that the scheduled downtime is over, and they will start receiving normal alerts again.
 
-If the scheduled downtime is cancelled prematurely (before it expires), a "DOWNTIMECANCELLED" notification will get sent out to the appropriate admins.  
+If the scheduled downtime is cancelled prematurely (before it expires), a "DOWNTIMECANCELLED" notification will get sent out to the appropriate admins.
 
 ### Overlapping Scheduled Downtime
 

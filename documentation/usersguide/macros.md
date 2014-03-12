@@ -3,6 +3,7 @@ layout: doctoc
 title: Understanding Macros and How They Work
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="macrolist.html">List of Available Macros</a>

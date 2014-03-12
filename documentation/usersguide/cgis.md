@@ -2,6 +2,9 @@
 layout: doctoc
 title: Information On The CGIs
 ---
+
+{% include review_required.md %}
+
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="configcgi.html">CGI Configuration File Options</a>, <a href="cgiauth.html">Authentication And Authorization In The CGIs</a>, <a href="cgiincludes.html">CGI Footers and Headers</a>, <a href="cgisecurity.html">CGI Security</a>
 
 ### Introduction
@@ -474,7 +477,7 @@ This CGI is used to display host and service notifications that have been sent t
 <td align=left valign=top width="50%">
 <p>
 <b>Description:</b>
-This CGI is used to create a graph of host or service states over an arbitrary period of time.  In order for this CGI to be of much use, you should enable <a href="configmain.html#log_rotation_method">log rotation</a> and keep archived logs in the path specified by the <a href="configmain.html#log_archive_path">log_archive_path</a> directive.  The CGI uses Thomas Boutell's <a href="http://www.boutell.com/gd/">gd</a> library (version 1.6.3 or higher) to create the trends image.  
+This CGI is used to create a graph of host or service states over an arbitrary period of time.  In order for this CGI to be of much use, you should enable <a href="configmain.html#log_rotation_method">log rotation</a> and keep archived logs in the path specified by the <a href="configmain.html#log_archive_path">log_archive_path</a> directive.  The CGI uses Thomas Boutell's <a href="http://www.boutell.com/gd/">gd</a> library (version 1.6.3 or higher) to create the trends image.
 </p>
 <p>
 <b>Authorization Requirements:</b>

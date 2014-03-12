@@ -3,6 +3,8 @@ layout: doctoc
 title: Standard Macros in Naemon
 ---
 
+{% include review_required.md %}
+
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="macros.html">How Macros Work</a>
 
 Standard macros that are available in Naemon are listed here.  On-demand macros and macros for custom variables are described <a href="macros.html">here</a>.

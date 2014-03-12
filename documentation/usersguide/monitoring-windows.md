@@ -3,13 +3,14 @@ layout: doctoc
 title: Monitoring Windows Machines
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guide</a>, <a href="monitoring-publicservices.html">Monitoring Publicly Available Services</a>
 
 ### Introduction
 
-This document describes how you can monitor "private" services and attributes of Windows machines, such as: 
+This document describes how you can monitor "private" services and attributes of Windows machines, such as:
 
 <ul>
 <li>Memory usage</li>
@@ -30,7 +31,7 @@ Publicly available services that are provided by Windows machines (HTTP, FTP, PO
 
 Monitoring private services or attributes of a Windows machine requires that you install an agent on it.  This agent acts as a proxy between the Naemon plugin that does the monitoring and the actual service or attribute of the Windows machine.  Without installing an agent on the Windows box, Naemon would be unable to monitor private services or attributes of the Windows box.
 
-For this example, we will be installing the <a href="http://sourceforge.net/projects/nscplus">NSClient++</a> addon on the Windows machine and using the <i>check_nt</i> plugin to communicate with the NSClient++ addon.  The <i>check_nt</i> plugin should already be installed on the Naemon server if you followed the quickstart guide.  
+For this example, we will be installing the <a href="http://sourceforge.net/projects/nscplus">NSClient++</a> addon on the Windows machine and using the <i>check_nt</i> plugin to communicate with the NSClient++ addon.  The <i>check_nt</i> plugin should already be installed on the Naemon server if you followed the quickstart guide.
 
 Other Windows agents (like <a href="http://sourceforge.net/projects/nc-net">NC_Net</a>) could be used instead of NSClient++ if you wish - provided you change command and service definitions, etc. a bit.  For the sake of simplicity I will only cover using the NSClient++ addon in these instructions.
 
@@ -123,7 +124,7 @@ Before you can begin monitoring private services and attributes of Windows machi
 
 ### Configuring Naemon
 
-Now it's time to define some <a href="objectdefinitions.html">object definitions</a> in your Naemon configuration files in order to monitor the new Windows machine. 
+Now it's time to define some <a href="objectdefinitions.html">object definitions</a> in your Naemon configuration files in order to monitor the new Windows machine.
 
 Open the <i>windows.cfg</i> file for editing.
 
@@ -142,7 +143,7 @@ define host{
 	}
 </pre>
 
-Good. Now you can add some service definitions (to the same configuration file) in order to tell Naemon to monitor different aspects of the Windows machine.  If this is the *first* Windows machine you're monitoring, you can simply modify the sample service definitions in <i>windows.cfg</i>. 
+Good. Now you can add some service definitions (to the same configuration file) in order to tell Naemon to monitor different aspects of the Windows machine.  If this is the *first* Windows machine you're monitoring, you can simply modify the sample service definitions in <i>windows.cfg</i>.
 
 <span class="glyphicon glyphicon-pencil"></span> Note: Replace "<i>winserver</i>" in the example definitions below with the name you specified in the <i>host_name</i> directive of the host definition you just added.
 

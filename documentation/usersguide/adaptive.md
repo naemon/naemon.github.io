@@ -3,6 +3,7 @@ layout: doctoc
 title: Adaptive Monitoring
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="extcommands.html">External Commands</a>
 

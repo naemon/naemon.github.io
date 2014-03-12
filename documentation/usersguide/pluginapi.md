@@ -3,6 +3,7 @@ layout: doctoc
 title: Naemon Plugin API
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="plugins.html">Plugin Overview</a>, <a href="epnplugins.html">Developing Plugins For Use With Embedded Perl</a>, <a href="perfdata.html">Performance Data</a>
 

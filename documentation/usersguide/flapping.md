@@ -3,6 +3,7 @@ layout: doctoc
 title: Detection and Handling of State Flapping
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="statetypes.html">State Types</a>
 
@@ -70,7 +71,7 @@ Host flap detection works in a similiar manner to service flap detection, with o
 
 <ul>
 <li>The host is checked (actively or passively)
-<li>Sometimes when a service associated with that host is checked.  More specifically, when at least <i>x</i> amount of time has passed since the flap detection was last performed, where <i>x</i> is equal to the average check interval of all services associated with the host.  
+<li>Sometimes when a service associated with that host is checked.  More specifically, when at least <i>x</i> amount of time has passed since the flap detection was last performed, where <i>x</i> is equal to the average check interval of all services associated with the host.
 </ul>
 
 Why is this done?  With services we know that the minimum amount of time between consecutive flap detection routines is going to be equal to the service check interval.  However, you might not be monitoring hosts on a regular basis, so there might not be a host check interval that can be used in the flap detection logic.  Also, it makes sense that checking a service should count towards the detection of host flapping.  Services are attributes of or things associated with host after all...  At any rate, that's the best method I could come up with for determining how often flap detection could be performed on a host, so there you have it.

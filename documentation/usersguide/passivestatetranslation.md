@@ -3,6 +3,7 @@ layout: doctoc
 title: Passive Host State Translation
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="hostchecks.html">Host Checks</a>, <a href="networkreachability.html">Network Reachability</a>, <a href="passivechecks.html">Passive Checks</a>, <a href="distributed.html">Distributed Monitoring</a>, <a href="redundancy.html">Redundant/Failover Monitoring</a>
 

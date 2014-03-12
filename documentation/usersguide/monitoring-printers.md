@@ -3,6 +3,7 @@ layout: doctoc
 title: Monitoring Network Printers
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="monitoring-publicservices.html">Monitoring Publicly Available Services</a>

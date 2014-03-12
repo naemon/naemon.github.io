@@ -3,6 +3,7 @@ layout: doctoc
 title: Host and Service Dependencies
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="dependencychecks.html">Predictive Dependency Checks</a>, <a href="servicechecks.html">Service Checks</a>, <a href="hostchecks.html">Host Checks</a>
@@ -132,7 +133,7 @@ In the example above, <b>Service F</b> would have failed notification dependenci
 
 As mentioned before, service dependencies are *not* inherited by default.  In the example above you can see that Service F is dependent on Service E.  However, it does not automatically inherit Service E's dependencies on Service B and Service C.  In order to make Service F dependent on Service C we had to add another service dependency definition.  There is no dependency definition for Service B, so Service F is *not* dependent on Service B.
 
-If you *do* wish to make service dependencies inheritable, you must use the *inherits_parent* directive in the <a href="objectdefinitions.html#servicedependency">service dependency</a> definition.  When this directive is enabled, it indicates that the dependency inherits dependencies of the service *that is being depended upon* (also referred to as the master service). In other words, if the master service is dependent upon other services and any one of those dependencies fail, this dependency will also fail. 
+If you *do* wish to make service dependencies inheritable, you must use the *inherits_parent* directive in the <a href="objectdefinitions.html#servicedependency">service dependency</a> definition.  When this directive is enabled, it indicates that the dependency inherits dependencies of the service *that is being depended upon* (also referred to as the master service). In other words, if the master service is dependent upon other services and any one of those dependencies fail, this dependency will also fail.
 
 In the example above, imagine that you want to add a new dependency for service F to make it dependent on service A.  You could create a new dependency definition that specified service F as the *dependent* service and service A as being the *master* service (i.e. the service *that is being dependend on*).  You could alternatively modify the dependency definition for services D and F to look like this:
 

@@ -3,6 +3,7 @@ layout: doctoc
 title: Upgrading Naemon
 ---
 
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guide</a>
 

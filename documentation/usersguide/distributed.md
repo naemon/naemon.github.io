@@ -3,6 +3,8 @@ layout: doctoc
 title: Distributed Monitoring
 ---
 
+{% include review_required.md %}
+
 ### Introduction
 
 Naemon can be configured to support distributed monitoring of network services and resources.  I'll try to briefly explan how this can be accomplished...
@@ -19,7 +21,7 @@ The diagram below should help give you a general idea of how distributed monitor
 
 ### Central Server vs. Distributed Servers
 
-When setting up a distributed monitoring environment with Naemon, there are differences in the way the central and distributed servers are configured.  I'll show you how to configure both types of servers and explain what effects the changes being made have on the overall monitoring.  For starters, lets describe the purpose of the different types of servers...  
+When setting up a distributed monitoring environment with Naemon, there are differences in the way the central and distributed servers are configured.  I'll show you how to configure both types of servers and explain what effects the changes being made have on the overall monitoring.  For starters, lets describe the purpose of the different types of servers...
 
 The function of a <i>distributed server</i> is to actively perform checks all the services you define for a "cluster" of hosts.  I use the term "cluster" loosely - it basically just mean an arbitrary group of hosts on your network.  Depending on your network layout, you may have several cluters at one physical location, or each cluster may be separated by a WAN, its own firewall, etc.  The important thing to remember to that for each cluster of hosts (however you define that), there is one distributed server that runs Naemon and monitors the services on the hosts in the cluster.  A distributed server is usually a bare-bones installation of Naemon.  It doesn't have to have the web interface installed, send out notifications, run event handler scripts, or do anything other than execute service checks if you don't want it to.  More detailed information on configuring a distributed server comes later...
 

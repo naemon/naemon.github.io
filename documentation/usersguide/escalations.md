@@ -3,6 +3,7 @@ layout: doctoc
 title: Notification Escalations
 ---
 
+{% include review_required.md %}
 
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="notifications.html">Notifications</a>, <a href="timeperiods.html">Time Periods</a>
@@ -37,7 +38,7 @@ define serviceescalation{
 	notification_interval	60
 	contact_groups		nt-admins,managers,everyone
 	}
-</pre>	
+</pre>
 
 Notice that there are "holes" in the notification escalation definitions.  In particular, notifications 1 and 2 are not handled by the escalations, nor are any notifications beyond 10.  For the first and second notification, as well as all notifications beyond the tenth one, the <i>default</i> contact groups specified in the service definition are used.  For all the examples I'll be using, I'll be assuming that the default contact groups for the service definition is called <i>nt-admins</i>.
 
@@ -63,7 +64,7 @@ define serviceescalation{
 	notification_interval	60
 	contact_groups		nt-admins,managers,everyone
 	}
-</pre>	
+</pre>
 
 The first (or "lowest") escalation level includes both the <i>nt-admins</i> and <i>managers</i> contact groups.  The last (or "highest") escalation level includes the <i>nt-admins</i>, <i>managers</i>, and <i>everyone</i> contact groups.  Notice that the <i>nt-admins</i> contact group is included in both escalation definitions.  This is done so that they continue to get paged if there are still problems after the first two service notifications are sent out.  The <i>managers</i> contact group first appears in the "lower" escalation definition - they are first notified when the third problem notification gets sent out.  We want the <i>managers</i> group to continue to be notified if the problem continues past five notifications, so they are also included in the "higher" escalation definition.
 
@@ -89,7 +90,7 @@ define serviceescalation{
 	notification_interval	30
 	contact_groups		on-call-support
 	}
-</pre>	
+</pre>
 
 In the example above:
 
@@ -122,7 +123,7 @@ define serviceescalation{
 	notification_interval	30
 	contact_groups		on-call-support
 	}
-</pre>	
+</pre>
 
 If, after three problem notifications, a recovery notification is sent out for the service, who gets notified?  The recovery is actually the fourth notification that gets sent out.  However, the escalation code is smart enough to realize that only those people who were notified about the problem on the third notification should be notified about the recovery.  In this case, the <i>nt-admins</i> and <i>managers</i> contact groups would be notified of the recovery.
 
@@ -148,7 +149,7 @@ define serviceescalation{
 	notification_interval	60
 	contact_groups		nt-admins,managers,everyone
 	}
-</pre>	
+</pre>
 
 In this example we see that the default notification interval for the services is 240 minutes (this is the value in the service definition).  When the service notification is escalated on the 3rd, 4th, and 5th notifications, an interval of 45 minutes will be used between notifications.  On the 6th and subsequent notifications, the notification interval will be 60 minutes, as specified in the second escalation definition.
 
@@ -172,7 +173,7 @@ define serviceescalation{
 	notification_interval	60
 	contact_groups		nt-admins,managers,everyone
 	}
-</pre>	
+</pre>
 
 We see that the two escalation definitions overlap on the 4th and 5th notifications.  For these notifications, Naemon will use a notification interval of 45 minutes, since it is the smallest interval present in any valid escalation definitions for those notifications.
 
@@ -205,7 +206,7 @@ define serviceescalation{
 	notification_interval	30
 	contact_groups		nt-admins,managers
 	}
-</pre>	
+</pre>
 
 In the example above, the maximum number of problem notifications that could be sent out about the service would be four.  This is because the notification interval of 0 in the second escalation definition indicates that only one notification should be sent out (starting with and including the 4th notification) and all subsequent notifications should be repressed.  Because of this, the third service escalation definition has no effect whatsoever, as there will never be more than four notifications.
 
