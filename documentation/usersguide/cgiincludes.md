@@ -3,7 +3,7 @@ layout: doctoc
 title: Custom CGI Headers and Footers
 ---
 
-
+{% include review_required.md %}
 
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="cgis.html">Information on the CGIs</a>
 
