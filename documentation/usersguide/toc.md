@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: Naemon Core Documentation
+title: Naemon Documentation
 ---
 ## Table of Contents
 ### About
 
-<a href="about.html#whatis">What is Nagios Core?</a>
+<a href="about.html#whatis">What is Naemon?</a>
 
 <a href="about.html#requirements">System requirements</a>
 
@@ -22,18 +22,14 @@ title: Naemon Core Documentation
 <a href="knownissues.html">Known issues</a>
 
 ### Support
-	
-<a href="http://library.nagios.com" target="_blank">Nagios Library - Nagios tips, tutorials, documentation, and manuals</a>
 
-<a href="http://support.nagios.com/forum" target="_blank">Support Forum - Community and customer Nagios support forum</a>
+<a href="http://www.naemon.org/community/" target="_blank">Support - Community</a>
 
-<a href="http://www.nagios.org/support" target="_blank">More Options - Community and commercial support options</a>
+<a href="http://library.nagios.com" target="_blank">Nagios Library - Nagios (Naemon) tips, tutorials, documentation, and manuals</a>
 
 ### Getting Started
 
 <a href="beginners.html">Advice for beginners</a>
-
-
 
 <a href="quickstart.html">Quickstart installation guide</a>
 
@@ -53,7 +49,7 @@ title: Naemon Core Documentation
 
 
 
-### Configuring Nagios
+### Configuring Naemon
 
 <a href="config.html">Configuration overview</a>
 
@@ -67,11 +63,11 @@ title: Naemon Core Documentation
 
 <a href="cgiauth.html">Configuring authorization for the CGIs</a>
 
-### Running Nagios
+### Running Naemon
 
 <a href="verifyconfig.html">Verifying your configuration</a>
 
-<a href="startstop.html">Starting and stopping Nagios</a>
+<a href="startstop.html">Starting and stopping Naemon</a>
 
 ### The Basics
 
@@ -79,7 +75,7 @@ title: Naemon Core Documentation
 
 <a href="macros.html">Macros and how they work</a>
 
-<a href="macrolist.html">Standard macros available in Nagios</a>
+<a href="macrolist.html">Standard macros available in Naemon</a>
 
 <a href="hostchecks.html">Host checks</a>
 
@@ -154,7 +150,7 @@ title: Naemon Core Documentation
 
 <a href="cgisecurity.html">Enhanced CGI security and authentication</a>
 
-<a href="tuning.html">Tuning Nagios for maximum performance</a>
+<a href="tuning.html">Tuning Naemon for maximum performance</a>
 
 <a href="faststartup.html">Fast startup options</a>
 
@@ -162,7 +158,7 @@ title: Naemon Core Documentation
 
 <a href="nagiostats.html">Using the nagiostats utility</a>
 
-<a href="mrtggraphs.html">Graphing Nagios performance statistics</a>
+<a href="mrtggraphs.html">Graphing Naemon performance statistics</a>
 
 ### Integration With Other Software</a>
 
@@ -173,7 +169,7 @@ title: Naemon Core Documentation
 <a href="int-tcpwrappers.html">TCP Wrappers</a>
 
 
-### Nagios Addons
+### Naemon Addons
 
 <a href="addons.html#nrpe">NRPE</a>
 
@@ -193,7 +189,7 @@ title: Naemon Core Documentation
 <a href="epnplugins.html">Developing Plugins For Use With Embedded Perl</a>
 
 ## Licensing
-Copyright &copy; 2014-     Naemon Core Development Team and Community Contributors
+Copyright &copy; 2014-     Naemon Development Team and Community Contributors
 
 Copyright &copy; 2009-2010 Nagios Core Development Team and Community Contributors
 
