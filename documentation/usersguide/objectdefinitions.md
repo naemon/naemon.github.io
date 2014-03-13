@@ -61,7 +61,7 @@ A host definition is used to define a physical server, workstation, device, etc.
 Note:  Directives in red are required, while those in black are optional.
 
 <table>
-<tr><td colspan=3 class="Definition">define host{</td></tr>
+<tr><td colspan=3>define host{</td></tr>
 <tr><td></td><td class="text-danger">host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td class="text-danger">alias</td><td class="text-danger"><i>alias</i></td></tr>
 <tr><td></td><td>display_name</td><td><i>display_name</i></td></tr>
@@ -106,7 +106,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td></td><td>statusmap_image</td><td><i>image_file</i></td></tr>
 <tr><td></td><td>2d_coords</td><td><i>x_coord,y_coord</i></td></tr>
 <tr><td></td><td>3d_coords</td><td><i>x_coord,y_coord,z_coord</i></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2 class="Definition">}</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
 <p class="text-primary">Example Definition:</p>
@@ -416,7 +416,7 @@ A host group definition is used to group one or more hosts together for simplify
 Note:  Directives in red are required, while those in black are optional.
 
 <table border="0">
-<tr><td colspan=3 class="Definition">define hostgroup{</td></tr>
+<tr><td colspan=3>define hostgroup{</td></tr>
 <tr><td></td><td class="text-danger">hostgroup_name</td><td class="text-danger"><i>hostgroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">alias</td><td class="text-danger"><i>alias</i></td></tr>
 <tr><td></td><td>members</td><td><i>hosts</i></td></tr>
@@ -424,7 +424,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td></td><td>notes</td><td><i>note_string</i></td></tr>
 <tr><td></td><td>notes_url</td><td><i>url</i></td></tr>
 <tr><td></td><td>action_url</td><td><i>url</i></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2 class="Definition">}</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
 <p class="text-primary">Example Definition:</p>
@@ -497,7 +497,7 @@ A service definition is used to identify a "service" that runs on a host.  The t
 Note:  Directives in red are required, while those in black are optional.
 
 <table>
-<tr><td colspan=3 class="Definition">define service{</td></tr>
+<tr><td colspan=3>define service{</td></tr>
 <tr><td></td><td class="text-danger">host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td>hostgroup_name</td><td><i>hostgroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">service_description</td><td class="text-danger"><i>service_description</i></td></tr>
@@ -538,7 +538,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td></td><td>action_url</td><td><i>url</i></td></tr>
 <tr><td></td><td>icon_image</td><td><i>image_file</i></td></tr>
 <tr><td></td><td>icon_image_alt</td><td><i>alt_string</i></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2 class="Definition">}</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
 <p class="text-primary">Example Definition:</p>
@@ -819,7 +819,7 @@ A service group definition is used to group one or more services together for si
 Note:  Directives in red are required, while those in black are optional.
 
 <table>
-<tr><td colspan=3 class="Definition">define servicegroup{</td></tr>
+<tr><td colspan=3>define servicegroup{</td></tr>
 <tr><td></td><td class="text-danger">servicegroup_name</td><td class="text-danger"><i>servicegroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">alias</td><td class="text-danger"><i>alias</i></td></tr>
 <tr><td></td><td>members</td><td><i>services</i></td></tr>
@@ -827,7 +827,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td></td><td>notes</td><td><i>note_string</i></td></tr>
 <tr><td></td><td>notes_url</td><td><i>url</i></td></tr>
 <tr><td></td><td>action_url</td><td><i>url</i></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2 class="Definition">}</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
 
@@ -973,7 +973,7 @@ Note:  Directives in red are required, while those in black are optional.
 
 <table>
 
-<tr><td colspan=3 class="Definition">define contact{</td></tr>
+<tr><td colspan=3>define contact{</td></tr>
 
 
 
@@ -1013,7 +1013,7 @@ Note:  Directives in red are required, while those in black are optional.
 
 
 
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2 class="Definition">}</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 
 </table>
 
@@ -1296,12 +1296,12 @@ A contact group definition is used to group one or more <a href="#contact">conta
 Note:  Directives in red are required, while those in black are optional.
 
 <table>
-<tr><td colspan=3 class="Definition">define contactgroup{</td></tr>
+<tr><td colspan=3>define contactgroup{</td></tr>
 <tr><td></td><td class="text-danger">contactgroup_name</td><td class="text-danger"><i>contactgroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">alias</td><td class="text-danger"><i>alias</i></td></tr>
 <tr><td></td><td>members</td><td><i>contacts</i></td></tr>
 <tr><td></td><td>contactgroup_members</td><td><i>contactgroups</i></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2 class="Definition">}</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 <br>
 <p class="text-primary">Example Definition:</p>
@@ -1354,13 +1354,13 @@ A time period is a list of times during various days that are considered to be "
 Note:  Directives in red are required, while those in black are optional.
 
 <table>
-<tr><td colspan=3 class="Definition">define timeperiod{</td></tr>
+<tr><td colspan=3>define timeperiod{</td></tr>
 <tr><td></td><td class="text-danger">timeperiod_name</td><td class="text-danger"><i>timeperiod_name</i></td></tr>
 <tr><td></td><td class="text-danger">alias</td><td class="text-danger"><i>alias</i></td></tr>
 <tr><td></td><td>[weekday]</td><td><i>timeranges</i></td></tr>
 <tr><td></td><td>[exception]</td><td><i>timeranges</i></td></tr>
 <tr><td></td><td>exclude</td><td>[<i>timeperiod1,timeperiod2,...,timeperiodn</i>]</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2 class="Definition">}</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
 <p class="text-primary">Example Definitions:</p>
@@ -1464,10 +1464,10 @@ A command definition is just that.  It defines a command.  Commands that can be 
 Note:  Directives in red are required, while those in black are optional.
 
 <table>
-<tr><td colspan=3 class="Definition">define command{</td></tr>
+<tr><td colspan=3>define command{</td></tr>
 <tr><td></td><td class="text-danger">command_name</td><td class="text-danger"><i>command_name</i></td></tr>
 <tr><td></td><td class="text-danger">command_line</td><td class="text-danger"><i>command_line</i></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2 class="Definition">}</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
 <p class="text-primary">Example Definition:</p>
@@ -1517,7 +1517,7 @@ Service dependencies are an advanced feature of Naemon that allow you to suppres
 Note:  Directives in red are required, while those in black are optional.  However, you must supply at least one type of criteria for the definition to be of much use.
 
 <table>
-<tr><td colspan=3 class="Definition">define servicedependency{</td></tr>
+<tr><td colspan=3>define servicedependency{</td></tr>
 <tr><td></td><td class="text-danger">dependent_host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td>dependent_hostgroup_name</td><td><i>hostgroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">dependent_service_description</td><td class="text-danger"><i>service_description</i></td></tr>
@@ -1528,7 +1528,7 @@ Note:  Directives in red are required, while those in black are optional.  Howev
 <tr><td></td><td>execution_failure_criteria</td><td>[o,w,u,c,p,n]</td></tr>
 <tr><td></td><td>notification_failure_criteria</td><td>[o,w,u,c,p,n]</td></tr>
 <tr><td></td><td>dependency_period</td><td>timeperiod_name</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2 class="Definition">}</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
 <p class="text-primary">Example Definition:</p>
@@ -1622,7 +1622,7 @@ Service escalations are <i>completely optional</i> and are used to escalate noti
 Note:  Directives in red are required, while those in black are optional.
 
 <table>
-<tr><td colspan=3 class="Definition">define serviceescalation{</td></tr>
+<tr><td colspan=3>define serviceescalation{</td></tr>
 <tr><td></td><td class="text-danger">host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td>hostgroup_name</td><td><i>hostgroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">service_description</td><td class="text-danger"><i>service_description</i></td></tr>
@@ -1633,7 +1633,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td></td><td class="text-danger">notification_interval</td><td class="text-danger">#</td></tr>
 <tr><td></td><td>escalation_period</td><td>timeperiod_name</td></tr>
 <tr><td></td><td>escalation_options</td><td>[w,u,c,r]</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2 class="Definition">}</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
 <p class="text-primary">Example Definition:</p>
@@ -1726,7 +1726,7 @@ Host dependencies are an advanced feature of Naemon that allow you to suppress n
 Note:  Directives in red are required, while those in black are optional.
 
 <table>
-<tr><td colspan=3 class="Definition">define hostdependency{</td></tr>
+<tr><td colspan=3>define hostdependency{</td></tr>
 <tr><td></td><td class="text-danger">dependent_host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td>dependent_hostgroup_name</td><td><i>hostgroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">host_name</td><td class="text-danger"><i>host_name</i></td></tr>
@@ -1735,7 +1735,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td></td><td>execution_failure_criteria</td><td>[o,d,u,p,n]</td></tr>
 <tr><td></td><td>notification_failure_criteria</td><td>[o,d,u,p,n]</td></tr>
 <tr><td></td><td>dependency_period</td><td>timeperiod_name</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2 class="Definition">}</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
 <p class="text-primary">Example Definition:</p>
@@ -1813,7 +1813,7 @@ Host escalations are <i>completely optional</i> and are used to escalate notific
 Note:  Directives in red are required, while those in black are optional.
 
 <table>
-<tr><td colspan=3 class="Definition">define hostescalation{</td></tr>
+<tr><td colspan=3>define hostescalation{</td></tr>
 <tr><td></td><td class="text-danger">host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td>hostgroup_name</td><td><i>hostgroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">contacts</td><td class="text-danger"><i>contacts</i></td></tr>
@@ -1823,7 +1823,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td></td><td class="text-danger">notification_interval</td><td class="text-danger">#</td></tr>
 <tr><td></td><td>escalation_period</td><td>timeperiod_name</td></tr>
 <tr><td></td><td>escalation_options</td><td>[d,u,r]</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2 class="Definition">}</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
 <p class="text-primary">Example Definition:</p>
@@ -1912,7 +1912,7 @@ Extended host information entries are basically used to make the output from the
 Note:  Variables in red are required, while those in black are optional.  However, you need to supply at least one optional variable in each definition for it to be of much use.
 
 <table>
-<tr><td colspan=3 class="Definition">define hostextinfo{</td></tr>
+<tr><td colspan=3>define hostextinfo{</td></tr>
 <tr><td></td><td class="text-danger">host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td>notes</td><td><i>note_string</i></td></tr>
 <tr><td></td><td>notes_url</td><td><i>url</i></td></tr>
@@ -1923,7 +1923,7 @@ Note:  Variables in red are required, while those in black are optional.  Howeve
 <tr><td></td><td>statusmap_image</td><td><i>image_file</i></td></tr>
 <tr><td></td><td>2d_coords</td><td><i>x_coord,y_coord</i></td></tr>
 <tr><td></td><td>3d_coords</td><td><i>x_coord,y_coord,z_coord</i></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2 class="Definition">}</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
 <p class="text-primary">Example Definition:</p>
@@ -2022,7 +2022,7 @@ Extended service information entries are basically used to make the output from 
 Note:  Variables in red are required, while those in black are optional.  However, you need to supply at least one optional variable in each definition for it to be of much use.
 
 <table>
-<tr><td colspan=3 class="Definition">define serviceextinfo{</td></tr>
+<tr><td colspan=3>define serviceextinfo{</td></tr>
 <tr><td></td><td class="text-danger">host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td class="text-danger">service_description</td><td class="text-danger"><i>service_description</i></td></tr>
 <tr><td></td><td>notes</td><td><i>note_string</i></td></tr>
@@ -2030,7 +2030,7 @@ Note:  Variables in red are required, while those in black are optional.  Howeve
 <tr><td></td><td>action_url</td><td><i>url</i></td></tr>
 <tr><td></td><td>icon_image</td><td><i>image_file</i></td></tr>
 <tr><td></td><td>icon_image_alt</td><td><i>alt_string</i></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2 class="Definition">}</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
 <p class="text-primary">Example Definition:</p>
