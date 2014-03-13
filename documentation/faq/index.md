@@ -105,6 +105,10 @@ Helping writing documentation is really easy and much appreciated. Most pages
 are written in either Markdown ([Cheat Sheet][markdown]) or HTML. The website
 itself uses [bootstrap][bootstrap] for a simple and nice layout.
 
+See our [Bootstrap and Markdown guide](/documentation/faq/bootstrap-markdown-guide.html) for more info
+
+Please see our [Usersguide guidelines](/documentation/faq/usersguide-guidelines.html) for some basic information how we write our documentation
+
 ##### Small Changes
 Small changes like typos can be corrected and submited directly on [github][githubdocs] via the edit button.
 <p>![github edit button](images/githubedit.png "Github Edit Button")</p>
