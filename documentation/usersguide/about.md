@@ -13,7 +13,7 @@ More information about Naemon - including features and technical specifications 
 
 Naemon is an Open Source system and network monitoring application.  It watches hosts and services that you specify, alerts you when things go bad and notifies you when they get better.
 
-Naemon is based on Nagios 4.0.2 and aims to be a drop replacement for Nagios
+Naemon is based on Nagios 4.0.2 and aims to be a drop in replacement for Nagios
 
 Nagios used to refer to the community project, but when Nagios Enterprises was created, Nagios in all official communication started referring to Nagios-the-product (XI). As Nagios Enterprises had an open core model, they started to refer to their open core as Nagios Core. Naemon Suite is currently roughly equivalent to Nagios Core, which makes Naemon Core the equivalent of "Nagios Core Core". 
 
