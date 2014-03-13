@@ -1500,7 +1500,7 @@ If a next valid time cannot be found in the specified timeperiod, the macro will
 </tr>
 <tr>
 <td class="MacroName"><a name="user">$USERn$</a></td>
-<td class="MacroDescription">The <i>n</i>th user-definable macro. User macros can be defined in one or more <a href="configmain.html#resource_file">resource files</a>. Naemon supports up to 256 user macros ($USER1$ through $USER32$).</td>
+<td class="MacroDescription">The <i>n</i>th user-definable macro. User macros can be defined in one or more <a href="configmain.html#resource_file">resource files</a>. Naemon supports up to 256 user macros ($USER1$ through $USER256$).</td>
 </tr>
 </table>
 
