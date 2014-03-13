@@ -11,9 +11,13 @@ More information about Naemon - including features and technical specifications 
 
 ### What Is Naemon?
 
-Naemon is an Open Source system and network monitoring application.  It watches hosts and services that you specify, alerting you when things go bad and when they get better. Naemon is the general term of the entire "Naemon Suite" that consist of two different parts, Naemon Core and <a href="http://thruk.org" target="_blank">Thruk Monitoring Webinterface</a>
+Naemon is an Open Source system and network monitoring application.  It watches hosts and services that you specify, alerting you when things go bad and when they get better.
 
 Naemon is based on Nagios 4.0.2 and aimes to be a drop replacement for Nagios
+
+Nagios used to refer to the community project, but when Nagios Enterprises was created, Nagios in all official communication started referring to Nagios-the-product (XI). As Nagios Enterprises had an open core model, they started to refer to their open core as Nagios Core. Naemon Suite is currently roughly equivalent to Nagios Core, which makes Naemon Core the equivalent of "Nagios Core Core". 
+
+Naemon is the general term of the entire "Naemon Suite" that consist of two different parts, Naemon Core and <a href="http://thruk.org" target="_blank">Thruk Monitoring Webinterface</a>. We will generally refer to Naemon Suite as just Naemon. 
 
 Some of the many features of Naemon include:
 
