@@ -82,7 +82,7 @@ Naemon uses several variables to determine the percent state change thresholds i
 
 The table below shows the global and host- or service-specific variables that control the various thresholds used in flap detection.
 
-<table border="1" class="Default">
+<table border="1">
 <tr><th>Object Type</th><th>Global Variables</th><th>Object-Specific Variables</th></tr>
 <tr>
 <td>Host</td>

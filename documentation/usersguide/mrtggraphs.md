@@ -27,7 +27,7 @@ Once you copy these sample entries into your MRTG config file (/etc/mrtg/mrtg.cf
 
 I'll describe what a few of the sample MRTG graphs mean and what they can be used for...
 
-<table border="0" class="Default" cellpadding="10">
+<table border="0" cellpadding="10">
 <tr>
 <td valign="top">
 <p>

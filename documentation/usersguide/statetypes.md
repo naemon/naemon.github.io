@@ -70,7 +70,7 @@ The <a href="macrolist.html#hoststatetype">$HOSTSTATETYPE$</a> or <a href="macro
 
 Here's an example of how state types are determined, when state changes occur, and when event handlers and notifications are sent out.  The table below shows consecutive checks of a service over time.  The service has a <i>max_check_attempts</i> value of 3.
 
-<table border="1" class="Default">
+<table border="1">
 <tr><th>Time</th><th>Check #</th><th>State</th><th>State Type</th><th>State Change</th><th>Notes</th></tr>
 <tr><td>0</td><td>1</td><td>OK</td><td>HARD</td><td>No</td><td>Initial state of the service</td></tr>
 <tr><td>1</td><td>1</td><td>CRITICAL</td><td>SOFT</td><td>Yes</td><td>First detection of a non-OK state.  Event handlers execute.</td></tr>

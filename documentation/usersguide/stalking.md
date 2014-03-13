@@ -17,7 +17,7 @@ Under normal circumstances, the result of a host or service check is only logged
 
 If you enable stalking for one or more states of a particular host or service, Naemon will log the results of the host or service check if the output from the check differs from the output from the previous check.  Take the following example of eight consecutive checks of a service:
 
-<table border="1" class="Default">
+<table border="1">
 <tr><th>Service Check #:</th><th>Service State:</th><th>Service Check Output:</th><th>Logged Normally</th><th>Logged With Stalking</th></tr>
 <tr><td>x</td><td>OK</td><td>RAID array optimal</td><td>-</td><td>-</td></tr>
 <tr><td>x+1</td><td>OK</td><td>RAID array optimal</td><td>-</td><td>-</td></tr>

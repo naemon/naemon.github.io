@@ -34,7 +34,7 @@ The various CGIs distributed with Naemon are described here, along with the auth
 
 #### Status CGI
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-status-a.png" border=0 alt="Status CGI - Details"></td>
 <td align=left><img src="/images/cgi-status-b.png" border=0 alt="Status CGI - Overview"></td>
@@ -43,14 +43,14 @@ The various CGIs distributed with Naemon are described here, along with the auth
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>status.cgi<b></font></td>
 </tr>
 </table>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -59,7 +59,7 @@ This is the most important CGI included with Naemon.  It allows you to view the 
 <p>
 
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 <li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view all hosts <b>and</b> all services.</li>
 <li>If you are <a href="configcgi.html#authorized_for_all_services"><i>authorized for all services</i></a> you can view all services.</li>
 <li>If you are an <i>authenticated contact</i> you can view all hosts and services for which you are a contact.</li>
@@ -72,20 +72,20 @@ This is the most important CGI included with Naemon.  It allows you to view the 
 
 #### Status Map CGI
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-statusmap.png" border=0 alt="Status Map CGI"></td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>statusmap.cgi<b></font></td>
 </tr>
 </table>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -94,7 +94,7 @@ This CGI creates a map of all hosts that you have defined on your network.  The 
 </p>
 <p>
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 <li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view all hosts.</li>
 <li>If you are an <i>authenticated contact</i> you can view hosts for which you are a contact.</li>
 </ul>
@@ -107,20 +107,20 @@ Note: Users who are not authorized to view specific hosts will see <i>unknown</i
 
 #### WAP Interface CGI
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-statuswml.png" border=0 alt="WAP Interface CGI"></td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>statuswml.cgi<b></font></td>
 </tr>
 </table>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -129,7 +129,7 @@ This CGI serves as a WAP interface to network status information.  If you have a
 </p>
 <p>
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 <li>If you are <a href="configcgi.html#authorized_for_system_information"><i>authorized for system information</i></a> you can view Naemon process information.</li>
 <li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view status data for all hosts <b>and</b> services.</li>
 <li>If you are <a href="configcgi.html#authorized_for_all_services"><i>authorized for all services</i></a> you can view status data for all services.</li>
@@ -143,20 +143,20 @@ This CGI serves as a WAP interface to network status information.  If you have a
 
 #### Status World CGI (VRML)
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-statuswrl.png" border=0 alt="3-D Status Map CGI"></td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>statuswrl.cgi<b></font></td>
 </tr>
 </table>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -165,7 +165,7 @@ This CGI creates a 3-D VRML model of all hosts that you have defined on your net
 </p>
 <p>
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 <li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view all hosts.</li>
 <li>If you are an <i>authenticated contact</i> you can view hosts for which you are a contact.</li>
 </ul>
@@ -179,20 +179,20 @@ Note: Users who are not authorized to view specific hosts will see <i>unknown</i
 
 #### Tactical Overview CGI
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-tac.png" border=0 alt="Tactical Overview CGI"></td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>tac.cgi<b></font></td>
 </tr>
 </table>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -200,7 +200,7 @@ Note: Users who are not authorized to view specific hosts will see <i>unknown</i
 This CGI is designed to server as a "birds-eye view" of all network monitoring activity.  It allows you to quickly see network outages, host status, and service status.  It distinguishes between problems that have been "handled" in some way (i.e. been acknowledged, had notifications disabled, etc.) and those which have not been handled, and thus need attention.  Very useful if you've got a lot of hosts/services you're monitoring and you need to keep a single screen up to alert you of problems.
 <p>
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 <li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view all hosts <b>and</b> all services.</li>
 <li>If you are <a href="configcgi.html#authorized_for_all_services"><i>authorized for all services</i></a> you can view all services.</li>
 <li>If you are an <i>authenticated contact</i> you can view all hosts and services for which you are a contact.</li>
@@ -213,20 +213,20 @@ This CGI is designed to server as a "birds-eye view" of all network monitoring a
 
 #### Network Outages CGI
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-outages.png" border=0 alt="Network Outages CGI"></td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>outages.cgi<b></font></td>
 </tr>
 </table>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -235,7 +235,7 @@ This CGI will produce a listing of "problem" hosts on your network that are caus
 </p>
 <p>
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 <li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view all hosts.</li>
 <li>If you are an <i>authenticated contact</i> you can view hosts for which you are a contact.</li>
 </ul>
@@ -247,20 +247,20 @@ This CGI will produce a listing of "problem" hosts on your network that are caus
 
 #### Configuration CGI
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-config.png" border=0 alt="Configuration CGI"></td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>config.cgi<b></font></td>
 </tr>
 </table>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -268,7 +268,7 @@ This CGI will produce a listing of "problem" hosts on your network that are caus
 This CGI allows you to view objects (i.e. hosts, host groups, contacts, contact groups, time periods, services, etc.) that you have defined in your <a href="configobject.html">object configuration file(s)</a>.
 <p>
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 <li>You must be <a href="configcgi.html#authorized_for_configuration_information"><i>authorized for configuration information</i></a> in order to any kind of configuration information.</li>
 </ul>
 </td>
@@ -279,20 +279,20 @@ This CGI allows you to view objects (i.e. hosts, host groups, contacts, contact 
 
 #### Command CGI
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-cmd.png" border=0 alt="Command CGI"></td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>cmd.cgi<b></font></td>
 </tr>
 </table>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -300,7 +300,7 @@ This CGI allows you to view objects (i.e. hosts, host groups, contacts, contact 
 This CGI allows you to send commands to the Naemon process.  Although this CGI has several arguments, you would be better to leave them alone.  Most will change between different revisions of Naemon.  Use the <a href="#extinfo_cgi">extended information CGI</a> as a starting point for issuing commands.
 <p>
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 <li>You must be <a href="configcgi.html#authorized_for_system_commands"><i>authorized for system commands</i></a> in order to issue  commands that affect the Naemon process (restarts, shutdowns, mode changes, etc.).</li>
 <li>If you are <a href="configcgi.html#authorized_for_all_host_commands"><i>authorized for all host commands</i></a> you can issue commands for all hosts <b>and</b> services.</li>
 <li>If you are <a href="configcgi.html#authorized_for_all_service_commands"><i>authorized for all service commands</i></a> you can issue commands for all services.</li>
@@ -318,7 +318,7 @@ This CGI allows you to send commands to the Naemon process.  Although this CGI h
 
 #### Extended Information CGI
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-extinfo-a.png" border=0 alt="Extended Information CGI - Process Information"></td>
 <td align=left><img src="/images/cgi-extinfo-b.png" border=0 alt="Extended Information CGI - Performance Information"></td>
@@ -327,14 +327,14 @@ This CGI allows you to send commands to the Naemon process.  Although this CGI h
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>extinfo.cgi<b></font></td>
 </tr>
 </table>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -342,7 +342,7 @@ This CGI allows you to send commands to the Naemon process.  Although this CGI h
 This CGI allows you to view Naemon process information, host and service state statistics, host and service comments, and more.  It also serves as a launching point for sending commands to Naemon via the <a href="#cmd_cgi">command CGI</a>.  Although this CGI has several arguments, you would be better to leave them alone - they are likely to change between different releases of Naemon.  You can access this CGI by clicking on the 'Network Health' and 'Process Information' links on the side navigation bar, or by clicking on a host or service link in the output of the <a href="#status_cgi">status CGI</a>.
 <p>
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 <li>You must be <a href="configcgi.html#authorized_for_system_information"><i>authorized for system information</i></a> in order to view Naemon process information.</li>
 <li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view extended information for all hosts <b>and</b> services.</li>
 <li>If you are <a href="configcgi.html#authorized_for_all_services"><i>authorized for all services</i></a> you can view extended information for all services.</li>
@@ -356,20 +356,20 @@ This CGI allows you to view Naemon process information, host and service state s
 
 #### Event Log CGI
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-showlog.png" border=0 alt="Event Log CGI"></td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>showlog.cgi<b></font></td>
 </tr>
 </table>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -378,7 +378,7 @@ This CGI will display the <a href="configmain.html#log_file">log file</a>.  If y
 </p>
 <p>
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 <li>You must be <a href="configcgi.html#authorized_for_system_information"><i>authorized for system information</i></a> in order to view the log file.</li>
 </ul>
 </td>
@@ -389,20 +389,20 @@ This CGI will display the <a href="configmain.html#log_file">log file</a>.  If y
 
 #### Alert History CGI
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-history.png" border=0 alt="Alert History CGI"></td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>history.cgi<b></font></td>
 </tr>
 </table>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -411,7 +411,7 @@ This CGI is used to display the history of problems with either a particular hos
 </p>
 <p>
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 <li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view history information for all hosts <b>and</b> all services.</li>
 <li>If you are <a href="configcgi.html#authorized_for_all_services"><i>authorized for all services</i></a> you can view history information for all services.</li>
 <li>If you are an <i>authenticated contact</i> you can view history information for all services and hosts for which you are a contact.</li>
@@ -424,20 +424,20 @@ This CGI is used to display the history of problems with either a particular hos
 
 #### Notifications CGI
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-notifications.png" border=0 alt="Notifications CGI"></td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>notifications.cgi<b></font></td>
 </tr>
 </table>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -446,7 +446,7 @@ This CGI is used to display host and service notifications that have been sent t
 </p>
 <p>
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 <li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view notifications for all hosts <b>and</b> all services.</li>
 <li>If you are <a href="configcgi.html#authorized_for_all_services"><i>authorized for all services</i></a> you can view notifications for all services.</li>
 <li>If you are an <i>authenticated contact</i> you can view notifications for all services and hosts for which you are a contact.</li>
@@ -459,20 +459,20 @@ This CGI is used to display host and service notifications that have been sent t
 
 #### Trends CGI
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-trends.png" border=0 alt="Trends CGI"></td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>trends.cgi<b></font></td>
 </tr>
 </table>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -481,7 +481,7 @@ This CGI is used to create a graph of host or service states over an arbitrary p
 </p>
 <p>
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 <li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view trends for all hosts <b>and</b> all services.</li>
 <li>If you are <a href="configcgi.html#authorized_for_all_services"><i>authorized for all services</i></a> you can view trends for all services.</li>
 <li>If you are an <i>authenticated contact</i> you can view trends for all services and hosts for which you are a contact.</li>
@@ -494,21 +494,21 @@ This CGI is used to create a graph of host or service states over an arbitrary p
 
 #### Availability Reporting CGI
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-avail-a.png" border=0 alt="Availability CGI - Hostgroup"></td>
 <td align=left><img src="/images/cgi-avail-b.png" border=0 alt="Availability CGI - Host"></td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>avail.cgi<b></font></td>
 </tr>
 </table>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -517,7 +517,7 @@ This CGI is used to report on the availability of hosts and services over a user
 </p>
 <p>
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 <li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view availability data for all hosts <b>and</b> all services.</li>
 <li>If you are <a href="configcgi.html#authorized_for_all_services"><i>authorized for all services</i></a> you can view availability data for all services.</li>
 <li>If you are an <i>authenticated contact</i> you can view availability data for all services and hosts for which you are a contact.</li>
@@ -530,20 +530,20 @@ This CGI is used to report on the availability of hosts and services over a user
 
 #### Alert Histogram CGI
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-histogram.png" border=0 alt="Alert Histogram CGI"></td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>histogram.cgi<b></font></td>
 </tr>
 </table>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -552,7 +552,7 @@ This CGI is used to report on the availability of hosts and services over a user
 </p>
 <p>
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view histograms for all hosts <b>and</b> all services.</li>
 If you are <a href="configcgi.html#authorized_for_all_services"><i>authorized for all services</i></a> you can view histograms for all services.</li>
 If you are an <i>authenticated contact</i> you can view histograms for all services and hosts for which you are a contact.</li>
@@ -565,18 +565,18 @@ If you are an <i>authenticated contact</i> you can view histograms for all servi
 
 #### Alert Summary CGI
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td align=left><img src="/images/cgi-summary.png" border=0 alt="Alert Summary CGI"></td>
 </tr>
 </table>
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>File Name:</td>
 <td><font color="red"><b>summary.cgi<b></font></td>
 </tr>
 </table>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td align=left valign=top width="50%">
 <p>
@@ -585,7 +585,7 @@ This CGI provides some generic reports about host and service alert data, includ
 </p>
 <p>
 <b>Authorization Requirements:</b>
-<ul class="Default">
+<ul>
 <li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view summary information for all hosts <b>and</b> all services.</li>
 <li>If you are <a href="configcgi.html#authorized_for_all_services"><i>authorized for all services</i></a> you can view summary information for all services.</li>
 <li>If you are an <i>authenticated contact</i> you can view summary information for all services and hosts for which you are a contact.</li>

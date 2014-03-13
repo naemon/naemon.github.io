@@ -59,7 +59,7 @@ The goal of this type of redundancy implementation is simple.  Both the "master"
 The diagram below shows a very simple network setup.  For this scenario I will be assuming that hosts A and E are both running Naemon and are monitoring all the hosts shown.  Host A will be considered the "master" host and host E will be considered the "slave" host.
 
 
-<table border="1" class="Default">
+<table border="1">
 <tr>
 <td><img src="/images/redundancy.png" border=0></td>
 </tr>
