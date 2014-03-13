@@ -27,13 +27,13 @@ The main configuration file is usually named *nagios.cfg* and located in the */u
 Below you will find descriptions of each main Naemon configuration file option...
 
 <a name="log_file"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Log File**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**log_file=&lt;file_name&gt;**</td>
@@ -49,13 +49,13 @@ variable that you define in your configuration file, as Naemon will try to write
 finds in the rest of your configuration data to this file.  If you have <a href="#log_rotation_method">log rotation</a> enabled, this file will automatically be rotated every hour, day, week, or month.
 
 <a name="cfg_file"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Object Configuration File**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**cfg_file=&lt;file_name&gt;**</td>
@@ -73,13 +73,13 @@ finds in the rest of your configuration data to this file.  If you have <a href=
 This directive is used to specify an <a href="configobject.html">object configuration file</a> containing object definitions that Naemon should use for monitoring.  Object configuration files contain definitions for hosts, host groups, contacts, contact groups, services, commands, etc.  You can seperate your configuration information into several files and specify multiple *cfg_file=* statements to have each of them processed.
 
 <a name="cfg_dir"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Object Configuration Directory**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**cfg_dir=&lt;directory_name&gt;**</td>
@@ -97,13 +97,13 @@ This directive is used to specify an <a href="configobject.html">object configur
 This directive is used to specify a directory which contains <a href="configobject.html">object configuration files</a> that Naemon should use for monitoring.  All files in the directory with a *.cfg* extension are processed as object config files.  Additionally, Naemon will recursively process all config files in subdirectories of the directory you specify here.  You can seperate your configuration files into different directories and specify multiple *cfg_dir=* statements to have all config files in each directory processed.
 
 <a name="object_cache_file"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Object Cache File**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**object_cache_file=&lt;file_name&gt;**</td>
@@ -119,13 +119,13 @@ This directive is used to specify a directory which contains <a href="configobje
 This directive is used to specify a file in which a cached copy of <a href="configobject.html">object definitions</a> should be stored.  The cache file is (re)created every time Naemon is (re)started and is used by the CGIs.   It is intended to speed up config file caching in the CGIs and allow you to edit the source <a href="#cfg_file">object config files</a> while Naemon is running without affecting the output displayed in the CGIs.
 
 <a name="precached_object_file"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Precached Object File**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**precached_object_file=&lt;file_name&gt;**</td>
@@ -141,13 +141,13 @@ This directive is used to specify a file in which a cached copy of <a href="conf
 This directive is used to specify a file in which a pre-processed, pre-cached copy of <a href="configobject.html">object definitions</a> should be stored.  This file can be used to drastically improve startup times in large/complex Naemon installations.  Read more information on how to speed up start times <a href="faststartup.html">here</a>.
 
 <a name="resource_file"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Resource File**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**resource_file=&lt;file_name&gt;**</td>
@@ -161,13 +161,13 @@ This directive is used to specify a file in which a pre-processed, pre-cached co
 This is used to specify an optional resource file that can contain $USERn$ <a href="macros.html">macro</a> definitions.  $USERn$ macros are useful for storing usernames, passwords, and items commonly used in command definitions (like directory paths).  The CGIs will *not* attempt to read resource files, so you can set restrictive permissions (600 or 660) on them to protect sensitive information.  You can include multiple resource files by adding multiple resource_file statements to the main config file - Naemon will process them all.  See the sample resource.cfg file in the *sample-config/* subdirectory of the Naemon distribution for an example of how to define $USERn$ macros.
 
 <a name="temp_file"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Temp File**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**temp_file=&lt;file_name&gt;**</td>
@@ -181,13 +181,13 @@ This is used to specify an optional resource file that can contain $USERn$ <a hr
 This is a temporary file that Naemon periodically creates to use when updating comment data, status data, etc.  The file is deleted when it is no longer needed.
 
 <a name="temp_path"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Temp Path**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**temp_path=&lt;dir_name&gt;**</td>
@@ -202,13 +202,13 @@ This is a directory that Naemon can use as scratch space for creating temporary 
 
 <a name="status_file"></a>
 <a name="status_log"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Status File**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**status_file=&lt;file_name&gt;**</td>
@@ -222,13 +222,13 @@ This is a directory that Naemon can use as scratch space for creating temporary 
 This is the file that Naemon uses to store the current status, comment, and downtime information.  This file is used by the CGIs so that current monitoring status can be reported via a web interface.  The CGIs must have read access to this file in order to function properly.  This file is deleted every time Naemon stops and recreated when it starts.
 
 <a name="status_update_interval"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Status File Update Interval**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**status_update_interval=&lt;seconds&gt;**</td>
@@ -242,13 +242,13 @@ This is the file that Naemon uses to store the current status, comment, and down
 This setting determines how often (in seconds) that Naemon will update status data in the <a href="#status_file">status file</a>.  The minimum update interval is 1 second.
 
 <a name="nagios_user"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Naemon User**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**nagios_user=&lt;username/UID&gt;**</td>
@@ -264,13 +264,13 @@ This setting determines how often (in seconds) that Naemon will update status da
 This is used to set the effective user that the Naemon process should run as.  After initial program startup and before starting to monitor anything, Naemon will drop its effective privileges and run as this user.  You may specify either a username or a UID.
 
 <a name="nagios_group"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Naemon Group**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**nagios_group=&lt;groupname/GID&gt;**</td>
@@ -284,13 +284,13 @@ This is used to set the effective user that the Naemon process should run as.  A
 This is used to set the effective group that the Naemon process should run as.  After initial program startup and before starting to monitor anything, Naemon will drop its effective privileges and run as this group.  You may specify either a groupname or a GID.
 
 <a name="enable_notifications"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Notifications Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**enable_notifications=&lt;0/1&gt;**</td>
@@ -307,13 +307,13 @@ This option determines whether or not Naemon will send out <a href="notification
 * 1 = Enable notifications (default)
 
 <a name="execute_service_checks"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Service Check Execution Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**execute_service_checks=&lt;0/1&gt;**</td>
@@ -330,13 +330,13 @@ This option determines whether or not Naemon will execute service checks when it
 * 1 = Execute service checks (default)
 
 <a name="accept_passive_service_checks"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Passive Service Check Acceptance Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**accept_passive_service_checks=&lt;0/1&gt;**</td>
@@ -353,13 +353,13 @@ This option determines whether or not Naemon will accept <a href="passivechecks.
 * 1 = Accept passive service checks (default)
 
 <a name="execute_host_checks"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Host Check Execution Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**execute_host_checks=&lt;0/1&gt;**</td>
@@ -376,13 +376,13 @@ This option determines whether or not Naemon will execute on-demand and regularl
 * 1 = Execute host checks (default)
 
 <a name="accept_passive_host_checks"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Passive Host Check Acceptance Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**accept_passive_host_checks=&lt;0/1&gt;**</td>
@@ -399,13 +399,13 @@ This option determines whether or not Naemon will accept <a href="passivechecks.
 * 1 = Accept passive host checks (default)
 
 <a name="enable_event_handlers"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Event Handler Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**enable_event_handlers=&lt;0/1&gt;**</td>
@@ -422,13 +422,13 @@ This option determines whether or not Naemon will run <a href="eventhandlers.htm
 * 1 = Enable event handlers (default)
 
 <a name="log_rotation_method"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Log Rotation Method**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**log_rotation_method=&lt;n/h/d/w/m&gt;**</td>
@@ -448,13 +448,13 @@ This is the rotation method that you would like Naemon to use for your log file.
 * m = Monthly (rotate the log at midnight on the last day of the month)
 
 <a name="log_archive_path"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Log Archive Path**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**log_archive_path=&lt;path&gt;**</td>
@@ -468,13 +468,13 @@ This is the rotation method that you would like Naemon to use for your log file.
 This is the directory where Naemon should place log files that have been rotated.  This option is ignored if you choose to not use the <a href="#log_rotation_method">log rotation</a> functionality.
 
 <a name="check_external_commands"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**External Command Check Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**check_external_commands=&lt;0/1&gt;**</td>
@@ -491,13 +491,13 @@ This option determines whether or not Naemon will check the <a href="#command_fi
 * 1 = Check external commands (default)
 
 <a name="command_check_interval"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**External Command Check Interval**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**command_check_interval=&lt;xxx&gt;[s]**</td>
@@ -513,13 +513,13 @@ If you specify a number with an "s" appended to it (i.e. 30s), this is the numbe
 Note: By setting this value to **-1**, Naemon will check for external commands as often as possible.  Each time Naemon checks for external commands it will read and process all commands present in the <a href="#command_file">command file</a> before continuing on with its other duties.  More information on external commands can be found <a href="extcommands.html">here</a>.
 
 <a name="command_file"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**External Command File**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**command_file=&lt;file_name&gt;**</td>
@@ -533,13 +533,13 @@ Note: By setting this value to **-1**, Naemon will check for external commands a
 This is the file that Naemon will check for external commands to process.  The <a href="cgis.html#cmd_cgi">command CGI</a> writes commands to this file.  The external command file is implemented as a named pipe (FIFO), which is created when Naemon starts and removed when it shuts down.  If the file exists when Naemon starts, the Naemon process will terminate with an error message.  More information on external commands can be found <a href="extcommands.html">here</a>.
 
 <a name="external_command_buffer_slots"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**External Command Buffer Slots**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**external_command_buffer_slots=&lt;#&gt;**</td>
@@ -553,13 +553,13 @@ This is the file that Naemon will check for external commands to process.  The <
 Note: This is an advanced feature. This option determines how many buffer slots Naemon will reserve for caching external commands that have been read from the external command file by a worker thread, but have not yet been processed by the main thread of the Naemon deamon.  Each slot can hold one external command, so this option essentially determines how many commands can be buffered.  For installations where you process a large number of passive checks (e.g. <a href="distributed.html">distributed setups</a>), you may need to increase this number.  You should consider using MRTG to graph Naemon' usage of external command buffers.  You can read more on how to configure graphing <a href="mrtggraphs.html">here</a>.
 
 <a name="check_for_updates"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Update Checks**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 
@@ -574,13 +574,13 @@ Note: This is an advanced feature. This option determines how many buffer slots 
 This option determines whether Naemon will automatically check to see if new updates (releases) are available.  It is recommend that you enable this option to ensure that you stay on top of the latest critical patches to Naemon.  Naemon is critical to you - make sure you keep it in good shape.  Naemon will check once a day for new updates. Data collected by Naemon Enterprises from the update check is processed in accordance  with our privacy policy - see <a href="http://api.nagios.org">http://api.nagios.org</a> for details.
 
 <a name="bare_update_checks"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Bare Update Checks**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**bare_update_checks=&lt;0/1&gt;**</td>
@@ -594,13 +594,13 @@ This option determines whether Naemon will automatically check to see if new upd
 This option deterines what data Naemon will send to api.nagios.org when it checks for updates.  By default, Naemon will send information on the current version of Naemon you have installed, as well as an indicator as to whether this was a new installation or not.  Naemon Enterprises uses this data to determine the number of users running specific version of Naemon.  Enable this option if you do not wish for this information to be sent.
 
 <a name="lock_file"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Lock File**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**lock_file=&lt;file_name&gt;**</td>
@@ -614,13 +614,13 @@ This option deterines what data Naemon will send to api.nagios.org when it check
 This option specifies the location of the lock file that Naemon should create when it runs as a daemon (when started with the -d command line argument).  This file contains the process id (PID) number of the running Naemon process.
 
 <a name="retain_state_information"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**State Retention Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**retain_state_information=&lt;0/1&gt;**</td>
@@ -637,13 +637,13 @@ This option determines whether or not Naemon will retain state information for h
 * 1 = Retain state information (default)
 
 <a name="state_retention_file"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**State Retention File**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**state_retention_file=&lt;file_name&gt;**</td>
@@ -657,13 +657,13 @@ This option determines whether or not Naemon will retain state information for h
 This is the file that Naemon will use for storing status, downtime, and comment information before it shuts down.  When Naemon is restarted it will use the information stored in this file for setting the initial states of services and hosts before it starts monitoring anything.   In order to make Naemon retain state information between program restarts, you must enable the <a href="#retain_state_information">retain_state_information</a> option.
 
 <a name="retention_update_interval"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Automatic State Retention Update Interval**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**retention_update_interval=&lt;minutes&gt;**</td>
@@ -677,13 +677,13 @@ This is the file that Naemon will use for storing status, downtime, and comment 
 This setting determines how often (in minutes) that Naemon will automatically save retention data during normal operation.  If you set this value to 0, Naemon will not save retention data at regular intervals, but it will still save retention data before shutting down or restarting.  If you have disabled state retention (with the <a href="#retain_state_information">retain_state_information</a> option), this option has no effect.
 
 <a name="use_retained_program_state"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Use Retained Program State Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**use_retained_program_state=&lt;0/1&gt;**</td>
@@ -700,13 +700,13 @@ This setting determines whether or not Naemon will set various program-wide stat
 * 1 = Use retained program state (default)
 
 <a name="use_retained_scheduling_info"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Use Retained Scheduling Info Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**use_retained_scheduling_info=&lt;0/1&gt;**</td>
@@ -724,13 +724,13 @@ This setting determines whether or not Naemon will retain scheduling info (next 
 
 <a name="retained_host_attribute_mask"></a>
 <a name="retained_service_attribute_mask"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Retained Host and Service Attribute Masks**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>
@@ -753,13 +753,13 @@ These options determine which host or service attributes are NOT retained across
 
 <a name="retained_process_host_attribute_mask"></a>
 <a name="retained_process_service_attribute_mask"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Retained Process Attribute Masks**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>
@@ -782,13 +782,13 @@ These options determine which process attributes are NOT retained across program
 
 <a name="retained_contact_host_attribute_mask"></a>
 <a name="retained_contact_service_attribute_mask"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Retained Contact Attribute Masks**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>
@@ -810,13 +810,13 @@ WARNING: This is an advanced feature.  You'll need to read the Naemon source cod
 These options determine which contact attributes are NOT retained across program restarts.  There are two masks because there are often separate host and service contact attributes that can be changed.  The values for these options are a bitwise AND of values specified by the "MODATTR_" definitions in the include/common.h source code file.  By default, all process attributes are retained.
 
 <a name="use_syslog"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Syslog Logging Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**use_syslog=&lt;0/1&gt;**</td>
@@ -834,13 +834,13 @@ are as follows:
 * 1 = Use syslog facility
 
 <a name="log_notifications"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Notification Logging Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**log_notifications=&lt;0/1&gt;**</td>
@@ -859,13 +859,13 @@ notifications from being logged.
 * 1 = Log notifications
 
 <a name="log_service_retries"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Service Check Retry Logging Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**log_service_retries=&lt;0/1&gt;**</td>
@@ -885,13 +885,13 @@ is mostly useful when attempting to debug Naemon or test out service <a href="ev
 * 1 = Log service check retries
 
 <a name="log_host_retries"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Host Check Retry Logging Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**log_host_retries=&lt;0/1&gt;**</td>
@@ -909,13 +909,13 @@ is mostly useful when attempting to debug Naemon or test out host <a href="event
 * 1 = Log host check retries
 
 <a name="log_event_handlers"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Event Handler Logging Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**log_event_handlers=&lt;0/1&gt;**</td>
@@ -934,13 +934,13 @@ is most useful when debugging Naemon or first trying out your event handler scri
 * 1 = Log event handlers
 
 <a name="log_initial_states"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Initial States Logging Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**log_initial_states=&lt;0/1&gt;**</td>
@@ -957,13 +957,13 @@ This variable determines whether or not Naemon will force all initial host and s
 * 1 = Log initial states
 
 <a name="log_external_commands"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**External Command Logging Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**log_external_commands=&lt;0/1&gt;**</td>
@@ -980,13 +980,13 @@ This variable determines whether or not Naemon will log <a href="extcommands.htm
 * 1 = Log external commands (default)
 
 <a name="log_passive_checks"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Passive Check Logging Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**log_passive_checks=&lt;0/1&gt;**</td>
@@ -1003,13 +1003,13 @@ This variable determines whether or not Naemon will log <a href="passivechecks.h
 * 1 = Log passive checks (default)
 
 <a name="global_host_event_handler"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Global Host Event Handler Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**global_host_event_handler=&lt;command&gt;**</td>
@@ -1023,13 +1023,13 @@ This variable determines whether or not Naemon will log <a href="passivechecks.h
 This option allows you to specify a host event handler command that is to be run for every host state change.  The global event handler is executed immediately prior to the event handler that you have optionally specified in each host definition.  The *command* argument is the short name of a command that you define in your <a href="configobject.html">object configuration file</a>.  The maximum amount of time that this command can run is controlled by the <a href="#event_handler_timeout">event_handler_timeout</a> option.  More information on event handlers can be found <a href="eventhandlers.html">here</a>.
 
 <a name="global_service_event_handler"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Global Service Event Handler Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**global_service_event_handler=&lt;command&gt;**</td>
@@ -1043,13 +1043,13 @@ This option allows you to specify a host event handler command that is to be run
 This option allows you to specify a service event handler command that is to be run for every service state change.  The global event handler is executed immediately prior to the event handler that you have optionally specified in each service definition.  The *command* argument is the short name of a command that you define in your <a href="configobject.html">object configuration file</a>.  The maximum amount of time that this command can run is controlled by the <a href="#event_handler_timeout">event_handler_timeout</a> option.  More information on event handlers can be found <a href="eventhandlers.html">here</a>.
 
 <a name="sleep_time"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Inter-Check Sleep Time**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**sleep_time=&lt;seconds&gt;**</td>
@@ -1063,13 +1063,13 @@ This option allows you to specify a service event handler command that is to be 
 This is the number of seconds that Naemon will sleep before checking to see if the next service or host check in the scheduling queue should be executed.  Note that Naemon will only sleep after it "catches up" with queued service checks that have fallen behind.
 
 <a name="service_inter_check_delay_method"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Service Inter-Check Delay Method**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**service_inter_check_delay_method=&lt;n/d/s/x.xx&gt;**</td>
@@ -1088,13 +1088,13 @@ This option allows you to control how service checks are initially "spread out" 
 * x.xx = Use a user-supplied inter-check delay of x.xx seconds
 
 <a name="max_service_check_spread"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Maximum Service Check Spread**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**max_service_check_spread=&lt;minutes&gt;**</td>
@@ -1108,13 +1108,13 @@ This option allows you to control how service checks are initially "spread out" 
 This option determines the maximum number of minutes from when Naemon starts that all services (that are scheduled to be regularly checked) are checked.  This option will automatically adjust the <a href="#service_inter_check_delay_method">service inter-check delay method</a> (if necessary) to ensure that the initial checks of all services occur within the timeframe you specify.  In general, this option will not have an affect on service check scheduling if scheduling information is being retained using the <a href="#use_retained_scheduling_info">use_retained_scheduling_info</a> option.  Default value is **30** (minutes).
 
 <a name="service_interleave_factor"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Service Interleave Factor**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**service_interleave_factor=&lt;s|*x*&gt;**</td>
@@ -1132,13 +1132,13 @@ This variable determines how service checks are interleaved. Interleaving allows
 
 <a name="max_concurrent_checks"></a>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Maximum Concurrent Service Checks**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**max_concurrent_checks=&lt;max_checks&gt;**</td>
@@ -1152,13 +1152,13 @@ This variable determines how service checks are interleaved. Interleaving allows
 This option allows you to specify the maximum number of service checks that can be run in parallel at any given time.  Specifying a value of 1 for this variable essentially prevents any service checks from being run in parallel.  Specifying a value of 0 (the default) does not place any restrictions on the number of concurrent checks.  You'll have to modify this value based on the system resources you have available on the machine that runs Naemon, as it directly affects the maximum load that will be imposed on the system (processor utilization, memory, etc.).  More information on how to estimate how many concurrent checks you should allow can be found <a href="checkscheduling.html#max_concurrent_checks">here</a>.
 
 <a name="check_result_reaper_frequency"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Check Result Reaper Frequency**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**check_result_reaper_frequency=&lt;frequency_in_seconds&gt;**</td>
@@ -1172,13 +1172,13 @@ This option allows you to specify the maximum number of service checks that can 
 This option allows you to control the frequency *in seconds* of check result "reaper" events.  "Reaper" events process the results from host and service checks that have finished executing.  These events consitute the core of the monitoring logic in Naemon.
 
 <a name="max_check_result_reaper_time"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Maximum Check Result Reaper Time**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**max_check_result_reaper_time=&lt;seconds&gt;**</td>
@@ -1192,13 +1192,13 @@ This option allows you to control the frequency *in seconds* of check result "re
 This option allows you to control the maximum amount of time *in seconds* that host and service check result "reaper" events are allowed to run.  "Reaper" events process the results from host and service checks that have finished executing.  If there are a lot of results to process, reaper events may take a long time to finish, which might delay timely execution of new host and service checks.  This variable allows you to limit the amount of time that an individual reaper event will run before it hands control back over to Naemon for other portions of the monitoring logic.
 
 <a name="check_result_path"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Check Result Path**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**check_result_path=&lt;path&gt;**</td>
@@ -1214,13 +1214,13 @@ This options determines which directory Naemon will use to temporarily store hos
 Note: Make sure that only a single instance of Naemon has access to the check result path.  If multiple instances of Naemon have their check result path set to the same directory, you will run into problems with check results being processed (incorrectly) by the wrong instance of Naemon!
 
 <a name="max_check_result_file_age"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Max Check Result File Age**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**max_check_result_file_age=&lt;seconds&gt;**</td>
@@ -1234,13 +1234,13 @@ Note: Make sure that only a single instance of Naemon has access to the check re
 This options determines the maximum age in seconds that Naemon will consider check result files found in the <a href="#check_result_path">check_result_path</a> directory to be valid.  Check result files that are older that this threshold will be deleted by Naemon and the check results they contain will not be processed.  By using a value of zero (0) with this option, Naemon will process all check result files - even if they're older than your hardware :-).
 
 <a name="host_inter_check_delay_method"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Host Inter-Check Delay Method**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**host_inter_check_delay_method=&lt;n/d/s/x.xx&gt;**</td>
@@ -1259,13 +1259,13 @@ This option allows you to control how host checks *that are scheduled to be chec
 * x.xx = Use a user-supplied inter-check delay of x.xx seconds
 
 <a name="max_host_check_spread"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Maximum Host Check Spread**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**max_host_check_spread=&lt;minutes&gt;**</td>
@@ -1279,13 +1279,13 @@ This option allows you to control how host checks *that are scheduled to be chec
 This option determines the maximum number of minutes from when Naemon starts that all hosts (that are scheduled to be regularly checked) are checked.  This option will automatically adjust the <a href="#host_inter_check_delay_method">host inter-check delay method</a> (if necessary) to ensure that the initial checks of all hosts occur within the timeframe you specify.  In general, this option will not have an affect on host check scheduling if scheduling information is being retained using the <a href="#use_retained_scheduling_info">use_retained_scheduling_info</a> option.  Default value is **30** (minutes).
 
 <a name="interval_length"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Timing Interval Length**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**interval_length=&lt;seconds&gt;**</td>
@@ -1301,13 +1301,13 @@ This is the number of seconds per "unit interval" used for timing in the schedul
 **Important:**  The default value for this is set to 60, which means that a "unit value" of 1 in the object configuration file will mean 60 seconds (1 minute).  I have not really tested other values for this variable, so proceed at your own risk if you decide to do so!
 
 <a name="auto_reschedule_checks"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Auto-Rescheduling Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**auto_reschedule_checks=&lt;0/1&gt;**</td>
@@ -1325,13 +1325,13 @@ This option determines whether or not Naemon will attempt to automatically resch
 **WARNING:**  THIS IS AN EXPERIMENTAL FEATURE AND MAY BE REMOVED IN FUTURE VERSIONS.  ENABLING THIS OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED IMPROPERLY!
 
 <a name="auto_rescheduling_interval"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Auto-Rescheduling Interval**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**auto_rescheduling_interval=&lt;seconds&gt;**</td>
@@ -1347,13 +1347,13 @@ This option determines how often (in seconds) Naemon will attempt to automatical
 **WARNING:**  THIS IS AN EXPERIMENTAL FEATURE AND MAY BE REMOVED IN FUTURE VERSIONS.  ENABLING THE AUTO-RESCHEDULING OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED IMPROPERLY!
 
 <a name="auto_rescheduling_window"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Auto-Rescheduling Window**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**auto_rescheduling_window=&lt;seconds&gt;**</td>
@@ -1370,13 +1370,13 @@ This option determines the "window" of time (in seconds) that Naemon will look a
 
 <a name="use_agressive_host_checking"></a>
 <a name="use_aggressive_host_checking"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Aggressive Host Checking Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**use_aggressive_host_checking=&lt;0/1&gt;**</td>
@@ -1393,13 +1393,13 @@ Naemon tries to be smart about how and when it checks the status of hosts.  In g
 * 1 = Use aggressive host checking
 
 <a name="translate_passive_host_checks"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Translate Passive Host Checks Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**translate_passive_host_checks=&lt;0/1&gt;**</td>
@@ -1416,13 +1416,13 @@ This option determines whether or not Naemon will translate DOWN/UNREACHABLE pas
 * 1 = Enable check translation
 
 <a name="passive_host_checks_are_soft"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Passive Host Checks Are SOFT Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**passive_host_checks_are_soft=&lt;0/1&gt;**</td>
@@ -1439,13 +1439,13 @@ This option determines whether or not Naemon will treat <a href="passivechecks.h
 * 1 = Passive host checks are SOFT
 
 <a name="enable_predictive_host_dependency_checks"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Predictive Host Dependency Checks Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**enable_predictive_host_dependency_checks=&lt;0/1&gt;**</td>
@@ -1462,13 +1462,13 @@ This option determines whether or not Naemon will execute predictive checks of h
 * 1 = Enable predictive checks (default)
 
 <a name="enable_predictive_service_dependency_checks"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Predictive Service Dependency Checks Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**enable_predictive_service_dependency_checks=&lt;0/1&gt;**</td>
@@ -1485,13 +1485,13 @@ This option determines whether or not Naemon will execute predictive checks of s
 * 1 = Enable predictive checks (default)
 
 <a name="cached_host_check_horizon"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Cached Host Check Horizon**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**cached_host_check_horizon=&lt;seconds&gt;**</td>
@@ -1505,13 +1505,13 @@ This option determines whether or not Naemon will execute predictive checks of s
 This option determines the maximum amount of time (in seconds) that the state of a previous host check is considered current.  Cached host states (from host checks that were performed more recently than the time specified by this value) can improve host check performance immensely.  Too high of a value for this option may result in (temporarily) inaccurate host states, while a low value may result in a performance hit for host checks.  Use a value of 0 if you want to disable host check caching.  More information on cached checks can be found <a href="cachedchecks.html">here</a>.
 
 <a name="cached_service_check_horizon"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Cached Service Check Horizon**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**cached_service_check_horizon=&lt;seconds&gt;**</td>
@@ -1525,13 +1525,13 @@ This option determines the maximum amount of time (in seconds) that the state of
 This option determines the maximum amount of time (in seconds) that the state of a previous service check is considered current.  Cached service states (from service checks that were performed more recently than the time specified by this value) can improve service check performance when a lot of <a href="objectdefinitions.html#servicedependency">service dependencies</a> are used.  Too high of a value for this option may result in inaccuracies in the service dependency logic.  Use a value of 0 if you want to disable service check caching.  More information on cached checks can be found <a href="cachedchecks.html">here</a>.
 
 <a name="use_large_installation_tweaks"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Large Installation Tweaks Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**use_large_installation_tweaks=&lt;0/1&gt;**</td>
@@ -1548,13 +1548,13 @@ This option determines whether or not the Naemon daemon will take several shortc
 * 1 = Use tweaks
 
 <a name="free_child_process_memory"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Child Process Memory Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**free_child_process_memory=&lt;0/1&gt;**</td>
@@ -1571,13 +1571,13 @@ This option determines whether or not Naemon will free memory in child processes
 * 1 = Free memory
 
 <a name="child_processes_fork_twice"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Child Processes Fork Twice**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**child_processes_fork_twice=&lt;0/1&gt;**</td>
@@ -1594,13 +1594,13 @@ This option determines whether or not Naemon will fork() child processes twice w
 * 1 = Fork() twice
 
 <a name="enable_environment_macros"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Environment Macros Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**enable_environment_macros=&lt;0/1&gt;**</td>
@@ -1617,13 +1617,13 @@ This option determines whether or not the Naemon daemon will make all standard <
 * 1 = Make macros available as environment variables (default)
 
 <a name="enable_flap_detection"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Flap Detection Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**enable_flap_detection=&lt;0/1&gt;**</td>
@@ -1640,13 +1640,13 @@ This option determines whether or not Naemon will try and detect hosts and servi
 * 1 = Enable flap detection
 
 <a name="low_service_flap_threshold"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Low Service Flap Threshold**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**low_service_flap_threshold=&lt;percent&gt;**</td>
@@ -1660,13 +1660,13 @@ This option determines whether or not Naemon will try and detect hosts and servi
 This option is used to set the low threshold for detection of service flapping.  For more information on how flap detection and handling works (and how this option affects things) read <a href="flapping.html">this</a>.
 
 <a name="high_service_flap_threshold"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**High Service Flap Threshold**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**high_service_flap_threshold=&lt;percent&gt;**</td>
@@ -1680,13 +1680,13 @@ This option is used to set the low threshold for detection of service flapping. 
 This option is used to set the high threshold for detection of service flapping.  For more information on how flap detection and handling works (and how this option affects things) read <a href="flapping.html">this</a>.
 
 <a name="low_host_flap_threshold"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Low Host Flap Threshold**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**low_host_flap_threshold=&lt;percent&gt;**</td>
@@ -1700,13 +1700,13 @@ This option is used to set the high threshold for detection of service flapping.
 This option is used to set the low threshold for detection of host flapping.  For more information on how flap detection and handling works (and how this option affects things) read <a href="flapping.html">this</a>.
 
 <a name="high_host_flap_threshold"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**High Host Flap Threshold**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**high_host_flap_threshold=&lt;percent&gt;**</td>
@@ -1720,13 +1720,13 @@ This option is used to set the low threshold for detection of host flapping.  Fo
 This option is used to set the high threshold for detection of host flapping.  For more information on how flap detection and handling works (and how this option affects things) read <a href="flapping.html">this</a>.
 
 <a name="soft_state_dependencies"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Soft State Dependencies Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**soft_state_dependencies=&lt;0/1&gt;**</td>
@@ -1743,13 +1743,13 @@ This option determines whether or not Naemon will use soft state information whe
 * 1 = Use soft state dependencies
 
 <a name="service_check_timeout"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Service Check Timeout**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**service_check_timeout=&lt;seconds&gt;**</td>
@@ -1765,13 +1765,13 @@ This is the maximum number of seconds that Naemon will allow service checks to r
 There is often widespread confusion as to what this option really does.  It is meant to be used as a last ditch mechanism to kill off plugins which are misbehaving and not exiting in a timely manner.  It should be set to something high (like 60 seconds or more), so that each service check normally finishes executing within this time limit.  If a service check runs longer than this limit, Naemon will kill it off thinking it is a runaway processes.
 
 <a name="host_check_timeout"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Host Check Timeout**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**host_check_timeout=&lt;seconds&gt;**</td>
@@ -1787,13 +1787,13 @@ This is the maximum number of seconds that Naemon will allow host checks to run.
 There is often widespread confusion as to what this option really does.  It is meant to be used as a last ditch mechanism to kill off plugins which are misbehaving and not exiting in a timely manner.  It should be set to something high (like 60 seconds or more), so that each host check normally finishes executing within this time limit.  If a host check runs longer than this limit, Naemon will kill it off thinking it is a runaway processes.
 
 <a name="event_handler_timeout"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Event Handler Timeout**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**event_handler_timeout=&lt;seconds&gt;**</td>
@@ -1809,13 +1809,13 @@ This is the maximum number of seconds that Naemon will allow <a href="eventhandl
 There is often widespread confusion as to what this option really does.  It is meant to be used as a last ditch mechanism to kill off commands which are misbehaving and not exiting in a timely manner.  It should be set to something high (like 60 seconds or more), so that each event handler command normally finishes executing within this time limit.  If an event handler runs longer than this limit, Naemon will kill it off thinking it is a runaway processes.
 
 <a name="notification_timeout"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Notification Timeout**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**notification_timeout=&lt;seconds&gt;**</td>
@@ -1831,13 +1831,13 @@ This is the maximum number of seconds that Naemon will allow notification comman
 There is often widespread confusion as to what this option really does.  It is meant to be used as a last ditch mechanism to kill off commands which are misbehaving and not exiting in a timely manner.  It should be set to something high (like 60 seconds or more), so that each notification command finishes executing within this time limit.  If a notification command runs longer than this limit, Naemon will kill it off thinking it is a runaway processes.
 
 <a name="ocsp_timeout"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Obsessive Compulsive Service Processor Timeout**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**ocsp_timeout=&lt;seconds&gt;**</td>
@@ -1851,13 +1851,13 @@ There is often widespread confusion as to what this option really does.  It is m
 This is the maximum number of seconds that Naemon will allow an <a href="#ocsp_command">obsessive compulsive service processor command</a> to be run.  If a command exceeds this time limit it will be killed and a warning will be logged.
 
 <a name="ochp_timeout"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Obsessive Compulsive Host Processor Timeout**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**ochp_timeout=&lt;seconds&gt;**</td>
@@ -1871,13 +1871,13 @@ This is the maximum number of seconds that Naemon will allow an <a href="#ocsp_c
 This is the maximum number of seconds that Naemon will allow an <a href="#ochp_command">obsessive compulsive host processor command</a> to be run.  If a command exceeds this time limit it will be killed and a warning will be logged.
 
 <a name="perfdata_timeout"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Performance Data Processor Command Timeout**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**perfdata_timeout=&lt;seconds&gt;**</td>
@@ -1891,13 +1891,13 @@ This is the maximum number of seconds that Naemon will allow an <a href="#ochp_c
 This is the maximum number of seconds that Naemon will allow a <a href="#host_perfdata_command">host performance data processor command</a> or <a href="#service_perfdata_command">service performance data processor command</a> to be run.  If a command exceeds this time limit it will be killed and a warning will be logged.
 
 <a name="obsess_over_services"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Obsess Over Services Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**obsess_over_services=&lt;0/1&gt;**</td>
@@ -1914,13 +1914,13 @@ This value determines whether or not Naemon will "obsess" over service checks re
 * 1 = Obsess over services
 
 <a name="ocsp_command"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Obsessive Compulsive Service Processor Command**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**ocsp_command=&lt;command&gt;**</td>
@@ -1934,13 +1934,13 @@ This value determines whether or not Naemon will "obsess" over service checks re
 This option allows you to specify a command to be run after *every* service check, which can be useful in <a href="distributed.html">distributed monitoring</a>.  This command is executed after any <a href="eventhandlers.html">event handler</a> or <a href="notifications.html">notification</a> commands.  The *command* argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  The maximum amount of time that this command can run is controlled by the <a href="#ocsp_timeout">ocsp_timeout</a> option.   More information on distributed monitoring can be found <a href="distributed.html">here</a>.  This command is only executed if the <a href="#obsess_over_services">obsess_over_services</a> option is enabled globally and if the *obsess_over_service* directive in the <a href="objectdefinitions.html#service">service definition</a> is enabled.
 
 <a name="obsess_over_hosts"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Obsess Over Hosts Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**obsess_over_hosts=&lt;0/1&gt;**</td>
@@ -1957,13 +1957,13 @@ This value determines whether or not Naemon will "obsess" over host checks resul
 * 1 = Obsess over hosts
 
 <a name="ochp_command"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Obsessive Compulsive Host Processor Command**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**ochp_command=&lt;command&gt;**</td>
@@ -1977,13 +1977,13 @@ This value determines whether or not Naemon will "obsess" over host checks resul
 This option allows you to specify a command to be run after *every* host check, which can be useful in <a href="distributed.html">distributed monitoring</a>.  This command is executed after any <a href="eventhandlers.html">event handler</a> or <a href="notifications.html">notification</a> commands.  The *command* argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  The maximum amount of time that this command can run is controlled by the <a href="#ochp_timeout">ochp_timeout</a> option.   More information on distributed monitoring can be found <a href="distributed.html">here</a>.  This command is only executed if the <a href="#obsess_over_hosts">obsess_over_hosts</a> option is enabled globally and if the *obsess_over_host* directive in the <a href="objectdefinitions.html#host">host definition</a> is enabled.
 
 <a name="process_performance_data"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Performance Data Processing Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**process_performance_data=&lt;0/1&gt;**</td>
@@ -2000,13 +2000,13 @@ This value determines whether or not Naemon will process host and service check 
 * 1 = Process performance data
 
 <a name="host_perfdata_command"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Host Performance Data Processing Command**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**host_perfdata_command=&lt;command&gt;**</td>
@@ -2020,13 +2020,13 @@ This value determines whether or not Naemon will process host and service check 
 This option allows you to specify a command to be run after *every* host check to process host <a href="perfdata.html">performance data</a> that may be returned from the check.  The *command* argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  This command is only executed if the <a href="#process_performance_data">process_performance_data</a> option is enabled globally and if the *process_perf_data* directive in the <a href="objectdefinitions.html#host">host definition</a> is enabled.
 
 <a name="service_perfdata_command"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Service Performance Data Processing Command**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**service_perfdata_command=&lt;command&gt;**</td>
@@ -2040,13 +2040,13 @@ This option allows you to specify a command to be run after *every* host check t
 This option allows you to specify a command to be run after *every* service check to process service <a href="perfdata.html">performance data</a> that may be returned from the check.  The *command* argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  This command is only executed if the <a href="#process_performance_data">process_performance_data</a> option is enabled globally and if the *process_perf_data* directive in the <a href="objectdefinitions.html#service">service definition</a> is enabled.
 
 <a name="host_perfdata_file"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Host Performance Data File**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**host_perfdata_file=&lt;file_name&gt;**</td>
@@ -2060,13 +2060,13 @@ This option allows you to specify a command to be run after *every* service chec
 This option allows you to specify a file to which host <a href="perfdata.html">performance data</a> will be written after every host check.  Data will be written to the performance file as specified by the <a href="#host_perfdata_file_template">host_perfdata_file_template</a> option.  Performance data is only written to this file if the <a href="#process_performance_data">process_performance_data</a> option is enabled globally and if the *process_perf_data* directive in the <a href="objectdefinitions.html#host">host definition</a> is enabled.
 
 <a name="service_perfdata_file"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Service Performance Data File**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**service_perfdata_file=&lt;file_name&gt;**</td>
@@ -2080,13 +2080,13 @@ This option allows you to specify a file to which host <a href="perfdata.html">p
 This option allows you to specify a file to which service <a href="perfdata.html">performance data</a> will be written after every service check.  Data will be written to the performance file as specified by the <a href="#service_perfdata_file_template">service_perfdata_file_template</a> option.  Performance data is only written to this file if the <a href="#process_performance_data">process_performance_data</a> option is enabled globally and if the *process_perf_data* directive in the <a href="objectdefinitions.html#service">service definition</a> is enabled.
 
 <a name="host_perfdata_file_template"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Host Performance Data File Template**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**host_perfdata_file_template=&lt;template&gt;**</td>
@@ -2100,13 +2100,13 @@ This option allows you to specify a file to which service <a href="perfdata.html
 This option determines what (and how) data is written to the <a href="#host_perfdata_file">host performance data file</a>.  The template may contain <a href="macros.html">macros</a>, special characters (\t for tab, \r for carriage return, \n for newline) and plain text.  A newline is automatically added after each write to the performance data file.
 
 <a name="service_perfdata_file_template"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Service Performance Data File Template**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**service_perfdata_file_template=&lt;template&gt;**</td>
@@ -2120,13 +2120,13 @@ This option determines what (and how) data is written to the <a href="#host_perf
 This option determines what (and how) data is written to the <a href="#service_perfdata_file">service performance data file</a>.  The template may contain <a href="macros.html">macros</a>, special characters (\t for tab, \r for carriage return, \n for newline) and plain text.  A newline is automatically added after each write to the performance data file.
 
 <a name="host_perfdata_file_mode"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Host Performance Data File Mode**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**host_perfdata_file_mode=&lt;mode&gt;**</td>
@@ -2144,13 +2144,13 @@ This option determines how the <a href="#host_perfdata_file">host performance da
 * p = Open in non-blocking read/write mode (useful when writing to pipes)
 
 <a name="service_perfdata_file_mode"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Service Performance Data File Mode**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**service_perfdata_file_mode=&lt;mode&gt;**</td>
@@ -2168,13 +2168,13 @@ This option determines how the <a href="#service_perfdata_file">service performa
 * p = Open in non-blocking read/write mode (useful when writing to pipes)
 
 <a name="host_perfdata_file_processing_interval"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Host Performance Data File Processing Interval**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**host_perfdata_file_processing_interval=&lt;seconds&gt;**</td>
@@ -2188,13 +2188,13 @@ This option determines how the <a href="#service_perfdata_file">service performa
 This option allows you to specify the interval (in seconds) at which the <a href="#host_perfdata_file">host performance data file</a> is processed using the <a href="#host_perfdata_file_processing_command">host performance data file processing command</a>.  A value of 0 indicates that the performance data file should not be processed at regular intervals.
 
 <a name="service_perfdata_file_processing_interval"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Service Performance Data File Processing Interval**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**service_perfdata_file_processing_interval=&lt;seconds&gt;**</td>
@@ -2208,13 +2208,13 @@ This option allows you to specify the interval (in seconds) at which the <a href
 This option allows you to specify the interval (in seconds) at which the <a href="#service_perfdata_file">service performance data file</a> is processed using the <a href="#service_perfdata_file_processing_command">service performance data file processing command</a>.  A value of 0 indicates that the performance data file should not be processed at regular intervals.
 
 <a name="host_perfdata_file_processing_command"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Host Performance Data File Processing Command**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**host_perfdata_file_processing_command=&lt;command&gt;**</td>
@@ -2228,13 +2228,13 @@ This option allows you to specify the interval (in seconds) at which the <a href
 This option allows you to specify the command that should be executed to process the <a href="#host_perfdata_file">host performance data file</a>.  The *command* argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  The interval at which this command is executed is determined by the <a href="#host_perfdata_file_processing_interval">host_perfdata_file_processing_interval</a> directive.
 
 <a name="service_perfdata_file_processing_command"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Service Performance Data File Processing Command**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**service_perfdata_file_processing_command=&lt;command&gt;**</td>
@@ -2248,13 +2248,13 @@ This option allows you to specify the command that should be executed to process
 This option allows you to specify the command that should be executed to process the <a href="#service_perfdata_file">service performance data file</a>.  The *command* argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  The interval at which this command is executed is determined by the <a href="#service_perfdata_file_processing_interval">service_perfdata_file_processing_interval</a> directive.
 
 <a name="check_for_orphaned_services"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Orphaned Service Check Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**check_for_orphaned_services=&lt;0/1&gt;**</td>
@@ -2271,13 +2271,13 @@ This option allows you to enable or disable checks for orphaned service checks. 
 * 1 = Check for orphaned service checks (default)
 
 <a name="check_for_orphaned_hosts"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Orphaned Host Check Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**check_for_orphaned_hosts=&lt;0/1&gt;**</td>
@@ -2294,13 +2294,13 @@ This option allows you to enable or disable checks for orphaned hoste checks. Or
 * 1 = Check for orphaned host checks (default)
 
 <a name="check_service_freshness"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Service Freshness Checking Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**check_service_freshness=&lt;0/1&gt;**</td>
@@ -2317,13 +2317,13 @@ This option determines whether or not Naemon will periodically check the "freshn
 * 1 = Check service freshness (default)
 
 <a name="service_freshness_check_interval"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Service Freshness Check Interval**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**service_freshness_check_interval=&lt;seconds&gt;**</td>
@@ -2337,13 +2337,13 @@ This option determines whether or not Naemon will periodically check the "freshn
 This setting determines how often (in seconds) Naemon will periodically check the "freshness" of service check results.  If you have disabled service freshness checking (with the <a href="#check_service_freshness">check_service_freshness</a> option), this option has no effect.  More information on freshness checking can be found <a href="freshness.html">here</a>.
 
 <a name="check_host_freshness"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Host Freshness Checking Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**check_host_freshness=&lt;0/1&gt;**</td>
@@ -2360,13 +2360,13 @@ This option determines whether or not Naemon will periodically check the "freshn
 * 1 = Check host freshness (default)
 
 <a name="host_freshness_check_interval"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Host Freshness Check Interval**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**host_freshness_check_interval=&lt;seconds&gt;**</td>
@@ -2380,13 +2380,13 @@ This option determines whether or not Naemon will periodically check the "freshn
 This setting determines how often (in seconds) Naemon will periodically check the "freshness" of host check results.  If you have disabled host freshness checking (with the <a href="#check_host_freshness">check_host_freshness</a> option), this option has no effect.  More information on freshness checking can be found <a href="freshness.html">here</a>.
 
 <a name="additional_freshness_latency"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Additional Freshness Threshold Latency Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**additional_freshness_latency=&lt;#&gt;**</td>
@@ -2400,13 +2400,13 @@ This setting determines how often (in seconds) Naemon will periodically check th
 This option determines the number of seconds Naemon will add to any host or services freshness threshold it automatically calculates (e.g. those not specified explicity by the user).  More information on freshness checking can be found <a href="freshness.html">here</a>.
 
 <a name="enable_embedded_perl"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Embedded Perl Interpreter Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**enable_embedded_perl=&lt;0/1&gt;**</td>
@@ -2420,13 +2420,13 @@ This option determines the number of seconds Naemon will add to any host or serv
 This setting determines whether or not the embedded Perl interpreter is enabled on a program-wide basis.  Naemon must be compiled with support for embedded Perl for this option to have an effect.  More information on the embedded Perl interpreter can be found <a href="embeddedperl.html">here</a>.
 
 <a name="use_embedded_perl_implicitly"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Embedded Perl Implicit Use Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**use_embedded_perl_implicitly=&lt;0/1&gt;**</td>
@@ -2440,13 +2440,13 @@ This setting determines whether or not the embedded Perl interpreter is enabled 
 This setting determines whether or not the embedded Perl interpreter should be used for Perl plugins/scripts that do not explicitly enable/disable it.  Naemon must be compiled with support for embedded Perl for this option to have an effect.  More information on the embedded Perl interpreter and the effect of this setting can be found <a href="embeddedperl.html">here</a>.
 
 <a name="date_format"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Date Format**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**date_format=&lt;option&gt;**</td>
@@ -2459,7 +2459,7 @@ This setting determines whether or not the embedded Perl interpreter should be u
 
 This option allows you to specify what kind of date/time format Naemon should use in the web interface and date/time <a href="macros.html">macros</a>.  Possible options (along with example output) include:
 
-<table border="1" class="Default">
+<table border="1">
 <tr><th>Option</th><th>Output Format</th><th>Sample Output</th></tr>
 <tr><td>us</td><td>MM/DD/YYYY HH:MM:SS</td><td>06/30/2002 03:15:00</td></tr>
 <tr><td>euro</td><td>DD/MM/YYYY HH:MM:SS</td><td>30/06/2002 03:15:00</td></tr>
@@ -2468,13 +2468,13 @@ This option allows you to specify what kind of date/time format Naemon should us
 </table>
 
 <a name="use_timezone"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Timezone Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**use_timezone=&lt;tz&gt;**</td>
@@ -2497,13 +2497,13 @@ SetEnv TZ "US/Mountain"
 ```
 
 <a name="illegal_object_name_chars"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Illegal Object Name Characters**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**illegal_object_name_chars=&lt;chars...&gt;**</td>
@@ -2517,13 +2517,13 @@ SetEnv TZ "US/Mountain"
 This option allows you to specify illegal characters that cannot be used in host names, service descriptions, or names of other object types.  Naemon will allow you to use most characters in object definitions, but I recommend not using the characters shown in the example above.  Doing may give you problems in the web interface, notification commands, etc.
 
 <a name="illegal_macro_output_chars"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Illegal Macro Output Characters**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**illegal_macro_output_chars=&lt;chars...&gt;**</td>
@@ -2539,13 +2539,13 @@ This option allows you to specify illegal characters that should be stripped fro
 **$HOSTOUTPUT$**, **$HOSTPERFDATA$**, **$HOSTACKAUTHOR$**, **$HOSTACKCOMMENT$**, **$SERVICEOUTPUT$**, **$SERVICEPERFDATA$**, **$SERVICEACKAUTHOR$**, and **$SERVICEACKCOMMENT$**
 
 <a name="use_regexp_matching"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Regular Expression Matching Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**use_regexp_matching=&lt;0/1&gt;**</td>
@@ -2562,13 +2562,13 @@ This option determines whether or not various directives in your <a href="config
 * 1 = Use regular expression matching
 
 <a name="use_true_regexp_matching"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**True Regular Expression Matching Option**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**use_true_regexp_matching=&lt;0/1&gt;**</td>
@@ -2585,13 +2585,13 @@ If you've enabled regular expression matching of various object directives using
 * 1 = Use true regular expression matching
 
 <a name="admin_email"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Administrator Email Address**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**admin_email=&lt;email_address&gt;**</td>
@@ -2606,13 +2606,13 @@ This is the email address for the administrator of the local machine (i.e. the o
 This value can be used in notification commands by using the **$ADMINEMAIL$** <a href="macros.html">macro</a>.
 
 <a name="admin_pager"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Administrator Pager**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**admin_pager=&lt;pager_number_or_pager_email_gateway&gt;**</td>
@@ -2626,13 +2626,13 @@ This value can be used in notification commands by using the **$ADMINEMAIL$** <a
 This is the pager number (or pager email gateway) for the administrator of the local machine (i.e. the one that Naemon is running on). The pager number/address can be used in notification commands by using the **$ADMINPAGER$** <a href="macros.html">macro</a>.
 
 <a name="event_broker_options"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Event Broker Options**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**event_broker_options=&lt;#&gt;**</td>
@@ -2650,13 +2650,13 @@ This option controls what (if any) data gets sent to the event broker and, in tu
 * # = See BROKER_* definitions in source code (include/broker.h) for other values that can be OR'ed together
 
 <a name="broker_module"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Event Broker Modules**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**broker_module=&lt;modulepath&gt; [moduleargs]**</td>
@@ -2679,13 +2679,13 @@ The correct/safe way of updating a module is by using one of these methods:
 * Shutdown Naemon, replace the module file, restart Naemon
 * While Naemon is running... delete the original module file, move the new module file into place, restart Naemon
 <a name="debug_file"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Debug File**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**debug_file=&lt;file_name&gt;**</td>
@@ -2699,13 +2699,13 @@ The correct/safe way of updating a module is by using one of these methods:
 This option determines where Naemon should write debugging information.  What (if any) information is written is determined by the <a href="#debug_level">debug_level</a> and <a href="#debug_verbosity">debug_verbosity</a> options.  You can have Naemon automaticaly rotate the debug file when it reaches a certain size by using the <a href="#max_debug_file_size">max_debug_file_size</a> option.
 
 <a name="debug_level"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Debug Level**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**debug_level=&lt;#&gt;**</td>
@@ -2730,13 +2730,13 @@ This option determines what type of information Naemon should write to the <a hr
 
 <a name="debug_verbosity"></a>
 
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Debug Verbosity**</td>
 </tr>
 </table>
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**debug_verbosity=&lt;#&gt;**</td>
@@ -2754,12 +2754,12 @@ This option determines how much debugging information Naemon should write to the
 * 2 = Highly detailed information
 
 <a name="max_debug_file_size"></a>
-<table border="0" width="100%" class="Default">
+<table border="0" width="100%">
 <tr>
 <td bgcolor="#cbcbcb">**Maximum Debug File Size**</td>
 </tr>
 </table>
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>Format:</td>
 <td>**max_debug_file_size=&lt;#&gt;**</td>

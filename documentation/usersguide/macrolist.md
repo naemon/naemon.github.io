@@ -31,7 +31,7 @@ The tables below list all macros currently available in Naemon, along with a bri
 ### Macro Availability Chart
 
 <b>Legend:</b><br>
-<table border="1" cellspacing="0" cellpadding="5" class="Default">
+<table border="1" cellspacing="0" cellpadding="5">
 <tr><td class="MacroNo">No</td><td>The macro is not available</td></tr>
 <tr><td class="MacroYes">Yes</td><td>The macro is available</td></tr>
 </table>

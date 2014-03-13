@@ -58,7 +58,7 @@ Custom variable values can be referenced in scripts and executables that Naemon 
 
 In order to prevent name collision among custom variables from different object types, Naemon prepends "_HOST", "_SERVICE", or "_CONTACT" to the beginning of custom host, service, or contact variables, respectively, in macro and environment variable names.  The table below shows the corresponding macro and environment variable names for the custom variables that were defined in the example above.
 
-<table border="1" class="Default">
+<table border="1">
 <tr><th>Object Type</th><th>Variable Name</th><th>Macro Name</th><th>Environment Variable</th></tr>
 <tr><td>Host</td><td>MAC_ADDRESS</td><td>$_HOSTMAC_ADDRESS$</td><td>NAGIOS__HOSTMAC_ADDRESS</td></tr>
 <tr><td>Host</td><td>RACK_NUMBER</td><td>$_HOSTRACK_NUMBER$</td><td>NAGIOS__HOSTRACK_NUMBER</td></tr>

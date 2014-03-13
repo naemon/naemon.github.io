@@ -31,7 +31,7 @@ The inner workings of your plugin are unimportant to Naemon.  Your plugin could 
 
 Naemon determines the status of a host or service by evaluating the return code from plugins.  The following tables shows a list of valid return codes, along with their corresponding service or host states.
 
-<table border="1" class="Default">
+<table border="1">
 <tr><th>Plugin Return Code</th><th>Service State</th><th>Host State</th></tr>
 <tr><td>0</td><td>OK</td><td>UP</td></tr>
 <tr><td>1</td><td>WARNING</td><td>UP or DOWN/UNREACHABLE*</td></tr>
@@ -102,7 +102,7 @@ The <font color="#FFA500">orange</font> portions of the first and subsequent lin
 
 The final contents of each macro are listed below:
 
-<table border="1" class="Default">
+<table border="1">
 <tr><th>Macro</th><th>Value</th></tr>
 <tr><td>$SERVICEOUTPUT$</td><td><font color="red">DISK OK - free space: / 3326 MB (56%);</font></td></tr>
 <tr><td>$SERVICEPERFDATA$</td><td><font color="#FFA500">/=2643MB;5948;5958;0;5968&nbsp;/boot=68MB;88;93;0;98&nbsp;/home=69357MB;253404;253409;0;253414&nbsp;/var/log=818MB;970;975;0;980</font></td></tr>

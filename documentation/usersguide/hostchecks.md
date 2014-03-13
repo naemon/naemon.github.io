@@ -65,7 +65,7 @@ Host checks are performed by <a href="plugins.html">plugins</a>, which can retur
 
 The table below shows how plugin return codes correspond with preliminary host states.  Some post-processing (which is described later) is done which may then alter the final host state.
 
-<table border="1" class="Default">
+<table border="1">
 <tr><th>Plugin Result</th><th>Preliminary Host State</th></tr>
 <tr><td>OK</td><td>UP</td></tr>
 <tr><td>WARNING</td><td>UP or DOWN<sup>*</sup></td></tr>
@@ -77,7 +77,7 @@ The table below shows how plugin return codes correspond with preliminary host s
 
 If the preliminary host state is DOWN, Naemon will attempt to see if the host is really DOWN or if it is UNREACHABLE.  The distinction between DOWN and UNREACHABLE host states is important, as it allows admins to determine root cause of network outages faster.  The following table shows how Naemon makes a final state determination based on the state of the hosts parent(s).  A host's parents are defined in the <i>parents</i> directive in host definition.
 
-<table border="1" class="Default">
+<table border="1">
 <tr><th>Preliminary Host State</th><th>Parent Host State</th><th>Final Host State</th></tr>
 <tr><td>DOWN</td><td>At least one parent is UP</td><td>DOWN</td></tr>
 <tr><td>DOWN</td><td>All parents are either DOWN or UNREACHABLE</td><td>UNREACHABLE</td></tr>

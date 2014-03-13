@@ -70,7 +70,7 @@ Specific notification methods (paging, etc.) are not directly incorporated into 
 
 When crafting your notification commands, you need to take into account what type of notification is occurring.  The <a href="macrolist.html#notificationtype">$NOTIFICATIONTYPE$</a> macro contains a string that identifies exactly that.  The table below lists the possible values for the macro and their respective descriptions:
 
-<table class="Default" border="1">
+<table border="1">
 <tr><th>Value</th><th>Description</th></tr>
 <tr><td>PROBLEM</td><td>A service or host has just entered (or is still in) a problem state.  If this is a service notification, it means the service is either in a WARNING, UNKNOWN or CRITICAL state.  If this is a host notification, it means the host is in a DOWN or UNREACHABLE state.</td></tr>
 <tr><td>RECOVERY</td><td>A service or host recovery has occurred.  If this is a service notification, it means the service has just returned to an OK state.  If it is a host notification, it means the host has just returned to an UP state.</td></tr>

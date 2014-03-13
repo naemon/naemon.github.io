@@ -387,7 +387,7 @@ define service {
 
 Thus far, all examples of inheritance have shown object definitions inheriting variables/values from just a single source.  You are also able to inherit variables/values from multiple sources for more complex configurations, as shown below.
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td>
 <pre>
@@ -440,7 +440,7 @@ define host{
 
 When you use multiple inheritance sources, it is important to know how Naemon handles variables that are defined in multiple sources.  In these cases Naemon will use the variable/value from the first source that is specified in the <i>use</i> directive.  Since inheritance sources can themselves inherit variables/values from one or more other sources, it can get tricky to figure out what variable/value pairs take precedence.
 
-<table border="0" class="Default">
+<table border="0">
 <tr>
 <td valign="top">
 <p>
