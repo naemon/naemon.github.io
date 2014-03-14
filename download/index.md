@@ -72,3 +72,104 @@ Download the latest development source code from [github](http://github.com/naem
 ### Getting started
 
 See the [getting started](/documentation/usersguide/#getting_started) document in the users guide.
+
+#### Download Statistics
+As true monitoring people we love statistics:
+
+<style type="text/css">
+.yaxisLabel {
+  left: 2px;
+  top: 50%;
+  transform: rotate(-90deg);
+  transform-origin: 0 0 0;
+}
+.axisLabel {
+  font-size: 12px;
+  position: absolute;
+  text-align: center;
+}
+DIV.legend TD {
+  border: 0;
+}
+</style>
+<div id="downloadstats" style="width:1000px; height: 300px;"></div>
+<script language="javascript" type="text/javascript" src="/ressources/flot/jquery.flot.min.js"></script>
+<script language="javascript" type="text/javascript" src="http://labs.consol.de/naemon/downloadstats.js"></script>
+<script type="text/javascript">
+function extract_data(name, ticks, stats) {
+    var data = [];
+    jQuery.each(ticks, function(nr, tick) {
+        var tmp   = tick[1].split("-");
+        var year  = tmp[0];
+        var month = tmp[1];
+        var value = 0;
+        if(stats[year][month][name] != undefined) {
+            value = stats[year][month][name];
+        }
+        data.push([tick[0], value]);
+    });
+    return(data);
+}
+
+jQuery(document).ready(function() {
+    var months = [];
+    jQuery.each(download_stats, function(year, data) {
+        jQuery.each(download_stats[year], function(month, data) {
+            months.push(year+"-"+month);
+        });
+    });
+    var ticks = [];
+    months = months.sort();
+    jQuery.each(months, function(nr, month) {
+        ticks.push([nr, month]);
+    });
+
+    var d1 = { label: "Naemon-Core",        data: extract_data("naemon-core",       ticks, download_stats) };
+    var d2 = { label: "Naemon-Thruk",       data: extract_data("naemon-thruk",      ticks, download_stats) };
+    var d3 = { label: "Naemon-Livestatus",  data: extract_data("naemon-livestatus", ticks, download_stats) };
+    var d4 = { label: "Naemon-Source",      data: extract_data("naemon-source",     ticks, download_stats) };
+    jQuery.plot("#downloadstats", [d1,d2,d3,d4],{
+        colors: ['#CB514D', '#4CA251', '#AFD9F7', '#EDBF4B'],
+        lines: {
+            fill:  false,
+            steps: false,
+            fillColor: { colors: [ { opacity: 0.6 }, { opacity: 0.9 } ] }
+        },
+        xaxis: {
+          ticks: ticks
+        },
+        legend: {
+            position: 'nw'
+        },
+        grid: {
+            margin: {
+                left: 20
+            },
+            hoverable: true,
+            clickable: true
+        }
+    });
+    var yaxisLabel = $("<div class='axisLabel yaxisLabel'></div>")
+                    .text("Downloads")
+                    .appendTo("#downloadstats");
+    yaxisLabel.css("margin-top", yaxisLabel.width() / 2 - 20);
+
+    jQuery("<div id='tooltip'></div>").css({
+        position: "absolute",
+        display: "none",
+        border: "1px solid #fdd",
+        padding: "2px",
+        "background-color": "#fee",
+        opacity: 0.80
+    }).appendTo("body");
+    jQuery("#downloadstats").bind("plothover", function (event, pos, item) {
+        if (item) {
+            jQuery("#tooltip").html(item.series.label+": " + item.datapoint[1] + " downloads in " + ticks[item.datapoint[0]][1])
+                              .css({top: item.pageY+5, left: item.pageX+5})
+                              .fadeIn(200);
+        } else {
+            $("#tooltip").hide();
+        }
+    });
+});
+</script>
