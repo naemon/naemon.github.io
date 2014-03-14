@@ -12,7 +12,7 @@ It's possible to use both Markdown and html when writing code.
 
 For more information how to use Github's version of Markdown, see this web site: [https://help.github.com/articles/github-flavored-markdown](https://help.github.com/articles/github-flavored-markdown)
 
-<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> It's not possible to use Markdown inside a html block. Don't forget that &lt;table&gt;...&lt;/table&gt; are inside a html block as well</div>
+<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> It's not possible to use Markdown inside a html block. Don't forget that &lt;table&gt;...&lt;/table&gt; are inside a html block as well</div>
 
 ##### Example - Invalid use of Markdown
 ```
