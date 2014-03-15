@@ -69,6 +69,8 @@ title: Naemon Documentation
 
 <a href="startstop.html">Starting and stopping Naemon</a>
 
+<div id="basics">
+
 ### The Basics
 
 <a href="plugins.html">Plugins</a>

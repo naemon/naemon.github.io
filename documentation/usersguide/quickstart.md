@@ -2,32 +2,28 @@
 layout: doctoc
 title: Naemon Quickstart Installation Guides
 ---
-
-{% include review_required.md %}
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="upgrading.html">Upgrading Naemon</a>, <a href="config.html">Configuration Overview</a>, <a href="security.html">Security Considerations</a>
 
 ### About Naemon
 
-Visit <a href="http://www.nagios.org/about/" target="_blank">www.nagios.org/about/</a> for more information on Naemon - including features, capabilities, and technical specifications.
+Visit <a href="http://naemon.org/documentation/usersguide/" target="_blank">naemon.org/documentation/usersguide/</a> for more information on Naemon - including features, capabilities, and technical specifications.
 
 ### Installation Introduction
 
-These quickstart guides are intended to provide you with simple instructions on how to install Naemon from source (code) and have it monitoring your local machine inside of 20 minutes.  No advanced installation options are discussed here - just the basics that will work for 95% of users who want to get started.
+These quickstart guides are intended to provide you with simple instructions on how to install Naemon from packages and have it monitoring your local machine inside of 20 minutes.  No advanced installation options are discussed here - just the basics that will work for 95% of users who want to get started.
 
 ### Installation Guides
 
 Quickstart installation guides are currently available for the following Linux distributions:
 
 <ul>
+<li><a href="quickstart-ubuntu.html">Ubuntu Quickstart</a></li>
+<li><a href="quickstart-centos.html">CentOS Quickstart</a></li>
 <li><a href="quickstart-fedora.html">Fedora Quickstart</a></li>
 <li><a href="quickstart-opensuse.html">openSUSE Quickstart</a></li>
-<li><a href="quickstart-ubuntu.html">Ubuntu Quickstart</a></li>
 </ul>
 
-You can also find additional quickstart guides on the <a href="http://wiki.nagios.org/">Naemon Community Wiki</a>.  Can't find a quickstart for your particular OS?  Write one and post it to the wiki for others!
-
-If you are installing Naemon on an operating system or Linux distribution that isn't listed above, read the <a href="quickstart-fedora.html">Fedora quickstart</a> for an overview of what you'll need to do.  Command names, paths, etc. vary widely across different OSes/distributions, so you'll likely need to tweak the installation docs a bit to work for your particular case.
+Can't find a quickstart for your particular OS? Write one and help us extend our documentation, for more info see [Help Extending The Documentation](http://naemon.org/documentation/faq/#help_extending_the_documentation) 
 
 ### Post-Installation Modifications
 
@@ -44,12 +40,17 @@ Once you get Naemon installed and running properly, you'll no doubt want to star
 
 ### Enhance Naemon With Community Addons
 
-<a href="http://exchange.nagios.org/" target="_blank"><img src="/images/nagiosexchange.png" border="0" alt="Naemon Exchange" title="Naemon Exchange" style="float: left; padding: 10px 10px 0 10px;"></a>
+#### Nagios Exchange
+Since Naemon aims to be a drop replacement for Nagios all NRPE checks that are developed for Nagios works with Naemon as well. 
 
-Hundreds of community-developed addons provide additional GUIs and reporting, monitoring, and notification functionalities for Naemon.  Visit the Naemon Exchange website at <a href="http://exchange.nagios.org" target="_blank">exchange.nagios.org</a> to see some really cool things you can use to trick out your Naemon installation.
+Hundreds of community-developed addons provide additional GUIs and reporting, monitoring, and notification functionalities for Naemon.  Visit the Nagios Exchange website at <a href="http://exchange.nagios.org" target="_blank">exchange.nagios.org</a> to see some really cool things you can use to trick out your Naemon installation.
 
-### Naemon Library
+#### Thruk Community Addons
 
-Visit the Naemon Library at <a href="http://library.nagios.com" target="_blank">library.nagios.com</a> for Naemon tutorials, videos, documentation, and more.
+Since Thruk Monitoring webinterface are used in Naemon, Thruk addons works with Naemon as well. Please see [Thruk Plugins](http://thruk.org/plugins.html) for more information.
 
-Nagios and the Nagios logo are trademarks, servicemarks, registered servicemarks or registered trademarks of <a href="http://www.nagios.com/" target="_blank">Nagios Enterprises</a>.
+#### Monitoring plugins
+
+The Monitoring Plugins Development Team maintains a bundle of more than fifty standard plugins for Naemon (Icinga, Shinken, Sensu and Nagios).
+
+For more information visit: [monitoring-plugins.org](https://www.monitoring-plugins.org/)
