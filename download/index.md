@@ -94,6 +94,7 @@ DIV.legend TD {
 </style>
 <div id="downloadstats" style="width:1000px; height: 300px;"></div>
 <script language="javascript" type="text/javascript" src="/ressources/flot/jquery.flot.min.js"></script>
+<script language="javascript" type="text/javascript" src="/ressources/flot/jquery-flot-dashes.js"></script>
 <script language="javascript" type="text/javascript" src="http://labs.consol.de/naemon/downloadstats.js"></script>
 <script type="text/javascript">
 function extract_data(name, ticks, stats) {
@@ -124,12 +125,27 @@ jQuery(document).ready(function() {
         ticks.push([nr, month]);
     });
 
-    var d1 = { label: "Naemon-Core",        data: extract_data("naemon-core",       ticks, download_stats) };
-    var d2 = { label: "Naemon-Thruk",       data: extract_data("naemon-thruk",      ticks, download_stats) };
-    var d3 = { label: "Naemon-Livestatus",  data: extract_data("naemon-livestatus", ticks, download_stats) };
-    var d4 = { label: "Naemon-Source",      data: extract_data("naemon-source",     ticks, download_stats) };
-    jQuery.plot("#downloadstats", [d1,d2,d3,d4],{
-        colors: ['#CB514D', '#4CA251', '#AFD9F7', '#EDBF4B'],
+    var d1 = { label: "Core",           data: extract_data("naemon-core",       ticks, download_stats) };
+    var d2 = { label: "Thruk",          data: extract_data("naemon-thruk",      ticks, download_stats) };
+    var d3 = { label: "Livestatus",     data: extract_data("naemon-livestatus", ticks, download_stats) };
+    var d4 = { label: "Source-Tarball", data: extract_data("naemon-source",     ticks, download_stats) };
+    var series = [d1,d2,d3,d4];
+
+    // estimates
+    var today  = new Date();
+    var day    = today.getDate();
+    var days   = new Date(today.getFullYear(), today.getMonth()+1, 0).getDate();
+    if(day != days) {
+        var factor = days / day;
+        var d5 = { label: "", data: [d1.data[d1.data.length-2],  [d1.data.length-1, d1.data[d1.data.length-1][1]*factor ]], dashes: { show: true } };
+        var d6 = { label: "", data: [d2.data[d2.data.length-2],  [d2.data.length-1, d2.data[d2.data.length-1][1]*factor ]], dashes: { show: true } };
+        var d7 = { label: "", data: [d3.data[d3.data.length-2],  [d3.data.length-1, d3.data[d3.data.length-1][1]*factor ]], dashes: { show: true } };
+        var d8 = { label: "", data: [d4.data[d4.data.length-2],  [d4.data.length-1, d4.data[d4.data.length-1][1]*factor ]], dashes: { show: true } };
+        series.push(d5,d6,d7,d8);
+    }
+
+    jQuery.plot("#downloadstats", series,{
+        colors: ['#CB514D', '#4CA251', '#AFD9F7', '#EDBF4B','#CB514D', '#4CA251', '#AFD9F7', '#EDBF4B'],
         lines: {
             fill:  false,
             steps: false,
