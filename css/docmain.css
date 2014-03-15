@@ -44,6 +44,11 @@ TABLE TD {
     vertical-align: top;
 }
 
+TABLE.screenshot_thumbnails TD {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 /* affix styles */
 /* Custom Styles */
 ul.nav-tabs {
