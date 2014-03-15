@@ -18,7 +18,7 @@ CGIs require that you have authenticated to the web server and are authorized
 to view any information you are requesting. More information on configuring
 authorization can be found <a href="cgiauth.html">here</a>.
 
-### Index
+### Standard Pages
 
 * <a href="#status_cgi">Status CGI</a>
 * <a href="#statusmap_cgi">Status map CGI</a>
@@ -52,8 +52,8 @@ authorization can be found <a href="cgiauth.html">here</a>.
 
 <table border="0">
 <tr>
-<td>File Name:</td>
-<td><font color="red"><b>status.cgi<b></font></td>
+<td>Url:</td>
+<td><b>status.cgi<b></td>
 </tr>
 </table>
 
@@ -93,8 +93,8 @@ view of all services (or those associated with a particular host).
 
 <table border="0">
 <tr>
-<td>File Name:</td>
-<td><font color="red"><b>statusmap.cgi<b></font></td>
+<td>Url:</td>
+<td><b>statusmap.cgi<b></td>
 </tr>
 </table>
 
@@ -139,8 +139,8 @@ but it doesn't make sense to even generate the map if you can't see all the host
 
 <table border="0">
 <tr>
-<td>File Name:</td>
-<td><font color="red"><b>tac.cgi<b></font></td>
+<td>Url:</td>
+<td><b>tac.cgi<b></td>
 </tr>
 </table>
 
@@ -181,8 +181,8 @@ you're monitoring and you need to keep a single screen up to alert you of proble
 
 <table border="0">
 <tr>
-<td>File Name:</td>
-<td><font color="red"><b>outages.cgi<b></font></td>
+<td>Url:</td>
+<td><b>outages.cgi<b></td>
 </tr>
 </table>
 
@@ -221,8 +221,8 @@ of the outage they are causing.
 
 <table border="0">
 <tr>
-<td>File Name:</td>
-<td><font color="red"><b>config.cgi<b></font></td>
+<td>Url:</td>
+<td><b>config.cgi<b></td>
 </tr>
 </table>
 
@@ -257,8 +257,8 @@ time periods, services, etc.) that you have defined in your <a href="configobjec
 
 <table border="0">
 <tr>
-<td>File Name:</td>
-<td><font color="red"><b>cmd.cgi<b></font></td>
+<td>Url:</td>
+<td><b>cmd.cgi<b></td>
 </tr>
 </table>
 
@@ -305,8 +305,8 @@ a starting point for issuing commands.
 
 <table border="0">
 <tr>
-<td>File Name:</td>
-<td><font color="red"><b>extinfo.cgi<b></font></td>
+<td>Url:</td>
+<td><b>extinfo.cgi<b></td>
 </tr>
 </table>
 
@@ -347,8 +347,8 @@ navigation bar, or by clicking on a host or service link in the output of the <a
 
 <table border="0">
 <tr>
-<td>File Name:</td>
-<td><font color="red"><b>showlog.cgi<b></font></td>
+<td>Url:</td>
+<td><b>showlog.cgi<b></td>
 </tr>
 </table>
 
@@ -383,8 +383,8 @@ This CGI will display the <a href="configmain.html#log_file">log file</a>.  If y
 
 <table border="0">
 <tr>
-<td>File Name:</td>
-<td><font color="red"><b>history.cgi<b></font></td>
+<td>Url:</td>
+<td><b>history.cgi<b></td>
 </tr>
 </table>
 
@@ -421,8 +421,8 @@ This CGI is used to display the history of problems with either a particular hos
 
 <table border="0">
 <tr>
-<td>File Name:</td>
-<td><font color="red"><b>notifications.cgi<b></font></td>
+<td>Url:</td>
+<td><b>notifications.cgi<b></td>
 </tr>
 </table>
 
@@ -459,8 +459,8 @@ This CGI is used to display host and service notifications that have been sent t
 
 <table border="0">
 <tr>
-<td>File Name:</td>
-<td><font color="red"><b>trends.cgi<b></font></td>
+<td>Url:</td>
+<td><b>trends.cgi<b></td>
 </tr>
 </table>
 
@@ -498,8 +498,8 @@ This CGI is used to create a graph of host or service states over an arbitrary p
 
 <table border="0">
 <tr>
-<td>File Name:</td>
-<td><font color="red"><b>avail.cgi<b></font></td>
+<td>Url:</td>
+<td><b>avail.cgi<b></td>
 </tr>
 </table>
 
@@ -540,8 +540,8 @@ This CGI is used to report on the availability of hosts and services over a user
 </table>
 <table border="0">
 <tr>
-<td>File Name:</td>
-<td><font color="red"><b>summary.cgi<b></font></td>
+<td>Url:</td>
+<td><b>summary.cgi<b></td>
 </tr>
 </table>
 <table border="0" width="100%">
@@ -557,6 +557,261 @@ This CGI provides some generic reports about host and service alert data, includ
 <li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view summary information for all hosts <b>and</b> all services.</li>
 <li>If you are <a href="configcgi.html#authorized_for_all_services"><i>authorized for all services</i></a> you can view summary information for all services.</li>
 <li>If you are an <i>authenticated contact</i> you can view summary information for all services and hosts for which you are a contact.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+### Additional Pages
+
+* <a href="#business_process_cgi">Business Process CGI</a>
+* <a href="#config_tool_cgi">Config Tool CGI</a>
+* <a href="#reports_cgi">Reports CGI</a>
+* <a href="#panorama_view_cgi">Panorama View CGI</a>
+* <a href="#minemap_cgi">Minemap CGI</a>
+* <a href="#mobile_cgi">Mobile CGI</a>
+
+
+
+<a name="business_process_cgi"></a>
+
+#### Business Process CGI
+
+<table border="0" class="screenshot_thumbnails">
+<tr>
+<td align=left><img src="/images/cgi-bp-a.png" border=0 alt="Business Process CGI - Overview"></td>
+<td align=left><img src="/images/cgi-bp-b.png" border=0 alt="Business Process CGI - Details"></td>
+</tr>
+</table>
+
+<table border="0">
+<tr>
+<td>Url:</td>
+<td><b>bp.cgi<b></td>
+</tr>
+</table>
+
+<table border="0" width="100%">
+<tr>
+<td align=left valign=top width="50%">
+<p>
+<b>Description:</b>
+The Business Process CGI can manage, create and edit your business processes.
+It allows you to combine single host and service states in complex calculations
+which represent business logic. These business processes can then be used as
+naemon services to accomplish standard tasks like notifications and reporting.
+<p>
+
+<b>Authorization Requirements:</b>
+<ul>
+<li>If you are <a href="configcgi.html#authorized_for_configuration_information"><i>authorized for configuration information</i></a> and <a href="configcgi.html#authorized_for_system_commands"><i>authorized for system commands</i></a> you can <b>view and edit</b> all business processes.</li>
+<li>If you are an <i>authenticated contact</i> you can view all business processes for which you are a contact.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+
+
+<a name="config_tool_cgi"></a>
+
+#### Config Tool CGI
+
+<table border="0" class="screenshot_thumbnails">
+<tr>
+<td align=left><img src="/images/cgi-conf-tool-a.png" border=0 alt="Conf Tool CGI - Thruk Settings"></td>
+<td align=left><img src="/images/cgi-conf-tool-b.png" border=0 alt="Conf Tool CGI - Host Details"></td>
+<td align=left><img src="/images/cgi-conf-tool-c.png" border=0 alt="Conf Tool CGI - Filesystem"></td>
+</tr>
+</table>
+
+<table border="0">
+<tr>
+<td>Url:</td>
+<td><b>conf.cgi<b></td>
+</tr>
+</table>
+
+<table border="0" width="100%">
+<tr>
+<td align=left valign=top width="50%">
+<p>
+<b>Description:</b>
+The Config Tool CGI can change many settings within Thruk and also can be used to manage
+Naemon objects like hosts, services, commands, etc...
+<p>
+
+<b>Authorization Requirements:</b>
+<ul>
+<li>If you are <a href="configcgi.html#authorized_for_configuration_information"><i>authorized for configuration information</i></a> and <a href="configcgi.html#authorized_for_system_commands"><i>authorized for system commands</i></a> you can <b>view and edit</b> all settings.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+
+
+<a name="reports_cgi"></a>
+
+#### Reports CGI
+
+<table border="0" class="screenshot_thumbnails">
+<tr>
+<td align=left><img src="/images/cgi-reports-a.png" border=0 alt="Reports CGI - Details"></td>
+<td align=left><img src="/images/cgi-reports-b.png" border=0 alt="Reports CGI - Report"></td>
+</tr>
+</table>
+
+<table border="0">
+<tr>
+<td>Url:</td>
+<td><b>reports2.cgi<b></td>
+</tr>
+</table>
+
+<table border="0" width="100%">
+<tr>
+<td align=left valign=top width="50%">
+<p>
+<b>Description:</b>
+The Reports CGI creates SLA reports and delivers them by mail.
+<p>
+
+<b>Authorization Requirements:</b>
+<ul>
+<li>If you are <a href="configcgi.html#authorized_for_configuration_information"><i>authorized for configuration information</i></a> and <a href="configcgi.html#authorized_for_system_commands"><i>authorized for system commands</i></a> you can <b>view and edit</b> all reports.</li>
+<li>If you are an <i>authenticated contact</i> you can view and edit all reports for which you are a contact.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+
+
+
+<a name="panorama_view_cgi"></a>
+
+#### Panorama View CGI
+
+<table border="0" class="screenshot_thumbnails">
+<tr>
+<td align=left><img src="/images/cgi-panorama.png" border=0 alt="Panorama View CGI"></td>
+</tr>
+</table>
+
+<table border="0">
+<tr>
+<td>Url:</td>
+<td><b>panorama.cgi<b></td>
+</tr>
+</table>
+
+<table border="0" width="100%">
+<tr>
+<td align=left valign=top width="50%">
+<p>
+<b>Description:</b>
+The Panorama CGI lets contacts define individual dashboards on multiple tabs.
+<p>
+
+<b>Authorization Requirements:</b>
+<ul>
+<li>If you are an <i>authenticated contact</i> you can view and edit all dashboards for which you are a contact.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+<a name="minemap_cgi"></a>
+
+#### Minemap CGI
+
+<table border="0" class="screenshot_thumbnails">
+<tr>
+<td align=left><img src="/images/cgi-minemap.png" border=0 alt="Minemap CGI"></td>
+</tr>
+</table>
+
+<table border="0">
+<tr>
+<td>Url:</td>
+<td><b>minemap.cgi<b></td>
+</tr>
+</table>
+
+<table border="0" width="100%">
+<tr>
+<td align=left valign=top width="50%">
+<p>
+<b>Description:</b>
+The minemap gives you an brief overview on your hosts and services. It is recommended to
+use additional filters. The minemap is especially useful if you have hosts which
+share common services names.
+<p>
+
+<b>Authorization Requirements:</b>
+<ul>
+<li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view minemaps for all hosts <b>and</b> all services.</li>
+<li>If you are <a href="configcgi.html#authorized_for_all_services"><i>authorized for all services</i></a> you can view minemaps data for all services.</li>
+<li>If you are an <i>authenticated contact</i> you can view all hosts and services for which you are a contact.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+<a name="mobile_cgi"></a>
+
+#### Mobile CGI
+
+<table border="0" class="screenshot_thumbnails">
+<tr>
+<td align=left><img src="/images/cgi-mobile.png" border=0 alt="Mobile CGI"></td>
+</tr>
+</table>
+
+<table border="0">
+<tr>
+<td>Url:</td>
+<td><b>mobile.cgi<b></td>
+</tr>
+</table>
+
+<table border="0" width="100%">
+<tr>
+<td align=left valign=top width="50%">
+<p>
+<b>Description:</b>
+The mobile cgi is designed for mobile devices and should work with all modern mobile
+phones like iPhone or Android. It provides an easy way to quickly acknowledge problems
+from your mobile.
+<p>
+
+<b>Authorization Requirements:</b>
+<ul>
+<li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view all hosts <b>and</b> all services.</li>
+<li>If you are <a href="configcgi.html#authorized_for_all_services"><i>authorized for all services</i></a> you can view all services.</li>
+<li>If you are an <i>authenticated contact</i> you can view all hosts and services for which you are a contact.</li>
 </ul>
 </td>
 </tr>
