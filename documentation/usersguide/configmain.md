@@ -39,9 +39,7 @@ Below you will find descriptions of each main Naemon configuration file option..
 </tr>
 </table>
 
-This variable specifies where Naemon should create its main log file.  This should be the first
-variable that you define in your configuration file, as Naemon will try to write errors that it
-finds in the rest of your configuration data to this file.  If you have <a href="#log_rotation_method">log rotation</a> enabled, this file will automatically be rotated every hour, day, week, or month.
+<p>This variable specifies where Naemon should create its main log file.  This should be the first variable that you define in your configuration file, as Naemon will try to write errors that it finds in the rest of your configuration data to this file.  If you have <a href="#log_rotation_method">log rotation</a> enabled, this file will automatically be rotated every hour, day, week, or month.</p>
 
 <a name="cfg_file"></a>
 #### Object Configuration File
@@ -61,7 +59,7 @@ finds in the rest of your configuration data to this file.  If you have <a href=
 </tr>
 </table>
 
-This directive is used to specify an <a href="configobject.html">object configuration file</a> containing object definitions that Naemon should use for monitoring.  Object configuration files contain definitions for hosts, host groups, contacts, contact groups, services, commands, etc.  You can seperate your configuration information into several files and specify multiple *cfg_file=* statements to have each of them processed.
+<p>This directive is used to specify an <a href="configobject.html">object configuration file</a> containing object definitions that Naemon should use for monitoring.  Object configuration files contain definitions for hosts, host groups, contacts, contact groups, services, commands, etc.  You can seperate your configuration information into several files and specify multiple <i>cfg_file=</i> statements to have each of them processed.</p>
 
 <a name="cfg_dir"></a>
 #### Object Configuration Directory
@@ -81,8 +79,7 @@ This directive is used to specify an <a href="configobject.html">object configur
 </tr>
 </table>
 
-This directive is used to specify a directory which contains <a href="configobject.html">object configuration files</a> that Naemon should use for monitoring.  All files in the directory with a *.cfg* extension are processed as object config files.  Additionally, Naemon will recursively process all config files in subdirectories of the directory you specify here.  You can seperate your configuration files into different directories and specify multiple *cfg_dir=* statements to have all config files in each directory processed.
-
+<p>This directive is used to specify a directory which contains <a href="configobject.html">object configuration files</a> that Naemon should use for monitoring.  All files in the directory with a <i>.cfg</i> extension are processed as object config files.  Additionally, Naemon will recursively process all config files in subdirectories of the directory you specify here.  You can seperate your configuration files into different directories and specify multiple <i>cfg_dir=</i> statements to have all config files in each directory processed.</p>  
 <a name="object_cache_file"></a>
 #### Object Cache File
 
@@ -99,7 +96,7 @@ This directive is used to specify a directory which contains <a href="configobje
 </tr>
 </table>
 
-This directive is used to specify a file in which a cached copy of <a href="configobject.html">object definitions</a> should be stored.  The cache file is (re)created every time Naemon is (re)started and is used by the CGIs.   It is intended to speed up config file caching in the CGIs and allow you to edit the source <a href="#cfg_file">object config files</a> while Naemon is running without affecting the output displayed in the CGIs.
+<p>This directive is used to specify a file in which a cached copy of <a href="configobject.html">object definitions</a> should be stored.  The cache file is (re)created every time Naemon is (re)started and is used by the CGIs.   It is intended to speed up config file caching in the CGIs and allow you to edit the source <a href="#cfg_file">object config files</a> while Naemon is running without affecting the output displayed in the CGIs.</p>
 
 <a name="precached_object_file"></a>
 #### Precached Object File
@@ -117,7 +114,7 @@ This directive is used to specify a file in which a cached copy of <a href="conf
 </tr>
 </table>
 
-This directive is used to specify a file in which a pre-processed, pre-cached copy of <a href="configobject.html">object definitions</a> should be stored.  This file can be used to drastically improve startup times in large/complex Naemon installations.  Read more information on how to speed up start times <a href="faststartup.html">here</a>.
+<p>This directive is used to specify a file in which a pre-processed, pre-cached copy of <a href="configobject.html">object definitions</a> should be stored.  This file can be used to drastically improve startup times in large/complex Naemon installations.  Read more information on how to speed up start times <a href="faststartup.html">here</a>.</p>
 
 <a name="resource_file"></a>
 #### Resource File
@@ -133,7 +130,7 @@ This directive is used to specify a file in which a pre-processed, pre-cached co
 </tr>
 </table>
 
-This is used to specify an optional resource file that can contain $USERn$ <a href="macros.html">macro</a> definitions.  $USERn$ macros are useful for storing usernames, passwords, and items commonly used in command definitions (like directory paths).  The CGIs will *not* attempt to read resource files, so you can set restrictive permissions (600 or 660) on them to protect sensitive information.  You can include multiple resource files by adding multiple resource_file statements to the main config file - Naemon will process them all.  See the sample resource.cfg file in the *sample-config/* subdirectory of the Naemon distribution for an example of how to define $USERn$ macros.
+<p>This is used to specify an optional resource file that can contain $USERn$ <a href="macros.html">macro</a> definitions.  $USERn$ macros are useful for storing usernames, passwords, and items commonly used in command definitions (like directory paths).  The CGIs will <i>not</i> attempt to read resource files, so you can set restrictive permissions (600 or 660) on them to protect sensitive information.  You can include multiple resource files by adding multiple resource_file statements to the main config file - Naemon will process them all.  See the sample resource.cfg file in the <i>sample-config/</i> subdirectory of the Naemon distribution for an example of how to define $USERn$ macros.</p>
 
 <a name="temp_file"></a>
 #### Temp File
@@ -246,7 +243,7 @@ This is used to set the effective group that the Naemon process should run as.  
 </tr>
 </table>
 
-This option determines whether or not Naemon will send out <a href="notifications.html">notifications</a> when it initially (re)starts.  If this option is disabled, Naemon will not send out notifications for any host or service.  Note: If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), *unless* you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.  If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you'll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.  Values are as follows:
+<p>This option determines whether or not Naemon will send out <a href="notifications.html">notifications</a> when it initially (re)starts.  If this option is disabled, Naemon will not send out notifications for any host or service.  Note: If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), <i>unless</i> you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.  If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you'll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.  Values are as follows:</p>
 
 * 0 = Disable notifications
 * 1 = Enable notifications (default)
@@ -265,7 +262,7 @@ This option determines whether or not Naemon will send out <a href="notification
 </tr>
 </table>
 
-This option determines whether or not Naemon will execute service checks when it initially (re)starts.  If this option is disabled, Naemon will not actively execute any service checks and will remain in a sort of "sleep" mode (it can still accept <a href="passivechecks.html">passive checks</a> unless you've <a href="#accept_passive_service_checks">disabled them</a>).   This option is most often used when configuring backup monitoring servers, as described in the documentation on <a href="redundancy.html">redundancy</a>, or when setting up a <a href="distributed.html">distributed</a> monitoring environment.  Note: If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), *unless* you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.  If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you'll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.  Values are as follows:
+<p>This option determines whether or not Naemon will execute service checks when it initially (re)starts.  If this option is disabled, Naemon will not actively execute any service checks and will remain in a sort of "sleep" mode (it can still accept <a href="passivechecks.html">passive checks</a> unless you've <a href="#accept_passive_service_checks">disabled them</a>).   This option is most often used when configuring backup monitoring servers, as described in the documentation on <a href="redundancy.html">redundancy</a>, or when setting up a <a href="distributed.html">distributed</a> monitoring environment.  Note: If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), *unless* you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.  If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you'll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.  Values are as follows:</p>
 
 * 0 = Don't execute service checks
 * 1 = Execute service checks (default)
@@ -284,7 +281,7 @@ This option determines whether or not Naemon will execute service checks when it
 </tr>
 </table>
 
-This option determines whether or not Naemon will accept <a href="passivechecks.html">passive service checks</a> when it initially (re)starts.  If this option is disabled, Naemon will not accept any passive service checks.  Note: If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), *unless* you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.  If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you'll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.  Values are as follows:
+<p>This option determines whether or not Naemon will accept <a href="passivechecks.html">passive service checks</a> when it initially (re)starts.  If this option is disabled, Naemon will not accept any passive service checks.  Note: If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), <i>unless</i> you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.  If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you'll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.  Values are as follows:</p>
 
 * 0 = Don't accept passive service checks
 * 1 = Accept passive service checks (default)
@@ -303,7 +300,7 @@ This option determines whether or not Naemon will accept <a href="passivechecks.
 </tr>
 </table>
 
-This option determines whether or not Naemon will execute on-demand and regularly scheduled host checks when it initially (re)starts.  If this option is disabled, Naemon will not actively execute any host checks, although it can still accept <a href="passivechecks.html">passive host checks</a> unless you've <a href="#accept_passive_host_checks">disabled them</a>).   This option is most often used when configuring backup monitoring servers, as described in the documentation on <a href="redundancy.html">redundancy</a>, or when setting up a <a href="distributed.html">distributed</a> monitoring environment.  Note: If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), *unless* you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.  If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you'll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.  Values are as follows:
+<p>This option determines whether or not Naemon will execute on-demand and regularly scheduled host checks when it initially (re)starts.  If this option is disabled, Naemon will not actively execute any host checks, although it can still accept <a href="passivechecks.html">passive host checks</a> unless you've <a href="#accept_passive_host_checks">disabled them</a>).   This option is most often used when configuring backup monitoring servers, as described in the documentation on <a href="redundancy.html">redundancy</a>, or when setting up a <a href="distributed.html">distributed</a> monitoring environment.  Note: If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), <i>unless</i> you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.  If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you'll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.  Values are as follows:</p>
 
 * 0 = Don't execute host checks
 * 1 = Execute host checks (default)
@@ -322,7 +319,7 @@ This option determines whether or not Naemon will execute on-demand and regularl
 </tr>
 </table>
 
-This option determines whether or not Naemon will accept <a href="passivechecks.html">passive host checks</a> when it initially (re)starts.  If this option is disabled, Naemon will not accept any passive host checks.  Note: If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), *unless* you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.  If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you'll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.  Values are as follows:
+<p>This option determines whether or not Naemon will accept <a href="passivechecks.html">passive host checks</a> when it initially (re)starts.  If this option is disabled, Naemon will not accept any passive host checks.  Note: If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), <i>unles</i> you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.  If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you'll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.  Values are as follows:</p>
 
 * 0 = Don't accept passive host checks
 * 1 = Accept passive host checks (default)
@@ -341,7 +338,7 @@ This option determines whether or not Naemon will accept <a href="passivechecks.
 </tr>
 </table>
 
-This option determines whether or not Naemon will run <a href="eventhandlers.html">event handlers</a> when it initially (re)starts.  If this option is disabled, Naemon will not run any host or service event handlers.  Note: If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), *unless* you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.  If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you'll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.  Values are as follows:
+<p>This option determines whether or not Naemon will run <a href="eventhandlers.html">event handlers</a> when it initially (re)starts.  If this option is disabled, Naemon will not run any host or service event handlers.  Note: If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), <i>unless</i> you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.  If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you'll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.  Values are as follows:</p>
 
 * 0 = Disable event handlers
 * 1 = Enable event handlers (default)
@@ -417,7 +414,7 @@ This option determines whether or not Naemon will check the <a href="#command_fi
 </tr>
 </table>
 
-If you specify a number with an "s" appended to it (i.e. 30s), this is the number of *seconds* to wait between external command checks.  If you leave off the "s", this is the number of "time units" to wait between external command checks. Unless you've changed the <a href="#interval_length">interval_length</a> value (as defined below) from the default value of 60, this number will mean minutes.
+<p>If you specify a number with an "s" appended to it (i.e. 30s), this is the number of <i>seconds</i> to wait between external command checks.  If you leave off the "s", this is the number of "time units" to wait between external command checks. Unless you've changed the <a href="#interval_length">interval_length</a> value (as defined below) from the default value of 60, this number will mean minutes.</p>
 
 Note: By setting this value to **-1**, Naemon will check for external commands as often as possible.  Each time Naemon checks for external commands it will read and process all commands present in the <a href="#command_file">command file</a> before continuing on with its other duties.  More information on external commands can be found <a href="extcommands.html">here</a>.
 
@@ -468,7 +465,7 @@ Note: This is an advanced feature. This option determines how many buffer slots 
 </tr>
 </table>
 
-This option determines whether Naemon will automatically check to see if new updates (releases) are available.  It is recommend that you enable this option to ensure that you stay on top of the latest critical patches to Naemon.  Naemon is critical to you - make sure you keep it in good shape.  Naemon will check once a day for new updates. Data collected by Naemon Enterprises from the update check is processed in accordance  with our privacy policy - see <a href="http://api.nagios.org">http://api.nagios.org</a> for details.
+This option determines whether Naemon will automatically check to see if new updates (releases) are available.  It is recommend that you enable this option to ensure that you stay on top of the latest critical patches to Naemon.  Naemon is critical to you - make sure you keep it in good shape.  Naemon will check once a day for new updates. Data collected by Naemon from the update check is processed in accordance with our privacy policy - see <a href="http://api.naemon.org">http://api.naemon.org</a> for details.
 
 <a name="bare_update_checks"></a>
 #### Bare Update Checks
@@ -484,7 +481,7 @@ This option determines whether Naemon will automatically check to see if new upd
 </tr>
 </table>
 
-This option deterines what data Naemon will send to api.nagios.org when it checks for updates.  By default, Naemon will send information on the current version of Naemon you have installed, as well as an indicator as to whether this was a new installation or not.  Naemon Enterprises uses this data to determine the number of users running specific version of Naemon.  Enable this option if you do not wish for this information to be sent.
+This option deterines what data Naemon will send to api.naemon.org when it checks for updates.  By default, Naemon will send information on the current version of Naemon you have installed, as well as an indicator as to whether this was a new installation or not.  Naemon uses this data to determine the number of users running specific version of Naemon. Enable this option if you do not wish for this information to be sent.
 
 <a name="lock_file"></a>
 #### Lock File
@@ -516,7 +513,7 @@ This option specifies the location of the lock file that Naemon should create wh
 </tr>
 </table>
 
-This option determines whether or not Naemon will retain state information for hosts and services between program restarts.  If you enable this option, you should supply a value for the <a href="#state_retention_file">state_retention_file</a> variable.  When enabled, Naemon will save all state information for hosts and service before it shuts down (or restarts) and will read in previously saved state information when it starts up again.
+<p>This option determines whether or not Naemon will retain state information for hosts and services between program restarts.  If you enable this option, you should supply a value for the <a href="#state_retention_file">state_retention_file</a> variable.  When enabled, Naemon will save all state information for hosts and service before it shuts down (or restarts) and will read in previously saved state information when it starts up again.</p>
 
 * 0 = Don't retain state information
 * 1 = Retain state information (default)
@@ -535,7 +532,7 @@ This option determines whether or not Naemon will retain state information for h
 </tr>
 </table>
 
-This is the file that Naemon will use for storing status, downtime, and comment information before it shuts down.  When Naemon is restarted it will use the information stored in this file for setting the initial states of services and hosts before it starts monitoring anything.   In order to make Naemon retain state information between program restarts, you must enable the <a href="#retain_state_information">retain_state_information</a> option.
+<p>This is the file that Naemon will use for storing status, downtime, and comment information before it shuts down.  When Naemon is restarted it will use the information stored in this file for setting the initial states of services and hosts before it starts monitoring anything.   In order to make Naemon retain state information between program restarts, you must enable the <a href="#retain_state_information">retain_state_information</a> option.</p>
 
 <a name="retention_update_interval"></a>
 #### Automatic State Retention Update Interval
@@ -551,7 +548,7 @@ This is the file that Naemon will use for storing status, downtime, and comment 
 </tr>
 </table>
 
-This setting determines how often (in minutes) that Naemon will automatically save retention data during normal operation.  If you set this value to 0, Naemon will not save retention data at regular intervals, but it will still save retention data before shutting down or restarting.  If you have disabled state retention (with the <a href="#retain_state_information">retain_state_information</a> option), this option has no effect.
+<p>This setting determines how often (in minutes) that Naemon will automatically save retention data during normal operation.  If you set this value to 0, Naemon will not save retention data at regular intervals, but it will still save retention data before shutting down or restarting.  If you have disabled state retention (with the <a href="#retain_state_information">retain_state_information</a> option), this option has no effect.</p>
 
 <a name="use_retained_program_state"></a>
 #### Use Retained Program State Option
@@ -567,7 +564,7 @@ This setting determines how often (in minutes) that Naemon will automatically sa
 </tr>
 </table>
 
-This setting determines whether or not Naemon will set various program-wide state variables based on the values saved in the retention file.  Some of these program-wide state variables that are normally saved across program restarts if state retention is enabled include the <a href="#enable_notifications">enable_notifications</a>, <a href="#enable_flap_detection">enable_flap_detection</a>, <a href="#enable_event_handlers">enable_event_handlers</a>, <a href="#execute_service_checks">execute_service_checks</a>, and <a href="#accept_passive_service_checks">accept_passive_service_checks</a> options. If you do not have <a href="#retain_state_information">state retention</a> enabled, this option has no effect.
+<p>This setting determines whether or not Naemon will set various program-wide state variables based on the values saved in the retention file.  Some of these program-wide state variables that are normally saved across program restarts if state retention is enabled include the <a href="#enable_notifications">enable_notifications</a>, <a href="#enable_flap_detection">enable_flap_detection</a>, <a href="#enable_event_handlers">enable_event_handlers</a>, <a href="#execute_service_checks">execute_service_checks</a>, and <a href="#accept_passive_service_checks">accept_passive_service_checks</a> options. If you do not have <a href="#retain_state_information">state retention</a> enabled, this option has no effect.</p>
 
 * 0 = Don't use retained program state
 * 1 = Use retained program state (default)
@@ -649,29 +646,24 @@ These options determine which process attributes are NOT retained across program
 <tr>
 <td>Format:</td>
 <td>
-**retained_contact_host_attribute_mask=&lt;number&gt;**
-**retained_contact_service_attribute_mask=&lt;number&gt;**
+<b>retained_contact_host_attribute_mask=&lt;number&gt;</b><br>
+<b>retained_contact_service_attribute_mask=&lt;number&gt;</b>
 </td>
 </tr>
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>retained_contact_host_attribute_mask=0</b></font>
+<font color="red"><b>retained_contact_host_attribute_mask=0</b></font><br>
 <font color="red"><b>retained_contact_service_attribute_mask=0</b></font>
 </td>
 </tr>
 </table>
-
-WARNING: This is an advanced feature.  You'll need to read the Naemon source code to use this option effectively.
+<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> WARNING: This is an advanced feature.  You'll need to read the Naemon source code to use this option effectively.</div>
 
 These options determine which contact attributes are NOT retained across program restarts.  There are two masks because there are often separate host and service contact attributes that can be changed.  The values for these options are a bitwise AND of values specified by the "MODATTR_" definitions in the include/common.h source code file.  By default, all process attributes are retained.
 
 <a name="use_syslog"></a>
-<table border="0" width="100%">
-<tr>
-#### Syslog Logging Option</b></td>
-</tr>
-</table>
+#### Syslog Logging Option
 
 <table border="0">
 <tr>
@@ -705,8 +697,7 @@ are as follows:
 </table>
 
 This variable determines whether or not notification messages are logged.  If you have a lot of contacts
-or regular service failures your log file will grow relatively quickly.  Use this option to keep contact
-notifications from being logged.
+or regular service failures your log file will grow relatively quickly.  Use this option to keep contact notifications from being logged.
 
 * 0 = Don't log notifications
 * 1 = Log notifications
@@ -725,10 +716,7 @@ notifications from being logged.
 </tr>
 </table>
 
-This variable determines whether or not service check retries are logged.  Service check retries occur when a
-service check results in a non-OK state, but you have configured Naemon to retry the service more than once before
-responding to the error.  Services in this situation are considered to be in "soft" states.  Logging service check retries
-is mostly useful when attempting to debug Naemon or test out service <a href="eventhandlers.html">event handlers</a>.
+This variable determines whether or not service check retries are logged.  Service check retries occur when a service check results in a non-OK state, but you have configured Naemon to retry the service more than once before responding to the error.  Services in this situation are considered to be in "soft" states.  Logging service check retries is mostly useful when attempting to debug Naemon or test out service <a href="eventhandlers.html">event handlers</a>.  
 
 * 0 = Don't log service check retries
 * 1 = Log service check retries
@@ -747,8 +735,7 @@ is mostly useful when attempting to debug Naemon or test out service <a href="ev
 </tr>
 </table>
 
-This variable determines whether or not host check retries are logged.  Logging host check retries
-is mostly useful when attempting to debug Naemon or test out host <a href="eventhandlers.html">event handlers</a>.
+This variable determines whether or not host check retries are logged.  Logging host check retries is mostly useful when attempting to debug Naemon or test out host <a href="eventhandlers.html">event handlers</a>.
 
 * 0 = Don't log host check retries
 * 1 = Log host check retries
@@ -767,9 +754,7 @@ is mostly useful when attempting to debug Naemon or test out host <a href="event
 </tr>
 </table>
 
-This variable determines whether or not service and host <a href="eventhandlers.html">event handlers</a> are logged.
-Event handlers are optional commands that can be run whenever a service or hosts changes state.  Logging event handlers
-is most useful when debugging Naemon or first trying out your event handler scripts.
+This variable determines whether or not service and host <a href="eventhandlers.html">event handlers</a> are logged.  Event handlers are optional commands that can be run whenever a service or hosts changes state.  Logging event handlers is most useful when debugging Naemon or first trying out your event handler scripts.
 
 * 0 = Don't log event handlers
 * 1 = Log event handlers
@@ -807,7 +792,7 @@ This variable determines whether or not Naemon will force all initial host and s
 </tr>
 </table>
 
-This variable determines whether or not Naemon will log <a href="extcommands.html">external commands</a> that it receives from the <a href="#command_file">external command file</a>.  Note: This option does not control whether or not <a href="passivechecks.html">passive service checks</a> (which are a type of external command) get logged.  To enable or disable logging of passive checks, use the <a href="#log_passive_checks">log_passive_checks</a> option.
+<p>This variable determines whether or not Naemon will log <a href="extcommands.html">external commands</a> that it receives from the <a href="#command_file">external command file</a>.  Note: This option does not control whether or not <a href="passivechecks.html">passive service checks</a> (which are a type of external command) get logged.  To enable or disable logging of passive checks, use the <a href="#log_passive_checks">log_passive_checks</a> option.</p>
 
 * 0 = Don't log external commands
 * 1 = Log external commands (default)
@@ -845,7 +830,7 @@ This variable determines whether or not Naemon will log <a href="passivechecks.h
 </tr>
 </table>
 
-This option allows you to specify a host event handler command that is to be run for every host state change.  The global event handler is executed immediately prior to the event handler that you have optionally specified in each host definition.  The *command* argument is the short name of a command that you define in your <a href="configobject.html">object configuration file</a>.  The maximum amount of time that this command can run is controlled by the <a href="#event_handler_timeout">event_handler_timeout</a> option.  More information on event handlers can be found <a href="eventhandlers.html">here</a>.
+<p>This option allows you to specify a host event handler command that is to be run for every host state change.  The global event handler is executed immediately prior to the event handler that you have optionally specified in each host definition.  The <i>command</i> argument is the short name of a command that you define in your <a href="configobject.html">object configuration file</a>.  The maximum amount of time that this command can run is controlled by the <a href="#event_handler_timeout">event_handler_timeout</a> option.  More information on event handlers can be found <a href="eventhandlers.html">here</a>.</p>
 
 <a name="global_service_event_handler"></a>
 #### Global Service Event Handler Option
@@ -861,7 +846,7 @@ This option allows you to specify a host event handler command that is to be run
 </tr>
 </table>
 
-This option allows you to specify a service event handler command that is to be run for every service state change.  The global event handler is executed immediately prior to the event handler that you have optionally specified in each service definition.  The *command* argument is the short name of a command that you define in your <a href="configobject.html">object configuration file</a>.  The maximum amount of time that this command can run is controlled by the <a href="#event_handler_timeout">event_handler_timeout</a> option.  More information on event handlers can be found <a href="eventhandlers.html">here</a>.
+<p>This option allows you to specify a service event handler command that is to be run for every service state change.  The global event handler is executed immediately prior to the event handler that you have optionally specified in each service definition.  The <i>command</i> argument is the short name of a command that you define in your <a href="configobject.html">object configuration file</a>.  The maximum amount of time that this command can run is controlled by the <a href="#event_handler_timeout">event_handler_timeout</a> option.  More information on event handlers can be found <a href="eventhandlers.html">here</a>.</p>
 
 <a name="sleep_time"></a>
 #### Inter-Check Sleep Time
@@ -893,7 +878,7 @@ This is the number of seconds that Naemon will sleep before checking to see if t
 </tr>
 </table>
 
-This option allows you to control how service checks are initially "spread out" in the event queue.  Using a "smart" delay calculation (the default) will cause Naemon to calculate an average check interval and spread initial checks of all services out over that interval, thereby helping to eliminate CPU load spikes.  Using no delay is generally *not* recommended, as it will cause all service checks to be scheduled for execution at the same time.  This means that you will generally have large CPU spikes when the services are all executed in parallel.   More information on how to estimate how the inter-check delay affects service check scheduling can be found <a href="checkscheduling.html#service_inter_check_delay">here</a>.  Values are as follows:
+<p>This option allows you to control how service checks are initially "spread out" in the event queue.  Using a "smart" delay calculation (the default) will cause Naemon to calculate an average check interval and spread initial checks of all services out over that interval, thereby helping to eliminate CPU load spikes.  Using no delay is generally <i>not</i> recommended, as it will cause all service checks to be scheduled for execution at the same time.  This means that you will generally have large CPU spikes when the services are all executed in parallel.   More information on how to estimate how the inter-check delay affects service check scheduling can be found <a href="checkscheduling.html#service_inter_check_delay">here</a>.  Values are as follows:</p>
 
 * n = Don't use any delay - schedule all service checks to run immediately (i.e. at the same time!)
 * d = Use a "dumb" delay of 1 second between service checks
@@ -914,7 +899,7 @@ This option allows you to control how service checks are initially "spread out" 
 </tr>
 </table>
 
-This option determines the maximum number of minutes from when Naemon starts that all services (that are scheduled to be regularly checked) are checked.  This option will automatically adjust the <a href="#service_inter_check_delay_method">service inter-check delay method</a> (if necessary) to ensure that the initial checks of all services occur within the timeframe you specify.  In general, this option will not have an affect on service check scheduling if scheduling information is being retained using the <a href="#use_retained_scheduling_info">use_retained_scheduling_info</a> option.  Default value is **30** (minutes).
+<p>This option determines the maximum number of minutes from when Naemon starts that all services (that are scheduled to be regularly checked) are checked.  This option will automatically adjust the <a href="#service_inter_check_delay_method">service inter-check delay method</a> (if necessary) to ensure that the initial checks of all services occur within the timeframe you specify.  In general, this option will not have an affect on service check scheduling if scheduling information is being retained using the <a href="#use_retained_scheduling_info">use_retained_scheduling_info</a> option.  Default value is <b>30</b> (minutes).</p>
 
 <a name="service_interleave_factor"></a>
 #### Service Interleave Factor
@@ -997,9 +982,9 @@ This option allows you to control the maximum amount of time *in seconds* that h
 </tr>
 </table>
 
-This options determines which directory Naemon will use to temporarily store host and service check results before they are processed.  This directory should not be used to store any other files, as Naemon will periodically clean this directory of old file (see the <a href="#max_check_result_file_age">max_check_result_file_age</a> option for more information).
+<p>This options determines which directory Naemon will use to temporarily store host and service check results before they are processed.  This directory should not be used to store any other files, as Naemon will periodically clean this directory of old file (see the <a href="#max_check_result_file_age">max_check_result_file_age</a> option for more information).</p>
 
-Note: Make sure that only a single instance of Naemon has access to the check result path.  If multiple instances of Naemon have their check result path set to the same directory, you will run into problems with check results being processed (incorrectly) by the wrong instance of Naemon!
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Note: Make sure that only a single instance of Naemon has access to the check result path.  If multiple instances of Naemon have their check result path set to the same directory, you will run into problems with check results being processed (incorrectly) by the wrong instance of Naemon!</div>
 
 <a name="max_check_result_file_age"></a>
 #### Max Check Result File Age
@@ -1015,7 +1000,7 @@ Note: Make sure that only a single instance of Naemon has access to the check re
 </tr>
 </table>
 
-This options determines the maximum age in seconds that Naemon will consider check result files found in the <a href="#check_result_path">check_result_path</a> directory to be valid.  Check result files that are older that this threshold will be deleted by Naemon and the check results they contain will not be processed.  By using a value of zero (0) with this option, Naemon will process all check result files - even if they're older than your hardware :-).
+<p>This options determines the maximum age in seconds that Naemon will consider check result files found in the <a href="#check_result_path">check_result_path</a> directory to be valid.  Check result files that are older that this threshold will be deleted by Naemon and the check results they contain will not be processed.  By using a value of zero (0) with this option, Naemon will process all check result files - even if they're older than your hardware :-).</p>
 
 <a name="host_inter_check_delay_method"></a>
 #### Host Inter-Check Delay Method
@@ -1052,7 +1037,7 @@ This option allows you to control how host checks *that are scheduled to be chec
 </tr>
 </table>
 
-This option determines the maximum number of minutes from when Naemon starts that all hosts (that are scheduled to be regularly checked) are checked.  This option will automatically adjust the <a href="#host_inter_check_delay_method">host inter-check delay method</a> (if necessary) to ensure that the initial checks of all hosts occur within the timeframe you specify.  In general, this option will not have an affect on host check scheduling if scheduling information is being retained using the <a href="#use_retained_scheduling_info">use_retained_scheduling_info</a> option.  Default value is **30** (minutes).
+<p>This option determines the maximum number of minutes from when Naemon starts that all hosts (that are scheduled to be regularly checked) are checked.  This option will automatically adjust the <a href="#host_inter_check_delay_method">host inter-check delay method</a> (if necessary) to ensure that the initial checks of all hosts occur within the timeframe you specify.  In general, this option will not have an affect on host check scheduling if scheduling information is being retained using the <a href="#use_retained_scheduling_info">use_retained_scheduling_info</a> option.  Default value is <b>30</b> (minutes).</p>
 
 <a name="interval_length"></a>
 #### Timing Interval Length
@@ -1070,7 +1055,7 @@ This option determines the maximum number of minutes from when Naemon starts tha
 
 This is the number of seconds per "unit interval" used for timing in the scheduling queue, re-notifications, etc. "Units intervals" are used in the object configuration file to determine how often to run a service check, how often to re-notify a contact, etc.
 
-**Important:**  The default value for this is set to 60, which means that a "unit value" of 1 in the object configuration file will mean 60 seconds (1 minute).  I have not really tested other values for this variable, so proceed at your own risk if you decide to do so!
+<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> <b>Important:</b>  The default value for this is set to 60, which means that a "unit value" of 1 in the object configuration file will mean 60 seconds (1 minute).  I have not really tested other values for this variable, so proceed at your own risk if you decide to do so!</div>
 
 <a name="auto_reschedule_checks"></a>
 #### Auto-Rescheduling Option
@@ -1086,11 +1071,9 @@ This is the number of seconds per "unit interval" used for timing in the schedul
 </tr>
 </table>
 
-This option determines whether or not Naemon will attempt to automatically reschedule active host and service checks to
+This option determines whether or not Naemon will attempt to automatically reschedule active host and service checks to "smooth" them out over time.  This can help to balance the load on the monitoring server, as it will attempt to keep the time between consecutive checks consistent, at the expense of executing checks on a more rigid schedule.
 
- "smooth" them out over time.  This can help to balance the load on the monitoring server, as it will attempt to keep the time between consecutive checks consistent, at the expense of executing checks on a more rigid schedule.
-
-**WARNING:**  THIS IS AN EXPERIMENTAL FEATURE AND MAY BE REMOVED IN FUTURE VERSIONS.  ENABLING THIS OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED IMPROPERLY!
+<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> <b>WARNING:</b>  THIS IS AN EXPERIMENTAL FEATURE AND MAY BE REMOVED IN FUTURE VERSIONS.  ENABLING THIS OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED IMPROPERLY!</div>
 
 <a name="auto_rescheduling_interval"></a>
 #### Auto-Rescheduling Interval
@@ -1106,11 +1089,11 @@ This option determines whether or not Naemon will attempt to automatically resch
 </tr>
 </table>
 
-This option determines how often (in seconds) Naemon will attempt to automatically reschedule checks.  This option only has an effect if the <a href="#auto_reschedule_checks">auto_reschedule_checks</a> option is enabled.  Default is 30 seconds.
+<p>This option determines how often (in seconds) Naemon will attempt to automatically reschedule checks.  This option only has an effect if the <a href="#auto_reschedule_checks">auto_reschedule_checks</a> option is enabled.  Default is 30 seconds.</p>
 
-**WARNING:**  THIS IS AN EXPERIMENTAL FEATURE AND MAY BE REMOVED IN FUTURE VERSIONS.  ENABLING THE AUTO-RESCHEDULING OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED IMPROPERLY!
-
+<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> <b>WARNING:</b>  THIS IS AN EXPERIMENTAL FEATURE AND MAY BE REMOVED IN FUTURE VERSIONS.  ENABLING THIS OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED IMPROPERLY!</div>
 <a name="auto_rescheduling_window"></a>
+
 #### Auto-Rescheduling Window
 
 <table border="0">
@@ -1124,9 +1107,9 @@ This option determines how often (in seconds) Naemon will attempt to automatical
 </tr>
 </table>
 
-This option determines the "window" of time (in seconds) that Naemon will look at when automatically rescheduling checks. Only host and service checks that occur in the next X seconds (determined by this variable) will be rescheduled.  This option only has an effect if the <a href="#auto_reschedule_checks">auto_reschedule_checks</a> option is enabled.  Default is 180 seconds (3 minutes).
+<p>This option determines the "window" of time (in seconds) that Naemon will look at when automatically rescheduling checks. Only host and service checks that occur in the next X seconds (determined by this variable) will be rescheduled.  This option only has an effect if the <a href="#auto_reschedule_checks">auto_reschedule_checks</a> option is enabled.  Default is 180 seconds (3 minutes).</p>
 
-**WARNING:**  THIS IS AN EXPERIMENTAL FEATURE AND MAY BE REMOVED IN FUTURE VERSIONS.  ENABLING THE AUTO-RESCHEDULING OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED IMPROPERLY!
+<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> <b>WARNING:</b>  THIS IS AN EXPERIMENTAL FEATURE AND MAY BE REMOVED IN FUTURE VERSIONS.  ENABLING THIS OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED IMPROPERLY!</div>
 
 <a name="use_agressive_host_checking"></a>
 <a name="use_aggressive_host_checking"></a>
@@ -1289,7 +1272,7 @@ This option determines whether or not the Naemon daemon will take several shortc
 </tr>
 </table>
 
-This option determines whether or not Naemon will free memory in child processes when they are fork()ed off from the main process.  By default, Naemon frees memory.  However, if the <a href="#use_large_installation_tweaks">use_large_installation_tweaks</a> option is enabled, it will not.  By defining this option in your configuration file, you are able to override things to get the behavior you want.
+<p>This option determines whether or not Naemon will free memory in child processes when they are fork()ed off from the main process.  By default, Naemon frees memory.  However, if the <a href="#use_large_installation_tweaks">use_large_installation_tweaks</a> option is enabled, it will not.  By defining this option in your configuration file, you are able to override things to get the behavior you want.<p>
 
 * 0 = Don't free memory
 * 1 = Free memory
@@ -1308,7 +1291,7 @@ This option determines whether or not Naemon will free memory in child processes
 </tr>
 </table>
 
-This option determines whether or not Naemon will fork() child processes twice when it executes host and service checks.  By default, Naemon fork()s twice.  However, if the <a href="#use_large_installation_tweaks">use_large_installation_tweaks</a> option is enabled, it will only fork() once.  By defining this option in your configuration file, you are able to override things to get the behavior you want.
+<p>This option determines whether or not Naemon will fork() child processes twice when it executes host and service checks.  By default, Naemon fork()s twice.  However, if the <a href="#use_large_installation_tweaks">use_large_installation_tweaks</a> option is enabled, it will only fork() once.  By defining this option in your configuration file, you are able to override things to get the behavior you want.</p>
 
 * 0 = Fork() just once
 * 1 = Fork() twice
@@ -1346,7 +1329,7 @@ This option determines whether or not the Naemon daemon will make all standard <
 </tr>
 </table>
 
-This option determines whether or not Naemon will try and detect hosts and services that are "flapping".  Flapping occurs when a host or service changes between states too frequently, resulting in a barrage of notifications being sent out.  When Naemon detects that a host or service is flapping, it will temporarily suppress notifications for that host/service until it stops flapping.  Flap detection is very experimental at this point, so use this feature with caution!  More information on how flap detection and handling works can be found <a href="flapping.html">here</a>.     Note: If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), *unless* you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.  If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you'll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.
+<p>This option determines whether or not Naemon will try and detect hosts and services that are "flapping".  Flapping occurs when a host or service changes between states too frequently, resulting in a barrage of notifications being sent out.  When Naemon detects that a host or service is flapping, it will temporarily suppress notifications for that host/service until it stops flapping.  Flap detection is very experimental at this point, so use this feature with caution!  More information on how flap detection and handling works can be found <a href="flapping.html">here</a>.     Note: If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), <i>unless</i> you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.  If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you'll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.</p>
 
 * 0 = Don't enable flap detection (default)
 * 1 = Enable flap detection
@@ -1587,7 +1570,7 @@ This value determines whether or not Naemon will "obsess" over service checks re
 </tr>
 </table>
 
-This option allows you to specify a command to be run after *every* service check, which can be useful in <a href="distributed.html">distributed monitoring</a>.  This command is executed after any <a href="eventhandlers.html">event handler</a> or <a href="notifications.html">notification</a> commands.  The *command* argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  The maximum amount of time that this command can run is controlled by the <a href="#ocsp_timeout">ocsp_timeout</a> option.   More information on distributed monitoring can be found <a href="distributed.html">here</a>.  This command is only executed if the <a href="#obsess_over_services">obsess_over_services</a> option is enabled globally and if the *obsess_over_service* directive in the <a href="objectdefinitions.html#service">service definition</a> is enabled.
+<p>This option allows you to specify a command to be run after <i>every</i> service check, which can be useful in <a href="distributed.html">distributed monitoring</a>.  This command is executed after any <a href="eventhandlers.html">event handler</a> or <a href="notifications.html">notification</a> commands.  The <i>command</i> argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  The maximum amount of time that this command can run is controlled by the <a href="#ocsp_timeout">ocsp_timeout</a> option.   More information on distributed monitoring can be found <a href="distributed.html">here</a>.  This command is only executed if the <a href="#obsess_over_services">obsess_over_services</a> option is enabled globally and if the <i>obsess_over_service</i> directive in the <a href="objectdefinitions.html#service">service definition</a> is enabled.</p>
 
 <a name="obsess_over_hosts"></a>
 #### Obsess Over Hosts Option
@@ -1622,7 +1605,7 @@ This value determines whether or not Naemon will "obsess" over host checks resul
 </tr>
 </table>
 
-This option allows you to specify a command to be run after *every* host check, which can be useful in <a href="distributed.html">distributed monitoring</a>.  This command is executed after any <a href="eventhandlers.html">event handler</a> or <a href="notifications.html">notification</a> commands.  The *command* argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  The maximum amount of time that this command can run is controlled by the <a href="#ochp_timeout">ochp_timeout</a> option.   More information on distributed monitoring can be found <a href="distributed.html">here</a>.  This command is only executed if the <a href="#obsess_over_hosts">obsess_over_hosts</a> option is enabled globally and if the *obsess_over_host* directive in the <a href="objectdefinitions.html#host">host definition</a> is enabled.
+<p>This option allows you to specify a command to be run after <i>every</i> host check, which can be useful in <a href="distributed.html">distributed monitoring</a>.  This command is executed after any <a href="eventhandlers.html">event handler</a> or <a href="notifications.html">notification</a> commands.  The <i>command</i> argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  The maximum amount of time that this command can run is controlled by the <a href="#ochp_timeout">ochp_timeout</a> option.   More information on distributed monitoring can be found <a href="distributed.html">here</a>.  This command is only executed if the <a href="#obsess_over_hosts">obsess_over_hosts</a> option is enabled globally and if the <i>obsess_over_host</i> directive in the <a href="objectdefinitions.html#host">host definition</a> is enabled.</p>
 
 <a name="process_performance_data"></a>
 #### Performance Data Processing Option
@@ -1657,7 +1640,7 @@ This value determines whether or not Naemon will process host and service check 
 </tr>
 </table>
 
-This option allows you to specify a command to be run after *every* host check to process host <a href="perfdata.html">performance data</a> that may be returned from the check.  The *command* argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  This command is only executed if the <a href="#process_performance_data">process_performance_data</a> option is enabled globally and if the *process_perf_data* directive in the <a href="objectdefinitions.html#host">host definition</a> is enabled.
+<p>This option allows you to specify a command to be run after <i>every</i> host check to process host <a href="perfdata.html">performance data</a> that may be returned from the check.  The <i>command</i> argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  This command is only executed if the <a href="#process_performance_data">process_performance_data</a> option is enabled globally and if the <i>process_perf_data</i> directive in the <a href="objectdefinitions.html#host">host definition</a> is enabled.</p>
 
 <a name="service_perfdata_command"></a>
 #### Service Performance Data Processing Command
@@ -1673,7 +1656,7 @@ This option allows you to specify a command to be run after *every* host check t
 </tr>
 </table>
 
-This option allows you to specify a command to be run after *every* service check to process service <a href="perfdata.html">performance data</a> that may be returned from the check.  The *command* argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  This command is only executed if the <a href="#process_performance_data">process_performance_data</a> option is enabled globally and if the *process_perf_data* directive in the <a href="objectdefinitions.html#service">service definition</a> is enabled.
+<p>This option allows you to specify a command to be run after <i>every</i> service check to process service <a href="perfdata.html">performance data</a> that may be returned from the check.  The <i>command</i> argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  This command is only executed if the <a href="#process_performance_data">process_performance_data</a> option is enabled globally and if the <i>process_perf_data</i> directive in the <a href="objectdefinitions.html#service">service definition</a> is enabled.</p>
 
 <a name="host_perfdata_file"></a>
 #### Host Performance Data File
@@ -1689,7 +1672,7 @@ This option allows you to specify a command to be run after *every* service chec
 </tr>
 </table>
 
-This option allows you to specify a file to which host <a href="perfdata.html">performance data</a> will be written after every host check.  Data will be written to the performance file as specified by the <a href="#host_perfdata_file_template">host_perfdata_file_template</a> option.  Performance data is only written to this file if the <a href="#process_performance_data">process_performance_data</a> option is enabled globally and if the *process_perf_data* directive in the <a href="objectdefinitions.html#host">host definition</a> is enabled.
+<p>This option allows you to specify a file to which host <a href="perfdata.html">performance data</a> will be written after every host check.  Data will be written to the performance file as specified by the <a href="#host_perfdata_file_template">host_perfdata_file_template</a> option.  Performance data is only written to this file if the <a href="#process_performance_data">process_performance_data</a> option is enabled globally and if the <i>process_perf_data</i> directive in the <a href="objectdefinitions.html#host">host definition</a> is enabled.</p>
 
 <a name="service_perfdata_file"></a>
 #### Service Performance Data File
@@ -1705,7 +1688,7 @@ This option allows you to specify a file to which host <a href="perfdata.html">p
 </tr>
 </table>
 
-This option allows you to specify a file to which service <a href="perfdata.html">performance data</a> will be written after every service check.  Data will be written to the performance file as specified by the <a href="#service_perfdata_file_template">service_perfdata_file_template</a> option.  Performance data is only written to this file if the <a href="#process_performance_data">process_performance_data</a> option is enabled globally and if the *process_perf_data* directive in the <a href="objectdefinitions.html#service">service definition</a> is enabled.
+<p>This option allows you to specify a file to which service <a href="perfdata.html">performance data</a> will be written after every service check.  Data will be written to the performance file as specified by the <a href="#service_perfdata_file_template">service_perfdata_file_template</a> option.  Performance data is only written to this file if the <a href="#process_performance_data">process_performance_data</a> option is enabled globally and if the <i>process_perf_data</i> directive in the <a href="objectdefinitions.html#service">service definition</a> is enabled.</p>
 
 <a name="host_perfdata_file_template"></a>
 #### Host Performance Data File Template
@@ -1825,7 +1808,7 @@ This option allows you to specify the interval (in seconds) at which the <a href
 </tr>
 </table>
 
-This option allows you to specify the command that should be executed to process the <a href="#host_perfdata_file">host performance data file</a>.  The *command* argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  The interval at which this command is executed is determined by the <a href="#host_perfdata_file_processing_interval">host_perfdata_file_processing_interval</a> directive.
+<p>This option allows you to specify the command that should be executed to process the <a href="#host_perfdata_file">host performance data file</a>.  The <i>command</i> argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  The interval at which this command is executed is determined by the <a href="#host_perfdata_file_processing_interval">host_perfdata_file_processing_interval</a> directive.</p>
 
 <a name="service_perfdata_file_processing_command"></a>
 #### Service Performance Data File Processing Command
@@ -1841,7 +1824,7 @@ This option allows you to specify the command that should be executed to process
 </tr>
 </table>
 
-This option allows you to specify the command that should be executed to process the <a href="#service_perfdata_file">service performance data file</a>.  The *command* argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  The interval at which this command is executed is determined by the <a href="#service_perfdata_file_processing_interval">service_perfdata_file_processing_interval</a> directive.
+<p>This option allows you to specify the command that should be executed to process the <a href="#service_perfdata_file">service performance data file</a>.  The <i>command</i> argument is the short name of a <a href="objectdefinitions.html#command">command definition</a> that you define in your object configuration file.  The interval at which this command is executed is determined by the <a href="#service_perfdata_file_processing_interval">service_perfdata_file_processing_interval</a> directive.</p>
 
 <a name="check_for_orphaned_services"></a>
 #### Orphaned Service Check Option
@@ -1914,7 +1897,7 @@ This option determines whether or not Naemon will periodically check the "freshn
 </tr>
 </table>
 
-This setting determines how often (in seconds) Naemon will periodically check the "freshness" of service check results.  If you have disabled service freshness checking (with the <a href="#check_service_freshness">check_service_freshness</a> option), this option has no effect.  More information on freshness checking can be found <a href="freshness.html">here</a>.
+<p>This setting determines how often (in seconds) Naemon will periodically check the "freshness" of service check results.  If you have disabled service freshness checking (with the <a href="#check_service_freshness">check_service_freshness</a> option), this option has no effect.  More information on freshness checking can be found <a href="freshness.html">here</a>.</p>
 
 <a name="check_host_freshness"></a>
 #### Host Freshness Checking Option
@@ -1949,7 +1932,7 @@ This option determines whether or not Naemon will periodically check the "freshn
 </tr>
 </table>
 
-This setting determines how often (in seconds) Naemon will periodically check the "freshness" of host check results.  If you have disabled host freshness checking (with the <a href="#check_host_freshness">check_host_freshness</a> option), this option has no effect.  More information on freshness checking can be found <a href="freshness.html">here</a>.
+<p>This setting determines how often (in seconds) Naemon will periodically check the "freshness" of host check results.  If you have disabled host freshness checking (with the <a href="#check_host_freshness">check_host_freshness</a> option), this option has no effect.  More information on freshness checking can be found <a href="freshness.html">here</a>.</p>
 
 <a name="additional_freshness_latency"></a>
 #### Additional Freshness Threshold Latency Option
@@ -2042,10 +2025,10 @@ This option allows you to override the default timezone that this instance of Na
 <span class="glyphicon glyphicon-pencil"></span> Note: If you use this option to specify a custom timezone, you will also need to alter the Apache configuration directives for the CGIs to specify the timezone you want.  Example:
 
 ```
-&lt;Directory "/usr/local/nagios/sbin/"&gt;
+<Directory "/usr/local/nagios/sbin/">
 SetEnv TZ "US/Mountain"
 ...
-&lt;/Directory&gt;
+</Directory>
 ```
 
 <a name="illegal_object_name_chars"></a>
@@ -2080,7 +2063,14 @@ This option allows you to specify illegal characters that cannot be used in host
 
 This option allows you to specify illegal characters that should be stripped from <a href="macros.html">macros</a> before being used in notifications, event handlers, and other commands.  This DOES NOT affect macros used in service or host check commands.  You can choose to not strip out the characters shown in the example above, but I recommend you do not do this.  Some of these characters are interpreted by the shell (i.e. the backtick) and can lead to security problems.  The following macros are stripped of the characters you specify:
 
-**$HOSTOUTPUT$**, **$HOSTPERFDATA$**, **$HOSTACKAUTHOR$**, **$HOSTACKCOMMENT$**, **$SERVICEOUTPUT$**, **$SERVICEPERFDATA$**, **$SERVICEACKAUTHOR$**, and **$SERVICEACKCOMMENT$**
+* **$HOSTOUTPUT$**
+* **$HOSTPERFDATA$**
+* **$HOSTACKAUTHOR$**
+* **$HOSTACKCOMMENT$**
+* **$SERVICEOUTPUT$**
+* **$SERVICEPERFDATA$**
+* **$SERVICEACKAUTHOR$**
+* **$SERVICEACKCOMMENT$**
 
 <a name="use_regexp_matching"></a>
 #### Regular Expression Matching Option
@@ -2190,15 +2180,14 @@ This option controls what (if any) data gets sent to the event broker and, in tu
 
 This directive is used to specify an event broker module that should by loaded by Naemon at startup.  Use multiple directives if you want to load more than one module.  Arguments that should be passed to the module at startup are seperated from the module path by a space.
 
-!!! WARNING !!!
-
-Do NOT overwrite modules while they are being used by Naemon or Naemon will crash in a fiery display of SEGFAULT glory.  This is a bug/limitation either in dlopen(), the kernel, and/or the filesystem.  And maybe Naemon...
+<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> <b>WARNING</b><br>Do NOT overwrite modules while they are being used by Naemon or Naemon will crash in a fiery display of SEGFAULT glory.  This is a bug/limitation either in dlopen(), the kernel, and/or the filesystem.  And maybe Naemon...</div>
 
 The correct/safe way of updating a module is by using one of these methods:
 
 * Shutdown Naemon, replace the module file, restart Naemon
 * While Naemon is running... delete the original module file, move the new module file into place, restart Naemon
 <a name="debug_file"></a>
+
 #### Debug File
 
 <table border="0">
