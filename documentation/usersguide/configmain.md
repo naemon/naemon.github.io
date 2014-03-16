@@ -16,11 +16,11 @@ When creating and/or editing configuration files, keep the following in mind:
 
 ### Sample Configuration File
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip: A sample main configuration file (*/usr/local/nagios/etc/nagios.cfg*) is installed for you when you follow the <a href="quickstart.html">quickstart installation guide</a>.
+<span class="glyphicon glyphicon-thumbs-up"></span> Tip: A sample main configuration file (*/etc/naemon/naemon.cfg*) is installed for you when you follow the <a href="quickstart.html">quickstart installation guide</a>.
 
 ### Config File Location
 
-The main configuration file is usually named *nagios.cfg* and located in the */usr/local/nagios/etc/* directory.
+The main configuration file is usually named *naemon.cfg* and located in the */etc/naemon/* directory.
 
 ### Configuration File Variables
 
@@ -35,7 +35,7 @@ Below you will find descriptions of each main Naemon configuration file option..
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>log_file=/usr/local/nagios/var/nagios.log</b></font></td>
+<td><font color="red"><b>log_file=/var/log/naemon/naemon.log</b></font></td>
 </tr>
 </table>
 
@@ -52,9 +52,9 @@ Below you will find descriptions of each main Naemon configuration file option..
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>cfg_file=/usr/local/nagios/etc/hosts.cfg</b></font>
-<font color="red"><b>cfg_file=/usr/local/nagios/etc/services.cfg</b></font>
-<font color="red"><b>cfg_file=/usr/local/nagios/etc/commands.cfg</b></font>
+<font color="red"><b>cfg_file=/etc/naemon/hosts.cfg</b></font>
+<font color="red"><b>cfg_file=/etc/naemon/services.cfg</b></font>
+<font color="red"><b>cfg_file=/etc/naemon/commands.cfg</b></font>
 </td>
 </tr>
 </table>
@@ -72,9 +72,9 @@ Below you will find descriptions of each main Naemon configuration file option..
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>cfg_dir=/usr/local/nagios/etc/commands</b></font>
-<font color="red"><b>cfg_dir=/usr/local/nagios/etc/services</b></font>
-<font color="red"><b>cfg_dir=/usr/local/nagios/etc/hosts</b></font>
+<font color="red"><b>cfg_dir=/etc/naemon/commands</b></font>
+<font color="red"><b>cfg_dir=/etc/naemon/services</b></font>
+<font color="red"><b>cfg_dir=/etc/naemon/hosts</b></font>
 </td>
 </tr>
 </table>
@@ -91,7 +91,7 @@ Below you will find descriptions of each main Naemon configuration file option..
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>object_cache_file=/usr/local/nagios/var/objects.cache</b></font>
+<font color="red"><b>object_cache_file=/var/lib/naemon/objects.cache</b></font>
 </td>
 </tr>
 </table>
@@ -109,7 +109,7 @@ Below you will find descriptions of each main Naemon configuration file option..
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>precached_object_file=/usr/local/nagios/var/objects.precache</b></font>
+<font color="red"><b>precached_object_file=/var/lib/naemon/objects.precache</b></font>
 </td>
 </tr>
 </table>
@@ -126,7 +126,7 @@ Below you will find descriptions of each main Naemon configuration file option..
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>resource_file=/usr/local/nagios/etc/resource.cfg</b></font></td>
+<td><font color="red"><b>resource_file=/etc/naemon/resource.cfg</b></font></td>
 </tr>
 </table>
 
@@ -142,7 +142,7 @@ Below you will find descriptions of each main Naemon configuration file option..
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>temp_file=/usr/local/nagios/var/nagios.tmp</b></font></td>
+<td><font color="red"><b>temp_file=/var/lib/naemon/naemon.tmp</b></font></td>
 </tr>
 </table>
 
@@ -175,7 +175,7 @@ This is a directory that Naemon can use as scratch space for creating temporary 
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>status_file=/usr/local/nagios/var/status.dat</b></font></td>
+<td><font color="red"><b>status_file=/var/lib/status.dat</b></font></td>
 </tr>
 </table>
 
@@ -428,7 +428,7 @@ Note: By setting this value to **-1**, Naemon will check for external commands a
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>command_file=/usr/local/nagios/var/rw/nagios.cmd</b></font></td>
+<td><font color="red"><b>command_file=/var/lib/naemon/rw/naemon.cmd</b></font></td>
 </tr>
 </table>
 
@@ -528,7 +528,7 @@ This option specifies the location of the lock file that Naemon should create wh
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>state_retention_file=/usr/local/nagios/var/retention.dat</b></font></td>
+<td><font color="red"><b>state_retention_file=/var/lib/naemon/retention.dat</b></font></td>
 </tr>
 </table>
 
@@ -1668,7 +1668,7 @@ This value determines whether or not Naemon will process host and service check 
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>host_perfdata_file=/usr/local/nagios/var/host-perfdata.dat</b></font></td>
+<td><font color="red"><b>host_perfdata_file=/var/lib/naemon/host-perfdata.dat</b></font></td>
 </tr>
 </table>
 
@@ -1684,7 +1684,7 @@ This value determines whether or not Naemon will process host and service check 
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>service_perfdata_file=/usr/local/nagios/var/service-perfdata.dat</b></font></td>
+<td><font color="red"><b>service_perfdata_file=/var/lib/naemon/service-perfdata.dat</b></font></td>
 </tr>
 </table>
 
@@ -2174,7 +2174,7 @@ This option controls what (if any) data gets sent to the event broker and, in tu
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>broker_module=/usr/local/nagios/bin/ndomod.o cfg_file=/usr/local/nagios/etc/ndomod.cfg</b></font></td>
+<td><font color="red"><b>broker_module=/usr/lib64/naemon-livestatus/livestatus.so /var/cache/naemon/live</b></font></td>
 </tr>
 </table>
 
@@ -2197,7 +2197,7 @@ The correct/safe way of updating a module is by using one of these methods:
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>debug_file=/usr/local/nagios/var/nagios.debug</b></font></td>
+<td><font color="red"><b>debug_file=/var/lib/naemon/naemon.debug</b></font></td>
 </tr>
 </table>
 
