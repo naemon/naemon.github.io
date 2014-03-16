@@ -343,44 +343,6 @@ This is used to set the effective group that the Naemon process should run as.  
 * 0 = Disable event handlers
 * 1 = Enable event handlers (default)
 
-<a name="log_rotation_method"></a>
-#### Log Rotation Method
-
-<table border="0">
-<tr>
-<td>Format:</td>
-<td><b>log_rotation_method=&lt;n/h/d/w/m&gt;</b></td>
-</tr>
-<tr>
-<td>Example:</td>
-<td><font color="red"><b>log_rotation_method=d</b></font></td>
-</tr>
-</table>
-
-This is the rotation method that you would like Naemon to use for your log file.  Values are as follows:
-
-* n = None (don't rotate the log - this is the default)
-* h = Hourly (rotate the log at the top of each hour)
-* d = Daily (rotate the log at midnight each day)
-* w = Weekly (rotate the log at midnight on Saturday)
-* m = Monthly (rotate the log at midnight on the last day of the month)
-
-<a name="log_archive_path"></a>
-#### Log Archive Path
-
-<table border="0">
-<tr>
-<td>Format:</td>
-<td><b>log_archive_path=&lt;path&gt;</b></td>
-</tr>
-<tr>
-<td>Example:</td>
-<td><font color="red"><b>log_archive_path=/usr/local/nagios/var/archives/</b></font></td>
-</tr>
-</table>
-
-This is the directory where Naemon should place log files that have been rotated.  This option is ignored if you choose to not use the <a href="#log_rotation_method">log rotation</a> functionality.
-
 <a name="check_external_commands"></a>
 #### External Command Check Option
 
@@ -400,24 +362,6 @@ This option determines whether or not Naemon will check the <a href="#command_fi
 * 0 = Don't check external commands
 * 1 = Check external commands (default)
 
-<a name="command_check_interval"></a>
-#### External Command Check Interval
-
-<table border="0">
-<tr>
-<td>Format:</td>
-<td><b>command_check_interval=&lt;xxx&gt;[s]</b></td>
-</tr>
-<tr>
-<td>Example:</td>
-<td><font color="red"><b>command_check_interval=1</b></font></td>
-</tr>
-</table>
-
-<p>If you specify a number with an "s" appended to it (i.e. 30s), this is the number of <i>seconds</i> to wait between external command checks.  If you leave off the "s", this is the number of "time units" to wait between external command checks. Unless you've changed the <a href="#interval_length">interval_length</a> value (as defined below) from the default value of 60, this number will mean minutes.</p>
-
-Note: By setting this value to **-1**, Naemon will check for external commands as often as possible.  Each time Naemon checks for external commands it will read and process all commands present in the <a href="#command_file">command file</a> before continuing on with its other duties.  More information on external commands can be found <a href="extcommands.html">here</a>.
-
 <a name="command_file"></a>
 #### External Command File
 
@@ -434,54 +378,6 @@ Note: By setting this value to **-1**, Naemon will check for external commands a
 
 This is the file that Naemon will check for external commands to process.  The <a href="cgis.html#cmd_cgi">command CGI</a> writes commands to this file.  The external command file is implemented as a named pipe (FIFO), which is created when Naemon starts and removed when it shuts down.  If the file exists when Naemon starts, the Naemon process will terminate with an error message.  More information on external commands can be found <a href="extcommands.html">here</a>.
 
-<a name="external_command_buffer_slots"></a>
-#### External Command Buffer Slots
-
-<table border="0">
-<tr>
-<td>Format:</td>
-<td><b>external_command_buffer_slots=&lt;#&gt;</b></td>
-</tr>
-<tr>
-<td>Example:</td>
-<td><font color="red"><b>external_command_buffer_slots=512</b></font></td>
-</tr>
-</table>
-
-Note: This is an advanced feature. This option determines how many buffer slots Naemon will reserve for caching external commands that have been read from the external command file by a worker thread, but have not yet been processed by the main thread of the Naemon deamon.  Each slot can hold one external command, so this option essentially determines how many commands can be buffered.  For installations where you process a large number of passive checks (e.g. <a href="distributed.html">distributed setups</a>), you may need to increase this number.  You should consider using MRTG to graph Naemon' usage of external command buffers.  You can read more on how to configure graphing <a href="mrtggraphs.html">here</a>.
-
-<a name="check_for_updates"></a>
-#### Update Checks
-
-<table border="0">
-<tr>
-<td>Format:</td>
-
-<td><b>check_for_updates=&lt;0/1&gt;</b></td>
-</tr>
-<tr>
-<td>Example:</td>
-<td><font color="red"><b>check_for_updates=1</b></font></td>
-</tr>
-</table>
-
-This option determines whether Naemon will automatically check to see if new updates (releases) are available.  It is recommend that you enable this option to ensure that you stay on top of the latest critical patches to Naemon.  Naemon is critical to you - make sure you keep it in good shape.  Naemon will check once a day for new updates. Data collected by Naemon from the update check is processed in accordance with our privacy policy - see <a href="http://api.naemon.org">http://api.naemon.org</a> for details.
-
-<a name="bare_update_checks"></a>
-#### Bare Update Checks
-
-<table border="0">
-<tr>
-<td>Format:</td>
-<td><b>bare_update_checks=&lt;0/1&gt;</b></td>
-</tr>
-<tr>
-<td>Example:</td>
-<td><font color="red"><b>bare_update_checks</b></font></td>
-</tr>
-</table>
-
-This option deterines what data Naemon will send to api.naemon.org when it checks for updates.  By default, Naemon will send information on the current version of Naemon you have installed, as well as an indicator as to whether this was a new installation or not.  Naemon uses this data to determine the number of users running specific version of Naemon. Enable this option if you do not wish for this information to be sent.
 
 <a name="lock_file"></a>
 #### Lock File
@@ -847,22 +743,6 @@ This variable determines whether or not Naemon will log <a href="passivechecks.h
 </table>
 
 <p>This option allows you to specify a service event handler command that is to be run for every service state change.  The global event handler is executed immediately prior to the event handler that you have optionally specified in each service definition.  The <i>command</i> argument is the short name of a command that you define in your <a href="configobject.html">object configuration file</a>.  The maximum amount of time that this command can run is controlled by the <a href="#event_handler_timeout">event_handler_timeout</a> option.  More information on event handlers can be found <a href="eventhandlers.html">here</a>.</p>
-
-<a name="sleep_time"></a>
-#### Inter-Check Sleep Time
-
-<table border="0">
-<tr>
-<td>Format:</td>
-<td><b>sleep_time=&lt;seconds&gt;</b></td>
-</tr>
-<tr>
-<td>Example:</td>
-<td><font color="red"><b>sleep_time=1</b></font></td>
-</tr>
-</table>
-
-This is the number of seconds that Naemon will sleep before checking to see if the next service or host check in the scheduling queue should be executed.  Note that Naemon will only sleep after it "catches up" with queued service checks that have fallen behind.
 
 <a name="service_inter_check_delay_method"></a>
 #### Service Inter-Check Delay Method
@@ -1949,38 +1829,6 @@ This option determines whether or not Naemon will periodically check the "freshn
 </table>
 
 This option determines the number of seconds Naemon will add to any host or services freshness threshold it automatically calculates (e.g. those not specified explicity by the user).  More information on freshness checking can be found <a href="freshness.html">here</a>.
-
-<a name="enable_embedded_perl"></a>
-#### Embedded Perl Interpreter Option
-
-<table border="0">
-<tr>
-<td>Format:</td>
-<td><b>enable_embedded_perl=&lt;0/1&gt;</b></td>
-</tr>
-<tr>
-<td>Example:</td>
-<td><font color="red"><b>enable_embedded_perl=1</b></font></td>
-</tr>
-</table>
-
-This setting determines whether or not the embedded Perl interpreter is enabled on a program-wide basis.  Naemon must be compiled with support for embedded Perl for this option to have an effect.  More information on the embedded Perl interpreter can be found <a href="embeddedperl.html">here</a>.
-
-<a name="use_embedded_perl_implicitly"></a>
-#### Embedded Perl Implicit Use Option
-
-<table border="0">
-<tr>
-<td>Format:</td>
-<td><b>use_embedded_perl_implicitly=&lt;0/1&gt;</b></td>
-</tr>
-<tr>
-<td>Example:</td>
-<td><font color="red"><b>use_embedded_perl_implicitly=1</b></font></td>
-</tr>
-</table>
-
-This setting determines whether or not the embedded Perl interpreter should be used for Perl plugins/scripts that do not explicitly enable/disable it.  Naemon must be compiled with support for embedded Perl for this option to have an effect.  More information on the embedded Perl interpreter and the effect of this setting can be found <a href="embeddedperl.html">here</a>.
 
 <a name="date_format"></a>
 #### Date Format
