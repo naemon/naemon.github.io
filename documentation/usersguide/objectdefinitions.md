@@ -2,9 +2,6 @@
 layout: doctoc
 title: Object Definitions
 ---
-
-{% include review_required.md %}
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="configobject.html">Object Configuration Overview</a>, <a href="objecttricks.html">Object Tricks</a>, <a href="objectinheritance.html">Object Inheritance</a>, <a href="customobjectvars.html">Custom Object Variables</a>
 
 ### Introduction
@@ -33,32 +30,28 @@ One way to get around this problem is to disable the retention of non-status inf
 
 ### Object Types
 
-<p>
-<a href="#host">Host definitions</a><br>
-<a href="#hostgroup">Host group definitions</a><br>
-<a href="#service">Service definitions</a><br>
-<a href="#servicegroup">Service group definitions</a><br>
-<a href="#contact">Contact definitions</a><br>
-<a href="#contactgroup">Contact group definitions</a><br>
-<a href="#timeperiod">Time period definitions</a><br>
-<a href="#command">Command definitions</a><br>
-<a href="#servicedependency">Service dependency definitions</a><br>
-<a href="#serviceescalation">Service escalation definitions</a><br>
-<a href="#hostdependency">Host dependency definitions</a><br>
-<a href="#hostescalation">Host escalation definitions</a><br>
-<a href="#hostextinfo">Extended host information definitions</a><br>
-<a href="#serviceextinfo">Extended service information definitions</a><br>
-</p>
+* <a href="#host">Host definitions</a>
+* <a href="#hostgroup">Host group definitions</a>
+* <a href="#service">Service definitions</a>
+* <a href="#servicegroup">Service group definitions</a>
+* <a href="#contact">Contact definitions</a>
+* <a href="#contactgroup">Contact group definitions</a>
+* <a href="#timeperiod">Time period definitions</a>
+* <a href="#command">Command definitions</a>
+* <a href="#servicedependency">Service dependency definitions</a>
+* <a href="#serviceescalation">Service escalation definitions</a>
+* <a href="#hostdependency">Host dependency definitions</a>
+* <a href="#hostescalation">Host escalation definitions</a>
 
 #### Host Definition
 
-<p class="text-primary">Description:</p>
+##### Description
 
 A host definition is used to define a physical server, workstation, device, etc. that resides on your network.
 
-<p class="text-primary">Definition Format:</p>
+##### Definition Format
 
-Note:  Directives in red are required, while those in black are optional.
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Directives in red are required, while those in black are optional.</div>
 
 <table>
 <tr><td colspan=3>define host{</td></tr>
@@ -67,6 +60,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td></td><td>display_name</td><td><i>display_name</i></td></tr>
 <tr><td></td><td class="text-danger">address</td><td class="text-danger"><i>address</i></td></tr>
 <tr><td></td><td>parents</td><td><i>host_names</i></td></tr>
+<tr><td></td><td>hourly_value</td><td>#</td></tr>
 <tr><td></td><td>hostgroups</td><td><i>hostgroup_names</i></td></tr>
 <tr><td></td><td>check_command</td><td><i>command_name</i></td></tr>
 <tr><td></td><td>initial_state</td><td>[o,d,u]</td></tr>
@@ -76,7 +70,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td></td><td>active_checks_enabled</td><td>[0/1]</td></tr>
 <tr><td></td><td>passive_checks_enabled</td><td>[0/1]</td></tr>
 <tr><td></td><td class="text-danger">check_period</td><td class="text-danger"><i>timeperiod_name</i></td></tr>
-<tr><td></td><td>obsess_over_host</td><td>[0/1]</td></tr>
+<tr><td></td><td>obsess_over_host|obsess</td><td>[0/1]</td></tr>
 <tr><td></td><td>check_freshness</td><td>[0/1]</td></tr>
 <tr><td></td><td>freshness_threshold</td><td>#</td></tr>
 <tr><td></td><td>event_handler</td><td><i>command_name</i></td></tr>
@@ -109,7 +103,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
-<p class="text-primary">Example Definition:</p>
+##### Example Definition
 
 <pre>
 define host{
@@ -131,7 +125,7 @@ define host{
 	}
 </pre>
 
-<p class="text-primary">Directive Descriptions:</p>
+##### Directive Descriptions
 
 <table>
 <tr>
@@ -162,6 +156,11 @@ This directive is used to define an alternate name that should be displayed in t
 <td valign="top"><strong>parents</strong>:</td>
 <td>
 This directive is used to define a comma-delimited list of short names of the "parent" hosts for this particular host.  Parent hosts are typically routers, switches, firewalls, etc. that lie between the monitoring host and a remote hosts.  A router, switch, etc. which is closest to the remote host is considered to be that host's "parent".  Read the "Determining Status and Reachability of Network Hosts" document located <a href="networkreachability.html">here</a> for more information. If this host is on the same network segment as the host doing the monitoring (without any intermediate routers, etc.) the host is considered to be on the local network and will not have a parent host.  Leave this value blank if the host does not have a parent host (i.e. it is on the same segment as the Naemon host).   The order in which you specify parent hosts has no effect on how things are monitored.
+</td>
+</tr>
+<td valign="top"><strong>hourly_value</strong>:</td>
+<td>
+This directive is used to represent the value of the host to your organization. The value is currently used when determining whether to send notifications to a contact. If the host's hourly value plus the hourly values of all of the host's services is greater than or equal to the contact's minimum value, the contact will be notified. For example, you could set this value and the minimum value of contacts such that a system administrator would be notified when a development server goes down, but the CIO would only be notified when the company's production ecommerce database server was down. The value could also be used as a sort criteria when generating reports or for calculating a good system administrator's bonus. The hourly value defaults to zero.
 </td>
 </tr>
 <tr>
@@ -219,7 +218,7 @@ This directive is used to specify the short name of the <a href="#timeperiod">ti
 </td>
 </tr>
 <tr>
-<td valign="top"><strong>obsess_over_host <a href="#retention_notes" class="bg-danger">*</a></strong>:</td>
+<td valign="top"><strong>obsess_over_host|obsess <a href="#retention_notes" class="bg-danger">*</a></strong>:</td>
 <td>
 This directive determines whether or not checks for the host will be "obsessed" over using the <a href="configmain.html#ochp_command">ochp_command</a>.
 </td>
@@ -407,13 +406,13 @@ This variable is used to define coordinates to use when drawing the host in the 
 
 #### Host Group Definition
 
-<p class="text-primary">Description:</p>
+##### Description
 
 A host group definition is used to group one or more hosts together for simplifying configuration with <a href="objecttricks.html">object tricks</a> or display purposes in the <a href="cgis.html">CGIs</a>.
 
-<p class="text-primary">Definition Format:</p>
+##### Definition Format
 
-Note:  Directives in red are required, while those in black are optional.
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Directives in red are required, while those in black are optional.</div>
 
 <table border="0">
 <tr><td colspan=3>define hostgroup{</td></tr>
@@ -427,7 +426,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
-<p class="text-primary">Example Definition:</p>
+##### Example Definition
 
 <pre>
 define hostgroup{
@@ -437,7 +436,7 @@ define hostgroup{
 	}
 </pre>
 
-<p class="text-primary">Directive Descriptions:</p>
+##### Directive Descriptions
 
 <table>
 <tr>
@@ -488,13 +487,13 @@ This directive is used to define an optional URL that can be used to provide mor
 
 #### Service Definition
 
-<p class="text-primary">Description:</p>
+##### Description
 
 A service definition is used to identify a "service" that runs on a host.  The term "service" is used very loosely.  It can mean an actual service that runs on the host (POP, SMTP, HTTP, etc.) or some other type of metric associated with the host (response to a ping, number of logged in users, free disk space, etc.).  The different arguments to a service definition are outlined below.
 
-<p class="text-primary">Definition Format:</p>
+##### Definition Format
 
-Note:  Directives in red are required, while those in black are optional.
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Directives in red are required, while those in black are optional.</div>
 
 <table>
 <tr><td colspan=3>define service{</td></tr>
@@ -502,6 +501,8 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td></td><td>hostgroup_name</td><td><i>hostgroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">service_description</td><td class="text-danger"><i>service_description</i></td></tr>
 <tr><td></td><td>display_name</td><td><i>display_name</i></td></tr>
+<tr><td></td><td>parents</td><td><i>service_descriptions</i></td></tr>
+<tr><td></td><td>hourly_value</td><td>#</td></tr>
 <tr><td></td><td>servicegroups</td><td>servicegroup_names</td></tr>
 <tr><td></td><td>is_volatile</td><td>[0/1]</td></tr>
 <tr><td></td><td class="text-danger">check_command</td><td class="text-danger"><i>command_name</i></td></tr>
@@ -512,7 +513,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td></td><td>active_checks_enabled</td><td>[0/1]</td></tr>
 <tr><td></td><td>passive_checks_enabled</td><td>[0/1]</td></tr>
 <tr><td></td><td class="text-danger">check_period</td><td class="text-danger"><i>timeperiod_name</i></td></tr>
-<tr><td></td><td>obsess_over_service</td><td>[0/1]</td></tr>
+<tr><td></td><td>obsess_over_service|obsess</td><td>[0/1]</td></tr>
 <tr><td></td><td>check_freshness</td><td>[0/1]</td></tr>
 <tr><td></td><td>freshness_threshold</td><td>#</td></tr>
 <tr><td></td><td>event_handler</td><td><i>command_name</i></td></tr>
@@ -541,7 +542,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
-<p class="text-primary">Example Definition:</p>
+##### Example Definition
 
 <pre>
 define service{
@@ -559,7 +560,7 @@ define service{
 	}
 </pre>
 
-<p class="text-primary">Directive Descriptions:</p>
+##### Directive Descriptions
 
 <table>
 <tr>
@@ -584,6 +585,18 @@ This directive is used to define the description of the service, which may conta
 <td valign="top"><strong>display_name</strong>:</td>
 <td>
 This directive is used to define an alternate name that should be displayed in the web interface for this service.  If not specified, this defaults to the value you specify for the <i>service_description</i> directive.  Note:  The current CGIs do not use this option, although future versions of the web interface will.
+</td>
+</tr>
+<tr>
+<td valign="top"><strong>parents</strong>:</td>
+<td>
+This directive is used to define a comma-delimited list of short names of the "parent" services for this particular service. Parent services are typically other services that need to be available in order for a check of this service to occur. For example, if a service checks the status of a disk using SSH, the disk check service would have the SSH service as a parent. If the service has no parent services, simply omit the "parents" directive. More complex service dependencies may be specified with service dependency objects.
+</td>
+</tr>
+<tr>
+<td valign="top"><strong>hourly_value</strong>:</td>
+<td>
+This directive is used to represent the value of the service to your organization. The value is currently used when determining whether to send notifications to a contact. If the service's hourly value is greater than or equal to the contact's minimum value, the contact will be notified. For example, you could set this value and the minimum value of contacts such that a system administrator would be notified of a disk full event on a development server, but the CIO would only be notified when the company's production ecommerce database was down. The value could also be used as a sort criteria when generating reports or for calculating a good system administrator's bonus. The hourly value defaults to zero.
 </td>
 </tr>
 <tr>
@@ -648,7 +661,7 @@ This directive is used to specify the short name of the <a href="#timeperiod">ti
 </td>
 </tr>
 <tr>
-<td valign="top"><strong>obsess_over_service <a href="#retention_notes" class="bg-danger">*</a></strong>:</td>
+<td valign="top"><strong>obsess_over_service|obsess <a href="#retention_notes" class="bg-danger">*</a></strong>:</td>
 <td>
 This directive determines whether or not checks for the service will be "obsessed" over using the <a href="configmain.html#ocsp_command">ocsp_command</a>.
 </td>
@@ -810,13 +823,13 @@ This variable is used to define an optional string that is used in the ALT tag o
 
 #### Service Group Definition
 
-<p class="text-primary">Description:</p>
+##### Description
 
 A service group definition is used to group one or more services together for simplifying configuration with <a href="objecttricks.html">object tricks</a> or display purposes in the <a href="cgis.html">CGIs</a>.
 
-<p class="text-primary">Definition Format:</p>
+##### Definition Format
 
-Note:  Directives in red are required, while those in black are optional.
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Directives in red are required, while those in black are optional.</div>
 
 <table>
 <tr><td colspan=3>define servicegroup{</td></tr>
@@ -831,7 +844,7 @@ Note:  Directives in red are required, while those in black are optional.
 </table>
 
 
-<p class="text-primary">Example Definition:</p>
+##### Example Definition
 
 <pre>
 define servicegroup{
@@ -841,7 +854,7 @@ define servicegroup{
 	}
 </pre>
 
-<p class="text-primary">Directive Descriptions:</p>
+##### Directive Descriptions
 
 <table>
 <tr>
@@ -860,440 +873,222 @@ This directive is used to define is a longer name or description used to identif
 <td valign="top"><strong>members</strong>:</td>
 <td>
 <p>
-
 This is a list of the <i>descriptions</i> of <a href="#service">services</a> (and the names of their corresponding hosts) that should be included in this group.   Host and service names should be separated by commas.  This directive may be used as an alternative to the <i>servicegroups</i> directive in <a href="#service">service definitions</a>.  The format of the member directive is as follows (note that a host name must precede a service name/description):
-
 </p>
-
 <p>
-
 members=&lt;host1&gt;,&lt;service1&gt;,&lt;host2&gt;,&lt;service2&gt;,...,&lt;host<i>n</i>&gt;,&lt;service<i>n</i>&gt;
-
 </p>
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>servicegroup_members</strong>:</td>
-
 <td>
-
 This optional directive can be used to include services from other "sub" service groups in this service group.  Specify a comma-delimited list of short names of other service groups whose members should be included in this group.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>notes</strong>:</td>
-
 <td>
-
 This directive is used to define an optional string of notes pertaining to the service group.  If you specify a note here, you will see the it in the <a href="cgis.html#extinfo_cgi">extended information</a> CGI (when you are viewing information about the specified service group).
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>notes_url</strong>:</td>
-
 <td>
-
 This directive is used to define an optional URL that can be used to provide more information about the service group.  If you specify an URL, you will see a red folder icon in the CGIs (when you are viewing service group information) that links to the URL you specify here.  Any valid URL can be used.  If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e. <i>/cgi-bin/nagios/</i>).  This can be very useful if you want to make detailed information on the service group, emergency contact methods, etc. available to other support staff.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>action_url</strong>:</td>
-
 <td>
-
 This directive is used to define an optional URL that can be used to provide more actions to be performed on the service group.  If you specify an URL, you will see a red "splat" icon in the CGIs (when you are viewing service group information) that links to the URL you specify here.  Any valid URL can be used.  If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e. <i>/cgi-bin/nagios/</i>).
-
 </td>
-
 </tr>
-
 </table>
-
-
-
-
-
-
-
-
-
-<p>
-
 <a name="contact"></a>
 
-<table width="100%">
+#### Contact Definition
 
-<tr>
-
-<td class="SectionHeader">Contact Definition</td>
-
-</tr>
-
-</table>
-
-
-
-<p class="text-primary">Description:</p>
-
-<p>
-
+##### Description
 A contact definition is used to identify someone who should be contacted in the event of a problem on your network.
-
 The different arguments to a contact definition are described below.
 
-</p>
+##### Definition Format
 
-
-
-<p class="text-primary">Definition Format:</p>
-
-<p>
-
-Note:  Directives in red are required, while those in black are optional.
-
-</p>
-
-
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Directives in red are required, while those in black are optional.</div>
 
 <table>
-
 <tr><td colspan=3>define contact{</td></tr>
-
-
-
 <tr><td></td><td class="text-danger">contact_name</td><td class="text-danger"><i>contact_name</i></td></tr>
-
 <tr><td></td><td>alias</td><td><i>alias</i></td></tr>
-
 <tr><td></td><td>contactgroups</td><td><i>contactgroup_names</i></td></tr>
-
+<tr><td></td><td>minimum_value</td><td>#</td></tr>
 <tr><td></td><td class="text-danger">host_notifications_enabled</td><td class="text-danger">[0/1]</td></tr>
-
 <tr><td></td><td class="text-danger">service_notifications_enabled</td><td class="text-danger">[0/1]</td></tr>
-
 <tr><td></td><td class="text-danger">host_notification_period</td><td class="text-danger"><i>timeperiod_name</i></td></tr>
-
 <tr><td></td><td class="text-danger">service_notification_period</td><td class="text-danger"><i>timeperiod_name</i></td></tr>
-
 <tr><td></td><td class="text-danger">host_notification_options</td><td class="text-danger">[d,u,r,f,s,n]</td></tr>
-
 <tr><td></td><td class="text-danger">service_notification_options</td><td class="text-danger">[w,u,c,r,f,s,n]</td></tr>
-
 <tr><td></td><td class="text-danger">host_notification_commands</td><td class="text-danger"><i>command_name</i></td></tr>
-
 <tr><td></td><td class="text-danger">service_notification_commands</td><td class="text-danger"><i>command_name</i></td></tr>
-
 <tr><td></td><td>email</td><td><i>email_address</i></td></tr>
-
 <tr><td></td><td>pager</td><td><i>pager_number or pager_email_gateway</i></td></tr>
-
 <tr><td></td><td>address<i>x</i></td><td><i>additional_contact_address</i></td></tr>
-
 <tr><td></td><td>can_submit_commands</td><td>[0/1]</td></tr>
-
 <tr><td></td><td>retain_status_information</td><td>[0/1]</td></tr>
-
 <tr><td></td><td>retain_nonstatus_information</td><td>[0/1]</td></tr>
-
-
-
 <tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
-
 </table>
 
-
-
-<p class="text-primary">Example Definition:</p>
-
+##### Example Definition
 <pre>
-
 define contact{
-
 	contact_name                    jdoe
-
 	alias                           John Doe
-
 	host_notifications_enabled		1
-
 	service_notifications_enabled	1
-
 	service_notification_period     24x7
-
 	host_notification_period        24x7
-
 	service_notification_options    w,u,c,r
-
 	host_notification_options       d,u,r
-
 	service_notification_commands   notify-by-email
-
 	host_notification_commands      host-notify-by-email
-
 	email			jdoe@localhost.localdomain
-
 	pager			555-5555@pagergateway.localhost.localdomain
-
 	address1			xxxxx.xyyy@icq.com
-
 	address2			555-555-5555
-
 	can_submit_commands	1
-
 	}
-
 </pre>
 
-
-
-<p class="text-primary">Directive Descriptions:</p>
-
-
+##### Directive Descriptions
 
 <table>
-
 <tr>
-
 <td valign="top"><strong>contact_name</strong>:</td>
-
 <td>
-
 This directive is used to define a short name used to identify the contact.  It is referenced in <a href="#contactgroup">contact group</a> definitions.  Under the right circumstances, the $CONTACTNAME$ <a href="macros.html">macro</a> will contain this
-
 value.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>alias</strong>:</td>
-
 <td>
-
 This directive is used to define a longer name or description for the contact.  Under the rights circumstances, the $CONTACTALIAS$ <a href="macros.html">macro</a> will contain this value.  If not specified, the <i>contact_name</i> will be used as the alias.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>contactgroups</strong>:</td>
-
 <td>
-
 This directive is used to identify the <i>short name(s)</i> of the <a href="#contactgroup">contactgroup(s)</a> that the contact belongs to.  Multiple contactgroups should be separated by commas.  This directive may be used as an alternative to (or in addition to) using the <i>members</i> directive in <a href="#contactgroup">contactgroup</a> definitions.
-
 </td>
-
 </tr>
-
 <tr>
-
+<td valign="top"><strong>minimum_value</strong>:</td>
+<td>
+This directive is used as the value that the host or service hourly value must equal before notification is sent to this contact. The hourly values are intended to represent the value of a host or service to an organization. For example, you could set this value and the hourly value of a host such that a system administrator would be notified when a development server goes down, but the CIO would only be notified when the company's production ecommerce database server was down. The minimum value defaults to zero.
+</td>
+</tr>
+<tr>
 <td valign="top"><strong>host_notifications_enabled</strong>:</td>
-
 <td>
-
 This directive is used to determine whether or not the contact will receive notifications about host problems and recoveries.  Values: 0 = don't send notifications, 1 = send notifications.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>service_notifications_enabled</strong>:</td>
-
 <td>
-
 This directive is used to determine whether or not the contact will receive notifications about service problems and recoveries.  Values: 0 = don't send notifications, 1 = send notifications.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>host_notification_period</strong>:</td>
-
 <td>
-
 This directive is used to specify the short name of the <a href="#timeperiod">time period</a> during which the contact can be notified about host problems or recoveries.  You can think of this as an "on call" time for host notifications for the contact.  Read the documentation on <a href="timeperiods.html">time periods</a> for more information on how this works and potential problems that may result from improper use.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>service_notification_period</strong>:</td>
-
 <td>
-
 This directive is used to specify the short name of the <a href="#timeperiod">time period</a> during which the contact can be notified about service problems or recoveries.  You can think of this as an "on call" time for service notifications for the contact.  Read the documentation on <a href="timeperiods.html">time periods</a> for more information on how this works and potential problems that may result from improper use.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>host_notification_commands</strong>:</td>
-
 <td>
-
 This directive is used to define a list of the <i>short names</i> of the <a href="#command">commands</a> used to notify the contact of a <i>host</i> problem or recovery.  Multiple notification commands should be separated by commas.  All
-
 notification commands are executed when the contact needs to be notified.  The maximum amount of time that a notification command can run is controlled by the <a href="configmain.html#notification_timeout">notification_timeout</a> option.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>host_notification_options</strong>:</td>
-
 <td>
-
 This directive is used to define the host states for which notifications can be sent out to this contact.  Valid options are a combination of one or more of the following: <b>d</b> = notify on DOWN host states, <b>u</b> = notify on UNREACHABLE host states, <b>r</b> = notify on host recoveries (UP states), <b>f</b> = notify when the host starts and stops <a href="flapping.html">flapping</a>, and <b>s</b> = send notifications when host or service <a href="downtime.html">scheduled downtime</a> starts and ends.  If you specify <b>n</b> (none) as an option, the contact will not receive any type of host notifications.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>service_notification_options</strong>:</td>
-
 <td>
-
 This directive is used to define the service states for which notifications can be sent out to this contact.  Valid options are a combination of one or more of the following: <b>w</b> = notify on WARNING service states, <b>u</b> = notify on UNKNOWN service states, <b>c</b> = notify on CRITICAL service states, <b>r</b> = notify on service recoveries (OK states), and <b>f</b> = notify when the service starts and stops <a href="flapping.html">flapping</a>.  If you specify <b>n</b> (none) as an option, the contact will not receive any type of service notifications.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>service_notification_commands</strong>:</td>
-
 <td>
-
 This directive is used to define a list of the <i>short names</i> of the <a href="#command">commands</a> used to notify the contact of a <i>service</i> problem or recovery.  Multiple notification commands should be separated by commas.  All
-
 notification commands are executed when the contact needs to be notified.  The maximum amount of time that a notification command can run is controlled by the <a href="configmain.html#notification_timeout">notification_timeout</a> option.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>email</strong>:</td>
-
 <td>
-
 This directive is used to define an email address for the contact.  Depending on how you configure your notification commands, it can be used to send out an alert email to the contact.  Under the right circumstances, the $CONTACTEMAIL$
-
 <a href="macros.html">macro</a> will contain this value.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>pager</strong>:</td>
-
 <td>
-
 This directive is used to define a pager number for the contact.  It can also be an email address to a pager gateway
-
 (i.e. pagejoe@pagenet.com).  Depending on how you configure your notification commands, it can be used to send out an alert page to the contact.  Under the right circumstances, the $CONTACTPAGER$ <a href="macros.html">macro</a> will contain this value.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>address<i>x</i></strong>:</td>
-
 <td>
-
 Address directives are used to define additional "addresses" for the contact.  These addresses can be anything - cell phone numbers, instant messaging addresses, etc.  Depending on how you configure your notification commands, they can be used to send out an alert to the contact.  Up to six addresses can be defined using these directives (<i>address1</i> through <i>address6</i>). The $CONTACTADDRESS<i>x</i>$ <a href="macros.html">macro</a> will contain this value.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>can_submit_commands</strong>:</td>
-
 <td>
-
 This directive is used to determine whether or not the contact can submit <a href="extcommands.html">external commands</a> to Naemon from the CGIs.  Values: 0 = don't allow contact to submit commands, 1 = allow contact to submit commands.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>retain_status_information</strong>:</td>
-
 <td>
-
 This directive is used to determine whether or not status-related information about the contact is retained across program restarts.  This is only useful if you have enabled state retention using the <a href="configmain.html#retain_state_information">retain_state_information</a> directive.  Value: 0 = disable status information retention, 1 = enable status information retention.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td valign="top"><strong>retain_nonstatus_information</strong>:</td>
-
 <td>
-
 This directive is used to determine whether or not non-status information about the contact is retained across program restarts.  This is only useful if you have enabled state retention using the <a href="configmain.html#retain_state_information">retain_state_information</a> directive.  Value: 0 = disable non-status information retention, 1 = enable non-status information retention.
-
 </td>
-
 </tr>
-
 </table>
 
 <a name="contactgroup"></a>
-
 #### Contact Group Definition
 
-<p class="text-primary">Description:</p>
+##### Description
 
 A contact group definition is used to group one or more <a href="#contact">contacts</a> together for the purpose of sending out alert/recovery <a href="notifications.html">notifications</a>.
 
-<p class="text-primary">Definition Format:</p>
+##### Definition Format
 
-Note:  Directives in red are required, while those in black are optional.
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Directives in red are required, while those in black are optional.</div>
 
 <table>
 <tr><td colspan=3>define contactgroup{</td></tr>
@@ -1304,7 +1099,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 <br>
-<p class="text-primary">Example Definition:</p>
+##### Example Definition
 
 <pre>
 define contactgroup{
@@ -1314,7 +1109,7 @@ define contactgroup{
 	}
 </pre>
 
-<p class="text-primary">Directive Descriptions:</p>
+##### Directive Descriptions
 
 <table>
 <tr>
@@ -1345,13 +1140,13 @@ This optional directive can be used to include contacts from other "sub" contact
 
 #### Time Period Definition
 
-<p class="text-primary">Description:</p>
+##### Description
 
 A time period is a list of times during various days that are considered to be "valid" times for notifications and service checks. It consists of time ranges for each day of the week that "rotate" once the week has come to an end.  Different types of exceptions to the normal weekly time are supported, including: specific weekdays, days of generic months, days of specific months, and calendar dates.
 
-<p class="text-primary">Definition Format:</p>
+##### Definition Format
 
-Note:  Directives in red are required, while those in black are optional.
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Directives in red are required, while those in black are optional.</div>
 
 <table>
 <tr><td colspan=3>define timeperiod{</td></tr>
@@ -1363,7 +1158,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
-<p class="text-primary">Example Definitions:</p>
+##### Example Definitions
 
 <pre>
 define timeperiod{
@@ -1414,7 +1209,7 @@ define timeperiod{
 	}
 </pre>
 
-<p class="text-primary">Directive Descriptions:</p>
+##### Directive Descriptions
 
 <table>
 <tr>
@@ -1455,13 +1250,13 @@ This directive is used to specify the short names of other timeperiod definition
 
 #### Command Definition
 
-<p class="text-primary">Description:</p>
+##### Description
 
 A command definition is just that.  It defines a command.  Commands that can be defined include service checks, service notifications, service event handlers, host checks, host notifications, and host event handlers.  Command definitions can contain <a href="macros.html">macros</a>, but you must make sure that you include only those macros that are "valid" for the circumstances when the command will be used.  More information on what macros are available and when they are "valid" can be found <a href="macros.html">here</a>. The different arguments to a command definition are outlined below.
 
-<p class="text-primary">Definition Format:</p>
+##### Definition Format
 
-Note:  Directives in red are required, while those in black are optional.
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Directives in red are required, while those in black are optional.</div>
 
 <table>
 <tr><td colspan=3>define command{</td></tr>
@@ -1470,7 +1265,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
-<p class="text-primary">Example Definition:</p>
+##### Example Definition
 
 <pre>
 define command{
@@ -1479,7 +1274,7 @@ define command{
 	}
 </pre>
 
-<p class="text-primary">Directive Descriptions:</p>
+##### Directive Descriptions
 
 <table>
 <tr>
@@ -1508,18 +1303,20 @@ If you want to pass arguments to commands during runtime, you can use <a href="m
 
 #### Service Dependency Definition
 
-<p class="text-primary">Description:</p>
+##### Description
 
 Service dependencies are an advanced feature of Naemon that allow you to suppress notifications and active checks of services based on the status of one or more other services.  Service dependencies are optional and are mainly targeted at advanced users who have complicated monitoring setups.  More information on how service dependencies work (read this!) can be found <a href="dependencies.html">here</a>.
 
-<p class="text-primary">Definition Format:</p>
+##### Definition Format
 
-Note:  Directives in red are required, while those in black are optional.  However, you must supply at least one type of criteria for the definition to be of much use.
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Directives in red are required, while those in black are optional. However, you must supply at least one type of criteria for the definition to be of much use.</div> 
 
 <table>
 <tr><td colspan=3>define servicedependency{</td></tr>
 <tr><td></td><td class="text-danger">dependent_host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td>dependent_hostgroup_name</td><td><i>hostgroup_name</i></td></tr>
+<tr><td></td><td>servicegroup_name</td><td><i>servicegroup_name</i></td></tr>
+<tr><td></td><td>dependent_servicegroup_name</td><td><i>servicegroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">dependent_service_description</td><td class="text-danger"><i>service_description</i></td></tr>
 <tr><td></td><td class="text-danger">host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td>hostgroup_name</td><td><i>hostgroup_name</i></td></tr>
@@ -1531,7 +1328,7 @@ Note:  Directives in red are required, while those in black are optional.  Howev
 <tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
-<p class="text-primary">Example Definition:</p>
+##### Example Definition
 
 <pre>
 define servicedependency{
@@ -1544,7 +1341,7 @@ define servicedependency{
 	}
 </pre>
 
-<p class="text-primary">Directive Descriptions:</p>
+##### Directive Descriptions
 
 <table>
 <tr>
@@ -1557,6 +1354,18 @@ This directive is used to identify the <i>short name(s)</i> of the <a href="#hos
 <td valign="top"><strong>dependent_hostgroup_name</strong>:</td>
 <td>
 This directive is used to specify the <i>short name(s)</i> of the <a href="#hostgroup">hostgroup(s)</a> that the <i>dependent</i> service "runs" on or is associated with.  Multiple hostgroups should be separated by commas.  The dependent_hostgroup may be used instead of, or in addition to, the dependent_host directive.
+</td>
+</tr>
+<tr>
+<td valign="top"><strong>servicegroup_name</strong>:</td>
+<td>
+This directive is used to specify the short name(s) of the servicegroup(s) that will inherit the dependency. Multiple servicegroups should be separated by commas.
+</td>
+</tr>
+<tr>
+<td valign="top"><strong>dependent_servicegroup_name</strong>:</td>
+<td>
+This directive is used to specify the short name(s) of the servicegroup(s) that the dependent service "runs" on or is associated with. Multiple servicegroups should be separated by commas.
 </td>
 </tr>
 <tr>
@@ -1609,17 +1418,18 @@ This directive is used to specify the short name of the <a href="#timeperiod">ti
 </tr>
 </table>
 
+
 <a name="serviceescalation"></a>
 
 #### Service Escalation Definition
 
-<p class="text-primary">Description:</p>
+##### Description
 
 Service escalations are <i>completely optional</i> and are used to escalate notifications for a particular service.  More information on how notification escalations work can be found <a href="escalations.html">here</a>.
 
-<p class="text-primary">Definition Format:</p>
+##### Definition Format
 
-Note:  Directives in red are required, while those in black are optional.
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Directives in red are required, while those in black are optional.</div>
 
 <table>
 <tr><td colspan=3>define serviceescalation{</td></tr>
@@ -1636,7 +1446,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
-<p class="text-primary">Example Definition:</p>
+##### Example Definition
 <pre>
 define serviceescalation{
 	host_name		nt-3
@@ -1648,7 +1458,7 @@ define serviceescalation{
 	}
 </pre>
 
-<p class="text-primary">Directive Descriptions:</p>
+##### Directive Descriptions
 
 <table>
 <tr>
@@ -1717,13 +1527,13 @@ This directive is used to define the criteria that determine when this service e
 
 #### Host Dependency Definition
 
-<p class="text-primary">Description:</p>
+##### Description
 
 Host dependencies are an advanced feature of Naemon that allow you to suppress notifications for hosts based on the status of one or more other hosts.  Host dependencies are optional and are mainly targeted at advanced users who have complicated monitoring setups.  More information on how host dependencies work (read this!) can be found <a href="dependencies.html">here</a>.
 
-<p class="text-primary">Definition Format:</p>
+##### Definition Format
 
-Note:  Directives in red are required, while those in black are optional.
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Directives in red are required, while those in black are optional.</div>
 
 <table>
 <tr><td colspan=3>define hostdependency{</td></tr>
@@ -1738,7 +1548,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
-<p class="text-primary">Example Definition:</p>
+##### Example Definition
 <pre>
 define hostdependency{
 	host_name			WWW1
@@ -1747,7 +1557,7 @@ define hostdependency{
 	}
 </pre>
 
-<p class="text-primary">Directive Descriptions:</p>
+##### Directive Descriptions
 
 <table>
 <tr>
@@ -1804,13 +1614,13 @@ This directive is used to specify the short name of the <a href="#timeperiod">ti
 
 #### Host Escalation Definition
 
-<p class="text-primary">Description:</p>
+##### Description
 
 Host escalations are <i>completely optional</i> and are used to escalate notifications for a particular host.  More information on how notification escalations work can be found <a href="escalations.html">here</a>.
 
-<p class="text-primary">Definition Format:</p>
+##### Definition Format
 
-Note:  Directives in red are required, while those in black are optional.
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Directives in red are required, while those in black are optional.</div>
 
 <table>
 <tr><td colspan=3>define hostescalation{</td></tr>
@@ -1826,7 +1636,7 @@ Note:  Directives in red are required, while those in black are optional.
 <tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
 </table>
 
-<p class="text-primary">Example Definition:</p>
+##### Example Definition
 
 <pre>
 define hostescalation{
@@ -1838,7 +1648,7 @@ define hostescalation{
 	}
 </pre>
 
-<p class="text-primary">Directive Descriptions:</p>
+##### Directive Descriptions
 
 <table>
 <tr>
@@ -1893,202 +1703,6 @@ This directive is used to specify the short name of the <a href="#timeperiod">ti
 <td valign="top"><strong>escalation_options</strong>:</td>
 <td>
 This directive is used to define the criteria that determine when this host escalation is used.  The escalation is used only if the host is in one of the states specified in this directive.  If this directive is not specified in a host escalation, the escalation is considered to be valid during all host states.  Valid options are a combination of one or more of the following: <b>r</b> = escalate on an UP (recovery) state, <b>d</b> = escalate on a DOWN state, and <b>u</b> = escalate on an UNREACHABLE state.   Example: If you specify <b>d</b> in this field, the escalation will only be used if the host is in a DOWN state.
-</td>
-</tr>
-</table>
-
-<a name="hostextinfo"></a>
-
-Extended Host Information Definition
-
-<p class="text-primary">Description:</p>
-
-Extended host information entries are basically used to make the output from the <a href="cgis.html#status_cgi">status</a>, <a href="cgis.html#statusmap_cgi">statusmap</a>, <a href="cgis.html#statuswrl_cgi">statuswrl</a>, and <a href="cgis.html#extinfo_cgi">extinfo</a> CGIs look pretty.  They have no effect on monitoring and are completely optional.
-
-<img src="images/tip.gif" border="0" align="bottom" alt="Tip" title="Tip"> Tip: As of Naemon 3.x, all directives contained in extended host information definitions are also available in <a href="#host">host definitions</a>.  Thus, you can choose to define the directives below in your host definitions if it makes your configuration simpler.  Separate extended host information definitions will continue to be supported for backward compatability.
-
-<p class="text-primary">Definition Format:</p>
-
-Note:  Variables in red are required, while those in black are optional.  However, you need to supply at least one optional variable in each definition for it to be of much use.
-
-<table>
-<tr><td colspan=3>define hostextinfo{</td></tr>
-<tr><td></td><td class="text-danger">host_name</td><td class="text-danger"><i>host_name</i></td></tr>
-<tr><td></td><td>notes</td><td><i>note_string</i></td></tr>
-<tr><td></td><td>notes_url</td><td><i>url</i></td></tr>
-<tr><td></td><td>action_url</td><td><i>url</i></td></tr>
-<tr><td></td><td>icon_image</td><td><i>image_file</i></td></tr>
-<tr><td></td><td>icon_image_alt</td><td><i>alt_string</i></td></tr>
-<tr><td></td><td>vrml_image</td><td><i>image_file</i></td></tr>
-<tr><td></td><td>statusmap_image</td><td><i>image_file</i></td></tr>
-<tr><td></td><td>2d_coords</td><td><i>x_coord,y_coord</i></td></tr>
-<tr><td></td><td>3d_coords</td><td><i>x_coord,y_coord,z_coord</i></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
-</table>
-
-<p class="text-primary">Example Definition:</p>
-
-<pre>
-define hostextinfo{
-	host_name	netware1
-	notes		This is the primary Netware file server
-	notes_url	http://webserver.localhost.localdomain/hostinfo.pl?host=netware1
-	icon_image	novell40.png
-	icon_image_alt	IntranetWare 4.11
-	vrml_image	novell40.png
-	statusmap_image	novell40.gd2
-	2d_coords	100,250
-	3d_coords	100.0,50.0,75.0
-	}
-</pre>
-
-<p class="text-primary">Variable Descriptions:</p>
-
-<table>
-<tr>
-<td valign="top"><strong>host_name</strong>:</td>
-<td>
-This variable is used to identify the <i>short name</i> of the <a href="#host">host</a> which the data is associated with.
-</td>
-</tr>
-<tr>
-<td valign="top"><strong>notes</strong>:</td>
-<td>
-This directive is used to define an optional string of notes pertaining to the host.  If you specify a note here, you will see the it in the <a href="cgis.html#extinfo_cgi">extended information</a> CGI (when you are viewing information about the specified host).
-</td>
-</tr>
-<tr>
-<td valign="top"><strong>notes_url</strong>:</td>
-<td>
-This variable is used to define an optional URL that can be used to provide more information about the host.  If you specify an URL, you will see a link that says "Extra Host Notes" in the <a href="cgis.html#extinfo_cgi">extended information</a> CGI (when you are viewing information about the specified host).  Any valid URL can be used.  If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e. <i>/cgi-bin/nagios/</i>).  This can be very useful if you want to make detailed information on the host, emergency contact methods, etc. available to other support staff.
-</td>
-</tr>
-<tr>
-<td valign="top"><strong>action_url</strong>:</td>
-<td>
-This directive is used to define an optional URL that can be used to provide more actions to be performed on the host.  If you specify an URL, you will see a link that says "Extra Host Actions" in the <a href="cgis.html#extinfo_cgi">extended information</a> CGI (when you are viewing information about the specified host).  Any valid URL can be used.  If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e. <i>/cgi-bin/nagios/</i>).
-</td>
-</tr>
-<tr>
-<td valign="top"><strong>icon_image</strong>:</td>
-<td>
-This variable is used to define the name of a GIF, PNG, or JPG image that should be associated with this host.  This image will be displayed in the <a href="cgis.html#status_cgi">status</a> and <a href="cgis.html#extinfo_cgi">extended information</a> CGIs.  The image will look best if it is 40x40 pixels in size.  Images for hosts are assumed to be in the <b>logos/</b> subdirectory in your HTML images directory (i.e. <i>/usr/local/nagios/share/images/logos</i>).
-</td>
-</tr>
-<tr>
-<td valign="top"><strong>icon_image_alt</strong>:</td>
-<td>
-This variable is used to define an optional string that is used in the ALT tag of the image specified by the <i>&lt;icon_image&gt;</i> argument.  The ALT tag is used in the <a href="cgis.html#status_cgi">status</a>, <a href="cgis.html#extinfo_cgi">extended information</a> and <a href="cgis.html#statusmap_cgi">statusmap</a> CGIs.
-</td>
-</tr>
-<tr>
-<td valign="top"><strong>vrml_image</strong>:</td>
-<td>
-This variable is used to define the name of a GIF, PNG, or JPG image that should be associated with this host.  This image will be used as the texture map for the specified host in the <a href="cgis.html#statuswrl_cgi">statuswrl</a> CGI.  Unlike the image you use for the <i>&lt;icon_image&gt;</i> variable, this one should probably <i>not</i> have any transparency.  If it does, the host object will look a bit wierd.  Images for hosts are assumed to be in the <b>logos/</b> subdirectory in your HTML images directory (i.e. <i>/usr/local/nagios/share/images/logos</i>).
-</td>
-</tr>
-<tr>
-<td valign="top"><strong>statusmap_image</strong>:</td>
-<td>
-This variable is used to define the name of an image that should be associated with this host in the <a href="cgis.html#statusmap_cgi">statusmap</a> CGI.  You can specify a JPEG, PNG, and GIF image if you want, although I would strongly suggest using a GD2 format image, as other image formats will result in a lot of wasted CPU time when the statusmap image is generated.  GD2 images can be created from PNG images by using the <b>pngtogd2</b> utility supplied with Thomas Boutell's <a href="http://www.boutell.com/gd/">gd library</a>.  The GD2 images should be created in <i>uncompressed</i> format in order to minimize CPU load when the statusmap CGI is generating the network map image.  The image will look best if it is 40x40 pixels in size.  You can leave these option blank if you are not using the statusmap CGI.  Images for hosts are assumed to be in the <b>logos/</b> subdirectory in your HTML images directory (i.e. <i>/usr/local/nagios/share/images/logos</i>).
-</td>
-</tr>
-<tr>
-<td valign="top"><strong>2d_coords</strong>:</td>
-<td>
-This variable is used to define coordinates to use when drawing the host in the <a href="cgis.html#statusmap_cgi">statusmap</a> CGI.  Coordinates should be given in positive integers, as they correspond to physical pixels in the generated image.  The origin for drawing (0,0) is in the upper left hand corner of the image and extends in the positive x direction (to the right) along the top of the image and in the positive y direction (down) along the left hand side of the image.  For reference, the size of the icons drawn is usually about 40x40 pixels (text takes a little extra space).  The coordinates you specify here are for the upper left hand corner of the host icon that is drawn.  Note:  Don't worry about what the maximum x and y coordinates that you can use are.  The CGI will automatically calculate the maximum dimensions of the image it creates based on the largest x and y coordinates you specify.
-</td>
-</tr>
-<tr>
-<td valign="top"><strong>3d_coords</strong>:</td>
-<td>
-This variable is used to define coordinates to use when drawing the host in the <a href="cgis.html#statuswrl_cgi">statuswrl</a> CGI.  Coordinates can be positive or negative real numbers.  The origin for drawing is (0.0,0.0,0.0).  For reference, the size of the host cubes drawn is 0.5 units on each side (text takes a little more space).  The coordinates you specify here are used as the center of the host cube.
-</td>
-</tr>
-</table>
-
-<a name="serviceextinfo"></a>
-
-#### Extended Service Information Definition
-
-<p class="text-primary">Description:</p>
-
-Extended service information entries are basically used to make the output from the <a href="cgis.html#status_cgi">status</a> and <a href="cgis.html#extinfo_cgi">extinfo</a> CGIs look pretty.  They have no effect on monitoring and are completely optional.
-
-<img src="images/tip.gif" border="0" align="bottom" alt="Tip" title="Tip"> Tip: As of Naemon 3.x, all directives contained in extended service information definitions are also available in <a href="#service">service definitions</a>.  Thus, you can choose to define the directives below in your service definitions if it makes your configuration simpler.  Separate extended service information definitions will continue to be supported for backward compatability.
-
-<p class="text-primary">Definition Format:</p>
-
-Note:  Variables in red are required, while those in black are optional.  However, you need to supply at least one optional variable in each definition for it to be of much use.
-
-<table>
-<tr><td colspan=3>define serviceextinfo{</td></tr>
-<tr><td></td><td class="text-danger">host_name</td><td class="text-danger"><i>host_name</i></td></tr>
-<tr><td></td><td class="text-danger">service_description</td><td class="text-danger"><i>service_description</i></td></tr>
-<tr><td></td><td>notes</td><td><i>note_string</i></td></tr>
-<tr><td></td><td>notes_url</td><td><i>url</i></td></tr>
-<tr><td></td><td>action_url</td><td><i>url</i></td></tr>
-<tr><td></td><td>icon_image</td><td><i>image_file</i></td></tr>
-<tr><td></td><td>icon_image_alt</td><td><i>alt_string</i></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;</td><td colspan=2>}</td></tr>
-</table>
-
-<p class="text-primary">Example Definition:</p>
-
-<pre>
-define serviceextinfo{
-	host_name		linux2
-	service_description	Log Anomalies
-	notes			Security-related log anomalies on secondary Linux server
-	notes_url		http://webserver.localhost.localdomain/serviceinfo.pl?host=linux2&amp;service=Log+Anomalies
-	icon_image		security.png
-	icon_image_alt		Security-Related Alerts
-	}
-</pre>
-
-<p class="text-primary">Variable Descriptions:</p>
-
-<table>
-<tr>
-<td valign="top"><strong>host_name</strong>:</td>
-<td>
-This directive is used to identify the <i>short name</i> of the host that the <a href="#service">service</a> is associated with.
-</td>
-</tr>
-<tr>
-<td valign="top"><strong>service_description</strong>:</td>
-<td>
-This directive is description of the <a href="#service">service</a> which the data is associated with.
-</td>
-</tr>
-<tr>
-<td valign="top"><strong>notes</strong>:</td>
-<td>
-This directive is used to define an optional string of notes pertaining to the service.  If you specify a note here, you will see the it in the <a href="cgis.html#extinfo_cgi">extended information</a> CGI (when you are viewing information about the specified service).
-</td>
-</tr>
-<tr>
-<td valign="top"><strong>notes_url</strong>:</td>
-<td>
-This directive is used to define an optional URL that can be used to provide more information about the service.  If you specify an URL, you will see a link that says "Extra Service Notes" in the <a href="cgis.html#extinfo_cgi">extended information</a> CGI (when you are viewing information about the specified service).  Any valid URL can be used.  If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e. <i>/cgi-bin/nagios/</i>).  This can be very useful if you want to make detailed information on the service, emergency contact methods, etc. available to other support staff.
-</td>
-</tr>
-<tr>
-<td valign="top"><strong>action_url</strong>:</td>
-<td>
-This directive is used to define an optional URL that can be used to provide more actions to be performed on the service.  If you specify an URL, you will see a link that says "Extra Service Actions" in the <a href="cgis.html#extinfo_cgi">extended information</a> CGI (when you are viewing information about the specified service).  Any valid URL can be used.  If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e. <i>/cgi-bin/nagios/</i>).
-</td>
-</tr>
-<tr>
-<td valign="top"><strong>icon_image</strong>:</td>
-<td>
-This variable is used to define the name of a GIF, PNG, or JPG image that should be associated with this host.  This image will be displayed in the <a href="cgis.html#status_cgi">status</a> and <a href="cgis.html#extinfo_cgi">extended information</a> CGIs.  The image will look best if it is 40x40 pixels in size.  Images for hosts are assumed to be in the <b>logos/</b> subdirectory in your HTML images directory (i.e. <i>/usr/local/nagios/share/images/logos</i>).
-</td>
-</tr>
-<tr>
-<td valign="top"><strong>icon_image_alt</strong>:</td>
-<td>
-This variable is used to define an optional string that is used in the ALT tag of the image specified by the <i>&lt;icon_image&gt;</i> argument.  The ALT tag is used in the <a href="cgis.html#status_cgi">status</a>, <a href="cgis.html#extinfo_cgi">extended information</a> and <a href="cgis.html#statusmap_cgi">statusmap</a> CGIs.
 </td>
 </tr>
 </table>
