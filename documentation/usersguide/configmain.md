@@ -114,7 +114,7 @@ Below you will find descriptions of each main Naemon configuration file option..
 </tr>
 </table>
 
-<p>This directive is used to specify a file in which a pre-processed, pre-cached copy of <a href="configobject.html">object definitions</a> should be stored.  This file can be used to drastically improve startup times in large/complex Naemon installations.  Read more information on how to speed up start times <a href="faststartup.html">here</a>.</p>
+<p>This directive is used to specify a file in which a pre-processed, pre-cached copy of <a href="configobject.html">object definitions</a> should be stored. Experienced Nagios administrators might remember this once drastically improving startup time in large/complex Nagios installation - alas, as the Naemon startup has been heavily optimized since, the benefits of employing tricks such as this one is these days rarely important. Read more information on how to speed up start times <a href="faststartup.html">here</a>.</p>
 
 <a name="resource_file"></a>
 #### Resource File
@@ -378,6 +378,7 @@ This option determines whether or not Naemon will check the <a href="#command_fi
 
 This is the file that Naemon will check for external commands to process.  The <a href="cgis.html#cmd_cgi">command CGI</a> writes commands to this file.  The external command file is implemented as a named pipe (FIFO), which is created when Naemon starts and removed when it shuts down.  If the file exists when Naemon starts, the Naemon process will terminate with an error message.  More information on external commands can be found <a href="extcommands.html">here</a>.
 
+Check out the <a href="#query_socket">the query socket</a> for a way to submit these commands, and receive confirmation that Naemon accepted them.
 
 <a name="lock_file"></a>
 #### Lock File
@@ -2028,12 +2029,6 @@ This option controls what (if any) data gets sent to the event broker and, in tu
 
 This directive is used to specify an event broker module that should by loaded by Naemon at startup.  Use multiple directives if you want to load more than one module.  Arguments that should be passed to the module at startup are seperated from the module path by a space.
 
-<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> <b>WARNING</b><br>Do NOT overwrite modules while they are being used by Naemon or Naemon will crash in a fiery display of SEGFAULT glory.  This is a bug/limitation either in dlopen(), the kernel, and/or the filesystem.  And maybe Naemon...</div>
-
-The correct/safe way of updating a module is by using one of these methods:
-
-* Shutdown Naemon, replace the module file, restart Naemon
-* While Naemon is running... delete the original module file, move the new module file into place, restart Naemon
 <a name="debug_file"></a>
 
 #### Debug File
@@ -2112,3 +2107,39 @@ This option determines how much debugging information Naemon should write to the
 </table>
 
 This option determines the maximum size (in bytes) of the <a href="#debug_file">debug file</a>.  If the file grows larger than this size, it will be renamed with a .old  extension.  If a file already exists with a .old extension it will automatically be deleted.  This helps ensure your disk space usage doesn't get out of control when debugging Naemon.
+
+<a name="loadctl_options"></a>
+#### Load control options
+
+This option can be used to do changes to how Naemon distributes jobs to the workers. The value is a semicolon delimited string of equal sign delimited keys and values. You can modify the same settings via the query handler. This is currently experimental, but might help working around strange load issues.
+
+<a name="check_workers"></a>
+#### Check workers
+<table border="0">
+<tr>
+<td>Format:</td>
+<td><b>check_workers=&lt;#&gt;</b></td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><font color="red"><b>check_workers=6</b></font></td>
+</tr>
+</table>
+
+The number of worker processes to spin up at Naemon startup. Having this set too low will cause latency issues, while having this set too high will waste resources. It is typically not necessary to set this at all - if unset, Naemon will automatically scale this according to the number of CPUs in your system.
+
+If you're experiencing checks that don't run the way they should, it could be an issue with either the number of workers, or the <a href="#loadctl_options">load control options</a>
+
+<a name="query_socket"></a>
+#### Query socket
+<table border="0">
+<tr>
+<td>Format:</td>
+<td><b>query_socket=&lt;file_name&gt;</b></td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><font color="red"><b>query_socket=/var/lib/naemon/naemon.qh</b></font></td>
+</tr>
+</table>
+This is the socket you can use for two-way communication with the Naemon process. This enables you to do things like submit external commands like with the <a href="#command_file">traditional command file</a> - and get a response about whether the command worked or not. It also allows you to inspect the state of your <a href="#check_workers">worker processes</a> - as well as modify the <a href="#loadctl_options">load control options</a> if they aren't behaving well.
