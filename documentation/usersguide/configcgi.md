@@ -29,21 +29,16 @@ If you need to change the name of the file or its location, you can configure Th
 Below you will find descriptions of each main Naemon configuration file option...
 
 
-<a name="use_authentication"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**Authentication Usage**</td>
-</tr>
-</table>
+#### Authentication Usage
 
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>**use_authentication=&lt;0/1&gt;**</td>
+<td><b>use_authentication=&lt;0/1&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Example:</td>
-<td><font color="red">**use_authentication=1**</font></td>
+<td><font color="red"><b>use_authentication=1</b></font></td>
 </tr>
 </table>
 
@@ -59,23 +54,17 @@ configure authorization for the CGIs can be found <a href="cgiauth.html">here</a
 * 0 = Don't use authentication functionality
 * 1 = Use authentication and authorization functionality (default)
 
-
-
 <a name="default_user_name"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**Default User Name**</td>
-</tr>
-</table>
+#### Default User Name
 
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>**default_user_name=&lt;username&gt;**</td>
+<td><b>default_user_name=&lt;username&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Example:</td>
-<td><font color="red">**default_user_name=guest**</font></td>
+<td><font color="red"><b>default_user_name=guest</b></font></td>
 </tr>
 </table>
 
@@ -91,27 +80,21 @@ web server and are sure that everyone who has access to the CGIs has been
 authenticated in some manner! If you define this variable, anyone who has not
 authenticated to the web server will inherit all rights you assign to this user!
 
-
-
 <a name="authorized_for_system_information"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**System/Process Information Access**</td>
-</tr>
-</table>
+#### System/Process Information Access
 
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>**authorized_for_system_information=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;**</td>
+<td>authorized_for_system_information=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Groups:</td>
-<td>**authorized_contactgroup_for_system_information=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;**</td>
+<td><b>authorized_contactgroup_for_system_information=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Example:</td>
-<td><font color="red">**authorized_for_system_information=naemonadmin,theboss**</font></td>
+<td><font color="red"><b>authorized_for_system_information=naemonadmin,theboss</b></font></td>
 </tr>
 </table>
 
@@ -121,27 +104,21 @@ authorized to issue system/process commands. If you want users to be able to iss
 as well, you must add them to the <a href="#authorized_for_system_commands">authorized_for_system_commands</a> variable.
 More information on how to setup authentication and configure authorization for the CGIs can be found <a href="cgiauth.html">here</a>.
 
-
-
 <a name="authorized_for_system_commands"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**System/Process Command Access**</td>
-</tr>
-</table>
+#### System/Process Command Access
 
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>**authorized_for_system_commands=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;**</td>
+<td><b>authorized_for_system_commands=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Groups:</td>
-<td>**authorized_contactgroup_for_system_commands=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;**</td>
+<td><b>authorized_contactgroup_for_system_commands=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Example:</td>
-<td><font color="red">**authorized_for_system_commands=naemonadmin**</font></td>
+<td><font color="red"><b>authorized_for_system_commands=naemonadmin</b></font></td>
 </tr>
 </table>
 
@@ -151,28 +128,21 @@ system/process information. If you want users to be able to view system/process 
 must add them to the <a href="#authorized_for_system_information">authorized_for_system_information</a> variable.
 More information on how to setup authentication and configure authorization for the CGIs can be found <a href="cgiauth.html">here</a>.
 
-
-
-
 <a name="authorized_for_configuration_information"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**Configuration Information Access**</td>
-</tr>
-</table>
+#### Configuration Information Access
 
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>**authorized_for_configuration_information=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;**</td>
+<td><b>authorized_for_configuration_information=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Groups:</td>
-<td>**authorized_contactgroup_for_configuration_information=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;**</td>
+<td><b>authorized_contactgroup_for_configuration_information=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Example:</td>
-<td><font color="red">**authorized_for_configuration_information=naemonadmin**</font></td>
+<td><font color="red"><b>authorized_for_configuration_information=naemonadmin</b></font></td>
 </tr>
 </table>
 
@@ -182,28 +152,21 @@ configured hosts, host groups, services, contacts, contact groups, time periods,
 information on how to setup authentication and configure authorization for the CGIs can be
 found <a href="cgiauth.html">here</a>.
 
-
-
-
 <a name="authorized_for_all_hosts"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**Global Host Information Access**</td>
-</tr>
-</table>
+#### Global Host Information Access
 
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>**authorized_for_all_hosts=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;**</td>
+<td><b>authorized_for_all_hosts=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Groups:</td>
-<td>**authorized_contactgroup_for_all_hosts=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;**</td>
+<td><b>authorized_contactgroup_for_all_hosts=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Example:</td>
-<td><font color="red">**authorized_for_all_hosts=naemonadmin,theboss**</font></td>
+<td><font color="red"><b>authorized_for_all_hosts=naemonadmin,theboss</b></font></td>
 </tr>
 </table>
 
@@ -215,28 +178,21 @@ commands for all hosts and services as well, you must add them to
 the <a href="#authorized_for_all_host_commands">authorized_for_all_host_commands</a> variable.
 More information on how to setup authentication and configure authorization for the CGIs can be found <a href="cgiauth.html">here</a>.
 
-
-
-
 <a name="authorized_for_all_host_commands"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**Global Host Command Access**</td>
-</tr>
-</table>
+#### Global Host Command Access
 
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>**authorized_for_all_host_commands=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;**</td>
+<td><b>authorized_for_all_host_commands=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Groups:</td>
-<td>**authorized_contactgroup_for_all_host_commands=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;**</td>
+<td><b>authorized_contactgroup_for_all_host_commands=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Example:</td>
-<td><font color="red">**authorized_for_all_host_commands=naemonadmin**</font></td>
+<td><font color="red"><b>authorized_for_all_host_commands=naemonadmin</b></font></td>
 </tr>
 </table>
 
@@ -248,29 +204,21 @@ view status and configuration information for all hosts and services as well, yo
 to the <a href="#authorized_for_all_hosts">authorized_for_all_hosts</a> variable. More information
 on how to setup authentication and configure authorization for the CGIs can be found <a href="cgiauth.html">here</a>.
 
-
-
-
-
 <a name="authorized_for_all_services"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**Global Service Information Access**</td>
-</tr>
-</table>
+#### Global Service Information Access
 
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>**authorized_for_all_services=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;**</td>
+<td><b>authorized_for_all_services=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Groups:</td>
-<td>**authorized_contactgroup_for_all_services=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;**</td>
+<td><b>authorized_contactgroup_for_all_services=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Example:</td>
-<td><font color="red">**authorized_for_all_services=naemonadmin,theboss**</font></td>
+<td><font color="red"><b>authorized_for_all_services=naemonadmin,theboss</b></font></td>
 </tr>
 </table>
 
@@ -283,29 +231,21 @@ for all services as well, you must add them to the
 More information on how to setup authentication and configure authorization for the CGIs
 can be found <a href="cgiauth.html">here</a>.
 
-
-
-
-
 <a name="authorized_for_all_service_commands"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**Global Service Command Access**</td>
-</tr>
-</table>
+#### Global Service Command Access
 
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>**authorized_for_all_service_commands=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;**</td>
+<td><b>authorized_for_all_service_commands=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Groups:</td>
-<td>**authorized_contactgroup_for_all_service_commands=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;**</td>
+<td><b>authorized_contactgroup_for_all_service_commands=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Example:</td>
-<td><font color="red">**authorized_for_all_service_commands=naemonadmin**</font></td>
+<td><font color="red"><b>authorized_for_all_service_commands=naemonadmin</b></font></td>
 </tr>
 </table>
 
@@ -317,29 +257,21 @@ all hosts. If you want users able to view status and configuration information f
 services as well, you must add them to the <a href="#authorized_for_all_services">authorized_for_all_services</a> variable.
 More information on how to setup authentication and configure authorization for the CGIs can be found <a href="cgiauth.html">here</a>.
 
-
-
-
-
 <a name="authorized_for_read_only"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**Read-Only Users**</td>
-</tr>
-</table>
+#### Read-Only Users
 
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>**authorized_for_read_only=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;**</td>
+<td><b>authorized_for_read_only=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Groups:</td>
-<td>**authorized_contactgroup_for_read_only=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;**</td>
+<td><b>authorized_contactgroup_for_read_only=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Example:</td>
-<td><font color="red">**authorized_for_read_only=john,mark**</font></td>
+<td><font color="red"><b>authorized_for_read_only=john,mark</b></font></td>
 </tr>
 </table>
 
@@ -347,24 +279,17 @@ A comma-delimited list of usernames that have read-only rights in the CGIs. This
 service or host commands normally shown on the extinfo CGI pages. It will also block
 comments from being shown to read-only users.
 
-
-
-
 <a name="lock_author_names"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**Lock Author Names**</td>
-</tr>
-</table>
+#### Lock Author Names
 
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>**lock_author_names=[0/1]**</td>
+<td><b>lock_author_names=[0/1]</b></td>
 </tr>
 <tr>
 <td valign=top>Example:</td>
-<td><font color="red">**lock_author_names=1**</font></td>
+<td><font color="red"><b>lock_author_names=1</b></font></td>
 </tr>
 </table>
 
@@ -376,24 +301,17 @@ author name associated with the command request.
 * 0 = Allow users to change author names when submitting commands
 * 1 = Prevent users from changing author names (default)
 
-
-
-
 <a name="refresh_rate"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**CGI Refresh Rate**</td>
-</tr>
-</table>
+#### CGI Refresh Rate
 
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>**refresh_rate=&lt;rate_in_seconds&gt;**</td>
+<td><b>refresh_rate=&lt;rate_in_seconds&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Example:</td>
-<td><font color="red">**refresh_rate=90**</font></td>
+<td><font color="red"><b>refresh_rate=90</b></font></td>
 </tr>
 </table>
 
@@ -401,35 +319,28 @@ This option allows you to specify the number of seconds between page refreshes
 for all pages which use automatic refresh. You can also always add &refresh=<seconds>
 to the url to override the default refresh interval.
 
-
-
-
 <a name="audio_alerts"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**Audio Alerts**</td>
-</tr>
-</table>
+#### Audio Alerts
 
 <table border="0">
 <tr>
 <td valign=top>Formats:</td>
 <td>
-**host_unreachable_sound=&lt;sound_file&gt;**
-**host_down_sound=&lt;sound_file&gt;**
-**service_critical_sound=&lt;sound_file&gt;**
-**service_warning_sound=&lt;sound_file&gt;**
-**service_unknown_sound=&lt;sound_file&gt;**
+<b>host_unreachable_sound=&lt;sound_file&gt;</b><br>
+<b>host_down_sound=&lt;sound_file&gt;</b><br>
+<b>service_critical_sound=&lt;sound_file&gt;</b><br>
+<b>service_warning_sound=&lt;sound_file&gt;</b><br>
+<b>service_unknown_sound=&lt;sound_file&gt;</b><br>
 </td>
 </tr>
 <tr>
 <td valign=top>Examples:</td>
 <td>
-<font color="red">**host_unreachable_sound=hostu.wav**</font>
-<font color="red">**host_down_sound=hostd.wav**</font>
-<font color="red">**service_critical_sound=critical.wav**</font>
-<font color="red">**service_warning_sound=warning.wav**</font>
-<font color="red">**service_unknown_sound=unknown.wav**</font>
+<font color="red"><b>host_unreachable_sound=hostu.wav</b></font><br>
+<font color="red"><b>host_down_sound=hostd.wav</b></font><br>
+<font color="red"><b>service_critical_sound=critical.wav</b></font><br>
+<font color="red"><b>service_warning_sound=warning.wav</b></font><br>
+<font color="red"><b>service_unknown_sound=unknown.wav</b></font><br>
 </td>
 </tr>
 </table>
@@ -443,25 +354,17 @@ more services in an unknown state (see the order in the example above). Audio
 files are assumed to be in the **media/** subdirectory in your HTML
 directory (i.e. */usr/share/naemon/root/thruk/media*).
 
-
-
-
-
 <a name="escape_html_tags"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**Escape HTML Tags Option**</td>
-</tr>
-</table>
+#### Escape HTML Tags Option
 
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>**escape_html_tags=[0/1]**</td>
+<td><b>escape_html_tags=[0/1]</b></td>
 </tr>
 <tr>
 <td valign=top>Example:</td>
-<td><font color="red">**escape_html_tags=1**</font></td>
+<td><font color="red"><b>escape_html_tags=1</b></font></td>
 </tr>
 </table>
 
@@ -469,49 +372,34 @@ This option determines whether or not HTML tags in host and service (plugin) out
 is escaped in the CGIs. If you enable this option, your plugin output will not be
 able to contain clickable hyperlinks.
 
-
-
-
-
 <a name="notes_url_target"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**Notes URL Target**</td>
-</tr>
-</table>
+#### Notes URL Target
 
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>**notes_url_target=[target]**</td>
+<td><b>notes_url_target=[target]</b></td>
 </tr>
 <tr>
 <td valign=top>Example:</td>
-<td><font color="red">**notes_url_target=_blank**</font></td>
+<td><font color="red"><b>notes_url_target=_blank</b></font></td>
 </tr>
 </table>
 
 This option determines the name of the frame target that notes URLs should be displayed in.
 Valid options include *_blank*, *_self*, *_top*, *_parent*, or any other valid target name.
 
-
-
-
 <a name="action_url_target"></a>
-<table border="0" width="100%">
-<tr>
-<td bgcolor="#cbcbcb">**Action URL Target**</td>
-</tr>
-</table>
+#### Action URL Target
 
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>**action_url_target=[target]**</td>
+<td><b>action_url_target=[target]</b></td>
 </tr>
 <tr>
 <td valign=top>Example:</td>
-<td><font color="red">**action_url_target=_blank**</font></td>
+<td><font color="red"><b>action_url_target=_blank</b></font></td>
 </tr>
 </table>
 
