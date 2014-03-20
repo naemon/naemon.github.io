@@ -21,6 +21,8 @@ title: Naemon User Documentation
 
 <a href="knownissues.html">Known issues</a>
 
+<a href="config-incompat3to4.html">Configuration Incompatibilities Nagios 3 -&gt; Naemon</a>
+
 ### Support
 
 <a href="http://www.naemon.org/community/" target="_blank">Support - Community</a>
