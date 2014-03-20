@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Naemon Documentation
+title: Naemon User Documentation
 ---
 ## Table of Contents
 ### About
