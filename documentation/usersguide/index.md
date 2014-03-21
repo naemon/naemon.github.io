@@ -75,20 +75,6 @@ topic is covered in the [Developers Guide](/documentation/developer/#build_naemo
 
 
 
-
-### Support
-
-Naemons philosophy is "from the community, for the community", so there are many
-ways to get in touch with other users.
-
-We have several of the usual means of contact:
-
- * Mailing lists: [users list](https://www.monitoring-lists.org/list/listinfo/naemon-users/) | [developers list](https://www.monitoring-lists.org/list/listinfo/naemon-dev/)
- * IRC channels: #naemon and #naemon-devel on freenode
- * Support Forum: [monitoring-portal.org](http://monitoring-portal.org/wbb/index.php?page=Board&boardID=111) (english/german)
-
-
-
 ### Getting Started
 
 #### After Installation
@@ -126,11 +112,6 @@ Compare at least those 3 files/folders with your existing installation.
 
 <div class="alert alert-info"><i class="glyphicon glyphicon-info-sign"></i> Naemon can coexist with your current installation, it uses different users and folders.</div>
 
-
-### Configuring Naemon
-
-For now, we'll have to refer you to the [nagios documentation][nagios] for core documentation.
-So [please help](/community) writing our own documentation as soon as possible.
 
 ### Running Naemon
 
@@ -182,51 +163,6 @@ Starting Naemon:
 #>/etc/init.d/naemon start
 [ ok ] Starting naemon: :.
 ```
-
-### The Basics
-
-### Advanced Topics
-
-#### External commands
-
-#### Query Handler
-
-
-### Security and Performance Tuning
-
-#### Security considerations
-
-#### Tuning Nagios for maximum performance
-
-#### Using the naemonstats utility
-
-
-
-### Naemon Addons
-
-#### Thruk
-
-#### Livestatus
-
-
-
-### Integration With Other Software
-
-#### PNP
-
-#### Merlin
-
-#### Mod-Gearman
-
-#### NDO
-
-#### OMD
-
-
-
-### Development
-
-See the [development section](/documentation/developers) for API and developers instructions.
 
 
 

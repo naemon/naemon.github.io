@@ -1,8 +1,10 @@
 ---
-layout: doc
-title: Naemon User Documentation
+layout: doctoc
+title: User Documentation
 ---
+
 ## Table of Contents
+
 ### About
 
 <a href="about.html#whatis">What is Naemon?</a>
@@ -23,11 +25,15 @@ title: Naemon User Documentation
 
 <a href="config-incompat3to4.html">Configuration Incompatibilities Nagios 3 -&gt; Naemon</a>
 
+
+
 ### Support
 
-<a href="http://www.naemon.org/community/" target="_blank">Support - Community</a>
+<a href="support.html">Support</a>
 
-<a href="http://library.nagios.com" target="_blank">Nagios Library - Nagios (Naemon) tips, tutorials, documentation, and manuals</a>
+<a href="/community">Community</a>
+
+
 
 ### Getting Started
 
@@ -65,13 +71,15 @@ title: Naemon User Documentation
 
 <a href="cgiauth.html">Configuring authorization for the CGIs</a>
 
+
+
 ### Running Naemon
 
 <a href="verifyconfig.html">Verifying your configuration</a>
 
 <a href="startstop.html">Starting and stopping Naemon</a>
 
-<div id="basics">
+
 
 ### The Basics
 
@@ -98,6 +106,8 @@ title: Naemon User Documentation
 <a href="notifications.html">Notifications</a>
 
 <a href="cgis.html">Information on the CGIs</a>
+
+
 
 ###Advanced Topics
 
@@ -148,6 +158,7 @@ title: Naemon User Documentation
 <a href="objecttricks.html">Time-saving tips for object definitions</a>
 
 
+
 ### Security and Performance Tuning
 
 <a href="security.html">Security considerations</a>
@@ -164,6 +175,34 @@ title: Naemon User Documentation
 
 <a href="mrtggraphs.html">Graphing Naemon performance statistics</a>
 
+
+
+### Naemon Addons
+
+<a href="addons.html#thruk">Thruk</a>
+
+<a href="livestatus.html">Livestatus</a>
+
+<a href="addons.html#nrpe">NRPE</a>
+
+<a href="addons.html#nsca">NSCA</a>
+
+<a href="addons.html#ndoutils">NDOUtils</a>
+
+<a href="addons.html#pnp">PNP</a>
+
+<a href="addons.html#merlin">Merlin</a>
+
+<a href="addons.html#mod_gearman">Mod-Gearman</a>
+
+<a href="addons.html#omd">OMD</a>
+
+<a href="addons.html#others">Other addons</a>
+
+<a href="http://exchange.nagios.org/" target="_blank">Nagios Exchange</a>
+
+
+
 ### Integration With Other Software</a>
 
 <a href="integration.html">Integration Overview</a>
@@ -173,18 +212,6 @@ title: Naemon User Documentation
 <a href="int-tcpwrappers.html">TCP Wrappers</a>
 
 
-### Naemon Addons
-
-<a href="addons.html#nrpe">NRPE</a>
-
-<a href="addons.html#nsca">NSCA</a>
-
-<a href="addons.html#ndoutils">NDOUtils</a>
-
-<a href="addons.html#others">Other addons</a>
-
-<a href="http://exchange.nagios.org/" target="_blank">Nagios Exchange</a>
-
 
 ### Development
 
@@ -192,7 +219,12 @@ title: Naemon User Documentation
 
 <a href="epnplugins.html">Developing Plugins For Use With Embedded Perl</a>
 
-## Licensing
+<a href="/documentation/developer/">Developer Documenatation</a>
+
+
+
+### Licensing
+
 Copyright &copy; 2014-     Naemon Development Team and Community Contributors
 
 Copyright &copy; 2009-2010 Nagios Core Development Team and Community Contributors

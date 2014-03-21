@@ -8,6 +8,7 @@ Technical and api documentation for Naemon.
 ## Table of Contents
 
 
+
 ### Core
 
 <a href="build.html">Build Naemon From Scratch</a>
@@ -26,6 +27,15 @@ Technical and api documentation for Naemon.
 
 
 
-### Documentation
+### Naemon Plugins
 
-<a href="docs.html">Run Naemon Website Locally</a>
+<a href="/documentation/usersguide/pluginapi.html">Plugin API</a>
+
+<a href="epnplugins.html">Developing Plugins For Use With Embedded Perl</a>
+
+<a href="https://www.monitoring-plugins.org/doc/guidelines.html">Monitoring Plugins Developer Guidelines</a>
+
+
+### Documentation / Website
+
+<a href="website.html">Run Naemon Website Locally</a>

@@ -1,0 +1,1 @@
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-pencil"></i> This sections could need some more details. See <a href="/review_required.html#details_missing">instructions</a> on how to help out.</div>
