@@ -24,15 +24,15 @@ for my $name (sort keys %{$tables}) {
     print "    <th data-sort='true'>Description</th>\n";
     print "</tr>\n";
     if($name eq 'comments' or $name eq 'downtimes') {
-        print "<tr><td>_host_</td><td></td><td>All columns from the hosts table are available via host_ prefix.</td></tr>\n";
-        print "<tr><td>_service_</td><td></td><td>All columns from the services table are available via service_ prefix.</td></tr>\n";
+        print "<tr><td>_host_</td><td></td><td>All columns from the <a href='#hosts'>hosts table</a> are available via host_ prefix.</td></tr>\n";
+        print "<tr><td>_service_</td><td></td><td>All columns from the <a href='#services'>services table</a> are available via service_ prefix.</td></tr>\n";
     }
     if($name eq 'services') {
-        print "<tr><td>_host_</td><td></td><td>All columns from the hosts table are available via host_ prefix.</td></tr>\n";
+        print "<tr><td>_host_</td><td></td><td>All columns from the <a href='#hosts'>hosts table</a> are available via host_ prefix.</td></tr>\n";
     }
     if($name eq 'log' or $name eq 'statehist') {
-        print "<tr><td>_host_</td><td></td><td>All columns from the hosts table are available via current_host_ prefix.</td></tr>\n";
-        print "<tr><td>_service_</td><td></td><td>All columns from the services table are available via current_service_ prefix.</td></tr>\n";
+        print "<tr><td>_host_</td><td></td><td>All columns from the <a href='#hosts'>hosts table</a> are available via current_host_ prefix.</td></tr>\n";
+        print "<tr><td>_service_</td><td></td><td>All columns from the <a href='#services'>services table</a> are available via current_service_ prefix.</td></tr>\n";
     }
     for my $col (sort keys %{$tables->{$name}}) {
         next if $name eq 'comments'  and $col =~ m/^host_/;
@@ -47,7 +47,7 @@ for my $name (sort keys %{$tables}) {
         $description =~ s/\Q (not used by Nagios standard web pages)\E//gmx;
         $description =~ s/Nagios/Naemon/gmx;
         $description =~ s/PNP4Naemon/PNP4Nagios/gmx;
-        print "<tr><td>".$col."</td><td>".$tables->{$name}->{$col}->{type}."</td><td>".$tables->{$name}->{$col}->{description}."</td></tr>\n";
+        print "<tr><td>".$col."</td><td>".$tables->{$name}->{$col}->{type}."</td><td>".$description."</td></tr>\n";
     }
     print "</table>\n";
     print "\n\n";
