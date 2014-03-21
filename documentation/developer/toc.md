@@ -33,7 +33,7 @@ Technical and api documentation for Naemon.
 
 <a href="/documentation/usersguide/pluginapi.html">Plugin API</a>
 
-<a href="epnplugins.html">Developing Plugins For Use With Embedded Perl</a>
+<a href="/documentation/usersguide/epnplugins.html">Developing Plugins For Use With Embedded Perl</a>
 
 <a href="https://www.monitoring-plugins.org/doc/guidelines.html">Monitoring Plugins Developer Guidelines</a>
 

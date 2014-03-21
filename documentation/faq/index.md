@@ -4,7 +4,7 @@ title: FAQ
 ---
 
 Frequently asked questions... If you don't find the answer here, it's either in
-the [Users Guide](/documentation/usersguide), the [Developers Guide](/documentation/developers)
+the [Users Guide](/documentation/usersguide), the [Developers Guide](/documentation/developer)
 or not yet written. For the latter, see [](#)
 
 ### General
