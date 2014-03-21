@@ -20,3 +20,10 @@ TH.Macros { font-family: verdana,arial,serif; font-size: 9pt; font-weight: bold;
 .MacroNo { font-family: verdana,arial,serif; font-size: 8pt; background-color: white; }
 .MacroYes { font-family: verdana,arial,serif; font-size: 8pt; font-weight: bold; background-color: #00ff00; }
 .MacroType { font-family: verdana,arial,serif; font-size: 8pt; font-weight: bold; background-color: #cbcbcb; }
+
+TABLE.livestatus_table TH:first-child {
+    width: 280px;
+}
+TABLE.livestatus_table TH:last-child {
+    width: 500px;
+}

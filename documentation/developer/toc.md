@@ -25,6 +25,8 @@ Technical and api documentation for Naemon.
 
 <a href="queryhandlers.html">Query Handlers</a>
 
+<a href="/documentation/usersguide/livestatus.html">Livestatus</a>
+
 
 
 ### Naemon Plugins
