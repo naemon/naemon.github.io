@@ -3,124 +3,139 @@ layout: doctoc
 title: Upgrading Naemon
 ---
 
-{% include review_required.md %}
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guide</a>
 
-### Contents<br><br>
 
-<a href="#nagios3x">Upgrading from previous Naemon 3.x releases</a><br>
-<a href="#nagios2x">Upgrading from Naemon 2.x</a><br>
-<a href="#rpm">Upgrading from an RPM installation</a><br>
+### Upgrading Naemon From an DEB/RPM Installation
 
-<a name="nagios3x"></a>
+Upgrading an existing installation which is already installed from a package repository is
+probably the easiest task. Since these repositories are designed for exactly this task, you
+just have to use your favorite package tool and perform the update.
 
-### Upgrading From Previous Naemon 3.x Releases
+Debian / Ubuntu:
 
-As newer alpha, beta, and stable releases of Naemon 3.x are released, you should strongly consider upgrading as soon as possible.  Newer releases usually contain critical bug fixes, so its important to stay up to date.  Assuming you've already installed Naemon from source code as described in the <a href="quickstart.html">quickstart guide</a>, you can install newer versions of Naemon 3.x easily.  You don't even need root access to do it, as everything that needed to be done as root was done during the initial install.  Here's the upgrade process...
+```bash
+  %> apt-get update
+  %> apt-get install naemon
+```
 
-Make sure you have a good backup of your existing Naemon installation and configuration files.  If anything goes wrong or doesn't work, this will allow you to rollback to your old version.
+Redhat / Centos / Fedora:
 
-Become the nagios user.  Debian/Ubuntu users should use <i>sudo -s nagios</i>.
+```bash
+  %> yum install naemon
+```
 
-<pre>
-su -l nagios
-</pre>
+SLES / OpenSuse:
 
-Removed the following old HTML files that were used by the web frontend.  They have been replaced by PHP equivalents.
+```bash
+  %> zypper install naemon
+```
 
-<pre>
-rm /usr/local/nagios/share/{main,side,index}.html
-</pre>
 
-Download the source code tarball of the latest version of Naemon (visit <a href="http://www.nagios.org/download/">http://www.nagios.org/download/</a> for the link to the latest version).
+### Upgrading From Nagios 3.x Releases
 
-<pre>
-wget http://osdn.dl.sourceforge.net/sourceforge/nagios/nagios-<i>3.x</i>.tar.gz
-</pre>
+As newer and stable releases of Naemon are released, you should strongly consider upgrading as soon as possible.
+Newer releases usually contain <a href="/documenation/developer/bugs/">critical bug fixes</a>, so its important to stay up to date.
+Assuming you've already installed Nagios in '/etc/nagios', you can install Naemon easily besides your currently installation.
+Here's the upgrade process...
 
-Extract the Naemon source code tarball.
+Make sure you have a good backup of your existing installation and configuration files.
+A Naemon installation won't alter your Nagios installation, but just in case
+anything goes wrong or doesn't work, this will allow you to rollback to your old version.
 
-<pre>
-tar xzf nagios-<i>3.x</i>.tar.gz
-cd nagios-<i>3.x</i>
-</pre>
+Migration from Nagios is usually very easy. After the installation of Naemon
+you only need to copy the conf.d folder into /etc/naemon/conf.d. Also verify
+that your USER macros in your /etc/naemon/resource.cfg point to the same locations
+as before.
 
-Run the Naemon configure script, passing the name of the group used to control external command file permissions like so:
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i>
+You may have to adjust the paths in the following commands to your needs.
+</div>
 
-<pre>
-./configure --with-command-group=nagcmd
-</pre>
+Clean up sample config but make sure you don't need any of those files anymore.
 
-Compile the Naemon source code.
+```bash
+  %> rm -f /etc/naemon/conf.d/*
+```
 
-<pre>
-make all
-</pre>
+Copy existing configuration files:
 
-Install updated binaries, documentation, and web web interface.  Your existing configuration files will not be overwritten by this step.
+```bash
+  %> cp -rp /etc/nagios/conf.d/      /etc/naemon/conf.d/
+  %> cp -rp /etc/nagios/resource.cfg /etc/naemon/
+  %> cp -rp /etc/nagios/cgi.cfg      /etc/naemon/
+```
 
-<pre>
-make install
-</pre>
+Your object configuration files may vary, just copy them into the new conf.d folder.
 
-Verify your configuration files.  Correct any errors shown here before proceeding with the next step.
+Copy existing logfiles and archive:
 
-<pre>
-/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
-</pre>
+```bash
+  %> cp -rp /var/log/nagios/archive/*.log /var/log/naemon/archive
+  %> cp -rp /var/log/nagios/nagios.log /var/log/naemon/naemon.log
+```
 
-Restart Naemon.  Debian/Ubuntu users should use <i>/etc/init.d/nagios restart</i>.
+Copy existing status file:
 
-<pre>
-/sbin/service nagios restart
-</pre>
+```bash
+  %> cp -rp /var/lib/nagios/retention.dat  /var/lib/naemon/
+```
+
+<div class="alert alert-info"><i class="glyphicon glyphicon-info-sign"></i> Naemon can coexist with your current installation, it uses different users and folders.</div>
+
+Edit the main configuration file and replace
+
+<ul>
+<li>nagios_user with naemon_user
+<li>nagios_group with naemon_group
+</ul>
+
+Read the <a href="config-incompat3to4.html">configuration incompatibilities</a> guide.
+
+Start naemon
+
+```bash
+  %> /etc/init.d/naemon start
+```
+
+In case of configuration errors, see the <a href="verifyconfig.html">verify configuration</a>
+page and the <a href="startstop.html">start/stop</a> page.
 
 That's it - you're done!
 
-<a name="nagios2x"></a>
 
-### Upgrading From Naemon 2.x
 
-It shouldn't be too difficult to upgrade from Naemon 2.x to Naemon 3.  The upgrade is essentially the same as what is described above for upgrading to newer 3.x releases.  You will, however, have to change your configuration files a bit so they work with Naemon 3:
+
+### Upgrading From Nagios 2.x
+
+It shouldn't be too difficult to upgrade from Nagios 2.x to Naemon.
+The upgrade is essentially the same as what is described above for upgrading to newer Naemon releases.
+You will, however, have to change your configuration files a bit so they work with Naemon:
 
 <ul>
-<li>The old <i>service_reaper_frequency</i> variable in the main config file has been renamed to <a href="configmain.html#check_result_reaper_frequency">check_result_reaper_frequency</a>.</li>
-<li>The old <i>$NOTIFICATIONNUMBER$</i> macro has been deprecated in favor of new <a href="macrolist.html#hostnotificationnumber">$HOSTNOTIFICATIONNUMBER$</a> and <a href="macrolist.html#servicenotificationnumber">$SERVICENOTIFICATIONNUMBER$</a> macros.</li>
-<li>The old <i>parallelize</i> directive in service definitions is now deprecated and no longer used, as all service checks are run in parallel.</li>
-<li>The old <i>aggregate_status_updates</i> option has been removed.  All status file updates are now aggregated at a minimum interval of 1 second.</li>
-<li>Extended host and extended service definitions have been deprecated.  They are still read and processed by Naemon, but it is recommended that you move the directives found in these definitions to your host and service definitions, respectively.</li>
-<li>The old <i>downtime_file</i> file variable in the main config file is no longer supported, as scheduled downtime entries are now saved in the <a href="configmain.html#state_retention_file">retention file</a>.  To preserve existing downtime entries, stop Naemon 2.x and append the contents of your old downtime file to the retention file.</li>
-<li>The old <i>comment_file</i> file variable in the main config file is no longer supported, as comments are now saved in the <a href="configmain.html#state_retention_file">retention file</a>.  To preserve existing comments, stop Naemon 2.x and append the contents of your old comment file to the retention file.</li>
+<li>The old <i>service_reaper_frequency</i> variable in the main config file has been renamed to
+    <a href="configmain.html#check_result_reaper_frequency">check_result_reaper_frequency</a>.</li>
+<li>The old <i>$NOTIFICATIONNUMBER$</i> macro has been deprecated in favor of new
+    <a href="macrolist.html#hostnotificationnumber">$HOSTNOTIFICATIONNUMBER$</a> and
+    <a href="macrolist.html#servicenotificationnumber">$SERVICENOTIFICATIONNUMBER$</a> macros.</li>
+<li>The old <i>parallelize</i> directive in service definitions is now deprecated and no
+    longer used, as all service checks are run in parallel.</li>
+<li>The old <i>aggregate_status_updates</i> option has been removed. All status file updates are
+    now aggregated at a minimum interval of 1 second.</li>
+<li>Extended host and extended service definitions have been deprecated. They are still read and
+    processed by Naemon, but it is recommended that you move the directives found in these definitions
+    to your host and service definitions, respectively.</li>
+<li>The old <i>downtime_file</i> file variable in the main config file is no longer supported, as
+    scheduled downtime entries are now saved in the <a href="configmain.html#state_retention_file">retention file</a>.
+    To preserve existing downtime entries, stop Naemon and append the contents of your old downtime
+    file to the retention file.</li>
+<li>The old <i>comment_file</i> file variable in the main config file is no longer supported, as
+    comments are now saved in the <a href="configmain.html#state_retention_file">retention file</a>.
+    To preserve existing comments, stop Naemon and append the contents of your old comment file to the retention file.</li>
 </ul>
 
-Also make sure to read the "<a href="whatsnew.html">What's New</a>" section of the documentation.  It describes all the changes that were made to the Naemon 3 code since the latest stable release of Naemon 2.x.  Quite a bit has changed, so make sure you read it over.
+Also make sure to read the "<a href="whatsnew.html">What's New</a>" section of the documentation.
+It describes all the changes that were made to the Naemon code since the latest stable releases.
+Quite a bit has changed, so make sure you read it over.
 
-<a name="rpm"></a>
 
-### Upgrading From an RPM Installation
-
-If you currently have an RPM- or Debian/Ubuntu APT package-based installation of Naemon and you would like to transition to installing Naemon from the official source code distribution, here's the basic process you should follow:
-
-<ol>
-<li>Stop Naemon</li>
-<li>Backup your existing Naemon installation</li>
-<ul>
-<li>Configuration files</li>
-<ul>
-<li>Main config file (usually <i>nagios.cfg</i>)</li>
-<li>Resource config file (usually <i>resource.cfg</i>)</li>
-<li>CGI config file (usually <i>cgi.cfg</i>)</li>
-<li>All your object definition files</li>
-</ul>
-<li>Retention file (usually <i>retention.dat</i>)</li>
-<li>Current Naemon log file (usually <i>nagios.log</i>)</li>
-<li>Archived Naemon log files</li>
-</ul>
-<li>Uninstall the original RPM or APT package</li>
-<li>Install Naemon from source by following the <a href="quickstart.html">quickstart guide</a></li>
-<li>Restore your original Naemon configuration files, retention file, and log files</li>
-<li><a href="verifyconfig.html">Verify</a> your configuration and <a href="startstop.html">start</a> Naemon</li>
-</ol>
-
-Note that different RPMs or APT packages may install Naemon in different ways and in different locations.  Make sure you've backed up all your critical Naemon files before removing the original RPM or APT package, so you can revert back if you encounter problems.

@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Naemon Developer Documentation
+title: Developer Documentation
 ---
 
 Technical and api documentation for Naemon.

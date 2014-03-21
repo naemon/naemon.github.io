@@ -1,6 +1,6 @@
 ---
 layout: doctoc
-title: Naemon Quickstart Installation Guides
+title: Quickstart Installation Guides
 ---
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="upgrading.html">Upgrading Naemon</a>, <a href="config.html">Configuration Overview</a>, <a href="security.html">Security Considerations</a>
 

@@ -96,22 +96,6 @@ Navigate to your server (<ip>/naemon) with a web browser, and log in using "admi
 You should now be logged in to your new monitoring system.
 
 
-#### Migration From Nagios
-
-Migration from Nagios is usually very easy. After the installation of Naemon
-you only need to copy the conf.d folder into /etc/naemon/conf.d. Also verify
-that your USER macros in your /etc/naemon/resource.cfg point to the same locations
-as before.
-
-Compare at least those 3 files/folders with your existing installation.
-
- * Objects: /etc/naemon/conf.d
- * User Macros: /etc/naemon/resource.cfg
- * CGI Settings: /etc/naemon/cgi.cfg
- * Logfile Archive: /var/log/naemon/archive
-
-<div class="alert alert-info"><i class="glyphicon glyphicon-info-sign"></i> Naemon can coexist with your current installation, it uses different users and folders.</div>
-
 
 ### Running Naemon
 

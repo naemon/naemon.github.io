@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Naemon Documentation
+title: Documentation
 ---
 
 ### Run Naemon Website Locally

@@ -1,6 +1,6 @@
 ---
 layout: doctoc
-title: Naemon Plugins
+title: Plugins
 ---
 
 {% include review_required.md %}
