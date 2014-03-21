@@ -9,11 +9,13 @@ title: User Documentation
 
 <a href="about.html#whatis">What is Naemon?</a>
 
-<a href="about.html#requirements">System requirements</a>
+<a href="about.html#components">Components</a>
+
+<a href="about.html#system_requirements">System requirements</a>
 
 <a href="about.html#licensing">Licensing</a>
 
-<a href="about.html#downloading">Downloading the latest version</a>
+<a href="about.html#downloading_the_latest_version">Downloading the latest version</a>
 
 
 
