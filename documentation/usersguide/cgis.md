@@ -52,7 +52,7 @@ authorization can be found <a href="cgiauth.html">here</a>.
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>status.cgi<b></td>
+<td><b>status.cgi</b></td>
 </tr>
 </table>
 
@@ -93,7 +93,7 @@ view of all services (or those associated with a particular host).
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>statusmap.cgi<b></td>
+<td><b>statusmap.cgi</b></td>
 </tr>
 </table>
 
@@ -139,7 +139,7 @@ but it doesn't make sense to even generate the map if you can't see all the host
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>tac.cgi<b></td>
+<td><b>tac.cgi</b></td>
 </tr>
 </table>
 
@@ -181,7 +181,7 @@ you're monitoring and you need to keep a single screen up to alert you of proble
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>outages.cgi<b></td>
+<td><b>outages.cgi</b></td>
 </tr>
 </table>
 
@@ -221,7 +221,7 @@ of the outage they are causing.
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>config.cgi<b></td>
+<td><b>config.cgi</b></td>
 </tr>
 </table>
 
@@ -257,7 +257,7 @@ time periods, services, etc.) that you have defined in your <a href="configobjec
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>cmd.cgi<b></td>
+<td><b>cmd.cgi</b></td>
 </tr>
 </table>
 
@@ -305,7 +305,7 @@ a starting point for issuing commands.
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>extinfo.cgi<b></td>
+<td><b>extinfo.cgi</b></td>
 </tr>
 </table>
 
@@ -347,7 +347,7 @@ navigation bar, or by clicking on a host or service link in the output of the <a
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>showlog.cgi<b></td>
+<td><b>showlog.cgi</b></td>
 </tr>
 </table>
 
@@ -385,7 +385,7 @@ notifications present in archived log files by using the navigational links near
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>history.cgi<b></td>
+<td><b>history.cgi</b></td>
 </tr>
 </table>
 
@@ -428,7 +428,7 @@ files by using the navigational links near the top of the page.
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>notifications.cgi<b></td>
+<td><b>notifications.cgi</b></td>
 </tr>
 </table>
 
@@ -471,7 +471,7 @@ the navigational links near the top of the page.
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>trends.cgi<b></td>
+<td><b>trends.cgi</b></td>
 </tr>
 </table>
 
@@ -514,7 +514,7 @@ The CGI uses Thomas Boutell's <a href="http://www.boutell.com/gd/">gd</a> librar
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>avail.cgi<b></td>
+<td><b>avail.cgi</b></td>
 </tr>
 </table>
 
@@ -558,7 +558,7 @@ the path specified by the log_archive_path directive.
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>summary.cgi<b></td>
+<td><b>summary.cgi</b></td>
 </tr>
 </table>
 <table border="0" width="100%">
@@ -611,7 +611,7 @@ This CGI provides some generic reports about host and service alert data, includ
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>bp.cgi<b></td>
+<td><b>bp.cgi</b></td>
 </tr>
 </table>
 
@@ -653,7 +653,7 @@ naemon services to accomplish standard tasks like notifications and reporting.
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>conf.cgi<b></td>
+<td><b>conf.cgi</b></td>
 </tr>
 </table>
 
@@ -691,7 +691,7 @@ Naemon objects like hosts, services, commands, etc...
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>reports2.cgi<b></td>
+<td><b>reports2.cgi</b></td>
 </tr>
 </table>
 
@@ -729,7 +729,7 @@ The Reports CGI creates SLA reports and delivers them by mail.
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>panorama.cgi<b></td>
+<td><b>panorama.cgi</b></td>
 </tr>
 </table>
 
@@ -767,7 +767,7 @@ The Panorama CGI lets contacts define individual dashboards on multiple tabs.
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>minemap.cgi<b></td>
+<td><b>minemap.cgi</b></td>
 </tr>
 </table>
 
@@ -810,7 +810,7 @@ share common services names.
 <table border="0">
 <tr>
 <td>Url:</td>
-<td><b>mobile.cgi<b></td>
+<td><b>mobile.cgi</b></td>
 </tr>
 </table>
 

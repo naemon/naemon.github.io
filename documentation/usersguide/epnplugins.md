@@ -24,28 +24,24 @@ or if you prefer, Mod-Gearman compiled with an embedded Perl interpreter.
 
 ### Target Audience
 
-<ul>
-<li>Average Perl developers; those with an appreciation of the languages powerful features without knowledge of internals or an in depth knowledge of those features.<br><br>
-<li>Those with a utilitarian appreciation rather than a great depth of understanding.<br><br>
-<li>If you are happy with Perl objects, name management, data structures, and the debugger, that's probably sufficient.<br><br>
-</ul>
+* Average Perl developers; those with an appreciation of the languages powerful features
+  without knowledge of internals or an in depth knowledge of those features.
+* Those with a utilitarian appreciation rather than a great depth of understanding.
+* If you are happy with Perl objects, name management, data structures, and the debugger,
+  that's probably sufficient.
 
 
 
 ### Things you should do when developing a Perl Plugin (ePN or not)
 
-<ul>
-<li>Always always generate some output<br><br>
-<li>Use 'use utils' and import the stuff it exports ($TIMEOUT %ERRORS &amp;print_revision &amp;support)<br><br>
-<li>Have a look at how the standard Perl plugins do their stuff e.g.<br><br>
-<ul>
-<li>Always exit with $ERRORS{CRITICAL}, $ERRORS{OK}, etc.
-<li>Use getopt to read command line arguments
-<li>Manage timeouts
-<li>Call print_usage (supplied by you) when there are no command line arguments
-<li>Use standard switch names (eg H 'host', V 'version')
-</ul>
-</ul>
+* Always always generate some output
+* Use 'use utils' and import the stuff it exports ($TIMEOUT %ERRORS &amp;print_revision &amp;support)
+* Have a look at how the standard Perl plugins do their stuff e.g.
+* Always exit with $ERRORS{CRITICAL}, $ERRORS{OK}, etc.
+* Use getopt to read command line arguments
+* Manage timeouts
+* Call print_usage (supplied by you) when there are no command line arguments
+* Use standard switch names (eg H 'host', V 'version')
 
 
 
@@ -104,19 +100,16 @@ a;                            &amp;$a_cr;
 </ul>
 <br>
 <li>Be aware of where you can get more information.<br><br>
-<p>
+
 Useful information can be had from the usual suspects (the O'Reilly books, plus Damien Conways "Object Oriented Perl") but for the really useful stuff in the right context start at Stas Bekman's mod_perl guide at <a href="http://perl.apache.org/guide/">http://perl.apache.org/guide/</a>.
-</p>
-<p>
+
 This wonderful book sized document has nothing whatsoever about Naemon,
 but all about writing Perl programs for the embedded Perl interpreter in Apache (ie Doug MacEacherns mod_perl).
-</p>
-<p>
+
 The perlembed manpage is essential for context and encouragement.
-</p>
-<p>
+
 On the basis that Lincoln Stein and Doug MacEachern know a thing or two about Perl and embedding Perl, their book 'Writing Apache Modules with Perl and C' is almost certainly worth looking at.
-</p>
+
 <li>Be aware that your plugin may return strange values with an ePN and that this is likely to be caused by the problem in item #4 above<br><br>
 <li>Be prepared to debug via:<br><br>
 <ul>
@@ -132,26 +125,22 @@ perl -MO::Deparse &lt;your_program&gt;
 </pre>
 <br>
 <li>Be aware of what ePN is transforming your plugin too, and if all else fails try and debug the transformed version.<br><br>
-<p>
+
 As you can see below p1.pl rewrites your plugin as a subroutine called 'hndlr' in the package named 'Embed::&lt;something_related_to_your_plugin_file_name&gt;'.
-</p>
-<p>
+
 Your plugin may be expecting command line arguments in @ARGV so pl.pl also assigns @_ to @ARGV.
-</p>
-<p>
+
 This in turn gets 'eval' ed and if the eval raises an error (any parse error and run error), the plugin gets chucked out.
-</p>
-<p>
+
 The following output shows how a test ePN transformed the <i>check_rpc</i> plugin before attempting to execute it. Most of the code from the actual plugin is not shown, as we are interested in only the transformations that the ePN has made to the plugin).  For clarity, transformations are shown in red:
-</p>
+
 <pre>
 <font color="red">
-                package main;
-                use subs 'CORE::GLOBAL::exit';
-                sub CORE::GLOBAL::exit { die "ExitTrap: $_[0]
-(Embed::check_5frpc)"; }
-                package Embed::check_5frpc; sub hndlr { shift(@_);
-@ARGV=@_;</font>
+package main;
+use subs 'CORE::GLOBAL::exit';
+sub CORE::GLOBAL::exit { die "ExitTrap: $_[0] (Embed::check_5frpc)"; }
+package Embed::check_5frpc; sub hndlr { shift(@_); @ARGV=@_;
+</font>
 #! /usr/bin/perl
 #
 # check_rpc plugin for Naemon

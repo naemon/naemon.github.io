@@ -227,4 +227,5 @@ empty. Monitoring external commands can be useful for understanding the impacts 
 <td valign="top">
 <img src="/images/mrtg-externalcommands.png" border="0" alt="External Commands">
 </td>
+</tr>
 </table>

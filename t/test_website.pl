@@ -32,7 +32,6 @@ eval {
             url                     => $mainurl,
             like                    => 'Naemon',
             recursive               => 1,
-            skip_html_lint          => 1,
             follow                  => 1,
             check_anchors           => 1,
             check_external_links    => qr/\.(jpg|png|gif|js|css)$/, # only check images and stylesheets, we do not want to increase our download statistics here
@@ -90,13 +89,14 @@ use Data::Dumper;
 use Test::More;
 use URI::Escape;
 use Encode qw/decode_utf8/;
-#use HTML::Lint;
+use HTML::Lint;
 use LWP::UserAgent;
 
 our $pages_to_check = {};
 our $links_to_check = {};
 our $link_referer   = {};
 our $local_anchors_already_check = {};
+our $lint_already_check          = {};
 
 #########################
 sub new {
@@ -203,14 +203,16 @@ sub test_page {
     }
 
     SKIP: {
-        if($content_type =~ 'text\/html' and (!defined $opts->{'skip_html_lint'} or $opts->{'skip_html_lint'} == 0)) {
+        if($content_type =~ 'text\/html' and (!defined $opts->{'skip_html_lint'} or $opts->{'skip_html_lint'} == 0) and !$lint_already_check->{$opts->{'url'}}) {
+            $lint_already_check->{$opts->{'url'}} = 1;
             my $lint = HTML::Lint->new();
             # will result in "Parsing of undecoded UTF-8 will give garbage when decoding entities..." otherwise
             my $content = decode_utf8($return->{'content'});
             $lint->parse($content);
             my @errors = $lint->errors;
-            @errors = diag_lint_errors_and_remove_some_exceptions($lint);
-            is( scalar @errors, 0, "No errors found in HTML" );
+            @errors = remove_some_exceptions_from_lint_errors($lint);
+            is( scalar @errors, 0, "No HTML errors found on ".$opts->{'url'} );
+            diag(join("\n", @errors)) if scalar @errors > 0;
             $lint->clear_errors();
         }
     }
@@ -288,16 +290,19 @@ sub test_page {
 }
 
 #########################
-sub diag_lint_errors_and_remove_some_exceptions {
+sub remove_some_exceptions_from_lint_errors {
     my $lint = shift;
     my @return;
     for my $error ( $lint->errors ) {
         my $err_str = $error->as_string;
-        next if $err_str =~ m/Unknown\ attribute\ "data\-\w+"\ for\ tag/imx;
-        next if $err_str =~ m/Invalid\ character.*should\ be\ written\ as/imx;
-        next if $err_str =~ m/Unknown\ attribute\ "placeholder"\ for\ tag\ <input>/imx;
-        diag($error->as_string."\n");
-        push @return, $error;
+        next if $err_str =~ m/\QUnknown attribute "role" for tag\E/imx;
+        next if $err_str =~ m/\QUnknown element <footer>\E/imx;
+        next if $err_str =~ m/\QUnknown element <nav>\E/imx;
+        next if $err_str =~ m/\QUnknown attribute "data-\E/imx;
+        next if $err_str =~ m/\QUnknown attribute "charset" for tag <meta>\E/imx;
+        next if $err_str =~ m/<img[^>]+?\Q> tag has no HEIGHT and WIDTH attributes\E/imx;
+        next if $err_str =~ m/<img[^>]+?\Q> does not have ALT text defined\E/imx;
+        push @return, $error->as_string;
     }
     return @return;
 }

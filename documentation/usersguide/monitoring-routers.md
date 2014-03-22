@@ -78,7 +78,7 @@ What did you just do?  You told Naemon to look to the <i>/usr/local/nagios/etc/o
 
 ### Configuring Naemon
 
-You'll need to create some <a href="objectdefinitions.html">object definitions</a> in order to monitor a new router/switch.  </p>
+You'll need to create some <a href="objectdefinitions.html">object definitions</a> in order to monitor a new router/switch.
 
 Open the <i>switch.cfg</i> file for editing.
 

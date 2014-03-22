@@ -208,7 +208,7 @@ title: User Documentation
 
 
 
-### Integration With Other Software</a>
+### Integration With Other Software
 
 <a href="integration.html">Integration Overview</a>
 

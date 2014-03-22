@@ -552,67 +552,67 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 <td colspan='9' class='MacroType'><a name="summary_macros"></a>Summary Macros:</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalhostsup">$TOTALHOSTSUP$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalhostsup">$TOTALHOSTSUP$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalhostsdown">$TOTALHOSTSDOWN$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalhostsdown">$TOTALHOSTSDOWN$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalhostsunreachable">$TOTALHOSTSUNREACHABLE$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalhostsunreachable">$TOTALHOSTSUNREACHABLE$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalhostsdownunhandled">$TOTALHOSTSDOWNUNHANDLED$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalhostsdownunhandled">$TOTALHOSTSDOWNUNHANDLED$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalhostsunreachableunhandled">$TOTALHOSTSUNREACHABLEUNHANDLED$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalhostsunreachableunhandled">$TOTALHOSTSUNREACHABLEUNHANDLED$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalhostproblems">$TOTALHOSTPROBLEMS$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalhostproblems">$TOTALHOSTPROBLEMS$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalhostproblemsunhandled">$TOTALHOSTPROBLEMSUNHANDLED$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalhostproblemsunhandled">$TOTALHOSTPROBLEMSUNHANDLED$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalservicesok">$TOTALSERVICESOK$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalservicesok">$TOTALSERVICESOK$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalserviceswarning">$TOTALSERVICESWARNING$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalserviceswarning">$TOTALSERVICESWARNING$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalservicescritical">$TOTALSERVICESCRITICAL$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalservicescritical">$TOTALSERVICESCRITICAL$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalservicesunknown">$TOTALSERVICESUNKNOWN$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalservicesunknown">$TOTALSERVICESUNKNOWN$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalserviceswarningunhandled">$TOTALSERVICESWARNINGUNHANDLED$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalserviceswarningunhandled">$TOTALSERVICESWARNINGUNHANDLED$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalservicescriticalunhandled">$TOTALSERVICESCRITICALUNHANDLED$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalservicescriticalunhandled">$TOTALSERVICESCRITICALUNHANDLED$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalservicesunknownunhandled">$TOTALSERVICESUNKNOWNUNHANDLED$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalservicesunknownunhandled">$TOTALSERVICESUNKNOWNUNHANDLED$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalserviceproblems">$TOTALSERVICEPROBLEMS$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalserviceproblems">$TOTALSERVICEPROBLEMS$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr>
-<td class='MacroName'><a href="#totalserviceproblemsunhandled">$TOTALSERVICEPROBLEMSUNHANDLED$</a> <a href="#note10"><sup>10</sup></td>
+<td class='MacroName'><a href="#totalserviceproblemsunhandled">$TOTALSERVICEPROBLEMSUNHANDLED$</a> <a href="#note10"><sup>10</sup></a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes <a href="#note4"><sup>4</sup></a></td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr><td colspan='9'><br></td></tr>
@@ -742,7 +742,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class='MacroName'><a href="#commentdatafile">$COMMENTDATAFILE$</a></td>
-<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes< <a href="#note5"><sup>5</sup></a>/td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes<a href="#note5"><sup>5</sup></a></td>
 </tr>
 <tr>
 <td class='MacroName'><a href="#downtimedatafile">$DOWNTIMEDATAFILE$</a></td>

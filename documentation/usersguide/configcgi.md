@@ -90,7 +90,7 @@ authenticated to the web server will inherit all rights you assign to this user!
 <table border="0">
 <tr>
 <td valign=top>Format:</td>
-<td>authorized_for_system_information=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
+<td><b>authorized_for_system_information=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
 <td valign=top>Groups:</td>
@@ -326,7 +326,7 @@ author name associated with the command request.
 </table>
 
 This option allows you to specify the number of seconds between page refreshes
-for all pages which use automatic refresh. You can also always add &refresh=<seconds>
+for all pages which use automatic refresh. You can also always add &refresh=&lt;seconds&gt;
 to the url to override the default refresh interval.
 
 <a name="audio_alerts"></a>

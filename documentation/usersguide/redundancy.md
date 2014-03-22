@@ -7,9 +7,13 @@ title: Redundant and Failover Network Monitoring
 
 ### Introduction
 
-This section describes a few scenarios for implementing redundant monitoring hosts an various types of network layouts.  With redundant hosts, you can maintain the ability to monitor your network when the primary host that runs Naemon fails or when portions of your network become unreachable.
+This section describes a few scenarios for implementing redundant monitoring hosts an various types of network
+layouts. With redundant hosts, you can maintain the ability to monitor your network when the primary
+host that runs Naemon fails or when portions of your network become unreachable.
 
-<font color="red"><strong>Note:</strong></font>  If you are just learning how to use Naemon, I would suggest not trying to implement redudancy until you have becoming familiar with the <a href="#prerequisites">prerequisites</a> I've laid out.  Redundancy is a relatively complicated issue to understand, and even more difficult to implement properly.
+<font color="red"><strong>Note:</strong></font> If you are just learning how to use Naemon, I would
+suggest not trying to implement redudancy until you have becoming familiar with the <a href="#prerequisites">prerequisites</a> I've laid out.
+Redundancy is a relatively complicated issue to understand, and even more difficult to implement properly.
 
 ### Index
 
@@ -86,25 +90,20 @@ It is important to note that host A (the master host) has no knowledge of host E
 #### Event Handler Command Definitions
 
 We need to stop for a minute and describe what the command definitions for the event handlers on the slave host look like.  Here is an example...
-<p>
-<strong>
-<font color="red">
+
 <pre>
-define command{
-	command_name	handle-master-host-event
-	command_line	/usr/local/nagios/libexec/eventhandlers/handle-master-host-event $HOSTSTATE$ $HOSTSTATETYPE$
-	}
+define command {
+    command_name    handle-master-host-event
+    command_line    /usr/local/naemon/libexec/eventhandlers/handle-master-host-event $HOSTSTATE$ $HOSTSTATETYPE$
+}
 
-define command{
-	command_name	handle-master-proc-event
-	command_line	/usr/local/nagios/libexec/eventhandlers/handle-master-proc-event $SERVICESTATE$ $SERVICESTATETYPE$
-	}
+define command {
+    command_name    handle-master-proc-event
+    command_line    /usr/local/naemon/libexec/eventhandlers/handle-master-proc-event $SERVICESTATE$ $SERVICESTATETYPE$
+}
 </pre>
-</font>
-</strong>
-</p>
 
-This assumes that you have placed the event handler scripts in the <i>/usr/local/nagios/libexec/eventhandlers</i> directory.  You may place them anywhere you wish, but you'll need to modify the examples I've given here.
+This assumes that you have placed the event handler scripts in the <i>/usr/local/naemon/libexec/eventhandlers</i> directory.  You may place them anywhere you wish, but you'll need to modify the examples I've given here.
 
 #### Event Handler Scripts
 
@@ -124,14 +123,14 @@ HARD)
 		# We should now become the master host and take
 		# over the responsibilities of monitoring the
 		# network, so enable notifications...
-		/usr/local/nagios/libexec/eventhandlers/enable_notifications
+		/usr/local/naemon/libexec/eventhandlers/enable_notifications
 		;;
 	UP)
 		# The master host has recovered!
 		# We should go back to being the slave host and
 		# let the master host do the monitoring, so
 		# disable notifications...
-		/usr/local/nagios/libexec/eventhandlers/disable_notifications
+		/usr/local/naemon/libexec/eventhandlers/disable_notifications
 		;;
 	esac
 	;;
@@ -153,7 +152,7 @@ HARD)
 		# We should now become the master host and
 		# take over the responsibility of monitoring
 		# the network, so enable notifications...
-		/usr/local/nagios/libexec/eventhandlers/enable_notifications
+		/usr/local/naemon/libexec/eventhandlers/enable_notifications
 		;;
 	WARNING)
 	UNKNOWN)
@@ -167,7 +166,7 @@ HARD)
 		# The master Naemon process running again!
 		# We should go back to being the slave host,
 		# so disable notifications...
-		/usr/local/nagios/libexec/eventhandlers/disable_notifications
+		/usr/local/naemon/libexec/eventhandlers/disable_notifications
 		;;
 	esac
 	;;
