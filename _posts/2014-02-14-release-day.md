@@ -23,5 +23,5 @@ or not.
 Naemon is a community project. So if you like this project, talk about it - or even better,
 help make it better. See the [community page](/community) on how you can help.
 
-Now continue to [the download section](/download) or check out the [changelog](/news.html) for
+Now continue to [the download section](/download) or check out the [changelog](/documentation/usersguide/whatsnew.html) for
 a detailed list of changes.
