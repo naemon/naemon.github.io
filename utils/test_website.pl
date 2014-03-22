@@ -20,6 +20,7 @@ GetOptions (
 );
 if($opt_h or !$mainurl) {
     print "usage: $0 <url>\n";
+    exit 3;
 }
 my $t = TestUtils->new();
 my $output;

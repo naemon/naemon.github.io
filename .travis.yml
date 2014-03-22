@@ -1,0 +1,21 @@
+language: ruby
+before_install:
+  - sudo apt-get update
+install:
+  - sudo apt-get install autoconf
+  - sudo apt-get install build-essential
+  - sudo apt-get install devscripts
+  - sudo apt-get install liburi-perl
+  - sudo apt-get install libencode-perl
+  - sudo apt-get install libwww-perl
+  - sudo apt-get install libhtml-lint-perl
+script:
+  - bundle exec jekyll build
+  - make test
+#notifications:
+#  irc:
+#    channels:
+#      - "chat.freenode.net#naemon-devel"
+#    on_success: change
+#    on_failure: always
+#    skip_join: true
