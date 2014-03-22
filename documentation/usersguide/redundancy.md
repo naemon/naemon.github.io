@@ -210,9 +210,10 @@ Redundancy in Naemon is by no means perfect.  One of the more obvious problems i
 You can minimize this lag by...
 
 <ul>
-<li>Ensuring that the Naemon process on host E (re)checks one or more services at a high frequency.  This is done by using the <i>check_interval</i> and <i>retry_interval</i> arguments in each service definition.
-<li>Ensuring that the number of host rechecks for host A (on host E) allow for fast detection of host problems.  This is done by using the <i>max_check_attempts</i> argument in the host definition.
-<li>Increase the frequency of <a href="extcommands.html">external command</a> checks on host E.  This is done by modifying the <a href="configmain.html#command_check_interval">command_check_interval</a> option in the main configuration file.
+<li>Ensuring that the Naemon process on host E (re)checks one or more services at a high frequency.
+    This is done by using the <i>check_interval</i> and <i>retry_interval</i> arguments in each service definition.
+<li>Ensuring that the number of host rechecks for host A (on host E) allow for fast detection of host problems.
+    This is done by using the <i>max_check_attempts</i> argument in the host definition.
 </ul>
 
 When Naemon recovers on the host A, there is also some lag time before host E returns to being a slave host.  This is affected by the following...

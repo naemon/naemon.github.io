@@ -32,7 +32,6 @@ authorization can be found <a href="cgiauth.html">here</a>.
 * <a href="#notifications_cgi">Notifications CGI</a>
 * <a href="#trends_cgi">Trends CGI</a>
 * <a href="#avail_cgi">Availability reporting CGI</a>
-* <a href="#histogram_cgi">Alert histogram CGI</a>
 * <a href="#summary_cgi">Alert summary CGI</a>
 
 
@@ -109,7 +108,7 @@ The CGI uses Thomas Boutell's <a href="http://www.boutell.com/gd/">gd</a> librar
 The coordinates used when drawing each host (along with the optional pretty icons)
 are taken from <a href="objectdefinitions.html#host">host</a> definitions.
 If you'd prefer to let the CGI automatically generate drawing coordinates for
-you, use the <a href="configcgi.html#default_statusmap_layout">default_statusmap_layout</a>
+you, use the default_statusmap_layout
 directive to specify a layout algorithm that should be used.
 </p>
 <p>
@@ -357,7 +356,9 @@ navigation bar, or by clicking on a host or service link in the output of the <a
 <td align=left valign=top width="50%">
 <p>
 <b>Description:</b>
-This CGI will display the <a href="configmain.html#log_file">log file</a>.  If you have <a href="configmain.html#log_rotation_method">log rotation</a> enabled, you can browse notifications present in archived log files by using the navigational links near the top of the page.
+This CGI will display the <a href="configmain.html#log_file">log file</a>.
+If you have log rotation enabled, you can browse
+notifications present in archived log files by using the navigational links near the top of the page.
 </p>
 <p>
 <b>Authorization Requirements:</b>
@@ -393,7 +394,12 @@ This CGI will display the <a href="configmain.html#log_file">log file</a>.  If y
 <td align=left valign=top width="50%">
 <p>
 <b>Description:</b>
-This CGI is used to display the history of problems with either a particular host or all hosts.  The output is basically a subset of the information that is displayed by the <a href="#showlog_cgi">log file CGI</a>.  You have the ability to filter the output to display only the specific types of problems you wish to see (i.e. hard and/or soft alerts, various types of service and host alerts, all types of alerts, etc.).  If you have <a href="configmain.html#log_rotation_method">log rotation</a> enabled, you can browse history information present in archived log files by using the navigational links near the top of the page.
+This CGI is used to display the history of problems with either a particular host or all hosts.
+The output is basically a subset of the information that is displayed by the <a href="#showlog_cgi">log file CGI</a>.
+You have the ability to filter the output to display only the specific types of problems you wish to
+see (i.e. hard and/or soft alerts, various types of service and host alerts, all types of alerts, etc.).
+If you have log rotation enabled, you can browse history information present in archived log
+files by using the navigational links near the top of the page.
 </p>
 <p>
 <b>Authorization Requirements:</b>
@@ -431,7 +437,12 @@ This CGI is used to display the history of problems with either a particular hos
 <td align=left valign=top width="50%">
 <p>
 <b>Description:</b>
-This CGI is used to display host and service notifications that have been sent to various contacts.  The output is basically a subset of the information that is displayed by the <a href="#showlog_cgi">log file CGI</a>.  You have the ability to filter the output to display only the specific types of notifications you wish to see (i.e. service notifications, host notifications, notifications sent to specific contacts, etc).  If you have <a href="configmain.html#log_rotation_method">log rotation</a> enabled, you can browse notifications present in archived log files by using the navigational links near the top of the page.
+This CGI is used to display host and service notifications that have been sent to various contacts.
+The output is basically a subset of the information that is displayed by the <a href="#showlog_cgi">log file CGI</a>.
+You have the ability to filter the output to display only the specific types of notifications you wish to
+see (i.e. service notifications, host notifications, notifications sent to specific contacts, etc).
+If you have log rotation enabled, you can browse notifications present in archived log files by using
+the navigational links near the top of the page.
 </p>
 <p>
 <b>Authorization Requirements:</b>
@@ -469,7 +480,11 @@ This CGI is used to display host and service notifications that have been sent t
 <td align=left valign=top width="50%">
 <p>
 <b>Description:</b>
-This CGI is used to create a graph of host or service states over an arbitrary period of time.  In order for this CGI to be of much use, you should enable <a href="configmain.html#log_rotation_method">log rotation</a> and keep archived logs in the path specified by the <a href="configmain.html#log_archive_path">log_archive_path</a> directive.  The CGI uses Thomas Boutell's <a href="http://www.boutell.com/gd/">gd</a> library (version 1.6.3 or higher) to create the trends image.
+This CGI is used to create a graph of host or service states over an arbitrary period of time.
+In order for this CGI to be of much use, you should enable log rotation and
+keep archived logs in the path specified by the log_archive_path directive.
+
+The CGI uses Thomas Boutell's <a href="http://www.boutell.com/gd/">gd</a> library (version 1.6.3 or higher) to create the trends image.
 </p>
 <p>
 <b>Authorization Requirements:</b>
@@ -508,7 +523,9 @@ This CGI is used to create a graph of host or service states over an arbitrary p
 <td align=left valign=top width="50%">
 <p>
 <b>Description:</b>
-This CGI is used to report on the availability of hosts and services over a user-specified period of time.  In order for this CGI to be of much use, you should enable <a href="configmain.html#log_rotation_method">log rotation</a> and keep archived logs in the path specified by the <a href="configmain.html#log_archive_path">log_archive_path</a> directive.
+This CGI is used to report on the availability of hosts and services over a user-specified period of time.
+In order for this CGI to be of much use, you should enable log rotation and keep archived logs in
+the path specified by the log_archive_path directive.
 </p>
 <p>
 <b>Authorization Requirements:</b>

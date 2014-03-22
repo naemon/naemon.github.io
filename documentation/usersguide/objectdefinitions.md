@@ -20,9 +20,20 @@ One of the features of Naemon' object configuration format is that you can creat
 
 ### Retention Notes
 
-It is important to point out that several directives in host, service, and contact definitions may not be picked up by Naemon when you change them in your configuration files.  Object directives that can exhibit this behavior are marked with an asterisk (<a href="#retention_notes" class="bg-danger">*</a>).  The reason for this behavior is due to the fact that Naemon chooses to honor values stored in the <a href="#state_retention_file">state retention file</a> over values found in the config files, assuming you have <a href="#retain_state_information">state retention</a> enabled on a program-wide basis <i>and</i> the value of the directive is changed during runtime with an <a href="configmain.html#check_external_commands">external command</a>.
+It is important to point out that several directives in host, service, and contact
+definitions may not be picked up by Naemon when you change them in your configuration files.
+Object directives that can exhibit this behavior are marked with an
+asterisk (<a href="#retention_notes" class="bg-danger">*</a>).
+The reason for this behavior is due to the fact that Naemon chooses to honor
+values stored in the <a href="configmain.html#state_retention_file">state retention file</a> over
+values found in the config files, assuming you have <a href="configmain.html#retain_state_information">state retention</a> enabled
+on a program-wide basis <i>and</i> the value of the directive is changed during
+runtime with an <a href="configmain.html#check_external_commands">external command</a>.
 
-One way to get around this problem is to disable the retention of non-status information using the <i>retain_nonstatus_information</i> directive in the host, service, and contact definitions.  Disabling this directive will cause Naemon to take the initial values for these directives from your config files, rather than from the state retention file when it (re)starts.
+One way to get around this problem is to disable the retention of non-status information
+using the <i>retain_nonstatus_information</i> directive in the host, service, and contact definitions.
+Disabling this directive will cause Naemon to take the initial values for these directives from your config files,
+rather than from the state retention file when it (re)starts.
 
 ### Sample Configuration Files
 
@@ -381,7 +392,7 @@ This variable is used to define an optional string that is used in the ALT tag o
 <tr>
 <td valign="top"><strong>vrml_image</strong>:</td>
 <td>
-This variable is used to define the name of a GIF, PNG, or JPG image that should be associated with this host.  This image will be used as the texture map for the specified host in the <a href="cgis.html#statuswrl_cgi">statuswrl</a> CGI.  Unlike the image you use for the <i>&lt;icon_image&gt;</i> variable, this one should probably <i>not</i> have any transparency.  If it does, the host object will look a bit wierd.  Images for hosts are assumed to be in the <b>logos/</b> subdirectory in your HTML images directory (i.e. <i>/usr/local/nagios/share/images/logos</i>).
+This variable is deprecated and not longer used.
 </td>
 </tr>
 <tr>
@@ -399,7 +410,7 @@ This variable is used to define coordinates to use when drawing the host in the 
 <tr>
 <td valign="top"><strong>3d_coords</strong>:</td>
 <td>
-This variable is used to define coordinates to use when drawing the host in the <a href="cgis.html#statuswrl_cgi">statuswrl</a> CGI.  Coordinates can be positive or negative real numbers.  The origin for drawing is (0.0,0.0,0.0).  For reference, the size of the host cubes drawn is 0.5 units on each side (text takes a little more space).  The coordinates you specify here are used as the center of the host cube.
+This variable is deprecated and not longer used.
 </td>
 </tr>
 </table>

@@ -84,6 +84,7 @@ authenticated in some manner! If you define this variable, anyone who has not
 authenticated to the web server will inherit all rights you assign to this user!
 
 <a name="authorized_for_system_information"></a>
+<a name="authorized_contactgroup_for_system_information"></a>
 #### System/Process Information Access
 
 <table border="0">
@@ -108,6 +109,7 @@ as well, you must add them to the <a href="#authorized_for_system_commands">auth
 More information on how to setup authentication and configure authorization for the CGIs can be found <a href="cgiauth.html">here</a>.
 
 <a name="authorized_for_system_commands"></a>
+<a name="authorized_contactgroup_for_system_commands"></a>
 #### System/Process Command Access
 
 <table border="0">
@@ -132,6 +134,7 @@ must add them to the <a href="#authorized_for_system_information">authorized_for
 More information on how to setup authentication and configure authorization for the CGIs can be found <a href="cgiauth.html">here</a>.
 
 <a name="authorized_for_configuration_information"></a>
+<a name="authorized_contactgroup_for_configuration_information"></a>
 #### Configuration Information Access
 
 <table border="0">
@@ -156,6 +159,7 @@ information on how to setup authentication and configure authorization for the C
 found <a href="cgiauth.html">here</a>.
 
 <a name="authorized_for_all_hosts"></a>
+<a name="authorized_contactgroup_for_all_hosts"></a>
 #### Global Host Information Access
 
 <table border="0">
@@ -182,6 +186,7 @@ the <a href="#authorized_for_all_host_commands">authorized_for_all_host_commands
 More information on how to setup authentication and configure authorization for the CGIs can be found <a href="cgiauth.html">here</a>.
 
 <a name="authorized_for_all_host_commands"></a>
+<a name="authorized_contactgroup_for_all_host_commands"></a>
 #### Global Host Command Access
 
 <table border="0">
@@ -208,6 +213,7 @@ to the <a href="#authorized_for_all_hosts">authorized_for_all_hosts</a> variable
 on how to setup authentication and configure authorization for the CGIs can be found <a href="cgiauth.html">here</a>.
 
 <a name="authorized_for_all_services"></a>
+<a name="authorized_contactgroup_for_all_services"></a>
 #### Global Service Information Access
 
 <table border="0">
@@ -235,6 +241,7 @@ More information on how to setup authentication and configure authorization for 
 can be found <a href="cgiauth.html">here</a>.
 
 <a name="authorized_for_all_service_commands"></a>
+<a name="authorized_contactgroup_for_all_service_commands"></a>
 #### Global Service Command Access
 
 <table border="0">

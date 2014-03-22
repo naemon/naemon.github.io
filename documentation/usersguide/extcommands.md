@@ -20,7 +20,6 @@ In order to have Naemon process external commands, make sure you do the followin
 
 <ul>
 <li>Enable external command checking with the <a href="configmain.html#check_external_commands">check_external_commands</a> option.
-<li>Set the frequency of command checks with the <a href="configmain.html#command_check_interval">command_check_interval</a> option.
 <li>Specify the location of the command file with the <a href="configmain.html#command_file">command_file</a> option.
 <li>Setup proper permissions on the directory containing the external command file, as described in the <a href="quickstart.html">quickstart guide</a>.
 </ul>
@@ -28,8 +27,7 @@ In order to have Naemon process external commands, make sure you do the followin
 ### When Does Naemon Check For External Commands?
 
 <ul>
-<li>At regular intervals specified by the <a href="configmain.html#command_check_interval">command_check_interval</a> option in the main configuration file
-<li>Immediately after <a href="eventhandlers.html">event handlers</a> are executed.  This is in addtion to the regular cycle of external command checks and is done to provide immediate action if an event handler submits commands to Naemon.
+<li>Naemon reads and executes external commands immediately when they are submited.
 </ul>
 
 ### Using External Commands

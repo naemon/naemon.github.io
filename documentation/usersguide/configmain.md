@@ -39,7 +39,8 @@ Below you will find descriptions of each main Naemon configuration file option..
 </tr>
 </table>
 
-<p>This variable specifies where Naemon should create its main log file.  This should be the first variable that you define in your configuration file, as Naemon will try to write errors that it finds in the rest of your configuration data to this file.  If you have <a href="#log_rotation_method">log rotation</a> enabled, this file will automatically be rotated every hour, day, week, or month.</p>
+<p>This variable specifies where Naemon should create its main log file.  This should be the first variable that you define in your configuration file, as Naemon will try to write errors that it finds in the rest of your configuration data to this file.
+If you have log rotation enabled, this file will automatically be rotated every hour, day, week, or month.</p>
 
 <a name="cfg_file"></a>
 #### Object Configuration File
@@ -79,7 +80,7 @@ Below you will find descriptions of each main Naemon configuration file option..
 </tr>
 </table>
 
-<p>This directive is used to specify a directory which contains <a href="configobject.html">object configuration files</a> that Naemon should use for monitoring.  All files in the directory with a <i>.cfg</i> extension are processed as object config files.  Additionally, Naemon will recursively process all config files in subdirectories of the directory you specify here.  You can seperate your configuration files into different directories and specify multiple <i>cfg_dir=</i> statements to have all config files in each directory processed.</p>  
+<p>This directive is used to specify a directory which contains <a href="configobject.html">object configuration files</a> that Naemon should use for monitoring.  All files in the directory with a <i>.cfg</i> extension are processed as object config files.  Additionally, Naemon will recursively process all config files in subdirectories of the directory you specify here.  You can seperate your configuration files into different directories and specify multiple <i>cfg_dir=</i> statements to have all config files in each directory processed.</p>
 <a name="object_cache_file"></a>
 #### Object Cache File
 
@@ -613,7 +614,7 @@ or regular service failures your log file will grow relatively quickly.  Use thi
 </tr>
 </table>
 
-This variable determines whether or not service check retries are logged.  Service check retries occur when a service check results in a non-OK state, but you have configured Naemon to retry the service more than once before responding to the error.  Services in this situation are considered to be in "soft" states.  Logging service check retries is mostly useful when attempting to debug Naemon or test out service <a href="eventhandlers.html">event handlers</a>.  
+This variable determines whether or not service check retries are logged.  Service check retries occur when a service check results in a non-OK state, but you have configured Naemon to retry the service more than once before responding to the error.  Services in this situation are considered to be in "soft" states.  Logging service check retries is mostly useful when attempting to debug Naemon or test out service <a href="eventhandlers.html">event handlers</a>.
 
 * 0 = Don't log service check retries
 * 1 = Log service check retries
