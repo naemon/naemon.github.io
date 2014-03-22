@@ -120,7 +120,7 @@ Read more about the [online editor][githubedithelp]...
 Larger changes should be tested and reviewed locally before submiting them. Also
 it's good practice to talk to a team member before spending large amounts of time
 in things we eventually won't accept for whatever reasons.
-The [developer guide](/documentation/developer/#documentation) contains instructions on
+The [developer guide](/documentation/developer/website.html) contains instructions on
 how to run a local Jekyll server.
 When done, just submit a normal pull request.
 

@@ -69,7 +69,7 @@ Download the latest development source code from [github](http://github.com/naem
 
 ### Getting started
 
-See the [getting started](/documentation/usersguide/#getting_started) document in the users guide.
+See the [getting started](/documentation/usersguide/toc.html#getting_started) document in the users guide.
 
 #### Download Statistics
 As true monitoring people we love statistics:
