@@ -13,10 +13,10 @@ install:
 script:
   - bundle exec jekyll build
   - make test
-#notifications:
-#  irc:
-#    channels:
-#      - "chat.freenode.net#naemon-devel"
-#    on_success: change
-#    on_failure: always
-#    skip_join: true
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.net#naemon-devel"
+    on_success: change
+    on_failure: always
+    skip_join: true
