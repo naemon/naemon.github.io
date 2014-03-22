@@ -18,6 +18,9 @@ Reviewing a page is as easy as these 3 steps:
 Thanks for your help.
 
 
+
+<a name="details_missing"></a>
+
 ### Details Missing
 
 On some pages it would be nice to have more details.
