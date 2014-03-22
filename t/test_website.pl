@@ -29,7 +29,7 @@ Test::More->builder->failure_output(\$output);
 Test::More->builder->todo_output(\$output);
 eval {
     my $test = {
-            url                     => $mainurl,
+            url                     => "".$mainurl,
             like                    => 'Naemon',
             recursive               => 1,
             follow                  => 1,
