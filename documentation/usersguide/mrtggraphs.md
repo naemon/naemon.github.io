@@ -17,6 +17,11 @@ This is important because it can help you:
 <li>Observe the performance impacts of changes in your Naemon configuration</li>
 </ul>
 
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i>
+Since MRTG is not exactly state of the art anymore, you could also use PNP or Graphite.
+</div>
+
+
 ### Sample MRTG Configuration
 
 Sample MRTG configuration file snippets for graphing various Naemon performance statistics
