@@ -70,7 +70,7 @@ You can schedule regular checks of your hosts by specifying a value greater than
 
 <img src="/images/cachedcheckgraphs.png" border="0" style="float: right; clear: both;" alt="Cached Checks Graph" title="Cached Checks Graph">
 
-A good way to determine the proper value for the cached check horizon options is to compare how many on-demand checks Naemon has to actually run versus how may it can use cached values for.  The <a href="nagiostats.html">nagiostats</a> utility can produce information on cached checks, which can then be <a href="mrtggraphs.html">graphed with MRTG</a>.  Example MRTG graphs that show cached vs. actual on-demand checks are shown to the right.
+A good way to determine the proper value for the cached check horizon options is to compare how many on-demand checks Naemon has to actually run versus how may it can use cached values for.  The <a href="naemonstats.html">naemonstats</a> utility can produce information on cached checks, which can then be <a href="mrtggraphs.html">graphed with MRTG</a>.  Example MRTG graphs that show cached vs. actual on-demand checks are shown to the right.
 
 The monitoring installation which produced the graphs above had:
 

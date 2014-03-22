@@ -43,6 +43,8 @@ One way to get around this problem is to disable the retention of non-status inf
 * <a href="#hostdependency">Host dependency definitions</a>
 * <a href="#hostescalation">Host escalation definitions</a>
 
+<a name="host"></a>
+
 #### Host Definition
 
 ##### Description
@@ -1138,6 +1140,10 @@ This optional directive can be used to include contacts from other "sub" contact
 </tr>
 </table>
 
+
+
+<a name="timeperiod"></a>
+
 #### Time Period Definition
 
 ##### Description
@@ -1289,11 +1295,11 @@ This directive is the short name used to identify the command.  It is referenced
 <p>
 This directive is used to define what is actually executed by Naemon when the command is used for service or host checks, notifications, or <a href="eventhandlers.html">event handlers</a>. Before the command line is executed, all valid <a href="macros.html">macros</a> are replaced with their respective values.  See the documentation on macros for determining when you can use different macros.  Note that the command line is <i>not</i> surrounded in quotes.  Also, if you want to pass a dollar sign ($) on the command line, you have to escape it with another dollar sign.
 </p>
-<p><strong>NOTE</strong>: You may not include a <b>semicolon</b> (;) in the <i>command_line</i> directive, because everything after it will be ignored as a config file comment.  You can work around this limitation by setting one of the <a href="macros.html#user"><b>$USER$</b></a> macros in your <a
+<p><strong>NOTE</strong>: You may not include a <b>semicolon</b> (;) in the <i>command_line</i> directive, because everything after it will be ignored as a config file comment.  You can work around this limitation by setting one of the <a href="macrolist.html#user"><b>$USER$</b></a> macros in your <a
 href="configmain.html#resource_file">resource file</a> to a semicolon and then referencing the appropriate $USER$ macro in the <i>command_line</i> directive in place of the semicolon.
 </p>
 <p>
-If you want to pass arguments to commands during runtime, you can use <a href="macros.html#arg"><b>$ARGn$</b> macros</a> in the <i>command_line</i> directive of the command definition and then separate individual arguments from the command name (and from each other) using bang (!) characters in the object definition directive (host check command, service event handler command, etc) that references the command.  More information on how arguments in command definitions are processed during runtime can be found in the documentation on <a href="macros.html">macros</a>.
+If you want to pass arguments to commands during runtime, you can use <a href="macrolist.html#arg"><b>$ARGn$</b> macros</a> in the <i>command_line</i> directive of the command definition and then separate individual arguments from the command name (and from each other) using bang (!) characters in the object definition directive (host check command, service event handler command, etc) that references the command.  More information on how arguments in command definitions are processed during runtime can be found in the documentation on <a href="macros.html">macros</a>.
 </p>
 </td>
 </tr>
@@ -1309,7 +1315,7 @@ Service dependencies are an advanced feature of Naemon that allow you to suppres
 
 ##### Definition Format
 
-<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Directives in red are required, while those in black are optional. However, you must supply at least one type of criteria for the definition to be of much use.</div> 
+<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Directives in red are required, while those in black are optional. However, you must supply at least one type of criteria for the definition to be of much use.</div>
 
 <table>
 <tr><td colspan=3>define servicedependency{</td></tr>

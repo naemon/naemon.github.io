@@ -10,9 +10,10 @@ and Naemon.
 ### Main Config File Options
 Since command file handling has been redone, embedded perl has been
 removed and the event execution loop now sits and waits on input from
-worker processes rather than spending any time sleeping, the following
-variables have been obsoleted, will yield a warning when encountered
-and no longer have any effect on monitoring:
+worker processes rather than spending any time sleeping and logrotation
+has been moved to logrotate.d, the following variables have been obsoleted,
+will yield a warning when encountered and no longer have any effect
+on monitoring:
 
 <ul>
 <li>command_check_interval
@@ -23,6 +24,7 @@ and no longer have any effect on monitoring:
 <li>use_embedded_perl_implicitly
 <li>auth_file
 <li>p1_file
+<li>log_rotation_method
 </ul>
 
 ### Nested Group Includes
@@ -126,4 +128,3 @@ Contacts have one new configurable value, namely 'minimum_value', which
 sets the minimum notification value for which the contact should get
 notified. The notification value is determined by the total value of
 all objects affected by the problem.
-

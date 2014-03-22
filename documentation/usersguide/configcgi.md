@@ -29,6 +29,9 @@ If you need to change the name of the file or its location, you can configure Th
 Below you will find descriptions of each main Naemon configuration file option...
 
 
+
+<a name="use_authentication"></a>
+
 #### Authentication Usage
 
 <table border="0">
