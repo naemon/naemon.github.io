@@ -2,7 +2,8 @@
 layout: affix
 title: Usersguide guidelines
 ---
-This document will help the community to mainstream Naemon usersguide to make it easy to follow with a common look and feel for the best user experiance possible.
+This document will help the community to mainstream Naemon usersguide to make it easy to follow with
+a common look and feel for the best user experiance possible.
 
 ### Naming
 
@@ -46,7 +47,7 @@ Alerts are used in the text to highlight something specific. It could be success
 <div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Read below for more information</div>
 ```
 
-#### Warning 
+#### Warning
 
 <div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> It's not possible to use Markdown inside a html block. Don't forget that &lt;table&gt;...&lt;/table&gt; are inside a html block as well</div>
 
