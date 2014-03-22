@@ -83,6 +83,9 @@ title: User Documentation
 
 
 
+
+<a name="basics"></a>
+
 ### The Basics
 
 <a href="plugins.html">Plugins</a>
@@ -173,7 +176,7 @@ title: User Documentation
 
 <a href="largeinstalltweaks.html">Large installation tweaks</a>
 
-<a href="nagiostats.html">Using the nagiostats utility</a>
+<a href="naemonstats.html">Using the naemonstats utility</a>
 
 <a href="mrtggraphs.html">Graphing Naemon performance statistics</a>
 

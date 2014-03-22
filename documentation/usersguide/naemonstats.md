@@ -3,38 +3,51 @@ layout: doctoc
 title: Using The Naemontats Utility
 ---
 
-{% include review_required.md %}
-
 <span class="glyphicon glyphicon-arrow-up"></span> <a href="toc.html">Contents</a><br>
 
-<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="mrtggraphs.html">Graphing Performance Info</a>, <a href="tuning.html">Performance Tuning</a>
+<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="mrtggraphs.html">Graphing Performance Info</a>,
+<a href="tuning.html">Performance Tuning</a>
+
+
 
 ### Introduction
 
-A utility called <b>nagiostats</b> is included in the Naemon distribution.  It is compiled and installed along with the main Naemon daemon.  The nagiostats utility allows you to obtain various information about a running Naemon process that can be very helpful in <a href="tuning.html">tuning performance</a>.  You can obtain information either in human-readable or MRTG-compatible format.
+A utility called <b>naemonstats</b> is included in the Naemon distribution.
+It is compiled and installed along with the main Naemon daemon.
+The naemonstats utility allows you to obtain various information about a running
+Naemon process that can be very helpful in <a href="tuning.html">tuning performance</a>.
+You can obtain information either in human-readable or MRTG-compatible format.
+
+
 
 ### Usage Information
 
-You can run the <i>nagiostats</i> utility with the <b>--help</b> option to get usage information.
+You can run the <i>naemonstats</i> utility with the <b>--help</b> option to get usage information.
+
+
+
 
 ### Human-Readable Output
 
-To obtain human-readable information on the performance of a running Naemon process, run the <i>nagiostats</i> utility with the <b>-c</b> command line argument to specify your main configuration file location like such:
+To obtain human-readable information on the performance of a running Naemon process,
+run the <i>naemonstats</i> utility with the <b>-c</b> command line argument to
+specify your main configuration file location like such:
 
 <pre>
-[nagios@lanman ~]# /usr/local/nagios/bin/nagiostats -c /usr/local/nagios/etc/nagios.cfg
+[naemon@lanman ~]# /usr/local/naemon/bin/naemonstats -c /usr/local/naemon/etc/naemon.cfg
 
 
-Naemon Stats 3.0prealpha-05202006
-Copyright (c) 2003-2007 Ethan Galstad (www.nagios.org)
-Last Modified: 05-20-2006
+Naemon Stats 0.8.0
+Copyright (c) 2013-present Naemon Development Team (www.naemon.org)
+Copyright (c) 2003-2008 Ethan Galstad (www.nagios.org)
+Last Modified: 02-13-2014
 License: GPL
 
 CURRENT STATUS DATA
 ------------------------------------------------------
-Status File:                            /usr/local/nagios/var/status.dat
+Status File:                            /usr/local/naemon/var/status.dat
 Status File Age:                        0d 0h 0m 9s
-Status File Version:                    3.0prealpha-05202006
+Status File Version:                    0.8.0
 
 Program Running Time:                   0d 5h 20m 39s
 Naemon PID:                             10119
@@ -86,14 +99,23 @@ Passive Service Checks Last 1/5/15 min: 0 / 0 / 0
 
 External Commands Last 1/5/15 min:      0 / 0 / 0
 
-[nagios@lanman ~]#
+[naemon@lanman ~]#
 </pre>
 
-As you can see, the utility displays a number of different metrics pertaining to the Naemon process.  Metrics which have multiple values are (unless otherwise specified) min, max and average values for that particular metric.
+As you can see, the utility displays a number of different metrics pertaining to the Naemon
+process. Metrics which have multiple values are (unless otherwise specified) min,
+max and average values for that particular metric.
+
+
 
 ### MRTG Integration
 
-You can use the <i>nagiostats</i> utility to display various Naemon metrics using MRTG (or other compatible program).  To do so, run the <i>nagiostats</i> utility using the <b>--mrtg</b> and <b>--data</b> arguments.  The <b>--data</b> argument is used to specify what statistics should be graphed.  Possible values for the <b>--data</b> argument can be found by running the <i>nagiostats</i> utility with the <b>--help</b> option.
+You can use the <i>naemonstats</i> utility to display various Naemon metrics using
+MRTG (or other compatible program). To do so, run the <i>naemonstats</i> utility using
+the <b>--mrtg</b> and <b>--data</b> arguments. The <b>--data</b> argument is used
+to specify what statistics should be graphed. Possible values for the <b>--data</b>
+argument can be found by running the <i>naemonstats</i> utility with the <b>--help</b> option.
 
 <span class="glyphicon glyphicon-pencil"></span>
- Note: Information on using the <i>nagiostats</i> utility to generate MRTG graphs for Naemon performance statistics can be found <a href="mrtggraphs.html">here</a>.
+Note: Information on using the <i>naemonstats</i> utility to generate MRTG graphs
+for Naemon performance statistics can be found <a href="mrtggraphs.html">here</a>.
