@@ -3,16 +3,24 @@ layout: doctoc
 title: Developing Plugins For Use With Embedded Perl
 ---
 
-{% include review_required.md %}
-
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="embeddedperl.html">Embedded Perl Interpreter Overview</a>, <a href="pluginapi.html">Plugin API</a>
+
+
+<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> <b>WARNING:</b>
+Naemon does not include embedded Perl anymore, however, all ePN related information still applies to <a href="addons.html#modgearman">Mod-Gearman</a>.
+</div>
+
 
 ### Introduction
 
-Stanley Hopcroft has worked with the embedded Perl interpreter quite a bit and has commented on the advantages/disadvanges of using it.  He has also given several helpful hints on creating Perl plugins that work properly with the embedded interpreter.  The majority of this documentation comes from his comments.
+Stanley Hopcroft has worked with the embedded Perl interpreter quite a bit and has commented on the advantages/disadvanges
+of using it. He has also given several helpful hints on creating Perl plugins that work properly with the embedded
+interpreter. The majority of this documentation comes from his comments.
 
-It should be noted that "ePN", as used in this documentation, refers to embedded Perl Naemon, or if you prefer, Naemon compiled with an embedded Perl interpreter.
+It should be noted that "ePN", as used in this documentation, refers to embedded Perl in a Mod-Gearman worker,
+or if you prefer, Mod-Gearman compiled with an embedded Perl interpreter.
+
+
 
 ### Target Audience
 
@@ -21,6 +29,8 @@ It should be noted that "ePN", as used in this documentation, refers to embedded
 <li>Those with a utilitarian appreciation rather than a great depth of understanding.<br><br>
 <li>If you are happy with Perl objects, name management, data structures, and the debugger, that's probably sufficient.<br><br>
 </ul>
+
+
 
 ### Things you should do when developing a Perl Plugin (ePN or not)
 
@@ -36,6 +46,8 @@ It should be noted that "ePN", as used in this documentation, refers to embedded
 <li>Use standard switch names (eg H 'host', V 'version')
 </ul>
 </ul>
+
+
 
 ### Things you must do to develop a Perl plugin for ePN
 
@@ -63,24 +75,29 @@ DATA
 <li>use perl -c
 </ul>
 <br><br>
-<li>Avoid lexical variables (my) with global scope as a means of passing __variable__ data into subroutines. In fact this is __fatal__ if the subroutine is called by the plugin more than once when the check is run.  Such subroutines act as 'closures' that lock the global lexicals first value into subsequent calls of the subroutine. If however, your global
-is read-only (a complicated structure for example) this is not a problem. What Bekman <a href="http://perl.apache.org/docs/1.0/guide/">recommends you do instead</a>, is any of the following:<br><br>
+<li>Avoid lexical variables (my) with global scope as a means of passing __variable__ data into subroutines.
+In fact this is __fatal__ if the subroutine is called by the plugin more than once when the check is run.
+Such subroutines act as 'closures' that lock the global lexicals first value into subsequent calls
+of the subroutine. If however, your global is read-only (a complicated structure for example) this
+is not a problem. What Bekman <a href="http://perl.apache.org/docs/1.0/guide/">recommends you do instead</a>,
+is any of the following:<br><br>
 
 <ul>
 <li>make the subroutine anonymous and call it via a code ref e.g.<br><br>
 <pre>
 turn this                     into
 
-my $x = 1 ;                   my $x = 1 ;
-sub a { .. Process $x ... }   $a_cr = sub { ... Process $x ... } ;
+my $x = 1;                    my $x = 1;
+sub a { .. Process $x ... }   $a_cr = sub { ... Process $x ... };
 .                             .
 .                             .
-a ;                           &amp;$a_cr ;
-$x = 2                        $x = 2 ;
-a ;                           &amp;$a_cr ;
+a;                            &amp;$a_cr;
+$x =2                         $x = 2;
+a;                            &amp;$a_cr;
 
 # anon closures __always__ rebind the current lexical value
 </pre>
+
 <li>put the global lexical and the subroutine using it in their own package (as an object or a module)
 <li>pass info to subs as references or aliases (\$lex_var or $_[n])
 <li>replace lexicals with package globals and exclude them from 'use strict' objections with 'use vars qw(global1 global2 ..)'
@@ -91,7 +108,8 @@ a ;                           &amp;$a_cr ;
 Useful information can be had from the usual suspects (the O'Reilly books, plus Damien Conways "Object Oriented Perl") but for the really useful stuff in the right context start at Stas Bekman's mod_perl guide at <a href="http://perl.apache.org/guide/">http://perl.apache.org/guide/</a>.
 </p>
 <p>
-This wonderful book sized document has nothing whatsoever about Naemon, but all about writing Perl programs for the embedded Perl interpreter in Apache (ie Doug MacEacherns mod_perl).
+This wonderful book sized document has nothing whatsoever about Naemon,
+but all about writing Perl programs for the embedded Perl interpreter in Apache (ie Doug MacEacherns mod_perl).
 </p>
 <p>
 The perlembed manpage is essential for context and encouragement.
@@ -134,7 +152,7 @@ The following output shows how a test ePN transformed the <i>check_rpc</i> plugi
 (Embed::check_5frpc)"; }
                 package Embed::check_5frpc; sub hndlr { shift(@_);
 @ARGV=@_;</font>
-#! /usr/bin/perl -w
+#! /usr/bin/perl
 #
 # check_rpc plugin for Naemon
 #
@@ -158,6 +176,10 @@ The following output shows how a test ePN transformed the <i>check_rpc</i> plugi
 <font color="red">}</font>
 </pre>
 <br>
-<li>Don't use 'use diagnostics' in a plugin run by your production ePN.  I think it causes__all__ the Perl plugins to return CRITICAL.<br><br>
-<li>Consider using a mini embedded Perl C program to check your plugin.  This is not sufficient to guarantee your plugin will perform Ok with an ePN but if the plugin fails this test it will certainly fail with your ePN.  <font color="red">[ A sample mini ePN is included in the <i>contrib/</i> directory of the Naemon distribution for use in testing Perl plugins.  Change to the contrib/ directory and type 'make mini_epn' to compile it.  It must be executed from the same directory that the p1.pl file resides in (this file is distributed with Naemon). ]</font> <br><br>
+<li>Don't use 'use diagnostics' in a plugin run by your production ePN.
+    I think it causes__all__ the Perl plugins to return CRITICAL.<br><br>
+<li>Consider using a mini embedded Perl C program to check your plugin. This is not
+    sufficient to guarantee your plugin will perform Ok with an ePN but if the plugin fails
+    this test it will certainly fail with your ePN. <font color="red">[ A sample mini ePN is shiped with Mod-Gearman
+    for use in testing Perl plugins.]</font> <br><br>
 </ol>

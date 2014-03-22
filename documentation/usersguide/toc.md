@@ -198,7 +198,7 @@ title: User Documentation
 
 <a href="addons.html#merlin">Merlin</a>
 
-<a href="addons.html#mod_gearman">Mod-Gearman</a>
+<a href="addons.html#modgearman">Mod-Gearman</a>
 
 <a href="addons.html#omd">OMD</a>
 
