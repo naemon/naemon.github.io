@@ -16,7 +16,7 @@ First install some basic dependencies:
 ```bash
 %> sudo yum install git perl perl-Module-Install automake gperf gcc-c++ \
      autoconf libtool gd-devel expat-devel mysql-devel rpm-build \
-     doxygen wget httpd
+     wget httpd
 ```
 
 Then clone our repository in any folder you like:
