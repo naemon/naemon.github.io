@@ -4,8 +4,9 @@ pygments: true
 paginate: 10
 paginate_path: "news/page:num"
 redcarpet:
-  extensions: ["tables"]
+  extensions: ["tables", "no_intra_emphasis"]
 
 # site specific variables
 release_version: 0.8.0
 release_date: 14 Feb 2014
+
