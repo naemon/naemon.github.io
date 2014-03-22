@@ -9,6 +9,7 @@ More information about Naemon - including features and technical specifications 
 found online at <a href="http://naemon.org" target="_blank"><b>naemon.org</b></a>.
 
 
+<a name="whatis"></a>
 
 ### What Is Naemon?
 
