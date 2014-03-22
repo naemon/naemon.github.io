@@ -33,7 +33,7 @@
     {% endif %}
   </head>
 
-  <body data-spy="scroll" data-target="#NaemonScrollspy">
+  <body data-spy="scroll" data-target="#NaemonScrollspy"{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">

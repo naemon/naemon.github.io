@@ -1,6 +1,7 @@
 ---
 layout: doc
 title: Developer Documentation
+body_class: toc
 ---
 
 Technical and api documentation for Naemon.

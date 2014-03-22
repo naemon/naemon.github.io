@@ -1,6 +1,7 @@
 ---
 layout: doctoc
 title: User Documentation
+body_class: toc
 ---
 
 ## Table of Contents
