@@ -1,17 +1,21 @@
 ---
-layout: doctoc
+layout: doc
 title: Standard Macros in Naemon
 ---
 
-{% include review_required.md %}
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="macros.html">How Macros Work</a>
 
-Standard macros that are available in Naemon are listed here.  On-demand macros and macros for custom variables are described <a href="macros.html">here</a>.
+Standard macros that are available in Naemon are listed here. On-demand macros and macros for custom
+variables are described <a href="macros.html">here</a>.
+
 
 ### Macro Validity
 
-Although macros can be used in all commands you define, not all macros may be "valid" in a particular type of command.  For example, some macros may only be valid during service notification commands, whereas other may only be valid during host check commands.  There are ten types of commands that Naemon recognizes and treats differently.  They are as follows:
+Although macros can be used in all commands you define, not all macros may be "valid" in
+a particular type of command. For example, some macros may only be valid during service
+notification commands, whereas other may only be valid during host check commands. There are
+ten types of commands that Naemon recognizes and treats differently.
+They are as follows:
 
 <ol>
 <li>Service checks
@@ -26,7 +30,12 @@ Although macros can be used in all commands you define, not all macros may be "v
 <li>Host <a href="perfdata.html">performance data</a> commands
 </ol>
 
-The tables below list all macros currently available in Naemon, along with a brief description of each and the types of commands in which they are valid.  If a macro is used in a command in which it is invalid, it is replaced with an empty string. It should be noted that macros consist of all uppercase characters and are enclosed in <b>$</b> characters.
+The tables below list all macros currently available in Naemon, along with a brief description of
+each and the types of commands in which they are valid. If a macro is used in a command
+in which it is invalid, it is replaced with an empty string. It should be noted that
+macros consist of all uppercase characters and are enclosed in <b>$</b> characters.
+
+
 
 ### Macro Availability Chart
 
@@ -817,6 +826,8 @@ The tables below list all macros currently available in Naemon, along with a bri
 </table>
 </div>
 
+
+
 ### Macro Descriptions
 
 <table border="1" width="100%" cellspacing="0" cellpadding="5">
@@ -1504,6 +1515,8 @@ If a next valid time cannot be found in the specified timeperiod, the macro will
 </tr>
 </table>
 
+
+
 ### Notes
 
 <a name="note1"></a>
@@ -1536,16 +1549,13 @@ If a next valid time cannot be found in the specified timeperiod, the macro will
 </p>
 <a name="note8"></a>
 <p>
-<sup><b>8</b></sup>  These acknowledgement macros are deprecated.  Use the more generic $NOTIFICATIONAUTHOR$, $NOTIFICATIONAUTHORNAME$, $NOTIFICATIONAUTHORALIAS$ or $NOTIFICATIONAUTHORCOMMENT$ macros instead.
+<sup><b>8</b></sup>  These acknowledgement macros are deprecated. Use the more generic $NOTIFICATIONAUTHOR$, $NOTIFICATIONAUTHORNAME$, $NOTIFICATIONAUTHORALIAS$ or $NOTIFICATIONAUTHORCOMMENT$ macros instead.
 </p>
 <a name="note9"></a>
 <p>
-<sup><b>9</b></sup>  These macro are only available as on-demand macros - e.g. you must supply an additional argument with them in order to use them.  These macros are not available as environment variables.
+<sup><b>9</b></sup>  These macro are only available as on-demand macros - e.g. you must supply an additional argument with them in order to use them. These macros are not available as environment variables.
 </p>
 <a name="note10"></a>
 <p>
-<sup><b>10</b></sup>  Summary macros are not available as environment variables if the <a href="configmain.html#use_large_installation_tweaks">use_large_installation_tweaks</a> option is enabled, as they are quite CPU-intensive to calculate.
+<sup><b>10</b></sup>  Summary macros are quite CPU-intensive to calculate.
 </p>
-<hr>
-</body>
-</html>
