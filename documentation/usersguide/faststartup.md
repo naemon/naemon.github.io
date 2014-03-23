@@ -6,9 +6,9 @@ title: Fast Startup Options
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="tuning.html">Performance Tuning</a>, <a href="largeinstalltweaks.html">Large Installation Tweaks</a>
 
 
-<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> <b>Important:</b>
+{{ site.warn }}
 Faster Startup Options are usually <b>no longer required</b> since Naemon has been heavily optimized. Startup is now up to <b>1000x faster</b> than with Nagios 3.
-</div>
+{{ site.end }}
 
 
 ### Introduction
@@ -155,11 +155,12 @@ have Naemon pre-process and pre-cache your config files for future use.
       </p>
       <pre style="padding: 0 0 0 50px;">/usr/bin/naemon -ud /etc/naemon.cfg</pre>
       <p>
-        <span class="glyphicon glyphicon-exclamation-sign"></span>
+        {{ site.warn }}
         If you modify your configuration files, you will
         need to re-verify and re-cache your configuration files before restarting Naemon.
         If you don't re-generate the precached object file, Naemon will continue to use your old configuration
         because it is now reading from the precached file, rather than your source configuration files.
+        {{ site.end }}
       </p>
     </td>
     <td valign="top">

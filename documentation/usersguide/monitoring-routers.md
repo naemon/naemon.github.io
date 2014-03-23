@@ -23,7 +23,7 @@ I'll describe how you can monitor the following things on managed switches, hubs
 <li>Bandwidth / traffic rate</li>
 </ul>
 
-<span class="glyphicon glyphicon-pencil"></span> Note: These instructions assume that you've installed Naemon according to the <a href="quickstart.html">quickstart guide</a>.  The sample configuration entries below reference objects that are defined in the sample config files (<i>commands.cfg</i>, <i>templates.cfg</i>, etc.) that are installed when you follow the quickstart.
+{{ site.note }}These instructions assume that you've installed Naemon according to the <a href="quickstart.html">quickstart guide</a>.  The sample configuration entries below reference objects that are defined in the sample config files (<i>commands.cfg</i>, <i>templates.cfg</i>, etc.) that are installed when you follow the quickstart.{{ site.end }}
 
 ### Overview
 
@@ -102,7 +102,7 @@ define host{
 
 Now you can add some service definitions (to the same configuration file) to monitor different aspects of the switch.  If this is the *first* switch you're monitoring, you can simply modify the sample service definition in <i>switch.cfg</i>.
 
-<span class="glyphicon glyphicon-pencil"></span> Note: Replace "<i>linksys-srw224p</i>" in the example definitions below with the name you specified in the <i>host_name</i> directive of the host definition you just added.
+{{ site.note }}Replace "<i>linksys-srw224p</i>" in the example definitions below with the name you specified in the <i>host_name</i> directive of the host definition you just added.{{ site.end }}
 
 ### Monitoring Packet Loss and RTA
 
@@ -160,7 +160,7 @@ In the example above, the "-o ifOperStatus.1" refers to the OID for the operatio
 
 That's it for the SNMP monitoring example.  There are a million things that can be monitored via SNMP, so its up to you to decide what you need and want to monitor.  Good luck!
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip:  You can usually find the OIDs that can be monitored on a switch by running the following command (replace <i>192.168.1.253</i> with the IP address of the switch):
+{{ site.hint }}You can usually find the OIDs that can be monitored on a switch by running the following command (replace <i>192.168.1.253</i> with the IP address of the switch):{{ site.end }}
 
 <i>snmpwalk -v1 -c public 192.168.1.253 -m ALL .1</i>
 

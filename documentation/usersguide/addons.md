@@ -59,9 +59,9 @@ The NSCA addon can be found at <a href="http://www.nagios.org/">http://www.nagio
 
 ### NDOUtils
 
-<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i>
+{{ site.info }}
 NDOUtils are required by older addons. If possible, use the newer <a href="#livestatus">Livestatus API</a> instead.
-</div>
+{{ site.end }}
 
 <img src="/images/ndoutils.png" border="0" alt="NDOUtils" title="NDOUtils" style="float: right; padding: 0 0 0 10px;">
 

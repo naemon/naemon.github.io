@@ -112,8 +112,9 @@ The table below shows the global and host- or service-specific variables that co
 
 Normally Naemon will track the results of the last 21 checks of a host or service, regardless of the check result (host/service state), for use in the flap detection logic.
 
-<p><span class="glyphicon glyphicon-thumbs-up"></span> Tip:  You can exclude certain host or service states from use in flap detection logic by using the <i>flap_detection_options</i> directive in your host or service definitions.  This directive allows you to specify what host or service states (i.e. "UP, "DOWN", "OK, "CRITICAL") you want to use for flap detection.  If you don't use this directive, all host or service states are used in flap detection.
-</p>
+{{ site.hint }}You can exclude certain host or service states from use in flap detection logic by using the <i>flap_detection_options</i> directive in your host or service definitions.{{ site.end }}
+
+This directive allows you to specify what host or service states (i.e. "UP, "DOWN", "OK, "CRITICAL") you want to use for flap detection.  If you don't use this directive, all host or service states are used in flap detection.
 
 ### Flap Handling
 

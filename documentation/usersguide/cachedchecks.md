@@ -27,7 +27,11 @@ And on-demand service checks occur...
 
 * As needed for <a href="dependencychecks.html">predictive service dependency checks</a>.
 
-<span class="glyphicon glyphicon-pencil"></span> Note: Unless you make use of service dependencies, Naemon will not be able to use cached check results to improve the performance of service checks.  Don't worry about that - its normal.  Cached host checks are where the big performance improvements lie, and everyone should see a benefit there.
+{{ site.note }}Unless you make use of service dependencies, Naemon will not be able to use cached check results to improve the performance of service checks.{{ site.end }}
+
+Don't worry about that - its normal.
+
+Cached host checks are where the big performance improvements lie, and everyone should see a benefit there.
 
 ### How Caching Works
 

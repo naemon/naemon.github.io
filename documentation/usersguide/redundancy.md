@@ -11,9 +11,10 @@ This section describes a few scenarios for implementing redundant monitoring hos
 layouts. With redundant hosts, you can maintain the ability to monitor your network when the primary
 host that runs Naemon fails or when portions of your network become unreachable.
 
-<font color="red"><strong>Note:</strong></font> If you are just learning how to use Naemon, I would
+{{ site.warning }}If you are just learning how to use Naemon, I would
 suggest not trying to implement redudancy until you have becoming familiar with the <a href="#prerequisites">prerequisites</a> I've laid out.
 Redundancy is a relatively complicated issue to understand, and even more difficult to implement properly.
+{{ site.end }}
 
 ### Index
 

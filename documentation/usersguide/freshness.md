@@ -27,7 +27,7 @@ Naemon periodically checks the freshness of the results for all hosts services t
 <li>If the check results is found to be stale, Naemon will force an <a href="activechecks.html">active check</a> of the host or service by executing the command specified by in the host or service definition.
 </ul>
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip: An active check is executed even if active checks are disabled on a program-wide or host- or service-specific basis.
+{{ site.hint }}An active check is executed even if active checks are disabled on a program-wide or host- or service-specific basis.{{ site.end }}
 
 For example, if you have a freshness threshold of 60 for one of your services, Naemon will consider that service to be stale if its last check result is older than 60 seconds.
 
@@ -44,8 +44,9 @@ Here's what you need to do to enable freshness checking...
 <li>The <i>check_period</i> option in your host and service definitions is used when Naemon determines when a host or service can be checked for freshness, so make sure it is set to a valid timeperiod.</li>
 </ul>
 
-<p><span class="glyphicon glyphicon-thumbs-up"></span> Tip: If you do not specify a host- or service-specific <i>freshness_threshold</i> value (or you set it to zero), Naemon will automatically calculate a threshold automatically, based on a how often you monitor that particular host or service.  I would recommended that you explicitly specify a freshness threshold, rather than let Naemon pick one for you.
-</p>
+{{ site.hint }}If you do not specify a host- or service-specific <i>freshness_threshold</i> value (or you set it to zero), Naemon will automatically calculate a threshold automatically, based on a how often you monitor that particular host or service.{{ site.end }}
+
+I would recommended that you explicitly specify a freshness threshold, rather than let Naemon pick one for you.
 
 ### Example
 

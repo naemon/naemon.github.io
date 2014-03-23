@@ -117,9 +117,6 @@ directive to specify a layout algorithm that should be used.
 <li>If you are <a href="configcgi.html#authorized_for_all_hosts"><i>authorized for all hosts</i></a> you can view all hosts.</li>
 <li>If you are an <i>authenticated contact</i> you can view hosts for which you are a contact.</li>
 </ul>
-Note: Users who are not authorized to view specific hosts will see <i>unknown</i> nodes
-in those positions. I realize that they really shouldn't see <i>anything</i> there,
-but it doesn't make sense to even generate the map if you can't see all the host dependencies...
 </td>
 </tr>
 </table>

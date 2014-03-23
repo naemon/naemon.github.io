@@ -112,7 +112,9 @@ This cycle continues until either all dependencies for the service have been che
 
 <a name="hard_dependencies"></a>
 
-<span class="glyphicon glyphicon-pencil"></span> Note: <sup>*</sup>One important thing to note is that by default, Naemon will use the most current <a href="statetypes.html">hard state</a> of the service(s) that is/are being depended upon when it does the dependeny checks.  If you want Naemon to use the most current state of the services (regardless of whether its a soft or hard state), enable the <a href="configmain.html#soft_state_dependencies">soft_state_dependencies</a> option.
+{{ site.note }}<sup>*</sup>One important thing to note is that by default, Naemon will use the most current <a href="statetypes.html">hard state</a> of the service(s) that is/are being depended upon when it does the dependeny checks.{{ site.end }}
+
+If you want Naemon to use the most current state of the services (regardless of whether its a soft or hard state), enable the <a href="configmain.html#soft_state_dependencies">soft_state_dependencies</a> option.
 
 
 ### Execution Dependencies
@@ -157,7 +159,9 @@ Dependencies can have multiple levels of inheritence.  If the dependency definit
 
 As you'd probably expect, host dependencies work in a similiar fashion to service dependencies.  The difference is that they're for hosts, not services.
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip:  Do not confuse host dependencies with parent/child host relationships.  You should be using parent/child host relationships (defined with the *parents* directive in <a href="objectdefinitions.html#host">host</a> definitions) for most cases, rather than host dependencies.  A description of how parent/child host relationships work can be found in the documentation on <a href="networkreachability.html">network reachability</a>.
+{{ site.warn }}Do not confuse host dependencies with parent/child host relationships.{{ site.end }}
+
+You should be using parent/child host relationships (defined with the *parents* directive in <a href="objectdefinitions.html#host">host</a> definitions) for most cases, rather than host dependencies.  A description of how parent/child host relationships work can be found in the documentation on <a href="networkreachability.html">network reachability</a>.
 
 Here are the basics about host dependencies:
 

@@ -51,7 +51,7 @@ it is really DOWN based on its viewpoint.
 Similarly, the DOWN/UNREACHABLE states (from the viewpoint of <i>Naemon-A</i>) for
 <i>Router-C</i> and <i>Router-D</i> should be flipped from the viewpoint of <i>Naemon-B</i>.
 
-<span class="glyphicon glyphicon-pencil"></span> Note: There may be some situations where you do not want Naemon to translate DOWN/UNREACHABLE states from remote sources to their "correct" state from the viewpoint of the local Naemon instance.
+{{ site.note }}There may be some situations where you do not want Naemon to translate DOWN/UNREACHABLE states from remote sources to their "correct" state from the viewpoint of the local Naemon instance.{{ site.end }}
 
 For example, in distributed monitoring environments you may want the central Naemon
 instance to know how distributed instances see their respective portions of the network.

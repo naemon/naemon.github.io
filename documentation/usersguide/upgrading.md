@@ -48,9 +48,9 @@ you only need to copy the conf.d folder into /etc/naemon/conf.d. Also verify
 that your USER macros in your /etc/naemon/resource.cfg point to the same locations
 as before.
 
-<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i>
+{{ site.warn }}
 You may have to adjust the paths in the following commands to your needs.
-</div>
+{{ site.end }}
 
 Clean up sample config but make sure you don't need any of those files anymore.
 
@@ -81,7 +81,7 @@ Copy existing status file:
   %> cp -rp /var/lib/nagios/retention.dat  /var/lib/naemon/
 ```
 
-<div class="alert alert-info"><i class="glyphicon glyphicon-info-sign"></i> Naemon can coexist with your current installation, it uses different users and folders.</div>
+{{ site.info }}Naemon can coexist with your current installation, it uses different users and folders.{{ site.end }}
 
 Edit the main configuration file and replace
 

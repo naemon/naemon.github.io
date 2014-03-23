@@ -34,17 +34,16 @@ and the check returns a non-OK state (i.e. no state change has occurred)...
 
  - The non-OK service state is logged
  - Contacts are notified about the problem (if that's <a href="notifications.html">what should be done</a>).
-   Note: Notification intervals are ignored for volatile services.
  - The <a href="eventhandlers.html">event handler</a> for the service is run (if one has been defined)
+
+{{ site.note }}Notification intervals are ignored for volatile services.{{ site.end }}
 
 These events normally only occur for services when they are in a non-OK state and a hard state change has just occurred.
 In other words, they only happen the first time that a service goes into a non-OK state.
 If future checks of the service result in the same non-OK state, no hard state change
 occurs and none of the events mentioned take place again.
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip:
-If you are only interested in logging, consider using <a href="stalking.html">stalking</a> options instead.
-
+{{ site.hint }}If you are only interested in logging, consider using <a href="stalking.html">stalking</a> options instead. {{ site.end }}
 
 
 ### The Power Of Two

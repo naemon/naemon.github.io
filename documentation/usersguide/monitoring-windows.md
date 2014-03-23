@@ -23,7 +23,7 @@ This document describes how you can monitor "private" services and attributes of
 
 Publicly available services that are provided by Windows machines (HTTP, FTP, POP3, etc.) can be monitored easily by following the documentation on <a href="monitoring-publicservices.html">monitoring publicly available services</a>.
 
-<span class="glyphicon glyphicon-pencil"></span> Note: These instructions assume that you've installed Naemon according to the <a href="quickstart.html">quickstart guide</a>.   The sample configuration entries below reference objects that are defined in the sample config files (<i>commands.cfg</i>, <i>templates.cfg</i>, etc.) that are installed if you follow the quickstart.
+{{ site.note }}These instructions assume that you've installed Naemon according to the <a href="quickstart.html">quickstart guide</a>.   The sample configuration entries below reference objects that are defined in the sample config files (<i>commands.cfg</i>, <i>templates.cfg</i>, etc.) that are installed if you follow the quickstart.{{ site.end }}
 
 ### Overview
 
@@ -145,7 +145,7 @@ define host{
 
 Good. Now you can add some service definitions (to the same configuration file) in order to tell Naemon to monitor different aspects of the Windows machine.  If this is the *first* Windows machine you're monitoring, you can simply modify the sample service definitions in <i>windows.cfg</i>.
 
-<span class="glyphicon glyphicon-pencil"></span> Note: Replace "<i>winserver</i>" in the example definitions below with the name you specified in the <i>host_name</i> directive of the host definition you just added.
+{{ site.note }}Replace "<i>winserver</i>" in the example definitions below with the name you specified in the <i>host_name</i> directive of the host definition you just added.{{ site.end }}
 
 Add the following service definition to monitor the version of the NSClient++ addon that is running on the Windows server.  This is useful when it comes time to upgrade your Windows servers to a newer version of the addon, as you'll be able to tell which Windows machines still need to be upgraded to the latest version of NSClient++.
 

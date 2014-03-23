@@ -14,7 +14,9 @@ title: Notification Escalations
 
 Naemon supports optional escalation of contact notifications for hosts and services.  Escalation of host and service notifications is accomplished by defining <a href="objectdefinitions.html#hostescalation">host escalations</a> and <a href="objectdefinitions.html#serviceescalation">service escalations</a> in your <a href="configobject.html">object configuration file(s)</a>.
 
-<span class="glyphicon glyphicon-pencil"></span> Note: The examples I provide below all make use of service escalation definitions, but host escalations work the same way.  Except, of course, that they're for hosts instead of services. :-)
+{{ site.note }}The examples I provide below all make use of service escalation definitions, but host escalations work the same way.{{ site.end }}
+
+Except, of course, that they're for hosts instead of services. :-)
 
 ### When Are Notifications Escalated?
 
@@ -216,7 +218,7 @@ Under normal circumstances, escalations can be used at any time that a notificat
 
 You can optionally restrict escalations so that they are only used during specific time periods by using the <i>escalation_period</i> directive in the host or service escalation definition.  If you use the <i>escalation_period</i> directive to specify a <a href="timeperiods.html">timeperiod</a> during which the escalation can be used, the escalation will only be used during that time.  If you do not specify any <i>escalation_period</i> directive, the escalation can be used at any time within the "notification time window" for the host or service.
 
-<span class="glyphicon glyphicon-pencil"></span> Note: Escalated notifications are still subject to the normal time restrictions imposed by the <i>notification_period</i> directive in a host or service definition, so the timeperiod you specify in an escalation definition should be a subset of that larger "notification time window".
+{{ site.note }}Escalated notifications are still subject to the normal time restrictions imposed by the <i>notification_period</i> directive in a host or service definition, so the timeperiod you specify in an escalation definition should be a subset of that larger "notification time window".{{ site.end }}
 
 ### State Restrictions
 

@@ -116,6 +116,5 @@ the <b>--mrtg</b> and <b>--data</b> arguments. The <b>--data</b> argument is use
 to specify what statistics should be graphed. Possible values for the <b>--data</b>
 argument can be found by running the <i>naemonstats</i> utility with the <b>--help</b> option.
 
-<span class="glyphicon glyphicon-pencil"></span>
-Note: Information on using the <i>naemonstats</i> utility to generate MRTG graphs
-for Naemon performance statistics can be found <a href="mrtggraphs.html">here</a>.
+{{ site.note }}Information on using the <i>naemonstats</i> utility to generate MRTG graphs
+for Naemon performance statistics can be found <a href="mrtggraphs.html">here</a>.{{ site.end }}

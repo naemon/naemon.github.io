@@ -13,7 +13,7 @@ Reviewing a page is as easy as these 3 steps:
  - Remove the <i>{% raw %}{% include review_required.md %}{% endraw %}</i> at the top of the page
  - Send a pull request to update the page
 
-<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> <a href="/documentation/faq/#documentation">Details on how to edit a page can be found in the FAQ.</a></div>
+{{ site.note }}<a href="/documentation/faq/#documentation">Details on how to edit a page can be found in the FAQ.</a>{{ site.end }}
 
 Thanks for your help.
 
@@ -30,6 +30,6 @@ Editing the page is as easy as these 3 steps:
  - Remove the <i>{% raw %}{% include more_details_required.md %}{% endraw %}</i>
  - Send a pull request to update the page
 
-<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> <a href="/documentation/faq/#documentation">Details on how to edit a page can be found in the FAQ.</a></div>
+{{ site.note }}<a href="/documentation/faq/#documentation">Details on how to edit a page can be found in the FAQ.</a>{{ site.end }}
 
 Thanks for your help.

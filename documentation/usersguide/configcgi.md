@@ -17,7 +17,7 @@ When creating and/or editing configuration files, keep the following in mind:
 
 ### Sample Configuration
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip: A sample CGI configuration file (*/etc/naemon/cgi.cfg*) is installed for you when you follow the <a href="quickstart.html">quickstart installation guide</a>.
+{{ site.hint }}A sample CGI configuration file (*/etc/naemon/cgi.cfg*) is installed for you when you follow the <a href="quickstart.html">quickstart installation guide</a>.{{ site.end }}
 
 ### Config File Location
 

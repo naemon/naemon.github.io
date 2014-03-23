@@ -28,7 +28,9 @@ The <i>check_hpjd</i> plugin (which is part of the standard Naemon plugins distr
 <li>and more...</li>
 </ul>
 
-<span class="glyphicon glyphicon-pencil"></span> Note: These instructions assume that you've installed Naemon according to the <a href="quickstart.html">quickstart guide</a>.  The sample configuration entries below reference objects that are defined in the sample config files (<i>commands.cfg</i>, <i>templates.cfg</i>, etc.) that are installed if you follow the quickstart.
+{{ site.note }}These instructions assume that you've installed Naemon according to the <a href="quickstart.html">quickstart guide</a>.{{ site.end }}
+
+The sample configuration entries below reference objects that are defined in the sample config files (<i>commands.cfg</i>, <i>templates.cfg</i>, etc.) that are installed if you follow the quickstart.
 
 ### Overview
 
@@ -103,7 +105,7 @@ define host{
 
 Now you can add some service definitions (to the same configuration file) to monitor different aspects of the printer.  If this is the *first* printer you're monitoring, you can simply modify the sample service definition in <i>printer.cfg</i>.
 
-<span class="glyphicon glyphicon-pencil"></span> Note: Replace "<i>hplj2605dn</i>" in the example definitions below with the name you specified in the <i>host_name</i> directive of the host definition you just added.
+{{ site.note }}Replace "<i>hplj2605dn</i>" in the example definitions below with the name you specified in the <i>host_name</i> directive of the host definition you just added.{{ site.end }}
 
 Add the following service definition to check the status of the printer.  The service uses the <i>check_hpjd</i> plugin to check the status of the printer every 10 minutes by default.  The SNMP community string used to query the printer is "public" in this example.
 

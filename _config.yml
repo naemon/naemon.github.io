@@ -10,3 +10,11 @@ redcarpet:
 release_version: 0.8.0
 release_date: 14 Feb 2014
 
+# custom "tags"
+hint: '<div class="alert alert-success" style="margin: 10px;"><i class="glyphicon glyphicon-thumbs-up"></i> <b>Tip</b>:&nbsp;'
+note: '<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-pencil"></i> <b>Note</b>:&nbsp;'
+info: '<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i>&nbsp;'
+warn: '<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> <b>Warning:</b>&nbsp;'
+warning: '<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> <b>Warning:</b>&nbsp;'
+danger: '<div class="alert alert-danger" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> <b>Danger:</b>&nbsp;'
+end: '</div>'

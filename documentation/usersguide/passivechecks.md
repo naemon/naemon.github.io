@@ -79,13 +79,11 @@ where...
 <li><i>plugin_output</i> is the text output of the service check (i.e. the plugin output)
 </ul>
 
-<span class="glyphicon glyphicon-pencil"></span>
+{{ site.note }}A service must be defined in Naemon before you can submit passive check results for it!  Naemon will ignore all check results for services that had not been configured before it was last (re)started.{{ site.end }}
 
-Note: A service must be defined in Naemon before you can submit passive check results for it!  Naemon will ignore all check results for services that had not been configured before it was last (re)started.
+{{ site.hint }}An example shell script of how to submit passive service check results to Naemon can be found in the documentation on <a href="volatileservices.html">volatile services</a>.{{ site.end }}
 
-<span class="glyphicon glyphicon-thumbs-up"></span>
 
-An example shell script of how to submit passive service check results to Naemon can be found in the documentation on <a href="volatileservices.html">volatile services</a>.
 
 ### Submitting Passive Host Check Results
 
@@ -106,9 +104,9 @@ where...
 <li><i>plugin_output</i> is the text output of the host check
 </ul>
 
-<span class="glyphicon glyphicon-pencil"></span>
+{{ site.note }}A host must be defined in Naemon before you can submit passive check results for it!  Naemon will ignore all check results for hosts that had not been configured before it was last (re)started.{{ site.end }}
 
-Note: A host must be defined in Naemon before you can submit passive check results for it!  Naemon will ignore all check results for hosts that had not been configured before it was last (re)started.
+
 
 ### Passive Checks and Host States
 
@@ -116,7 +114,7 @@ Unlike with active host checks, Naemon does not (by default) attempt to determin
 
 <p>You can tell Naemon to translate DOWN/UNREACHABLE passive check result states to their "proper" state by using the <a href="configmain.html#translate_passive_host_checks">translate_passive_host_checks</a> variable.  More information on how this works can be found <a href="passivestatetranslation.html">here</a>.</p>
 
-<span class="glyphicon glyphicon-pencil"></span> Note: Passive host checks are normally treated as <a href="statetypes.html">HARD states</a>, unless the <a href="configmain.html#passive_host_checks_are_soft">passive_host_checks_are_soft</a> option is enabled.
+{{ site.note }}Passive host checks are normally treated as <a href="statetypes.html">HARD states</a>, unless the <a href="configmain.html#passive_host_checks_are_soft">passive_host_checks_are_soft</a> option is enabled.{{ site.end }}
 
 ### Submitting Passive Check Results From Remote Hosts
 

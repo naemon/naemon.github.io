@@ -29,7 +29,7 @@ The examples I give below use "standard" matching of object names
 
 If you wish, you can enable regular expression matching for object names by using the <a href="configmain.html#use_regexp_matching">use_regexp_matching</a> config option.  By default, regular expression matching will only be used in object names that contain <b>*</b>, <b>?</b>, <b>+</b>, or <b>\.</b>.  If you want regular expression matching to be used on all object names, enable the <a href="configmain.html#use_true_regexp_matching">use_true_regexp_matching</a> config option.  Regular expressions can be used in any of the fields used in the examples below (host names, hostgroup names, service names, and servicegroup names).
 
-<span class="glyphicon glyphicon-pencil"></span> Note: Be careful when enabling regular expression matching - you may have to change your config file, since some directives that you might not want to be interpreted as a regular expression just might be!  Any problems should become evident once you verify your configuration.
+{{ site.note }}Be careful when enabling regular expression matching - you may have to change your config file, since some directives that you might not want to be interpreted as a regular expression just might be!  Any problems should become evident once you verify your configuration.{{ site.end }}
 
 <a name="service"></a>
 

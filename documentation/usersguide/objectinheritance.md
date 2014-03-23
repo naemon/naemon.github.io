@@ -65,7 +65,7 @@ You'll note that the definition for host <i>bighost1</i> has been defined as hav
 
 You can see that the <i>check_command</i> and <i>notification_options</i> variables were inherited from the template object (where host <i>bighost1</i> was defined).  However, the <i>host_name</i> and <i>max_check_attempts</i> variables were not inherited from the template object because they were defined locally.  Remember, locally defined variables override variables that would normally be inherited from a template object.  That should be a fairly easy concept to understand.
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip: If you would like local string variables to be appended to inherited string values, you can do so. Read more about how to accomplish this <a href="#add_string">below</a>.
+{{ site.hint }}If you would like local string variables to be appended to inherited string values, you can do so. Read more about how to accomplish this <a href="#add_string">below</a>.{{ site.end }}
 
 ### Inheritance Chaining
 

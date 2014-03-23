@@ -35,7 +35,7 @@ Also we removed the CGIs in favor of the Thruk gui.
 For error tracing its often useful to have a backtrace. For example if naemon
 crashes. You can start naemon with GDB like this.
 
-<div class="alert alert-warning"><i class="glyphicon glyphicon-exclamation-sign"></i> All commands should be run as the 'naemon' user.</div>
+{{ site.warn }}All commands should be run as the 'naemon' user.{{ site.end }}
 
 Livestatus requires us to export or set LD_PRELOAD before running GDB, so we
 first have to find that library:

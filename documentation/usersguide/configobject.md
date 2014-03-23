@@ -28,7 +28,10 @@ More information on what objects are and how they relate to each other can be fo
 
 Objects can be defined in one or more configuration files and/or directories that you specify using the <a href="configmain.html#cfg_file">cfg_file</a> and/or <a href="configmain.html#cfg_dir">cfg_dir</a> directives in the main configuration file.
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip: When you follow <a href="quickstart.html">quickstart installation guide</a>, several sample object configuration files are placed in */usr/local/nagios/etc/objects/*.  You can use these sample files to see how object inheritance works and learn how to define your own object definitions.
+{{ site.hint }}When you follow <a href="quickstart.html">quickstart installation guide</a>, several sample object configuration files are placed in */usr/local/nagios/etc/objects/*.{{ site.end }}
+
+You can use these sample files to see how object inheritance works and learn how to define your own object definitions.
+
 
 ### How Are Objects Defined?
 

@@ -67,7 +67,7 @@ with the next "valid" time in the specified timeperiod.
 This means that the host or service may not get checked again for
 another hour, day, or week, etc.
 
-<span class="glyphicon glyphicon-pencil"></span> Note: On-demand checks and passive checks are not restricted by the timeperiod you specify in the <i>check_period</i> directive.
+{{ site.note }}On-demand checks and passive checks are not restricted by the timeperiod you specify in the <i>check_period</i> directive.{{ site.end }}
 
 Only regularly scheduled active checks are restricted.
 

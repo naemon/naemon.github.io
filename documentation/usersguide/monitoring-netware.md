@@ -26,6 +26,6 @@ You can find documentation on monitoring Netware servers with Naemon at Novell's
 <li><a href="http://www.novell.com/coolsolutions/tools/16935.html">check_gwiaRL Plugin for Naemon 2.0</a></li>
 </ul>
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip: When you visit Novell's <a href="http://www.novell.com/coolsolutions/">Cool Solutions</a> site, search for "Naemon" to find more articles and software components related to monitoring.
+{{ site.hint }}When you visit Novell's <a href="http://www.novell.com/coolsolutions/">Cool Solutions</a> site, search for "Naemon" to find more articles and software components related to monitoring.{{ site.end }}
 
 Thanks to <a href="http://www.novell.com/coolsolutions/author/1301.html">Christian Mies</a>, <a href="http://www.novell.com/coolsolutions/author/1525.html">Rainer Brunold</a>, and others for contributing Naemon and Netware documentation, addons, etc. on the Novell site!

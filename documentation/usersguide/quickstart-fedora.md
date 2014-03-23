@@ -146,7 +146,7 @@ Restart Apache to make the new settings take effect.
 service httpd restart
 </pre>
 
-<span class="glyphicon glyphicon-pencil"></span> Note: Consider implementing the ehanced CGI security measures described <a href="cgisecurity.html">here</a> to ensure that your web authentication credentials are not compromised.
+{{ site.note }}Consider implementing the ehanced CGI security measures described <a href="cgisecurity.html">here</a> to ensure that your web authentication credentials are not compromised.{{ site.end }}
 
 ### 6) Compile and Install the Naemon Plugins
 

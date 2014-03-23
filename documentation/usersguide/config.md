@@ -12,7 +12,7 @@ title: Configuration Overview
 
 There are several different configuration files that you're going to need to create or edit before you start monitoring anything.  Be patient!  Configuring Naemon can take quite a while, especially if you're first-time user.  Once you figure out how things work, it'll all be well worth your time. :-)
 
-<span class="glyphicon glyphicon-pencil"></span> Note: Sample configuration files are installed in the */usr/local/nagios/etc/* directory when you follow the <a href="quickstart.html">quickstart installation guide</a>.
+{{ site.note }}Sample configuration files are installed in the */usr/local/nagios/etc/* directory when you follow the <a href="quickstart.html">quickstart installation guide</a>.{{ site.end }}
 
 <img src="/images/configoverview.png" border="0" style="float: right" alt="Config Overview" title="Config Overview">
 

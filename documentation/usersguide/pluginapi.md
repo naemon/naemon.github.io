@@ -39,7 +39,7 @@ Naemon determines the status of a host or service by evaluating the return code 
 <tr><td>3</td><td>UNKNOWN</td><td>DOWN/UNREACHABLE</td></tr>
 </table>
 
-<span class="glyphicon glyphicon-pencil"></span> Note: If the <a href="configmain.html#use_aggressive_host_checking">use_aggressive_host_checking</a> option is enabled, return codes of 1 will result in a host state of DOWN or UNREACHABLE.  Otherwise return codes of 1 will result in a host state of UP.  The process by which Naemon determines whether or not a host is DOWN or UNREACHABLE is discussed <a href="networkreachability.html">here</a>.
+{{ site.note }}If the <a href="configmain.html#use_aggressive_host_checking">use_aggressive_host_checking</a> option is enabled, return codes of 1 will result in a host state of DOWN or UNREACHABLE.  Otherwise return codes of 1 will result in a host state of UP.  The process by which Naemon determines whether or not a host is DOWN or UNREACHABLE is discussed <a href="networkreachability.html">here</a>.{{ site.end }}
 
 ### Plugin Output Spec
 

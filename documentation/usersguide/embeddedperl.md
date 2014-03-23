@@ -6,9 +6,9 @@ title: Using The Embedded Perl Interpreter
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="epnplugins.html">Developing Plugins For Use With Embedded Perl</a>
 
 
-<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> <b>WARNING:</b>
+{{ site.warn }}
 Naemon does not include embedded Perl anymore, however, all ePN related information still applies to <a href="addons.html#modgearman">Mod-Gearman</a>.
-</div>
+{{ site.end }}
 
 
 ### Introduction
@@ -20,8 +20,9 @@ Without the embedded Perl interpreter, Mod-Gearman executes Perl (and non-Perl) 
 executing the plugins as an external command. When the embedded Perl interpreter is used, Mod-Gearman can
 execute Perl plugins by simply making a library call.
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip: The embedded Perl interpreter works with all Perl scripts that
-Mod-Gearman executes - not just plugins.  This documentation discusses the embedded Perl interpreter in relation to
+{{ site.hint }}The embedded Perl interpreter works with all Perl scripts that Mod-Gearman executes - not just plugins.{{ site.end }}
+
+This documentation discusses the embedded Perl interpreter in relation to
 plugins used for host and service checks, but it applies just the same to other types of Perl scripts you may be using
 for other types of commands (e.g. notification scripts, event handler scripts, etc.).
 
@@ -132,10 +133,8 @@ To tell Mod-Gearman to NOT use the embedded Perl interpreter for a particular sc
 
 Either line must be located within the first 10 lines of a script for Mod-Gearman to detect it.
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip: If you do not <i>explicitly</i> use the method
-above to tell Mod-Gearman whether an individual plugin can be run under the Perl interpreter, Mod-Gearman will make
-will a decision for you. This decision process is controlled by
-the `use_embedded_perl_implicitly` variable.
+{{ site.hint }}If you do not <i>explicitly</i> use the method above to tell Mod-Gearman whether an individual plugin can be run under the Perl interpreter, Mod-Gearman will make will a decision for you. This decision process is controlled by the `use_embedded_perl_implicitly` variable.{{ site.end }}
+
 If the value is set to 1, all Perl plugins/scripts (that do not explicitly enable/disable the ePN) will be
 run under the Perl interpreter. If the value is 0, they will NOT be run under the Perl interpreter.
 

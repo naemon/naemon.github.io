@@ -23,11 +23,13 @@ This document describes how you can monitor "private" services and attributes of
 
 Publicly available services that are provided by Linux servers (HTTP, FTP, SSH, SMTP, etc.) can be monitored easily by following the documentation on <a href="monitoring-publicservices.html">monitoring publicly available services</a>.
 
-<span class="glyphicon glyphicon-pencil"></span> Note: These instructions assume that you've installed Naemon according to the <a href="quickstart.html">quickstart guide</a>.  The sample configuration entries below reference objects that are defined in the sample config files (<i>commands.cfg</i>, <i>templates.cfg</i>, etc.) that are installed if you follow the quickstart.
+{{ site.note }}These instructions assume that you've installed Naemon according to the <a href="quickstart.html">quickstart guide</a>.{{ site.end }}
+
+The sample configuration entries below reference objects that are defined in the sample config files (<i>commands.cfg</i>, <i>templates.cfg</i>, etc.) that are installed if you follow the quickstart.
 
 ### Overview
 
-[Note: This document has not been completed.  I would recommend you read the documentation on the <a href="addons.html#nrpe">NRPE addon</a> for instructions on how to monitor a remote Linux/Unix server.]
+{{ site.note }}This document has not been completed. I would recommend you read the documentation on the <a href="addons.html#nrpe">NRPE addon</a> for instructions on how to monitor a remote Linux/Unix server.{{ site.end }}
 
 There are several different ways to monitor attributes or remote Linux/Unix servers.  One is by using shared SSH keys and the <i>check_by_ssh</i> plugin to execute plugins on remote servers.  This method will not be covered here, but can result in high load on your monitoring server if you are monitoring hundreds or thousands of services.  The overhead of setting up/destroying SSH connections is the cause of this.
 

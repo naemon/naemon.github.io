@@ -47,11 +47,11 @@ qh_register_handler("lala", "The LaLa query handler", 0, lala_query_handler);
 The second argument is a description, which will be printed when
 someone sends a help request.
 
-<div class="alert alert-info"><i class="glyphicon glyphicon-info-sign"></i>
+{{ site.info }}
 It's a good idea to handle queries such as "help" and take
 them to mean "print me some text telling me at least the basics
 of how to use this query handler".
-</div>
+{{ site.end }}
 
 
 ### Syntax

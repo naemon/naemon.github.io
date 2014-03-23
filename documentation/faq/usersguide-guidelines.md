@@ -2,6 +2,7 @@
 layout: affix
 title: Usersguide guidelines
 ---
+
 This document will help the community to mainstream Naemon usersguide to make it easy to follow with
 a common look and feel for the best user experiance possible.
 
@@ -22,43 +23,51 @@ mkdir download
 cd download
 ```
 <pre>
-```
+```bash
 mkdir download
 cd download
 ```
 </pre>
 
+{{ site.info }}The language is optional. Common languages are 'bash', 'c' or 'perl'.{{ site.end }}
+
+
 ### Alerts
-Alerts are used in the text to highlight something specific. It could be success, informational, warning or danger. See code snippets below
+Alerts are used in the text to highlight something specific. It could be success,
+informational, warning or danger. See code snippets below
 
-#### Success
 
-<div class="alert alert-success" style="margin: 10px;"><i class="glyphicon glyphicon-thumbs-up"></i> Installation completed</div>
+#### Success or Hints
 
-```
-<div class="alert alert-success" style="margin: 10px;"><i class="glyphicon glyphicon-thumbs-up"></i> Installation completed</div>
-```
+{{ site.hint }}Some useful hint.{{ site.end }}
+
+<pre>
+&#123;&#123; site.hint &#125;&#125;Some useful hint.&#123;&#123; site.end &#125;&#125;
+</pre>
+
 
 #### Information
 
-<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Read below for more information</div>
+{{ site.info }}Informational Alert{{ site.end }}
 
-```
-<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-info-sign"></i> Read below for more information</div>
-```
+<pre>
+&#123;&#123; site.info &#125;&#125;Informational Alert&#123;&#123; site.end &#125;&#125;
+</pre>
+
 
 #### Warning
 
-<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> It's not possible to use Markdown inside a html block. Don't forget that &lt;table&gt;...&lt;/table&gt; are inside a html block as well</div>
+{{ site.warn }}It's not possible to use Markdown inside a html block. Don't forget that &lt;table&gt;...&lt;/table&gt; are inside a html block as well{{ site.end }}
 
-```
-<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> It's not possible to use Markdown inside a html block. Don't forget that &lt;table&gt;...&lt;/table&gt; are inside a html block as well</div>
-```
+<pre>
+&#123;&#123; site.warn &#125;&#125;It's not possible to use Markdown inside a html block...&#123;&#123; site.end &#125;&#125;
+</pre>
+
 
 #### Danger
 
-<div class="alert alert-danger" style="margin: 10px;"><i class="glyphicon glyphicon-warning-sign"></i> Make a backup before you upgrade</div>
+{{ site.danger }}Make a backup before you upgrade{{ site.end }}
 
-```
-<div class="alert alert-danger" style="margin: 10px;"><i class="glyphicon glyphicon-warning-sign"></i> Make a backup before you upgrade</div>
-```
+<pre>
+&#123;&#123; site.danger &#125;&#125;Make a backup before you upgrade&#123;&#123; site.end &#125;&#125;
+</pre>

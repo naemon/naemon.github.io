@@ -75,7 +75,9 @@ For Hosts: <a href="macrolist.html#hoststate"><b>$HOSTSTATE$</b></a>, <a href="m
 
 The scripts should examine the values of the arguments passed to it and take any necessary action based upon those values.  The best way to understand how event handlers work is to see an example.  Lucky for you, one is provided <a href="#example">below</a>.
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip: Additional sample event handler scripts can be found in the <i>contrib/eventhandlers/</i> subdirectory of the Naemon distribution.  Some of these sample scripts demonstrate the use of <a href="extcommands.html">external commands</a> to implement a <a href="redundancy.html">redundant</a> and <a href="distributed.html">distributed</a> monitoring environments.
+{{ site.hint }}Additional sample event handler scripts can be found in the <i>contrib/eventhandlers/</i> subdirectory of the Naemon distribution. {{ site.end }}
+
+Some of these sample scripts demonstrate the use of <a href="extcommands.html">external commands</a> to implement a <a href="redundancy.html">redundant</a> and <a href="distributed.html">distributed</a> monitoring environments.
 
 ### Permissions For Event Handler Commands
 

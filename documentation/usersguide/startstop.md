@@ -10,9 +10,7 @@ There's more than one way to start, stop, and restart Naemon.
 Here are some of the more common ones...
 
 
-<div class="alert alert-info" style="margin: 10px;"><i class="glyphicon glyphicon-thumbs-up"></i>
-Tip: Always make sure you <a href="verifyconfig.html">verify your configuration</a> before you (re)start Naemon.
-</div>
+{{ site.hint }}Always make sure you <a href="verifyconfig.html">verify your configuration</a> before you (re)start Naemon.{{ site.end }}
 
 
 

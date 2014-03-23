@@ -93,7 +93,9 @@ the expanded/final command line to be executed for the service's check command w
     /usr/local/naemon/libexec/check_ping -H <font color="red">192.168.1.2</font> -w <font color="red">200.0,80%</font> -c <font color="red">400.0,40%</font>
 </pre>
 
-<span class="glyphicon glyphicon-thumbs-up"></span>Tip: If you need to pass bang (!) characters in your command arguments, you can do so by escaping them with a backslash (\).  If you need to include backslashes in your command arguments, they should also be escaped with a backslash.
+{{ site.hint }}If you need to pass bang (!) characters in your command arguments, you can do so by escaping them with a backslash (\).{{ site.end }}
+
+If you need to include backslashes in your command arguments, they should also be escaped with a backslash.
 
 ### On-Demand Macros
 
@@ -119,7 +121,7 @@ Note that the macro name is separated from the host or service identifier by a c
 For on-demand service macros, the service identifier consists of both a host name and a
 service description - these are separated by a colon (:) as well.
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip: On-demand service macros can contain an empty host name field.  In this case the name of the host associated with the service will automatically be used.
+{{ site.hint }}On-demand service macros can contain an empty host name field.  In this case the name of the host associated with the service will automatically be used.{{ site.end }}
 
 Examples of on-demand host and service macros follow:
 

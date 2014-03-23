@@ -37,15 +37,13 @@ fairly simple and very easy to debug. The breakdown goes as follows:
 - Neither keys nor values can contain the message delimiter.
 - A zero-length value is considered to be the empty string.
 
-<div class="alert alert-info"><i class="glyphicon glyphicon-info-sign"></i>
+{{ site.info }}
 Even though it's technically legal to put almost anything in the
 key field, you should stick to mnemonic names when extending the
 protocol and just use lower case letters and underscores.
-</div>
+{{ site.end }}
 
-<div class="alert alert-info"><i class="glyphicon glyphicon-info-sign"></i>
-Keys are case sensitive. JOB_ID is *not* the same as job_id.
-</div>
+{{ site.info }}Keys are case sensitive. JOB_ID is *not* the same as job_id.{{ site.end }}
 
 #### API's
 Worker processes communicate with Naemon using libnaemon API's
@@ -64,11 +62,11 @@ The key API's to use are:
 - iocache - for bulk-reading requests and parsing them
 - iobroker - for multiplexing between running tasks and the master nagios process.
 
-<div class="alert alert-info"><i class="glyphicon glyphicon-info-sign"></i>
+{{ site.info }}
 In particular, have a look at the "parse_command_kvvec()" and
 "finish_job()" functions in lib/worker.c. They will do a large part
 of the request/response handling for you.
-</div>
+{{ site.end }}
 
 ### Registering a worker - The handshake
 Workers register with Naemon through the queryhandler, using a query
@@ -98,16 +96,16 @@ keys:
 - max_jobs - Used to tell Naemon how many concurrent jobs this worker can handle
 - plugin - basename() or absolute path of specific plugins that this worker wants to handle checks for.
 
-<div class="alert alert-info"><i class="glyphicon glyphicon-info-sign"></i>
+{{ site.info }}
 plugin can be given multiple times. It is valid for a single
 single worker to say "plugin=check_snmp;plugin=check_iferrors", for
 example.
-</div>
+{{ site.end }}
 
-<div class="alert alert-info"><i class="glyphicon glyphicon-info-sign"></i>
+{{ site.info }}
 Many workers can register for the same plugin(s). They will
 share the load in round-robin fashion.
-</div>
+{{ site.end }}
 
 Complete C-code for registering a generic worker with Naemon follows:
 
@@ -213,10 +211,10 @@ system errors:
 error_code 62 (ETIME - Timer expired) is reserved and means that the
 job timed out.
 
-<div class="alert alert-info"><i class="glyphicon glyphicon-info-sign"></i>
+{{ site.warn }}
 *never* invent error codes in the range 0-10000, since we'll
 want to reserve that for special cases.
-</div>
+{{ site.end }}
 
 The following are completely optional (for now):
 

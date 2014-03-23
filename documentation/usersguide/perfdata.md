@@ -51,7 +51,9 @@ In the example above, the $HOSTOUTPUT$ or $SERVICEOUTPUT$ macro would contain "<
 
 Multiple lines of performace data (as well as normal text output) can be obtained from plugins, as described in the <a href="pluginapi.html">plugin API documentation</a>.
 
-<span class="glyphicon glyphicon-pencil"></span> Note: The Naemon daemon doesn't directly process plugin performance data, so it doesn't really care what the performance data looks like.  There aren't really any inherent limitations on the format or content of the performance data.  However, if you are using an external addon to process the performance data (i.e. PerfParse), the addon may be expecting that the plugin returns performance data in a specific format.  Check the documentation that comes with the addon for more information.
+{{ site.note }}The Naemon daemon doesn't directly process plugin performance data, so it doesn't really care what the performance data looks like.  There aren't really any inherent limitations on the format or content of the performance data.  However, if you are using an external addon to process the performance data (i.e. PerfParse), the addon may be expecting that the plugin returns performance data in a specific format.  Check the documentation that comes with the addon for more information.{{ site.end }}
+
+
 
 ### Processing Performance Data
 
@@ -77,7 +79,9 @@ define command{
 	}
 </pre>
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip: This method, while flexible, comes with a relatively high CPU overhead.  If you're processing performance data for a large number of hosts and services, you'll probably want Naemon to write performance data to files instead.  This method is described in the next section.
+{{ site.hint }}This method, while flexible, comes with a relatively high CPU overhead.{{ site.end }}
+
+If you're processing performance data for a large number of hosts and services, you'll probably want Naemon to write performance data to files instead.  This method is described in the next section.
 
 ### Writing Performance Data To Files
 

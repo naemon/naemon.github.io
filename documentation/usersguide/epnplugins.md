@@ -6,9 +6,9 @@ title: Developing Plugins For Use With Embedded Perl
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="embeddedperl.html">Embedded Perl Interpreter Overview</a>, <a href="pluginapi.html">Plugin API</a>
 
 
-<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> <b>WARNING:</b>
+{{ site.warn }}
 Naemon does not include embedded Perl anymore, however, all ePN related information still applies to <a href="addons.html#modgearman">Mod-Gearman</a>.
-</div>
+{{ site.end }}
 
 
 ### Introduction

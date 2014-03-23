@@ -20,9 +20,11 @@ Private services, in contrast, cannot be monitored with Naemon without an interm
 <li><a href="monitoring-linux.html">Monitoring Linux/Unix machines</a></li>
 </ul>
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip: Occassionally you will find that information on private services and applications can be monitored with SNMP.  The SNMP agent allows you to remotely monitor otherwise private (and inaccessible) information about the host.  For more information about monitoring services using SNMP, check out the documentation on <a href="monitoring-routers.html">monitoring switches and routers</a>.
+{{ site.hint }}Occassionally you will find that information on private services and applications can be monitored with SNMP.{{ site.end }}
 
-<span class="glyphicon glyphicon-pencil"></span> Note: These instructions assume that you've installed Naemon according to the <a href="quickstart.html">quickstart guide</a>.  The sample configuration entries below reference objects that are defined in the sample <i>commands.cfg</i> and <i>localhost.cfg</i> config files.
+The SNMP agent allows you to remotely monitor otherwise private (and inaccessible) information about the host.  For more information about monitoring services using SNMP, check out the documentation on <a href="monitoring-routers.html">monitoring switches and routers</a>.
+
+{{ site.note }}These instructions assume that you've installed Naemon according to the <a href="quickstart.html">quickstart guide</a>.  The sample configuration entries below reference objects that are defined in the sample <i>commands.cfg</i> and <i>localhost.cfg</i> config files.{{ site.end }}
 
 ### Plugins For Monitoring Services
 
@@ -83,7 +85,9 @@ define service{
 
 This simple service definition will monitor the HTTP service running on <i>remotehost</i>.  It will produce alerts if the web server doesn't respond within 10 seconds or if it returns HTTP errors codes (403, 404, etc.).  That's all you need for basic monitoring.  Pretty simple, huh?
 
-<span class="glyphicon glyphicon-thumbs-up"></span> Tip: For more advanced monitoring, run the <i>check_http</i> plugin manually with <i>--help</i> as a command-line argument to see all the options you can give the plugin.  This <i>--help</i> syntax works with all of the plugins I'll cover in this document.
+{{ site.hint }}For more advanced monitoring, run the <i>check_http</i> plugin manually with <i>--help</i> as a command-line argument to see all the options you can give the plugin.{{ site.end }}
+
+This <i>--help</i> syntax works with all of the plugins I'll cover in this document.
 
 A more advanced definition for monitoring the HTTP service is shown below.  This service definition will check to see if the /download/index.php URI contains the string "latest-version.tar.gz". It will produce an error if the string isn't found, the URI isn't valid, or the web server takes longer than 5 seconds to respond.
 
