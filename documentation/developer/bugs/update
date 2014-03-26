@@ -27,7 +27,7 @@ print $fh $header,"\n";
 print $fh "<table class='table sortable table-condensed table-hover'>\n";
 print $fh "<thead>\n";
 print $fh "<tr>\n";
-print $fh "<th data-defaultsort='asc'>Id</th><th data-sort='true'>Priority</th><th>Date</th><th data-sort='true'>Summary</th><th data-sort='true'>Reproducibility</th><th data-sort='true'>Nagios</th><th data-sort='true'>Nameon</th>\n";
+print $fh "<th data-defaultsort='desc'>Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th data-sort='true'>Priority&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Date</th><th data-sort='true'>Summary</th><th data-sort='true'>Reproducibility&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th data-sort='true'>Nagios</th><th data-sort='true'>Nameon</th>\n";
 print $fh "</tr>\n";
 print $fh "</thead>\n";
 print $fh "<tbody>\n";
