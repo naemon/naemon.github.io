@@ -298,7 +298,7 @@ sudo service apache2 restart
 
 ### Change default password for Thruk
 
-It's most important to change your password to protect your site for unothorized acces
+It's most important to change your password to protect your site for unauthorized access
 
 ```
 sudo htpasswd /etc/naemon/htpasswd admin
