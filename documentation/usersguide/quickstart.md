@@ -23,6 +23,7 @@ Quickstart installation guides are currently available for the following Linux d
 
 <ul>
 <li><a href="quickstart-ubuntu.html">Ubuntu Quickstart</a></li>
+<li><a href="quickstart-debian.html">Debian Quickstart</a></li>
 <li><a href="quickstart-fedora.html">Fedora Quickstart</a></li>
 <li><a href="quickstart-opensuse.html">openSUSE Quickstart</a></li>
 </ul>
