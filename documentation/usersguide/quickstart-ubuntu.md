@@ -2,231 +2,312 @@
 layout: doctoc
 title: Ubuntu Quickstart
 ---
-
-{% include review_required.md %}
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guides</a>, <a href="security.html">Security Considerations</a>
 
 ### Introduction
 
-This guide is intended to provide you with simple instructions on how to install Naemon from source (code) on Ubuntu and have it monitoring your local machine inside of 20 minutes.  No advanced installation options are discussed here - just the basics that will work for 95% of users who want to get started.
+This guide is intended to provide you with simple instructions on how to install Naemon from packages on Ubuntu and have it monitoring your local machine within 10 minutes. No advanced installation options are discussed here - just the basics that will work for 95% of users who want to get started.
 
-These instructions were written based on an <b>Ubuntu 6.10</b> (desktop) installation.  They should work for an <b>Ubuntu 7.10</b> install as well.
+These instructions were written for:
+
+* Ubuntu Server 13.10 Saucy Salamander
+* Ubuntu Server 13.04 Raring Ringtail
+* Ubuntu Server 12.10 Quantal Quetzal
+* Ubuntu Server 12.04 Precise Pangolin
+* Ubuntu Server 10.04 Lucid Lynx
 
 ### What You'll End Up With
 
 If you follow these instructions, here's what you'll end up with:
 
 <ul>
-<li>Naemon and the plugins will be installed underneath /usr/local/nagios</li>
+<li>Nagios plugins will be installed underneath /usr/lib/nagios/plugins/</li>
 <li>Naemon will be configured to monitor a few aspects of your local system (CPU load, disk usage, etc.)</li>
-<li>The Naemon web interface will be accessible at http://localhost/nagios/</li>
+<li>The Naemon web interface will be accessible at http://localhost/naemon/</li>
 </ul>
 
-### Required Packages
+### Install instruction 
 
-Make sure you've installed the following packages on your Ubuntu installation before continuing.
+{{ site.warn }}Don't forget to change your password from default, instruction are found below version specific installation instructions <a href="#change_default_password_for_thruk">here</a>{{ site.end }}
 
-<ul>
-<li>Apache 2</li>
-<li>PHP</li>
-<li>GCC compiler and development libraries</li>
-<li>GD development libraries</li>
-</ul>
+#### Ubuntu Server 13.10 Saucy Salamander
 
-You can use <i>apt-get</i> to install these packages by running the following commands:
+**Install dependencies**
 
-<pre>
-sudo apt-get install apache2
-sudo apt-get install libapache2-mod-php5
-sudo apt-get install build-essential
-</pre>
+```
+sudo apt-get install bsd-mailx apache2 apache2-utils libapache2-mod-fcgid libfontconfig1 libjpeg62 libgd3 libxpm4 xvfb libmysqlclient18
+```
 
-With Ubuntu 6.10, install the gd2 library with this command:
+**Download Naemon**
 
-<pre>
-sudo apt-get install libgd2-dev
-</pre>
+```
+cd ~/
+mkdir naemon
+cd naemon/
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.10/amd64/naemon-core-dbg_{{ site.release_version }}_ubuntu13.10_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.10/amd64/naemon-core_{{ site.release_version }}_ubuntu13.10_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.10/amd64/naemon-dev_{{ site.release_version }}_ubuntu13.10_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.10/amd64/naemon-livestatus_{{ site.release_version }}_ubuntu13.10_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.10/amd64/naemon-thruk-libs_{{ site.release_version }}_ubuntu13.10_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.10/amd64/naemon-thruk-reporting_{{ site.release_version }}_ubuntu13.10_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.10/amd64/naemon-thruk_{{ site.release_version }}_ubuntu13.10_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.10/amd64/naemon_{{ site.release_version }}_ubuntu13.10_amd64.deb
+```
 
-With Ubuntu 7.10, the gd2 library name has changed, so you'll need to use the following:
+**Install Naemon**
 
-<pre>
-sudo apt-get install libgd2-xpm-dev
-</pre>
+```
+sudo dpkg -i naemon*.deb
+```
 
-### 1) Create Account Information
+**Install Nagios plugins**
 
-Become the root user.
+```
+sudo apt-get install nagios-plugins
+```
 
-<pre>
-sudo -s
-</pre>
+**Change path to Nagios plugins**
 
-Create a new <i>nagios</i> user account and give it a password.
+```
+sudo vi /etc/naemon/resource.cfg 
+```
+find *$USER1$=/usr/lib/naemon/plugins*
 
-<pre>
-/usr/sbin/useradd -m -s /bin/bash nagios
-passwd nagios
-</pre>
+replace with *$USER1$=/usr/lib/nagios/plugins*
 
-On older Ubuntu server editions (6.01 and earlier), you will need to also add a <i>nagios</i> group (it's not created by default).  You should be able to skip this step on desktop, or newer server editions of Ubuntu.
+**Restart services**
 
-<pre>
-/usr/sbin/groupadd nagios
-/usr/sbin/usermod -G nagios nagios
-</pre>
+```
+sudo service naemon restart
+sudo service apache2 restart
+```
 
-Create a new <i>nagcmd</i> group for allowing external commands to be submitted through the web interface. Add both the nagios user and the apache user to the group.
+#### Ubuntu Server 13.04 Raring Ringtail
 
-<pre>
-/usr/sbin/groupadd nagcmd
-/usr/sbin/usermod -a -G nagcmd nagios
-/usr/sbin/usermod -a -G nagcmd www-data
-</pre>
+**Install dependencies**
 
-### 2) Download Naemon and the Plugins
+```
+sudo apt-get install bsd-mailx apache2 libapache2-mod-fcgid libfontconfig1 libgd2-xpm libjpeg62 libxpm4 xvfb
+```
 
-Create a directory for storing the downloads.
+**Download Naemon**
 
-<pre>
-mkdir ~/downloads
-cd ~/downloads
-</pre>
+```
+cd ~/
+mkdir naemon
+cd naemon/
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.04/amd64/naemon-core-dbg_{{ site.release_version }}_ubuntu13.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.04/amd64/naemon-core_{{ site.release_version }}_ubuntu13.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.04/amd64/naemon-dev_{{ site.release_version }}_ubuntu13.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.04/amd64/naemon-livestatus_{{ site.release_version }}_ubuntu13.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.04/amd64/naemon-thruk-libs_{{ site.release_version }}_ubuntu13.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.04/amd64/naemon-thruk-reporting_{{ site.release_version }}_ubuntu13.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.04/amd64/naemon-thruk_{{ site.release_version }}_ubuntu13.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.04/amd64/naemon_{{ site.release_version }}_ubuntu13.04_amd64.deb
+```
 
-Download the source code tarballs of both Naemon and the Naemon plugins (visit <a href="http://www.nagios.org/download/">http://www.nagios.org/download/</a> for links to the latest versions).  These directions were tested with Naemon 3.1.1 and Naemon Plugins 1.4.11.
+**Install Naemon**
 
-<pre>
-wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.2.3.tar.gz
-wget http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.11.tar.gz
-</pre>
+```
+sudo dpkg -i naemon*.deb
+```
 
-### 3) Compile and Install Naemon
+**Install Nagios plugins**
 
-Extract the Naemon source code tarball.
+```
+sudo apt-get install nagios-plugins
+```
 
-<pre>
-cd ~/downloads
-tar xzf nagios-3.2.3.tar.gz
-cd nagios-3.2.3
-</pre>
+**Change path to Nagios plugins**
 
-Run the Naemon configure script, passing the name of the group you created earlier like so:
+```
+sudo vi /etc/naemon/resource.cfg 
+```
 
-<pre>
-./configure --with-command-group=nagcmd
-</pre>
+find *$USER1$=/usr/lib/naemon/plugins*
 
-Compile the Naemon source code.
+replace with *$USER1$=/usr/lib/nagios/plugins*
 
-<pre>
-make all
-</pre>
+**Restart services**
 
-Install binaries, init script, sample config files and set permissions on the external command directory.
+```
+sudo service naemon restart
+sudo service apache2 restart
+```
 
-<pre>
-make install
-make install-init
-make install-config
-make install-commandmode
-</pre>
 
-Don't start Naemon yet - there's still more that needs to be done...
+#### Ubuntu Server 12.10 Quantal Quetzal
 
-### 4) Customize Configuration
+**Install dependencies**
 
-Sample <a href="config.html">configuration files</a> have now been installed in the <i>/usr/local/nagios/etc</i> directory.  These sample files should work fine for getting started with Naemon.  You'll need to make just one change before you proceed...
+```
+sudo apt-get install bsd-mailx apache2 libmysqlclient18 libapache2-mod-fcgid libfontconfig1 libgd2-xpm libjpeg62 libxpm4 xvfb
+```
 
-Edit the <i>/usr/local/nagios/etc/objects/contacts.cfg</i> config file with your favorite editor and change the email address associated with the <i>nagiosadmin</i> contact definition to the address you'd like to use for receiving alerts.
+**Download Naemon**
 
-<pre>
-vi /usr/local/nagios/etc/objects/contacts.cfg
-</pre>
+```
+cd ~/
+mkdir naemon
+cd naemon/
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.10/amd64/naemon-core-dbg_{{ site.release_version }}_ubuntu12.10_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.10/amd64/naemon-core_{{ site.release_version }}_ubuntu12.10_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.10/amd64/naemon-dev_{{ site.release_version }}_ubuntu12.10_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.10/amd64/naemon-livestatus_{{ site.release_version }}_ubuntu12.10_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.10/amd64/naemon-thruk-libs_{{ site.release_version }}_ubuntu12.10_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.10/amd64/naemon-thruk-reporting_{{ site.release_version }}_ubuntu12.10_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.10/amd64/naemon-thruk_{{ site.release_version }}_ubuntu12.10_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.10/amd64/naemon_{{ site.release_version }}_ubuntu12.10_amd64.deb
+```
 
-### 5) Configure the Web Interface
+**Install Naemon**
 
-Install the Naemon web config file in the Apache conf.d directory.
+```
+sudo dpkg -i naemon*.deb
+```
 
-<pre>
-make install-webconf
-</pre>
+**Install Nagios plugins**
 
-Create a <i>nagiosadmin</i> account for logging into the Naemon web interface.  Remember the password you assign to this account - you'll need it later.
+```
+sudo apt-get install nagios-plugins
+```
 
-<pre>
-htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
-</pre>
+**Change path to Nagios plugins**
 
-Restart Apache to make the new settings take effect.
+```
+sudo vi /etc/naemon/resource.cfg 
+```
 
-<pre>
-/etc/init.d/apache2 reload
-</pre>
+find *$USER1$=/usr/lib/naemon/plugins*
 
-{{ site.note }}Consider implementing the ehanced CGI security measures described <a href="cgisecurity.html">here</a> to ensure that your web authentication credentials are not compromised.{{ site.end }}
+replace with *$USER1$=/usr/lib/nagios/plugins*
 
+**Restart services**
 
-### 6) Compile and Install the Naemon Plugins
+```
+sudo service naemon restart
+sudo service apache2 restart
+```
 
-Extract the Naemon plugins source code tarball.
+#### Ubuntu Server 12.04 Precise Pangolin
 
-<pre>
-cd ~/downloads
-tar xzf nagios-plugins-1.4.11.tar.gz
-cd nagios-plugins-1.4.11
-</pre>
+**Install dependencies**
 
-Compile and install the plugins.
+```
+sudo apt-get install bsd-mailx apache2 libapache2-mod-fcgid libfontconfig1 libgd2-xpm libjpeg62 libxpm4 xvfb libmysqlclient18
+```
 
-<pre>
-./configure --with-nagios-user=nagios --with-nagios-group=nagios
-make
-make install
-</pre>
+**Download Naemon**
 
-### 7) Start Naemon
+```
+cd ~/
+mkdir naemon
+cd naemon/
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.04/amd64/naemon-core-dbg_{{ site.release_version }}_ubuntu12.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.04/amd64/naemon-core_{{ site.release_version }}_ubuntu12.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.04/amd64/naemon-dev_{{ site.release_version }}_ubuntu12.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.04/amd64/naemon-livestatus_{{ site.release_version }}_ubuntu12.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.04/amd64/naemon-thruk-libs_{{ site.release_version }}_ubuntu12.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.04/amd64/naemon-thruk-reporting_{{ site.release_version }}_ubuntu12.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.04/amd64/naemon-thruk_{{ site.release_version }}_ubuntu12.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.04/amd64/naemon_{{ site.release_version }}_ubuntu12.04_amd64.deb
+```
 
-Configure Naemon to automatically start when the system boots.
+**Install Naemon**
 
-<pre>
-ln -s /etc/init.d/nagios /etc/rcS.d/S99nagios
-</pre>
+```
+sudo dpkg -i naemon*.deb
+```
 
-Verify the sample Naemon configuration files.
+**Install Nagios plugins**
 
-<pre>
-/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
-</pre>
+```
+sudo apt-get install nagios-plugins
+```
 
-If there are no errors, start Naemon.
+**Change path to Nagios plugins**
 
-<pre>
-/etc/init.d/nagios start
-</pre>
+```
+sudo vi /etc/naemon/resource.cfg 
+```
 
-### 8) Login to the Web Interface
+find *$USER1$=/usr/lib/naemon/plugins*
 
-You should now be able to access the Naemon web interface at the URL below.  You'll be prompted for the username (<i>nagiosadmin</i>) and password you specified earlier.
+replace with *$USER1$=/usr/lib/nagios/plugins*
 
-<pre>
-http://localhost/nagios/
-</pre>
+**Restart services**
 
-Click on the "Service Detail" navbar link to see details of what's being monitored on your local machine.  It will take a few minutes for Naemon to check all the services associated with your machine, as the checks are spread out over time.
+```
+sudo service naemon restart
+sudo service apache2 restart
+```
 
-### 9) Other Modifications
 
-If you want to receive email notifications for Naemon alerts, you need to install the mailx (Postfix) package.
+#### Ubuntu Server 10.04 Lucid Lynx
 
-<pre>
-sudo apt-get install mailx
-sudo apt-get install postfix
-</pre>
+**Install dependencies**
 
-You'll have to edit the Naemon email notification commands found in <i>/usr/local/nagios/etc/objects/commands.cfg</i> and change any '/bin/mail' references to '/usr/bin/mail'.  Once you do that you'll need to restart Naemon to make the configuration changes live.
+```
+sudo apt-get install bsd-mailx apache2 libapache2-mod-fcgid libfontconfig1 libgd2-xpm libjpeg62 libmysqlclient16 libxpm4 xvfb
+```
 
-<pre>
-sudo /etc/init.d/nagios restart
-</pre>
+**Download Naemon**
 
-Configuring email notifications is outside the scope of this documentation.  Refer to your system documentation, search the web, or look to the <a href="http://support.nagios.com" target="_blank">Naemon Support Portal</a> or <a href="http://wiki.nagios.org" target="_blank">Naemon Community Wiki</a> for specific instructions on configuring your Ubuntu system to send email messages to external addresses.
+```
+cd ~/
+mkdir naemon
+cd naemon/
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu10.04/amd64/naemon-core-dbg_{{ site.release_version }}_ubuntu10.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu10.04/amd64/naemon-core_{{ site.release_version }}_ubuntu10.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu10.04/amd64/naemon-dev_{{ site.release_version }}_ubuntu10.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu10.04/amd64/naemon-livestatus_{{ site.release_version }}_ubuntu10.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu10.04/amd64/naemon-thruk-libs_{{ site.release_version }}_ubuntu10.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu10.04/amd64/naemon-thruk-reporting_{{ site.release_version }}_ubuntu10.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu10.04/amd64/naemon-thruk_{{ site.release_version }}_ubuntu10.04_amd64.deb
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu10.04/amd64/naemon_{{ site.release_version }}_ubuntu10.04_amd64.deb
+```
+
+**Install Naemon**
+
+```
+sudo dpkg -i naemon*.deb
+```
+
+**Install Nagios plugins**
+
+```
+sudo apt-get install nagios-plugins
+```
+
+**Change path to Nagios plugins**
+
+```
+sudo vi /etc/naemon/resource.cfg 
+```
+
+find *$USER1$=/usr/lib/naemon/plugins*
+
+replace with *$USER1$=/usr/lib/nagios/plugins*
+
+**Restart services**
+
+```
+sudo service naemon restart
+sudo service apache2 restart
+```
+
+### Change default password for Thruk
+
+It's most important to change your password to protect your site for unothorized acces
+
+```
+sudo htpasswd /etc/naemon/htpasswd admin
+```
+
+### Login to the Web Interface
+
+You should now be able to access the Naemon web interface at the URL below.  You'll be prompted for the username admin and password you specified earlier or admin if you did not change your password.
+
+```
+http://localhost/naemon/
+```
