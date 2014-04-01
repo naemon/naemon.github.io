@@ -133,7 +133,7 @@ jQuery(document).ready(function() {
     var today  = new Date();
     var day    = today.getDate();
     var days   = new Date(today.getFullYear(), today.getMonth()+1, 0).getDate();
-    if(day != days) {
+    if(day != days && day > 1) {
         var factor = days / day;
         var d5 = { label: "", data: [d1.data[d1.data.length-2],  [d1.data.length-1, d1.data[d1.data.length-1][1]*factor ]], dashes: { show: true } };
         var d6 = { label: "", data: [d2.data[d2.data.length-2],  [d2.data.length-1, d2.data[d2.data.length-1][1]*factor ]], dashes: { show: true } };
