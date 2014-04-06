@@ -40,7 +40,7 @@ yum install wget gd libXpm httpd
 sudo yum-config-manager --enable rhel-6-[operating_system]-optional-rpms
 ```
 
-*operating_system — type of operating system installed. Enter either workstation, client or server.*
+*operating_system - type of operating system installed. Enter either workstation, client or server.*
 
 ```
 yum install xorg-x11-server-Xvfb
