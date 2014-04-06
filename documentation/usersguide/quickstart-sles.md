@@ -57,7 +57,7 @@ vi /etc/naemon/resource.cfg
 
 find *$USER1$=/usr/lib/naemon/plugins*
 
-replace with *replace with: “$USER1$=/usr/lib/nagios/plugins”*
+replace with *replace with: "$USER1$=/usr/lib/nagios/plugins"*
 
 **Start services**
 
