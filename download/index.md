@@ -91,8 +91,13 @@ DIV.legend TD {
 }
 </style>
 <div id="downloadstats" style="width:1000px; height: 300px;"></div>
+<br><br>
+
+##### Downloads splitted by System (Core only)
+<div id="downloadstats_pkg" style="width:400px; height: 270px;"></div>
 <script language="javascript" type="text/javascript" src="/ressources/flot/jquery.flot.min.js"></script>
 <script language="javascript" type="text/javascript" src="/ressources/flot/jquery-flot-dashes.js"></script>
+<script language="javascript" type="text/javascript" src="/ressources/flot/jquery.flot.pie.min.js"></script>
 <script language="javascript" type="text/javascript" src="http://labs.consol.de/naemon/downloadstats.js"></script>
 <script type="text/javascript">
 function extract_data(name, ticks, stats) {
@@ -109,6 +114,27 @@ function extract_data(name, ticks, stats) {
     });
     return(data);
 }
+
+function extract_data_current_month(pattern, month) {
+    var sum = 0;
+    var tmp   = month.split("-");
+    var year  = tmp[0];
+    var month = tmp[1];
+    jQuery.each(pattern, function(x, p) {
+        var re = new RegExp(p);
+        for(var key in download_stats[year][month]) {
+            if(key.search(re) != -1) {
+                sum += download_stats[year][month][key];
+            }
+        }
+    });
+    return sum;
+}
+
+function labelFormatter(label, series) {
+    return "<div style='font-size:8pt; text-align:center; padding:2px; color:white;'>" + label + "<br/>" + Math.round(series.percent) + "%</div>";
+}
+
 
 jQuery(document).ready(function() {
     var months = [];
@@ -145,20 +171,14 @@ jQuery(document).ready(function() {
     jQuery.plot("#downloadstats", series,{
         colors: ['#CB514D', '#4CA251', '#AFD9F7', '#EDBF4B','#CB514D', '#4CA251', '#AFD9F7', '#EDBF4B'],
         lines: {
-            fill:  false,
-            steps: false,
+            fill:        false,
+            steps:       false,
             fillColor: { colors: [ { opacity: 0.6 }, { opacity: 0.9 } ] }
         },
-        xaxis: {
-          ticks: ticks
-        },
-        legend: {
-            position: 'nw'
-        },
+        xaxis:  { ticks: ticks },
+        legend: { position: 'nw' },
         grid: {
-            margin: {
-                left: 20
-            },
+            margin:  { left: 20 },
             hoverable: true,
             clickable: true
         }
@@ -170,20 +190,87 @@ jQuery(document).ready(function() {
 
     jQuery("<div id='tooltip'></div>").css({
         position: "absolute",
-        display: "none",
-        border: "1px solid #fdd",
-        padding: "2px",
-        "background-color": "#fee",
-        opacity: 0.80
+        display:  "none",
+        border:   "1px solid #fdd",
+        padding:  "2px",
+        opacity:   0.80
     }).appendTo("body");
     jQuery("#downloadstats").bind("plothover", function (event, pos, item) {
         if (item) {
             jQuery("#tooltip").html(item.series.label+": " + item.datapoint[1] + " downloads in " + ticks[item.datapoint[0]][1])
-                              .css({top: item.pageY+5, left: item.pageX+5})
+                              .css({top: item.pageY+5, left: item.pageX+5, "background-color": "#fee"})
                               .fadeIn(200);
         } else {
             $("#tooltip").hide();
         }
     });
+
+
+    var cur_month = ticks[ticks.length-1][1];
+    var data = [{
+        label: 'Redhat5',
+        data: extract_data_current_month(['naemon-core-rhel5'], cur_month),
+        color: '#CA8F42'
+    }, {
+        label: 'Redhat6',
+        data: extract_data_current_month(['naemon-core-rhel6'], cur_month),
+        color: '#DBAD72'
+    }, {
+        label: 'SLES11',
+        data: extract_data_current_month(['naemon-core-sles11'], cur_month),
+        color: '#D9A88F'
+    }, {
+        label: 'Debian7',
+        data: extract_data_current_month(['naemon-core-debian7'], cur_month),
+        color: '#AAD1B7'
+    }, {
+        label: 'Debian8',
+        data: extract_data_current_month(['naemon-core-debian8'], cur_month),
+        color: '#4B8C61'
+    }, {
+        label: 'Ubuntu 12',
+        data: extract_data_current_month(['naemon-core-ubuntu12'], cur_month),
+        color: '#12AD2A'
+    }, {
+        label: 'Ubuntu 13',
+        data: extract_data_current_month(['naemon-core-ubuntu13'], cur_month),
+        color: '#63D13E'
+    }];
+    jQuery.plot('#downloadstats_pkg', data, {
+        series: {
+            pie: {
+                show:   true,
+                radius: 1,
+                tilt:   0.7,
+                shadow: {
+                    alpha: 0.02,
+                    left: 15,
+                    top: 5
+                },
+                label: {
+                    show:         true,
+                    radius:       1,
+                    formatter:    labelFormatter,
+                    background: { opacity: 0.8 }
+                },
+                combine: {
+                    color:    '#999',
+                    threshold: 0.03
+                }
+            }
+        },
+        legend: { show: false },
+        grid:   { hoverable: true }
+    });
+    jQuery("#downloadstats_pkg").bind("plothover", function (event, pos, item) {
+        if (item) {
+            jQuery("#tooltip").html(item.series.label+": " + item.datapoint[1][0][1] + " downloads in " + cur_month + ' = '+ Math.round(item.series.percent) + ' %')
+                              .css({top: pos.pageY+5, left: pos.pageX+5, "background-color": item.series.color})
+                              .fadeIn(200);
+        } else {
+            $("#tooltip").hide();
+        }
+    });
+
 });
 </script>
