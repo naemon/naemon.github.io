@@ -126,7 +126,7 @@ chkconfig thruk on && service thruk start
 It's most important to change your password to protect your site for unauthorized access
 
 ```
-sudo htpasswd /etc/naemon/htpasswd admin
+htpasswd /etc/naemon/htpasswd admin
 ```
 
 ### Login to the Web Interface
