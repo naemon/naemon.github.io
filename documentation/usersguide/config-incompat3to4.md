@@ -128,3 +128,12 @@ Contacts have one new configurable value, namely 'minimum_value', which
 sets the minimum notification value for which the contact should get
 notified. The notification value is determined by the total value of
 all objects affected by the problem.
+
+
+#### Removals
+Services have lost an old and never user configurable option:
+
+ - parallelize_check
+
+'parallelize_check' was never implemented and changing the value had
+no effect. It has been removed from Naemon.
