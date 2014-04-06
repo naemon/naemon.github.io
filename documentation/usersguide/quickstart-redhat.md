@@ -92,9 +92,9 @@ setenforce 0
 vi /etc/selinux/config
 ```
 
-edit row: *“SELINUX=enforcing”*
+edit row: *"SELINUX=enforcing"*
 
-replace with: *“SELINUX=disabled”*
+replace with: *"SELINUX=disabled"*
 
 **Install Nagios plugins**
 
@@ -110,7 +110,7 @@ vi /etc/naemon/resource.cfg
 
 find *$USER1$=/usr/lib/naemon/plugins*
 
-replace with *replace with: “$USER1$=/usr/lib64/nagios/plugins”*
+replace with *replace with: "$USER1$=/usr/lib64/nagios/plugins"*
 
 **Start services**
 
