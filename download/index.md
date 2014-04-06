@@ -76,10 +76,15 @@ As true monitoring people we love statistics:
 
 <style type="text/css">
 .yaxisLabel {
-  left: 2px;
+  left: -20px;
   top: 50%;
-  transform: rotate(-90deg);
-  transform-origin: 0 0 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.00000000, M12=1.00000000, M21=-1.00000000, M22=-0.00000000,sizingMethod='auto expand')";
+  filter: flipv() fliph(); writing-mode: tb-rl; /* IE < 9 */
+  -webkit-transform: rotate(-90.0deg);  /* Safari 3.1+, Chrome */
+  -moz-transform: rotate(-90.0deg);  /* Firefox 3.5-15 */
+  -ms-transform: rotate(-90.0deg);  /* IE9+ */
+  -o-transform: rotate(-90.0deg);  /* Opera 10.5-12.00 */
+  transform: rotate(-90.0deg);
 }
 .axisLabel {
   font-size: 12px;
