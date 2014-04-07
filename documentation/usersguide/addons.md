@@ -73,7 +73,11 @@ The NDOUtils addon and documentation can be found at <a href="http://www.nagios.
 
 
 ### PNP
-PNP is a graphing addon. Details can be found on <a href="http://pnp4nagios.org">pnp4nagios.org</a>
+<a href="../../images/pnp4nagios-example1.png"><img src="../../images/pnp4nagios-example1.png" border="0" hspace="10" width="30%" height="30%" alt="pnp4nagios example with Naemon" title="pnp4nagios example with Naemon" style="float: right;"></a>
+
+PNP is a graphing addon. For installation step by step help see <a href="addon-pnp-quickstart.html">Addon PNP4Nagios Quickstart</a>
+
+Author website can be found here: <a href="http://pnp4nagios.org">pnp4nagios.org</a>
 
 
 

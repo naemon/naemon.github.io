@@ -58,7 +58,7 @@ body_class: toc
 
 <a href="monitoring-publicservices.html">How to monitor a publicly available service (HTTP, FTP, SSH, etc.)</a>
 
-
+<a href="addon-pnp-quickstart.html">How to install PNP graphs</a>
 
 ### Configuring Naemon
 
