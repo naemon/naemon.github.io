@@ -2,10 +2,6 @@
 layout: doctoc
 title: Event Handlers
 ---
-
-{% include review_required.md %}
-
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="statetypes.html">State Types</a>, <a href="hostchecks.html">Host Checks</a>, <a href="servicechecks.html">Service Checks</a>
 
 ### Introduction
@@ -109,11 +105,11 @@ Once the service has been defined with an event handler, we must define that eve
 <pre>
 define command{
 	command_name	restart-httpd
-	command_line	/usr/local/nagios/libexec/eventhandlers/restart-httpd  $SERVICESTATE$ $SERVICESTATETYPE$ $SERVICEATTEMPT$
+	command_line	/usr/local/naemon/libexec/eventhandlers/restart-httpd  $SERVICESTATE$ $SERVICESTATETYPE$ $SERVICEATTEMPT$
 	}
 </pre>
 
-Now, let's actually write the event handler script (this is the <i>/usr/local/nagios/libexec/eventhandlers/restart-httpd</i> script).
+Now, let's actually write the event handler script (this is the <i>/usr/local/naemon/libexec/eventhandlers/restart-httpd</i> script).
 
 <pre>
 #!/bin/sh

@@ -2,16 +2,13 @@
 layout: doctoc
 title: Cached Checks
 ---
-
-{% include review_required.md %}
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="hostchecks.html">Host Checks</a>, <a href="servicechecks.html">Service Checks</a>, <a href="dependencychecks.html">Predictive Dependency Checks</a>
 
 ### Introduction
 
 <img src="/images/cachedchecks1.png" border="0" style="float: right;" alt="Cached Checks" title="Cached Checks">
 
-The performance of Naemon' monitoring logic can be significantly improved by implementing the use of cached checks.  Cached checks allow Naemon to forgo executing a host or service check command if it determines a relatively recent check result will do instead.
+The performance of Naemon's monitoring logic can be significantly improved by implementing the use of cached checks.  Cached checks allow Naemon to forgo executing a host or service check command if it determines a relatively recent check result will do instead.
 
 ### For On-Demand Checks Only
 

@@ -55,9 +55,9 @@ If you have log rotation enabled, this file will automatically be rotated every 
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>cfg_file=/etc/naemon/hosts.cfg</b></font>
-<font color="red"><b>cfg_file=/etc/naemon/services.cfg</b></font>
-<font color="red"><b>cfg_file=/etc/naemon/commands.cfg</b></font>
+<font color="red"><b>cfg_file=/etc/naemon/hosts.cfg</b></font><br>
+<font color="red"><b>cfg_file=/etc/naemon/services.cfg</b></font><br>
+<font color="red"><b>cfg_file=/etc/naemon/commands.cfg</b></font><br>
 </td>
 </tr>
 </table>
@@ -81,9 +81,9 @@ multiple <i>cfg_file=</i> statements to have each of them processed.
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>cfg_dir=/etc/naemon/commands</b></font>
-<font color="red"><b>cfg_dir=/etc/naemon/services</b></font>
-<font color="red"><b>cfg_dir=/etc/naemon/hosts</b></font>
+<font color="red"><b>cfg_dir=/etc/naemon/commands</b></font><br>
+<font color="red"><b>cfg_dir=/etc/naemon/services</b></font><br>
+<font color="red"><b>cfg_dir=/etc/naemon/hosts</b></font><br>
 </td>
 </tr>
 </table>
@@ -648,14 +648,14 @@ leave it enabled.
 <tr>
 <td>Format:</td>
 <td>
-**retained_host_attribute_mask=&lt;number&gt;**
-**retained_service_attribute_mask=&lt;number&gt;**
+<b>retained_host_attribute_mask=&lt;number&gt;</b><br>
+<b>retained_service_attribute_mask=&lt;number&gt;</b>
 </td>
 </tr>
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>retained_host_attribute_mask=0</b></font>
+<font color="red"><b>retained_host_attribute_mask=0</b></font><br>
 <font color="red"><b>retained_service_attribute_mask=0</b></font>
 </td>
 </tr>
@@ -679,14 +679,14 @@ By default, all host and service attributes are retained.
 <tr>
 <td>Format:</td>
 <td>
-**retained_process_host_attribute_mask=&lt;number&gt;**
-**retained_process_service_attribute_mask=&lt;number&gt;**
+<b>retained_process_host_attribute_mask=&lt;number&gt;</b><br>
+<b>retained_process_service_attribute_mask=&lt;number&gt;</b>
 </td>
 </tr>
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>retained_process_host_attribute_mask=0</b></font>
+<font color="red"><b>retained_process_host_attribute_mask=0</b></font><br>
 <font color="red"><b>retained_process_service_attribute_mask=0</b></font>
 </td>
 </tr>
@@ -2536,7 +2536,7 @@ More information on how this works can be found <a href="objecttricks.html">here
 
 If you've enabled regular expression matching of various object directives using the <a href="#use_regexp_matching">use_regexp_matching</a> option, this option will determine when object directives are treated as regular expressions.
 
-If this option is disabled (the default), directives will only be treated as regular expressions if they contain *****, **?**, **+**, or **\.**.
+If this option is disabled (the default), directives will only be treated as regular expressions if they contain <b>*</b>, <b>?</b>, <b>+</b>, or <b>&bsol;..</b>
 
 If this option is enabled, all appropriate directives will be treated as regular expression - be careful when enabling this!
 

@@ -2,9 +2,6 @@
 layout: doctoc
 title: Plugins
 ---
-
-{% include review_required.md %}
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="pluginapi.html">Plugin API</a>, <a href="embeddedperl.html">Embedded Perl Interpreter Overview</a>, <a href="activechecks.html">Active Checks</a>
 
 ### Introduction

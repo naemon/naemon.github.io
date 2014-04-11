@@ -2,9 +2,6 @@
 layout: doctoc
 title: Detection and Handling of State Flapping
 ---
-
-{% include review_required.md %}
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="statetypes.html">State Types</a>
 
 ### Introduction
