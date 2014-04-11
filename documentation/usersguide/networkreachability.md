@@ -2,9 +2,6 @@
 layout: doctoc
 title: Determining Status and Reachability of Network Hosts
 ---
-
-{% include review_required.md %}
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="hostchecks.html">Host Checks</a>, <a href="passivestatetranslation.html">Passive Host State Translation</a>
 
 ### Introduction
