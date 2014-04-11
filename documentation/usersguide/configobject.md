@@ -2,9 +2,6 @@
 layout: doctoc
 title: Object Configuration Overview
 ---
-
-{% include review_required.md %}
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="config.html">Configuration Overview</a>, <a href="objectdefinitions.html">Object Definitions</a>
 
 ### What Are Objects?
