@@ -2,9 +2,6 @@
 layout: doctoc
 title: Notifications
 ---
-
-{% include review_required.md %}
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="escalations.html">Escalations</a>, <a href="timeperiods.html">Timeperiods</a>, <a href="oncallrotation.html">On-Call Rotations</a>
 
 ### Introduction
@@ -96,13 +93,13 @@ When crafting your notification commands, you need to take into account what typ
 There are many ways you could configure Naemon to send notifications out.  Its up to you to decide which method(s) you want to use.  Once you do that you'll have to install any necessary software and configure notification commands in your config files before you can use them.  Here are just a few possible notification methods:
 
 <ul>
-<li>Email
-<li>Pager
-<li>Phone (SMS)
-<li>WinPopup message
-<li>Yahoo, ICQ, or MSN instant message
-<li>Audio alerts
-<li>etc...
+<li>Email</li>
+<li>SMS</li>
+<li>Twitter</li>
+<li>Facebook, LinkedIn</li>
+<li>Jabber, IRC</li>
+<li>Audio alerts</li>
+<li>etc...</li>
 </ul>
 
 Basically anything you can do from a command line can be tailored for use as a notification command.
@@ -115,8 +112,6 @@ using them...
 <li><a href="http://www.gnokii.org/">Gnokii</a> (SMS software for contacting Nokia phones via GSM network)
 <li><a href="http://www.qpage.org/" target="_top">QuickPage</a> (alphanumeric pager software)
 <li><a href="http://www.sendpage.org/" target="_top">Sendpage</a> (paging software)
-<li><a href="http://www.smsclient.org/" target="_top">SMS Client</a> (command line utility for
-sending messages to pagers and mobile phones)
 </ul>
 
 If you want to try out a non-traditional method of notification, you might want to mess around with audio alerts.  If you want to have audio alerts played on the monitoring server (with synthesized speech), check out <a href="http://www.cstr.ed.ac.uk/projects/festival/">Festival</a>.  If you'd rather leave the monitoring box alone and have audio alerts played on another box, check out the <a href="http://radscan.com/nas.html">Network Audio System (NAS)</a> and <a href="http://rplay.doit.org/">rplay</a> projects.

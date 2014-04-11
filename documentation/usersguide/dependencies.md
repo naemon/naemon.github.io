@@ -2,10 +2,6 @@
 layout: doctoc
 title: Host and Service Dependencies
 ---
-
-{% include review_required.md %}
-
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="dependencychecks.html">Predictive Dependency Checks</a>, <a href="servicechecks.html">Service Checks</a>, <a href="hostchecks.html">Host Checks</a>
 
 ### Introduction
