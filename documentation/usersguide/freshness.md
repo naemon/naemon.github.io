@@ -2,10 +2,6 @@
 layout: doctoc
 title: Service and Host Freshness Checks
 ---
-
-{% include review_required.md %}
-
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="passivechecks.html">Passive Checks</a>, <a href="distributed.html">Distributed Monitoring</a>, <a href="redundancy.html">Redundant and Failover Monitoring</a>
 
 ### Introduction

@@ -2,10 +2,6 @@
 layout: doctoc
 title: TCP Wrapper Integration
 ---
-
-{% include review_required.md %}
-
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="integration.html">Integration Overview</a>, <a href="extcommands.html">External Commands</a>, <a href="passivechecks.html">Passive Checks</a>
 
 ### Introduction
