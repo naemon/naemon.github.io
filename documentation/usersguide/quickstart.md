@@ -27,8 +27,6 @@ Quickstart installation guides are currently available for the following Linux d
 <li><a href="quickstart-redhat.html">Redhat Quickstart</a></li>
 <li><a href="quickstart-centos.html">CentOS Quickstart</a></li>
 <li><a href="quickstart-sles.html">SUSE Linux Enterprise Server </a></li>
-<li><a href="quickstart-fedora.html">Fedora Quickstart</a></li>
-<li><a href="quickstart-opensuse.html">openSUSE Quickstart</a></li>
 </ul>
 
 Can't find a quickstart for your particular OS? Write one and help us extend our documentation, for more info
