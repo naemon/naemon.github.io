@@ -179,10 +179,6 @@ body_class: toc
 
 <a href="naemonstats.html">Using the naemonstats utility</a>
 
-<a href="mrtggraphs.html">Graphing Naemon performance statistics</a>
-
-
-
 ### Naemon Addons
 
 <a href="addons.html#thruk">Thruk</a>
@@ -196,6 +192,8 @@ body_class: toc
 <a href="addons.html#ndoutils">NDOUtils</a>
 
 <a href="addons.html#pnp">PNP</a>
+
+<a href="mrtggraphs.html">Graphing Performance Info With MRTG</a>
 
 <a href="addons.html#merlin">Merlin</a>
 
