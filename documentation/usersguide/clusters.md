@@ -2,10 +2,6 @@
 layout: doctoc
 title: Monitoring Service and Host Clusters
 ---
-
-{% include review_required.md %}
-
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="activechecks.html">Active Checks</a>, <a href="macros.html">Macros</a>
 
 ### Introduction
@@ -31,8 +27,8 @@ Monitoring the overall cluster can be done by using the previously cached result
 
 The check_cluster plugin is designed to report the overall status of a host or service cluster by checking the status information of each individual host or service cluster elements.
 
-More to come...  The *check_cluster* plugin can be found in the contrib directory of the Naemon Plugins release at
-<a href="http://sourceforge.net/projects/nagiosplug/">http://sourceforge.net/projects/nagiosplug/</a>.
+More to come...  The *check_cluster* plugin can be found in the Monitoring-Plugins relase package
+<a href="https://www.monitoring-plugins.org/download.html">https://www.monitoring-plugins.org/download.html</a>.
 
 ### Monitoring Service Clusters
 
@@ -44,7 +40,7 @@ In order to monitor the services as a cluster, you'll need to create a new "clus
 ```
 define command{
 	command_name	check_service_cluster
-	command_line	/usr/local/nagios/libexec/check_cluster --service -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$
+	command_line	/usr/lib/naemon/plugins/check_cluster --service -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$
 	}
 ```
 
@@ -70,7 +66,7 @@ Anyway, let's assume that you have a *check_host_cluster* command defined as fol
 ```
 define command{
 	command_name	check_host_cluster
-	command_line	/usr/local/nagios/libexec/check_cluster --host -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$
+	command_line	/usr/lib/naemon/plugins/check_cluster --host -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$
 	}
 ```
 

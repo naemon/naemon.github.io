@@ -1809,7 +1809,7 @@ found <a href="macros.html">here</a>. The different arguments to a command defin
 <pre>
 define command {
     command_name        check_pop
-    command_line        /usr/lib/naemon/libexec/check_pop -H $HOSTADDRESS$
+    command_line        /usr/lib/naemon/plugins/check_pop -H $HOSTADDRESS$
 }
 </pre>
 

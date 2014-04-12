@@ -70,14 +70,14 @@ If you want to let Naemon know about port scans, you could do the following...
 Edit your PortSentry configuration file (portsentry.conf) and define a command for the <i>KILL_RUN_CMD</i> directive as follows:
 
 <pre>
-KILL_RUN_CMD="/usr/local/naemon/libexec/eventhandlers/submit_check_result host_name 'Port Scans' 2 'Port scan from host $TARGET$ on port $PORT$. Host has been firewalled.'"
+KILL_RUN_CMD="/usr/lib/naemon/plugins/eventhandlers/submit_check_result host_name 'Port Scans' 2 'Port scan from host $TARGET$ on port $PORT$. Host has been firewalled.'"
 </pre>
 
 Make sure to replace <i>host_name</i> with the short name of the host that the service is associated with.
 
 <b>Port Scan Script:</b>
 
-Create a shell script in the <i>/usr/local/naemon/libexec/eventhandlers</i> directory named <i>submit_check_result</i>.
+Create a shell script in the <i>/usr/lib/naemon/plugins/eventhandlers</i> directory named <i>submit_check_result</i>.
 The contents of the shell script should be something similiar to the following...
 
 ```bash

@@ -41,14 +41,14 @@ define host {
 
 define command {
     command_name    check_ping
-    command_line    /usr/local/naemon/libexec/check_ping -H <font color="red">$HOSTADDRESS$</font> -w 100.0,90% -c 200.0,60%
+    command_line    /usr/lib/naemon/plugins/check_ping -H <font color="red">$HOSTADDRESS$</font> -w 100.0,90% -c 200.0,60%
 }
 </pre>
 
 the expanded/final command line to be executed for the host's check command would look like this:
 
 <pre>
-    /usr/local/naemon/libexec/check_ping -H <font color="red">192.168.1.2</font> -w 100.0,90% -c 200.0,60%
+    /usr/lib/naemon/plugins/check_ping -H <font color="red">192.168.1.2</font> -w 100.0,90% -c 200.0,60%
 </pre>
 
 Pretty simple, right?
@@ -83,14 +83,14 @@ earlier and a <i>check_ping</i> command defined like this:
 <pre>
 define command {
     command_name    check_ping
-    command_line    /usr/local/naemon/libexec/check_ping -H <font color="red">$HOSTADDRESS$</font> -w <font color="red">$ARG1$</font> -c <font color="red">$ARG2$</font>
+    command_line    /usr/lib/naemon/plugins/check_ping -H <font color="red">$HOSTADDRESS$</font> -w <font color="red">$ARG1$</font> -c <font color="red">$ARG2$</font>
 }
 </pre>
 
 the expanded/final command line to be executed for the service's check command would look like this:
 
 <pre>
-    /usr/local/naemon/libexec/check_ping -H <font color="red">192.168.1.2</font> -w <font color="red">200.0,80%</font> -c <font color="red">400.0,40%</font>
+    /usr/lib/naemon/plugins/check_ping -H <font color="red">192.168.1.2</font> -w <font color="red">200.0,80%</font> -c <font color="red">400.0,40%</font>
 </pre>
 
 {{ site.hint }}If you need to pass bang (!) characters in your command arguments, you can do so by escaping them with a backslash (\).{{ site.end }}

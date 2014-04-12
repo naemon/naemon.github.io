@@ -105,11 +105,11 @@ Once the service has been defined with an event handler, we must define that eve
 <pre>
 define command{
 	command_name	restart-httpd
-	command_line	/usr/local/naemon/libexec/eventhandlers/restart-httpd  $SERVICESTATE$ $SERVICESTATETYPE$ $SERVICEATTEMPT$
+	command_line	/usr/lib/naemon/plugins/eventhandlers/restart-httpd  $SERVICESTATE$ $SERVICESTATETYPE$ $SERVICEATTEMPT$
 	}
 </pre>
 
-Now, let's actually write the event handler script (this is the <i>/usr/local/naemon/libexec/eventhandlers/restart-httpd</i> script).
+Now, let's actually write the event handler script (this is the <i>/usr/lib/naemon/plugins/eventhandlers/restart-httpd</i> script).
 
 <pre>
 #!/bin/sh

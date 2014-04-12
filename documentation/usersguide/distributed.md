@@ -59,7 +59,7 @@ The command definition for the <i>submit_check_result</i> command looks somethin
 ```
 define command{
 	command_name	submit_check_result
-	command_line	/usr/local/nagios/libexec/eventhandlers/submit_check_result $HOSTNAME$ '$SERVICEDESC$' $SERVICESTATE$ '$SERVICEOUTPUT$'
+	command_line	/usr/lib/naemon/plugins/eventhandlers/submit_check_result $HOSTNAME$ '$SERVICEDESC$' $SERVICESTATE$ '$SERVICEOUTPUT$'
 	}
 ```
 </font>
@@ -110,7 +110,7 @@ The script above assumes that you have the send_nsca program and it configuratio
 That's it!  We've sucessfully configured a remote host running Naemon to act as a distributed monitoring server.  Let's go over exactly what happens with the distributed server and how it sends service check results to Naemon (the steps outlined below correspond to the numbers in the reference diagram above):
 
 <ol>
-<li>After the distributed server finishes executing a service check, it executes the command you defined by the <a href="configmain.html#ocsp_command">ocsp_command</a> variable.  In our example, this is the <i>/usr/local/nagios/libexec/eventhandlers/submit_check_result</i> script.  Note that the definition for the <i>submit_check_result</i> command passed four pieces of information to the script: the name of the host the service is associated with, the service description, the return code from the service check, and the plugin output from the service check.
+<li>After the distributed server finishes executing a service check, it executes the command you defined by the <a href="configmain.html#ocsp_command">ocsp_command</a> variable.  In our example, this is the <i>/usr/lib/naemon/plugins/eventhandlers/submit_check_result</i> script.  Note that the definition for the <i>submit_check_result</i> command passed four pieces of information to the script: the name of the host the service is associated with, the service description, the return code from the service check, and the plugin output from the service check.
 <li>The <i>submit_check_result</i> script pipes the service check information (host name, description, return code, and output) to the <i>send_nsca</i> client program.
 <li>The <i>send_nsca</i> program transmits the service check information to the <i>nsca</i> daemon on the central monitoring server.
 <li>The <i>nsca</i> daemon on the central server takes the service check information and writes it to the external command file for later pickup by Naemon.
@@ -169,7 +169,7 @@ If you are unable to define commands to actively check a service from the centra
 ```
 define command{
 	command_name	service-is-stale
-	command_line	/usr/local/nagios/libexec/check_dummy 2 "CRITICAL: Service results are stale"
+	command_line	/usr/lib/naemon/plugins/check_dummy 2 "CRITICAL: Service results are stale"
 	}
 ```
 </font>

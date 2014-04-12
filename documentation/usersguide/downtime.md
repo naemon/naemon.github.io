@@ -2,10 +2,6 @@
 layout: doctoc
 title: Scheduled Downtime
 ---
-
-{% include review_required.md %}
-
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="notifications.html">Notifications</a>
 
 ### Introduction

@@ -2,10 +2,7 @@
 layout: doctoc
 title: Active Checks
 ---
-
-{% include review_required.md %}
-
-:<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="passivechecks.html">Passive Checks</a>, <a href="plugins.html">Plugins</a>, <a href="servicechecks.html">Service Checks</a>, <a href="hostchecks.html">Host Checks</a>
+<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="passivechecks.html">Passive Checks</a>, <a href="plugins.html">Plugins</a>, <a href="servicechecks.html">Service Checks</a>, <a href="hostchecks.html">Host Checks</a>
 
 ### Introduction
 

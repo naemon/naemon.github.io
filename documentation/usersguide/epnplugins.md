@@ -153,7 +153,7 @@ package Embed::check_5frpc; sub hndlr { shift(@_); @ARGV=@_;
 #
 # Use these hosts.cfg entries as examples
 #
-# command[check_nfs]=/some/path/libexec/check_rpc $HOSTADDRESS$ nfs
+# command[check_nfs]=/usr/lib/naemon/plugins/check_rpc $HOSTADDRESS$ nfs
 # service[check_nfs]=NFS;24x7;3;5;5;unix-admin;60;24x7;1;1;1;;check_rpc
 #
 # initial version: 3 May 2000 by Truongchinh Nguyen and Karl DeBisschop

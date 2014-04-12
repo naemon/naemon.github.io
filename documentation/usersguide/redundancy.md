@@ -95,16 +95,16 @@ We need to stop for a minute and describe what the command definitions for the e
 <pre>
 define command {
     command_name    handle-master-host-event
-    command_line    /usr/local/naemon/libexec/eventhandlers/handle-master-host-event $HOSTSTATE$ $HOSTSTATETYPE$
+    command_line    /usr/lib/naemon/plugins/eventhandlers/handle-master-host-event $HOSTSTATE$ $HOSTSTATETYPE$
 }
 
 define command {
     command_name    handle-master-proc-event
-    command_line    /usr/local/naemon/libexec/eventhandlers/handle-master-proc-event $SERVICESTATE$ $SERVICESTATETYPE$
+    command_line    /usr/lib/naemon/plugins/eventhandlers/handle-master-proc-event $SERVICESTATE$ $SERVICESTATETYPE$
 }
 </pre>
 
-This assumes that you have placed the event handler scripts in the <i>/usr/local/naemon/libexec/eventhandlers</i> directory.  You may place them anywhere you wish, but you'll need to modify the examples I've given here.
+This assumes that you have placed the event handler scripts in the <i>/usr/lib/naemon/plugins/eventhandlers</i> directory.  You may place them anywhere you wish, but you'll need to modify the examples I've given here.
 
 #### Event Handler Scripts
 
@@ -124,14 +124,14 @@ HARD)
 		# We should now become the master host and take
 		# over the responsibilities of monitoring the
 		# network, so enable notifications...
-		/usr/local/naemon/libexec/eventhandlers/enable_notifications
+		/usr/lib/naemon/plugins/eventhandlers/enable_notifications
 		;;
 	UP)
 		# The master host has recovered!
 		# We should go back to being the slave host and
 		# let the master host do the monitoring, so
 		# disable notifications...
-		/usr/local/naemon/libexec/eventhandlers/disable_notifications
+		/usr/lib/naemon/plugins/eventhandlers/disable_notifications
 		;;
 	esac
 	;;
@@ -153,7 +153,7 @@ HARD)
 		# We should now become the master host and
 		# take over the responsibility of monitoring
 		# the network, so enable notifications...
-		/usr/local/naemon/libexec/eventhandlers/enable_notifications
+		/usr/lib/naemon/plugins/eventhandlers/enable_notifications
 		;;
 	WARNING)
 	UNKNOWN)
@@ -167,7 +167,7 @@ HARD)
 		# The master Naemon process running again!
 		# We should go back to being the slave host,
 		# so disable notifications...
-		/usr/local/naemon/libexec/eventhandlers/disable_notifications
+		/usr/lib/naemon/plugins/eventhandlers/disable_notifications
 		;;
 	esac
 	;;
