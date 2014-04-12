@@ -159,7 +159,7 @@ service_perfdata_file_processing_interval=15
 service_perfdata_file_processing_command=process-service-perfdata-file
 
 #
-# host performance data starting with Nagios 3.0
+#
 # 
 host_perfdata_file=/usr/local/pnp4nagios/var/host-perfdata
 host_perfdata_file_template=DATATYPE::HOSTPERFDATA\tTIMET::$TIMET$\tHOSTNAME::$HOSTNAME$\tHOSTPERFDATA::$HOSTPERFDATA$\tHOSTCHECKCOMMAND::$HOSTCHECKCOMMAND$\tHOSTSTATE::$HOSTSTATE$\tHOSTSTATETYPE::$HOSTSTATETYPE$
