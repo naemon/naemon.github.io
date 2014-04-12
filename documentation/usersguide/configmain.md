@@ -2,10 +2,6 @@
 layout: doctoc
 title: Main Configuration File Options
 ---
-
-{% include review_required.md %}
-
-
 ### Notes
 
 When creating and/or editing configuration files, keep the following in mind:

@@ -55,10 +55,10 @@ There are some important things to note about the above service definition:
 Now you're going to have to modify the <i>/etc/hosts.deny</i> file on <i>firestorm</i>.  In order to have the TCP wrappers send an alert to the monitoring host whenever a connection attempt is denied, you'll have to add a line similiar to the following:
 
 <pre>
-ALL: ALL: RFC931: twist (/usr/local/nagios/libexec/eventhandlers/handle_tcp_wrapper %h %d) &amp;
+ALL: ALL: RFC931: twist (/usr/lib/naemon/plugins/eventhandlers/handle_tcp_wrapper %h %d) &amp;
 </pre>
 
-This line assumes that there is a script called <i>handle_tcp_wrapper</i> in the <i>/usr/local/nagios/libexec/eventhandlers/</i> directory on <i>firestorm</i>.  We'll write that script next.
+This line assumes that there is a script called <i>handle_tcp_wrapper</i> in the <i>/usr/lib/naemon/plugins/eventhandlers/</i> directory on <i>firestorm</i>.  We'll write that script next.
 
 ### Writing The Script
 
@@ -67,7 +67,7 @@ The last thing you need to do is write the <i>handle_tcp_wrapper</i> script on <
 <pre>
 #!/bin/sh
 
-/usr/local/nagios/libexec/eventhandlers/submit_check_result firestorm "TCP Wrappers" 2 "Denied $2-$1" > /dev/null 2> /dev/null
+/usr/lib/naemon/plugins/eventhandlers/submit_check_result firestorm "TCP Wrappers" 2 "Denied $2-$1" > /dev/null 2> /dev/null
 </pre>
 
 Notice that the <i>handle_tcp_wrapper</i> script calls the <i>submit_check_result</i> script to actually send the alert back to the monitoring host.  Assuming your Naemon server is called <i>monitor</i>, the <i>submit check_result</i> script might look like this:
