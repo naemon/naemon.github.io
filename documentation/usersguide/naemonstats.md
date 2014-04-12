@@ -1,6 +1,6 @@
 ---
 layout: doctoc
-title: Using The Naemontats Utility
+title: Using The Naemonstats Utility
 ---
 
 <span class="glyphicon glyphicon-arrow-up"></span> <a href="toc.html">Contents</a><br>
