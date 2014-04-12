@@ -2,9 +2,6 @@
 layout: doctoc
 title: Time-Saving Tricks For Object Definitions
 ---
-
-{% include review_required.md %}
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="objectdefinitions.html">Object Configuration</a>, <a href="objectinheritance.html">Object Inheritance</a>
 
 ### Introduction

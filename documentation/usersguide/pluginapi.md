@@ -2,9 +2,6 @@
 layout: doctoc
 title: Plugin API
 ---
-
-{% include review_required.md %}
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="plugins.html">Plugin Overview</a>, <a href="epnplugins.html">Developing Plugins For Use With Embedded Perl</a>, <a href="perfdata.html">Performance Data</a>
 
 ### Other Resources
@@ -12,8 +9,8 @@ title: Plugin API
 If you're looking at writing your own plugins for Naemon, please make sure to visit these other resources:
 
 <ul>
-<li>The official <a href="http://sourceforge.net/projects/nagiosplug/">Naemon plugin project website</a></li>
-<li>The official <a href="http://nagiosplug.sourceforge.net/developer-guidelines.html">Naemon plugin development guidelines</a></li>
+<li>The official <a href="http://sourceforge.net/projects/nagiosplug/">Nagios plugin project website</a></li>
+<li>The official <a href="http://nagiosplug.sourceforge.net/developer-guidelines.html">Nagios plugin development guidelines</a></li>
 </ul>
 
 ### Plugin Overview
@@ -120,12 +117,8 @@ With regards to multiple lines of output, you have the following options for ret
 
 ### Plugin Output Length Restrictions
 
-Naemon will only read the first 4 KB of data that a plugin returns. This is done in order to prevent runaway plugins from dumping megs or gigs of data back to Naemon. This 4 KB output limit is fairly easy to change if you need.  Simply edit the value of the MAX_PLUGIN_OUTPUT_LENGTH definition in the <i>include/nagios.h.in</i> file of the source code distribution and recompile Naemon.  There's nothing else you need to change!
+Naemon will only read the first 8 KB of data that a plugin returns. This is done in order to prevent runaway plugins from dumping megs or gigs of data back to Naemon. This 8 KB output limit is fairly easy to change if you need.  Simply edit the value of the MAX_PLUGIN_OUTPUT_LENGTH definition in the <i>naemon.h</i> file of the source code and the same for MAX_EXTERNAL_COMMAND_LENGTH in common.h and recompile Naemon.  There's nothing else you need to change!
 
 ### Examples
 
-If you're looking for some example plugins to study, I would recommend that you download the official Naemon plugins and look through the code for various C, Perl, and shell script plugins.  Information on obtaining the official Naemon plugins can be found <a href="plugins.html">here</a>.
-
-### Perl Plugins
-
-Naemon features an optional <a href="embeddedperl.html">embedded Perl interpreter</a> which can speed up the execution of Perl plugins.   More information on developing Perl plugins for use with the embedded Perl interpreter can be found <a href="embeddedperl.html">here</a>.
+If you're looking for some example plugins to study, I would recommend that you download Monitoring-Plugins plugins or Nagios-Plugins and look through the code for various C, Perl, and shell script plugins.  Information on obtaining Naemon plugins can be found <a href="plugins.html">here</a>.
