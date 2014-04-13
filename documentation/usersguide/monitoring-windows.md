@@ -6,7 +6,7 @@ title: Monitoring Windows Machines
 {% include review_required.md %}
 
 
-<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guide</a>, <a href="monitoring-publicservices.html">Monitoring Publicly Available Services</a>
+<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guide</a>, <a href="monitoring-networkservices.html">Monitoring network services</a>
 
 ### Introduction
 
@@ -21,7 +21,7 @@ This document describes how you can monitor "private" services and attributes of
 <li>etc.</li>
 </ul>
 
-Publicly available services that are provided by Windows machines (HTTP, FTP, POP3, etc.) can be monitored easily by following the documentation on <a href="monitoring-publicservices.html">monitoring publicly available services</a>.
+Publicly available services that are provided by Windows machines (HTTP, FTP, POP3, etc.) can be monitored easily by following the documentation on <a href="monitoring-networkservices.html">monitoring network services</a>.
 
 {{ site.note }}These instructions assume that you've installed Naemon according to the <a href="quickstart.html">quickstart guide</a>.   The sample configuration entries below reference objects that are defined in the sample config files (<i>commands.cfg</i>, <i>templates.cfg</i>, etc.) that are installed if you follow the quickstart.{{ site.end }}
 

@@ -6,7 +6,7 @@ title: Monitoring Netware Servers
 {% include review_required.md %}
 
 
-<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guide</a>, <a href="monitoring-publicservices.html">Monitoring Publicly Available Services</a>
+<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guide</a>, <a href="monitoring-networkservices.html">Monitoring network services</a>
 
 ### Introduction
 

@@ -43,7 +43,7 @@ your local machine. Check out the following docs for how to go about monitoring 
 <li><a href="monitoring-netware.html">Monitoring Netware servers</a></li>
 <li><a href="monitoring-routers.html">Monitoring routers/switches</a></li>
 <li><a href="monitoring-printers.html">Monitoring network printers</a></li>
-<li><a href="monitoring-publicservices.html">Monitoring publicly available services (HTTP, FTP, SSH, etc.)</a></li>
+<li><a href="monitoring-networkservices.html">Monitoring network services (HTTP, FTP, SSH, etc.)</a></li>
 </ul>
 
 ### Enhance Naemon With Community Addons

@@ -6,7 +6,7 @@ title: Monitoring Routers and Switches
 {% include review_required.md %}
 
 
-<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="monitoring-publicservices.html">Monitoring Publicly Available Services</a>
+<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="monitoring-networkservices.html">Monitoring network services</a>
 
 ### Introduction
 

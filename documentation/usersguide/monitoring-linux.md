@@ -6,7 +6,7 @@ title: Monitoring Linux/Unix Machines
 {% include review_required.md %}
 
 
-<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guide</a>, <a href="monitoring-publicservices.html">Monitoring Publicly Available Services</a>
+<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guide</a>, <a href="monitoring-networkservices.html">Monitoring Publicly Available Services</a>
 
 ### Introduction
 
@@ -21,7 +21,7 @@ This document describes how you can monitor "private" services and attributes of
 <li>etc.</li>
 </ul>
 
-Publicly available services that are provided by Linux servers (HTTP, FTP, SSH, SMTP, etc.) can be monitored easily by following the documentation on <a href="monitoring-publicservices.html">monitoring publicly available services</a>.
+Publicly available services that are provided by Linux servers (HTTP, FTP, SSH, SMTP, etc.) can be monitored easily by following the documentation on <a href="monitoring-networkservices.html">monitoring network services</a>.
 
 {{ site.note }}These instructions assume that you've installed Naemon according to the <a href="quickstart.html">quickstart guide</a>.{{ site.end }}
 
