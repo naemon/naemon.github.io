@@ -15,7 +15,7 @@ Here are some of the more common ones.
 The most common scenario will probably be to reload Naemon after changes of Naemon configuration. You don't need to restart Naemon after you added new hosts, commands and services. Simply reload the configuration.
 
 1. <b>Init script</b>: 
-   Most distributions supports *service <servicename> reload* command, simply enter
+   Most distributions supports *service &lt;servicename&gt; reload* command, simply enter
    <pre>service naemon reload</pre>
    or
    <pre>/etc/init.d/naemon reload</pre>
