@@ -1,18 +1,14 @@
 ---
 layout: doctoc
-title: Monitoring Publicly Available Services
+title: Monitoring network services
 ---
-
-{% include review_required.md %}
-
-
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guide</a>
 
 ### Introduction
 
-This document describes how you can monitor network services, applications and protocols, either on the local network or the greater Internet.  Examples of public services include HTTP, POP3, IMAP, FTP, and SSH.  There are many more public services that you probably use on a daily basis.  These services and applications, as well as their underlying protocols, can usually be monitored by Naemon without any special access requirements.
+This document describes how you can monitor network services, applications and protocols, either on the local network or the greater Internet.  Examples of network services include HTTP, POP3, IMAP, FTP, and SSH.  There are many more network services that you probably use on a daily basis.  These services and applications, as well as their underlying protocols, can usually be monitored by Naemon without any special access requirements.
 
-Private services, in contrast, cannot be monitored with Naemon without an intermediary agent of some kind.    Examples of private services associated with hosts are things like CPU load, memory usage, disk usage, current user count, process information, etc.  These private services or attributes of hosts are not usually exposed to external clients.  This situation requires that an intermediary monitoring agent be installed on any host that you need to monitor such information on.  More information on monitoring private services on different types of hosts can be found in the documentation on:
+Local services, in contrast, cannot be monitored with Naemon without an intermediary agent of some kind. Examples of local services associated with hosts are things like CPU load, memory usage, disk usage, current user count, process information, etc. These local services or attributes of hosts are not usually exposed to external clients. This situation requires that an intermediary monitoring agent be installed on any host that you need to monitor such information on. More information on monitoring local services on different types of hosts can be found in the documentation on:
 
 <ul>
 <li><a href="monitoring-windows.html">Monitoring Windows machines</a></li>
@@ -20,7 +16,7 @@ Private services, in contrast, cannot be monitored with Naemon without an interm
 <li><a href="monitoring-linux.html">Monitoring Linux/Unix machines</a></li>
 </ul>
 
-{{ site.hint }}Occassionally you will find that information on private services and applications can be monitored with SNMP.{{ site.end }}
+{{ site.hint }}Occassionally you will find that information on local services and applications can be monitored with SNMP.{{ site.end }}
 
 The SNMP agent allows you to remotely monitor otherwise private (and inaccessible) information about the host.  For more information about monitoring services using SNMP, check out the documentation on <a href="monitoring-routers.html">monitoring switches and routers</a>.
 
@@ -28,11 +24,11 @@ The SNMP agent allows you to remotely monitor otherwise private (and inaccessibl
 
 ### Plugins For Monitoring Services
 
-When you find yourself needing to monitor a particular application, service, or protocol, chances are good that a <a href="plugins.html">plugin</a> exists to monitor it.  The official Naemon plugins distribution comes with plugins that can be used to monitor a variety of services and protocols.  There are also a large number of contributed plugins that can be found in the <i>contrib/</i> subdirectory of the plugin distribution.   The <a href="http://www.nagiosexchange.org">NaemonExchange.org</a> website hosts a number of additional plugins that have been written by users, so check it out when you have a chance.
+When you find yourself needing to monitor a particular application, service, or protocol, chances are good that a <a href="plugins.html">plugin</a> exists to monitor it.  The Monitoring-Plugins or Nagios-Plugins packages comes with plugins that can be used to monitor a variety of services and protocols.  There are also a large number of contributed plugins that can be found in the <i>contrib/</i> subdirectory of the plugin distribution. The <a href="http://www.nagiosexchange.org">NaemonExchange.org</a> website hosts a number of additional plugins that have been written by users, so check it out when you have a chance.
 
 If you don't happen to find an appropriate plugin for monitoring what you need, you can always write your own.  Plugins are easy to write, so don't let this thought scare you off.  Read the documentation on <a href="pluginapi.html">developing plugins</a> for more information.
 
-I'll walk you through monitoring some basic services that you'll probably use sooner or later.  Each of these services can be monitored using one of the plugins that gets installed as part of the Naemon plugins distribution.  Let's get started...
+I'll walk you through monitoring some basic services that you'll probably use sooner or later.  Each of these services can be monitored using one of the plugins that gets installed as part of the Monitoring-Plugins or Nagios-Plugins distribution. Let's get started...
 
 ### Creating A Host Definition
 
@@ -42,11 +38,11 @@ For this example, lets say you want to monitor a variety of services on a remote
 
 <pre>
 define host{
-	use		generic-host		; Inherit default values from a template
-	host_name		remotehost		; The name we're giving to this host
-	alias		Some Remote Host	; A longer name associated with the host
-	address		192.168.1.50		; IP address of the host
-	hostgroups		allhosts		; Host groups this host is associated with
+	use             generic-host            ; Inherit default values from a template
+	host_name       remotehost              ; The name we're giving to this host
+	alias           Some Remote Host        ; A longer name associated with the host
+	address         192.168.1.50            ; IP address of the host
+	hostgroups      allhosts                ; Host groups this host is associated with
 	}
 </pre>
 
@@ -66,9 +62,9 @@ The <i>commands.cfg</i> file contains a command definition for using the <i>chec
 
 <pre>
 define command{
-	name		check_http
-	command_name	check_http
-	command_line	$USER1$/check_http -I $HOSTADDRESS$ $ARG1$
+	name            check_http
+	command_name    check_http
+	command_line    $USER1$/check_http -I $HOSTADDRESS$ $ARG1$
 	}
 </pre>
 
@@ -76,10 +72,10 @@ A simple service definition for monitoring the HTTP service on the <i>remotehost
 
 <pre>
 define service{
-	use		generic-service		; Inherit default values from a template
-	host_name		remotehost
-	service_description	HTTP
-	check_command	check_http
+	use                     generic-service       ; Inherit default values from a template
+	host_name               remotehost
+	service_description     HTTP
+	check_command           check_http
 	}
 </pre>
 
@@ -93,10 +89,10 @@ A more advanced definition for monitoring the HTTP service is shown below.  This
 
 <pre>
 define service{
-	use		generic-service		; Inherit default values from a template
-	host_name		remotehost
-	service_description	Product Download Link
-	check_command	check_http!-u /download/index.php -t 5 -s "latest-version.tar.gz"
+	use                     generic-service       ; Inherit default values from a template
+	host_name               remotehost
+	service_description     Product Download Link
+	check_command           check_http!-u /download/index.php -t 5 -s "latest-version.tar.gz"
 	}
 </pre>
 
@@ -106,8 +102,8 @@ When you need to monitor FTP servers, you can use the <i>check_ftp</i> plugin.  
 
 <pre>
 define command{
-	command_name	check_ftp
-	command_line	$USER1$/check_ftp -H $HOSTADDRESS$ $ARG1$
+	command_name    check_ftp
+	command_line    $USER1$/check_ftp -H $HOSTADDRESS$ $ARG1$
 	}
 </pre>
 
@@ -115,21 +111,21 @@ A simple service definition for monitoring the FTP server on <i>remotehost</i> w
 
 <pre>
 define service{
-	use		generic-service		; Inherit default values from a template
-	host_name		remotehost
-	service_description	FTP
-	check_command	check_ftp
+	use                     generic-service        ; Inherit default values from a template
+	host_name               remotehost
+	service_description     FTP
+	check_command           check_ftp
 	}
 </pre>
 
-A more advanced service definition is shown below.  This service will check the FTP server running on port 1023 on <i>remotehost</i>.  It will generate an alert if the server doesn't respond within 5 seconds or if the server response doesn't contain the string "Pure-FTPd [TLS]".
+A more advanced service definition is shown below. This service will check the FTP server running on port 1023 on <i>remotehost</i>.  It will generate an alert if the server doesn't respond within 5 seconds or if the server response doesn't contain the string "Pure-FTPd [TLS]".
 
 <pre>
 define service{
-	use		generic-service		; Inherit default values from a template
-	host_name		remotehost
-	service_description	Special FTP
-	check_command	check_ftp!-p 1023 -t 5 -e "Pure-FTPd [TLS]"
+	use                     generic-servicei       ; Inherit default values from a template
+	host_name               remotehost
+	service_description     Special FTP
+	check_command           check_ftp!-p 1023 -t 5 -e "Pure-FTPd [TLS]"
 	}
 </pre>
 
@@ -139,8 +135,8 @@ When you need to monitor SSH servers, you can use the <i>check_ssh</i> plugin.  
 
 <pre>
 define command{
-	command_name	check_ssh
-	command_line	$USER1$/check_ssh $ARG1$ $HOSTADDRESS$
+	command_name    check_ssh
+	command_line    $USER1$/check_ssh $ARG1$ $HOSTADDRESS$
 	}
 </pre>
 
@@ -148,10 +144,10 @@ A simple service definition for monitoring the SSH server on <i>remotehost</i> w
 
 <pre>
 define service{
-	use		generic-service		; Inherit default values from a template
-	host_name		remotehost
-	service_description	SSH
-	check_command	check_ssh
+	use                     generic-service          ; Inherit default values from a template
+	host_name               remotehost
+	service_description     SSH
+	check_command           check_ssh
 	}
 </pre>
 
@@ -161,10 +157,10 @@ A more advanced service definition is shown below.  This service will check the 
 
 <pre>
 define service{
-	use		generic-service		; Inherit default values from a template
-	host_name		remotehost
-	service_description	SSH Version Check
-	check_command	check_ssh!-t 5 -r "OpenSSH_4.2"
+	use                     generic-service          ; Inherit default values from a template
+	host_name               remotehost
+	service_description     SSH Version Check
+	check_command           check_ssh!-t 5 -r "OpenSSH_4.2"
 	}
 </pre>
 
@@ -174,8 +170,8 @@ The <i>check_smtp</i> plugin can be using for monitoring your email servers.  Th
 
 <pre>
 define command{
-	command_name	check_smtp
-	command_line	$USER1$/check_smtp -H $HOSTADDRESS$ $ARG1$
+	command_name    check_smtp
+	command_line    $USER1$/check_smtp -H $HOSTADDRESS$ $ARG1$
 	}
 </pre>
 
@@ -183,10 +179,10 @@ A simple service definition for monitoring the SMTP server on <i>remotehost</i> 
 
 <pre>
 define service{
-	use		generic-service		; Inherit default values from a template
-	host_name		remotehost
-	service_description	SMTP
-	check_command	check_smtp
+	use                     generic-service		; Inherit default values from a template
+	host_name               remotehost
+	service_description     SMTP
+	check_command           check_smtp
 	}
 </pre>
 
@@ -196,10 +192,10 @@ A more advanced service definition is shown below.  This service will check the 
 
 <pre>
 define service{
-	use		generic-service		; Inherit default values from a template
-	host_name		remotehost
-	service_description	SMTP Response Check
-	check_command	check_smtp!-t 5 -e "mygreatmailserver.com"
+	use                     generic-service		; Inherit default values from a template
+	host_name               remotehost
+	service_description     SMTP Response Check
+	check_command           check_smtp!-t 5 -e "mygreatmailserver.com"
 	}
 </pre>
 
@@ -218,10 +214,10 @@ A simple service definition for monitoring the POP3 service on <i>remotehost</i>
 
 <pre>
 define service{
-	use		generic-service		; Inherit default values from a template
-	host_name		remotehost
-	service_description	POP3
-	check_command	check_pop
+	use                     generic-service		; Inherit default values from a template
+	host_name               remotehost
+	service_description     POP3
+	check_command           check_pop
 	}
 </pre>
 
@@ -231,10 +227,10 @@ A more advanced service definition is shown below.  This service will check the 
 
 <pre>
 define service{
-	use		generic-service		; Inherit default values from a template
-	host_name		remotehost
-	service_description	POP3 Response Check
-	check_command	check_pop!-t 5 -e "mygreatmailserver.com"
+	use                     generic-service		; Inherit default values from a template
+	host_name               remotehost
+	service_description     POP3 Response Check
+	check_command           check_pop!-t 5 -e "mygreatmailserver.com"
 	}
 </pre>
 
@@ -253,10 +249,10 @@ A simple service definition for monitoring the IMAP4 service on <i>remotehost</i
 
 <pre>
 define service{
-	use		generic-service		; Inherit default values from a template
-	host_name		remotehost
-	service_description	IMAP
-	check_command	check_imap
+	use                     generic-service		; Inherit default values from a template
+	host_name               remotehost
+	service_description     IMAP
+	check_command           check_imap
 	}
 </pre>
 
@@ -266,15 +262,15 @@ A more advanced service definition is shown below.  This service will check the 
 
 <pre>
 define service{
-	use		generic-service		; Inherit default values from a template
-	host_name		remotehost
-	service_description	IMAP4 Response Check
-	check_command	check_imap!-t 5 -e "mygreatmailserver.com"
+	use                     generic-service		; Inherit default values from a template
+	host_name               remotehost
+	service_description     IMAP4 Response Check
+	check_command           check_imap!-t 5 -e "mygreatmailserver.com"
 	}
 </pre>
 
-### Restarting Naemon
+### Reloading Naemon
 
-Once you've added the new host and service definitions to your object configuration file(s), you're ready to start monitoring them.  To do this, you'll need to <a href="verifyconfig.html">verify your configuration</a> and <a href="startstop.html">restart Naemon</a>.
+Once you've added the new host and service definitions to your object configuration file(s), you're ready to start monitoring them. To do this, you'll need to <a href="verifyconfig.html">verify your configuration</a> and <a href="startstop.html">reload Naemon</a>.
 
 If the verification process produces any errors messages, fix your configuration file before continuing.  Make sure that you don't (re)start Naemon until the verification process completes without any errors!
