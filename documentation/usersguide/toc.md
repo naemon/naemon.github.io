@@ -56,7 +56,7 @@ body_class: toc
 
 <a href="monitoring-routers.html">How to monitor a router/switch</a>
 
-<a href="monitoring-networkservices.html">How to monitor a network services (HTTP, FTP, SSH, etc.)</a>
+<a href="monitoring-networkservices.html">How to monitor network services (HTTP, FTP, SSH, etc.)</a>
 
 <a href="addon-pnp-quickstart.html">How to install PNP graphs</a>
 
