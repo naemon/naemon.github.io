@@ -10,7 +10,7 @@ title: Monitoring Publicly Available Services
 
 ### Introduction
 
-This document describes how you can monitor publicly available services, applications and protocols.  By "public" I mean services that are accessible across the network - either the local network or the greater Internet.  Examples of public services include HTTP, POP3, IMAP, FTP, and SSH.  There are many more public services that you probably use on a daily basis.  These services and applications, as well as their underlying protocols, can usually be monitored by Naemon without any special access requirements.
+This document describes how you can monitor network services, applications and protocols, either on the local network or the greater Internet.  Examples of public services include HTTP, POP3, IMAP, FTP, and SSH.  There are many more public services that you probably use on a daily basis.  These services and applications, as well as their underlying protocols, can usually be monitored by Naemon without any special access requirements.
 
 Private services, in contrast, cannot be monitored with Naemon without an intermediary agent of some kind.    Examples of private services associated with hosts are things like CPU load, memory usage, disk usage, current user count, process information, etc.  These private services or attributes of hosts are not usually exposed to external clients.  This situation requires that an intermediary monitoring agent be installed on any host that you need to monitor such information on.  More information on monitoring private services on different types of hosts can be found in the documentation on:
 
