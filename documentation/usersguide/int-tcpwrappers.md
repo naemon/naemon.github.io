@@ -6,7 +6,7 @@ title: TCP Wrapper Integration
 
 ### Introduction
 
-<img src="/images/tcpwrappers.png" border="0" style="float: right;" alt="TCP Wrappers" title="TCP Wrappers">
+<img src="images/tcpwrappers.png" border="0" style="float: right;" alt="TCP Wrappers" title="TCP Wrappers">
 
 This document explains how to easily generate alerts in Naemon for connection attempts that are rejected by TCP wrappers.  For example, if an unauthorized host attempts to connect to your SSH server, you can receive an alert in Naemon that contains the name of the host that was rejected.  If you implement this on your Linux/Unix boxes, you'll be surprised how many port scans you can detect across your network.
 

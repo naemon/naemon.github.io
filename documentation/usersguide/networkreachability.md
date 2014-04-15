@@ -16,13 +16,13 @@ Naemon is able to determine whether the hosts you're monitoring are in a DOWN or
 
 Take a look at the simple network diagram below.  For this example, lets assume you're monitoring all the hosts (server, routers, switches, etc) that are pictured.  Naemon is installed and running on the <i>Naemon</i> host.
 
-<img src="/images/reachability1.png" border="0" alt="Example Network" title="Example Network">
+<img src="images/reachability1.png" border="0" alt="Example Network" title="Example Network">
 
 ### Defining Parent/Child Relationships
 
 In order for Naemon to be able to distinguish between DOWN and UNREACHABLE states for the hosts that are being monitored, you'll need to tell Naemon how those hosts are connected to each other - from the standpoint of the Naemon daemon.  To do this, trace the path that a data packet would take from the Naemon daemon to each individual host.  Each switch, router, and server the packet encounters or passes through is considered a "hop" and will require that you define a parent/child host relationship in Naemon.  Here's what the host parent/child relationships look like from the viewpoint of Naemon:
 
-<img src="/images/reachability2.png" border="0" alt="Parent/Child Relationships" title="Parent/Child Relationships">
+<img src="images/reachability2.png" border="0" alt="Parent/Child Relationships" title="Parent/Child Relationships">
 
 Now that you know what the parent/child relationships look like for hosts that are being monitored, how do you configure Naemon to reflect them?  The <i>parents</i> directive in your <a href="objectdefinitions.html#host">host definitions</a> allows you to do this.  Here's what the (abbreviated) host definitions with parent/child relationships would look like for this example:
 
@@ -81,11 +81,11 @@ define host{
 
 Now that you're configured Naemon with the proper parent/child relationships for your hosts, let's see what happen when problems arise.  Assume that two hosts - <i>Web</i> and <i>Router1</i> - go offline...
 
-<img src="/images/reachability3.png" border="0" alt="Reachability Example" title="Reachability Example">
+<img src="images/reachability3.png" border="0" alt="Reachability Example" title="Reachability Example">
 
 When hosts change state (i.e. from UP to DOWN), the host reachability logic in Naemon kicks in.  The reachability logic will initiate parallel checks of the parents and children of whatever hosts change state.  This allows Naemon to quickly determine the current status of your network infrastructure when changes occur.
 
-<img src="/images/reachability4.png" border="0" alt="Reachability Logic" title="Reachability Logic">
+<img src="images/reachability4.png" border="0" alt="Reachability Logic" title="Reachability Logic">
 
 In this example, Naemon will determine that <i>Web</i> and <i>Router1</i> are both in DOWN states because the "path" to those hosts is not being blocked.
 

@@ -30,7 +30,7 @@ Passive checks are also used when configuring <a href="distributed.html">distrib
 
 ### How Passive Checks Work
 
-<img src="/images/passivechecks.png" border="0" style="float: right; padding: 0 0 10px 10px;" alt="Passive Checks" title="Passive Checks">
+<img src="images/passivechecks.png" border="0" style="float: right; padding: 0 0 10px 10px;" alt="Passive Checks" title="Passive Checks">
 
 Here's how passive checks work in more detail...
 
@@ -115,7 +115,7 @@ Unlike with active host checks, Naemon does not (by default) attempt to determin
 
 ### Submitting Passive Check Results From Remote Hosts
 
-<img src="/images/nsca.png" border="0" style="float: right; padding: 0 0 10px 10px;" alt="NSCA Addon" title="NSCA Addon">
+<img src="images/nsca.png" border="0" style="float: right; padding: 0 0 10px 10px;" alt="NSCA Addon" title="NSCA Addon">
 
 If an application that resides on the same host as Naemon is sending passive host or service check results, it can simply write the results directly to the external command file as outlined above.  However, applications on remote hosts can't do this so easily.
 

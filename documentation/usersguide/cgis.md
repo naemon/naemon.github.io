@@ -42,10 +42,10 @@ authorization can be found <a href="cgiauth.html">here</a>.
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-status-a.png" border=0 alt="Status CGI - Details"></td>
-<td align=left><img src="/images/cgi-status-b.png" border=0 alt="Status CGI - Overview"></td>
-<td align=left><img src="/images/cgi-status-c.png" border=0 alt="Status CGI - Summary"></td>
-<td align=left><img src="/images/cgi-status-d.png" border=0 alt="Status CGI - Grid"></td>
+<td align=left><img src="images/cgi-status-a.png" border=0 alt="Status CGI - Details"></td>
+<td align=left><img src="images/cgi-status-b.png" border=0 alt="Status CGI - Overview"></td>
+<td align=left><img src="images/cgi-status-c.png" border=0 alt="Status CGI - Summary"></td>
+<td align=left><img src="images/cgi-status-d.png" border=0 alt="Status CGI - Grid"></td>
 </tr>
 </table>
 
@@ -86,7 +86,7 @@ view of all services (or those associated with a particular host).
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-statusmap.png" border=0 alt="Status Map CGI"></td>
+<td align=left><img src="images/cgi-statusmap.png" border=0 alt="Status Map CGI"></td>
 </tr>
 </table>
 
@@ -129,7 +129,7 @@ directive to specify a layout algorithm that should be used.
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-tac.png" border=0 alt="Tactical Overview CGI"></td>
+<td align=left><img src="images/cgi-tac.png" border=0 alt="Tactical Overview CGI"></td>
 </tr>
 </table>
 
@@ -171,7 +171,7 @@ you're monitoring and you need to keep a single screen up to alert you of proble
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-outages.png" border=0 alt="Network Outages CGI"></td>
+<td align=left><img src="images/cgi-outages.png" border=0 alt="Network Outages CGI"></td>
 </tr>
 </table>
 
@@ -211,7 +211,7 @@ of the outage they are causing.
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-config.png" border=0 alt="Configuration CGI"></td>
+<td align=left><img src="images/cgi-config.png" border=0 alt="Configuration CGI"></td>
 </tr>
 </table>
 
@@ -247,7 +247,7 @@ time periods, services, etc.) that you have defined in your <a href="configobjec
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-cmd.png" border=0 alt="Command CGI"></td>
+<td align=left><img src="images/cgi-cmd.png" border=0 alt="Command CGI"></td>
 </tr>
 </table>
 
@@ -292,10 +292,10 @@ a starting point for issuing commands.
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-extinfo-a.png" border=0 alt="Extended Information CGI - Process Information"></td>
-<td align=left><img src="/images/cgi-extinfo-b.png" border=0 alt="Extended Information CGI - Performance Information"></td>
-<td align=left><img src="/images/cgi-extinfo-c.png" border=0 alt="Extended Information CGI - Host Information"></td>
-<td align=left><img src="/images/cgi-extinfo-d.png" border=0 alt="Extended Information CGI - Service Information"></td>
+<td align=left><img src="images/cgi-extinfo-a.png" border=0 alt="Extended Information CGI - Process Information"></td>
+<td align=left><img src="images/cgi-extinfo-b.png" border=0 alt="Extended Information CGI - Performance Information"></td>
+<td align=left><img src="images/cgi-extinfo-c.png" border=0 alt="Extended Information CGI - Host Information"></td>
+<td align=left><img src="images/cgi-extinfo-d.png" border=0 alt="Extended Information CGI - Service Information"></td>
 </tr>
 </table>
 
@@ -337,7 +337,7 @@ navigation bar, or by clicking on a host or service link in the output of the <a
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-showlog.png" border=0 alt="Event Log CGI"></td>
+<td align=left><img src="images/cgi-showlog.png" border=0 alt="Event Log CGI"></td>
 </tr>
 </table>
 
@@ -375,7 +375,7 @@ notifications present in archived log files by using the navigational links near
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-history.png" border=0 alt="Alert History CGI"></td>
+<td align=left><img src="images/cgi-history.png" border=0 alt="Alert History CGI"></td>
 </tr>
 </table>
 
@@ -418,7 +418,7 @@ files by using the navigational links near the top of the page.
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-notifications.png" border=0 alt="Notifications CGI"></td>
+<td align=left><img src="images/cgi-notifications.png" border=0 alt="Notifications CGI"></td>
 </tr>
 </table>
 
@@ -461,7 +461,7 @@ the navigational links near the top of the page.
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-trends.png" border=0 alt="Trends CGI"></td>
+<td align=left><img src="images/cgi-trends.png" border=0 alt="Trends CGI"></td>
 </tr>
 </table>
 
@@ -503,8 +503,8 @@ The CGI uses Thomas Boutell's <a href="http://www.boutell.com/gd/">gd</a> librar
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-avail-a.png" border=0 alt="Availability CGI - Hostgroup"></td>
-<td align=left><img src="/images/cgi-avail-b.png" border=0 alt="Availability CGI - Host"></td>
+<td align=left><img src="images/cgi-avail-a.png" border=0 alt="Availability CGI - Hostgroup"></td>
+<td align=left><img src="images/cgi-avail-b.png" border=0 alt="Availability CGI - Host"></td>
 </tr>
 </table>
 
@@ -549,7 +549,7 @@ the path specified by the log_archive_path directive.
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-summary.png" border=0 alt="Alert Summary CGI"></td>
+<td align=left><img src="images/cgi-summary.png" border=0 alt="Alert Summary CGI"></td>
 </tr>
 </table>
 <table border="0">
@@ -600,8 +600,8 @@ This CGI provides some generic reports about host and service alert data, includ
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-bp-a.png" border=0 alt="Business Process CGI - Overview"></td>
-<td align=left><img src="/images/cgi-bp-b.png" border=0 alt="Business Process CGI - Details"></td>
+<td align=left><img src="images/cgi-bp-a.png" border=0 alt="Business Process CGI - Overview"></td>
+<td align=left><img src="images/cgi-bp-b.png" border=0 alt="Business Process CGI - Details"></td>
 </tr>
 </table>
 
@@ -641,9 +641,9 @@ naemon services to accomplish standard tasks like notifications and reporting.
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-conf-tool-a.png" border=0 alt="Conf Tool CGI - Thruk Settings"></td>
-<td align=left><img src="/images/cgi-conf-tool-b.png" border=0 alt="Conf Tool CGI - Host Details"></td>
-<td align=left><img src="/images/cgi-conf-tool-c.png" border=0 alt="Conf Tool CGI - Filesystem"></td>
+<td align=left><img src="images/cgi-conf-tool-a.png" border=0 alt="Conf Tool CGI - Thruk Settings"></td>
+<td align=left><img src="images/cgi-conf-tool-b.png" border=0 alt="Conf Tool CGI - Host Details"></td>
+<td align=left><img src="images/cgi-conf-tool-c.png" border=0 alt="Conf Tool CGI - Filesystem"></td>
 </tr>
 </table>
 
@@ -680,8 +680,8 @@ Naemon objects like hosts, services, commands, etc...
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-reports-a.png" border=0 alt="Reports CGI - Details"></td>
-<td align=left><img src="/images/cgi-reports-b.png" border=0 alt="Reports CGI - Report"></td>
+<td align=left><img src="images/cgi-reports-a.png" border=0 alt="Reports CGI - Details"></td>
+<td align=left><img src="images/cgi-reports-b.png" border=0 alt="Reports CGI - Report"></td>
 </tr>
 </table>
 
@@ -719,7 +719,7 @@ The Reports CGI creates SLA reports and delivers them by mail.
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-panorama.png" border=0 alt="Panorama View CGI"></td>
+<td align=left><img src="images/cgi-panorama.png" border=0 alt="Panorama View CGI"></td>
 </tr>
 </table>
 
@@ -757,7 +757,7 @@ The Panorama CGI lets contacts define individual dashboards on multiple tabs.
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-minemap.png" border=0 alt="Minemap CGI"></td>
+<td align=left><img src="images/cgi-minemap.png" border=0 alt="Minemap CGI"></td>
 </tr>
 </table>
 
@@ -800,7 +800,7 @@ share common services names.
 
 <table border="0" class="screenshot_thumbnails">
 <tr>
-<td align=left><img src="/images/cgi-mobile.png" border=0 alt="Mobile CGI"></td>
+<td align=left><img src="images/cgi-mobile.png" border=0 alt="Mobile CGI"></td>
 </tr>
 </table>
 

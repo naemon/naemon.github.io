@@ -10,7 +10,7 @@ One of the reasons that Naemon is such a popular monitoring application is the f
 
 ### Integration Points
 
-<img src="/images/integrationoverview.png" border="0" style="float: right;" alt="Integration Overview" title="Integration Overview">
+<img src="images/integrationoverview.png" border="0" style="float: right;" alt="Integration Overview" title="Integration Overview">
 
 To monitor new hardware, services, or applications, check out the docs on:
 

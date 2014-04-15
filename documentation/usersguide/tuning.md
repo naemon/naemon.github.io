@@ -10,7 +10,7 @@ title: Tuning Naemon For Maximum Performance
 
 ### Introduction
 
-<img src="/images/tuning.png" border="0" style="float: right; clear: both;" alt="Tuning" title="Tuning">
+<img src="images/tuning.png" border="0" style="float: right; clear: both;" alt="Tuning" title="Tuning">
 
 So you've finally got Naemon up and running and you want to know how you can
 tweak it a bit. Tuning Naemon to increase performance can be necessary when

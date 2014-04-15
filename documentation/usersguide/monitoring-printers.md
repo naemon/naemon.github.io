@@ -10,7 +10,7 @@ title: Monitoring Network Printers
 
 ### Introduction
 
-<img src="/images/printer.png" border="0" style="float: right" alt="Printer">
+<img src="images/printer.png" border="0" style="float: right" alt="Printer">
 
 This document describes how you can monitor the status of networked printers.  Specifically, HP printers that have internal/external JetDirect cards/devices, or other print servers (like the Troy PocketPro 100S or the Netgear PS101) that support the JetDirect protocol.
 
@@ -34,7 +34,7 @@ The sample configuration entries below reference objects that are defined in the
 
 ### Overview
 
-<img src="/images/monitoring-printers.png" border="0" alt="Monitoring a Network Printer" title="Monitoring a Network Printer" style="float: right;">
+<img src="images/monitoring-printers.png" border="0" alt="Monitoring a Network Printer" title="Monitoring a Network Printer" style="float: right;">
 
 Monitoring the status of a networked printer is pretty simple.  JetDirect-enabled printers usually have SNMP enabled, which allows Naemon to monitor their status using the <i>check_hpjd</i> plugin.
 

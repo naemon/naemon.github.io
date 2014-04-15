@@ -6,7 +6,7 @@ title: Cached Checks
 
 ### Introduction
 
-<img src="/images/cachedchecks1.png" border="0" style="float: right;" alt="Cached Checks" title="Cached Checks">
+<img src="images/cachedchecks1.png" border="0" style="float: right;" alt="Cached Checks" title="Cached Checks">
 
 The performance of Naemon's monitoring logic can be significantly improved by implementing the use of cached checks.  Cached checks allow Naemon to forgo executing a host or service check command if it determines a relatively recent check result will do instead.
 
@@ -32,7 +32,7 @@ Cached host checks are where the big performance improvements lie, and everyone 
 
 ### How Caching Works
 
-<img src="/images/cachedchecks.png" border="0" style="float: right; clear: both;" alt="Cached Check Logic" title="Cached Check Logic">
+<img src="images/cachedchecks.png" border="0" style="float: right; clear: both;" alt="Cached Check Logic" title="Cached Check Logic">
 
 When Naemon needs to perform an on-demand host or service check, it will make a determination as to whether  it can used a cached check result or if it needs to perform an actual check by executing a plugin.  It does this by checking to see if the last check of the host or service occured within the last X minutes, where X is the cached host or service check horizon.
 
@@ -69,7 +69,7 @@ In order to make the most effective use of cached checks, you should:
 
 You can schedule regular checks of your hosts by specifying a value greater than 0 for *check_interval* option in your <a href="objectdefinitions.html#host">host definitions</a>.  If you do this, make sure that you set the *max_check_attempts* option to a value greater than 1, or it will cause a big performance hit.  This potential performance hit is describe in detail <a href="hostchecks.html">here</a>.
 
-<img src="/images/cachedcheckgraphs.png" border="0" style="float: right; clear: both;" alt="Cached Checks Graph" title="Cached Checks Graph">
+<img src="images/cachedcheckgraphs.png" border="0" style="float: right; clear: both;" alt="Cached Checks Graph" title="Cached Checks Graph">
 
 A good way to determine the proper value for the cached check horizon options is to compare how many on-demand checks Naemon has to actually run versus how may it can use cached values for.  The <a href="naemonstats.html">naemonstats</a> utility can produce information on cached checks, which can then be <a href="mrtggraphs.html">graphed with MRTG</a>.  Example MRTG graphs that show cached vs. actual on-demand checks are shown to the right.
 

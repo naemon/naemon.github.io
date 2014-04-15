@@ -31,7 +31,7 @@ Let's describe in more detail how flap detection works with services...
 
 The image below shows a chronological history of service states from the most recent 21 service checks.  OK states are shown in green, WARNING states in yellow, CRITICAL states in red, and UNKNOWN states in orange.
 
-<a href="/images/statetransitions.png"><img src="/images/statetransitions.png" border=0 alt="Service State Transitions"></a>
+<a href="images/statetransitions.png"><img src="images/statetransitions.png" border=0 alt="Service State Transitions"></a>
 
 The historical service check results are examined to determine where state changes/transitions occur.  State changes occur when an archived state is different from the archived state that immediately precedes it chronologically.  Since we keep the results of the last 21 service checks in the array, there is a possibility of having at most 20 state changes.  In this example there are 7 state changes, indicated by blue arrows in the image above.
 
@@ -39,7 +39,7 @@ The flap detection logic uses the state changes to determine an overall percent 
 
 When calculating the percent state change for the service, the flap detection algorithm will give more weight to new state changes compare to older ones.  Specfically, the flap detection routines are currently designed to make the newest possible state change carry 50% more weight than the oldest possible state change.  The image below shows how recent state changes are given more weight than older state changes when calculating the overall or total percent state change for a particular service.
 
-<a href="/images/statetransitions2.png"><img src="/images/statetransitions2.png" border=0 alt="Weighted Service State Transitions"></a>
+<a href="images/statetransitions2.png"><img src="images/statetransitions2.png" border=0 alt="Weighted Service State Transitions"></a>
 
 Using the images above, lets do a calculation of percent state change for the service.  You will notice that there are a total of 7 state changes (at t<sub>3</sub>, t<sub>4</sub>, t<sub>5</sub>, t<sub>9</sub>, t<sub>12</sub>, t<sub>16</sub>, and t<sub>19</sub>).  Without any weighting of the state changes over time, this would give us a total state change of 35%:
 

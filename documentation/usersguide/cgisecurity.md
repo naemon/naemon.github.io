@@ -8,7 +8,7 @@ title: Enhanced CGI Security and Authentication
 
 ### Introduction
 
-<img src="/images/security.png" border="0" style="float: right; clear: both;" alt="Security" title="Security">
+<img src="images/security.png" border="0" style="float: right; clear: both;" alt="Security" title="Security">
 
 This is intended to be an introduction for implementation of stronger authentication
 and server security focused around the CGI web interface.

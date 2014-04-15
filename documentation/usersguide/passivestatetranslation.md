@@ -29,7 +29,7 @@ The image below shows a simplified view of a failover monitoring setup.
    receiving passive check results from <i>Naemon-A</i>
  - Both <i>Router-C</i> and <i>Router-D</i> have suffered failures and are offline.
 
-<img src="/images/passivehosttranslation.png" border="0" alt="Passive State Translation" title="Passive State Translation">
+<img src="images/passivehosttranslation.png" border="0" alt="Passive State Translation" title="Passive State Translation">
 
 What states are <i>Router-C</i> and <i>Router-D</i> currently in?
 

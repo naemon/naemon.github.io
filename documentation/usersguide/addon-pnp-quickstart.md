@@ -6,7 +6,7 @@ title: Addon PNP4Nagios Quickstart
 
 ## Introduction
 
-<a href="../../images/pnp4nagios-example1.png"><img src="../../images/pnp4nagios-example1.png" border="0" hspace="10" width="40%" height="40%" alt="pnp4nagios example with Naemon" title="pnp4nagios example with Naemon" style="float: right;"></a>
+<a href="images/pnp4nagios-example1.png"><img src="images/pnp4nagios-example1.png" border="0" hspace="10" width="40%" height="40%" alt="pnp4nagios example with Naemon" title="pnp4nagios example with Naemon" style="float: right;"></a>
 
 This guide will help you install PNP4Nagios which gives you graphs for your performance data well integrated with Thruk. Since most package for PNP4Nagios requires Nagios we will have to build it from source. Please don't panic, this guide will help you step by step to add one of the most important addons to Naemon.
 

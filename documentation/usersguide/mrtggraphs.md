@@ -50,7 +50,7 @@ I'll describe what a few of the sample MRTG graphs mean and what they can be use
     </ul>
   </td>
   <td valign="top">
-    <img src="/images/mrtg-activehostchecks.png" border="0" alt="Active Host Checks">
+    <img src="images/mrtg-activehostchecks.png" border="0" alt="Active Host Checks">
   </td>
 </tr>
 
@@ -67,7 +67,7 @@ scheduled and on-demand) have occurred over time.  Useful for understanding:
 </ul>
 </td>
 <td valign="top">
-<img src="/images/mrtg-activeservicechecks.png" border="0" alt="Active Service Checks">
+<img src="images/mrtg-activeservicechecks.png" border="0" alt="Active Service Checks">
 </td>
 </tr>
 
@@ -83,7 +83,7 @@ have occurred over time. Useful for understanding:
 </ul>
 </td>
 <td valign="top">
-<img src="/images/mrtg-cachedchecks.png" border="0" alt="Cached Host and Service Checks">
+<img src="images/mrtg-cachedchecks.png" border="0" alt="Cached Host and Service Checks">
 </td>
 </tr>
 
@@ -98,7 +98,7 @@ have occurred over time.  Useful for understanding:
 </ul>
 </td>
 <td valign="top">
-<img src="/images/mrtg-passivechecks.png" border="0" alt="Passive Host and Service Checks">
+<img src="images/mrtg-passivechecks.png" border="0" alt="Passive Host and Service Checks">
 </td>
 </tr>
 
@@ -113,7 +113,7 @@ and services were <i>last</i> checked actively over time.  Useful for understand
 </ul>
 </td>
 <td valign="top">
-<img src="/images/mrtg-activelychecked.png" border="0" alt="Hosts/Services Actively Checked">
+<img src="images/mrtg-activelychecked.png" border="0" alt="Hosts/Services Actively Checked">
 </td>
 </tr>
 
@@ -128,7 +128,7 @@ and services were <i>last</i> checked passively over time.  Useful for understan
 </ul>
 </td>
 <td valign="top">
-<img src="/images/mrtg-passivelychecked.png" border="0" alt="Hosts/Services Passively Checked">
+<img src="images/mrtg-passivelychecked.png" border="0" alt="Hosts/Services Passively Checked">
 </td>
 </tr>
 
@@ -152,7 +152,7 @@ Consistently high latencies can be an indication that one of more of the followi
 </ul>
 </td>
 <td valign="top">
-<img src="/images/mrtg-serviceperfstats.png" border="0" alt="Average Service Check Latency and Execution Time">
+<img src="images/mrtg-serviceperfstats.png" border="0" alt="Average Service Check Latency and Execution Time">
 </td>
 </tr>
 
@@ -167,7 +167,7 @@ volatility) for services over time, broken down by services that were last check
 </ul>
 </td>
 <td valign="top">
-<img src="/images/mrtg-servicestatechange.png" border="0" alt="Average Service State Change">
+<img src="images/mrtg-servicestatechange.png" border="0" alt="Average Service State Change">
 </td>
 </tr>
 
@@ -191,7 +191,7 @@ Consistently high latencies can be an indication that one of more of the followi
 </ul>
 </td>
 <td valign="top">
-<img src="/images/mrtg-hostperfstats.png" border="0" alt="Average Host Check Latency and Execution Time">
+<img src="images/mrtg-hostperfstats.png" border="0" alt="Average Host Check Latency and Execution Time">
 </td>
 </tr>
 
@@ -206,7 +206,7 @@ of volatility) for hosts over time, broken down by hosts that were last checked 
 </ul>
 </td>
 <td valign="top">
-<img src="/images/mrtg-hoststatechange.png" border="0" alt="Average Host State Change">
+<img src="images/mrtg-hoststatechange.png" border="0" alt="Average Host State Change">
 </td>
 </tr>
 
@@ -225,7 +225,7 @@ empty. Monitoring external commands can be useful for understanding the impacts 
 </ul>
 </td>
 <td valign="top">
-<img src="/images/mrtg-externalcommands.png" border="0" alt="External Commands">
+<img src="images/mrtg-externalcommands.png" border="0" alt="External Commands">
 </td>
 </tr>
 </table>

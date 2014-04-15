@@ -33,6 +33,6 @@ The sample configuration entries below reference objects that are defined in the
 
 There are several different ways to monitor attributes or remote Linux/Unix servers.  One is by using shared SSH keys and the <i>check_by_ssh</i> plugin to execute plugins on remote servers.  This method will not be covered here, but can result in high load on your monitoring server if you are monitoring hundreds or thousands of services.  The overhead of setting up/destroying SSH connections is the cause of this.
 
-<img src="/images/nrpe.png" border="0" alt="NRPE" title="NRPE" style="float: right; clear: both;">
+<img src="images/nrpe.png" border="0" alt="NRPE" title="NRPE" style="float: right; clear: both;">
 
 Another common method of monitoring remote Linux/Unix hosts is to use the <a href="addons.html#nrpe">NRPE addon</a>.  NRPE  allows you to execute plugins on remote Linux/Unix hosts.  This is useful if you need to monitor local resources/attributes like disk usage, CPU load, memory usage, etc. on a remote host.

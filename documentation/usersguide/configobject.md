@@ -55,7 +55,7 @@ Some of the main object types are explained in greater detail below...
 <a href="objectdefinitions.html#hostgroup"><b>Host Groups</b></a> are groups of one or more hosts.  Host groups can make it easier to (1) view the status of related hosts in the Naemon web interface and (2) simplify your configuration through the use of <a href="objecttricks.html">object tricks</a>.
 </td>
 <td valign="top" width="100px">
-<img src="/images/objects-hosts.png" border="0" alt="Hosts">
+<img src="images/objects-hosts.png" border="0" alt="Hosts">
 </td>
 </tr>
 </table>
@@ -74,7 +74,7 @@ Some of the main object types are explained in greater detail below...
 <a href="objectdefinitions.html#servicegroup"><b>Service Groups</b></a> are groups of one or more services.  Service groups can make it easier to (1) view the status of related services in the Naemon web interface and (2) simplify your configuration through the use of <a href="objecttricks.html">object tricks</a>.
 </td>
 <td valign="top" width="100px">
-<img src="/images/objects-services.png" border="0" alt="Services">
+<img src="images/objects-services.png" border="0" alt="Services">
 </td>
 </tr>
 </table>
@@ -90,7 +90,7 @@ Some of the main object types are explained in greater detail below...
 </ul>
 </td>
 <td valign="top" width="100px">
-<img src="/images/objects-contacts.png" border="0" alt="Contacts">
+<img src="images/objects-contacts.png" border="0" alt="Contacts">
 </td>
 </tr>
 </table>
@@ -106,7 +106,7 @@ Some of the main object types are explained in greater detail below...
 Information on how timeperiods work can be found <a href="timeperiods.html">here</a>.
 </td>
 <td valign="top" width="100px">
-<img src="/images/objects-timeperiods.png" border="0" alt="Timeperiods">
+<img src="images/objects-timeperiods.png" border="0" alt="Timeperiods">
 </td>
 </tr>
 </table>
@@ -123,7 +123,7 @@ Information on how timeperiods work can be found <a href="timeperiods.html">here
 </ul>
 </td>
 <td valign="top" width="100px">
-<img src="/images/objects-commands.png" border="0" alt="Commands">
+<img src="images/objects-commands.png" border="0" alt="Commands">
 </td>
 </tr>
 </table>

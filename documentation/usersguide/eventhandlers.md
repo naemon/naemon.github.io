@@ -6,7 +6,7 @@ title: Event Handlers
 
 ### Introduction
 
-<img src="/images/eventhandlers.png" border="0" style="float: right;" alt="Event Handlers" title="Event Handlers">
+<img src="images/eventhandlers.png" border="0" style="float: right;" alt="Event Handlers" title="Event Handlers">
 
 Event handlers are optional system commands (scripts or executables) that are run whenever a host or service state change occurs.
 

@@ -11,7 +11,7 @@ Naemon is capable of monitoring hosts and services in two ways: actively and pas
 * Active checks are initiated by the Naemon process
 * Active checks are run on a regularly scheduled basis
 
-<img src="/images/activechecks.png" border="0" style="float: right;" alt="Active Checks">
+<img src="images/activechecks.png" border="0" style="float: right;" alt="Active Checks">
 
 ### How Are Active Checks Performed?
 
