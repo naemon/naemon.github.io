@@ -15,7 +15,7 @@ The binary packages can also be downloaded here:
 
 <table>
  <tr>
-   <td><img src="../images/Redhat-logo_48x_48x.png"></td>
+   <td><img src="../images/redhat.png"></td>
    <td>Redhat</td>
    <td>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/">Redhat 6</a><br>
