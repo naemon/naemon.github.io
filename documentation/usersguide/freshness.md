@@ -10,7 +10,7 @@ Naemon supports a feature that does "freshness" checking on the results of host 
 
 Freshness checking is useful when you want to ensure that <a href="passivechecks.html">passive checks</a> are being received as frequently as you want.  This can be very useful in <a href="distributed.html">distributed</a> and <a href="redundancy.html">failover</a> monitoring environments.
 
-<img src="/images/freshness.png" border="0" style="float: right;" alt="Minty Fresh" title="Minty Fresh">
+<img src="images/freshness.png" border="0" style="float: right;" alt="Minty Fresh" title="Minty Fresh">
 
 ### How Does Freshness Checking Work?
 

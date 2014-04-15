@@ -8,7 +8,7 @@ title: Scheduled Downtime
 
 Naemon allows you to schedule periods of planned downtime for hosts and service that you're monitoring.  This is useful in the event that you actually know you're going to be taking a server down for an upgrade, etc.
 
-<img src="/images/downtime.png" border="0" style="float: right;" alt="Scheduled Downtime" title="Scheduled Downtime">
+<img src="images/downtime.png" border="0" style="float: right;" alt="Scheduled Downtime" title="Scheduled Downtime">
 
 ### Scheduling Downtime
 

@@ -9,7 +9,7 @@ title: Time Periods
 
 ### Introduction
 
-<img src="/images/objects-timeperiods.png" border="0" style="float: right;" alt="Timeperiods" title="Timeperiods">
+<img src="images/objects-timeperiods.png" border="0" style="float: right;" alt="Timeperiods" title="Timeperiods">
 
 <a href="objectdefinitions.html#timeperiod">Timeperiod</a> definitions allow you
 to control when various aspects of the monitoring and alerting logic can operate.

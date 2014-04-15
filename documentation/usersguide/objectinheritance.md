@@ -415,7 +415,7 @@ define host{
 </pre>
 </td>
 <td valign="top">
-<img src="/images/multiple-templates1.png" border="0" alt="Multiple Inheritance Sources" title="Multiple Inheritance Sources" style="padding: 0 0 0 25px;">
+<img src="images/multiple-templates1.png" border="0" alt="Multiple Inheritance Sources" title="Multiple Inheritance Sources" style="padding: 0 0 0 25px;">
 </td>
 </tr>
 </table>
@@ -459,7 +459,7 @@ Testing, trial, and error will help you better understand exactly how things wor
 </p>
 </td>
 <td valign="top">
-<img src="/images/multiple-templates2.png" border="0" alt="Multiple Inheritance Sources" title="Multiple Inheritance Sources" style="padding: 0 0 0 25px;">
+<img src="images/multiple-templates2.png" border="0" alt="Multiple Inheritance Sources" title="Multiple Inheritance Sources" style="padding: 0 0 0 25px;">
 </td>
 </tr>
 </table>

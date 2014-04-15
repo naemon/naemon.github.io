@@ -27,83 +27,33 @@ Publicly available services that are provided by Windows machines (HTTP, FTP, PO
 
 ### Overview
 
-<img src="/images/monitoring-windows.png" border="0" alt="Monitoring a Windows Machine" title="Monitoring a Windows Machine" style="float: right;">
+<img src="images/monitoring-windows.png" border="0" alt="Monitoring a Windows Machine" title="Monitoring a Windows Machine" style="float: right;">
 
-Monitoring private services or attributes of a Windows machine requires that you install an agent on it.  This agent acts as a proxy between the Naemon plugin that does the monitoring and the actual service or attribute of the Windows machine.  Without installing an agent on the Windows box, Naemon would be unable to monitor private services or attributes of the Windows box.
+Monitoring private services or attributes of a Windows machine requires that you install an agent on it.  This agent acts as a proxy between the Naemon plugin that does the monitoring and the actual service or attribute of the Windows machine.  Without installing an agent on the Windows box, Naemon would be unable to monitor local services or attributes of the Windows box.
 
-For this example, we will be installing the <a href="http://sourceforge.net/projects/nscplus">NSClient++</a> addon on the Windows machine and using the <i>check_nt</i> plugin to communicate with the NSClient++ addon.  The <i>check_nt</i> plugin should already be installed on the Naemon server if you followed the quickstart guide.
-
-Other Windows agents (like <a href="http://sourceforge.net/projects/nc-net">NC_Net</a>) could be used instead of NSClient++ if you wish - provided you change command and service definitions, etc. a bit.  For the sake of simplicity I will only cover using the NSClient++ addon in these instructions.
+For this example, we will be installing the <a href="http://www.nsclient.org/">NSClient++</a> addon on the Windows machine and using the <i>check_nrpe</i> plugin to communicate with the NSClient++ addon. The <i>check_nrpe</i> plugin should already be installed on the Naemon server if you followed the quickstart guide.
 
 ### Steps
 
 There are several steps you'll need to follow in order to monitor a new Windows machine.  They are:
 
 <ol>
-<li>Perform first-time prerequisites</li>
 <li>Install a monitoring agent on the Windows machine</li>
 <li>Create new host and service definitions for monitoring the Windows machine</li>
 <li>Restart the Naemon daemon</li>
 </ol>
 
-### What's Already Done For You
-
-To make your life a bit easier, a few configuration tasks have already been done for you:
-
-<ul>
-<li>A <i>check_nt</i> command definition has been added to the <i>commands.cfg</i> file.  This allows you to use the <i>check_nt</i> plugin to monitor Window services.</li>
-<li>A Windows server host template (called <i>windows-server</i>) has already been created in the <i>templates.cfg</i> file.  This allows you to add new Windows host definitions in a simple manner.</li>
-</ul>
-
-The above-mentioned config files can be found in the <i>/usr/local/nagios/etc/objects/</i> directory.  You can modify the definitions in these and other definitions to suit your needs better if you'd like.  However, I'd recommend waiting until you're more familiar with configuring Naemon before doing so.  For the time being, just follow the directions outlined below and you'll be monitoring your Windows boxes in no time.
-
-### Prerequisites
-
-The first time you configure Naemon to monitor a Windows machine, you'll need to do a bit of extra work.  Remember, you only need to do this for the *first* Windows machine you monitor.
-
-Edit the main Naemon config file.
-
-<pre>
-vi /usr/local/nagios/etc/nagios.cfg
-</pre>
-
-Remove the leading pound (#) sign from the following line in the main configuration file:
-
-<pre>
-#cfg_file=/usr/local/nagios/etc/objects/windows.cfg
-</pre>
-
-Save the file and exit.
-
-What did you just do?  You told Naemon to look to the <i>/usr/local/nagios/etc/objects/windows.cfg</i> to find additional object definitions.  That's where you'll be adding Windows host and service definitions.  That configuration file already contains some sample host, hostgroup, and service definitions.  For the *first* Windows machine you monitor, you can simply modify the sample host and service definitions in that file, rather than creating new ones.
-
 ### Installing the Windows Agent
 
-Before you can begin monitoring private services and attributes of Windows machines, you'll need to install an agent on those machines.  I recommend using the NSClient++ addon, which can be found at <a href="http://sourceforge.net/projects/nscplus">http://sourceforge.net/projects/nscplus</a>.  These instructions will take you through a basic installation of the NSClient++ addon, as well as the configuration of Naemon for monitoring the Windows machine.
+Before you can begin monitoring local services and attributes of Windows machines, you'll need to install an agent on those machines.  I recommend using the NSClient++ addon, which can be found at <a href="http://www.nsclient.org">http://www.nsclient.org</a>.  These instructions will take you through a basic installation of the NSClient++ addon, as well as the configuration of Naemon for monitoring the Windows machine.
 
-1. Download the latest stable version of the NSClient++ addon from <a href="http://sourceforge.net/projects/nscplus">http://sourceforge.net/projects/nscplus</a>
-
-2. Unzip the NSClient++ files into a new C:\NSClient++ directory
-
-3. Open a command prompt and change to the C:\NSClient++ directory
-
-4. Register the NSClient++ system service with the following command:
-
-<pre>
-	nsclient++ /install
-</pre>
-
-5. Install the NSClient++ systray with the following command ('SysTray' is case-sensitive):
-
-<pre>
-	nsclient++ SysTray
-</pre>
-
-6. Open the services manager and make sure the NSClientpp service is allowed to interact with the desktop (see the 'Log On' tab of the services manager).  If it isn't already allowed to interact with the desktop, check the box to allow it to.
-
-<img src="/images/nscpp.png" border="0" alt="NSClientpp">
-
-7. Edit the NSC.INI file (located in the C:\NSClient++ directory) and make the following changes:
+1.  Download the latest stable version of the NSClient++ addon from <a href="http://www.nsclient.org">http://www.nsclient.org</a>
+1.  Install NSClient++, use the "Complete" setup type to make sure you got all features. 
+  * "Check "Enable common check plugins"
+  * "Enable NRPE server (check_nrpe)"
+  * "Enable WMI checks".  
+  NSClient++ should be installed as a service and started automaticly.
+1.  Edit the nsclient.ini file (located in the C:\Program Files\NSClient++ directory) and make the following changes:
 
 <ul>
 <li>Uncomment all the modules listed in the [modules] section, except for CheckWMI.dll and RemoteConfiguration.dll</li>

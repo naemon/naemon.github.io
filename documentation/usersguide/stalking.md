@@ -38,10 +38,10 @@ Take the following example of eight consecutive checks of a service:
 <tr><th>Service Check #:</th><th>Service State:</th><th>Service Check Output:</th><th>Logged Normally</th><th>Logged With Stalking</th></tr>
 <tr><td>x</td><td>OK</td><td>RAID array optimal</td><td>-</td><td>-</td></tr>
 <tr><td>x+1</td><td>OK</td><td>RAID array optimal</td><td>-</td><td>-</td></tr>
-<tr><td>x+2</td><td>WARNING</td><td>RAID array degraded (1 drive bad, 1 hot spare rebuilding)</td><td><img src="/images/checkmark.png" alt="Yes"></td><td><img src="/images/checkmark.png" alt="Yes"></td></tr>
-<tr><td>x+3</td><td>CRITICAL</td><td>RAID array degraded (2 drives bad, 1 host spare online, 1 hot spare rebuilding)</td><td><img src="/images/checkmark.png" alt="Yes"></td><td><img src="/images/checkmark.png" alt="Yes"></td></tr>
-<tr><td>x+4</td><td>CRITICAL</td><td>RAID array degraded (3 drives bad, 2 hot spares online)</td><td>-</td><td><img src="/images/checkmark.png" alt="Yes"></td></tr>
-<tr><td>x+5</td><td>CRITICAL</td><td>RAID array failed</td><td>-</td><td><img src="/images/checkmark.png" alt="Yes"></td></tr>
+<tr><td>x+2</td><td>WARNING</td><td>RAID array degraded (1 drive bad, 1 hot spare rebuilding)</td><td><img src="images/checkmark.png" alt="Yes"></td><td><img src="images/checkmark.png" alt="Yes"></td></tr>
+<tr><td>x+3</td><td>CRITICAL</td><td>RAID array degraded (2 drives bad, 1 host spare online, 1 hot spare rebuilding)</td><td><img src="images/checkmark.png" alt="Yes"></td><td><img src="images/checkmark.png" alt="Yes"></td></tr>
+<tr><td>x+4</td><td>CRITICAL</td><td>RAID array degraded (3 drives bad, 2 hot spares online)</td><td>-</td><td><img src="images/checkmark.png" alt="Yes"></td></tr>
+<tr><td>x+5</td><td>CRITICAL</td><td>RAID array failed</td><td>-</td><td><img src="images/checkmark.png" alt="Yes"></td></tr>
 <tr><td>x+6</td><td>CRITICAL</td><td>RAID array failed</td><td>-</td><td>-</td></tr>
 <tr><td>x+7</td><td>CRITICAL</td><td>RAID array failed</td><td>-</td><td>-</td></tr>
 </table>

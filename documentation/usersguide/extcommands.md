@@ -12,7 +12,7 @@ title: External Commands
 
 Naemon can process commands from external applications (including the CGIs) and alter various aspects of its monitoring functions based on the commands it receives.  External applications can submit commands by writing to the <a href="configmain.html#command_file">command file</a>, which is periodically processed by the Naemon daemon.
 
-<img src="/images/externalcommands.png" border="0" style="float: right;" alt="External Commands" title="External Commands">
+<img src="images/externalcommands.png" border="0" style="float: right;" alt="External Commands" title="External Commands">
 
 ### Enabling External Commands
 

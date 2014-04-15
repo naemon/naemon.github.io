@@ -10,7 +10,7 @@ title: Monitoring Routers and Switches
 
 ### Introduction
 
-<img src="/images/switch.png" border="0" style="float: right" alt="Switch">
+<img src="images/switch.png" border="0" style="float: right" alt="Switch">
 
 This document describes how you can monitor the status of network switches and routers.  Some cheaper "unmanaged" switches and hubs don't have IP addresses and are essentially invisible on your network, so there's not any way to monitor them.  More expensive switches and routers have addresses assigned to them and can be monitored by pinging them or using SNMP to query status information.
 
@@ -27,7 +27,7 @@ I'll describe how you can monitor the following things on managed switches, hubs
 
 ### Overview
 
-<img src="/images/monitoring-routers.png" border="0" alt="Monitoring a Router or Switch" title="Monitoring a Router or Switch" style="float: right;">
+<img src="images/monitoring-routers.png" border="0" alt="Monitoring a Router or Switch" title="Monitoring a Router or Switch" style="float: right;">
 
 Monitoring switches and routers can either be easy or more involved - depending on what equipment you have and what you want to monitor.  As they are critical infrastructure components, you'll no doubt want to monitor them in at least some basic manner.
 

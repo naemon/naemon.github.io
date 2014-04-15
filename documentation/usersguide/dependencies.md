@@ -30,7 +30,7 @@ You can create several dependencies for a given service, but you must add a sepa
 
 The image below shows an example logical layout of service notification and execution dependencies.   Different services are dependent on other services for notifications and check execution.
 
-<img src="/images/service-dependencies.png" alt="Service Dependencies">
+<img src="images/service-dependencies.png" alt="Service Dependencies">
 
 In this example, the dependency definitions for *Service F* on *Host C* would be defined as follows:
 
@@ -172,7 +172,7 @@ Here are the basics about host dependencies:
 
 The image below shows an example of the logical layout of host notification dependencies.  Different hosts are dependent on other hosts for notifications.
 
-<img src="/images/host-dependencies.png" alt="Host Dependencies">
+<img src="images/host-dependencies.png" alt="Host Dependencies">
 
 In the example above, the dependency definitions for *Host C* would be defined as follows:
 

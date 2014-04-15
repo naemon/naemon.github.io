@@ -6,7 +6,7 @@ title: Notifications
 
 ### Introduction
 
-<img src="/images/objects-contacts.png" border="0" style="float: right;" alt="Contacts" title="Contacts">
+<img src="images/objects-contacts.png" border="0" style="float: right;" alt="Contacts" title="Contacts">
 
 I've had a lot of questions as to exactly how notifications work.  This will attempt to explain exactly when and how host and service notifications are sent out, as well as who receives them.
 

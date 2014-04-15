@@ -35,7 +35,7 @@ A <a href="livestatus.html">detailed description</a> is available on a dedicated
 
 ### NRPE
 
-<img src="/images/nrpe.png" border="0" alt="NRPE" title="NRPE" style="float: right; padding: 0 0 0 10px;">
+<img src="images/nrpe.png" border="0" alt="NRPE" title="NRPE" style="float: right; padding: 0 0 0 10px;">
 
 NRPE is an addon that allows you to execute <a href="plugins.html">plugins</a> on remote Linux/Unix hosts.
 This is useful if you need to monitor local resources/attributes like disk usage, CPU load, memory usage,
@@ -48,7 +48,7 @@ The NRPE addon and documentation can be found at <a href="http://www.nagios.org/
 
 ### NSCA
 
-<img src="/images/nsca.png" border="0" alt="NSCA" title="NSCA" style="float: right; padding: 0 0 0 10px;">
+<img src="images/nsca.png" border="0" alt="NSCA" title="NSCA" style="float: right; padding: 0 0 0 10px;">
 
 NSCA is an addon that allows you to send <a href="passivechecks.html">passive check</a> results from remote Linux/Unix
 hosts to the Naemon running on the monitoring server.
@@ -63,7 +63,7 @@ The NSCA addon can be found at <a href="http://www.nagios.org/">http://www.nagio
 NDOUtils are required by older addons. If possible, use the newer <a href="#livestatus">Livestatus API</a> instead.
 {{ site.end }}
 
-<img src="/images/ndoutils.png" border="0" alt="NDOUtils" title="NDOUtils" style="float: right; padding: 0 0 0 10px;">
+<img src="images/ndoutils.png" border="0" alt="NDOUtils" title="NDOUtils" style="float: right; padding: 0 0 0 10px;">
 
 NDOUtils is an addon that allows you to store all status information from Naemon in a MySQL database.
 Multiple instances of Naemon can all store their information in a central database for centralized reporting.
@@ -73,7 +73,7 @@ The NDOUtils addon and documentation can be found at <a href="http://www.nagios.
 
 
 ### PNP
-<a href="../../images/pnp4nagios-example1.png"><img src="../../images/pnp4nagios-example1.png" border="0" hspace="10" width="30%" height="30%" alt="pnp4nagios example with Naemon" title="pnp4nagios example with Naemon" style="float: right;"></a>
+<a href="images/pnp4nagios-example1.png"><img src="images/pnp4nagios-example1.png" border="0" hspace="10" width="30%" height="30%" alt="pnp4nagios example with Naemon" title="pnp4nagios example with Naemon" style="float: right;"></a>
 
 PNP is a graphing addon. For installation step by step help see <a href="addon-pnp-quickstart.html">Addon PNP4Nagios Quickstart</a>
 

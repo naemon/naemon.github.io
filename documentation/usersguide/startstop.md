@@ -46,7 +46,7 @@ Restarting/reloading is nececessary when you modify your configuration files and
 2. <b>Web Interface:</b>
    You can restart the Naemon through the web interface by clicking the
    "Process Info" navigation link and selecting "Restart the Backend process":<br><br>
-   <img src="/images/stoprestart.png" border="0" alt="Restart the Backend process"><br><br>
+   <img src="images/stoprestart.png" border="0" alt="Restart the Backend process"><br><br>
 
 ### Stopping Naemon
 
@@ -58,7 +58,7 @@ Restarting/reloading is nececessary when you modify your configuration files and
 2. <b>Web Interface:</b>
    You can stop the Naemon through the web interface by clicking the "Process Info" navigation
    link and selecting "Shutdown the Backend process":<br><br>
-   <img src="/images/stoprestart.png" border="0" alt="Shutdown the Backend process"><br><br>
+   <img src="images/stoprestart.png" border="0" alt="Shutdown the Backend process"><br><br>
 3. <b>Manually:</b>
    You can stop the Naemon process by sending it a SIGTERM signal like so:
    <pre>kill &lt;naemon_pid&gt;</pre>

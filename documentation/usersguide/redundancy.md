@@ -66,7 +66,7 @@ The diagram below shows a very simple network setup.  For this scenario I will b
 
 <table border="1">
 <tr>
-<td><img src="/images/redundancy.png" border=0></td>
+<td><img src="images/redundancy.png" border=0></td>
 </tr>
 </table>
 

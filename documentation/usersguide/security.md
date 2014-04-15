@@ -9,7 +9,7 @@ title: Security Considerations
 
 ### Introduction
 
-<img src="/images/security.png" border="0" style="float: right; clear: both;" alt="Security" title="Security">
+<img src="images/security.png" border="0" style="float: right; clear: both;" alt="Security" title="Security">
 
 This is intended to be a brief overview of some things you should keep in mind when
 installing Naemon, so as set it up in a secure manner.
@@ -65,7 +65,7 @@ a Naemon-based monitoring solution...
     etc. Since the Naemon server is allowed to talk to your servers and may be able to poke
     through your firewalls, allowing users access to your monitoring server can be a security risk.
     Remember, its always easier to gain root access through a system security hole if you
-    have a local account on a box.<br><br><img src="/images/security3.png" border="0" style="float: left; clear: both;" alt="Monitoring Box" title="Monitoring Box"><br clear="all"><br></li>
+    have a local account on a box.<br><br><img src="images/security3.png" border="0" style="float: left; clear: both;" alt="Monitoring Box" title="Monitoring Box"><br clear="all"><br></li>
 <li><strong>Don't Run Naemon As Root</strong>.
     Naemon doesn't need to run as root, so don't do it.
     You can tell Naemon to drop privileges after startup and run as another user/group by
@@ -127,9 +127,9 @@ a Naemon-based monitoring solution...
     on remote systems using firewalls, access lists, etc.
     You don't want everyone to be able to query your systems for status information.
     This information could be used by an attacker to execute remote event handler scripts or to determine the best
-    times to go unnoticed.<br><br><img src="/images/security1.png" border="0" style="float: left; clear: both;" alt="Remote Agents" title="Remote Agents"><br clear="all"><br></li>
+    times to go unnoticed.<br><br><img src="images/security1.png" border="0" style="float: left; clear: both;" alt="Remote Agents" title="Remote Agents"><br clear="all"><br></li>
 <li><strong>Secure Communication Channels</strong>. Make sure you encrypt communication channels between different Naemon installations and between your Naemon servers and your monitoring agents whenever possible.
     You don't want someone to be able to sniff status information going across your network.
     This information could be used by an attacker to determine the best times to go unnoticed.<br><br>
-    <img src="/images/security2.png" border="0" style="float: left; clear: both;" alt="Communication Channels" title="Communication Channels"><br clear="all"><br></li>
+    <img src="images/security2.png" border="0" style="float: left; clear: both;" alt="Communication Channels" title="Communication Channels"><br clear="all"><br></li>
 </ol>

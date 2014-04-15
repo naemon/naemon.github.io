@@ -559,7 +559,7 @@ This image will be displayed in the various places in the CGIs.
 
 The image will look best if it is 40x40 pixels in size.
 
-Images for hosts are assumed to be in the <b>logos/</b> subdirectory in your HTML images directory (i.e. <i>/usr/share/naemon/root/images/logos</i>).
+Images for hosts are assumed to be in the <b>logos/</b> subdirectory in your HTML images directory (i.e. <i>/usr/share/naemon/rootimages/logos</i>).
 </td>
 </tr>
 <tr>
@@ -589,7 +589,7 @@ The image will look best if it is 40x40 pixels in size.
 
 You can leave these option blank if you are not using the statusmap CGI.
 
-Images for hosts are assumed to be in the <b>logos/</b> subdirectory in your HTML images directory (i.e. <i>/usr/share/naemon/root/images/logos</i>).
+Images for hosts are assumed to be in the <b>logos/</b> subdirectory in your HTML images directory (i.e. <i>/usr/share/naemon/rootimages/logos</i>).
 </td>
 </tr>
 <tr>
@@ -1184,7 +1184,7 @@ This image will be displayed in the <a href="cgis.html#status_cgi">status</a> an
 
 The image will look best if it is 40x40 pixels in size.
 
-Images for services are assumed to be in the <b>logos/</b> subdirectory in your HTML images directory (i.e. <i>/usr/share/naemon/root/images/logos</i>).
+Images for services are assumed to be in the <b>logos/</b> subdirectory in your HTML images directory (i.e. <i>/usr/share/naemon/rootimages/logos</i>).
 </td>
 </tr>
 <tr>

@@ -18,7 +18,7 @@ The *Switch2* host in this example has just changed state from an UP state to a 
 
 You will also notice that *Switch2* is depending on *Monitor1* and *File1* for either notifications or check execution (which one is unimportant in this example).  If predictive host dependency checks are enabled, Naemon will launch parallel checks of *Monitor1* and *File1* at the same time it launches checks of *Switch2*'s immediate parents and children.  Naemon does this because it knows that it will have to test the dependency logic in the near future (e.g. for purposes of notification) and it wants to make sure it has the most current status information for the hosts that take part in the dependency.
 
-<img src="/images/predictive-dependency-checks.png" border="0" alt="Predictive Dependency Checks" title="Predictive Dependency Checks">
+<img src="images/predictive-dependency-checks.png" border="0" alt="Predictive Dependency Checks" title="Predictive Dependency Checks">
 
 That's how predictive dependency checks work.  Simple, eh?
 

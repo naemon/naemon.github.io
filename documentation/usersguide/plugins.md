@@ -16,7 +16,7 @@ Naemon will execute a plugin whenever there is a need to check the status of a s
 
 ### Plugins As An Abstraction Layer
 
-<img src="/images/plugins.png" border="0" style="float: right; padding: 0 0 0 25px;" alt="Plugins">
+<img src="images/plugins.png" border="0" style="float: right; padding: 0 0 0 25px;" alt="Plugins">
 
 Plugins act as an abstraction layer between the monitoring logic present in the Naemon daemon and the actual services and hosts that are being monitored.
 

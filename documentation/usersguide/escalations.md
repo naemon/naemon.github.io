@@ -6,7 +6,7 @@ title: Notification Escalations
 
 ### Introduction
 
-<img src="/images/objects-contacts.png" border="0" style="float: right;" alt="Contacts" title="Contacts">
+<img src="images/objects-contacts.png" border="0" style="float: right;" alt="Contacts" title="Contacts">
 
 Naemon supports optional escalation of contact notifications for hosts and services.  Escalation of host and service notifications is accomplished by defining <a href="objectdefinitions.html#hostescalation">host escalations</a> and <a href="objectdefinitions.html#serviceescalation">service escalations</a> in your <a href="configobject.html">object configuration file(s)</a>.
 
