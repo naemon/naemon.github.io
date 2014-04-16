@@ -12,7 +12,6 @@ Local services, in contrast, cannot be monitored with Naemon without an intermed
 
 <ul>
 <li><a href="monitoring-windows.html">Monitoring Windows machines</a></li>
-<li><a href="monitoring-netware.html">Monitoring Netware servers</a></li>
 <li><a href="monitoring-linux.html">Monitoring Linux/Unix machines</a></li>
 </ul>
 
