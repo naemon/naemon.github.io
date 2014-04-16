@@ -40,7 +40,6 @@ your local machine. Check out the following docs for how to go about monitoring 
 <ul>
 <li><a href="monitoring-windows.html">Monitoring Windows machines</a></li>
 <li><a href="monitoring-linux.html">Monitoring Linux/Unix machines</a></li>
-<li><a href="monitoring-netware.html">Monitoring Netware servers</a></li>
 <li><a href="monitoring-routers.html">Monitoring routers/switches</a></li>
 <li><a href="monitoring-printers.html">Monitoring network printers</a></li>
 <li><a href="monitoring-networkservices.html">Monitoring network services (HTTP, FTP, SSH, etc.)</a></li>

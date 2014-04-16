@@ -50,8 +50,6 @@ body_class: toc
 
 <a href="monitoring-linux.html">How to monitor a Linux/Unix machine</a>
 
-<a href="monitoring-netware.html">How to monitor a Netware server</a>
-
 <a href="monitoring-printers.html">How to monitor a network printer</a>
 
 <a href="monitoring-routers.html">How to monitor a router/switch</a>
