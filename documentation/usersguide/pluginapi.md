@@ -40,7 +40,7 @@ Naemon determines the status of a host or service by evaluating the return code 
 
 ### Plugin Output Spec
 
-At a minimum, plugins should return at least one of text output.  Beginning with Naemon 3, plugins can optionally return multiple lines of output.  Plugins may also return optional performance data that can be processed by external applications.  The basic format for plugin output is shown below:
+At a minimum, plugins should return at least one of text output.  Optionally, plugins may return multiple lines of output.  Plugins may also return optional performance data that can be processed by external applications.  The basic format for plugin output is shown below:
 
 <p><font color="red">TEXT OUTPUT</font> | <font color="#FFA500">OPTIONAL PERFDATA</font><br>
 <font color="blue">LONG TEXT LINE 1<br>
