@@ -52,6 +52,7 @@ The binary packages can also be downloaded here:
    <td><img src="../images/ubuntu.png"></td>
    <td>Ubuntu</td>
    <td>
+        <a href="http://labs.consol.de/naemon/testing/">14.04 Trusty</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.10/">13.10 Saucy</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.04/">13.04 Raring</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.10/">12.10 Quantal</a><br>
@@ -248,6 +249,10 @@ jQuery(document).ready(function() {
         label: 'Ubuntu 13',
         data: extract_data_current_month(['naemon-core-ubuntu13'], cur_month),
         color: '#63D13E'
+    }, {
+        label: 'Ubuntu 14',
+        data: extract_data_current_month(['naemon-core-ubuntu14'], cur_month),
+        color: '#51CB51'
     }];
     jQuery.plot('#downloadstats_pkg', data, {
         series: {
