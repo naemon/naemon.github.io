@@ -96,7 +96,7 @@ chkconfig -a npcd
 service npcd start
 ```
 
-###6 - Modify pnp5nagios.cfg for Naemon
+###6 - Modify pnp4nagios.cfg for Naemon
 
 #### Redhat / CentOS
 
