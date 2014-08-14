@@ -54,7 +54,7 @@ mkdir naemon
 cd naemon/
 wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-core-dbg-{{ site.release_version }}-1.rhel6.x86_64.rpm
 wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-core-{{ site.release_version }}-1.rhel6.x86_64.rpm
-wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-dev-{{ site.release_version }}-1.rhel6.x86_64.rpm
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-devel-{{ site.release_version }}-1.rhel6.x86_64.rpm
 wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-livestatus-{{ site.release_version }}-1.rhel6.x86_64.rpm
 wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-thruk-libs-{{ site.release_version }}-1.rhel6.x86_64.rpm
 wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-thruk-reporting-{{ site.release_version }}-1.rhel6.x86_64.rpm
