@@ -64,6 +64,8 @@ The binary packages can also be downloaded here:
 
 <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/src/">Source tarball and source RPM packages can be downloads here.</a>
 
+<a name="development_snapshot" />
+
 ### Development snapshot
 For new user, we recommend you grab one of our nightly binary snapshots. You can also build yourself from source.
 
