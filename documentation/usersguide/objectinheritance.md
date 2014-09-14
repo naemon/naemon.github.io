@@ -274,6 +274,10 @@ The following table lists the object variables that will be implicitly inherited
 <td><i>contact_groups</i> in the associated host definition</td>
 </tr>
 <tr>
+<td><i>check_period</i></td>
+<td><i>check_period</i> in the associated host definition</td>
+</tr>
+<tr>
 <td><i>notification_interval</i></td>
 <td><i>notification_interval</i> in the associated host definition</td>
 </tr>
