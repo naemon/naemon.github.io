@@ -28,7 +28,7 @@ Open new issues on our Github issue tracker
 <table class='table sortable table-condensed table-hover'>
 <thead>
 <tr>
-<th data-defaultsort='desc'>Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th data-sort='true'>Priority&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Date</th><th data-sort='true'>Summary</th><th data-sort='true'>Reproducibility&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th data-sort='true'>Nagios</th><th data-sort='true'>Nameon</th>
+<th data-defaultsort='desc'>Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th data-sort='true'>Priority&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Date</th><th data-sort='true'>Summary</th><th data-sort='true'>Reproducibility&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th data-sort='true'>Nagios</th><th data-sort='true'>Naemon</th>
 </tr>
 </thead>
 <tbody>
