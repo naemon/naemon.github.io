@@ -14,18 +14,18 @@
 619: not applicable
 617: not applicable
 616: not applicable
-614: never in naemon
+614: not applicable
 610: fixed in head
 607: not applicable
 603: not applicable
 601: fixed in head
-597: never in naemon
+597: not applicable
 594: fixed in 0.8.0
 585: not applicable
 581: not applicable
 580: fixed in 0.8.0
 579: fixed in 0.8.0
-576: never in naemon
+576: not applicable
 575: not applicable
 572: not applicable
 571: not applicable
@@ -37,7 +37,7 @@
 561: fixed in 0.8.0
 559: fixed in 0.8.0
 558: not applicable
-555: never in naemon
+555: not applicable
 554: not applicable
 552: fixed in 0.8.0
 551: not applicable
