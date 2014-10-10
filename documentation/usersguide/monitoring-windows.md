@@ -111,21 +111,21 @@ Add the following
 <pre>
 define service {
   service_description            Memory
-  hostgroups_name                microsoft-windows
+  hostgroup_name                microsoft-windows
   use                            generic-service
   check_command                  check_nrpe!alias_mem
 }
 
 define service {
   service_description            Hard drives
-  hostgroups_name                microsoft-windows
+  hostgroup_name                microsoft-windows
   use                            generic-service
   check_command                  check_nrpe!alias_disk
 }
 
 define service {
   service_description            CPU load
-  hostgroups_name                microsoft-windows
+  hostgroup_name                microsoft-windows
   use                            generic-service
   check_command                  check_nrpe!alias_cpu
 }
