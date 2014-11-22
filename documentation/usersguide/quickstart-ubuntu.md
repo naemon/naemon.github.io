@@ -10,6 +10,7 @@ This guide is intended to provide you with simple instructions on how to install
 
 These instructions were written for:
 
+* Ubuntu Server 14.04 Trusty Tahr
 * Ubuntu Server 13.10 Saucy Salamander
 * Ubuntu Server 13.04 Raring Ringtail
 * Ubuntu Server 12.10 Quantal Quetzal
@@ -29,6 +30,55 @@ If you follow these instructions, here's what you'll end up with:
 ### Install instruction 
 
 {{ site.warn }}Don't forget to change your password from default, instruction are found below version specific installation instructions <a href="#change_default_password_for_thruk">here</a>{{ site.end }}
+
+#### Ubuntu Server 14.04 Trusty Tahr
+Since 0.8.0 is not available as stable for Ubuntu 14.04 you will have to install via Consol* Labs Repository
+
+**Install dependencies**
+
+```
+sudo apt-get install bsd-mailx apache2 apache2-utils libapache2-mod-fcgid libfontconfig1 libjpeg62 libgd3 libxpm4 xvfb libmysqlclient18
+```
+
+**Configure Consol Labs repository**
+
+```
+gpg --keyserver keys.gnupg.net --recv-keys F8C1CA08A57B9ED7
+gpg --armor --export F8C1CA08A57B9ED7 | apt-key add -
+sudo su -
+echo 'deb http://labs.consol.de/repo/testing/ubuntu trusty main' > /etc/apt/sources.list.d/consol.list
+apt-get update
+exit
+```
+
+**Install Naemon**
+
+```
+sudo apt-get install naemon
+```
+
+**Install Nagios plugins**
+
+```
+sudo apt-get install nagios-plugins
+```
+
+**Change path to Nagios plugins**
+
+```
+sudo vi /etc/naemon/resource.cfg
+```
+find *$USER1$=/usr/lib/naemon/plugins*
+
+replace with *$USER1$=/usr/lib/nagios/plugins*
+
+**Restart services**
+
+```
+sudo service naemon restart
+sudo service apache2 restart
+```
+
 
 #### Ubuntu Server 13.10 Saucy Salamander
 

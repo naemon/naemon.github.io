@@ -12,7 +12,7 @@ This guide will help you install PNP4Nagios which gives you graphs for your perf
 
 These instructions were written for:
 
-* PNP4Nagios 0.6.21
+* PNP4Nagios 0.6.24
 * Ubuntu Server
 * CentOS Server
 * Redhat Server
@@ -33,7 +33,7 @@ yum install gcc-c++ rrdtool perl-Time-HiRes perl-rrdtool php-gd php php-cli wget
 #### Debian / Ubuntu
 
 ```
-apt-get install rrdtool librrds-perl g++ php5-cli php5-gd libapache2-mod-php5
+apt-get install make rrdtool librrds-perl g++ php5-cli php5-gd libapache2-mod-php5
 ```
 
 #### SLES
@@ -51,20 +51,20 @@ zypper install gcc-c++ rrdtool php53-gd php53 apache2-mod_php53 php53-zlib php53
 cd ~/
 mkdir src
 cd src
-wget http://downloads.sourceforge.net/project/pnp4nagios/PNP-0.6/pnp4nagios-0.6.21.tar.gz
+wget http://downloads.sourceforge.net/project/pnp4nagios/PNP-0.6/pnp4nagios-0.6.24.tar.gz
 ```
 
 ###3 - Extract PNP4Nagios source
 
 ```
-tar -xzvf pnp4nagios-0.6.21.tar.gz -C /usr/local/src/
+tar -xzvf pnp4nagios-0.6.24.tar.gz -C /usr/local/src/
 ```
 
 
 ###4 - Build and install PNP4Nagios
 
 ```
-cd /usr/local/src/pnp4nagios-0.6.21/
+cd /usr/local/src/pnp4nagios-0.6.24/
 ./configure --with-nagios-user=naemon --with-nagios-group=naemon
 make all
 make install
@@ -118,13 +118,13 @@ vi /etc/apache2/conf-available/pnp4nagios.conf
 vi /etc/apache2/conf.d/pnp4nagios.conf
 ```
 
-edit row: *"AuthName "Nagios Access""*
+edit row: *AuthName "Nagios Access"*
 
-replace with: *"AuthName "Naemon Access""*
+replace with: *AuthName "Naemon Access"*
 
-edit row: *"AuthUserFile /usr/local/nagios/etc/htpasswd.users"*
+edit row: *AuthUserFile /usr/local/nagios/etc/htpasswd.users*
 
-replace with: *"AuthUserFile /etc/naemon/htpasswd"*
+replace with: *AuthUserFile /etc/naemon/htpasswd*
 
 ###7 - Modify config_local.php for Naemon
 
@@ -132,9 +132,9 @@ replace with: *"AuthUserFile /etc/naemon/htpasswd"*
 vi /usr/local/pnp4nagios/etc/config_local.php
 ```
 
-edit row: *"$conf['nagios_base'] = "/nagios/cgi-bin";"*
+edit row: *$conf['nagios_base'] = "/nagios/cgi-bin";*
 
-replace with: *"$conf['nagios_base'] = "/naemon/cgi-bin";"*
+replace with: *$conf['nagios_base'] = "/naemon/cgi-bin";*
 
 ###8 - Enable Naemon performance data
 
@@ -142,9 +142,9 @@ replace with: *"$conf['nagios_base'] = "/naemon/cgi-bin";"*
 vi /etc/naemon/naemon.cfg
 ```
 
-edit row: *"process_performance_data=0"*
+edit row: *process_performance_data=0"*
 
-replace with: *"process_performance_data=1"*
+replace with: *process_performance_data=1"*
 
 Add the following entries at the bottom of /etc/naemon/naemon.cfg to setup performance data settings
 
