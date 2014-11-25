@@ -17,7 +17,7 @@ We would love more testers - fetch [development packages](/download) and give us
 
 Supposedly there are bugs as well, both in the [core] and [base] project. We love it for there to be fewer of those.
 
-If your interested in one of these things, or something else you'd like to us about, find us on IRC or send an email.
+If you're interested in one of these things, or something else you'd like to us about, find us on IRC or send an email.
 
 [Why naemon?][why]
 
