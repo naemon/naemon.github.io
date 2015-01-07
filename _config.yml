@@ -1,6 +1,6 @@
 name: Naemon
 markdown: redcarpet
-pygments: true
+highlighter: true
 paginate: 10
 paginate_path: "news/page:num"
 redcarpet:
