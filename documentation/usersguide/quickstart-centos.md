@@ -60,12 +60,13 @@ wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_
 wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-thruk-reporting-{{ site.release_version }}-1.rhel6.x86_64.rpm
 wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-thruk-{{ site.release_version }}-1.rhel6.x86_64.rpm
 wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-{{ site.release_version }}-1.rhel6.x86_64.rpm
+wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/libnaemon-{{ site.release_version }}-1.rhel6.x86_64.rpm
 ```
 
 **Install Naemon**
 
 ```
-yum install naemon*
+yum install *naemon*
 ```
 
 **Disable SELinux, not supported by Thruk**
