@@ -18,6 +18,7 @@ The binary packages can also be downloaded here:
    <td><img src="../images/redhat.png"></td>
    <td>Redhat</td>
    <td>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel7/">Redhat 7</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/">Redhat 6</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel5/">Redhat 5</a>
    </td>
@@ -26,6 +27,7 @@ The binary packages can also be downloaded here:
    <td><img src="../images/centos.png"></td>
    <td>CentOS</td>
    <td>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel7/">CentOS 7</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/">CentOS 6</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel5/">CentOS 5</a>
    </td>
@@ -52,7 +54,7 @@ The binary packages can also be downloaded here:
    <td><img src="../images/ubuntu.png"></td>
    <td>Ubuntu</td>
    <td>
-        <a href="http://labs.consol.de/naemon/testing/">14.04 Trusty</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.10/">14.04 Trusty</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.10/">13.10 Saucy</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.04/">13.04 Raring</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.10/">12.10 Quantal</a><br>
