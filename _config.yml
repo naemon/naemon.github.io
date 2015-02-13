@@ -8,7 +8,7 @@ redcarpet:
 
 # site specific variables
 release_version: 1.0.0
-release_date: 12 Feb 2015
+release_date: 13 Feb 2015
 
 # custom "tags"
 hint: '<div class="alert alert-success" style="margin: 10px;"><i class="glyphicon glyphicon-thumbs-up"></i> <b>Tip</b>:&nbsp;'
