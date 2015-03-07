@@ -16,7 +16,7 @@ First install some basic dependencies:
 ```bash
 %> sudo yum install git perl perl-Module-Install automake gperf gcc-c++ \
      autoconf libtool gd-devel expat-devel mysql-devel rpm-build \
-     wget httpd
+     wget httpd tar logrotate help2man libicu-devel
 ```
 
 Then clone our repository in any folder you like:
