@@ -10,9 +10,9 @@ install:
   - sudo apt-get install libwww-perl
   - sudo apt-get install libhtml-lint-perl
   - bundle install
-script:
   - bundle exec jekyll build
-  - make test
+script:
+  - make GEM=gem JEKYLL=jekyll test
 notifications:
   irc:
     channels:

@@ -14,7 +14,7 @@ server: .gem
 
 .gem:
 	# apt-get install libmagickcore-dev libmagickwand-dev
-	GEM_HOME=$(GEM_HOME) $(GEM) install jekyll
+	#GEM_HOME=$(GEM_HOME) $(GEM) install jekyll
 
 test: .gem
 	GEM_HOME=$(GEM_HOME) NOCLEAN=1 $(JEKYLL) serve --port=$(TESTPORT) & SPID=$$!;  \
