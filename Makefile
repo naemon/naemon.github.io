@@ -13,10 +13,8 @@ server: .gem
 	GEM_HOME=$(GEM_HOME) $(JEKYLL) serve --host=\* --trace --watch
 
 .gem:
-	 apt-get install libmagickcore-dev libmagickwand-dev
+	# apt-get install libmagickcore-dev libmagickwand-dev
 	GEM_HOME=$(GEM_HOME) $(GEM) install jekyll
-	GEM_HOME=$(GEM_HOME) $(GEM) install rmagick
-	GEM_HOME=$(GEM_HOME) $(GEM) install jekyll-asciidoc --pre
 
 test: .gem
 	GEM_HOME=$(GEM_HOME) NOCLEAN=1 $(JEKYLL) serve --port=$(TESTPORT) & SPID=$$!;  \
