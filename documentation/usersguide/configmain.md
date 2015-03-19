@@ -2532,7 +2532,7 @@ More information on how this works can be found <a href="objecttricks.html">here
 
 If you've enabled regular expression matching of various object directives using the <a href="#use_regexp_matching">use_regexp_matching</a> option, this option will determine when object directives are treated as regular expressions.
 
-If this option is disabled (the default), directives will only be treated as regular expressions if they contain <b>*</b>, <b>?</b>, <b>+</b>, or <b>&bsol;..</b>
+If this option is disabled (the default), directives will only be treated as regular expressions if they contain <b>*</b>, <b>?</b>, <b>+</b>, or <b>\\.</b>.
 
 If this option is enabled, all appropriate directives will be treated as regular expression - be careful when enabling this!
 
