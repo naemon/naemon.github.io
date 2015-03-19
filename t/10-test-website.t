@@ -314,6 +314,7 @@ sub _relative_url {
         if($url =~ m/^(https?)/mx) {
             return($1.':'.$location);
         }
+        return('https:'.$location);
     }
 
     my $newloc = $url;
