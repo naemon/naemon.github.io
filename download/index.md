@@ -54,10 +54,8 @@ The binary packages can also be downloaded here:
    <td><img src="../images/ubuntu.png"></td>
    <td>Ubuntu</td>
    <td>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.10/">14.04 Trusty</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.10/">13.10 Saucy</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu13.04/">13.04 Raring</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.10/">12.10 Quantal</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu14.10/">14.10 Utopic</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu14.04/">14.04 Trusty</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.04/">12.04 Precise</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu10.04/">10.04 Lucid</a>
    </td>
