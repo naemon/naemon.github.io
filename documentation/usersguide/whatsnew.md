@@ -13,6 +13,20 @@ See upcoming changes from the next version on [github](https://github.com/naemon
 
 ### Notable Changes and New Features
 
+#### 1.0.3 - 29 Mar 2015
+##### Bugfixes
+ * shadownaemon: fix request counter
+
+#### 1.0.2 - 28 Mar 2015
+##### Bugfixes
+ * shadownaemon: remove external commands from shadownaemon (#104)
+ * shadownaemon: propagate last_hard_* values (Michael Kraus)
+
+#### 1.0.0 - 13 Feb 2015
+##### Bugfixes
+ * Fix shadownaemon comment and downtime syncronization
+ * Fix spelling errors
+
 #### 0.9.1 - 8 Jan 2015
 ##### Code Contributors
  * Robin Sonefors
