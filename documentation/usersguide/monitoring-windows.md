@@ -44,7 +44,7 @@ Before you can begin monitoring local services and attributes of Windows machine
   
 1.  Download the latest stable version of the NSClient++ addon from <a href="http://www.nsclient.org">http://www.nsclient.org</a>
 1.  Install NSClient++ and use the "Complete" setup type to make sure you got all features. On the next page use the default path for nsclient.ini and make sure "Install sample configuration" are checked
-1.  Enter all hosts that are allowd to connect to NSClient++, separate multiple IP's with ",". Make sure to check the fowllowing:
+1.  Enter all hosts that are allowed to connect to NSClient++, separate multiple IP's with ",". Make sure to check the following:
   * "Check "Enable common check plugins"
   * "Enable NRPE server (check_nrpe)"
   * "Enable WMI checks".  

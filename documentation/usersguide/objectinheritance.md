@@ -8,7 +8,7 @@ title: Object Inheritance
 
 This documentation attempts to explain object inheritance and how it can be used in your <a href="objectdefinitions.html">object definitions</a>.
 
-If you are confused about how recursion and inheritance work after reading this, take a look at the sample object config files provided in the Naemon distribution.  If that still doesn't help, drop an email message with a <i>detailed</i> description of your problem to the <i>nagios-users</i> mailing list.
+If you are confused about how recursion and inheritance work after reading this, take a look at the sample object config files provided in the Naemon distribution.  If that still doesn't help, drop an email message with a <i>detailed</i> description of your problem to the <i>naemon-users</i> mailing list.
 
 ### Basics
 
@@ -456,7 +456,7 @@ define host{
 	}
 </pre>
 <p>
-If some of those referenced templates themselves inherit variables/values from one or more other templates, the precendence rules are shown to the right.
+If some of those referenced templates themselves inherit variables/values from one or more other templates, the precedence rules are shown to the right.
 </p>
 <p>
 Testing, trial, and error will help you better understand exactly how things work in complex inheritance situations like this.  :-)

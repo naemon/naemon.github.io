@@ -6,7 +6,7 @@ title: Determining Status and Reachability of Network Hosts
 
 ### Introduction
 
-If you've ever work in tech support, you've undoubtably had users tell you "the Internet is down".  As a techie, you're pretty sure that no one pulled the power cord from the Internet.  Something must be going wrong somewhere between the user's chair and the Internet.
+If you've ever work in tech support, you've undoubtedly had users tell you "the Internet is down".  As a techie, you're pretty sure that no one pulled the power cord from the Internet.  Something must be going wrong somewhere between the user's chair and the Internet.
 
 Assuming its a technical problem, you begin to search for the problem.  Perhaps the user's computer is turned off, maybe their network cable is unplugged, or perhaps your organization's core router just took a dive.  Whatever the problem might be, one thing is most certain - the Internet isn't down.  It just happens to be unreachable for that user.
 

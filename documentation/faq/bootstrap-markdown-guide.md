@@ -2,7 +2,7 @@
 layout: affix
 title: Bootstrap and Markdown guide
 ---
-This document will help the community to mainstream Naemon usersguide to make it easy to follow with a common look and feel for the best user experiance possible.
+This document will help the community to mainstream Naemon users guide to make it easy to follow with a common look and feel for the best user experience possible.
 
 ### Bootstrap and Markdown syntax
 Our website including the documentation are built upon Bootstrap and Markdown syntax at Github.
@@ -27,13 +27,13 @@ This is **bold** text
 This is **bold** text
 
 ##### Bootstrap CSS
-Make full use of Boostrap infrastructure, see Bootstrap web page for more info: [http://getbootstrap.com/css/](http://getbootstrap.com/css/)
+Make full use of Bootstrap infrastructure, see Bootstrap web page for more info: [http://getbootstrap.com/css/](http://getbootstrap.com/css/)
 
 #### Bootstrap layouts
-Eatch Bootstrap webpage starts with a header with the layout definition. There are two different layouts available for documentation:
+Each Bootstrap webpage starts with a header with the layout definition. There are two different layouts available for documentation:
 
 * doc - doc layout is a one column page without table of content
-* doctoc - doctoc layout are the same as doc but with a table of content to the right. The TOC are automaticly generated using headers
+* doctoc - doctoc layout are the same as doc but with a table of content to the right. The TOC are automatically generated using headers
 
 ##### Example header
 ```

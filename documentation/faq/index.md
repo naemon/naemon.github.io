@@ -46,7 +46,7 @@ first have to find that library:
 ```
 
 If available you should install the `naemon-core-dbg` package which
-contains additional debuging symbols that makes toubleshooting a lot easier.
+contains additional debugging symbols that makes troubleshooting a lot easier.
 
 Then run Naemon with GDB, you will have to type `run` after the prompt:
 
@@ -110,14 +110,14 @@ See our [Bootstrap and Markdown guide](/documentation/faq/bootstrap-markdown-gui
 Please see our [Usersguide guidelines](/documentation/faq/usersguide-guidelines.html) for some basic information how we write our documentation
 
 ##### Small Changes
-Small changes like typos can be corrected and submited directly on [github][githubdocs] via the edit button.
+Small changes like typos can be corrected and submitted directly on [github][githubdocs] via the edit button.
 <p>![github edit button](images/githubedit.png "Github Edit Button")</p>
 Just navigation to the page you want to change and send a pull request via the online editor of github.
 Read more about the [online editor][githubedithelp]...
 
 
 ##### Larger Changes
-Larger changes should be tested and reviewed locally before submiting them. Also
+Larger changes should be tested and reviewed locally before submitting them. Also
 it's good practice to talk to a team member before spending large amounts of time
 in things we eventually won't accept for whatever reasons.
 The [developer guide](/documentation/developer/website.html) contains instructions on

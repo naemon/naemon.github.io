@@ -47,7 +47,7 @@ to get timing and scheduling information.
 
 A previous example used 10,000 services and took one minute to load and parse
 with Nagios 3.
-But fortuntly Naemon loads that configuration in under one second!
+But fortunately Naemon loads that configuration in under one second!
 
 An example of the output (abbreviated to only show relevant portions) is shown below.
 For this example, I'm using a Naemon config that has 100,000 hosts defined and

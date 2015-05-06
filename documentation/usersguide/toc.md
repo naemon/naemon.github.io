@@ -221,7 +221,7 @@ body_class: toc
 
 <a href="epnplugins.html">Developing Plugins For Use With Embedded Perl</a>
 
-<a href="/documentation/developer/">Developer Documenatation</a>
+<a href="/documentation/developer/">Developer Documentation</a>
 
 
 

@@ -24,7 +24,7 @@ See upcoming changes from the next version on [github](https://github.com/naemon
 
 #### 1.0.0 - 13 Feb 2015
 ##### Bugfixes
- * Fix shadownaemon comment and downtime syncronization
+ * Fix shadownaemon comment and downtime synchronization
  * Fix spelling errors
 
 #### 0.9.1 - 8 Jan 2015

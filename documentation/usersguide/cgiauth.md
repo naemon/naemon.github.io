@@ -8,7 +8,7 @@ title: Authentication And Authorization In The CGIs
 * Issuing Naemon process commands via the <a href="cgis.html#cmd_cgi">command CGI</a>
 * Viewing host group, contact, contact group, time period, and command definitions via the <a href="cgis.html#config_cgi">configuration CGI</a>
 
-You will undoubtably want to access this information, so you'll have to assign additional rights for yourself
+You will undoubtedly want to access this information, so you'll have to assign additional rights for yourself
 (and possibly other users) as described below...
 
 ### Granting Additional Permissions To CGI Information

@@ -17,7 +17,7 @@ displayed in the CGI output. That means they can only contain information a web 
 If the custom header and footer files are executable, then the files are executed and their output returned to
 the user, so they should output valid HTML. Using this you can run your own custom designed CGI to insert data
 into the naemon display. This has been used to insert graphs from rrdtool using ddraw and command menus into
-the naemon display pane. The execuable customer header and footer files are run with the same CGI environment
+the naemon display pane. The executable customer header and footer files are run with the same CGI environment
 as the main naemon CGI, so your files can parse the query information, authenticated user information, etc. to
 produce appropriate output.
 

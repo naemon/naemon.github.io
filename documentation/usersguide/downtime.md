@@ -34,7 +34,7 @@ When a host or service is in a period of scheduled downtime, Naemon will not all
 
 When the scheduled downtime is over, Naemon will allow normal notifications to be sent out for the host or service again.  A "DOWNTIMEEND" notification will get sent out notifying admins that the scheduled downtime is over, and they will start receiving normal alerts again.
 
-If the scheduled downtime is cancelled prematurely (before it expires), a "DOWNTIMECANCELLED" notification will get sent out to the appropriate admins.
+If the scheduled downtime is canceled prematurely (before it expires), a "DOWNTIMECANCELLED" notification will get sent out to the appropriate admins.
 
 ### Overlapping Scheduled Downtime
 
@@ -45,7 +45,7 @@ Let's take the following scenario:
 <ol>
 <li>You schedule downtime for host A from 7:30pm-9:30pm on a Monday
 <li>You bring the server down about 7:45pm Monday evening to start a hard drive upgrade
-<li>After wasting an hour and a half battling with SCSI errors and driver incompatabilities, you finally get the machine to boot up
+<li>After wasting an hour and a half battling with SCSI errors and driver incompatibilities, you finally get the machine to boot up
 <li>At 9:15 you realize that one of your partitions is either hosed or doesn't seem to exist anywhere on the drive
 <li>Knowing you're in for a long night, you go back and schedule additional downtime for host A from 9:20pm Monday evening to 1:30am Tuesday Morning.
 </ol>

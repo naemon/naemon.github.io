@@ -20,7 +20,7 @@ An obvious use for event handlers is the ability for Naemon to proactively fix p
 <li>etc.</li>
 </ul>
 
-* Cycling power on a host that is experiencing problems with an auomated script should not be implemented lightly.  Consider the consequences of this carefully before implementing automatic reboots. :-)
+* Cycling power on a host that is experiencing problems with an automated script should not be implemented lightly.  Consider the consequences of this carefully before implementing automatic reboots. :-)
 
 ### When Are Event Handlers Executed?
 

@@ -46,7 +46,7 @@ When Naemon sees this plugin output format it will split the output into two par
 
 In the example above, the $HOSTOUTPUT$ or $SERVICEOUTPUT$ macro would contain "<i>PING ok - Packet loss = 0%, RTA = 0.80 ms</i>" (without quotes) and the $HOSTPERFDATA$ or $SERVICEPERFDATA$ macro would contain "<i>percent_packet_loss=0, rta=0.80</i>" (without quotes).
 
-Multiple lines of performace data (as well as normal text output) can be obtained from plugins, as described in the <a href="pluginapi.html">plugin API documentation</a>.
+Multiple lines of performance data (as well as normal text output) can be obtained from plugins, as described in the <a href="pluginapi.html">plugin API documentation</a>.
 
 {{ site.note }}The Naemon daemon doesn't directly process plugin performance data, so it doesn't really care what the performance data looks like.  There aren't really any inherent limitations on the format or content of the performance data.  However, if you are using an external addon to process the performance data (i.e. PerfParse), the addon may be expecting that the plugin returns performance data in a specific format.  Check the documentation that comes with the addon for more information.{{ site.end }}
 

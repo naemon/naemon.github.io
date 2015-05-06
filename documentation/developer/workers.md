@@ -31,7 +31,7 @@ fairly simple and very easy to debug. The breakdown goes as follows:
   nul byte ('\0').
 - Each request is separated from the next with a message delimiter
   sequence made up by a one-byte followed by two nul bytes: "\1\0\0".
-- Keys cannot containt equal signs.
+- Keys cannot contain equal signs.
   underscores and numbers.
 - Values cannot contain nul bytes.
 - Neither keys nor values can contain the message delimiter.
@@ -153,14 +153,14 @@ The "enter_worker()" part actually refers to a libnaemon function that
 lives in worker.c. The set_loadctl_defaults() call can be ignored.
 It's primarily intended to give sane defaults about how many jobs we
 can run, so we (in theory) can tell Naemon that we're swamped in case
-we run out of filedescriptors or child processes.
+we run out of file descriptors or child processes.
 
 
 
 
 #### Requests
 A complete request looks like this (with C-style format codes
-replaced with actual values, ofcourse):
+replaced with actual values):
 
 ```
 job_id=%d\0type=%d\0command=%s\0timeout=%u\0\1\0\0

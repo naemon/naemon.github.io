@@ -78,7 +78,7 @@ Make sure to replace <i>host_name</i> with the short name of the host that the s
 <b>Port Scan Script:</b>
 
 Create a shell script in the <i>/usr/lib/naemon/plugins/eventhandlers</i> directory named <i>submit_check_result</i>.
-The contents of the shell script should be something similiar to the following...
+The contents of the shell script should be something similar to the following...
 
 ```bash
 #!/bin/sh

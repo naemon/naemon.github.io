@@ -41,7 +41,7 @@ The first filter for host or service notifications is a check to see if the host
 
 The second filter for host or service notification is a check to see if the host or service is <a href="flapping.html">flapping</a> (if you enabled flap detection).  If the service or host is currently flapping, <b>no one gets notified</b>.  Otherwise it gets passed to the next filter.
 
-The third host or service filter that must be passed is the host- or service-specific notification options.  Each service definition contains options that determine whether or not notifications can be sent out for warning states, critical states, and recoveries.  Similiarly, each host definition contains options that determine whether or not notifications can be sent out when the host goes down, becomes unreachable, or recovers.  If the host or service notification does not pass these options, <b>no one gets notified</b>.  If it does pass these options, the notification gets passed to the next filter...  
+The third host or service filter that must be passed is the host- or service-specific notification options.  Each service definition contains options that determine whether or not notifications can be sent out for warning states, critical states, and recoveries.  Similarly, each host definition contains options that determine whether or not notifications can be sent out when the host goes down, becomes unreachable, or recovers.  If the host or service notification does not pass these options, <b>no one gets notified</b>.  If it does pass these options, the notification gets passed to the next filter...  
 
 {{ site.note }}Notifications about host or service recoveries are only sent out if a notification was sent out for the original problem.  It doesn't make sense to get a recovery notification for something you never knew was a problem.{{ site.end }}
 
@@ -69,7 +69,7 @@ You can have Naemon notify you of problems and recoveries pretty much anyway you
 
 {{ site.note }}If you install Naemon according to the <a href="quickstart.html">quickstart guide</a>, it should be configured to send email notifications.  You can see the email notification commands that are used by viewing the contents of the following file: <i>/usr/local/nagios/etc/objects/commands.cfg</i>.{{ site.end }}
 
-Specific notification methods (paging, etc.) are not directly incorporated into the Naemon code as it just doesn't make much sense.  The "core" of Naemon is not designed to be an all-in-one application.  If service checks were embedded in Naemon' core it would be very difficult for users to add new check methods, modify existing checks, etc.  Notifications work in a similiar manner.  There are a thousand different ways to do notifications and there are already a lot of packages out there that handle the dirty work, so why re-invent the wheel and limit yourself to a bike tire?  Its much easier to let an external entity (i.e. a simple script or a full-blown messaging system) do the messy stuff.  Some messaging packages that can handle notifications for pagers and cellphones are listed below in the resource section.
+Specific notification methods (paging, etc.) are not directly incorporated into the Naemon code as it just doesn't make much sense.  The "core" of Naemon is not designed to be an all-in-one application.  If service checks were embedded in Naemon' core it would be very difficult for users to add new check methods, modify existing checks, etc.  Notifications work in a similar manner.  There are a thousand different ways to do notifications and there are already a lot of packages out there that handle the dirty work, so why re-invent the wheel and limit yourself to a bike tire?  Its much easier to let an external entity (i.e. a simple script or a full-blown messaging system) do the messy stuff.  Some messaging packages that can handle notifications for pagers and cellphones are listed below in the resource section.
 
 ### Notification Type Macro
 
@@ -83,9 +83,9 @@ When crafting your notification commands, you need to take into account what typ
 <tr><td>FLAPPINGSTART</td><td>The host or service has just started <a href="flapping.html">flapping</a>.</td></tr>
 <tr><td>FLAPPINGSTOP</td><td>The host or service has just stopped <a href="flapping.html">flapping</a>.</td></tr>
 <tr><td>FLAPPINGDISABLED</td><td>The host or service has just stopped <a href="flapping.html">flapping</a> because flap detection was disabled..</td></tr>
-<tr><td>DOWNTIMESTART</td><td>The host or service has just entered a period of <a href="downtime.html">scheduled downtime</a>.  Future notifications will be supressed.</td></tr>
+<tr><td>DOWNTIMESTART</td><td>The host or service has just entered a period of <a href="downtime.html">scheduled downtime</a>.  Future notifications will be suppressed.</td></tr>
 <tr><td>DOWNTIMESTOP</td><td>The host or service has just exited from a period of <a href="downtime.html">scheduled downtime</a>.  Notifications about problems can now resume.</td></tr>
-<tr><td>DOWNTIMECANCELLED</td><td>The period of <a href="downtime.html">scheduled downtime</a> for the host or service was just cancelled.  Notifications about problems can now resume.</td></tr>
+<tr><td>DOWNTIMECANCELLED</td><td>The period of <a href="downtime.html">scheduled downtime</a> for the host or service was just canceled.  Notifications about problems can now resume.</td></tr>
 </table>
 
 ### Helpful Resources
@@ -103,7 +103,7 @@ There are many ways you could configure Naemon to send notifications out.  Its u
 </ul>
 
 Basically anything you can do from a command line can be tailored for use as a notification command.
-If you're looking for an alternative to using email for sending messages to your pager or cellphone, check out these packages. They could be used in conjuction with Naemon to send out a notification via a modem when a problem
+If you're looking for an alternative to using email for sending messages to your pager or cellphone, check out these packages. They could be used in conjunction with Naemon to send out a notification via a modem when a problem
 arises.  That way you don't have to rely on email to send notifications out (remember, email may *not* work if
 there are network problems).  I haven't actually tried these packages myself, but others have reported success
 using them...

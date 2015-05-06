@@ -27,7 +27,7 @@ In order to have Naemon process external commands, make sure you do the followin
 ### When Does Naemon Check For External Commands?
 
 <ul>
-<li>Naemon reads and executes external commands immediately when they are submited.
+<li>Naemon reads and executes external commands immediately when they are submitted.
 </ul>
 
 ### Using External Commands

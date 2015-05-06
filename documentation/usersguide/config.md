@@ -14,7 +14,7 @@ There are several different configuration files that you're going to need to cre
 
 ### Main Configuration File
 
-The main configuration file contains a number of directives that affect how the Naemon-core daemon operates.  This config file is read by both the Naemon daemon and Thruk, formerly known as "CGIs".  This is where you're going to want to get started in your configuration adventures. Thruk provies a simple way to edit Naemon configuration in the web interface without having to use the terminal.
+The main configuration file contains a number of directives that affect how the Naemon-core daemon operates.  This config file is read by both the Naemon daemon and Thruk, formerly known as "CGIs".  This is where you're going to want to get started in your configuration adventures. Thruk provides a simple way to edit Naemon configuration in the web interface without having to use the terminal.
 
 Documentation for the main configuration file can be found <a href="configmain.html">here</a>.
 
@@ -34,6 +34,6 @@ An introduction to object definitions, and how they relate to each other, can be
 
 ### CGI Configuration File
 
-The CGI configuration file contains a number of directives that affect the operation of the <a href="cgis.html">CGIs</a>.  It also contains a reference the main configuration file, so the CGIs know how you've configured Naemon and where your object defintions are stored.
+The CGI configuration file contains a number of directives that affect the operation of the <a href="cgis.html">CGIs</a>.  It also contains a reference the main configuration file, so the CGIs know how you've configured Naemon and where your object definitions are stored.
 
 Documentation for the CGI configuration file can be found <a href="configcgi.html">here</a>.

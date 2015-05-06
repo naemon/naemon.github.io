@@ -13,9 +13,9 @@ title: Object Definitions
 One of the features of Naemon' object configuration format is that you can create object
 definitions that inherit properties from other object definitions.
 
-An explanation of how object inheritence works can be found <a href="objectinheritance.html">here</a>.
+An explanation of how object inheritance works can be found <a href="objectinheritance.html">here</a>.
 
-I strongly suggest that you familiarize yourself with object inheritence once you read
+I strongly suggest that you familiarize yourself with object inheritance once you read
 over the documentation presented below, as it will make the job of creating and
 maintaining object definitions much easier than it otherwise would be.
 

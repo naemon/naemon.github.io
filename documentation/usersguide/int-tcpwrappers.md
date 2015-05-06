@@ -48,7 +48,7 @@ There are some important things to note about the above service definition:
 
 ### Configuring TCP Wrappers
 
-Now you're going to have to modify the <i>/etc/hosts.deny</i> file on <i>firestorm</i>.  In order to have the TCP wrappers send an alert to the monitoring host whenever a connection attempt is denied, you'll have to add a line similiar to the following:
+Now you're going to have to modify the <i>/etc/hosts.deny</i> file on <i>firestorm</i>.  In order to have the TCP wrappers send an alert to the monitoring host whenever a connection attempt is denied, you'll have to add a line similar to the following:
 
 <pre>
 ALL: ALL: RFC931: twist (/usr/lib/naemon/plugins/eventhandlers/handle_tcp_wrapper %h %d) &amp;

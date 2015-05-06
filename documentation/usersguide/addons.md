@@ -39,7 +39,7 @@ A <a href="livestatus.html">detailed description</a> is available on a dedicated
 
 NRPE is an addon that allows you to execute <a href="plugins.html">plugins</a> on remote Linux/Unix hosts.
 This is useful if you need to monitor local resources/attributes like disk usage, CPU load, memory usage,
-etc. on a remote host. Similiar functionality can be accomplished by using the *check_by_ssh* plugin, although
+etc. on a remote host. Similar functionality can be accomplished by using the *check_by_ssh* plugin, although
 it can impose a higher CPU load on the monitoring machine - especially if you are monitoring hundreds or thousands of hosts.
 
 The NRPE addon and documentation can be found at <a href="http://www.nagios.org/">http://www.nagios.org/</a>.

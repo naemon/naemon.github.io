@@ -10,7 +10,7 @@ title: Understanding Macros and How They Work
 ### Macros
 
 One of the main features that make Naemon so flexible is the ability to use macros in command
-defintions. Macros allow you to reference information from hosts, services, and other sources in your commands.
+definitions. Macros allow you to reference information from hosts, services, and other sources in your commands.
 
 
 

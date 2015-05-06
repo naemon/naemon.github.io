@@ -25,10 +25,10 @@ For instance, you can restrict:
 
 ### Precedence in Time Periods
 
-Timeperod <a href="objectdefinitions.html#timeperiod">definitions</a> may contain
+Timeperiod <a href="objectdefinitions.html#timeperiod">definitions</a> may contain
 multiple types of directives, including weekdays, days of the month, and calendar dates.
 
-Different types of directives have different precendence levels and may override
+Different types of directives have different precedence levels and may override
 other directives in your timeperiod definitions.
 
 The order of precedence for different types of directives (in descending order) is as follows:
@@ -126,7 +126,7 @@ in the timeperiod definition.
 
 Service and host <a href="dependencies.html">dependencies</a> have an optional
 <i>dependency_period</i> directive that allows you to specify a timeperiod
-when the dependendies are valid and can be used.
+when the dependencies are valid and can be used.
 
 If you do not use the <i>dependency_period</i> directive in a dependency
 definition, the dependency can be used at any time.

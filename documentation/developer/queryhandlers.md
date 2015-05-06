@@ -13,7 +13,7 @@ external apps a way to help out with various Naemon tasks.
 
 ### Caveats
 The query handlers run in the main thread. Naemon doesn't provide any
-parallellism here and main Naemon will be blocked while a query is
+parallelism here and main Naemon will be blocked while a query is
 running. As such, it's a very good idea to make ones queryhandlers
 complete in as little time as possible.
 
