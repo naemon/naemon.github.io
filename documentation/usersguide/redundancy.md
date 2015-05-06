@@ -12,7 +12,7 @@ layouts. With redundant hosts, you can maintain the ability to monitor your netw
 host that runs Naemon fails or when portions of your network become unreachable.
 
 {{ site.warning }}If you are just learning how to use Naemon, I would
-suggest not trying to implement redudancy until you have becoming familiar with the <a href="#prerequisites">prerequisites</a> I've laid out.
+suggest not trying to implement redundancy until you have becoming familiar with the <a href="#prerequisites">prerequisites</a> I've laid out.
 Redundancy is a relatively complicated issue to understand, and even more difficult to implement properly.
 {{ site.end }}
 
@@ -237,7 +237,7 @@ The exact amount of time that neither host is monitoring the network is hard to 
 
 #### Introduction
 
-Failover monitoring is similiar to, but slightly different than redundant monitoring (as discussed above in <a href="#scenario_1">scenario 1</a>).
+Failover monitoring is similar to, but slightly different than redundant monitoring (as discussed above in <a href="#scenario_1">scenario 1</a>).
 
 #### Goals
 
@@ -251,7 +251,7 @@ Disable active service checks and notifications on the slave host using the <a h
 
 #### Master Process Check
 
-Set up a cron job on the slave host that periodically (say every minute) runs a script that checks the staus of the Naemon process on the master host (using the <i>check_nrpe</i> plugin on the slave host and the <a href="addons.html#nrpe">nrpe daemon</a> and <i>check_nagios</i> plugin on the master host).  The script should check the return code of the <i>check_nrpe plugin</i> .  If it returns a non-OK state, the script should send the appropriate commands to the <a href="configmain.html#command_file">external command file</a> to enable both notifications and active service checks.  If the plugin returns an OK state, the script should send commands to the external command file to disable both notifications and active checks.
+Set up a cron job on the slave host that periodically (say every minute) runs a script that checks the status of the Naemon process on the master host (using the <i>check_nrpe</i> plugin on the slave host and the <a href="addons.html#nrpe">nrpe daemon</a> and <i>check_nagios</i> plugin on the master host).  The script should check the return code of the <i>check_nrpe plugin</i> .  If it returns a non-OK state, the script should send the appropriate commands to the <a href="configmain.html#command_file">external command file</a> to enable both notifications and active service checks.  If the plugin returns an OK state, the script should send commands to the external command file to disable both notifications and active checks.
 
 By doing this you end up with only one process monitoring hosts and services at a time, which is much more efficient that monitoring everything twice.
 

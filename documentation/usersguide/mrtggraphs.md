@@ -57,7 +57,7 @@ I'll describe what a few of the sample MRTG graphs mean and what they can be use
 <tr>
 <td valign="top">
 <p>
-<b>Active Service Checks</b> - This graph shows how may active service checks (reguarly
+<b>Active Service Checks</b> - This graph shows how may active service checks (regularly
 scheduled and on-demand) have occurred over time.  Useful for understanding:
 </p>
 <ul>

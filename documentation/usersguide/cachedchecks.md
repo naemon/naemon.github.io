@@ -34,7 +34,7 @@ Cached host checks are where the big performance improvements lie, and everyone 
 
 <img src="images/cachedchecks.png" border="0" style="float: right; clear: both;" alt="Cached Check Logic" title="Cached Check Logic">
 
-When Naemon needs to perform an on-demand host or service check, it will make a determination as to whether  it can used a cached check result or if it needs to perform an actual check by executing a plugin.  It does this by checking to see if the last check of the host or service occured within the last X minutes, where X is the cached host or service check horizon.
+When Naemon needs to perform an on-demand host or service check, it will make a determination as to whether  it can used a cached check result or if it needs to perform an actual check by executing a plugin.  It does this by checking to see if the last check of the host or service occurred within the last X minutes, where X is the cached host or service check horizon.
 
 If the last check was performed within the timeframe specified by the cached check horizon variable, Naemon will use the result of the last host or service check and will *not* execute a new check.  If the host or service has not yet been checked, or if the last check falls outside of the cached check horizon timeframe, Naemon will execute a new host or service check by running a plugin.
 
@@ -79,7 +79,7 @@ The monitoring installation which produced the graphs above had:
 * An average (regularly scheduled) host check interval of 5 minutes
 * A <a href="configmain.html#cached_host_check_horizon">cached_host_check_horizon</a> of 15 seconds
 
-The first MRTG graph shows how many regularly scheduled host checks compared to how many cached host checks have occured.  In this example, an average of 53 host checks occur every five minutes.  9 of these (17%) are on-demand checks.
+The first MRTG graph shows how many regularly scheduled host checks compared to how many cached host checks have occurred.  In this example, an average of 53 host checks occur every five minutes.  9 of these (17%) are on-demand checks.
 
 The second MRTG graph shows how many cached host checks have occurred over time. In this example an average of 2 cached host checks occurs every five minutes.
 

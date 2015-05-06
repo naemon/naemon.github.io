@@ -27,12 +27,12 @@ Monitoring the overall cluster can be done by using the previously cached result
 
 The check_cluster plugin is designed to report the overall status of a host or service cluster by checking the status information of each individual host or service cluster elements.
 
-More to come...  The *check_cluster* plugin can be found in the Monitoring-Plugins relase package
+More to come...  The *check_cluster* plugin can be found in the Monitoring-Plugins release package
 <a href="https://www.monitoring-plugins.org/download.html">https://www.monitoring-plugins.org/download.html</a>.
 
 ### Monitoring Service Clusters
 
-Let's say you have three DNS servers that provide redundant services on your network.  First off, you need to be monitoring each of these DNS servers seperately before you can monitor them as a cluster.  I'll assume that you already have three seperate services (all called "DNS Service") associated with your DNS hosts (called "host1", "host2" and "host3").
+Let's say you have three DNS servers that provide redundant services on your network.  First off, you need to be monitoring each of these DNS servers separately before you can monitor them as a cluster.  I'll assume that you already have three separate services (all called "DNS Service") associated with your DNS hosts (called "host1", "host2" and "host3").
 
 In order to monitor the services as a cluster, you'll need to create a new "cluster" service.  However, before you do that, make sure you have a service cluster check command configured.  Let's assume that you have a command called *check_service_cluster* defined as follows:
 
@@ -58,7 +58,7 @@ It is important to notice that we are passing a comma-delimited list of *on-dema
 
 ### Monitoring Host Clusters
 
-Monitoring host clusters is very similiar to monitoring service clusters.  Obviously, the main difference is that the cluster members are hosts and not services.  In order to monitor the status of a host cluster, you must define a service that uses the *check_cluster* plugin.  The service should *not* be associated with any of the hosts in the cluster, as this will cause problems with notifications for the cluster if that host goes down.  A good idea might be to associate the service with the host that Naemon is running on.  After all, if the host that Naemon is running on goes down, then Naemon isn't running anymore, so there isn't anything you can do as far as monitoring (unless you've setup <a href="redundancy.html">redundant monitoring hosts</a>)...
+Monitoring host clusters is very similar to monitoring service clusters.  Obviously, the main difference is that the cluster members are hosts and not services.  In order to monitor the status of a host cluster, you must define a service that uses the *check_cluster* plugin.  The service should *not* be associated with any of the hosts in the cluster, as this will cause problems with notifications for the cluster if that host goes down.  A good idea might be to associate the service with the host that Naemon is running on.  After all, if the host that Naemon is running on goes down, then Naemon isn't running anymore, so there isn't anything you can do as far as monitoring (unless you've setup <a href="redundancy.html">redundant monitoring hosts</a>)...
 
 Anyway, let's assume that you have a *check_host_cluster* command defined as follows:
 
@@ -82,4 +82,4 @@ define service{
 
 It is important to notice that we are passing a comma-delimited list of *on-demand* host state <a href="macros.html">macros</a> to the $ARG4$ macro in the cluster check command.  That's important!  Naemon will fill those on-demand macros in with the current host state IDs (numerical values, rather than text strings) of the individual members of the cluster.
 
-That's it!  Naemon will periodically check the status of the host cluster and send notifications to you when its status is degraded (assuming you've enabled notification for the service).  Note that for thehost definitions of each cluster member, you will most likely want to disable notifications when the host goes down .  Remeber that you don't care as much about the status of any individual host as you do the overall status of the cluster.  Depending on your network layout and what you're trying to accomplish, you may wish to leave notifications for unreachable states enabled for the host definitions.
+That's it!  Naemon will periodically check the status of the host cluster and send notifications to you when its status is degraded (assuming you've enabled notification for the service).  Note that for the host definitions of each cluster member, you will most likely want to disable notifications when the host goes down.  Remember that you don't care as much about the status of any individual host as you do the overall status of the cluster.  Depending on your network layout and what you're trying to accomplish, you may wish to leave notifications for unreachable states enabled for the host definitions.

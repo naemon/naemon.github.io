@@ -71,7 +71,7 @@ As mentioned earlier, Naemon can forgo the actual execution of an on-demand host
 
 When Naemon processes the results of scheduled and on-demand host checks, it may initiate (secondary) checks of other hosts.
 
-These checks can be initated for two reasons: <a href="dependencychecks.html">predictive dependency checks</a> and to determining the status of the host using the <a href="networkreachability.html">network reachability</a> logic.
+These checks can be initiated for two reasons: <a href="dependencychecks.html">predictive dependency checks</a> and to determining the status of the host using the <a href="networkreachability.html">network reachability</a> logic.
 
 The secondary checks that are initiated are usually run in parallel.
 

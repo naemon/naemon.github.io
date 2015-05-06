@@ -7,7 +7,7 @@ categories: project
 Today we released our first bug fix release after the 1.0 in February.
 
 There is one bug fixed which made the debian packages from the 1.0 look
-like 0.9 packages. The other bugs are releated to the `shadownaemon` tool.
+like 0.9 packages. The other bugs are related to the `shadownaemon` tool.
 
 So the main reason for this release is the new 1.88 release from [Thruk](http://thruk.org) which
 comes with [lots of handy features and bugfixes](http://thruk.org/changelog.html).

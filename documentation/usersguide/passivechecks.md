@@ -69,7 +69,7 @@ The format of the command is as follows:
 where...
 
 <ul>
-<li><i>timestamp</i> is the time in time_t format (seconds since the UNIX epoch) that the service check was perfomed (or submitted). Please note the single space after the right bracket.
+<li><i>timestamp</i> is the time in time_t format (seconds since the UNIX epoch) that the service check was performed (or submitted). Please note the single space after the right bracket.
 <li><i>host_name</i> is the short name of the host associated with the service in the service definition
 <li><i>svc_description</i> is the description of the service as specified in the service definition
 <li><i>return_code</i> is the return code of the check (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN)
@@ -95,7 +95,7 @@ The format of the command is as follows:
 where...
 
 <ul>
-<li><i>timestamp</i> is the time in time_t format (seconds since the UNIX epoch) that the host check was perfomed (or submitted). Please note the single space after the right bracket.
+<li><i>timestamp</i> is the time in time_t format (seconds since the UNIX epoch) that the host check was performed (or submitted). Please note the single space after the right bracket.
 <li><i>host_name</i> is the short name of the host (as defined in the host definition)
 <li><i>host_status</i> is the status of the host (0=UP, 1=DOWN, 2=UNREACHABLE)
 <li><i>plugin_output</i> is the text output of the host check

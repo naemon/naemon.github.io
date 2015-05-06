@@ -37,7 +37,7 @@ The historical service check results are examined to determine where state chang
 
 The flap detection logic uses the state changes to determine an overall percent state change for the service.  This is a measure of volatility/change for the service.  Services that never change state will have a 0% state change value, while services that change state each time they're checked will have 100% state change.  Most services will have a percent state change somewhere in between.
 
-When calculating the percent state change for the service, the flap detection algorithm will give more weight to new state changes compare to older ones.  Specfically, the flap detection routines are currently designed to make the newest possible state change carry 50% more weight than the oldest possible state change.  The image below shows how recent state changes are given more weight than older state changes when calculating the overall or total percent state change for a particular service.
+When calculating the percent state change for the service, the flap detection algorithm will give more weight to new state changes compare to older ones.  Specifically, the flap detection routines are currently designed to make the newest possible state change carry 50% more weight than the oldest possible state change.  The image below shows how recent state changes are given more weight than older state changes when calculating the overall or total percent state change for a particular service.
 
 <a href="images/statetransitions2.png"><img src="images/statetransitions2.png" border=0 alt="Weighted Service State Transitions"></a>
 
@@ -64,7 +64,7 @@ The flap detection logic for services works as described in the example above.
 
 ### Flap Detection for Hosts
 
-Host flap detection works in a similiar manner to service flap detection, with one important difference: Naemon will attempt to check to see if a host is flapping whenever:
+Host flap detection works in a similar manner to service flap detection, with one important difference: Naemon will attempt to check to see if a host is flapping whenever:
 
 <ul>
 <li>The host is checked (actively or passively)

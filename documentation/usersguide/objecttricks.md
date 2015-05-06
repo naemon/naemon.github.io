@@ -6,7 +6,7 @@ title: Time-Saving Tricks For Object Definitions
 
 ### Introduction
 
-This documentation attempts to explain how you can exploit the (somewhat) hidden features of <a href="objectdefinitions.html">template-based object definitions</a> to save your sanity.  How so, you ask?  Several types of objects allow you to specify multiple host names and/or hostgroup names in definitions, allowing you to "copy" the object defintion to multiple hosts or services.  I'll cover each type of object that supports these features seperately.  For starters, the object types which support this time-saving feature are as follows:
+This documentation attempts to explain how you can exploit the (somewhat) hidden features of <a href="objectdefinitions.html">template-based object definitions</a> to save your sanity.  How so, you ask?  Several types of objects allow you to specify multiple host names and/or hostgroup names in definitions, allowing you to "copy" the object definition to multiple hosts or services.  I'll cover each type of object that supports these features separately.  For starters, the object types which support this time-saving feature are as follows:
 
 <ul>
 <li><a href="#service">Services</a>
@@ -216,7 +216,7 @@ If you feel like being particularly adventurous, you can specify a wildcard in b
 
 <a name="same_host_dependency"></a>
 
-<b>Same Host Dependencies:</b><br> If you want to create service dependencies for multiple services that are dependent on services on the same host, leave the <i>dependent_host_name</i> and <i>dependent_hostgroup_name</i> directives empty.  The example below assumes that hosts <i>HOST1</i> and <i>HOST2</i> have at least the following four services associated with them: <i>SERVICE1</i>, <i>SERVICE2</i>, <i>SERVICE3</i>, and <i>SERVICE4</i>.  In this example, <i>SERVICE3</i> and <i>SERVICE4</i> on <i>HOST1</i> will be dependent on both <i>SERVICE1</i> and <i>SERVICE2</i> on <i>HOST1</i>.  Similiarly, <i>SERVICE3</i> and <i>SERVICE4</i> on <i>HOST2</i> will be dependent on both <i>SERVICE1</i> and <i>SERVICE2</i> on <i>HOST2</i>.
+<b>Same Host Dependencies:</b><br> If you want to create service dependencies for multiple services that are dependent on services on the same host, leave the <i>dependent_host_name</i> and <i>dependent_hostgroup_name</i> directives empty.  The example below assumes that hosts <i>HOST1</i> and <i>HOST2</i> have at least the following four services associated with them: <i>SERVICE1</i>, <i>SERVICE2</i>, <i>SERVICE3</i>, and <i>SERVICE4</i>.  In this example, <i>SERVICE3</i> and <i>SERVICE4</i> on <i>HOST1</i> will be dependent on both <i>SERVICE1</i> and <i>SERVICE2</i> on <i>HOST1</i>.  Similarly, <i>SERVICE3</i> and <i>SERVICE4</i> on <i>HOST2</i> will be dependent on both <i>SERVICE1</i> and <i>SERVICE2</i> on <i>HOST2</i>.
 
 <pre>
 	define <i>servicedependency</i>{
@@ -273,7 +273,7 @@ If you feel like being particularly adventurous, you can specify a wildcard in b
 
 ### Host Dependency Definitions
 
-<b>Multiple Hosts:</b><br> If you want to create <a href="objectdefinitions.html#hostdependency">host dependencies</a> for  multiple hosts, you can specify multiple hosts in the <i>host_name</i> and/or <i>dependent_host_name</i> directives. The definition below would be equivalent to creating six seperate host dependencies.   In the example above, hosts <i>HOST3</i>, <i>HOST4</i> and <i>HOST5</i> would be dependent upon both <i>HOST1</i> and <i>HOST2</i>.  All the instances of the host dependencies would be identical except for the host names (i.e. have the same notification failure criteria, etc.).
+<b>Multiple Hosts:</b><br> If you want to create <a href="objectdefinitions.html#hostdependency">host dependencies</a> for  multiple hosts, you can specify multiple hosts in the <i>host_name</i> and/or <i>dependent_host_name</i> directives. The definition below would be equivalent to creating six separate host dependencies.   In the example above, hosts <i>HOST3</i>, <i>HOST4</i> and <i>HOST5</i> would be dependent upon both <i>HOST1</i> and <i>HOST2</i>.  All the instances of the host dependencies would be identical except for the host names (i.e. have the same notification failure criteria, etc.).
 
 <pre>
 	define <i>hostdependency</i>{

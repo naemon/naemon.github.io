@@ -184,9 +184,9 @@ href="cachedchecks.html">here</a>.
 
 
 
-#### Avoid Agressive Host Checking
+#### Avoid Aggressive Host Checking
 
-<b>Don't use agressive host checking</b>.
+<b>Don't use aggressive host checking</b>.
 Unless you're having problems with Naemon recognizing host recoveries, I would
 recommend not enabling the <a
 href="configmain.html#use_agressive_host_checking">`use_aggressive_host_checking`</a>
@@ -196,7 +196,7 @@ recoveries can be missed under certain circumstances when this it turned off.
 For example, if a host recovers and all of the services associated with that
 host stay in non-OK states (and don't "wobble" between different non-OK
 states), Naemon may miss the fact that the host has recovered. A few people
-may need to enable this option, but the majority don't and I would recommendnot
+may need to enable this option, but the majority don't and I would recommend not
 using it unless you find it necessary...
 
 

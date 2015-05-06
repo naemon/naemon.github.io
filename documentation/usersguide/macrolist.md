@@ -1347,7 +1347,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a name="notificationauthor">$NOTIFICATIONAUTHOR$</a></td>
-<td class="MacroDescription">A string containing the name of the user who authored the notification.  If the $NOTIFICATIONTYPE$ macro is set to "DOWNTIMESTART" or "DOWNTIMEEND", this will be the name of the user who scheduled downtime for the host or service.  If the $NOTIFICATIONTYPE$ macro is "ACKNOWLEDGEMENT", this will be the name of the user who acknowledged the host or service problem.  If the $NOTIFICATIONTYPE$ macro is "CUSTOM", this will be name of the user who initated the custom host or service notification.
+<td class="MacroDescription">A string containing the name of the user who authored the notification.  If the $NOTIFICATIONTYPE$ macro is set to "DOWNTIMESTART" or "DOWNTIMEEND", this will be the name of the user who scheduled downtime for the host or service.  If the $NOTIFICATIONTYPE$ macro is "ACKNOWLEDGEMENT", this will be the name of the user who acknowledged the host or service problem.  If the $NOTIFICATIONTYPE$ macro is "CUSTOM", this will be name of the user who initiated the custom host or service notification.
 </td>
 </tr>
 <tr>
@@ -1360,11 +1360,11 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a name="notificationcomment">$NOTIFICATIONCOMMENT$</a></td>
-<td class="MacroDescription">A string containing the comment that was entered by the notification author.    If the $NOTIFICATIONTYPE$ macro is set to "DOWNTIMESTART" or "DOWNTIMEEND", this will be the comment entered by the user who scheduled downtime for the host or service.  If the $NOTIFICATIONTYPE$ macro is "ACKNOWLEDGEMENT", this will be the comment entered by the user who acknowledged the host or service problem.  If the $NOTIFICATIONTYPE$ macro is "CUSTOM", this will be comment entered by the user who initated the custom host or service notification.</td>
+<td class="MacroDescription">A string containing the comment that was entered by the notification author.    If the $NOTIFICATIONTYPE$ macro is set to "DOWNTIMESTART" or "DOWNTIMEEND", this will be the comment entered by the user who scheduled downtime for the host or service.  If the $NOTIFICATIONTYPE$ macro is "ACKNOWLEDGEMENT", this will be the comment entered by the user who acknowledged the host or service problem.  If the $NOTIFICATIONTYPE$ macro is "CUSTOM", this will be comment entered by the user who initiated the custom host or service notification.</td>
 </tr>
 <tr>
 <td class="MacroName"><a name="hostnotificationnumber">$HOSTNOTIFICATIONNUMBER$</a></td>
-<td class="MacroDescription">The current notification number for the host.  The notification number increases by one (1) each time a new notification is sent out for the host (except for acknowledgements).  The notification number is reset to 0 when the host recovers (<i>after</i> the recovery notification has gone out).  Acknowledgements do not cause the notification number to increase, nor do notifications dealing with flap detection or scheduled downtime.</td>
+<td class="MacroDescription">The current notification number for the host.  The notification number increases by one (1) each time a new notification is sent out for the host (except for acknowledgements).  The notification number is reset to 0 when the host recovers (<i>after</i> the recovery notification has gone out).  acknowledgements do not cause the notification number to increase, nor do notifications dealing with flap detection or scheduled downtime.</td>
 </tr>
 <tr>
 <td class="MacroName"><a name="hostnotificationid">$HOSTNOTIFICATIONID$</a></td>
@@ -1372,7 +1372,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a name="servicenotificationnumber">$SERVICENOTIFICATIONNUMBER$</a></td>
-<td class="MacroDescription">The current notification number for the service.  The notification number increases by one (1) each time a new notification is sent out for the service (except for acknowledgements).  The notification number is reset to 0 when the service recovers (<i>after</i> the recovery notification has gone out).  Acknowledgements do not cause the notification number to increase, nor do notifications dealing with flap detection or scheduled downtime.</td>
+<td class="MacroDescription">The current notification number for the service.  The notification number increases by one (1) each time a new notification is sent out for the service (except for acknowledgements).  The notification number is reset to 0 when the service recovers (<i>after</i> the recovery notification has gone out).  acknowledgements do not cause the notification number to increase, nor do notifications dealing with flap detection or scheduled downtime.</td>
 </tr>
 <tr>
 <td class="MacroName"><a name="servicenotificationid">$SERVICENOTIFICATIONID$</a></td>

@@ -36,7 +36,7 @@ The most common scenario will probably be to reload Naemon after changes of Naem
 
 ### Restarting Naemon
 
-Restarting/reloading is nececessary when you modify your configuration files and want those changes to take effect.
+Restarting/reloading is necessary when you modify your configuration files and want those changes to take effect.
 
 1. <b>Init Script:</b>
    The easiest way to restart the Naemon daemon is by using the init script like so:

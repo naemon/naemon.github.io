@@ -108,7 +108,7 @@ This cycle continues until either all dependencies for the service have been che
 
 <a name="hard_dependencies"></a>
 
-{{ site.note }}<sup>*</sup>One important thing to note is that by default, Naemon will use the most current <a href="statetypes.html">hard state</a> of the service(s) that is/are being depended upon when it does the dependeny checks.{{ site.end }}
+{{ site.note }}<sup>*</sup>One important thing to note is that by default, Naemon will use the most current <a href="statetypes.html">hard state</a> of the service(s) that is/are being depended upon when it does the dependency checks.{{ site.end }}
 
 If you want Naemon to use the most current state of the services (regardless of whether its a soft or hard state), enable the <a href="configmain.html#soft_state_dependencies">soft_state_dependencies</a> option.
 
@@ -133,7 +133,7 @@ As mentioned before, service dependencies are *not* inherited by default.  In th
 
 If you *do* wish to make service dependencies inheritable, you must use the *inherits_parent* directive in the <a href="objectdefinitions.html#servicedependency">service dependency</a> definition.  When this directive is enabled, it indicates that the dependency inherits dependencies of the service *that is being depended upon* (also referred to as the master service). In other words, if the master service is dependent upon other services and any one of those dependencies fail, this dependency will also fail.
 
-In the example above, imagine that you want to add a new dependency for service F to make it dependent on service A.  You could create a new dependency definition that specified service F as the *dependent* service and service A as being the *master* service (i.e. the service *that is being dependend on*).  You could alternatively modify the dependency definition for services D and F to look like this:
+In the example above, imagine that you want to add a new dependency for service F to make it dependent on service A.  You could create a new dependency definition that specified service F as the *dependent* service and service A as being the *master* service (i.e. the service *that is being dependent on*).  You could alternatively modify the dependency definition for services D and F to look like this:
 
 ```
 define servicedependency{
@@ -149,11 +149,11 @@ define servicedependency{
 
 Since the *inherits_parent* directive is enabled, the dependency between services A and D will be tested when the dependency between services F and D are being tested.
 
-Dependencies can have multiple levels of inheritence.  If the dependency definition between A and D had its *inherits_parent* directive enable and service A was dependent on some other service (let's call it service G), the service F would be dependent on services D, A, and G (each with potentially different criteria).
+Dependencies can have multiple levels of inheritance.  If the dependency definition between A and D had its *inherits_parent* directive enable and service A was dependent on some other service (let's call it service G), the service F would be dependent on services D, A, and G (each with potentially different criteria).
 
 ### Host Dependencies
 
-As you'd probably expect, host dependencies work in a similiar fashion to service dependencies.  The difference is that they're for hosts, not services.
+As you'd probably expect, host dependencies work in a similar fashion to service dependencies.  The difference is that they're for hosts, not services.
 
 {{ site.warn }}Do not confuse host dependencies with parent/child host relationships.{{ site.end }}
 
@@ -192,4 +192,4 @@ define hostdependency{
 
 As with service dependencies, host dependencies are not inherited.  In the example image you can see that Host C does not inherit the host dependencies of Host B.  In order for Host C to be dependent on Host A, a new host dependency definition must be defined.
 
-Host notification dependencies work in a similiar manner to service notification dependencies.  If *all* of the notification dependency tests for the host *pass*, Naemon will send notifications out for the host as it normally would.  If even just one of the notification dependencies for a host fails, Naemon will temporarily repress notifications for that (dependent) host.  At some point in the future the notification dependency tests for the host may all pass.  If this happens, Naemon will start sending out notifications again as it normally would for the host.  More information on the notification logic can be found <a href="notifications.html">here</a>.
+Host notification dependencies work in a similar manner to service notification dependencies.  If *all* of the notification dependency tests for the host *pass*, Naemon will send notifications out for the host as it normally would.  If even just one of the notification dependencies for a host fails, Naemon will temporarily repress notifications for that (dependent) host.  At some point in the future the notification dependency tests for the host may all pass.  If this happens, Naemon will start sending out notifications again as it normally would for the host.  More information on the notification logic can be found <a href="notifications.html">here</a>.

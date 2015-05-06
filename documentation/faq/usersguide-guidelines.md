@@ -4,11 +4,11 @@ title: Usersguide guidelines
 ---
 
 This document will help the community to mainstream Naemon usersguide to make it easy to follow with
-a common look and feel for the best user experiance possible.
+a common look and feel for the best user experience possible.
 
 ### Naming
 
-* **Naemon** - The prefered name for Naemon Suite
+* **Naemon** - The preferred name for Naemon Suite
 * Naemon Suite - The entire suite, both the Naemon Core and Thruk Monitoring Webinterface
 * Naemon Core - The monitoring engine
 * Thruk - Monitoring Webinterface used by Naemon (also compatible with Icinga, Shinken and Nagios)

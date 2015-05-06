@@ -14,9 +14,9 @@ Detail description is available on <a href="http://mathias-kettner.de/checkmk_li
 Detailed description about the query language itself is on <a href="http://mathias-kettner.de/checkmk_livestatus.html">mathias-kettner.de</a>.
 
 
-### Extented Functionality
+### Extended Functionality
 
-In addition, Naemons Livestatus has been improved by the following features:
+In addition, Naemon's Livestatus has been improved by the following features:
 
 #### Sort Support
 
@@ -25,7 +25,7 @@ Sort: <column name> <asc/desc>
 ```
 
 Sorts the result set by the specified column in the given direction. Multiple
-Sort lines can be added. First sort line takes precedance.
+Sort lines can be added. First sort line takes precedence.
 
 Example:
 
@@ -62,7 +62,7 @@ The result set is packed in a json object, with a couple of possible fields:
 - columns: an array of column names. (optional)
 - data: an array of arrays, describing the result set, in the same syntax common
   json output, without embedded column names.
-- total_count: The number of lines in the resultsed, except the limitation of
+- total_count: The number of lines in the result set, except the limitation of
   Limit and Offset headers.
 
 
@@ -147,22 +147,22 @@ The following tables are available for livestatus queries.
 <tr><td>address5</td><td>string</td><td>The additional field address5</td></tr>
 <tr><td>address6</td><td>string</td><td>The additional field address6</td></tr>
 <tr><td>alias</td><td>string</td><td>The full name of the contact</td></tr>
-<tr><td>can_submit_commands</td><td>int</td><td>Wether the contact is allowed to submit commands (0/1)</td></tr>
+<tr><td>can_submit_commands</td><td>int</td><td>Whether the contact is allowed to submit commands (0/1)</td></tr>
 <tr><td>custom_variable_names</td><td>list</td><td>A list of all custom variables of the contact</td></tr>
 <tr><td>custom_variable_values</td><td>list</td><td>A list of the values of all custom variables of the contact</td></tr>
 <tr><td>custom_variables</td><td>dict</td><td>A dictionary of the custom variables</td></tr>
 <tr><td>email</td><td>string</td><td>The email address of the contact</td></tr>
 <tr><td>host_notification_period</td><td>string</td><td>The time period in which the contact will be notified about host problems</td></tr>
-<tr><td>host_notifications_enabled</td><td>int</td><td>Wether the contact will be notified about host problems in general (0/1)</td></tr>
+<tr><td>host_notifications_enabled</td><td>int</td><td>Whether the contact will be notified about host problems in general (0/1)</td></tr>
 <tr><td>id</td><td>int</td><td>Contact id</td></tr>
-<tr><td>in_host_notification_period</td><td>int</td><td>Wether the contact is currently in his/her host notification period (0/1)</td></tr>
-<tr><td>in_service_notification_period</td><td>int</td><td>Wether the contact is currently in his/her service notification period (0/1)</td></tr>
+<tr><td>in_host_notification_period</td><td>int</td><td>Whether the contact is currently in his/her host notification period (0/1)</td></tr>
+<tr><td>in_service_notification_period</td><td>int</td><td>Whether the contact is currently in his/her service notification period (0/1)</td></tr>
 <tr><td>modified_attributes</td><td>int</td><td>A bitmask specifying which attributes have been modified</td></tr>
 <tr><td>modified_attributes_list</td><td>list</td><td>A list of all modified attributes</td></tr>
 <tr><td>name</td><td>string</td><td>The login name of the contact person</td></tr>
 <tr><td>pager</td><td>string</td><td>The pager address of the contact</td></tr>
 <tr><td>service_notification_period</td><td>string</td><td>The time period in which the contact will be notified about service problems</td></tr>
-<tr><td>service_notifications_enabled</td><td>int</td><td>Wether the contact will be notified about service problems in general (0/1)</td></tr>
+<tr><td>service_notifications_enabled</td><td>int</td><td>Whether the contact will be notified about service problems in general (0/1)</td></tr>
 </table>
 
 
@@ -246,7 +246,7 @@ The following tables are available for livestatus queries.
 <tr><td>check_source</td><td>string</td><td>The source of the check</td></tr>
 <tr><td>check_type</td><td>int</td><td>Type of check (0: active, 1: passive)</td></tr>
 <tr><td>checks_enabled</td><td>int</td><td>Whether checks of the host are enabled (0/1)</td></tr>
-<tr><td>childs</td><td>list</td><td>A list of all direct childs of the host</td></tr>
+<tr><td>childs</td><td>list</td><td>A list of all direct children of the host</td></tr>
 <tr><td>comments</td><td>list</td><td>A list of the ids of all comments of this host</td></tr>
 <tr><td>comments_with_info</td><td>list</td><td>A list of all comments of the host with id, author and comment</td></tr>
 <tr><td>contact_groups</td><td>list</td><td>A list of all contact groups this host is in</td></tr>
@@ -329,7 +329,7 @@ The following tables are available for livestatus queries.
 <tr><td>services</td><td>list</td><td>A list of all services of the host</td></tr>
 <tr><td>services_with_info</td><td>list</td><td>A list of all services including detailed information about each service</td></tr>
 <tr><td>services_with_state</td><td>list</td><td>A list of all services of the host together with state and has_been_checked</td></tr>
-<tr><td>should_be_scheduled</td><td>int</td><td>Whether nagios still tries to run checks on this host (0/1)</td></tr>
+<tr><td>should_be_scheduled</td><td>int</td><td>Whether Naemon still tries to run checks on this host (0/1)</td></tr>
 <tr><td>state</td><td>int</td><td>The current state of the host (0: up, 1: down, 2: unreachable)</td></tr>
 <tr><td>state_type</td><td>int</td><td>Type of the current state (0: soft, 1: hard)</td></tr>
 <tr><td>statusmap_image</td><td>string</td><td>The name of in image file for the status map</td></tr>
@@ -365,7 +365,7 @@ The following tables are available for livestatus queries.
 <tr><td>check_source</td><td>string</td><td>The source of the check</td></tr>
 <tr><td>check_type</td><td>int</td><td>Type of check (0: active, 1: passive)</td></tr>
 <tr><td>checks_enabled</td><td>int</td><td>Whether checks of the host are enabled (0/1)</td></tr>
-<tr><td>childs</td><td>list</td><td>A list of all direct childs of the host</td></tr>
+<tr><td>childs</td><td>list</td><td>A list of all direct children of the host</td></tr>
 <tr><td>comments</td><td>list</td><td>A list of the ids of all comments of this host</td></tr>
 <tr><td>comments_with_info</td><td>list</td><td>A list of all comments of the host with id, author and comment</td></tr>
 <tr><td>contact_groups</td><td>list</td><td>A list of all contact groups this host is in</td></tr>
@@ -474,7 +474,7 @@ The following tables are available for livestatus queries.
 <tr><td>services</td><td>list</td><td>A list of all services of the host</td></tr>
 <tr><td>services_with_info</td><td>list</td><td>A list of all services including detailed information about each service</td></tr>
 <tr><td>services_with_state</td><td>list</td><td>A list of all services of the host together with state and has_been_checked</td></tr>
-<tr><td>should_be_scheduled</td><td>int</td><td>Whether nagios still tries to run checks on this host (0/1)</td></tr>
+<tr><td>should_be_scheduled</td><td>int</td><td>Whether Naemon still tries to run checks on this host (0/1)</td></tr>
 <tr><td>state</td><td>int</td><td>The current state of the host (0: up, 1: down, 2: unreachable)</td></tr>
 <tr><td>state_type</td><td>int</td><td>Type of the current state (0: soft, 1: hard)</td></tr>
 <tr><td>statusmap_image</td><td>string</td><td>The name of in image file for the status map</td></tr>
@@ -550,7 +550,7 @@ The following tables are available for livestatus queries.
 <tr><td>_host_</td><td></td><td>All columns from the <a href='#hosts'>hosts table</a> are available via host_ prefix.</td></tr>
 <tr><td>accept_passive_checks</td><td>int</td><td>Whether the service accepts passive checks (0/1)</td></tr>
 <tr><td>acknowledged</td><td>int</td><td>Whether the current service problem has been acknowledged (0/1)</td></tr>
-<tr><td>acknowledgement_type</td><td>int</td><td>The type of the acknownledgement (0: none, 1: normal, 2: sticky)</td></tr>
+<tr><td>acknowledgement_type</td><td>int</td><td>The type of the acknowledgement (0: none, 1: normal, 2: sticky)</td></tr>
 <tr><td>action_url</td><td>string</td><td>An optional URL for actions or custom information about the service</td></tr>
 <tr><td>action_url_expanded</td><td>string</td><td>The action_url with (the most important) macros expanded</td></tr>
 <tr><td>active_checks_enabled</td><td>int</td><td>Whether active checks are enabled for the service (0/1)</td></tr>
@@ -570,7 +570,7 @@ The following tables are available for livestatus queries.
 <tr><td>current_notification_number</td><td>int</td><td>The number of the current notification</td></tr>
 <tr><td>custom_variable_names</td><td>list</td><td>A list of the names of all custom variables of the service</td></tr>
 <tr><td>custom_variable_values</td><td>list</td><td>A list of the values of all custom variable of the service</td></tr>
-<tr><td>custom_variables</td><td>dict</td><td>A dictorionary of the custom variables</td></tr>
+<tr><td>custom_variables</td><td>dict</td><td>A dictionary of the custom variables</td></tr>
 <tr><td>description</td><td>string</td><td>Description of the service (also used as key)</td></tr>
 <tr><td>display_name</td><td>string</td><td>An optional display name</td></tr>
 <tr><td>downtimes</td><td>list</td><td>A list of all downtime ids of the service</td></tr>
@@ -628,7 +628,7 @@ The following tables are available for livestatus queries.
 <tr><td>process_performance_data</td><td>int</td><td>Whether processing of performance data is enabled for the service (0/1)</td></tr>
 <tr><td>retry_interval</td><td>float</td><td>Number of basic interval lengths between checks when retrying after a soft error</td></tr>
 <tr><td>scheduled_downtime_depth</td><td>int</td><td>The number of scheduled downtimes the service is currently in</td></tr>
-<tr><td>should_be_scheduled</td><td>int</td><td>Whether nagios still tries to run checks on this service (0/1)</td></tr>
+<tr><td>should_be_scheduled</td><td>int</td><td>Whether Naemon still tries to run checks on this service (0/1)</td></tr>
 <tr><td>state</td><td>int</td><td>The current state of the service (0: OK, 1: WARN, 2: CRITICAL, 3: UNKNOWN)</td></tr>
 <tr><td>state_type</td><td>int</td><td>The type of the current state (0: soft, 1: hard)</td></tr>
 </table>
@@ -642,7 +642,7 @@ The following tables are available for livestatus queries.
 </tr>
 <tr><td>accept_passive_checks</td><td>int</td><td>Whether the service accepts passive checks (0/1)</td></tr>
 <tr><td>acknowledged</td><td>int</td><td>Whether the current service problem has been acknowledged (0/1)</td></tr>
-<tr><td>acknowledgement_type</td><td>int</td><td>The type of the acknownledgement (0: none, 1: normal, 2: sticky)</td></tr>
+<tr><td>acknowledgement_type</td><td>int</td><td>The type of the acknowledgement (0: none, 1: normal, 2: sticky)</td></tr>
 <tr><td>action_url</td><td>string</td><td>An optional URL for actions or custom information about the service</td></tr>
 <tr><td>action_url_expanded</td><td>string</td><td>The action_url with (the most important) macros expanded</td></tr>
 <tr><td>active_checks_enabled</td><td>int</td><td>Whether active checks are enabled for the service (0/1)</td></tr>
@@ -662,7 +662,7 @@ The following tables are available for livestatus queries.
 <tr><td>current_notification_number</td><td>int</td><td>The number of the current notification</td></tr>
 <tr><td>custom_variable_names</td><td>list</td><td>A list of the names of all custom variables of the service</td></tr>
 <tr><td>custom_variable_values</td><td>list</td><td>A list of the values of all custom variable of the service</td></tr>
-<tr><td>custom_variables</td><td>dict</td><td>A dictorionary of the custom variables</td></tr>
+<tr><td>custom_variables</td><td>dict</td><td>A dictionary of the custom variables</td></tr>
 <tr><td>description</td><td>string</td><td>Description of the service (also used as key)</td></tr>
 <tr><td>display_name</td><td>string</td><td>An optional display name</td></tr>
 <tr><td>downtimes</td><td>list</td><td>A list of all downtime ids of the service</td></tr>
@@ -692,7 +692,7 @@ The following tables are available for livestatus queries.
 <tr><td>host_check_source</td><td>string</td><td>The source of the check</td></tr>
 <tr><td>host_check_type</td><td>int</td><td>Type of check (0: active, 1: passive)</td></tr>
 <tr><td>host_checks_enabled</td><td>int</td><td>Whether checks of the host are enabled (0/1)</td></tr>
-<tr><td>host_childs</td><td>list</td><td>A list of all direct childs of the host</td></tr>
+<tr><td>host_childs</td><td>list</td><td>A list of all direct children of the host</td></tr>
 <tr><td>host_comments</td><td>list</td><td>A list of the ids of all comments of this host</td></tr>
 <tr><td>host_comments_with_info</td><td>list</td><td>A list of all comments of the host with id, author and comment</td></tr>
 <tr><td>host_contact_groups</td><td>list</td><td>A list of all contact groups this host is in</td></tr>
@@ -775,7 +775,7 @@ The following tables are available for livestatus queries.
 <tr><td>host_services</td><td>list</td><td>A list of all services of the host</td></tr>
 <tr><td>host_services_with_info</td><td>list</td><td>A list of all services including detailed information about each service</td></tr>
 <tr><td>host_services_with_state</td><td>list</td><td>A list of all services of the host together with state and has_been_checked</td></tr>
-<tr><td>host_should_be_scheduled</td><td>int</td><td>Whether nagios still tries to run checks on this host (0/1)</td></tr>
+<tr><td>host_should_be_scheduled</td><td>int</td><td>Whether Naemon still tries to run checks on this host (0/1)</td></tr>
 <tr><td>host_state</td><td>int</td><td>The current state of the host (0: up, 1: down, 2: unreachable)</td></tr>
 <tr><td>host_state_type</td><td>int</td><td>Type of the current state (0: soft, 1: hard)</td></tr>
 <tr><td>host_statusmap_image</td><td>string</td><td>The name of in image file for the status map</td></tr>
@@ -849,7 +849,7 @@ The following tables are available for livestatus queries.
 <tr><td>servicegroup_num_services_unknown</td><td>int</td><td>The number of services in the group that are UNKNOWN</td></tr>
 <tr><td>servicegroup_num_services_warn</td><td>int</td><td>The number of services in the group that are WARN</td></tr>
 <tr><td>servicegroup_worst_service_state</td><td>int</td><td>The worst soft state of all of the groups services (OK <= WARN <= UNKNOWN <= CRIT)</td></tr>
-<tr><td>should_be_scheduled</td><td>int</td><td>Whether nagios still tries to run checks on this service (0/1)</td></tr>
+<tr><td>should_be_scheduled</td><td>int</td><td>Whether Naemon still tries to run checks on this service (0/1)</td></tr>
 <tr><td>state</td><td>int</td><td>The current state of the service (0: OK, 1: WARN, 2: CRITICAL, 3: UNKNOWN)</td></tr>
 <tr><td>state_type</td><td>int</td><td>The type of the current state (0: soft, 1: hard)</td></tr>
 </table>
@@ -883,7 +883,7 @@ The following tables are available for livestatus queries.
 <tr><td>current_notification_number</td><td>int</td><td>The number of the current notification</td></tr>
 <tr><td>custom_variable_names</td><td>list</td><td>A list of the names of all custom variables of the service</td></tr>
 <tr><td>custom_variable_values</td><td>list</td><td>A list of the values of all custom variable of the service</td></tr>
-<tr><td>custom_variables</td><td>dict</td><td>A dictorionary of the custom variables</td></tr>
+<tr><td>custom_variables</td><td>dict</td><td>A dictionary of the custom variables</td></tr>
 <tr><td>description</td><td>string</td><td>Description of the service (also used as key)</td></tr>
 <tr><td>display_name</td><td>string</td><td>An optional display name</td></tr>
 <tr><td>downtimes</td><td>list</td><td>A list of all downtime ids of the service</td></tr>
@@ -913,7 +913,7 @@ The following tables are available for livestatus queries.
 <tr><td>host_check_source</td><td>string</td><td>The source of the check</td></tr>
 <tr><td>host_check_type</td><td>int</td><td>Type of check (0: active, 1: passive)</td></tr>
 <tr><td>host_checks_enabled</td><td>int</td><td>Whether checks of the host are enabled (0/1)</td></tr>
-<tr><td>host_childs</td><td>list</td><td>A list of all direct childs of the host</td></tr>
+<tr><td>host_childs</td><td>list</td><td>A list of all direct children of the host</td></tr>
 <tr><td>host_comments</td><td>list</td><td>A list of the ids of all comments of this host</td></tr>
 <tr><td>host_comments_with_info</td><td>list</td><td>A list of all comments of the host with id, author and comment</td></tr>
 <tr><td>host_contact_groups</td><td>list</td><td>A list of all contact groups this host is in</td></tr>
@@ -996,7 +996,7 @@ The following tables are available for livestatus queries.
 <tr><td>host_services</td><td>list</td><td>A list of all services of the host</td></tr>
 <tr><td>host_services_with_info</td><td>list</td><td>A list of all services including detailed information about each service</td></tr>
 <tr><td>host_services_with_state</td><td>list</td><td>A list of all services of the host together with state and has_been_checked</td></tr>
-<tr><td>host_should_be_scheduled</td><td>int</td><td>Whether nagios still tries to run checks on this host (0/1)</td></tr>
+<tr><td>host_should_be_scheduled</td><td>int</td><td>Whether Naemon still tries to run checks on this host (0/1)</td></tr>
 <tr><td>host_state</td><td>int</td><td>The current state of the host (0: up, 1: down, 2: unreachable)</td></tr>
 <tr><td>host_state_type</td><td>int</td><td>Type of the current state (0: soft, 1: hard)</td></tr>
 <tr><td>host_statusmap_image</td><td>string</td><td>The name of in image file for the status map</td></tr>
@@ -1077,7 +1077,7 @@ The following tables are available for livestatus queries.
 <tr><td>process_performance_data</td><td>int</td><td>Whether processing of performance data is enabled for the service (0/1)</td></tr>
 <tr><td>retry_interval</td><td>float</td><td>Number of basic interval lengths between checks when retrying after a soft error</td></tr>
 <tr><td>scheduled_downtime_depth</td><td>int</td><td>The number of scheduled downtimes the service is currently in</td></tr>
-<tr><td>should_be_scheduled</td><td>int</td><td>Whether nagios still tries to run checks on this service (0/1)</td></tr>
+<tr><td>should_be_scheduled</td><td>int</td><td>Whether Naemon still tries to run checks on this service (0/1)</td></tr>
 <tr><td>state</td><td>int</td><td>The current state of the service (0: OK, 1: WARN, 2: CRITICAL, 3: UNKNOWN)</td></tr>
 <tr><td>state_type</td><td>int</td><td>The type of the current state (0: soft, 1: hard)</td></tr>
 </table>
@@ -1106,13 +1106,13 @@ The following tables are available for livestatus queries.
 <tr><td>forks_rate</td><td>float</td><td>the averaged number of forks checks per second</td></tr>
 <tr><td>host_checks</td><td>int</td><td>The number of host checks since program start</td></tr>
 <tr><td>host_checks_rate</td><td>float</td><td>the averaged number of host checks per second</td></tr>
-<tr><td>interval_length</td><td>int</td><td>The default interval length from nagios.cfg</td></tr>
+<tr><td>interval_length</td><td>int</td><td>The default interval length from naemon.cfg</td></tr>
 <tr><td>last_command_check</td><td>time</td><td>The time of the last check for a command as UNIX timestamp (deprecated)</td></tr>
 <tr><td>last_log_rotation</td><td>time</td><td>Time time of the last log file rotation</td></tr>
 <tr><td>livecheck_overflows</td><td>int</td><td>The number of times a check could not be executed because now livecheck helper was free</td></tr>
 <tr><td>livecheck_overflows_rate</td><td>float</td><td>The number of livecheck overflows per second</td></tr>
 <tr><td>livechecks</td><td>int</td><td>The number of checks executed via livecheck</td></tr>
-<tr><td>livechecks_rate</td><td>float</td><td>The averaged number of livechecks executes per second</td></tr>
+<tr><td>livechecks_rate</td><td>float</td><td>The averaged number of livechecks executed per second</td></tr>
 <tr><td>livestatus_version</td><td>string</td><td>The version of the MK Livestatus module</td></tr>
 <tr><td>log_messages</td><td>int</td><td>The number of new log messages since program start</td></tr>
 <tr><td>log_messages_rate</td><td>float</td><td>the averaged number of new log messages per second</td></tr>
@@ -1141,7 +1141,7 @@ The following tables are available for livestatus queries.
 </tr>
 <tr><td>alias</td><td>string</td><td>The alias of the timeperiod</td></tr>
 <tr><td>id</td><td>int</td><td>Timeperiod id</td></tr>
-<tr><td>in</td><td>int</td><td>Wether we are currently in this period (0/1)</td></tr>
+<tr><td>in</td><td>int</td><td>Whether we are currently in this period (0/1)</td></tr>
 <tr><td>name</td><td>string</td><td>The name of the timeperiod</td></tr>
 </table>
 

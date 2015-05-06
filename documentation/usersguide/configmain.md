@@ -63,7 +63,7 @@ containing object definitions that Naemon should use for monitoring.
 
 Object configuration files contain definitions for hosts, host groups, contacts, contact groups, services, commands, etc.
 
-You can seperate your configuration information into several files and specify
+You can separate your configuration information into several files and specify
 multiple <i>cfg_file=</i> statements to have each of them processed.
 
 <a name="cfg_dir"></a>
@@ -91,7 +91,7 @@ All files in the directory with a <i>.cfg</i> extension are processed as object 
 
 Additionally, Naemon will recursively process all config files in subdirectories of the directory you specify here.
 
-You can seperate your configuration files into different directories and specify multiple
+You can separate your configuration files into different directories and specify multiple
 <i>cfg_dir=</i> statements to have all config files in each directory processed.
 
 
@@ -203,7 +203,7 @@ The file is deleted when it is no longer needed.
 
 This is a directory that Naemon can use as scratch space for creating temporary files used during the monitoring process.
 
-You should run *tmpwatch*, or a similiar utility, on this directory occassionally to delete files older than 24 hours.
+You should run *tmpwatch*, or a similar utility, on this directory occasionally to delete files older than 24 hours.
 
 <a name="status_file"></a>
 <a name="status_log"></a>
@@ -416,7 +416,7 @@ This option determines whether or not Naemon will accept <a href="passivechecks.
 
 If this option is disabled, Naemon will not accept any passive host checks.
 
-{{ site.note }}If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), <i>unles</i> you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.{{ site.end }}
+{{ site.note }}If you have <a href="#retain_state_information">state retention</a> enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), <i>unless</i> you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.{{ site.end }}
 
 If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you'll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.
 
@@ -1091,7 +1091,7 @@ This option allows you to control the frequency *in seconds* of check result "re
 
 "Reaper" events process the results from host and service checks that have finished executing.
 
-These events consitute the core of the monitoring logic in Naemon.
+These events constitute the core of the monitoring logic in Naemon.
 
 <a name="max_check_result_reaper_time"></a>
 #### Maximum Check Result Reaper Time
@@ -2265,7 +2265,7 @@ If you start seeing service checks that never seem to get rescheduled, enable th
 </tr>
 </table>
 
-This option allows you to enable or disable checks for orphaned hoste checks. Orphaned host checks are checks which have been executed and have been removed from the event queue, but have not had any results reported in a long time.
+This option allows you to enable or disable checks for orphaned host checks. Orphaned host checks are checks which have been executed and have been removed from the event queue, but have not had any results reported in a long time.
 
 Since no results have come back in for the host, it is not rescheduled in the event queue.
 
@@ -2617,7 +2617,7 @@ This directive is used to specify an event broker module that should by loaded b
 
 Use multiple directives if you want to load more than one module.
 
-Arguments that should be passed to the module at startup are seperated from the module path by a space.
+Arguments that should be passed to the module at startup are separated from the module path by a space.
 
 <a name="debug_file"></a>
 
@@ -2634,7 +2634,7 @@ Arguments that should be passed to the module at startup are seperated from the 
 </tr>
 </table>
 
-This option determines where Naemon should write debugging information. What (if any) information is written is determined by the <a href="#debug_level">debug_level</a> and <a href="#debug_verbosity">debug_verbosity</a> options. You can have Naemon automaticaly rotate the debug file when it reaches a certain size by using the <a href="#max_debug_file_size">max_debug_file_size</a> option.
+This option determines where Naemon should write debugging information. What (if any) information is written is determined by the <a href="#debug_level">debug_level</a> and <a href="#debug_verbosity">debug_verbosity</a> options. You can have Naemon automatically rotate the debug file when it reaches a certain size by using the <a href="#max_debug_file_size">max_debug_file_size</a> option.
 
 <a name="debug_level"></a>
 #### Debug Level

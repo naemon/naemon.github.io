@@ -13,7 +13,7 @@ Naemon does not include embedded Perl anymore, however, all ePN related informat
 
 ### Introduction
 
-Stanley Hopcroft has worked with the embedded Perl interpreter quite a bit and has commented on the advantages/disadvanges
+Stanley Hopcroft has worked with the embedded Perl interpreter quite a bit and has commented on the advantages/disadvantages
 of using it. He has also given several helpful hints on creating Perl plugins that work properly with the embedded
 interpreter. The majority of this documentation comes from his comments.
 
@@ -169,6 +169,6 @@ package Embed::check_5frpc; sub hndlr { shift(@_); @ARGV=@_;
     I think it causes__all__ the Perl plugins to return CRITICAL.<br><br>
 <li>Consider using a mini embedded Perl C program to check your plugin. This is not
     sufficient to guarantee your plugin will perform Ok with an ePN but if the plugin fails
-    this test it will certainly fail with your ePN. <font color="red">[ A sample mini ePN is shiped with Mod-Gearman
+    this test it will certainly fail with your ePN. <font color="red">[ A sample mini ePN is shipped with Mod-Gearman
     for use in testing Perl plugins.]</font> <br><br>
 </ol>

@@ -28,7 +28,7 @@ for other types of commands (e.g. notification scripts, event handler scripts, e
 
 Stephen Davies contributed the original embedded Perl interpreter code several years back.
 Stanley Hopcroft has been the primary person helping to improve the embedded Perl interpreter code
-quite a bit and has commented on the advantages/disadvanges of using it.  He has also given several
+quite a bit and has commented on the advantages/disadvantages of using it.  He has also given several
 helpful hints on creating Perl plugins that work properly with the embedded interpreter.
 
 It should be noted that "ePN", as used in this documentation, refers to embedded Perl Mod-Gearman,
@@ -46,7 +46,7 @@ Some advantages of ePN (embedded Perl in Mod-Gearman) include:
     plugin by making a library call.
 <li>It greatly reduces the system impact of Perl plugins and/or allows you to run more checks with
     Perl plugin than you otherwise would be able to.  In other words, you have less incentive to write
-    plugins in other languages such as C/C++, or Expect/TCL, that are generally recognised to have
+    plugins in other languages such as C/C++, or Expect/TCL, that are generally recognized to have
     development times at least an order of magnitude slower than Perl (although they do run about ten
     times faster also - TCL being an exception).
 <li>If you are not a C programmer, then you can still get a huge amount of mileage out of Mod-Gearman

@@ -71,7 +71,7 @@ service check to see if it differed from the output of the previous check.
 If the output differed and the state of the service didn't change between
 the two checks, the result of the newer service check would get logged.
 
-A similiar example of stalking might be on a service that checks your web server.
+A similar example of stalking might be on a service that checks your web server.
 
 If the check_http plugin first returns a WARNING state because of a 404 error
 and on subsequent checks returns a WARNING state because of a particular

@@ -78,7 +78,7 @@ The following things occur when hosts or services experience HARD state changes:
 
  - The HARD state is logged.
  - Event handlers are executed to handle the HARD state.
- - Contacts are notifified of the host or service problem or recovery.
+ - Contacts are notified of the host or service problem or recovery.
 
 The <a href="macrolist.html#hoststatetype">$HOSTSTATETYPE$</a> or <a href="macrolist.html#servicestatetype">$SERVICESTATETYPE$</a>
 macros will have a value of "<i>HARD</i>" when event handlers are executed, which allows

@@ -56,7 +56,7 @@ URL: <a href="http://www.nagios.org/developerinfo/externalcommands/" target="_bl
 <li>When changing check commands, check timeperiods, or event handler commands, it is
     important to note that the new values for these options must have been defined before Naemon was started.
     Any request to change a command or timeperiod to one which had not been defined when Naemon was started is ignored.
-<li>You can specify command arguments along with the actual command name - just seperate individual
+<li>You can specify command arguments along with the actual command name - just separate individual
     arguments from the command name (and from each other) using bang (!) characters.
     More information on how arguments in command definitions are processed during runtime
     can be found in the documentation on <a href="macros.html">macros</a>.
