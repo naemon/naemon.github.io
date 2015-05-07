@@ -2431,16 +2431,9 @@ Useful if you have multiple instances of Naemon that need to run from the same s
 If not specified, Naemon will use the system configured timezone.
 
 {{ site.note }}If you use this option to specify a custom timezone, you will
-also need to alter the Apache configuration directives for the CGIs to specify the timezone you want.{{ site.end }}
+also need to alter Thruks configuration directives to specify the timezone you want.
+See <a href="http://thruk.org/documentation/configuration.html#use_timezone">use_timezone</a> in the Thruk manual for details.{{ site.end }}
 
-Example:
-
-```
-<Directory "/usr/local/naemon/sbin/">
-SetEnv TZ "US/Mountain"
-...
-</Directory>
-```
 
 <a name="illegal_object_name_chars"></a>
 #### Illegal Object Name Characters
