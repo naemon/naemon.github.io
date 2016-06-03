@@ -20,7 +20,6 @@ The binary packages can also be downloaded here:
    <td>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel7/">Redhat 7</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/">Redhat 6</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel5/">Redhat 5</a>
    </td>
  </tr>
  <tr>
@@ -29,16 +28,15 @@ The binary packages can also be downloaded here:
    <td>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel7/">CentOS 7</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/">CentOS 6</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel5/">CentOS 5</a>
    </td>
  </tr>
  <tr>
    <td><img src="../images/sles.jpg"></td>
    <td>SLES</td>
    <td>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles12sp1/">12 SP1</a>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles12/">12</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles11sp3/">11 SP3</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles11sp2/">11 SP2</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles11sp1/">11 SP1</a>
    </td>
  </tr>
  <tr>
@@ -47,17 +45,17 @@ The binary packages can also be downloaded here:
    <td>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/debian8/">8 Jessie</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/debian7/">7 Wheezy</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/debian6/">6 Squeeze</a>
    </td>
  </tr>
  <tr>
    <td><img src="../images/ubuntu.png"></td>
    <td>Ubuntu</td>
    <td>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu14.10/">14.10 Utopic</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu16.04/">16.04 Xenial</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu15.10/">15.10 Wily</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu15.04/">15.04 Vivid</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu14.04/">14.04 Trusty</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.04/">12.04 Precise</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu10.04/">10.04 Lucid</a>
    </td>
  </tr>
 </table>
@@ -109,7 +107,7 @@ DIV.legend TD {
 <div id="downloadstats" style="width:1000px; height: 300px;"></div>
 <br><br>
 
-##### Downloads splitted by System (Core only)
+##### Downloads splitted by System (Core only, current month)
 <div id="downloadstats_pkg" style="width:400px; height: 270px;"></div>
 <script language="javascript" type="text/javascript" src="/ressources/flot/jquery.flot.min.js"></script>
 <script language="javascript" type="text/javascript" src="/ressources/flot/jquery-flot-dashes.js"></script>
@@ -226,19 +224,27 @@ jQuery(document).ready(function() {
     var data = [{
         label: 'Redhat5',
         data: extract_data_current_month(['naemon-core-rhel5'], cur_month),
-        color: '#CA8F42'
+        color: '#DBAD72'
     }, {
         label: 'Redhat6',
         data: extract_data_current_month(['naemon-core-rhel6'], cur_month),
+        color: '#DBAD72'
+    }, {
+        label: 'Redhat7',
+        data: extract_data_current_month(['naemon-core-rhel7'], cur_month),
         color: '#DBAD72'
     }, {
         label: 'SLES11',
         data: extract_data_current_month(['naemon-core-sles11'], cur_month),
         color: '#D9A88F'
     }, {
+        label: 'SLES12',
+        data: extract_data_current_month(['naemon-core-sles12'], cur_month),
+        color: '#D9A88F'
+    }, {
         label: 'Debian7',
         data: extract_data_current_month(['naemon-core-debian7'], cur_month),
-        color: '#AAD1B7'
+        color: '#4B8C61'
     }, {
         label: 'Debian8',
         data: extract_data_current_month(['naemon-core-debian8'], cur_month),
@@ -250,11 +256,19 @@ jQuery(document).ready(function() {
     }, {
         label: 'Ubuntu 13',
         data: extract_data_current_month(['naemon-core-ubuntu13'], cur_month),
-        color: '#63D13E'
+        color: '#12AD2A'
     }, {
         label: 'Ubuntu 14',
         data: extract_data_current_month(['naemon-core-ubuntu14'], cur_month),
-        color: '#51CB51'
+        color: '#12AD2A'
+    }, {
+        label: 'Ubuntu 15',
+        data: extract_data_current_month(['naemon-core-ubuntu15'], cur_month),
+        color: '#12AD2A'
+    }, {
+        label: 'Ubuntu 16',
+        data: extract_data_current_month(['naemon-core-ubuntu16'], cur_month),
+        color: '#12AD2A'
     }];
     jQuery.plot('#downloadstats_pkg', data, {
         series: {
