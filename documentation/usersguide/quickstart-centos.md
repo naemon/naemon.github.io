@@ -10,14 +10,14 @@ This guide is intended to provide you with simple instructions on how to install
 
 These instructions were written for:
 
-* CentOS Server 6.5
+* CentOS Server 6.7
 
 ### What You'll End Up With
 
 If you follow these instructions, here's what you'll end up with:
 
 <ul>
-<li>Nagios plugins will be installed underneath /usr/lib/nagios/plugins/</li>
+<li>Nagios plugins will be installed underneath /usr/lib64/nagios/plugins/</li>
 <li>Naemon will be configured to monitor a few aspects of your local system (CPU load, disk usage, etc.)</li>
 <li>The Naemon web interface will be accessible at http://localhost/naemon/</li>
 </ul>
@@ -26,48 +26,24 @@ If you follow these instructions, here's what you'll end up with:
 
 {{ site.warn }}Don't forget to change your password from default, instruction are found below version specific installation instructions <a href="#change_default_password_for_thruk">here</a>{{ site.end }}
 
-#### CentOS Server 6.5
+#### CentOS Server 6.7
 
-**Install dependencies**
+**Install the labs.consol.de repository**
 
 ```
-yum install dejavu-fonts-common perl xorg-x11-server-Xvfb wget gd libXpm httpd
+yum install https://labs.consol.de/repo/stable/rhel6/i386/labs-consol-stable.rhel6.noarch.rpm
 ```
 
 **Enable epel repository, required for both dependency (mod_fcgid), nrpe and nagios-plugins**
 
 ```
-rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-```
-
-**Install mod_fcgid**
-
-```
-yum install mod_fcgid
-```
-
-**Download Naemon**
-
-```
-cd ~/
-mkdir naemon
-cd naemon/
-wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-core-dbg-{{ site.release_version }}-1.rhel6.x86_64.rpm
-wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-core-{{ site.release_version }}-1.rhel6.x86_64.rpm
-wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-devel-{{ site.release_version }}-1.rhel6.x86_64.rpm
-wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-livestatus-{{ site.release_version }}-1.rhel6.x86_64.rpm
-wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-thruk-libs-{{ site.release_version }}-1.rhel6.x86_64.rpm
-wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-thruk-reporting-{{ site.release_version }}-1.rhel6.x86_64.rpm
-wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-thruk-{{ site.release_version }}-1.rhel6.x86_64.rpm
-wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-{{ site.release_version }}-1.rhel6.x86_64.rpm
-wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/libnaemon-{{ site.release_version }}-1.rhel6.x86_64.rpm
-wget http://labs.consol.de/naemon/release/v{{ site.release_version }}/rhel6/x86_64/naemon-tools-{{ site.release_version }}-1.rhel6.x86_64.rpm
+yum -y install epel-release
 ```
 
 **Install Naemon**
 
 ```
-yum install *naemon*
+yum install naemon*
 ```
 
 **Disable SELinux, not supported by Thruk**
@@ -92,16 +68,6 @@ replace with: *"SELINUX=disabled"*
 yum install nagios-plugins nagios-plugins-all nagios-plugins-nrpe nrpe
 ```
 
-**Change path to Nagios plugins**
-
-```
-vi /etc/naemon/resource.cfg 
-```
-
-find *$USER1$=/usr/lib/naemon/plugins*
-
-replace with *replace with: "$USER1$=/usr/lib64/nagios/plugins"*
-
 **Start services**
 
 ```
@@ -116,7 +82,7 @@ chkconfig thruk on && service thruk start
 It's most important to change your password to protect your site for unauthorized access
 
 ```
-htpasswd /etc/naemon/htpasswd admin
+htpasswd /etc/thruk/htpasswd thrukadmin
 ```
 
 ### Login to the Web Interface
