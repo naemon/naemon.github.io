@@ -13,6 +13,11 @@ See upcoming changes from the next version on [github](https://github.com/naemon
 
 ### Notable Changes and New Features
 
+#### 1.0.5 - 21 Jun 2016
+##### Bugfixes
+  * Fix segfault when trying to log to null pointer (#140)
+  * Fix naemon exiting on USR1 signal (#138, #139)
+
 #### 1.0.4 - 03 Jun 2016
 ##### Features
   * Downtimes can now be scheduled to start before their time of their scheduling

@@ -7,8 +7,8 @@ redcarpet:
   extensions: ["tables", "no_intra_emphasis"]
 
 # site specific variables
-release_version: 1.0.4
-release_date: 03 Jun 2016
+release_version: 1.0.5
+release_date: 21 Jun 2016
 
 # custom "tags"
 hint: '<div class="alert alert-success" style="margin: 10px;"><i class="glyphicon glyphicon-thumbs-up"></i> <b>Tip</b>:&nbsp;'
