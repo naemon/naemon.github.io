@@ -269,7 +269,7 @@ The following table lists the object variables that will be implicitly inherited
 <table border="1">
 <tr><th>Object Type</th><th>Object Variable</th><th>Implied Source</th></tr>
 <tr>
-<td rowspan="3"><b>Services</b></td>
+<td rowspan="4"><b>Services</b></td>
 <td><i>contact_groups</i></td>
 <td><i>contact_groups</i> in the associated host definition</td>
 </tr>
