@@ -48,8 +48,8 @@ The table below lists the different attributes that may be changed during runtim
 along with the external command to accomplish the job.
 
 A full listing of external commands that can be used for adaptive monitoring
-(along with examples of how to use them) can be found online at the following
-URL: <a href="http://www.nagios.org/developerinfo/externalcommands/" target="_blank">http://www.nagios.org/developerinfo/externalcommands/</a>
+(along with examples of how to use them) can be found in the
+<a href="/documentation/developer/externalcommands/">external commands developer guide</a>.
 
 {{ site.note }}
 <ul>

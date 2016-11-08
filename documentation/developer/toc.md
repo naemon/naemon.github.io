@@ -22,11 +22,13 @@ Technical and api documentation for Naemon.
 
 ### API
 
-<a href="api-incompat3to4.html">API Incompatibilities between Nagios 3 and Naemon.</a>
+<a href="api-incompat3to4.html">API Incompatibilities between Nagios 3 and Naemon</a>
 
 <a href="queryhandlers.html">Query Handlers</a>
 
 <a href="/documentation/usersguide/livestatus.html">Livestatus</a>
+
+<a href="/documentation/developer/externalcommands/">External Commands</a>
 
 
 

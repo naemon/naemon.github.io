@@ -44,5 +44,5 @@ External commands that are written to the <a href="configmain.html#command_file"
 
 ...where <i>time</i> is the time (in <i>time_t</i> format) that the external application submitted the external command to the command file.  The values for the <i>command_id</i> and <i>command_arguments</i> arguments will depend on what command is being submitted to Naemon.
 
-A full listing of external commands that can be used (along with examples of how to use them) can be found online at the following URL:
-<a href="http://www.nagios.org/developerinfo/externalcommands/" target="_blank">http://www.nagios.org/developerinfo/externalcommands/</a>
+A full listing of external commands that can be used (along with examples of how to use them) can be found in the
+<a href="/documentation/developer/externalcommands/">external commands developer guide</a>.

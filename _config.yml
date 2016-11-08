@@ -18,3 +18,6 @@ warn: '<div class="alert alert-warning" style="margin: 10px;"><i class="glyphico
 warning: '<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> <b>Warning:</b>&nbsp;'
 danger: '<div class="alert alert-danger" style="margin: 10px;"><i class="glyphicon glyphicon-exclamation-sign"></i> <b>Danger:</b>&nbsp;'
 end: '</div>'
+
+exclude:
+  - "*.tpl"
