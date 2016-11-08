@@ -21,7 +21,7 @@ die("download failed?") unless -e $src_file;
 my $commands = parse_commands($src_file);
 
 #################################################
-# write out command files
+# write out index file
 `rm *.md`;
 my $page     = _read_file('index.tpl');
 open(my $fh, '>', 'index.md');
@@ -62,12 +62,14 @@ for my $name (sort keys%{$commands}) {
         $classes->{'process'} = 1;
     }
 
-    printf($fh "<h5 class='commands ".join(" ", keys %{$classes})."'><a href='".lc($name).".html'>".$command->{'name'}."</a></h5>\n");
+    printf($fh "<h5 class='commands ".join(" ", sort keys %{$classes})."'><a href='".lc($name).".html'>".$command->{'name'}."</a></h5>\n");
 }
 print $fh $footer,"\n";
 close($fh);
 print "index.md written\n";
 
+#################################################
+# write out command files
 $page = _read_file('command.tpl');
 for my $name (sort keys%{$commands}) {
     open(my $fh, '>', lc($name).'.md');
@@ -85,7 +87,7 @@ for my $name (sort keys%{$commands}) {
     }
     printf($fh "#### Command Format:\n\n`".$command->{'name'}.";".join(';', @args_names)."`\n\n");
 
-    printf($fh "#### Description:\n\n".$command->{'description'}."\n\n");
+    printf($fh "#### Description:\n\n"._escape($command->{'description'})."\n\n");
 
     printf($fh "#### Shell Script Usage Example:\n\n");
     printf($fh "```sh\n");
@@ -181,6 +183,14 @@ sub _read_file {
     open(my $fh, '<', $file) or die("cannot read $file: $!");
     local $/ = undef;
     my $str = <$fh>;
+    return($str);
+}
+
+#################################################
+sub _escape {
+    my($str) = @_;
+    $str =~ s|<|&lt;|gmx;
+    $str =~ s|>|&gt;|gmx;
     return($str);
 }
 

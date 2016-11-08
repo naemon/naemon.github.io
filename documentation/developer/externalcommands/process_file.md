@@ -18,7 +18,7 @@ title: External Command Reference
 
 #### Description:
 
-Directs Naemon to process all external commands that are found in the file specified by the <file_name> argument. If the <delete> option is non-zero, the file will be deleted once it has been processes. If the <delete> option is set to zero, the file is left untouched.
+Directs Naemon to process all external commands that are found in the file specified by the &lt;file_name&gt; argument. If the &lt;delete&gt; option is non-zero, the file will be deleted once it has been processes. If the &lt;delete&gt; option is set to zero, the file is left untouched.
 
 #### Shell Script Usage Example:
 
