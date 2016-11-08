@@ -1,10 +1,15 @@
 GEM=gem
-GEM_HOME=.gem
-JEKYLL=.gem/bin/jekyll
+JEKYLL := $(shell which jekyll)
+ifndef JEKYLL
+	GEM_HOME=.gem
+	JEKYLL=$(GEM_HOME)/bin/jekyll
+else
+	GEM_HOME=
+endif
 TESTPORT=4001
 
 quick: .gem
-	GEM_HOME=$(GEM_HOME) NOCLEAN=1 $(JEKYLL) build --trace --limit_posts=5 --no-watch
+	GEM_HOME=$(GEM_HOME) JEKYLL_ENV=local NOCLEAN=1 bash -c "time $(JEKYLL) build --trace --limit_posts=15"
 
 build: .gem
 	GEM_HOME=$(GEM_HOME) $(JEKYLL) build --trace
