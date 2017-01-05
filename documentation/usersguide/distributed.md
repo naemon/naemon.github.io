@@ -119,7 +119,7 @@ That's it!  We've successfully configured a remote host running Naemon to act as
 
 ### Central Server Configuration
 
-We've looked at how distributed monitoring servers should be configured, so let's turn to the central server.  For all intensive purposes, the central is configured as you would normally configure a standalone server.  It is setup as follows:
+We've looked at how distributed monitoring servers should be configured, so let's turn to the central server.  For all intents and purposes, the central is configured as you would normally configure a standalone server.  It is setup as follows:
 
 <ul>
 <li>The central server has the web interface installed (optional, but recommended)
@@ -142,7 +142,7 @@ That's it!  Easy, huh?
 
 ### Problems With Passive Checks
 
-For all intensive purposes we can say that the central server is relying solely on passive checks for monitoring.  The main problem with relying completely on passive checks for monitoring is the fact that Naemon must rely on something else to provide the monitoring data.  What if the remote host that is sending in passive check results goes down or becomes unreachable?   If Naemon isn't actively checking the services on the host, how will it know that there is a problem?
+For all intents and purposes we can say that the central server is relying solely on passive checks for monitoring.  The main problem with relying completely on passive checks for monitoring is the fact that Naemon must rely on something else to provide the monitoring data.  What if the remote host that is sending in passive check results goes down or becomes unreachable?   If Naemon isn't actively checking the services on the host, how will it know that there is a problem?
 
 Fortunately, there is a way we can handle these types of problems...
 
