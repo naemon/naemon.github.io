@@ -27,6 +27,9 @@ Each host and service definition has a &lt;<i>contact_groups</i>&gt; option that
 
 When Naemon sends out a host or service notification, it will notify each contact that is a member of any contact groups specified in the &lt;<i>contactgroups</i>&gt; option of the service definition.  Naemon realizes that a contact may be a member of more than one contact group, so it removes duplicate contact notifications before it does anything.
 
+By default all services on a host notifies to the &lt;<i>contact_groups</i>&gt; configured in the host definition. There is however an exception to this; if a contact group is defined directly on a service, only that contact group will receive the notification. It will not be propagated to the contact group configured in the host definition if not explicity set on the service.
+More information about this can be found in <a href="objectinheritance.html#implied_inheritance">here</a>.
+
 ### What Filters Must Be Passed In Order For Notifications To Be Sent?
 
 Just because there is a need to send out a host or service notification doesn't mean that any contacts are going to get notified.  There are several filters that potential notifications must pass before they are deemed worthy enough to be sent out.  Even then, specific contacts may not be notified if their notification filters do not allow for the notification to be sent to them.  Let's go into the filters that have to be passed in more detail...
