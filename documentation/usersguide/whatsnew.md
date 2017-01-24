@@ -13,6 +13,15 @@ See upcoming changes from the next version on [github](https://github.com/naemon
 
 ### Notable Changes and New Features
 
+#### 1.0.6 - 23 Jan 2017
+##### Bugfixes
+  * Fix CVE-2016-9566 by removing drop_privileges. Note: naemon cannot be started as root anymore.
+  * Fix shell command parsing for some special cases when defining environment variables in a command
+  * Fix custom variables persistence accros restarts for single byte values
+  * Fix writing to already rotated logfile
+  * Fix memory leak in broker_notification_data
+  * Fix notification commands beeing reaped to early (#137)
+
 #### 1.0.5 - 21 Jun 2016
 ##### Bugfixes
   * Fix segfault when trying to log to null pointer (#140)
