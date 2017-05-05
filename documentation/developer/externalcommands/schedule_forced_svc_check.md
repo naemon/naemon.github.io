@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`SCHEDULE_FORCED_SVC_CHECK;service;check_time`
+`SCHEDULE_FORCED_SVC_CHECK;host_name;service_description;check_time`
 
 #### Description:
 
@@ -27,7 +27,7 @@ Schedules a forced active check of a particular service at 'check_time'. The 'ch
 # This is a sample shell script showing how you can submit the SCHEDULE_FORCED_SVC_CHECK command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] SCHEDULE_FORCED_SVC_CHECK;service1;1478648441\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] SCHEDULE_FORCED_SVC_CHECK;host1;service1;1478648441\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

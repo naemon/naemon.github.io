@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`ENABLE_SVC_NOTIFICATIONS;service`
+`ENABLE_SVC_NOTIFICATIONS;host_name;service_description`
 
 #### Description:
 
@@ -27,7 +27,7 @@ Enables notifications for a particular service. Notifications will be sent out f
 # This is a sample shell script showing how you can submit the ENABLE_SVC_NOTIFICATIONS command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] ENABLE_SVC_NOTIFICATIONS;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] ENABLE_SVC_NOTIFICATIONS;host1;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`START_OBSESSING_OVER_SVC;service`
+`START_OBSESSING_OVER_SVC;host_name;service_description`
 
 #### Description:
 
@@ -27,7 +27,7 @@ Enables processing of service checks via the OCSP command for the specified serv
 # This is a sample shell script showing how you can submit the START_OBSESSING_OVER_SVC command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] START_OBSESSING_OVER_SVC;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] START_OBSESSING_OVER_SVC;host1;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

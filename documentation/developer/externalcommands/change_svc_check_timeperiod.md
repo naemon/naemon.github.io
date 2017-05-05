@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`CHANGE_SVC_CHECK_TIMEPERIOD;service;check_timeperiod`
+`CHANGE_SVC_CHECK_TIMEPERIOD;host_name;service_description;check_timeperiod`
 
 #### Description:
 
@@ -27,7 +27,7 @@ Changes the check timeperiod for a particular service to what is specified by th
 # This is a sample shell script showing how you can submit the CHANGE_SVC_CHECK_TIMEPERIOD command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] CHANGE_SVC_CHECK_TIMEPERIOD;service1;24x7\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] CHANGE_SVC_CHECK_TIMEPERIOD;host1;service1;24x7\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

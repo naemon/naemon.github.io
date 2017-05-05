@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`PROCESS_SERVICE_CHECK_RESULT;service;status_code;plugin_output`
+`PROCESS_SERVICE_CHECK_RESULT;host_name;service_description;status_code;plugin_output`
 
 #### Description:
 
@@ -27,7 +27,7 @@ This is used to submit a passive check result for a particular service. The 'sta
 # This is a sample shell script showing how you can submit the PROCESS_SERVICE_CHECK_RESULT command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] PROCESS_SERVICE_CHECK_RESULT;service1;0;This is an example plugin output.\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] PROCESS_SERVICE_CHECK_RESULT;host1;service1;0;This is an example plugin output.\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`ACKNOWLEDGE_SVC_PROBLEM;service;sticky;notify;persistent;author;comment`
+`ACKNOWLEDGE_SVC_PROBLEM;host_name;service_description;sticky;notify;persistent;author;comment`
 
 #### Description:
 
@@ -27,7 +27,7 @@ Allows you to acknowledge the current problem for the specified service. By ackn
 # This is a sample shell script showing how you can submit the ACKNOWLEDGE_SVC_PROBLEM command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] ACKNOWLEDGE_SVC_PROBLEM;service1;1;1;1;naemonadmin;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] ACKNOWLEDGE_SVC_PROBLEM;host1;service1;1;1;1;naemonadmin;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

@@ -82,6 +82,11 @@ for my $name (sort keys%{$commands}) {
     my(@args_names, @args_examples);
     for my $arg (split(/;/mx, $command->{'args'})) {
         my($type,$key) = split(/=/mx,$arg);
+        if($key eq 'service') {
+            $key = 'service_description';
+            push @args_names, 'host_name';
+            push @args_examples, _get_example('host_name', $type, $name);
+        }
         push @args_names, $key;
         push @args_examples, _get_example($key, $type, $name);
     }
@@ -206,7 +211,7 @@ sub _get_example {
     if($key eq 'host_name' || $key eq 'hostname') {
         return("host1");
     }
-    if($key eq 'service') {
+    if($key eq 'service' || $key eq 'service_description') {
         return("service1");
     }
     if($key eq 'hostgroup_name' || $key eq 'hosgroup_name') {

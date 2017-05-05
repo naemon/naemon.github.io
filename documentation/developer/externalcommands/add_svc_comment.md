@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`ADD_SVC_COMMENT;service;persistent;author;comment`
+`ADD_SVC_COMMENT;host_name;service_description;persistent;author;comment`
 
 #### Description:
 
@@ -27,7 +27,7 @@ This command is used to add a comment for the specified service.  If you work wi
 # This is a sample shell script showing how you can submit the ADD_SVC_COMMENT command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] ADD_SVC_COMMENT;service1;1;naemonadmin;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] ADD_SVC_COMMENT;host1;service1;1;naemonadmin;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

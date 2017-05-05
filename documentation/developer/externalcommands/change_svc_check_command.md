@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`CHANGE_SVC_CHECK_COMMAND;service;check_command`
+`CHANGE_SVC_CHECK_COMMAND;host_name;service_description;check_command`
 
 #### Description:
 
@@ -27,7 +27,7 @@ Changes the check command for a particular service to be that specified by the '
 # This is a sample shell script showing how you can submit the CHANGE_SVC_CHECK_COMMAND command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] CHANGE_SVC_CHECK_COMMAND;service1;check_ping\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] CHANGE_SVC_CHECK_COMMAND;host1;service1;check_ping\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

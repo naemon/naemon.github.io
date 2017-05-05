@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`DEL_ALL_SVC_COMMENTS;service`
+`DEL_ALL_SVC_COMMENTS;host_name;service_description`
 
 #### Description:
 
@@ -27,7 +27,7 @@ Deletes all comments associated with a particular service.
 # This is a sample shell script showing how you can submit the DEL_ALL_SVC_COMMENTS command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] DEL_ALL_SVC_COMMENTS;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] DEL_ALL_SVC_COMMENTS;host1;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`CHANGE_SVC_EVENT_HANDLER;service;event_handler_command`
+`CHANGE_SVC_EVENT_HANDLER;host_name;service_description;event_handler_command`
 
 #### Description:
 
@@ -27,7 +27,7 @@ Changes the event handler command for a particular service to be that specified 
 # This is a sample shell script showing how you can submit the CHANGE_SVC_EVENT_HANDLER command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] CHANGE_SVC_EVENT_HANDLER;service1;restart_service\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] CHANGE_SVC_EVENT_HANDLER;host1;service1;restart_service\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

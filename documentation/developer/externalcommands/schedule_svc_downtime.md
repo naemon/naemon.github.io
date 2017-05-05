@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`SCHEDULE_SVC_DOWNTIME;service;start_time;end_time;fixed;trigger_id;duration;author;comment`
+`SCHEDULE_SVC_DOWNTIME;host_name;service_description;start_time;end_time;fixed;trigger_id;duration;author;comment`
 
 #### Description:
 
@@ -27,7 +27,7 @@ Schedules downtime for a specified service. If the 'fixed' argument is set to on
 # This is a sample shell script showing how you can submit the SCHEDULE_SVC_DOWNTIME command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] SCHEDULE_SVC_DOWNTIME;service1;1478648441;1478638441;1;0;3600;naemonadmin;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] SCHEDULE_SVC_DOWNTIME;host1;service1;1478648441;1478638441;1;0;3600;naemonadmin;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

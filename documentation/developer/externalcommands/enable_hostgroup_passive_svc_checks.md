@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`ENABLE_HOSTGROUP_PASSIVE_SVC_CHECKS;hosgroup_name`
+`ENABLE_HOSTGROUP_PASSIVE_SVC_CHECKS;hostgroup_name`
 
 #### Description:
 

@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`SEND_CUSTOM_SVC_NOTIFICATION;service;options;author;comment`
+`SEND_CUSTOM_SVC_NOTIFICATION;host_name;service_description;options;author;comment`
 
 #### Description:
 
@@ -27,7 +27,7 @@ Allows you to send a custom service notification. Very useful in dire situations
 # This is a sample shell script showing how you can submit the SEND_CUSTOM_SVC_NOTIFICATION command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] SEND_CUSTOM_SVC_NOTIFICATION;service1;0;naemonadmin;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] SEND_CUSTOM_SVC_NOTIFICATION;host1;service1;0;naemonadmin;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

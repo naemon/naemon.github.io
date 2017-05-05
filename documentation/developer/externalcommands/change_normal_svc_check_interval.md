@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`CHANGE_NORMAL_SVC_CHECK_INTERVAL;service;check_interval`
+`CHANGE_NORMAL_SVC_CHECK_INTERVAL;host_name;service_description;check_interval`
 
 #### Description:
 
@@ -27,7 +27,7 @@ Changes the normal (regularly scheduled) check interval for a particular service
 # This is a sample shell script showing how you can submit the CHANGE_NORMAL_SVC_CHECK_INTERVAL command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] CHANGE_NORMAL_SVC_CHECK_INTERVAL;service1;10\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] CHANGE_NORMAL_SVC_CHECK_INTERVAL;host1;service1;10\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`DISABLE_PASSIVE_SVC_CHECKS;service`
+`DISABLE_PASSIVE_SVC_CHECKS;host_name;service_description`
 
 #### Description:
 
@@ -27,7 +27,7 @@ Disables passive checks for the specified service.
 # This is a sample shell script showing how you can submit the DISABLE_PASSIVE_SVC_CHECKS command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] DISABLE_PASSIVE_SVC_CHECKS;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] DISABLE_PASSIVE_SVC_CHECKS;host1;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

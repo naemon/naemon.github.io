@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`DELAY_SVC_NOTIFICATION;service;notification_time`
+`DELAY_SVC_NOTIFICATION;host_name;service_description;notification_time`
 
 #### Description:
 
@@ -27,7 +27,7 @@ Delays the next notification for a parciular service until 'notification_time'. 
 # This is a sample shell script showing how you can submit the DELAY_SVC_NOTIFICATION command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] DELAY_SVC_NOTIFICATION;service1;1478638441\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] DELAY_SVC_NOTIFICATION;host1;service1;1478638441\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`REMOVE_SVC_ACKNOWLEDGEMENT;service`
+`REMOVE_SVC_ACKNOWLEDGEMENT;host_name;service_description`
 
 #### Description:
 
@@ -27,7 +27,7 @@ This removes the problem acknowledgement for a particular service. Once the ackn
 # This is a sample shell script showing how you can submit the REMOVE_SVC_ACKNOWLEDGEMENT command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] REMOVE_SVC_ACKNOWLEDGEMENT;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] REMOVE_SVC_ACKNOWLEDGEMENT;host1;service1\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 
