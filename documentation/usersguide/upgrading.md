@@ -86,8 +86,8 @@ Copy existing status file:
 Edit the main configuration file and replace
 
 <ul>
-<li>nagios_user with naemon_user
-<li>nagios_group with naemon_group
+<li><i>nagios_user</i> with <i>naemon_user</i>
+<li><i>nagios_group</i> with <i>naemon_group</i>
 </ul>
 
 Read the <a href="config-incompat3to4.html">configuration incompatibilities</a> guide.
