@@ -17,4 +17,6 @@ danger: '<div class="alert alert-danger" style="margin: 10px;"><i class="glyphic
 end: '</div>'
 
 exclude:
-  - "*.tpl"
+    - "*.tpl"
+    - "t/*"
+    - "*/update"
