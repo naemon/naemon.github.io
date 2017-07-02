@@ -1,5 +1,2 @@
 source 'https://rubygems.org'
-gem 'public_suffix', '= 1.4.6'
-gem 'jekyll-paginate'
-gem 'redcarpet'
-gem 'github-pages'
+gem 'github-pages', group: :jekyll_plugins
