@@ -7,7 +7,7 @@ title: Developing Plugins For Use With Embedded Perl
 
 
 {{ site.warn }}
-Naemon does not include embedded Perl anymore, however, all ePN related information still applies to <a href="addons.html#modgearman">Mod-Gearman</a>.
+Naemon does not include embedded Perl anymore, however, all ePN related information still applies to <a href="addons.html#mod-gearman">Mod-Gearman</a>.
 {{ site.end }}
 
 

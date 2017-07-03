@@ -195,7 +195,7 @@ body_class: toc
 
 <a href="addons.html#merlin">Merlin</a>
 
-<a href="addons.html#modgearman">Mod-Gearman</a>
+<a href="addons.html#mod-gearman">Mod-Gearman</a>
 
 <a href="addons.html#omd">OMD</a>
 

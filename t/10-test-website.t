@@ -404,12 +404,13 @@ sub _check_anchor {
     my @matches1 = $content =~ m/(<.*?(name|id)=['"]{1}(\Q$anchor\E)['"]{1}.*?>)/;
     $anchors->{$anchor} = 1 if scalar @matches1 > 0;
     if($content =~ m/\Qcreate side bar navigation automatically\E/mx) {
-        my @matches2 = $content =~ m/(<(h3|h4)>([^<]+))</gmi;
+        my @matches2 = $content =~ m/(<(h3|h4)\ id="([^<]+)")>/gmi;
         my $x = 0;
         for my $m (@matches2) {
             $x++;
             next unless $x%3==0;
-            $m =~ s/[^a-zA-Z0-9\ ]*//gmx;
+            $m =~ s/[^a-zA-Z0-9\ \-]*//gmx;
+            $m =~ s/\-/_/gmx;
             $m =~ s/\ +/_/gmx;
             $anchors->{lc $m} = 1;
         }
