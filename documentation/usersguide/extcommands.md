@@ -19,15 +19,15 @@ Naemon can process commands from external applications (including the CGIs) and 
 In order to have Naemon process external commands, make sure you do the following:
 
 <ul>
-<li>Enable external command checking with the <a href="configmain.html#check_external_commands">check_external_commands</a> option.
-<li>Specify the location of the command file with the <a href="configmain.html#command_file">command_file</a> option.
-<li>Setup proper permissions on the directory containing the external command file, as described in the <a href="quickstart.html">quickstart guide</a>.
+<li>Enable external command checking with the <a href="configmain.html#check_external_commands">check_external_commands</a> option.</li>
+<li>Specify the location of the command file with the <a href="configmain.html#command_file">command_file</a> option.</li>
+<li>Setup proper permissions on the directory containing the external command file, as described in the <a href="quickstart.html">quickstart guide</a>.</li>
 </ul>
 
 ### When Does Naemon Check For External Commands?
 
 <ul>
-<li>Naemon reads and executes external commands immediately when they are submitted.
+<li>Naemon reads and executes external commands immediately when they are submitted.</li>
 </ul>
 
 ### Using External Commands

@@ -13,8 +13,8 @@ Naemon is designed to allow <a href="plugins.html">plugins</a> to return optiona
 There are two basic categories of performance data that can be obtained from Naemon:
 
 <ol>
-<li>Check performance data
-<li>Plugin performance data
+<li>Check performance data</li>
+<li>Plugin performance data</li>
 </ol>
 
 Check performance data is internal data that relates to the actual execution of a host or service check.  This might include things like service check latency (i.e. how "late" was the service check from its scheduled execution time) and the number of seconds a host or service check took to execute.  This type of performance data is available for all checks that are performed.  The <a href="macrolist.html#hostexecutiontime">$HOSTEXECUTIONTIME$</a> and <a href="macrolist.html#serviceexecutiontime">$SERVICEEXECUTIONTIME$</a> <a href="macros.html">macros</a> can be used to determine the number of seconds a host or service check was running and the <a href="macrolist.html#hostlatency">$HOSTLATENCY$</a> and <a href="macrolist.html#servicelatency">$SERVICELATENCY$</a> macros can be used to determine how "late" a regularly-scheduled host or service check was.
@@ -57,8 +57,8 @@ Multiple lines of performance data (as well as normal text output) can be obtain
 If you want to process the performance data that is available from Naemon and the plugins, you'll need to do the following:
 
 <ol>
-<li>Enable the <a href="configmain.html#process_performance_data">process_performance_data</a> option.<br><br>
-<li>Configure Naemon so that performance data is either written to files and/or processed by executing commands.
+<li>Enable the <a href="configmain.html#process_performance_data">process_performance_data</a> option.<br><br></li>
+<li>Configure Naemon so that performance data is either written to files and/or processed by executing commands.</li>
 </ol>
 
 Read on for information on how to process performance data by writing to files or executing commands.

@@ -46,10 +46,24 @@ TABLE TD {
     vertical-align: top;
 }
 
+TABLE.object_definition TD:first-child {
+    padding-right: 15px;
+}
+
+TABLE.object_definition {
+    border: 1px solid #CCC;
+}
+
+TABLE.object_definition TD {
+    border: 1px solid #CCC;
+    border-right: 0;
+    border-left: 0;
+}
+
 /* affix styles */
 /* Custom Styles */
 ul.nav-tabs {
-	width: 220px;
+	width: 270px;
 	margin-top: 20px;
 	border-radius: 4px;
 	border: 1px solid #ddd;
@@ -66,6 +80,8 @@ ul.nav-tabs li a{
 	margin: 0;
 	padding: 8px 16px;
 	border-radius: 0;
+	white-space: nowrap;
+	overflow: hidden;
 }
 ul.nav-tabs > li.active > a, ul.nav-tabs > li.active > a:hover{
 	color: #fff;

@@ -20,8 +20,8 @@ The major difference between active and passive checks is that active checks are
 Passive checks are useful for monitoring services that are:
 
 <ul>
-<li>Asynchronous in nature and cannot be monitored effectively by polling their status on a regularly scheduled basis
-<li>Located behind a firewall and cannot be checked actively from the monitoring host
+<li>Asynchronous in nature and cannot be monitored effectively by polling their status on a regularly scheduled basis</li>
+<li>Located behind a firewall and cannot be checked actively from the monitoring host</li>
 </ul>
 
 Examples of asynchronous services that lend themselves to being monitored passively include SNMP traps and security alerts.  You never know how many (if any) traps or alerts you'll receive in a given time frame, so it's not feasible to just monitor their status every few minutes.
@@ -69,11 +69,11 @@ The format of the command is as follows:
 where...
 
 <ul>
-<li><i>timestamp</i> is the time in time_t format (seconds since the UNIX epoch) that the service check was performed (or submitted). Please note the single space after the right bracket.
-<li><i>host_name</i> is the short name of the host associated with the service in the service definition
-<li><i>svc_description</i> is the description of the service as specified in the service definition
-<li><i>return_code</i> is the return code of the check (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN)
-<li><i>plugin_output</i> is the text output of the service check (i.e. the plugin output)
+<li><i>timestamp</i> is the time in time_t format (seconds since the UNIX epoch) that the service check was performed (or submitted). Please note the single space after the right bracket.</li>
+<li><i>host_name</i> is the short name of the host associated with the service in the service definition</li>
+<li><i>svc_description</i> is the description of the service as specified in the service definition</li>
+<li><i>return_code</i> is the return code of the check (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN)</li>
+<li><i>plugin_output</i> is the text output of the service check (i.e. the plugin output)</li>
 </ul>
 
 {{ site.note }}A service must be defined in Naemon before you can submit passive check results for it!  Naemon will ignore all check results for services that had not been configured before it was last (re)started.{{ site.end }}
@@ -95,10 +95,10 @@ The format of the command is as follows:
 where...
 
 <ul>
-<li><i>timestamp</i> is the time in time_t format (seconds since the UNIX epoch) that the host check was performed (or submitted). Please note the single space after the right bracket.
-<li><i>host_name</i> is the short name of the host (as defined in the host definition)
-<li><i>host_status</i> is the status of the host (0=UP, 1=DOWN, 2=UNREACHABLE)
-<li><i>plugin_output</i> is the text output of the host check
+<li><i>timestamp</i> is the time in time_t format (seconds since the UNIX epoch) that the host check was performed (or submitted). Please note the single space after the right bracket.</li>
+<li><i>host_name</i> is the short name of the host (as defined in the host definition)</li>
+<li><i>host_status</i> is the status of the host (0=UP, 1=DOWN, 2=UNREACHABLE)</li>
+<li><i>plugin_output</i> is the text output of the host check</li>
 </ul>
 
 {{ site.note }}A host must be defined in Naemon before you can submit passive check results for it!  Naemon will ignore all check results for hosts that had not been configured before it was last (re)started.{{ site.end }}

@@ -62,13 +62,13 @@ rup 100001
 DATA
 
 %prognum = map { my($a, $b) = split; ($a, $b) } split(/\n/, $data) ;
-</pre>
-<li>BEGIN blocks will not work as you expect. May be best to avoid.<br><br>
-<li>Ensure that it is squeaky clean at compile time i.e.<br><br>
+</pre></li>
+<li>BEGIN blocks will not work as you expect. May be best to avoid.<br><br></li>
+<li>Ensure that it is squeaky clean at compile time i.e.<br><br></li>
 <ul>
-<li>use strict
-<li>use perl -w (other switches [T notably] may not help)
-<li>use perl -c
+<li>use strict</li>
+<li>use perl -w (other switches [T notably] may not help)</li>
+<li>use perl -c</li>
 </ul>
 <br><br>
 <li>Avoid lexical variables (my) with global scope as a means of passing __variable__ data into subroutines.
@@ -93,10 +93,10 @@ a;                            &amp;$a_cr;
 
 # anon closures __always__ rebind the current lexical value
 </pre>
-
-<li>put the global lexical and the subroutine using it in their own package (as an object or a module)
-<li>pass info to subs as references or aliases (\$lex_var or $_[n])
-<li>replace lexicals with package globals and exclude them from 'use strict' objections with 'use vars qw(global1 global2 ..)'
+</li>
+<li>put the global lexical and the subroutine using it in their own package (as an object or a module)</li>
+<li>pass info to subs as references or aliases (\$lex_var or $_[n])</li>
+<li>replace lexicals with package globals and exclude them from 'use strict' objections with 'use vars qw(global1 global2 ..)'</li>
 </ul>
 <br>
 <li>Be aware of where you can get more information.<br><br>
@@ -109,21 +109,22 @@ but all about writing Perl programs for the embedded Perl interpreter in Apache 
 The perlembed manpage is essential for context and encouragement.
 
 On the basis that Lincoln Stein and Doug MacEachern know a thing or two about Perl and embedding Perl, their book 'Writing Apache Modules with Perl and C' is almost certainly worth looking at.
-
-<li>Be aware that your plugin may return strange values with an ePN and that this is likely to be caused by the problem in item #4 above<br><br>
-<li>Be prepared to debug via:<br><br>
+</li>
+<li>Be aware that your plugin may return strange values with an ePN and that this is likely to be caused by the problem in item #4 above<br><br></li>
+<li>Be prepared to debug via:<br><br></li>
 <ul>
-<li>having a test ePN and
-<li>adding print statements to your plugin to display variable values to STDERR (can't use STDOUT)
-<li>adding print statements to p1.pl to display what ePN thinks your plugin is before it tries to run it (vi)
-<li>running the ePN in foreground mode (probably in conjunction with the former recommendations)
-<li>use the 'Deparse' module on your plugin to see how the parser has optimised it and what the interpreter will actually get. (see 'Constants in Perl' by Sean M. Burke, The Perl Journal, Fall 2001)
+<li>having a test ePN and</li>
+<li>adding print statements to your plugin to display variable values to STDERR (can't use STDOUT)</li>
+<li>adding print statements to p1.pl to display what ePN thinks your plugin is before it tries to run it (vi)</li>
+<li>running the ePN in foreground mode (probably in conjunction with the former recommendations)</li>
+<li>use the 'Deparse' module on your plugin to see how the parser has optimised it and what the interpreter will actually get. (see 'Constants in Perl' by Sean M. Burke, The Perl Journal, Fall 2001)</li>
 </ul>
 <br>
 <pre>
 perl -MO::Deparse &lt;your_program&gt;
 </pre>
 <br>
+</li>
 <li>Be aware of what ePN is transforming your plugin too, and if all else fails try and debug the transformed version.<br><br>
 
 As you can see below p1.pl rewrites your plugin as a subroutine called 'hndlr' in the package named 'Embed::&lt;something_related_to_your_plugin_file_name&gt;'.
@@ -164,11 +165,11 @@ package Embed::check_5frpc; sub hndlr { shift(@_); @ARGV=@_;
 <i>... rest of plugin code goes here (it was removed for brevity) ...</i>
 <font color="red">}</font>
 </pre>
-<br>
+<br></li>
 <li>Don't use 'use diagnostics' in a plugin run by your production ePN.
-    I think it causes__all__ the Perl plugins to return CRITICAL.<br><br>
+    I think it causes__all__ the Perl plugins to return CRITICAL.<br><br></li>
 <li>Consider using a mini embedded Perl C program to check your plugin. This is not
     sufficient to guarantee your plugin will perform Ok with an ePN but if the plugin fails
     this test it will certainly fail with your ePN. <font color="red">[ A sample mini ePN is shipped with Mod-Gearman
-    for use in testing Perl plugins.]</font> <br><br>
+    for use in testing Perl plugins.]</font> <br><br></li>
 </ol>

@@ -26,7 +26,7 @@ produce appropriate output.
 You can include custom headers and footers in the output of the CGIs by dropping some appropriately named
 HTML files in the *ssi/* subdirectory of the Naemon HTML directory (i.e. */etc/naemon/ssi*).
 
-Custom headers are included immediately after the &lt;BODY&gt;> tag in the CGI output, while custom footers
+Custom headers are included immediately after the &lt;BODY&gt; tag in the CGI output, while custom footers
 are included immediately before the closing &lt;/BODY&gt; tag.
 
 There are two types of customer headers and footers:

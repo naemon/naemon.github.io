@@ -30,10 +30,10 @@ Redundancy is a relatively complicated issue to understand, and even more diffic
 Before you can even think about implementing redundancy with Naemon, you need to be familiar with the following...
 
 <ul>
-<li>Implementing <a href="eventhandlers.html">event handlers</a> for hosts and services
-<li>Issuing <a href="extcommands.html">external commands</a> to Naemon via shell scripts
-<li>Executing plugins on remote hosts using either the <a href="addons.html#nrpe">NRPE addon</a> or some other method
-<li>Checking the status of the Naemon process with the <i>check_nagios</i> plugin
+<li>Implementing <a href="eventhandlers.html">event handlers</a> for hosts and services</li>
+<li>Issuing <a href="extcommands.html">external commands</a> to Naemon via shell scripts</li>
+<li>Executing plugins on remote hosts using either the <a href="addons.html#nrpe">NRPE addon</a> or some other method</li>
+<li>Checking the status of the Naemon process with the <i>check_nagios</i> plugin</li>
 </ul>
 
 <a name="samples"></a>
@@ -55,8 +55,8 @@ This is an easy (and naive) method of implementing redundant monitoring hosts on
 The goal of this type of redundancy implementation is simple.  Both the "master" and "slave" hosts monitor the same hosts and service on the network.  Under normal circumstances only the "master" host will be sending out notifications to contacts about problems.  We want the "slave" host running Naemon to take over the job of notifying contacts about problems if:
 
 <ol>
-<li>The "master" host that runs Naemon is down or..
-<li>The Naemon process on the "master" host stops running for some reason
+<li>The "master" host that runs Naemon is down or..</li>
+<li>The Naemon process on the "master" host stops running for some reason</li>
 </ol>
 
 #### Network Layout Diagram
@@ -66,7 +66,7 @@ The diagram below shows a very simple network setup.  For this scenario I will b
 
 <table border="1">
 <tr>
-<td><img src="images/redundancy.png" border=0></td>
+<td><img src="images/redundancy.png" border="0"></td>
 </tr>
 </table>
 
@@ -81,9 +81,9 @@ Next we need to consider the differences between the <a href="configobject.html"
 I will assume that you have the master host (host A) setup to monitor services on all hosts shown in the diagram above.  The slave host (host E) should be setup to monitor the same services and hosts, with the following additions in the configuration file...
 
 <ul>
-<li>The host definition for host A (in the host E configuration file) should have a host <a href="eventhandlers.html">event handler</a> defined.  Lets say the name of the host event handler is <font color="red">handle-master-host-event</font>.
-<li>The configuration file on host E should have a service defined to check the status of the Naemon process on host A.  Lets assume that you define this service check to run the <i>check_nagios</i> plugin on host A.  This can be done by using one of the methods described in <b>this FAQ</b> (update this!).
-<li>The service definition for the Naemon process check on host A should have an <a href="eventhandlers.html">event handler</a> defined.  Lets say the name of the service event handler is <font color="red">handle-master-proc-event</font>.
+<li>The host definition for host A (in the host E configuration file) should have a host <a href="eventhandlers.html">event handler</a> defined.  Lets say the name of the host event handler is <font color="red">handle-master-host-event</font>.</li>
+<li>The configuration file on host E should have a service defined to check the status of the Naemon process on host A.  Lets assume that you define this service check to run the <i>check_nagios</i> plugin on host A.  This can be done by using one of the methods described in <b>this FAQ</b> (update this!).</li>
+<li>The service definition for the Naemon process check on host A should have an <a href="eventhandlers.html">event handler</a> defined.  Lets say the name of the service event handler is <font color="red">handle-master-proc-event</font>.</li>
 </ul>
 
 It is important to note that host A (the master host) has no knowledge of host E (the slave host).  In this scenario it simply doesn't need to.  Of course you may be monitoring services on host E from host A, but that has nothing to do with the implementation of redundancy...
@@ -182,8 +182,8 @@ The slave host (host E) initially has notifications disabled, so it won't send o
 The Naemon process on the slave host (host E) becomes the master host when...
 
 <ul>
-<li>The master host (host A) goes down and the <i><font color="red">handle-master-host-event</font></i> host event handler is executed.
-<li>The Naemon process on the master host (host A) stops running and the <i><font color="red">handle-master-proc-event</font></i> service event handler is executed.
+<li>The master host (host A) goes down and the <i><font color="red">handle-master-host-event</font></i> host event handler is executed.</li>
+<li>The Naemon process on the master host (host A) stops running and the <i><font color="red">handle-master-proc-event</font></i> service event handler is executed.</li>
 </ul>
 
 When the Naemon process on the slave host (host E) has notifications enabled, it will be able to send out notifications about any service or host problems or recoveries.  At this point host E has effectively taken over the responsibility of notifying contacts of host and service problems!
@@ -191,8 +191,8 @@ When the Naemon process on the slave host (host E) has notifications enabled, it
 The Naemon process on host E returns to being the slave host when...
 
 <ul>
-<li>Host A recovers and the <i><font color="red">handle-master-host-event</font></i> host event handler is executed.
-<li>The Naemon process on host A recovers and the <i><font color="red">handle-master-proc-event</font></i> service event handler is executed.
+<li>Host A recovers and the <i><font color="red">handle-master-host-event</font></i> host event handler is executed.</li>
+<li>The Naemon process on host A recovers and the <i><font color="red">handle-master-proc-event</font></i> service event handler is executed.</li>
 </ul>
 
 When the Naemon process on host E has notifications disabled, it will not send out notifications about any service or host problems or recoveries.  At this point host E has handed over the responsibilities of notifying contacts of problems to the Naemon process on host A.  Everything is now as it was when we first started!
@@ -202,25 +202,25 @@ When the Naemon process on host E has notifications disabled, it will not send o
 Redundancy in Naemon is by no means perfect.  One of the more obvious problems is the lag time between the master host failing and the slave host taking over.  This is affected by the following...
 
 <ul>
-<li>The time between a failure of the master host and the first time the slave host detects a problem
-<li>The time needed to verify that the master host really does have a problem (using service or host check retries on the slave host)
-<li>The time between the execution of the event handler and the next time that Naemon checks for external commands
+<li>The time between a failure of the master host and the first time the slave host detects a problem</li>
+<li>The time needed to verify that the master host really does have a problem (using service or host check retries on the slave host)</li>
+<li>The time between the execution of the event handler and the next time that Naemon checks for external commands</li>
 </ul>
 
 You can minimize this lag by...
 
 <ul>
 <li>Ensuring that the Naemon process on host E (re)checks one or more services at a high frequency.
-    This is done by using the <i>check_interval</i> and <i>retry_interval</i> arguments in each service definition.
+    This is done by using the <i>check_interval</i> and <i>retry_interval</i> arguments in each service definition.</li>
 <li>Ensuring that the number of host rechecks for host A (on host E) allow for fast detection of host problems.
-    This is done by using the <i>max_check_attempts</i> argument in the host definition.
+    This is done by using the <i>max_check_attempts</i> argument in the host definition.</li>
 </ul>
 
 When Naemon recovers on the host A, there is also some lag time before host E returns to being a slave host.  This is affected by the following...
 
 <ul>
-<li>The time between a recovery of host A and the time the Naemon process on host E detects the recovery
-<li>The time between the execution of the event handler on host B and the next time the Naemon process on host E checks for external commands
+<li>The time between a recovery of host A and the time the Naemon process on host E detects the recovery</li>
+<li>The time between the execution of the event handler on host B and the next time the Naemon process on host E checks for external commands</li>
 </ul>
 
 The exact lag times between the transfer of monitoring responsibilities will vary depending on how many services you have defined, the interval at which services are checked, and a lot of pure chance.  At any rate, its definitely better than nothing.

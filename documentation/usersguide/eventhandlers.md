@@ -27,9 +27,9 @@ An obvious use for event handlers is the ability for Naemon to proactively fix p
 Event handlers are executed when a service or host:
 
 <ul>
-<li>Is in a SOFT problem state
-<li>Initially goes into a HARD problem state
-<li>Initially recovers from a SOFT or HARD problem state
+<li>Is in a SOFT problem state</li>
+<li>Initially goes into a HARD problem state</li>
+<li>Initially recovers from a SOFT or HARD problem state</li>
 </ul>
 
 SOFT and HARD states are described in detail <a href="statetypes.html">here</a> .

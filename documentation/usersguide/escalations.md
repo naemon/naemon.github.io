@@ -93,9 +93,9 @@ define serviceescalation{
 In the example above:
 
 <ul>
-<li>The <i>nt-admins</i> and <i>managers</i> contact groups get notified on the third notification
-<li>All three contact groups get notified on the fourth and fifth notifications
-<li>Only the <i>on-call-support</i> contact group gets notified on the sixth (or higher) notification
+<li>The <i>nt-admins</i> and <i>managers</i> contact groups get notified on the third notification</li>
+<li>All three contact groups get notified on the fourth and fifth notifications</li>
+<li>Only the <i>on-call-support</i> contact group gets notified on the sixth (or higher) notification</li>
 </ul>
 
 ### Recovery Notifications

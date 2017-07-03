@@ -15,10 +15,10 @@ Before I get into this, let me say that flapping detection has been a little dif
 Whenever Naemon checks the status of a host or service, it will check to see if it has started or stopped flapping.  It does this by:
 
 <ul>
-<li>Storing the results of the last 21 checks of the host or service
-<li>Analyzing the historical check results and determine where state changes/transitions occur
-<li>Using the state transitions to determine a percent state change value (a measure of change) for the host or service
-<li>Comparing the percent state change value against low and high flapping thresholds
+<li>Storing the results of the last 21 checks of the host or service</li>
+<li>Analyzing the historical check results and determine where state changes/transitions occur</li>
+<li>Using the state transitions to determine a percent state change value (a measure of change) for the host or service</li>
+<li>Comparing the percent state change value against low and high flapping thresholds</li>
 </ul>
 
 A host or service is determined to have <i>started</i> flapping when its percent state change first exceeds a <i>high</i> flapping threshold.
@@ -50,8 +50,8 @@ Since the flap detection logic will give newer state changes a higher rate than 
 The calculated percent state change for the service (31%) will then be compared against flapping thresholds to see what should happen:
 
 <ul>
-<li>If the service was <i>not</i> previously flapping and 31% is <i>equal to or greater than</i> the high flap threshold, Naemon considers the service to have just started flapping.
-<li>If the service <i>was</i> previously flapping and 31% is <i>less than</i> the low flap threshold, Naemon considers the service to have just stopped flapping.
+<li>If the service was <i>not</i> previously flapping and 31% is <i>equal to or greater than</i> the high flap threshold, Naemon considers the service to have just started flapping.</li>
+<li>If the service <i>was</i> previously flapping and 31% is <i>less than</i> the low flap threshold, Naemon considers the service to have just stopped flapping.</li>
 </ul>
 
 If neither of those two conditions are met, the flap detection logic won't do anything else with the service, since it is either not currently flapping or it is still flapping.
@@ -67,8 +67,8 @@ The flap detection logic for services works as described in the example above.
 Host flap detection works in a similar manner to service flap detection, with one important difference: Naemon will attempt to check to see if a host is flapping whenever:
 
 <ul>
-<li>The host is checked (actively or passively)
-<li>Sometimes when a service associated with that host is checked.  More specifically, when at least <i>x</i> amount of time has passed since the flap detection was last performed, where <i>x</i> is equal to the average check interval of all services associated with the host.
+<li>The host is checked (actively or passively)</li>
+<li>Sometimes when a service associated with that host is checked.  More specifically, when at least <i>x</i> amount of time has passed since the flap detection was last performed, where <i>x</i> is equal to the average check interval of all services associated with the host.</li>
 </ul>
 
 Why is this done?  With services we know that the minimum amount of time between consecutive flap detection routines is going to be equal to the service check interval.  However, you might not be monitoring hosts on a regular basis, so there might not be a host check interval that can be used in the flap detection logic.  Also, it makes sense that checking a service should count towards the detection of host flapping.  Services are attributes of or things associated with host after all...  At any rate, that's the best method I could come up with for determining how often flap detection could be performed on a host, so there you have it.
@@ -118,19 +118,19 @@ This directive allows you to specify what host or service states (i.e. "UP, "DOW
 When a service or host is first detected as flapping, Naemon will:
 
 <ol>
-<li>Log a message indicating that the service or host is flapping.
-<li>Add a non-persistent comment to the host or service indicating that it is flapping.
-<li>Send a "flapping start" notification for the host or service to appropriate contacts.
-<li>Suppress other notifications for the service or host (this is one of the filters in the <a href="notifications.html">notification logic</a>).
+<li>Log a message indicating that the service or host is flapping.</li>
+<li>Add a non-persistent comment to the host or service indicating that it is flapping.</li>
+<li>Send a "flapping start" notification for the host or service to appropriate contacts.</li>
+<li>Suppress other notifications for the service or host (this is one of the filters in the <a href="notifications.html">notification logic</a>).</li>
 </ol>
 
 When a service or host stops flapping, Naemon will:
 
 <ol>
-<li>Log a message indicating that the service or host has stopped flapping.
-<li>Delete the comment that was originally added to the service or host when it started flapping.
-<li>Send a "flapping stop" notification for the host or service to appropriate contacts.
-<li>Remove the block on notifications for the service or host (notifications will still be bound to the normal <a href="notifications.html">notification logic</a>).
+<li>Log a message indicating that the service or host has stopped flapping.</li>
+<li>Delete the comment that was originally added to the service or host when it started flapping.</li>
+<li>Send a "flapping stop" notification for the host or service to appropriate contacts.</li>
+<li>Remove the block on notifications for the service or host (notifications will still be bound to the normal <a href="notifications.html">notification logic</a>).</li>
 </ol>
 
 ### Enabling Flap Detection

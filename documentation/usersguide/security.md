@@ -72,7 +72,7 @@ a Naemon-based monitoring solution...
     using the <a href="configmain.html#naemon_user">naemon_user</a> and
     <a href="configmain.html#naemon_group">naemon_group</a> directives in the main config file.
     If you need to execute event handlers or plugins which require root access, you might
-    want to try using <a href="http://www.courtesan.com/sudo/sudo.html">sudo</a>.<br><br>
+    want to try using <a href="http://www.courtesan.com/sudo/sudo.html">sudo</a>.<br><br></li>
 <li><strong>Lock Down The Check Result Directory</strong>.
     Make sure that only the <i>naemon</i> user is able to read/write in the
     <a href="configmain.html#check_result_path">check result path</a>.

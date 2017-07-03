@@ -25,7 +25,7 @@ More information on what objects are and how they relate to each other can be fo
 
 Objects can be defined in one or more configuration files and/or directories that you specify using the <a href="configmain.html#cfg_file">cfg_file</a> and/or <a href="configmain.html#cfg_dir">cfg_dir</a> directives in the main configuration file.
 
-{{ site.hint }}When you follow <a href="quickstart.html">quickstart installation guide</a>, several sample object configuration files are placed in */usr/local/nagios/etc/objects/*.{{ site.end }}
+{{ site.hint }}When you follow <a href="quickstart.html">quickstart installation guide</a>, several sample object configuration files are placed in <b>/usr/local/naemon/etc/objects/</b>.{{ site.end }}
 
 You can use these sample files to see how object inheritance works and learn how to define your own object definitions.
 
@@ -43,7 +43,6 @@ Some of the main object types are explained in greater detail below...
 <table border="0" width="100%">
 <tr>
 <td valign="top">
-<p>
 <a href="objectdefinitions.html#host"><b>Hosts</b></a> are one of the central objects in the monitoring logic.  Important attributes of hosts are as follows:
 <ul>
 <li>Hosts are usually physical devices on your network (servers, workstations, routers, switches, printers, etc).</li>
@@ -116,7 +115,7 @@ Information on how timeperiods work can be found <a href="timeperiods.html">here
 <td valign="top">
 <a href="objectdefinitions.html#command"><b>Commands</b></a> are used to tell Naemon what programs, scripts, etc. it should execute to perform:
 <ul>
-<li> Host and service checks
+<li> Host and service checks</li>
 <li>Notifications</li>
 <li>Event handlers</li>
 <li>and more...</li>

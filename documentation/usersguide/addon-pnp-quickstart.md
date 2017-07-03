@@ -19,9 +19,9 @@ These instructions were written for:
 * Debian Server
 * SUSE Linux Enterprise Server
 
-## Install instruction 
+## Install instruction
 
-###1 - Install dependencies
+### 1 - Install dependencies
 
 #### Redhat / CentOS
 
@@ -45,7 +45,7 @@ zypper install gcc-c++ rrdtool php53-gd php53 apache2-mod_php53 php53-zlib php53
 
 
 
-###2 - Download PNP4Nagios
+### 2 - Download PNP4Nagios
 
 ```
 cd ~/
@@ -54,14 +54,14 @@ cd src
 wget http://downloads.sourceforge.net/project/pnp4nagios/PNP-0.6/pnp4nagios-0.6.24.tar.gz
 ```
 
-###3 - Extract PNP4Nagios source
+### 3 - Extract PNP4Nagios source
 
 ```
 tar -xzvf pnp4nagios-0.6.24.tar.gz -C /usr/local/src/
 ```
 
 
-###4 - Build and install PNP4Nagios
+### 4 - Build and install PNP4Nagios
 
 ```
 cd /usr/local/src/pnp4nagios-0.6.24/
@@ -73,7 +73,7 @@ make install-config
 make install-init
 ```
 
-###5 - Start npcd with OS (and right now)
+### 5 - Start npcd with OS (and right now)
 
 #### Redhat / CentOS
 
@@ -96,7 +96,7 @@ chkconfig -a npcd
 service npcd start
 ```
 
-###6 - Modify pnp4nagios.cfg for Naemon
+### 6 - Modify pnp4nagios.cfg for Naemon
 
 #### Redhat / CentOS
 
@@ -126,7 +126,7 @@ edit row: *AuthUserFile /usr/local/nagios/etc/htpasswd.users*
 
 replace with: *AuthUserFile /etc/naemon/htpasswd*
 
-###7 - Modify config_local.php for Naemon
+### 7 - Modify config_local.php for Naemon
 
 ```
 vi /usr/local/pnp4nagios/etc/config_local.php
@@ -136,7 +136,7 @@ edit row: *$conf['nagios_base'] = "/nagios/cgi-bin";*
 
 replace with: *$conf['nagios_base'] = "/naemon/cgi-bin";*
 
-###8 - Enable Naemon performance data
+### 8 - Enable Naemon performance data
 
 ```
 vi /etc/naemon/naemon.cfg
@@ -160,7 +160,7 @@ service_perfdata_file_processing_command=process-service-perfdata-file
 
 #
 #
-# 
+#
 host_perfdata_file=/usr/local/pnp4nagios/var/host-perfdata
 host_perfdata_file_template=DATATYPE::HOSTPERFDATA\tTIMET::$TIMET$\tHOSTNAME::$HOSTNAME$\tHOSTPERFDATA::$HOSTPERFDATA$\tHOSTCHECKCOMMAND::$HOSTCHECKCOMMAND$\tHOSTSTATE::$HOSTSTATE$\tHOSTSTATETYPE::$HOSTSTATETYPE$
 host_perfdata_file_mode=a
@@ -168,7 +168,7 @@ host_perfdata_file_processing_interval=15
 host_perfdata_file_processing_command=process-host-perfdata-file
 ```
 
-###9 - Add process performance commands
+### 9 - Add process performance commands
 
 ```
 vi /etc/naemon/conf.d/commands.cfg
@@ -188,13 +188,13 @@ define command{
 }
 ```
 
-###10 - Add host performance template
+### 10 - Add host performance template
 
 ```
 vi /etc/naemon/conf.d/templates/hosts.cfg
 ```
 
-Add the following entries at the bottom of /etc/naemon/conf.d/templates/hosts.cfg 
+Add the following entries at the bottom of /etc/naemon/conf.d/templates/hosts.cfg
 
 ```
 define host {
@@ -206,7 +206,7 @@ define host {
 
 ```
 
-###11 - Add service performance template
+### 11 - Add service performance template
 
 ```
 vi /etc/naemon/conf.d/templates/services.cfg
@@ -223,7 +223,7 @@ define service {
 }
 ```
 
-###12 - Restart services
+### 12 - Restart services
 
 #### Redhat / CentOS
 
@@ -240,15 +240,15 @@ service naemon restart
 ```
 
 
-###13 - Verify installation of PNP4Nagios
+### 13 - Verify installation of PNP4Nagios
 Browse http://server/pnp4nagios and authenticate and verify that everything are OK, fix problems as they occur
 
-###14 - Remove PNP4Nagios installation file
+### 14 - Remove PNP4Nagios installation file
 ```
 rm /usr/local/pnp4nagios/share/install.php
 ```
 
-###15 - Add performance templates to your host and services
+### 15 - Add performance templates to your host and services
 Simply add host-pnp to your host or service-pnp to your services to enable graphs. You can add several templates for each host and service definition.
 
 Host example
@@ -272,5 +272,3 @@ define service {
   check_command                  check_local_load!5.0,4.0,3.0!10.0,6.0,4.0
 }
 ```
-
-

@@ -16,15 +16,15 @@ will yield a warning when encountered and no longer have any effect
 on monitoring:
 
 <ul>
-<li>command_check_interval
-<li>external_command_buffer_slots
-<li>sleep_time
-<li>enable_failure_prediction
-<li>enable_embedded_perl
-<li>use_embedded_perl_implicitly
-<li>auth_file
-<li>p1_file
-<li>log_rotation_method
+<li>command_check_interval</li>
+<li>external_command_buffer_slots</li>
+<li>sleep_time</li>
+<li>enable_failure_prediction</li>
+<li>enable_embedded_perl</li>
+<li>use_embedded_perl_implicitly</li>
+<li>auth_file</li>
+<li>p1_file</li>
+<li>log_rotation_method</li>
 </ul>
 
 ### Nested Group Includes

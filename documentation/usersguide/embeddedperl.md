@@ -43,17 +43,17 @@ Some advantages of ePN (embedded Perl in Mod-Gearman) include:
 <ul>
 <li>Mod-Gearman will spend much less time running your Perl plugins because it no longer forks to
     execute the plugin (each time loading the Perl interpreter). Instead, it executes your
-    plugin by making a library call.
+    plugin by making a library call.</li>
 <li>It greatly reduces the system impact of Perl plugins and/or allows you to run more checks with
     Perl plugin than you otherwise would be able to.  In other words, you have less incentive to write
     plugins in other languages such as C/C++, or Expect/TCL, that are generally recognized to have
     development times at least an order of magnitude slower than Perl (although they do run about ten
-    times faster also - TCL being an exception).
+    times faster also - TCL being an exception).</li>
 <li>If you are not a C programmer, then you can still get a huge amount of mileage out of Mod-Gearman
     by letting Perl do all the heavy lifting without having Mod-Gearman slow right down.
     Note however, that the ePN will not speed up your plugin (apart from eliminating the interpreter
-    load time). If you want fast plugins then consider Perl XSUBs (XS), or C <i>after</i> you are sure that your Perl is tuned and that you have a suitable algorithm (Benchmark.pm is <i>invaluable</i> for comparing the performance of Perl language elements).
-<li>Using the ePN is an excellent opportunity to learn more about Perl.
+    load time). If you want fast plugins then consider Perl XSUBs (XS), or C <i>after</i> you are sure that your Perl is tuned and that you have a suitable algorithm (Benchmark.pm is <i>invaluable</i> for comparing the performance of Perl language elements).</li>
+<li>Using the ePN is an excellent opportunity to learn more about Perl.</li>
 </ul>
 
 
@@ -65,12 +65,12 @@ The disadvantages of ePN (embedded Perl in Mod-Gearman) are much the same as Apa
 
 <ul>
 <li>A Perl program that works <i>fine</i> with plain Naemon may <i>not</i> work with the ePN.
-    You may have to modify your plugins to get them to work.
-<li>Perl plugins are harder to debug under an ePN than under a plain Naemon.
-<li>Your ePN will have a larger SIZE (memory footprint) than a plain Naemon.
-<li>Some Perl constructs cannot be used or may behave differently than what you would expect.
-<li>You may have to be aware of 'more than one way to do it' and choose a way that seems less attractive or obvious.
-<li>You will need greater Perl knowledge (but nothing very esoteric or stuff about Perl internals - unless your plugin uses XSUBS).
+    You may have to modify your plugins to get them to work.</li>
+<li>Perl plugins are harder to debug under an ePN than under a plain Naemon.</li>
+<li>Your ePN will have a larger SIZE (memory footprint) than a plain Naemon.</li>
+<li>Some Perl constructs cannot be used or may behave differently than what you would expect.</li>
+<li>You may have to be aware of 'more than one way to do it' and choose a way that seems less attractive or obvious.</li>
+<li>You will need greater Perl knowledge (but nothing very esoteric or stuff about Perl internals - unless your plugin uses XSUBS).</li>
 </ul>
 
 
@@ -103,7 +103,7 @@ the <font color="red"><i>--with-perlcache</i></font> option as well.
 Example:
 
 ```
-    ./configure --enable-embedded-perl --with-perlcache <i>otheroptions...</i>
+    ./configure --enable-embedded-perl --with-perlcache <otheroptions...>
 ```
 
 Once you've rerun the configure script with the new options, make sure to recompile Mod-Gearman.

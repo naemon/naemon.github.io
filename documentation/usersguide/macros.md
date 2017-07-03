@@ -209,16 +209,16 @@ the <a href="configmain.html#illegal_macro_output_chars">`illegal_macro_output_c
 The following macros are stripped of potentially dangerous characters:
 
 <ol>
-<li><a href="macrolist.html#hostoutput">$HOSTOUTPUT$</a>
-<li><a href="macrolist.html#longhostoutput">$LONGHOSTOUTPUT$</a>
-<li><a href="macrolist.html#hostperfdata">$HOSTPERFDATA$</a>
-<li><a href="macrolist.html#hostackauthor">$HOSTACKAUTHOR$</a>
-<li><a href="macrolist.html#hostackcomment">$HOSTACKCOMMENT$</a>
-<li><a href="macrolist.html#serviceoutput">$SERVICEOUTPUT$</a>
-<li><a href="macrolist.html#longserviceoutput">$LONGSERVICEOUTPUT$</a>
-<li><a href="macrolist.html#serviceperfdata">$SERVICEPERFDATA$</a>
-<li><a href="macrolist.html#serviceackauthor">$SERVICEACKAUTHOR$</a>
-<li><a href="macrolist.html#serviceackcomment">$SERVICEACKCOMMENT$</a>
+<li><a href="macrolist.html#hostoutput">$HOSTOUTPUT$</a></li>
+<li><a href="macrolist.html#longhostoutput">$LONGHOSTOUTPUT$</a></li>
+<li><a href="macrolist.html#hostperfdata">$HOSTPERFDATA$</a></li>
+<li><a href="macrolist.html#hostackauthor">$HOSTACKAUTHOR$</a></li>
+<li><a href="macrolist.html#hostackcomment">$HOSTACKCOMMENT$</a></li>
+<li><a href="macrolist.html#serviceoutput">$SERVICEOUTPUT$</a></li>
+<li><a href="macrolist.html#longserviceoutput">$LONGSERVICEOUTPUT$</a></li>
+<li><a href="macrolist.html#serviceperfdata">$SERVICEPERFDATA$</a></li>
+<li><a href="macrolist.html#serviceackauthor">$SERVICEACKAUTHOR$</a></li>
+<li><a href="macrolist.html#serviceackcomment">$SERVICEACKCOMMENT$</a></li>
 </ol>
 
 Additionally, any macros that contain <a href="customobjectvars.html">custom variables</a> are stripped for safety and security.

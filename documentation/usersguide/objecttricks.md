@@ -9,12 +9,12 @@ title: Time-Saving Tricks For Object Definitions
 This documentation attempts to explain how you can exploit the (somewhat) hidden features of <a href="objectdefinitions.html">template-based object definitions</a> to save your sanity.  How so, you ask?  Several types of objects allow you to specify multiple host names and/or hostgroup names in definitions, allowing you to "copy" the object definition to multiple hosts or services.  I'll cover each type of object that supports these features separately.  For starters, the object types which support this time-saving feature are as follows:
 
 <ul>
-<li><a href="#service">Services</a>
-<li><a href="#serviceescalation">Service escalations</a>
-<li><a href="#servicedependency">Service dependencies</a>
-<li><a href="#hostescalation">Host escalations</a>
-<li><a href="#hostdependency">Host dependencies</a>
-<li><a href="#hostgroup">Hostgroups</a>
+<li><a href="#service">Services</a></li>
+<li><a href="#serviceescalation">Service escalations</a></li>
+<li><a href="#servicedependency">Service dependencies</a></li>
+<li><a href="#hostescalation">Host escalations</a></li>
+<li><a href="#hostdependency">Host dependencies</a></li>
+<li><a href="#hostgroup">Hostgroups</a></li>
 </ul>
 
 Object types that are not listed above (i.e. timeperiods, commands, etc.) do not support the features I'm about to describe.

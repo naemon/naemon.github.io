@@ -17,8 +17,8 @@ Notification escalations are explained <a href="escalations.html">here</a>.
 The decision to send out notifications is made in the service check and host check logic.  Host and service notifications occur in the following instances...
 
 <ul>
-<li>When a hard state change occurs.  More information on state types and hard state changes can be found <a href="statetypes.html">here</a>.
-<li>When a host or service remains in a hard non-OK state and the time specified by the &lt;<i>notification_interval</i>&gt; option in the host or service definition has passed since the last notification was sent out (for that specified host or service).
+<li>When a hard state change occurs.  More information on state types and hard state changes can be found <a href="statetypes.html">here</a>.</li>
+<li>When a host or service remains in a hard non-OK state and the time specified by the &lt;<i>notification_interval</i>&gt; option in the host or service definition has passed since the last notification was sent out (for that specified host or service).</li>
 </ul>
 
 ### Who Gets Notified?
@@ -44,7 +44,7 @@ The first filter for host or service notifications is a check to see if the host
 
 The second filter for host or service notification is a check to see if the host or service is <a href="flapping.html">flapping</a> (if you enabled flap detection).  If the service or host is currently flapping, <b>no one gets notified</b>.  Otherwise it gets passed to the next filter.
 
-The third host or service filter that must be passed is the host- or service-specific notification options.  Each service definition contains options that determine whether or not notifications can be sent out for warning states, critical states, and recoveries.  Similarly, each host definition contains options that determine whether or not notifications can be sent out when the host goes down, becomes unreachable, or recovers.  If the host or service notification does not pass these options, <b>no one gets notified</b>.  If it does pass these options, the notification gets passed to the next filter...  
+The third host or service filter that must be passed is the host- or service-specific notification options.  Each service definition contains options that determine whether or not notifications can be sent out for warning states, critical states, and recoveries.  Similarly, each host definition contains options that determine whether or not notifications can be sent out when the host goes down, becomes unreachable, or recovers.  If the host or service notification does not pass these options, <b>no one gets notified</b>.  If it does pass these options, the notification gets passed to the next filter...
 
 {{ site.note }}Notifications about host or service recoveries are only sent out if a notification was sent out for the original problem.  It doesn't make sense to get a recovery notification for something you never knew was a problem.{{ site.end }}
 
@@ -112,9 +112,9 @@ there are network problems).  I haven't actually tried these packages myself, bu
 using them...
 
 <ul>
-<li><a href="http://www.gnokii.org/">Gnokii</a> (SMS software for contacting Nokia phones via GSM network)
-<li><a href="http://www.qpage.org/" target="_top">QuickPage</a> (alphanumeric pager software)
-<li><a href="http://www.sendpage.org/" target="_top">Sendpage</a> (paging software)
+<li><a href="http://www.gnokii.org/">Gnokii</a> (SMS software for contacting Nokia phones via GSM network)</li>
+<li><a href="http://www.qpage.org/" target="_top">QuickPage</a> (alphanumeric pager software)</li>
+<li><a href="http://www.sendpage.org/" target="_top">Sendpage</a> (paging software)</li>
 </ul>
 
 If you want to try out a non-traditional method of notification, you might want to mess around with audio alerts.  If you want to have audio alerts played on the monitoring server (with synthesized speech), check out <a href="http://www.cstr.ed.ac.uk/projects/festival/">Festival</a>.  If you'd rather leave the monitoring box alone and have audio alerts played on another box, check out the <a href="http://radscan.com/nas.html">Network Audio System (NAS)</a> and <a href="http://rplay.doit.org/">rplay</a> projects.

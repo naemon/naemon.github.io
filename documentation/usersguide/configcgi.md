@@ -17,12 +17,12 @@ When creating and/or editing configuration files, keep the following in mind:
 
 ### Sample Configuration
 
-{{ site.hint }}A sample CGI configuration file (*/etc/naemon/cgi.cfg*) is installed for you when you follow the <a href="quickstart.html">quickstart installation guide</a>.{{ site.end }}
+{{ site.hint }}A sample CGI configuration file (<b>/etc/naemon/cgi.cfg</b>) is installed for you when you follow the <a href="quickstart.html">quickstart installation guide</a>.{{ site.end }}
 
 ### Config File Location
 
 By default, Thruk expects the CGI configuration file to be named **cgi.cfg** and located in the config file directory along with the <a href="configmain.html">main config file</a>.
-If you need to change the name of the file or its location, you can configure Thruk to load a different location by setting **cgi.cfg** in your */etc/naemon/thruk_local.conf*.
+If you need to change the name of the file or its location, you can configure Thruk to load a different location by setting <b>cgi.cfg</b> in your <b>/etc/naemon/thruk_local.conf</b>.
 
 ### Configuration File Variables
 
@@ -36,11 +36,11 @@ Below you will find descriptions of each main Naemon configuration file option..
 
 <table border="0">
 <tr>
-<td valign=top>Format:</td>
+<td valign="top">Format:</td>
 <td><b>use_authentication=&lt;0/1&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Example:</td>
+<td valign="top">Example:</td>
 <td><font color="red"><b>use_authentication=1</b></font></td>
 </tr>
 </table>
@@ -62,11 +62,11 @@ configure authorization for the CGIs can be found <a href="cgiauth.html">here</a
 
 <table border="0">
 <tr>
-<td valign=top>Format:</td>
+<td valign="top">Format:</td>
 <td><b>default_user_name=&lt;username&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Example:</td>
+<td valign="top">Example:</td>
 <td><font color="red"><b>default_user_name=guest</b></font></td>
 </tr>
 </table>
@@ -89,15 +89,15 @@ authenticated to the web server will inherit all rights you assign to this user!
 
 <table border="0">
 <tr>
-<td valign=top>Format:</td>
+<td valign="top">Format:</td>
 <td><b>authorized_for_system_information=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Groups:</td>
+<td valign="top">Groups:</td>
 <td><b>authorized_contactgroup_for_system_information=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Example:</td>
+<td valign="top">Example:</td>
 <td><font color="red"><b>authorized_for_system_information=naemonadmin,theboss</b></font></td>
 </tr>
 </table>
@@ -114,15 +114,15 @@ More information on how to setup authentication and configure authorization for 
 
 <table border="0">
 <tr>
-<td valign=top>Format:</td>
+<td valign="top">Format:</td>
 <td><b>authorized_for_system_commands=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Groups:</td>
+<td valign="top">Groups:</td>
 <td><b>authorized_contactgroup_for_system_commands=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Example:</td>
+<td valign="top">Example:</td>
 <td><font color="red"><b>authorized_for_system_commands=naemonadmin</b></font></td>
 </tr>
 </table>
@@ -139,15 +139,15 @@ More information on how to setup authentication and configure authorization for 
 
 <table border="0">
 <tr>
-<td valign=top>Format:</td>
+<td valign="top">Format:</td>
 <td><b>authorized_for_configuration_information=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Groups:</td>
+<td valign="top">Groups:</td>
 <td><b>authorized_contactgroup_for_configuration_information=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Example:</td>
+<td valign="top">Example:</td>
 <td><font color="red"><b>authorized_for_configuration_information=naemonadmin</b></font></td>
 </tr>
 </table>
@@ -164,15 +164,15 @@ found <a href="cgiauth.html">here</a>.
 
 <table border="0">
 <tr>
-<td valign=top>Format:</td>
+<td valign="top">Format:</td>
 <td><b>authorized_for_all_hosts=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Groups:</td>
+<td valign="top">Groups:</td>
 <td><b>authorized_contactgroup_for_all_hosts=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Example:</td>
+<td valign="top">Example:</td>
 <td><font color="red"><b>authorized_for_all_hosts=naemonadmin,theboss</b></font></td>
 </tr>
 </table>
@@ -191,15 +191,15 @@ More information on how to setup authentication and configure authorization for 
 
 <table border="0">
 <tr>
-<td valign=top>Format:</td>
+<td valign="top">Format:</td>
 <td><b>authorized_for_all_host_commands=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Groups:</td>
+<td valign="top">Groups:</td>
 <td><b>authorized_contactgroup_for_all_host_commands=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Example:</td>
+<td valign="top">Example:</td>
 <td><font color="red"><b>authorized_for_all_host_commands=naemonadmin</b></font></td>
 </tr>
 </table>
@@ -218,15 +218,15 @@ on how to setup authentication and configure authorization for the CGIs can be f
 
 <table border="0">
 <tr>
-<td valign=top>Format:</td>
+<td valign="top">Format:</td>
 <td><b>authorized_for_all_services=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Groups:</td>
+<td valign="top">Groups:</td>
 <td><b>authorized_contactgroup_for_all_services=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Example:</td>
+<td valign="top">Example:</td>
 <td><font color="red"><b>authorized_for_all_services=naemonadmin,theboss</b></font></td>
 </tr>
 </table>
@@ -246,15 +246,15 @@ can be found <a href="cgiauth.html">here</a>.
 
 <table border="0">
 <tr>
-<td valign=top>Format:</td>
+<td valign="top">Format:</td>
 <td><b>authorized_for_all_service_commands=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Groups:</td>
+<td valign="top">Groups:</td>
 <td><b>authorized_contactgroup_for_all_service_commands=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Example:</td>
+<td valign="top">Example:</td>
 <td><font color="red"><b>authorized_for_all_service_commands=naemonadmin</b></font></td>
 </tr>
 </table>
@@ -272,15 +272,15 @@ More information on how to setup authentication and configure authorization for 
 
 <table border="0">
 <tr>
-<td valign=top>Format:</td>
+<td valign="top">Format:</td>
 <td><b>authorized_for_read_only=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,...&lt;user*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Groups:</td>
+<td valign="top">Groups:</td>
 <td><b>authorized_contactgroup_for_read_only=&lt;group1&gt;,&lt;group2&gt;,&lt;group3&gt;,...&lt;group*n*&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Example:</td>
+<td valign="top">Example:</td>
 <td><font color="red"><b>authorized_for_read_only=john,mark</b></font></td>
 </tr>
 </table>
@@ -294,11 +294,11 @@ comments from being shown to read-only users.
 
 <table border="0">
 <tr>
-<td valign=top>Format:</td>
+<td valign="top">Format:</td>
 <td><b>lock_author_names=[0/1]</b></td>
 </tr>
 <tr>
-<td valign=top>Example:</td>
+<td valign="top">Example:</td>
 <td><font color="red"><b>lock_author_names=1</b></font></td>
 </tr>
 </table>
@@ -316,11 +316,11 @@ author name associated with the command request.
 
 <table border="0">
 <tr>
-<td valign=top>Format:</td>
+<td valign="top">Format:</td>
 <td><b>refresh_rate=&lt;rate_in_seconds&gt;</b></td>
 </tr>
 <tr>
-<td valign=top>Example:</td>
+<td valign="top">Example:</td>
 <td><font color="red"><b>refresh_rate=90</b></font></td>
 </tr>
 </table>
@@ -334,7 +334,7 @@ to the url to override the default refresh interval.
 
 <table border="0">
 <tr>
-<td valign=top>Formats:</td>
+<td valign="top">Formats:</td>
 <td>
 <b>host_unreachable_sound=&lt;sound_file&gt;</b><br>
 <b>host_down_sound=&lt;sound_file&gt;</b><br>
@@ -344,7 +344,7 @@ to the url to override the default refresh interval.
 </td>
 </tr>
 <tr>
-<td valign=top>Examples:</td>
+<td valign="top">Examples:</td>
 <td>
 <font color="red"><b>host_unreachable_sound=hostu.wav</b></font><br>
 <font color="red"><b>host_down_sound=hostd.wav</b></font><br>
@@ -369,11 +369,11 @@ directory (i.e. */usr/share/naemon/root/thruk/media*).
 
 <table border="0">
 <tr>
-<td valign=top>Format:</td>
+<td valign="top">Format:</td>
 <td><b>escape_html_tags=[0/1]</b></td>
 </tr>
 <tr>
-<td valign=top>Example:</td>
+<td valign="top">Example:</td>
 <td><font color="red"><b>escape_html_tags=1</b></font></td>
 </tr>
 </table>
@@ -387,11 +387,11 @@ able to contain clickable hyperlinks.
 
 <table border="0">
 <tr>
-<td valign=top>Format:</td>
+<td valign="top">Format:</td>
 <td><b>notes_url_target=[target]</b></td>
 </tr>
 <tr>
-<td valign=top>Example:</td>
+<td valign="top">Example:</td>
 <td><font color="red"><b>notes_url_target=_blank</b></font></td>
 </tr>
 </table>
@@ -404,11 +404,11 @@ Valid options include *_blank*, *_self*, *_top*, *_parent*, or any other valid t
 
 <table border="0">
 <tr>
-<td valign=top>Format:</td>
+<td valign="top">Format:</td>
 <td><b>action_url_target=[target]</b></td>
 </tr>
 <tr>
-<td valign=top>Example:</td>
+<td valign="top">Example:</td>
 <td><font color="red"><b>action_url_target=_blank</b></font></td>
 </tr>
 </table>

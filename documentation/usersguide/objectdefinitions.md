@@ -27,9 +27,9 @@ for otherwise tedious configuration tasks.{{ site.end }}
 {{ site.note }}When creating and/or editing configuration files, keep the following in mind:
 
 <ol>
-<li>Lines that start with a '#' character are taken to be comments and are not processed
-<li>Directive names are case-sensitive
-<li>Characters that appear after a semicolon (;) in configuration lines are treated as comments and are not processed
+<li>Lines that start with a '#' character are taken to be comments and are not processed</li>
+<li>Directive names are case-sensitive</li>
+<li>Characters that appear after a semicolon (;) in configuration lines are treated as comments and are not processed</li>
 </ol>
 {{ site.end }}
 
@@ -92,8 +92,8 @@ A host definition is used to define a physical server, workstation, device, etc.
 
 {{ site.info }}Directives in red are required, while those in black are optional.{{ site.end }}
 
-<table>
-<tr><td colspan=3>define host {</td></tr>
+<table class="object_definition">
+<tr><td colspan="3">define host {</td></tr>
 <tr><td></td><td class="text-danger">host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td class="text-danger">alias</td><td class="text-danger"><i>alias</i></td></tr>
 <tr><td></td><td>display_name</td><td><i>display_name</i></td></tr>
@@ -139,7 +139,7 @@ A host definition is used to define a physical server, workstation, device, etc.
 <tr><td></td><td>statusmap_image</td><td><i>image_file</i></td></tr>
 <tr><td></td><td>2d_coords</td><td><i>x_coord,y_coord</i></td></tr>
 <tr><td></td><td>3d_coords</td><td><i>x_coord,y_coord,z_coord</i></td></tr>
-<tr><td>}</td></tr>
+<tr><td colspan="3">}</td></tr>
 </table>
 
 ##### Example Definition
@@ -631,8 +631,8 @@ configuration with <a href="objecttricks.html">object tricks</a> or display purp
 
 {{ site.info }}Directives in red are required, while those in black are optional.{{ site.end }}
 
-<table border="0">
-<tr><td colspan=3>define hostgroup {</td></tr>
+<table class="object_definition">
+<tr><td colspan="3">define hostgroup {</td></tr>
 <tr><td></td><td class="text-danger">hostgroup_name</td><td class="text-danger"><i>hostgroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">alias</td><td class="text-danger"><i>alias</i></td></tr>
 <tr><td></td><td>members</td><td><i>hosts</i></td></tr>
@@ -640,7 +640,7 @@ configuration with <a href="objecttricks.html">object tricks</a> or display purp
 <tr><td></td><td>notes</td><td><i>note_string</i></td></tr>
 <tr><td></td><td>notes_url</td><td><i>url</i></td></tr>
 <tr><td></td><td>action_url</td><td><i>url</i></td></tr>
-<tr><td>}</td></tr>
+<tr><td colspan="3">}</td></tr>
 </table>
 
 ##### Example Definition
@@ -745,8 +745,8 @@ The different arguments to a service definition are outlined below.
 
 {{ site.info }}Directives in red are required, while those in black are optional.{{ site.end }}
 
-<table>
-<tr><td colspan=3>define service {</td></tr>
+<table class="object_definition">
+<tr><td colspan="3">define service {</td></tr>
 <tr><td></td><td class="text-danger">host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td>hostgroup_name</td><td><i>hostgroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">service_description</td><td class="text-danger"><i>service_description</i></td></tr>
@@ -789,7 +789,7 @@ The different arguments to a service definition are outlined below.
 <tr><td></td><td>action_url</td><td><i>url</i></td></tr>
 <tr><td></td><td>icon_image</td><td><i>image_file</i></td></tr>
 <tr><td></td><td>icon_image_alt</td><td><i>alt_string</i></td></tr>
-<tr><td>}</td></tr>
+<tr><td colspan="3">}</td></tr>
 </table>
 
 ##### Example Definition
@@ -1213,8 +1213,8 @@ configuration with <a href="objecttricks.html">object tricks</a> or display purp
 
 {{ site.info }}Directives in red are required, while those in black are optional.{{ site.end }}
 
-<table>
-<tr><td colspan=3>define servicegroup {</td></tr>
+<table class="object_definition">
+<tr><td colspan="3">define servicegroup {</td></tr>
 <tr><td></td><td class="text-danger">servicegroup_name</td><td class="text-danger"><i>servicegroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">alias</td><td class="text-danger"><i>alias</i></td></tr>
 <tr><td></td><td>members</td><td><i>services</i></td></tr>
@@ -1222,7 +1222,7 @@ configuration with <a href="objecttricks.html">object tricks</a> or display purp
 <tr><td></td><td>notes</td><td><i>note_string</i></td></tr>
 <tr><td></td><td>notes_url</td><td><i>url</i></td></tr>
 <tr><td></td><td>action_url</td><td><i>url</i></td></tr>
-<tr><td>}</td></tr>
+<tr><td colspan="3">}</td></tr>
 </table>
 
 
@@ -1328,8 +1328,8 @@ The different arguments to a contact definition are described below.
 
 {{ site.info }}Directives in red are required, while those in black are optional.{{ site.end }}
 
-<table>
-<tr><td colspan=3>define contact {</td></tr>
+<table class="object_definition">
+<tr><td colspan="3">define contact {</td></tr>
 <tr><td></td><td class="text-danger">contact_name</td><td class="text-danger"><i>contact_name</i></td></tr>
 <tr><td></td><td>alias</td><td><i>alias</i></td></tr>
 <tr><td></td><td>contactgroups</td><td><i>contactgroup_names</i></td></tr>
@@ -1348,7 +1348,7 @@ The different arguments to a contact definition are described below.
 <tr><td></td><td>can_submit_commands</td><td>[0/1]</td></tr>
 <tr><td></td><td>retain_status_information</td><td>[0/1]</td></tr>
 <tr><td></td><td>retain_nonstatus_information</td><td>[0/1]</td></tr>
-<tr><td>}</td></tr>
+<tr><td colspan="3">}</td></tr>
 </table>
 
 ##### Example Definition
@@ -1575,13 +1575,13 @@ together for the purpose of sending out alert/recovery <a href="notifications.ht
 
 {{ site.info }}Directives in red are required, while those in black are optional.{{ site.end }}
 
-<table>
-<tr><td colspan=3>define contactgroup {</td></tr>
+<table class="object_definition">
+<tr><td colspan="3">define contactgroup {</td></tr>
 <tr><td></td><td class="text-danger">contactgroup_name</td><td class="text-danger"><i>contactgroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">alias</td><td class="text-danger"><i>alias</i></td></tr>
 <tr><td></td><td>members</td><td><i>contacts</i></td></tr>
 <tr><td></td><td>contactgroup_members</td><td><i>contactgroups</i></td></tr>
-<tr><td>}</td></tr>
+<tr><td colspan="3">}</td></tr>
 </table>
 
 
@@ -1650,14 +1650,14 @@ including: specific weekdays, days of generic months, days of specific months, a
 
 {{ site.info }}Directives in red are required, while those in black are optional.{{ site.end }}
 
-<table>
-<tr><td colspan=3>define timeperiod {</td></tr>
+<table class="object_definition">
+<tr><td colspan="3">define timeperiod {</td></tr>
 <tr><td></td><td class="text-danger">timeperiod_name</td><td class="text-danger"><i>timeperiod_name</i></td></tr>
 <tr><td></td><td class="text-danger">alias</td><td class="text-danger"><i>alias</i></td></tr>
 <tr><td></td><td>[weekday]</td><td><i>timeranges</i></td></tr>
 <tr><td></td><td>[exception]</td><td><i>timeranges</i></td></tr>
 <tr><td></td><td>exclude</td><td>[<i>timeperiod1,timeperiod2,...,timeperiodn</i>]</td></tr>
-<tr><td>}</td></tr>
+<tr><td colspan="3">}</td></tr>
 </table>
 
 
@@ -1797,11 +1797,11 @@ found <a href="macros.html">here</a>. The different arguments to a command defin
 
 {{ site.info }}Directives in red are required, while those in black are optional.{{ site.end }}
 
-<table>
-<tr><td colspan=3>define command {</td></tr>
+<table class="object_definition">
+<tr><td colspan="3">define command {</td></tr>
 <tr><td></td><td class="text-danger">command_name</td><td class="text-danger"><i>command_name</i></td></tr>
 <tr><td></td><td class="text-danger">command_line</td><td class="text-danger"><i>command_line</i></td></tr>
-<tr><td>}</td></tr>
+<tr><td colspan="3">}</td></tr>
 </table>
 
 ##### Example Definition
@@ -1874,8 +1874,8 @@ found <a href="dependencies.html">here</a>.
 {{ site.info }}Directives in red are required, while those in black are optional.
 However, you must supply at least one type of criteria for the definition to be of much use.{{ site.end }}
 
-<table>
-<tr><td colspan=3>define servicedependency {</td></tr>
+<table class="object_definition">
+<tr><td colspan="3">define servicedependency {</td></tr>
 <tr><td></td><td class="text-danger">dependent_host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td>dependent_hostgroup_name</td><td><i>hostgroup_name</i></td></tr>
 <tr><td></td><td>servicegroup_name</td><td><i>servicegroup_name</i></td></tr>
@@ -1888,7 +1888,7 @@ However, you must supply at least one type of criteria for the definition to be 
 <tr><td></td><td>execution_failure_criteria</td><td>[o,w,u,c,p,n]</td></tr>
 <tr><td></td><td>notification_failure_criteria</td><td>[o,w,u,c,p,n]</td></tr>
 <tr><td></td><td>dependency_period</td><td>timeperiod_name</td></tr>
-<tr><td>}</td></tr>
+<tr><td colspan="3">}</td></tr>
 </table>
 
 ##### Example Definition
@@ -2032,8 +2032,8 @@ More information on how notification escalations work can be found <a href="esca
 
 {{ site.info }}Directives in red are required, while those in black are optional.{{ site.end }}
 
-<table>
-<tr><td colspan=3>define serviceescalation {</td></tr>
+<table class="object_definition">
+<tr><td colspan="3">define serviceescalation {</td></tr>
 <tr><td></td><td class="text-danger">host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td>hostgroup_name</td><td><i>hostgroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">service_description</td><td class="text-danger"><i>service_description</i></td></tr>
@@ -2044,7 +2044,7 @@ More information on how notification escalations work can be found <a href="esca
 <tr><td></td><td class="text-danger">notification_interval</td><td class="text-danger">#</td></tr>
 <tr><td></td><td>escalation_period</td><td>timeperiod_name</td></tr>
 <tr><td></td><td>escalation_options</td><td>[w,u,c,r]</td></tr>
-<tr><td>}</td></tr>
+<tr><td colspan="3">}</td></tr>
 </table>
 
 ##### Example Definition
@@ -2185,8 +2185,8 @@ More information on how host dependencies work (read this!) can be found
 
 {{ site.info }}Directives in red are required, while those in black are optional.{{ site.end }}
 
-<table>
-<tr><td colspan=3>define hostdependency {</td></tr>
+<table class="object_definition">
+<tr><td colspan="3">define hostdependency {</td></tr>
 <tr><td></td><td class="text-danger">dependent_host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td>dependent_hostgroup_name</td><td><i>hostgroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">host_name</td><td class="text-danger"><i>host_name</i></td></tr>
@@ -2195,7 +2195,7 @@ More information on how host dependencies work (read this!) can be found
 <tr><td></td><td>execution_failure_criteria</td><td>[o,d,u,p,n]</td></tr>
 <tr><td></td><td>notification_failure_criteria</td><td>[o,d,u,p,n]</td></tr>
 <tr><td></td><td>dependency_period</td><td>timeperiod_name</td></tr>
-<tr><td>}</td></tr>
+<tr><td colspan="3">}</td></tr>
 </table>
 
 ##### Example Definition
@@ -2308,8 +2308,8 @@ More information on how notification escalations work can be found <a href="esca
 
 {{ site.info }}Directives in red are required, while those in black are optional.{{ site.end }}
 
-<table>
-<tr><td colspan=3>define hostescalation {</td></tr>
+<table class="object_definition">
+<tr><td colspan="3">define hostescalation {</td></tr>
 <tr><td></td><td class="text-danger">host_name</td><td class="text-danger"><i>host_name</i></td></tr>
 <tr><td></td><td>hostgroup_name</td><td><i>hostgroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">contacts</td><td class="text-danger"><i>contacts</i></td></tr>
@@ -2319,7 +2319,7 @@ More information on how notification escalations work can be found <a href="esca
 <tr><td></td><td class="text-danger">notification_interval</td><td class="text-danger">#</td></tr>
 <tr><td></td><td>escalation_period</td><td>timeperiod_name</td></tr>
 <tr><td></td><td>escalation_options</td><td>[d,u,r]</td></tr>
-<tr><td>}</td></tr>
+<tr><td colspan="3">}</td></tr>
 </table>
 
 

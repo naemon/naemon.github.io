@@ -17,7 +17,7 @@ The goal in the distributed monitoring environment that I will describe is to of
 
 The diagram below should help give you a general idea of how distributed monitoring works with Naemon.  I'll be referring to the items shown in the diagram as I explain things...
 
-<a href="images/distributed.png"><img src="images/distributed.png" border=1 width="200" height="250"></a>
+<a href="images/distributed.png"><img src="images/distributed.png" border="1" width="200" height="250"></a>
 
 ### Central Server vs. Distributed Servers
 
@@ -40,30 +40,28 @@ So how exactly is Naemon configured on a distributed server?  Basically, its jus
 Key configuration changes:
 
 <ul>
-<li>Only those services and hosts which are being monitored directly by the distributed server are defined in the <a href="configobject.html">object configuration file</a>.
-<li>The distributed server has its <a href="configmain.html#enable_notifications">enable_notifications</a> directive set to 0.  This will prevent any notifications from being sent out by the server.
-<li>The distributed server is configured to <a href="configmain.html#obsess_over_services">obsess over services</a>.
-<li>The distributed server has an <a href="configmain.html#ocsp_command">ocsp command</a> defined (as described below).
+<li>Only those services and hosts which are being monitored directly by the distributed server are defined in the <a href="configobject.html">object configuration file</a>.</li>
+<li>The distributed server has its <a href="configmain.html#enable_notifications">enable_notifications</a> directive set to 0.  This will prevent any notifications from being sent out by the server.</li>
+<li>The distributed server is configured to <a href="configmain.html#obsess_over_services">obsess over services</a>.</li>
+<li>The distributed server has an <a href="configmain.html#ocsp_command">ocsp command</a> defined (as described below).</li>
 </ul>
 
 In order to make everything come together and work properly, we want the distributed server to report the results of <i>all</i> service checks to Naemon.  We could use <a href="eventhandlers.html">event handlers</a> to report <i>changes</i> in the state of a service, but that just doesn't cut it.  In order to force the distributed server to report all service check results, you must enabled the <a href="configmain.html#obsess_over_services">obsess_over_services</a> option in the main configuration file and provide a <a href="configmain.html#ocsp_command">ocsp_command</a> to be run after every service check.  We will use the ocsp command to send the results of all service checks to the central server, making use of the send_nsca client and nsca daemon (as described above) to handle the transmission.
 
 In order to accomplish this, you'll need to define an ocsp command like this:
 
-<strong><font color="red">ocsp_command=submit_check_result</font></strong>
+```
+ocsp_command=submit_check_result
+```
 
 The command definition for the <i>submit_check_result</i> command looks something like this:
 
-<strong>
-<font color="red">
 ```
 define command{
 	command_name	submit_check_result
 	command_line	/usr/lib/naemon/plugins/eventhandlers/submit_check_result $HOSTNAME$ '$SERVICEDESC$' $SERVICESTATE$ '$SERVICEOUTPUT$'
 	}
 ```
-</font>
-</strong>
 
 The <i>submit_check_result</i> shell scripts looks something like this (replace <i>central_server</i> with the IP address of the central server):
 
@@ -102,7 +100,7 @@ The <i>submit_check_result</i> shell scripts looks something like this (replace 
 	# in turn transmits the data to the nsca daemon on the central
 	# monitoring server
 
-	/bin/printf "%s\t%s\t%s\t%s\n" "$1" "$2" "$return_code" "$4" | /usr/local/nagios/bin/send_nsca -H <i>central_server</i> -c /usr/local/nagios/etc/send_nsca.cfg
+	/bin/printf "%s\t%s\t%s\t%s\n" "$1" "$2" "$return_code" "$4" | /usr/local/nagios/bin/send_nsca -H <central_server> -c /usr/local/nagios/etc/send_nsca.cfg
 ```
 
 The script above assumes that you have the send_nsca program and it configuration file (send_nsca.cfg) located in the <i>/usr/local/nagios/bin/</i> and <i>/usr/local/nagios/etc/</i> directories, respectively.
@@ -110,11 +108,11 @@ The script above assumes that you have the send_nsca program and it configuratio
 That's it!  We've successfully configured a remote host running Naemon to act as a distributed monitoring server.  Let's go over exactly what happens with the distributed server and how it sends service check results to Naemon (the steps outlined below correspond to the numbers in the reference diagram above):
 
 <ol>
-<li>After the distributed server finishes executing a service check, it executes the command you defined by the <a href="configmain.html#ocsp_command">ocsp_command</a> variable.  In our example, this is the <i>/usr/lib/naemon/plugins/eventhandlers/submit_check_result</i> script.  Note that the definition for the <i>submit_check_result</i> command passed four pieces of information to the script: the name of the host the service is associated with, the service description, the return code from the service check, and the plugin output from the service check.
-<li>The <i>submit_check_result</i> script pipes the service check information (host name, description, return code, and output) to the <i>send_nsca</i> client program.
-<li>The <i>send_nsca</i> program transmits the service check information to the <i>nsca</i> daemon on the central monitoring server.
-<li>The <i>nsca</i> daemon on the central server takes the service check information and writes it to the external command file for later pickup by Naemon.
-<li>The Naemon process on the central server reads the external command file and processes the passive service check information that originated from the distributed monitoring server.
+<li>After the distributed server finishes executing a service check, it executes the command you defined by the <a href="configmain.html#ocsp_command">ocsp_command</a> variable.  In our example, this is the <i>/usr/lib/naemon/plugins/eventhandlers/submit_check_result</i> script.  Note that the definition for the <i>submit_check_result</i> command passed four pieces of information to the script: the name of the host the service is associated with, the service description, the return code from the service check, and the plugin output from the service check.</li>
+<li>The <i>submit_check_result</i> script pipes the service check information (host name, description, return code, and output) to the <i>send_nsca</i> client program.</li>
+<li>The <i>send_nsca</i> program transmits the service check information to the <i>nsca</i> daemon on the central monitoring server.</li>
+<li>The <i>nsca</i> daemon on the central server takes the service check information and writes it to the external command file for later pickup by Naemon.</li>
+<li>The Naemon process on the central server reads the external command file and processes the passive service check information that originated from the distributed monitoring server.</li>
 </ol>
 
 ### Central Server Configuration
@@ -122,18 +120,18 @@ That's it!  We've successfully configured a remote host running Naemon to act as
 We've looked at how distributed monitoring servers should be configured, so let's turn to the central server.  For all intents and purposes, the central is configured as you would normally configure a standalone server.  It is setup as follows:
 
 <ul>
-<li>The central server has the web interface installed (optional, but recommended)
-<li>The central server has its <a href="configmain.html#enable_notifications">enable_notifications</a> directive set to 1.  This will enable notifications. (optional, but recommended)
-<li>The central server has <a href="configmain.html#execute_service_checks">active service checks</a> disabled (optional, but recommended - see notes below)
-<li>The central server has <a href="configmain.html#check_external_commands">external command checks</a> enabled (required)
-<li>The central server has <a href="configmain.html#accept_passive_service_checks">passive service checks</a> enabled (required)
+<li>The central server has the web interface installed (optional, but recommended)</li>
+<li>The central server has its <a href="configmain.html#enable_notifications">enable_notifications</a> directive set to 1.  This will enable notifications. (optional, but recommended)</li>
+<li>The central server has <a href="configmain.html#execute_service_checks">active service checks</a> disabled (optional, but recommended - see notes below)</li>
+<li>The central server has <a href="configmain.html#check_external_commands">external command checks</a> enabled (required)</li>
+<li>The central server has <a href="configmain.html#accept_passive_service_checks">passive service checks</a> enabled (required)</li>
 </ul>
 
 There are three other very important things that you need to keep in mind when configuring the central server:
 
 <ul>
-<li>The central server must have service definitions for <i>all services</i> that are being monitored by all the distributed servers.  Naemon will ignore passive check results if they do not correspond to a service that has been defined.
-<li>If you're only using the central server to process services whose results are going to be provided by distributed hosts, you can simply disable all active service checks on a program-wide basis by setting the <a href="configmain.html#execute_service_checks">execute_service_checks</a> directive to 0.  If you're using the central server to actively monitor a few services on its own (without the aid of distributed servers), the <i>enable_active_checks</i> option of the definitions for service being monitored by distributed servers should be set to 0.  This will prevent Naemon from actively checking those services.
+<li>The central server must have service definitions for <i>all services</i> that are being monitored by all the distributed servers.  Naemon will ignore passive check results if they do not correspond to a service that has been defined.</li>
+<li>If you're only using the central server to process services whose results are going to be provided by distributed hosts, you can simply disable all active service checks on a program-wide basis by setting the <a href="configmain.html#execute_service_checks">execute_service_checks</a> directive to 0.  If you're using the central server to actively monitor a few services on its own (without the aid of distributed servers), the <i>enable_active_checks</i> option of the definitions for service being monitored by distributed servers should be set to 0.  This will prevent Naemon from actively checking those services.</li>
 </ul>
 
 It is important that you either disable all service checks on a program-wide basis or disable the <i>enable_active_checks</i> option in the definitions for each service that is monitored by a distributed server.  This will ensure that active service checks are never executed under normal circumstances.  The services will keep getting rescheduled at their normal check intervals (3 minutes, 5 minutes, etc...), but the won't actually be executed.  This rescheduling loop will just continue all the while Naemon is running.  I'll explain why this is done in a bit...
@@ -153,9 +151,9 @@ Naemon supports a feature that does "freshness" checking on the results of servi
 So how do you do this?  On the central monitoring server you need to configure services that are being monitoring by distributed servers as follows...
 
 <ul>
-<li>The <i>check_freshness</i> option in the service definitions should be set to 1.  This enables "freshness" checking for the services.
-<li>The <i>freshness_threshold</i> option in the service definitions should be set to a value (in seconds) which reflects how "fresh" the results for the services (provided by the distributed servers) should be.
-<li>The <i>check_command</i> option in the service definitions should reflect valid commands that can be used to actively check the service from the central monitoring server.
+<li>The <i>check_freshness</i> option in the service definitions should be set to 1.  This enables "freshness" checking for the services.</li>
+<li>The <i>freshness_threshold</i> option in the service definitions should be set to a value (in seconds) which reflects how "fresh" the results for the services (provided by the distributed servers) should be.</li>
+<li>The <i>check_command</i> option in the service definitions should reflect valid commands that can be used to actively check the service from the central monitoring server.</li>
 </ul>
 
 Naemon periodically checks the "freshness" of the results for all services that have freshness checking enabled.  The <i>freshness_threshold</i> option in each service definition is used to determine how "fresh" the results for each service should be.  For example, if you set this value to 300 for one of your services, Naemon will consider the service results to be "stale" if they're older than 5 minutes (300 seconds).  If you do not specify a value for the <i>freshness_threshold</i> option, Naemon will automatically calculate a "freshness" threshold by looking at either the <i>normal_check_interval</i> or <i>retry_check_interval</i> options (depending on what <a href="statetypes.html">type of state</a> the service is in).  If the service results are found to be "stale", Naemon will run the service check command specified by the <i>check_command</i> option in the service definition, thereby actively checking the service.
@@ -164,16 +162,12 @@ Remember that you have to specify a <i>check_command</i> option in the service d
 
 If you are unable to define commands to actively check a service from the central monitoring host (or if turns out to be a major pain), you could simply define all your services with the <i>check_command</i> option set to run a dummy script that returns a critical status.  Here's an example...  Let's assume you define a command called 'service-is-stale' and use that command name in the <i>check_command</i> option of your services.  Here's what the definition would look like...
 
-<strong>
-<font color="red">
 ```
 define command{
 	command_name	service-is-stale
 	command_line	/usr/lib/naemon/plugins/check_dummy 2 "CRITICAL: Service results are stale"
 	}
 ```
-</font>
-</strong>
 
 When Naemon detects that the service results are stale and runs the <b>service-is-stale</b> command, the <i>check_dummy</i> plugin is executed and the service will go into a critical state.  This would likely cause notifications to be sent out, so you'll know that there's a problem.
 
@@ -188,9 +182,9 @@ Passive host checks are available (read <a href="passivechecks.html">here</a>), 
 If you do want to send passive host checks to a central server in your distributed monitoring setup, make sure:
 
 <ul>
-<li>The central server has <a href="configmain.html#accept_passive_host_checks">passive host checks</a> enabled (required)
-<li>The distributed server is configured to <a href="configmain.html#obsess_over_hosts">obsess over hosts</a>.
-<li>The distributed server has an <a href="configmain.html#ochp_command">ochp command</a> defined.
+<li>The central server has <a href="configmain.html#accept_passive_host_checks">passive host checks</a> enabled (required)</li>
+<li>The distributed server is configured to <a href="configmain.html#obsess_over_hosts">obsess over hosts</a>.</li>
+<li>The distributed server has an <a href="configmain.html#ochp_command">ochp command</a> defined.</li>
 </ul>
 
 The ochp command, which is used for processing host check results, works in a similar manner to the ocsp command, which is used for processing service check results (see documentation above).  In order to make sure passive host check results are up to date, you'll want to enable <a href="freshness.html">freshness checking</a> for hosts (similar to what is described above for services).

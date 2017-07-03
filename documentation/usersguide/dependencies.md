@@ -13,10 +13,10 @@ Service and host dependencies are an advanced feature of Naemon that allow you t
 There are a few things you should know about service dependencies:
 
 <ol>
-<li>A service can be dependent on one or more other services
-<li>A service can be dependent on services which are not associated with the same host
-<li>Service dependencies are not inherited (unless specifically configured to)
-<li>Service dependencies can be used to cause service check execution and service notifications to be suppressed under different circumstances (OK, WARNING, UNKNOWN, and/or CRITICAL states)
+<li>A service can be dependent on one or more other services</li>
+<li>A service can be dependent on services which are not associated with the same host</li>
+<li>Service dependencies are not inherited (unless specifically configured to)</li>
+<li>Service dependencies can be used to cause service check execution and service notifications to be suppressed under different circumstances (OK, WARNING, UNKNOWN, and/or CRITICAL states)</li>
 <li>Service dependencies might only be valid during specific <a href="timeperiods.html">timeperiods</a></li>
 </ol>
 
@@ -98,10 +98,10 @@ define servicedependency{
 Before Naemon executes a service check or sends notifications out for a service, it will check to see if the service has any dependencies.  If it doesn't have any dependencies, the check is executed or the notification is sent out as it normally would be.  If the service *does* have one or more dependencies, Naemon will check each dependency entry as follows:
 
 <ol>
-<li>Naemon gets the current status<sup><a href="#hard_dependencies">*</a></sup> of the service that is being *depended upon*.
-<li>Naemon compares the current status of the service that is being *depended upon* against either the execution or notification failure options in the dependency definition (whichever one is relevant at the time).
-<li>If the current status of the service that is being *depended upon* matches one of the failure options, the dependency is said to have failed and Naemon will break out of the dependency check loop.
-<li>If the current state of the service that is being *depended upon* does not match any of the failure options for the dependency entry, the dependency is said to have passed and Naemon will go on and check the next dependency entry.
+<li>Naemon gets the current status<sup><a href="#hard_dependencies">*</a></sup> of the service that is being *depended upon*.</li>
+<li>Naemon compares the current status of the service that is being *depended upon* against either the execution or notification failure options in the dependency definition (whichever one is relevant at the time).</li>
+<li>If the current status of the service that is being *depended upon* matches one of the failure options, the dependency is said to have failed and Naemon will break out of the dependency check loop.</li>
+<li>If the current state of the service that is being *depended upon* does not match any of the failure options for the dependency entry, the dependency is said to have passed and Naemon will go on and check the next dependency entry.</li>
 </ol>
 
 This cycle continues until either all dependencies for the service have been checked or until one dependency check fails.
@@ -162,9 +162,9 @@ You should be using parent/child host relationships (defined with the *parents* 
 Here are the basics about host dependencies:
 
 <ol>
-<li>A host can be dependent on one or more other host
-<li>Host dependencies are not inherited (unless specifically configured to)
-<li>Host dependencies can be used to cause host check execution and host notifications to be suppressed under different circumstances (UP, DOWN, and/or UNREACHABLE states)
+<li>A host can be dependent on one or more other host</li>
+<li>Host dependencies are not inherited (unless specifically configured to)</li>
+<li>Host dependencies can be used to cause host check execution and host notifications to be suppressed under different circumstances (UP, DOWN, and/or UNREACHABLE states)</li>
 <li>Host dependencies might only be valid during specific <a href="timeperiods.html">timeperiods</a></li>
 </ol>
 

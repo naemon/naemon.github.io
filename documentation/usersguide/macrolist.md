@@ -18,16 +18,16 @@ ten types of commands that Naemon recognizes and treats differently.
 They are as follows:
 
 <ol>
-<li>Service checks
-<li>Service notifications
-<li>Host checks
-<li>Host notifications
-<li>Service <a href="eventhandlers.html">event handlers</a> and/or a global service event handler
-<li>Host <a href="eventhandlers.html">event handlers</a> and/or a global host event handler
-<li><a href="configmain.html#ocsp_command">OCSP</a> command
-<li><a href="configmain.html#ochp_command">OCHP</a> command
-<li>Service <a href="perfdata.html">performance data</a> commands
-<li>Host <a href="perfdata.html">performance data</a> commands
+<li>Service checks</li>
+<li>Service notifications</li>
+<li>Host checks</li>
+<li>Host notifications</li>
+<li>Service <a href="eventhandlers.html">event handlers</a> and/or a global service event handler</li>
+<li>Host <a href="eventhandlers.html">event handlers</a> and/or a global host event handler</li>
+<li><a href="configmain.html#ocsp_command">OCSP</a> command</li>
+<li><a href="configmain.html#ochp_command">OCHP</a> command</li>
+<li>Service <a href="perfdata.html">performance data</a> commands</li>
+<li>Host <a href="perfdata.html">performance data</a> commands</li>
 </ol>
 
 The tables below list all macros currently available in Naemon, along with a brief description of

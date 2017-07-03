@@ -43,11 +43,11 @@ I like to refer to this as the "Oh crap, its not working" syndrome.  You know wh
 Let's take the following scenario:
 
 <ol>
-<li>You schedule downtime for host A from 7:30pm-9:30pm on a Monday
-<li>You bring the server down about 7:45pm Monday evening to start a hard drive upgrade
-<li>After wasting an hour and a half battling with SCSI errors and driver incompatibilities, you finally get the machine to boot up
-<li>At 9:15 you realize that one of your partitions is either hosed or doesn't seem to exist anywhere on the drive
-<li>Knowing you're in for a long night, you go back and schedule additional downtime for host A from 9:20pm Monday evening to 1:30am Tuesday Morning.
+<li>You schedule downtime for host A from 7:30pm-9:30pm on a Monday</li>
+<li>You bring the server down about 7:45pm Monday evening to start a hard drive upgrade</li>
+<li>After wasting an hour and a half battling with SCSI errors and driver incompatibilities, you finally get the machine to boot up</li>
+<li>At 9:15 you realize that one of your partitions is either hosed or doesn't seem to exist anywhere on the drive</li>
+<li>Knowing you're in for a long night, you go back and schedule additional downtime for host A from 9:20pm Monday evening to 1:30am Tuesday Morning.</li>
 </ol>
 
 If you schedule overlapping periods of downtime for a host or service (in this case the periods were 7:40pm-9:30pm and 9:20pm-1:30am), Naemon will wait until the last period of scheduled downtime is over before it allows notifications to be sent out for that host or service.  In this example notifications would be suppressed for host A until 1:30am Tuesday morning.

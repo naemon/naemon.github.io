@@ -17,10 +17,10 @@ Freshness checking is useful when you want to ensure that <a href="passivechecks
 Naemon periodically checks the freshness of the results for all hosts services that have freshness checking enabled.
 
 <ul>
-<li>A freshness threshold is calculated for each host or service.
-<li>For each host/service, the age of its last check result is compared with the freshness threshold.
-<li>If the age of the last check result is greater than the freshness threshold, the check result is considered "stale".
-<li>If the check results is found to be stale, Naemon will force an <a href="activechecks.html">active check</a> of the host or service by executing the command specified by in the host or service definition.
+<li>A freshness threshold is calculated for each host or service.</li>
+<li>For each host/service, the age of its last check result is compared with the freshness threshold.</li>
+<li>If the age of the last check result is greater than the freshness threshold, the check result is considered "stale".</li>
+<li>If the check results is found to be stale, Naemon will force an <a href="activechecks.html">active check</a> of the host or service by executing the command specified by in the host or service definition.</li>
 </ul>
 
 {{ site.hint }}An active check is executed even if active checks are disabled on a program-wide or host- or service-specific basis.{{ site.end }}
