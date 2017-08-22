@@ -71,7 +71,7 @@ Your object configuration files may vary, just copy them into the new conf.d fol
 Copy existing logfiles and archive:
 
 ```bash
-  %> cp -rp /var/log/nagios/archive/*.log /var/log/naemon/archive
+  %> cp -rp /var/log/nagios/archives/*.log /var/log/naemon/archives
   %> cp -rp /var/log/nagios/nagios.log /var/log/naemon/naemon.log
 ```
 
