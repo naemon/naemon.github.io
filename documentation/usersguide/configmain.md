@@ -2749,7 +2749,10 @@ This is the socket you can use for two-way communication with the Naemon process
 <td><font color="red"><b>allow_circular_dependencies=1</b></font></td>
 </tr>
 </table>
-Allow circular dependencies in naemon's host graph. Enabling this will cause following to stop working:
+Allow circular dependencies in naemon's host graph. When this is disabled, the host graph must be a Directed Acyclic Graph.
+
+Enabling this will cause following to stop working:
+
 * scheduling and propagating downtime
 * enabling/disabling and propagation notifications
 
