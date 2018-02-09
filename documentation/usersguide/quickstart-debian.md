@@ -10,6 +10,7 @@ This guide is intended to provide you with simple instructions on how to install
 
 These instructions were written for:
 
+* Debian 9 stretch
 * Debian 8 jessie
 * Debian 7 wheezy
 * Debian 6 squeeze
@@ -19,7 +20,7 @@ These instructions were written for:
 If you follow these instructions, here's what you'll end up with:
 
 <ul>
-<li>Nagios plugins will be installed underneath /usr/lib/nagios/plugins/</li>
+<li>Nagios plugins will be installed underneath /usr/lib/naemon/plugins/ (a symlink to /usr/lib/nagios/plugins/) </li>
 <li>Naemon will be configured to monitor a few aspects of your local system (CPU load, disk usage, etc.)</li>
 <li>The Naemon web interface will be accessible at http://localhost/naemon/</li>
 </ul>
@@ -27,6 +28,24 @@ If you follow these instructions, here's what you'll end up with:
 ### Install instruction 
 
 {{ site.warn }}Don't forget to change your password from default, instruction are found below version specific installation instructions <a href="#change_default_password_for_thruk">here</a>{{ site.end }}
+
+#### Debian 9 stretch 
+
+**Add Consol Labs Repository**  
+Install dirmngr if you do not already have it:
+```
+apt-get install dirmngr
+```
+Install GPG Key
+```
+gpg --keyserver keys.gnupg.net --recv-keys F8C1CA08A57B9ED7
+gpg --armor --export F8C1CA08A57B9ED7 | apt-key add -
+```
+**Install Naemon**
+```
+apt-get install naemon
+```
+
 
 #### Debian 8 jessie
 
