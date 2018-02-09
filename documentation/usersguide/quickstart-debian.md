@@ -41,8 +41,13 @@ Install GPG Key
 gpg --keyserver keys.gnupg.net --recv-keys F8C1CA08A57B9ED7
 gpg --armor --export F8C1CA08A57B9ED7 | apt-key add -
 ```
+Add the apt Repository
+```
+echo "deb http://labs.consol.de/repo/stable/debian $(lsb_release -cs) main" > /etc/apt/sources.list.d/labs-consol-stable.list
+```
 **Install Naemon**
 ```
+apt-get update
 apt-get install naemon
 ```
 
