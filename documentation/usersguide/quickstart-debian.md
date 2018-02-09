@@ -29,9 +29,9 @@ If you follow these instructions, here's what you'll end up with:
 
 {{ site.warn }}Don't forget to change your password from default, instruction are found below version specific installation instructions <a href="#change_default_password_for_thruk">here</a>{{ site.end }}
 
-#### Debian 9 stretch
+#### Debian 9 stretch 
 
-**Add Consol Labs Repository**
+**Add Consol Labs Repository**  
 Install dirmngr if you do not already have it:
 ```
 apt-get install dirmngr
@@ -41,7 +41,7 @@ Install GPG Key
 gpg --keyserver keys.gnupg.net --recv-keys F8C1CA08A57B9ED7
 gpg --armor --export F8C1CA08A57B9ED7 | apt-key add -
 ```
-**Install naemon**
+**Install Naemon**
 ```
 apt-get install naemon
 ```
