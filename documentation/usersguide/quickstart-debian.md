@@ -190,7 +190,7 @@ service apache2 restart
 It's most important to change your password to protect your site for unauthorized access
 
 ```
-htpasswd /etc/naemon/htpasswd admin
+htpasswd /etc/thruk/htpasswd thrukadmin
 ```
 
 ### Login to the Web Interface
