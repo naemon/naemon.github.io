@@ -2736,3 +2736,32 @@ If you're experiencing checks that don't run the way they should, it could be an
 </tr>
 </table>
 This is the socket you can use for two-way communication with the Naemon process. This enables you to do things like submit external commands like with the <a href="#command_file">traditional command file</a> - and get a response about whether the command worked or not. It also allows you to inspect the state of your <a href="#check_workers">worker processes</a> - as well as modify the <a href="#loadctl_options">load control options</a> if they aren't behaving well.
+
+<a name="circular_dependencies"></a>
+#### Circular Dependencies
+<table border="0">
+<tr>
+<td>Format:</td>
+<td><b>allow_circular_dependencies=&lt;#&gt;</b></td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><font color="red"><b>allow_circular_dependencies=1</b></font></td>
+</tr>
+</table>
+Allow circular dependencies in naemon's host graph. When this is disabled, the host graph must be a Directed Acyclic Graph.
+
+Enabling this will cause following to stop working:
+
+* scheduling and propagating downtime
+* enabling/disabling and propagation notifications
+
+Values are as follows:
+
+* 0 = Disable circular dependencies (default)
+* 1 = Enable circular dependencies
+
+{{ site.warning }}
+THIS IS AN EXPERIMENTAL FEATURE AND MAY BE REMOVED IN FUTURE VERSIONS.
+ENABLING THIS OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED IMPROPERLY!
+{{ site.end }}
