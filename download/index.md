@@ -80,6 +80,9 @@ For new user, we recommend you grab one of our nightly binary snapshots. You can
 Travis-CI core build status: <a href="https://travis-ci.org/naemon/naemon-core"><img style="vertical-align:sub;" src="https://travis-ci.org/naemon/naemon-core.png?branch=master" alt="Build Status"></a><br />
 Travis-CI suite build status: <a href="https://travis-ci.org/naemon/naemon"><img style="vertical-align:sub;" src="https://travis-ci.org/naemon/naemon.png?branch=master" alt="Build Status"></a>
 
+#### openSuse Build Service
+There are daily builds available for recent platforms at the [obs home:naemon:daily project](https://build.opensuse.org/project/show/home:naemon:daily)
+
 #### Binary packages
 We build nightly packages for several versions of CentOS/RedHat, Debian, SLES, and Ubuntu. First [install the Consol testing repository](http://labs.consol.de/repo/testing/), and then install the `naemon` package with your package manager.
 
