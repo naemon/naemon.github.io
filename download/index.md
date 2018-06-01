@@ -34,8 +34,9 @@ The binary packages can also be downloaded here:
    <td><img src="../images/sles.jpg"></td>
    <td>SLES</td>
    <td>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles12sp1/">12 SP1</a>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles12/">12</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles12sp1/">12 SP3</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles12sp1/">12 SP2</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles12sp1/">12 SP1</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles11sp3/">11 SP3</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles11sp4/">11 SP4</a><br>
    </td>
@@ -44,30 +45,27 @@ The binary packages can also be downloaded here:
    <td><img src="../images/debian.png"></td>
    <td>Debian</td>
    <td>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/debian10/">10 Buster</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/debian9/">9 Stretch</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/debian8/">8 Jessie</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/debian7/">7 Wheezy</a><br>
    </td>
  </tr>
  <tr>
    <td><img src="../images/ubuntu.png"></td>
    <td>Ubuntu</td>
    <td>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu18.04/">18.04 Bionic</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu17.10/">17.10 Artful</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu16.04/">16.04 Xenial</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu15.10/">15.10 Wily</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu15.04/">15.04 Vivid</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu14.04/">14.04 Trusty</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.04/">12.04 Precise</a><br>
    </td>
  </tr>
  <tr>
    <td><img src="../images/fedora.png" height=48 width=48></td>
    <td>Fedora</td>
    <td>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc24/">fc24</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc23/">fc23</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc22/">fc22</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc21/">fc21</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc28/">fc28</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc27/">fc27</a><br>
    </td>
  </tr>
 </table>
