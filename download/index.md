@@ -34,8 +34,9 @@ The binary packages can also be downloaded here:
    <td><img src="../images/sles.jpg"></td>
    <td>SLES</td>
    <td>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles12sp1/">12 SP1</a>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles12/">12</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles12sp1/">12 SP3</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles12sp1/">12 SP2</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles12sp1/">12 SP1</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles11sp3/">11 SP3</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles11sp4/">11 SP4</a><br>
    </td>
@@ -44,30 +45,27 @@ The binary packages can also be downloaded here:
    <td><img src="../images/debian.png"></td>
    <td>Debian</td>
    <td>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/debian10/">10 Buster</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/debian9/">9 Stretch</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/debian8/">8 Jessie</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/debian7/">7 Wheezy</a><br>
    </td>
  </tr>
  <tr>
    <td><img src="../images/ubuntu.png"></td>
    <td>Ubuntu</td>
    <td>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu18.04/">18.04 Bionic</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu17.10/">17.10 Artful</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu16.04/">16.04 Xenial</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu15.10/">15.10 Wily</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu15.04/">15.04 Vivid</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu14.04/">14.04 Trusty</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu12.04/">12.04 Precise</a><br>
    </td>
  </tr>
  <tr>
    <td><img src="../images/fedora.png" height=48 width=48></td>
    <td>Fedora</td>
    <td>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc24/">fc24</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc23/">fc23</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc22/">fc22</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc21/">fc21</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc28/">fc28</a><br>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc27/">fc27</a><br>
    </td>
  </tr>
 </table>
@@ -91,232 +89,3 @@ Download the latest development source code from [github](http://github.com/naem
 ### Getting started
 
 See the [getting started](/documentation/usersguide/toc.html#getting_started) document in the users guide.
-
-#### Download Statistics
-As true monitoring people we love statistics:
-
-<style type="text/css">
-.yaxisLabel {
-  left: -20px;
-  top: 50%;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.00000000, M12=1.00000000, M21=-1.00000000, M22=-0.00000000,sizingMethod='auto expand')";
-  filter: flipv() fliph(); writing-mode: tb-rl; /* IE < 9 */
-  -webkit-transform: rotate(-90.0deg);  /* Safari 3.1+, Chrome */
-  -moz-transform: rotate(-90.0deg);  /* Firefox 3.5-15 */
-  -ms-transform: rotate(-90.0deg);  /* IE9+ */
-  -o-transform: rotate(-90.0deg);  /* Opera 10.5-12.00 */
-  transform: rotate(-90.0deg);
-}
-.axisLabel {
-  font-size: 12px;
-  position: absolute;
-  text-align: center;
-}
-DIV.legend TD {
-  border: 0;
-}
-</style>
-<div id="downloadstats" style="width:1000px; height: 300px;"></div>
-<br><br>
-
-##### Downloads splitted by System (Core only, current month)
-<div id="downloadstats_pkg" style="width:400px; height: 270px;"></div>
-<script language="javascript" type="text/javascript" src="/ressources/flot/jquery.flot.min.js"></script>
-<script language="javascript" type="text/javascript" src="/ressources/flot/jquery-flot-dashes.js"></script>
-<script language="javascript" type="text/javascript" src="/ressources/flot/jquery.flot.pie.min.js"></script>
-<script language="javascript" type="text/javascript" src="http://labs.consol.de/naemon/downloadstats.js"></script>
-<script type="text/javascript">
-function extract_data(name, ticks, stats) {
-    var data = [];
-    jQuery.each(ticks, function(nr, tick) {
-        var tmp   = tick[1].split("-");
-        var year  = tmp[0];
-        var month = tmp[1];
-        var value = 0;
-        if(stats[year][month][name] != undefined) {
-            value = stats[year][month][name];
-        }
-        data.push([tick[0], value]);
-    });
-    return(data);
-}
-
-function extract_data_current_month(pattern, month) {
-    var sum = 0;
-    var tmp   = month.split("-");
-    var year  = tmp[0];
-    var month = tmp[1];
-    jQuery.each(pattern, function(x, p) {
-        var re = new RegExp(p);
-        for(var key in download_stats[year][month]) {
-            if(key.search(re) != -1) {
-                sum += download_stats[year][month][key];
-            }
-        }
-    });
-    return sum;
-}
-
-function labelFormatter(label, series) {
-    return "<div style='font-size:8pt; text-align:center; padding:2px; color:white;'>" + label + "<br/>" + Math.round(series.percent) + "%</div>";
-}
-
-
-jQuery(document).ready(function() {
-    var months = [];
-    jQuery.each(download_stats, function(year, data) {
-        jQuery.each(download_stats[year], function(month, data) {
-            months.push(year+"-"+month);
-        });
-    });
-    var ticks = [];
-    months = months.sort();
-    jQuery.each(months, function(nr, month) {
-        ticks.push([nr, month]);
-    });
-
-    var d1 = { label: "Core",           data: extract_data("naemon-core",       ticks, download_stats) };
-    var d2 = { label: "Thruk",          data: extract_data("naemon-thruk",      ticks, download_stats) };
-    var d3 = { label: "Livestatus",     data: extract_data("naemon-livestatus", ticks, download_stats) };
-    var d4 = { label: "Source-Tarball", data: extract_data("naemon-source",     ticks, download_stats) };
-    var series = [d1,d2,d3,d4];
-
-    // estimates
-    var today  = new Date();
-    var day    = today.getDate();
-    var days   = new Date(today.getFullYear(), today.getMonth()+1, 0).getDate();
-    if(day != days && day > 1) {
-        var factor = days / day;
-        var d5 = { label: "", data: [d1.data[d1.data.length-2],  [d1.data.length-1, d1.data[d1.data.length-1][1]*factor ]], dashes: { show: true } };
-        var d6 = { label: "", data: [d2.data[d2.data.length-2],  [d2.data.length-1, d2.data[d2.data.length-1][1]*factor ]], dashes: { show: true } };
-        var d7 = { label: "", data: [d3.data[d3.data.length-2],  [d3.data.length-1, d3.data[d3.data.length-1][1]*factor ]], dashes: { show: true } };
-        var d8 = { label: "", data: [d4.data[d4.data.length-2],  [d4.data.length-1, d4.data[d4.data.length-1][1]*factor ]], dashes: { show: true } };
-        series.push(d5,d6,d7,d8);
-    }
-
-    jQuery.plot("#downloadstats", series,{
-        colors: ['#CB514D', '#4CA251', '#AFD9F7', '#EDBF4B','#CB514D', '#4CA251', '#AFD9F7', '#EDBF4B'],
-        lines: {
-            fill:        false,
-            steps:       false,
-            fillColor: { colors: [ { opacity: 0.6 }, { opacity: 0.9 } ] }
-        },
-        xaxis:  { ticks: ticks },
-        legend: { position: 'nw' },
-        grid: {
-            margin:  { left: 20 },
-            hoverable: true,
-            clickable: true
-        }
-    });
-    var yaxisLabel = $("<div class='axisLabel yaxisLabel'></div>")
-                    .text("Downloads")
-                    .appendTo("#downloadstats");
-    yaxisLabel.css("margin-top", yaxisLabel.width() / 2 - 20);
-
-    jQuery("<div id='tooltip'></div>").css({
-        position: "absolute",
-        display:  "none",
-        border:   "1px solid #fdd",
-        padding:  "2px",
-        opacity:   0.80
-    }).appendTo("body");
-    jQuery("#downloadstats").bind("plothover", function (event, pos, item) {
-        if (item) {
-            jQuery("#tooltip").html(item.series.label+": " + item.datapoint[1] + " downloads in " + ticks[item.datapoint[0]][1])
-                              .css({top: item.pageY+5, left: item.pageX+5, "background-color": "#fee"})
-                              .fadeIn(200);
-        } else {
-            $("#tooltip").hide();
-        }
-    });
-
-
-    var cur_month = ticks[ticks.length-1][1];
-    var data = [{
-        label: 'Redhat5',
-        data: extract_data_current_month(['naemon-core-rhel5'], cur_month),
-        color: '#DBAD72'
-    }, {
-        label: 'Redhat6',
-        data: extract_data_current_month(['naemon-core-rhel6'], cur_month),
-        color: '#DBAD72'
-    }, {
-        label: 'Redhat7',
-        data: extract_data_current_month(['naemon-core-rhel7'], cur_month),
-        color: '#DBAD72'
-    }, {
-        label: 'SLES11',
-        data: extract_data_current_month(['naemon-core-sles11'], cur_month),
-        color: '#D9A88F'
-    }, {
-        label: 'SLES12',
-        data: extract_data_current_month(['naemon-core-sles12'], cur_month),
-        color: '#D9A88F'
-    }, {
-        label: 'Debian7',
-        data: extract_data_current_month(['naemon-core-debian7'], cur_month),
-        color: '#4B8C61'
-    }, {
-        label: 'Debian8',
-        data: extract_data_current_month(['naemon-core-debian8'], cur_month),
-        color: '#4B8C61'
-    }, {
-        label: 'Ubuntu 12',
-        data: extract_data_current_month(['naemon-core-ubuntu12'], cur_month),
-        color: '#12AD2A'
-    }, {
-        label: 'Ubuntu 13',
-        data: extract_data_current_month(['naemon-core-ubuntu13'], cur_month),
-        color: '#12AD2A'
-    }, {
-        label: 'Ubuntu 14',
-        data: extract_data_current_month(['naemon-core-ubuntu14'], cur_month),
-        color: '#12AD2A'
-    }, {
-        label: 'Ubuntu 15',
-        data: extract_data_current_month(['naemon-core-ubuntu15'], cur_month),
-        color: '#12AD2A'
-    }, {
-        label: 'Ubuntu 16',
-        data: extract_data_current_month(['naemon-core-ubuntu16'], cur_month),
-        color: '#12AD2A'
-    }];
-    jQuery.plot('#downloadstats_pkg', data, {
-        series: {
-            pie: {
-                show:   true,
-                radius: 1,
-                tilt:   0.7,
-                shadow: {
-                    alpha: 0.02,
-                    left: 15,
-                    top: 5
-                },
-                label: {
-                    show:         true,
-                    radius:       1,
-                    formatter:    labelFormatter,
-                    background: { opacity: 0.8 }
-                },
-                combine: {
-                    color:    '#999',
-                    threshold: 0.03
-                }
-            }
-        },
-        legend: { show: false },
-        grid:   { hoverable: true }
-    });
-    jQuery("#downloadstats_pkg").bind("plothover", function (event, pos, item) {
-        if (item) {
-            jQuery("#tooltip").html(item.series.label+": " + item.datapoint[1][0][1] + " downloads in " + cur_month + ' = '+ Math.round(item.series.percent) + ' %')
-                              .css({top: pos.pageY+5, left: pos.pageX+5, "background-color": item.series.color})
-                              .fadeIn(200);
-        } else {
-            $("#tooltip").hide();
-        }
-    });
-
-});
-</script>
