@@ -61,7 +61,7 @@ The binary packages can also be downloaded here:
    </td>
  </tr>
  <tr>
-   <td><img src="../images/fedora.png" height=48 width=48></td>
+   <td><img src="../images/fedora.png" height="48" width="48"></td>
    <td>Fedora</td>
    <td>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc28/">fc28</a><br>
