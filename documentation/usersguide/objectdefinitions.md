@@ -471,7 +471,7 @@ If you set this value to 0, Naemon will <i>not</i> re-notify contacts about prob
 <tr>
 <td valign="top"><strong>first_notification_delay</strong>:</td>
 <td>
-This directive is used to define the number of "time units" to wait before sending out the first problem notification when this host enters a non-UP state.
+This directive is used to define the number of "time units" to wait before sending out the first problem notification when this host enters a non-UP hard state.
 
 Unless you've changed the <a href="configmain.html#interval_length">interval_length</a> directive from the default value of 60, this number will mean minutes.
 
