@@ -13,6 +13,18 @@ See upcoming changes from the next version on [github](https://github.com/naemon
 
 ### Notable Changes and New Features
 
+#### 1.0.8 - 16 Jul 2018
+##### Features
+  * source defaults file if exists (#241)
+
+##### Changed
+  * _nothing_
+
+##### Bugfixes
+  * Fix naemon-tools conflict (#242)
+  * Fix reload command on el6 (#239)
+
+
 #### 1.0.7 - 01 Jun 2018
 ##### Features
   * Allow circular dependencies in Naemons host graph (experimental)
