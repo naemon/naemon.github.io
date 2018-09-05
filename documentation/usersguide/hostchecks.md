@@ -25,7 +25,7 @@ If you set the <i>check_interval</i> option in your host definition to zero (0),
 
 It will, however, still perform on-demand checks of the host as needed for other parts of the monitoring logic.
 
-On-demand checks are made when a service associated with the host changes state because Naemon needs to know whether the host has also changed state.
+On-demand checks are made when a service associated with the host changes state because Naemon needs to know whether the host has also changed state. Futhermore on-demand host checks are performed after a service check, if the service is in soft critical. This is a mechanism to ensure that the host reaches hard critical before the assosiated services. This is done in order to avoid notification storms.
 
 Services that change state are often an indicator that the host may have also changed state.
 
