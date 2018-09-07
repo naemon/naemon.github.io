@@ -75,9 +75,7 @@ The NDOUtils addon and documentation can be found at <a href="http://www.nagios.
 ### Statusengine 2
 Statusengine 2 is a drop in replacemen for <a href="#ndoutils">NDOUtils</a>.
 
-It is build on a worker concept to scale with a growing workload. The Statusengine Event Broker will export
-all Naemon event data encoded as JSON objects to a Gearman-Job-Server (memory queue). The main part of Statusengine 2 is
-the worker daemon written in PHP. The PHP part of Statusenigne will save all events to a MySQL database, can export performance data
+It is build on a worker concept to scale with a growing workload. Statusenigne will save all events to a MySQL database, can export performance data
 to RRDtool (compatible to <a href="#pnp">PNP</a>) and Graphite and also comes with a responsive web frontend.
 
 Details can be found on <a href="https://statusengine.org/oldstable/">https://statusengine.org/oldstable/</a>
@@ -85,15 +83,15 @@ Details can be found on <a href="https://statusengine.org/oldstable/">https://st
 
 
 ### Statusengine 3
-Statusengine 3 was developed to provide an easy way to scale Naemon monitoring across multiple nodes.
+Statusengine 3 provide an easy way to scale Naemon monitoring across multiple nodes.
 
-As <a href="#statusengine_2">Statusengine 2</a>, it is based on a worker concept and use the Gearman-Job-Server as in memory queue.
-This will prevent Naemon core to crash or slow down, even if the database backend is gone.
+It is based on a worker concept and use a in memory queue to
+prevent Naemon core to crash or slow down, even if the database backend is gone.
 
 Statusengine 3 can save status records to MySQL, CrateDB or Redis.
 Performance data can be exported to Graphite, Elasticsearch, MySQL or CrateDB.
 
-Statusengine UI is an responsive web frontend build on top of AngularJS and a JSON API.
+Statusengine UI is an responsive web frontend build on top of a JSON API.
 
 Details can be found on <a href="https://statusengine.org/">https://statusengine.org</a>
 
