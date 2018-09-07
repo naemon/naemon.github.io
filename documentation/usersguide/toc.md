@@ -189,6 +189,10 @@ body_class: toc
 
 <a href="addons.html#ndoutils">NDOUtils</a>
 
+<a href="addons.html#statusengine_2">Statusengine 2</a>
+
+<a href="addons.html#statusengine_3">Statusengine 3</a>
+
 <a href="addons.html#pnp">PNP</a>
 
 <a href="mrtggraphs.html">Graphing Performance Info With MRTG</a>
