@@ -302,6 +302,8 @@ Hosts are rescheduled at the retry interval when they have changed to a non-UP s
 
 Once the host has been retried <b>max_check_attempts</b> times without a change in its status, it will revert to being scheduled at its "normal" rate as defined by the <b>check_interval</b> value. Unless you've changed the <a href="configmain.html#interval_length">interval_length</a> directive from the default value of 60, this number will mean minutes.
 
+If set to 0, the <b>check_interval</b> is used instead.
+
 More information on this value can be found in the <a href="checkscheduling.html">check scheduling</a> documentation.
 </td>
 </tr>
@@ -930,6 +932,8 @@ This directive is used to define the number of "time units" to wait before sched
 Services are rescheduled at the retry interval when they have changed to a non-OK state.
 
 Once the service has been retried <b>max_check_attempts</b> times without a change in its status, it will revert to being scheduled at its "normal" rate as defined by the <b>check_interval</b> value. Unless you've changed the <a href="configmain.html#interval_length">interval_length</a> directive from the default value of 60, this number will mean minutes.
+
+If set to 0, the <b>check_interval</b> is used instead.
 
 More information on this value can be found in the <a href="checkscheduling.html">check scheduling</a> documentation.
 </td>
