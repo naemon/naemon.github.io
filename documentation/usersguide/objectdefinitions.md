@@ -15,7 +15,7 @@ definitions that inherit properties from other object definitions.
 
 An explanation of how object inheritance works can be found <a href="objectinheritance.html">here</a>.
 
-I strongly suggest that you familiarize yourself with object inheritance once you read
+It is suggested that you familiarize yourself with object inheritance once you read
 over the documentation presented below, as it will make the job of creating and
 maintaining object definitions much easier than it otherwise would be.
 
@@ -581,7 +581,7 @@ This variable is deprecated and not longer used.
 <td>
 This variable is used to define the name of an image that should be associated with this host in the <a href="cgis.html#statusmap_cgi">statusmap</a> CGI.
 
-You can specify a JPEG, PNG, and GIF image if you want, although I would strongly suggest using a GD2 format image, as other image formats will result in a lot of wasted CPU time when the statusmap image is generated.
+You can specify a JPEG, PNG, and GIF image if you want, although using a GD2 format image is recommended, as other image formats requires more processing time when the statusmap image is generated.
 
 GD2 images can be created from PNG images by using the <b>pngtogd2</b> utility supplied with Thomas Boutell's <a href="http://www.boutell.com/gd/">gd library</a>.
 

@@ -121,4 +121,4 @@ Naemon will only read the first 8 KB of data that a plugin returns. This is done
 
 ### Examples
 
-If you're looking for some example plugins to study, I would recommend that you download Monitoring-Plugins plugins or Nagios-Plugins and look through the code for various C, Perl, and shell script plugins.  Information on obtaining Naemon plugins can be found <a href="plugins.html">here</a>.
+If you're looking for some example plugins to study, then you can download Monitoring-Plugins plugins or Nagios-Plugins and look through the code for various C, Perl, and shell script plugins.  Information on obtaining Naemon plugins can be found <a href="plugins.html">here</a>.

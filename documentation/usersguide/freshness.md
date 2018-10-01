@@ -29,7 +29,7 @@ For example, if you have a freshness threshold of 60 for one of your services, N
 
 ### Enabling Freshness Checking
 
-Here's what you need to do to enable freshness checking...
+Here's what you need to do to enable freshness checking.
 
 <ul>
 <li>Enable freshness checking on a program-wide basis with the <a href="configmain.html#check_service_freshness">check_service_freshness</a> and <a href="configmain.html#check_host_freshness">check_host_freshness</a> directives.</li>
@@ -42,7 +42,7 @@ Here's what you need to do to enable freshness checking...
 
 {{ site.hint }}If you do not specify a host- or service-specific <i>freshness_threshold</i> value (or you set it to zero), Naemon will automatically calculate a threshold automatically, based on a how often you monitor that particular host or service.{{ site.end }}
 
-I would recommended that you explicitly specify a freshness threshold, rather than let Naemon pick one for you.
+It is recommended that you explicitly specify a freshness threshold, rather than let Naemon pick one for you.
 
 ### Example
 

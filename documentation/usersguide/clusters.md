@@ -6,15 +6,15 @@ title: Monitoring Service and Host Clusters
 
 ### Introduction
 
-Several people have asked how to go about monitoring clusters of hosts or services, so I decided to write up a little documentation on how to do this.  Its fairly straightforward, so hopefully you find things easy to understand...
+On this page you can find more information about how to monitor clusters.
 
-First off, we need to define what we mean by a "cluster".  The simplest way to understand this is with an example.  Let's say that your organization has five hosts which provide redundant DNS services to your organization.  If one of them fails, its not a major catastrophe because the remaining servers will continue to provide name resolution services.  If you're concerned with monitoring the availability of DNS service to your organization, you will want to monitor five DNS servers.  This is what I consider to be a *service* cluster.  The service cluster consists of five separate DNS services that you are monitoring.  Although you do want to monitor each individual service, your main concern is with the overall status of the DNS service cluster, rather than the availability of any one particular service.
+First off, we need to define what we mean by a "cluster".  The simplest way to understand this is with an example.  Let's say that your organization has five hosts which provide redundant DNS services to your organization.  If one of them fails, its not a major catastrophe because the remaining servers will continue to provide name resolution services.  If you're concerned with monitoring the availability of DNS service to your organization, you will want to monitor five DNS servers.  This is considerered to be a *service* cluster.  The service cluster consists of five separate DNS services that you are monitoring.  Although you do want to monitor each individual service, your main concern is with the overall status of the DNS service cluster, rather than the availability of any one particular service.
 
-If your organization has a group of hosts that provide a high-availability (clustering) solution, I would consider those to be a *host* cluster.  If one particular host fails, another will step in to take over all the duties of the failed server.  As a side note, check out the <a href="http://www.linux-ha.org">High-Availability Linux Project</a> for information on providing host and service redundancy with Linux.
+If your organization has a group of hosts that provide a high-availability (clustering) solution, consider those to be a *host* cluster.  If one particular host fails, another will step in to take over all the duties of the failed server.  As a side note, check out the <a href="http://www.linux-ha.org">High-Availability Linux Project</a> for information on providing host and service redundancy with Linux.
 
 ### Plan of Attack
 
-There are several ways you could potentially monitor service or host clusters.  I'll describe the method that I believe to be the easiest.  Monitoring service or host clusters involves two things:
+Monitoring service or host clusters involves two things:
 
 * Monitoring individual cluster elements
 * Monitoring the cluster as a collective entity
@@ -58,9 +58,9 @@ It is important to notice that we are passing a comma-delimited list of *on-dema
 
 ### Monitoring Host Clusters
 
-Monitoring host clusters is very similar to monitoring service clusters.  Obviously, the main difference is that the cluster members are hosts and not services.  In order to monitor the status of a host cluster, you must define a service that uses the *check_cluster* plugin.  The service should *not* be associated with any of the hosts in the cluster, as this will cause problems with notifications for the cluster if that host goes down.  A good idea might be to associate the service with the host that Naemon is running on.  After all, if the host that Naemon is running on goes down, then Naemon isn't running anymore, so there isn't anything you can do as far as monitoring (unless you've setup <a href="redundancy.html">redundant monitoring hosts</a>)...
+Monitoring host clusters is very similar to monitoring service clusters.  The main difference is that the cluster members are hosts and not services.  In order to monitor the status of a host cluster, you must define a service that uses the *check_cluster* plugin.  The service should *not* be associated with any of the hosts in the cluster, as this will cause problems with notifications for the cluster if that host goes down.  A good idea might be to associate the service with the host that Naemon is running on.  After all, if the host that Naemon is running on goes down, then Naemon isn't running anymore, so there isn't anything you can do as far as monitoring (unless you've setup <a href="redundancy.html">redundant monitoring hosts</a>)...
 
-Anyway, let's assume that you have a *check_host_cluster* command defined as follows:
+Let's assume that you have a *check_host_cluster* command defined as follows:
 
 
 ```

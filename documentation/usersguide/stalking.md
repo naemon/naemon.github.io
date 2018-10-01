@@ -129,7 +129,5 @@ These all relate to the reporting functions found in various <a href="cgis.html"
 Because state stalking will cause additional alert entries to be logged, the data produced
 by the reports will show evidence of inflated numbers of alerts.
 
-As a general rule, I would suggest that you <i>not</i> enable stalking for hosts
+As a general rule, it is recommended that you do <i>not</i> enable stalking for hosts
 and services without thinking things through.
-
-Still, it's there if you need and want it.

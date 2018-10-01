@@ -10,9 +10,7 @@ title: Notification Escalations
 
 Naemon supports optional escalation of contact notifications for hosts and services.  Escalation of host and service notifications is accomplished by defining <a href="objectdefinitions.html#hostescalation">host escalations</a> and <a href="objectdefinitions.html#serviceescalation">service escalations</a> in your <a href="configobject.html">object configuration file(s)</a>.
 
-{{ site.note }}The examples I provide below all make use of service escalation definitions, but host escalations work the same way.{{ site.end }}
-
-Except, of course, that they're for hosts instead of services. :-)
+{{ site.note }}The examples provided below all make use of service escalation definitions, but host escalations work the same way.{{ site.end }}
 
 ### When Are Notifications Escalated?
 

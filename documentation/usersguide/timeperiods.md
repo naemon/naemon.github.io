@@ -71,7 +71,7 @@ another hour, day, or week, etc.
 
 Only regularly scheduled active checks are restricted.
 
-Unless you have a good reason not to do so, I would recommend that you monitor all
+Unless you have a good reason not to do so, it is recommended that you monitor all
 your hosts and services using timeperiods that cover a 24x7 time range.
 
 If you don't do this, you can run into some problems during "blackout" times (times that are not valid in the timeperiod definition):

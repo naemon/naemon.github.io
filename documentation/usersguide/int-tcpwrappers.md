@@ -8,14 +8,14 @@ title: TCP Wrapper Integration
 
 <img src="images/tcpwrappers.png" border="0" style="float: right;" alt="TCP Wrappers" title="TCP Wrappers">
 
-This document explains how to easily generate alerts in Naemon for connection attempts that are rejected by TCP wrappers.  For example, if an unauthorized host attempts to connect to your SSH server, you can receive an alert in Naemon that contains the name of the host that was rejected.  If you implement this on your Linux/Unix boxes, you'll be surprised how many port scans you can detect across your network.
+This document explains how to easily generate alerts in Naemon for connection attempts that are rejected by TCP wrappers.  For example, if an unauthorized host attempts to connect to your SSH server, you can receive an alert in Naemon that contains the name of the host that was rejected.
 
 These directions assume:
 
 <ol>
 <li>You are already familiar with <a href="passivechecks.html">passive checks</a> and how they work.</li>
 <li>You are already familiar with <a href="volatileservices.html">volatile services</a> and how they work.</li>
-<li>The host which you are generating alerts for (i.e. the host you are using TCP wrappers on) is a remote host (called <i>firestorm</i> in this example).  If you want to generate alerts on the same host that Naemon is running you will need to make a few modifications to the examples I provide.</li>
+<li>The host which you are generating alerts for (i.e. the host you are using TCP wrappers on) is a remote host (called <i>firestorm</i> in this example).  If you want to generate alerts on the same host that Naemon is running you will need to make a few modifications to the examples.</li>
 <li>You have installed the <a href="addons.html#nsca">NSCA daemon</a> on your monitoring server and the NSCA client (<i>send_nsca</i>) on the remote machine that you are generating TCP wrapper alerts from.</li>
 </ol>
 

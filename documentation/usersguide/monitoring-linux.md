@@ -29,7 +29,7 @@ The sample configuration entries below reference objects that are defined in the
 
 ### Overview
 
-{{ site.note }}This document has not been completed. I would recommend you read the documentation on the <a href="addons.html#nrpe">NRPE addon</a> for instructions on how to monitor a remote Linux/Unix server.{{ site.end }}
+{{ site.note }}This document has not been completed. It is recommended that you read the documentation on the <a href="addons.html#nrpe">NRPE addon</a> for instructions on how to monitor a remote Linux/Unix server.{{ site.end }}
 
 There are several different ways to monitor attributes or remote Linux/Unix servers.  One is by using shared SSH keys and the <i>check_by_ssh</i> plugin to execute plugins on remote servers.  This method will not be covered here, but can result in high load on your monitoring server if you are monitoring hundreds or thousands of services.  The overhead of setting up/destroying SSH connections is the cause of this.
 

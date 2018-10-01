@@ -10,8 +10,6 @@ Naemon supports optional detection of hosts and services that are "flapping".  F
 
 ### How Flap Detection Works
 
-Before I get into this, let me say that flapping detection has been a little difficult to implement.  How exactly does one determine what "too frequently" means in regards to state changes for a particular host or service?  When I first started thinking about implementing flap detection I tried to find some information on how flapping could/should be detected.  I couldn't find any information about what others were using (where they using any?), so I decided to settle with what seemed to me to be a reasonable solution...
-
 Whenever Naemon checks the status of a host or service, it will check to see if it has started or stopped flapping.  It does this by:
 
 <ul>
@@ -71,7 +69,7 @@ Host flap detection works in a similar manner to service flap detection, with on
 <li>Sometimes when a service associated with that host is checked.  More specifically, when at least <i>x</i> amount of time has passed since the flap detection was last performed, where <i>x</i> is equal to the average check interval of all services associated with the host.</li>
 </ul>
 
-Why is this done?  With services we know that the minimum amount of time between consecutive flap detection routines is going to be equal to the service check interval.  However, you might not be monitoring hosts on a regular basis, so there might not be a host check interval that can be used in the flap detection logic.  Also, it makes sense that checking a service should count towards the detection of host flapping.  Services are attributes of or things associated with host after all...  At any rate, that's the best method I could come up with for determining how often flap detection could be performed on a host, so there you have it.
+Why is this done?  With services we know that the minimum amount of time between consecutive flap detection routines is going to be equal to the service check interval.  However, you might not be monitoring hosts on a regular basis, so there might not be a host check interval that can be used in the flap detection logic.  Also, it makes sense that checking a service should count towards the detection of host flapping.  Services are attributes of or things associated with host after all.
 
 ### Flap Detection Thresholds
 

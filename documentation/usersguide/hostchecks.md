@@ -85,7 +85,7 @@ If Naemon needs to determine their true state using the <a href="networkreachabi
 
  Just to reiterate, those checks are run <i>serially</i>, rather than in parallel, so it can cause a big performance hit.
 
-For this reason, I would recommend that you always use a value greater than 1 for the <i>max_check_attempts</i> directives in your host definitions.
+For this reason, it is recommended that you always use a value greater than 1 for the <i>max_check_attempts</i> directives in your host definitions.
 
 ### Host States
 

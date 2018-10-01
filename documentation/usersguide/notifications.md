@@ -8,7 +8,7 @@ title: Notifications
 
 <img src="images/objects-contacts.png" border="0" style="float: right;" alt="Contacts" title="Contacts">
 
-I've had a lot of questions as to exactly how notifications work.  This will attempt to explain exactly when and how host and service notifications are sent out, as well as who receives them.
+This will attempt to explain exactly when and how host and service notifications are sent out, as well as who receives them.
 
 Notification escalations are explained <a href="escalations.html">here</a>.
 
@@ -108,8 +108,7 @@ There are many ways you could configure Naemon to send notifications out.  Its u
 Basically anything you can do from a command line can be tailored for use as a notification command.
 If you're looking for an alternative to using email for sending messages to your pager or cellphone, check out these packages. They could be used in conjunction with Naemon to send out a notification via a modem when a problem
 arises.  That way you don't have to rely on email to send notifications out (remember, email may *not* work if
-there are network problems).  I haven't actually tried these packages myself, but others have reported success
-using them...
+there are network problems).
 
 <ul>
 <li><a href="http://www.gnokii.org/">Gnokii</a> (SMS software for contacting Nokia phones via GSM network)</li>
