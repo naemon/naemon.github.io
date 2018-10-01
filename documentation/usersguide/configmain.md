@@ -987,8 +987,6 @@ Using no delay is generally <i>not</i> recommended, as it will cause all service
 
 This means that you will generally have large CPU spikes when the services are all executed in parallel.
 
- More information on how to estimate how the inter-check delay affects service check scheduling can be found <a href="checkscheduling.html#service_inter_check_delay">here</a>.
-
 Values are as follows:
 
 * n = Don't use any delay - schedule all service checks to run immediately (i.e. at the same time!)
@@ -1042,8 +1040,6 @@ The best way to understand how interleaving works is to watch the <a href="cgis.
 
 You should see that the service check results are spread out as they begin to appear.
 
-More information on how interleaving works can be found <a href="checkscheduling.html#service_interleaving">here</a>.
-
 * *x* = A number greater than or equal to 1 that specifies the interleave factor to use.
 
 An interleave factor of 1 is equivalent to not interleaving the service checks.
@@ -1070,8 +1066,6 @@ Specifying a value of 1 for this variable essentially prevents any service check
 Specifying a value of 0 (the default) does not place any restrictions on the number of concurrent checks.
 
 You'll have to modify this value based on the system resources you have available on the machine that runs Naemon, as it directly affects the maximum load that will be imposed on the system (processor utilization, memory, etc.).
-
-More information on how to estimate how many concurrent checks you should allow can be found <a href="checkscheduling.html#max_concurrent_checks">here</a>.
 
 <a name="check_result_reaper_frequency"></a>
 #### Check Result Reaper Frequency
@@ -1181,9 +1175,7 @@ Using no delay is generally *not* recommended.
 
 Using no delay will cause all host checks to be scheduled for execution at the same time.
 
-More information on how to estimate how the inter-check delay affects host check scheduling can be found <a href="checkscheduling.html#host_inter_check_delay">here</a>.Values are as follows:
-
-* n = Don't use any delay - schedule all host checks to run immediately (i.e. at the same time!)
+	* n = Don't use any delay - schedule all host checks to run immediately (i.e. at the same time!)
 * d = Use a "dumb" delay of 1 second between host checks
 * s = Use a "smart" delay calculation to spread host checks out evenly (default)
 * x.xx = Use a user-supplied inter-check delay of x.xx seconds

@@ -290,7 +290,7 @@ This directive is used to define the number of "time units" between regularly sc
 
 Unless you've changed the <a href="configmain.html#interval_length">interval_length</a> directive from the default value of 60, this number will mean minutes.
 
-More information on this value can be found in the <a href="checkscheduling.html">check scheduling</a> documentation.
+More information on can be found in the <a href="hostchecks.html">host checks</a> documentation.
 </td>
 </tr>
 <tr>
@@ -304,7 +304,7 @@ Once the host has been retried <b>max_check_attempts</b> times without a change 
 
 If set to 0, the <b>check_interval</b> is used instead.
 
-More information on this value can be found in the <a href="checkscheduling.html">check scheduling</a> documentation.
+More information on can be found in the <a href="hostchecks.html">host checks</a> documentation.
 </td>
 </tr>
 <tr>
@@ -921,7 +921,7 @@ This directive is used to define the number of "time units" to wait before sched
 
 Unless you've changed the <a href="configmain.html#interval_length">interval_length</a> directive from the default value of 60, this number will mean minutes.
 
-More information on this value can be found in the <a href="checkscheduling.html">check scheduling</a> documentation.
+More information can be found in the <a href="servicechecks.html">service checks</a> documentation.
 </td>
 </tr>
 <tr>
@@ -935,7 +935,7 @@ Once the service has been retried <b>max_check_attempts</b> times without a chan
 
 If set to 0, the <b>check_interval</b> is used instead.
 
-More information on this value can be found in the <a href="checkscheduling.html">check scheduling</a> documentation.
+More information can be found in the <a href="servicechecks.html">service checks</a> documentation.
 </td>
 </tr>
 <tr>

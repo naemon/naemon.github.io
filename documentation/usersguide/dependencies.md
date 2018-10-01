@@ -117,7 +117,7 @@ If you want Naemon to use the most current state of the services (regardless of 
 
 Execution dependencies are used to restrict when <a href="activechecks.html">active checks</a> of a service can be performed.  <a href="passivechecks.html">Passive checks</a> are not restricted by execution dependencies.
 
-If *all* of the execution dependency tests for the service *passed*, Naemon will execute the check of the service as it normally would.  If even just one of the execution dependencies for a service fails, Naemon will temporarily prevent the execution of checks for that (dependent) service.  At some point in the future the execution dependency tests for the service may all pass.  If this happens, Naemon will start checking the service again as it normally would.  More information on the check scheduling logic can be found <a href="checkscheduling.html">here</a>.
+If *all* of the execution dependency tests for the service *passed*, Naemon will execute the check of the service as it normally would.  If even just one of the execution dependencies for a service fails, Naemon will temporarily prevent the execution of checks for that (dependent) service.  At some point in the future the execution dependency tests for the service may all pass.  If this happens, Naemon will start checking the service again as it normally would. 
 
 In the example above, <b>Service E</b> would have failed execution dependencies if <b>Service B</b> is in a WARNING or UNKNOWN state.  If this was the case, the service check would not be performed and the check would be scheduled for (potential) execution at a later time.
 

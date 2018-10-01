@@ -2,7 +2,7 @@
 layout: doctoc
 title: Service Checks
 ---
-<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="activechecks.html">Active Checks</a>, <a href="hostchecks.html">Host Checks</a>, <a href="checkscheduling.html">Check Scheduling</a>, <a href="dependencychecks.html">Predictive Dependency Checks</a>
+<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="activechecks.html">Active Checks</a>, <a href="hostchecks.html">Host Checks</a>, <a href="dependencychecks.html">Predictive Dependency Checks</a>
 
 ### Introduction
 

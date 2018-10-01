@@ -89,8 +89,7 @@ be executed. However, it is normal for some checks to have small latency
 values. I would recommend taking the minimum number of maximum concurrent
 checks reported when running Naemon with the <b>-s</b> command line argument
 and doubling it. Keep increasing it until the average check latency for your
-services is fairly low. More information on service check scheduling can be
-found <a href="checkscheduling.html">here</a>.
+services is fairly low.
 
 
 
