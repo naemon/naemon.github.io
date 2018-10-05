@@ -88,7 +88,7 @@ to the Naemon user for executing the necessary system commands.  You might want 
 
 ### Service Event Handler Example
 
-The example below assumes that you are monitoring the HTTP server on the local machine and have specified <i>restart-httpd</i> as the event handler command for the HTTP service definition.  Also, I will be assuming that you have set the <i>max_check_attempts</i> option for the service to be a value of 4 or greater (i.e. the service is checked 4 times before it is considered to have a real problem).  An abbreviated example service definition might look like this...
+The example below assumes that you are monitoring the HTTP server on the local machine and have specified <i>restart-httpd</i> as the event handler command for the HTTP service definition.  Also, let's assume that you have set the <i>max_check_attempts</i> option for the service to be a value of 4 or greater (i.e. the service is checked 4 times before it is considered to have a real problem).  An abbreviated example service definition might look like this.
 
 <pre>
 define service{
@@ -100,7 +100,7 @@ define service{
 	}
 </pre>
 
-Once the service has been defined with an event handler, we must define that event handler as a command.  An example command definition for <i>restart-httpd</i> is shown below.  Notice the macros in the command line that I am passing to the event handler script - these are important!
+Once the service has been defined with an event handler, we must define that event handler as a command.  An example command definition for <i>restart-httpd</i> is shown below.  Notice the macros in the command line that is passed to the event handler script - these are important!
 
 <pre>
 define command{
@@ -184,6 +184,4 @@ The sample script provided above will attempt to restart the web server on the l
 <li>After the service first goes into a HARD CRITICAL state</li>
 </ul>
 
-The script should theoretically restart and web server and fix the problem before the service goes into a HARD problem state, but we include a fallback case in the event it doesn't work the first time.  It should be noted that the event handler will only be executed the first time that the service falls into a HARD problem state.  This prevents Naemon from continuously executing the script to restart the web server if the service remains in a HARD problem state.  You don't want that. :-)
-
-That's all there is to it!  Event handlers are pretty simple to write and implement, so give it a try and see what you can do.
+The script should theoretically restart and web server and fix the problem before the service goes into a HARD problem state, but we include a fallback case in the event it doesn't work the first time.  It should be noted that the event handler will only be executed the first time that the service falls into a HARD problem state.  This prevents Naemon from continuously executing the script to restart the web server if the service remains in a HARD problem state.

@@ -15,7 +15,7 @@ title: Monitoring Routers and Switches
 This document describes how you can monitor the status of network switches and routers.  Some cheaper "unmanaged" switches and hubs don't have IP addresses and are essentially invisible on your network, so there's not any way to monitor them.  More expensive switches and routers have addresses assigned to them and can be monitored by pinging them or using SNMP to query status information.
 
 
-I'll describe how you can monitor the following things on managed switches, hubs, and routers:
+You can monitor the following things on managed switches, hubs, and routers:
 
 <ul>
 <li>Packet loss, round trip average</li>
@@ -168,7 +168,7 @@ That's it for the SNMP monitoring example.  There are a million things that can 
 
 If you're monitoring bandwidth usage on your switches or routers using <a href="http://oss.oetiker.ch/mrtg/">MRTG</a>, you can have Naemon alert you when traffic rates exceed thresholds you specify.  The <i>check_mrtgtraf</i> plugin (which is included in the Naemon plugins distribution) allows you to do this.
 
-You'll need to let the <i>check_mrtgtraf</i> plugin know what log file the MRTG data is being stored in, along with thresholds, etc.  In my example, I'm monitoring one of the ports on a Linksys switch.  The MRTG log file is stored in <i>/var/lib/mrtg/192.168.1.253_1.log</i>.  Here's the service definition I use to monitor the bandwidth data that's stored in the log file...
+You'll need to let the <i>check_mrtgtraf</i> plugin know what log file the MRTG data is being stored in, along with thresholds, etc.  In this example, we're monitoring one of the ports on a Linksys switch.  The MRTG log file is stored in <i>/var/lib/mrtg/192.168.1.253_1.log</i>.  Here's the service definition used to monitor the bandwidth data that's stored in the log file.
 
 <pre>
 define service{

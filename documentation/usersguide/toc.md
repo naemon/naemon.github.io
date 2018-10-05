@@ -153,8 +153,6 @@ body_class: toc
 
 <a href="passivestatetranslation.html">Passive host state translation</a>
 
-<a href="checkscheduling.html">Check scheduling</a>
-
 <a href="cgiincludes.html">Custom CGI headers and footers</a>
 
 <a href="objectinheritance.html">Object inheritance</a>

@@ -7,7 +7,7 @@ title: Fast Startup Options
 
 
 {{ site.warn }}
-Faster Startup Options are usually <b>no longer required</b> since Naemon has been heavily optimized. Startup is now up to <b>1000x faster</b> than with Nagios 3.
+Faster Startup Options are usually <b>no longer required</b> since Naemon has been heavily optimized.
 {{ site.end }}
 
 
@@ -97,16 +97,12 @@ TOTAL:                0.393530 sec
 Okay, lets see what happened.
 Looking at the totals, it took roughly <b>17.8</b> seconds to process the configuration files and
 another <b>0.4</b> seconds to verify the config.
-That means that every time I start or restart Naemon with this configuration, it will
+That means that every time we start or restart Naemon with this configuration, it will
 take nearly <b>18 seconds</b> of startup work before it can monitor anything!
 
 This is already quite impressive considering the fact, that Naemon loads
 1 million services 3x faster than 10k services with its predecessor.
 
-
-So do i need to do anything?
-
-Short answer is no.
 
 Since Naemon thinks it can save <b>0.8 seconds</b> from the total time, you
 really shouldn't care about that unless you have millions of services.

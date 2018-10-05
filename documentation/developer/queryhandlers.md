@@ -126,9 +126,8 @@ It can be addressed as such:
 ```
 
 #### Naemon Event Radio Dispatcher
-The nerd radio is subscribed in fuller detail at <a href="nerd.html">nerd</a>, but its
-worth knowing that it's a core part of Naemon and that it will
-always be available.
+The nerd radio is a core part of Naemon and but is current lacking further
+documentation.
 
 
 #### Worker process manager

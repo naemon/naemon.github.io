@@ -167,7 +167,7 @@ package Embed::check_5frpc; sub hndlr { shift(@_); @ARGV=@_;
 </pre>
 <br></li>
 <li>Don't use 'use diagnostics' in a plugin run by your production ePN.
-    I think it causes__all__ the Perl plugins to return CRITICAL.<br><br></li>
+    It might cause __all__ the Perl plugins to return CRITICAL.<br><br></li>
 <li>Consider using a mini embedded Perl C program to check your plugin. This is not
     sufficient to guarantee your plugin will perform Ok with an ePN but if the plugin fails
     this test it will certainly fail with your ePN. <font color="red">[ A sample mini ePN is shipped with Mod-Gearman

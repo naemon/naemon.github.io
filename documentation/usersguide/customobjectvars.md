@@ -14,9 +14,7 @@ Users often request that new variables be added to host, service, and contact de
 
 These include variables for SNMP community, MAC address, AIM username, Skype number, and street address.
 
-The list is endless.
-
-The problem that I see with doing this is that it makes Naemon less generic and more infrastructure-specific.
+The problem that with doing this is that it makes Naemon less generic and more infrastructure-specific.
 
 Naemon was intended to be flexible, which meant things needed to be designed in a generic manner.
 

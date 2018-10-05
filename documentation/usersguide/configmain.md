@@ -627,7 +627,7 @@ If you do not have <a href="#retain_state_information">state retention</a> enabl
 
 This setting determines whether or not Naemon will retain scheduling info (next check times) for hosts and services when it restarts.
 
-If you are adding a large number (or percentage) of hosts and services, I would recommend disabling this option when you first restart Naemon, as it can adversely skew the spread of initial checks.
+If you are adding a large number (or percentage) of hosts and services, it is recommended to disable this option when you first restart Naemon, as it can adversely skew the spread of initial checks.
 
 Otherwise you will probably want to
 
@@ -987,8 +987,6 @@ Using no delay is generally <i>not</i> recommended, as it will cause all service
 
 This means that you will generally have large CPU spikes when the services are all executed in parallel.
 
- More information on how to estimate how the inter-check delay affects service check scheduling can be found <a href="checkscheduling.html#service_inter_check_delay">here</a>.
-
 Values are as follows:
 
 * n = Don't use any delay - schedule all service checks to run immediately (i.e. at the same time!)
@@ -1042,8 +1040,6 @@ The best way to understand how interleaving works is to watch the <a href="cgis.
 
 You should see that the service check results are spread out as they begin to appear.
 
-More information on how interleaving works can be found <a href="checkscheduling.html#service_interleaving">here</a>.
-
 * *x* = A number greater than or equal to 1 that specifies the interleave factor to use.
 
 An interleave factor of 1 is equivalent to not interleaving the service checks.
@@ -1070,8 +1066,6 @@ Specifying a value of 1 for this variable essentially prevents any service check
 Specifying a value of 0 (the default) does not place any restrictions on the number of concurrent checks.
 
 You'll have to modify this value based on the system resources you have available on the machine that runs Naemon, as it directly affects the maximum load that will be imposed on the system (processor utilization, memory, etc.).
-
-More information on how to estimate how many concurrent checks you should allow can be found <a href="checkscheduling.html#max_concurrent_checks">here</a>.
 
 <a name="check_result_reaper_frequency"></a>
 #### Check Result Reaper Frequency
@@ -1181,8 +1175,6 @@ Using no delay is generally *not* recommended.
 
 Using no delay will cause all host checks to be scheduled for execution at the same time.
 
-More information on how to estimate how the inter-check delay affects host check scheduling can be found <a href="checkscheduling.html#host_inter_check_delay">here</a>.Values are as follows:
-
 * n = Don't use any delay - schedule all host checks to run immediately (i.e. at the same time!)
 * d = Use a "dumb" delay of 1 second between host checks
 * s = Use a "smart" delay calculation to spread host checks out evenly (default)
@@ -1228,7 +1220,7 @@ This is the number of seconds per "unit interval" used for timing in the schedul
 
 {{ site.warn }}
 The default value for this is set to 60, which means that a "unit value" of 1 in the object configuration file will mean 60 seconds (1 minute).
-I have not really tested other values for this variable, so proceed at your own risk if you decide to do so!
+Any other values for this variable is poorly tested, so proceed at your own risk if you decide to change this.
 {{ site.end }}
 
 <a name="auto_reschedule_checks"></a>
@@ -1326,7 +1318,7 @@ In general, disabling this option will allow Naemon to make some smarter decisio
 
 Enabling this option will increase the amount of time required to check hosts, but may improve reliability a bit.
 
-Unless you have problems with Naemon not recognizing that a host recovered, I would suggest **not** enabling this option.
+Unless you have problems with Naemon not recognizing that a host recovered, it is suggested to keep this option  **disabled**
 
 * 0 = Don't use aggressive host checking (default)
 * 1 = Use aggressive host checking
@@ -1877,8 +1869,6 @@ If a command exceeds this time limit it will be killed and a warning will be log
 
 This value determines whether or not Naemon will "obsess" over service checks results and run the <a href="#ocsp_command">obsessive compulsive service processor command</a> you define.
 
-I know - funny name, but it was all I could think of.
-
 This option is useful for performing <a href="distributed.html">distributed monitoring</a>.
 
 If you're not doing distributed monitoring, don't enable this option.
@@ -1927,8 +1917,6 @@ This command is only executed if the <a href="#obsess_over_services">obsess_over
 </table>
 
 This value determines whether or not Naemon will "obsess" over host checks results and run the <a href="#ochp_command">obsessive compulsive host processor command</a> you define.
-
-I know - funny name, but it was all I could think of.
 
 This option is useful for performing <a href="distributed.html">distributed monitoring</a>.
 
@@ -2451,7 +2439,7 @@ See <a href="http://thruk.org/documentation/configuration.html#use_timezone">use
 
 This option allows you to specify illegal characters that cannot be used in host names, service descriptions, or names of other object types.
 
-Naemon will allow you to use most characters in object definitions, but I recommend not using the characters shown in the example above.
+Naemon will allow you to use most characters in object definitions, but it is recommended not using the characters shown in the example above.
 
 Doing may give you problems in the web interface, notification commands, etc.
 

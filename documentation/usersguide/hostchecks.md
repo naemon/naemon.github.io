@@ -2,7 +2,7 @@
 layout: doctoc
 title: Host Checks
 ---
-<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="networkreachability.html">Network Reachability</a>, <a href="activechecks.html">Active Checks</a>, <a href="servicechecks.html">Service Checks</a>, <a href="checkscheduling.html">Check Scheduling</a>, <a href="dependencychecks.html">Predictive Dependency Checks</a>
+<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="networkreachability.html">Network Reachability</a>, <a href="activechecks.html">Active Checks</a>, <a href="servicechecks.html">Service Checks</a>, <a href="dependencychecks.html">Predictive Dependency Checks</a>
 
 ### Introduction
 
@@ -85,7 +85,7 @@ If Naemon needs to determine their true state using the <a href="networkreachabi
 
  Just to reiterate, those checks are run <i>serially</i>, rather than in parallel, so it can cause a big performance hit.
 
-For this reason, I would recommend that you always use a value greater than 1 for the <i>max_check_attempts</i> directives in your host definitions.
+For this reason, it is recommended that you always use a value greater than 1 for the <i>max_check_attempts</i> directives in your host definitions.
 
 ### Host States
 

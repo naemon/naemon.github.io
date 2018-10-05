@@ -119,7 +119,7 @@ There is no inherent limit on how "deep" inheritance can go, but you'll probably
 
 ### Using Incomplete Object Definitions as Templates
 
-It is possible to use incomplete object definitions as templates for use by other object definitions.  By "incomplete" definition, I mean that all required variables in the object have not been supplied in the object definition.  It may sound odd to use incomplete definitions as templates, but it is in fact recommended that you use them.  Why?  Well, they can serve as a set of defaults for use in all other object definitions.  Take the following example:
+It is possible to use incomplete object definitions as templates for use by other object definitions.  By "incomplete" definition, as in that all required variables of the object have not been supplied in the object definition.  It may sound odd to use incomplete definitions as templates, but it is in fact recommended that you use them.  Why?  Well, they can serve as a set of defaults for use in all other object definitions.  Take the following example:
 
 <pre>
 	define host{

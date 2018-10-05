@@ -26,7 +26,7 @@ That's how predictive dependency checks work.  Simple, eh?
 
 ### Enabling Predictive Checks
 
-Predictive dependency checks involve rather little overhead, so I would recommend that you enable them.  In most cases, the benefits of having accurate information for the dependency logic outweighs the extra overhead imposed by these checks.
+Predictive dependency checks involve rather little overhead, so it is recommended that you enable them.  In most cases, the benefits of having accurate information for the dependency logic outweighs the extra overhead imposed by these checks.
 
 Enabling predictive dependency checks is easy:
 

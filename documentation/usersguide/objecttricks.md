@@ -6,7 +6,7 @@ title: Time-Saving Tricks For Object Definitions
 
 ### Introduction
 
-This documentation attempts to explain how you can exploit the (somewhat) hidden features of <a href="objectdefinitions.html">template-based object definitions</a> to save your sanity.  How so, you ask?  Several types of objects allow you to specify multiple host names and/or hostgroup names in definitions, allowing you to "copy" the object definition to multiple hosts or services.  I'll cover each type of object that supports these features separately.  For starters, the object types which support this time-saving feature are as follows:
+This documentation explains how you can exploit the (somewhat) hidden features of <a href="objectdefinitions.html">template-based object definitions</a>.  Several types of objects allow you to specify multiple host names and/or hostgroup names in definitions, allowing you to "copy" the object definition to multiple hosts or services.  Each type of object that supports these features will be covered separately.  For starters, the object types which support this time-saving feature are as follows:
 
 <ul>
 <li><a href="#service">Services</a></li>
@@ -21,10 +21,10 @@ Object types that are not listed above (i.e. timeperiods, commands, etc.) do not
 
 ### Regular Expression Matching
 
-The examples I give below use "standard" matching of object names
+The examples given below use "standard" matching of object names
   and <b>*require*</b> <a href="configmain.html#use_regexp_matching">use_regexp_matching</a> to be <b>*disabled*</b>.
 
-If you wish, you can enable regular expression matching for object names by using the <a href="configmain.html#use_regexp_matching">use_regexp_matching</a> config option.  By default, regular expression matching will only be used in object names that contain <b>*</b>, <b>?</b>, <b>+</b>, or <b>\.</b>.  If you want regular expression matching to be used on all object names, enable the <a href="configmain.html#use_true_regexp_matching">use_true_regexp_matching</a> config option.  Regular expressions can be used in any of the fields used in the examples below (host names, hostgroup names, service names, and servicegroup names).
+You can enable regular expression matching for object names by using the <a href="configmain.html#use_regexp_matching">use_regexp_matching</a> config option.  By default, regular expression matching will only be used in object names that contain <b>*</b>, <b>?</b>, <b>+</b>, or <b>\.</b>.  If you want regular expression matching to be used on all object names, enable the <a href="configmain.html#use_true_regexp_matching">use_true_regexp_matching</a> config option.  Regular expressions can be used in any of the fields used in the examples below (host names, hostgroup names, service names, and servicegroup names).
 
 {{ site.note }}Be careful when enabling regular expression matching - you may have to change your config file, since some directives that you might not want to be interpreted as a regular expression just might be!  Any problems should become evident once you verify your configuration.{{ site.end }}
 

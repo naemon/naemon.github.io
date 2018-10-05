@@ -58,7 +58,7 @@ a Naemon-based monitoring solution...
 
 <ol>
 <li><strong>Use a Dedicated Monitoring Box</strong>.
-    I would recommend that you install Naemon on a server that is dedicated to monitoring
+    It is recommended that you install Naemon on a server that is dedicated to monitoring
     (and possibly other admin tasks). Protect your monitoring server as if it were one
     of the most important servers on your network.
     Keep running services to a minimum and lock down access to it via TCP wrappers, firewalls,
@@ -88,20 +88,19 @@ a Naemon-based monitoring solution...
     accounts, that should be fine. If you've installed it on a public or multi-user machine (not recommended),
     allowing the web server user to have write access to the command file can be a security problem.
     After all, you don't want just any user on your system controlling Naemon through the external command file.
-    In this case, I would suggest only granting write access on the command file to the <i>naemon</i> user and
+    In this case, it is recommended only granting write access on the command file to the <i>naemon</i> user and
     using something like <a href="http://cgiwrap.sourceforge.net/">CGIWrap</a> to run the CGIs as the <i>naemon</i>
     user instead of <i>nobody</i>.<br><br></li>
 <li><strong>Require Authentication In The CGIs</strong>.
-    I would strongly suggest requiring authentication for accessing the CGIs.
+    It is strongly recommended to require authentication for accessing the CGIs.
     Once you do that, read the documentation on the default rights that authenticated contacts have, and only
     authorize specific contacts for additional rights as necessary.
     Instructions on setting up authentication and configuring authorization rights can be found <a href="cgiauth.html">here</a>.
     If you disable the CGI authentication features using the <a href="configcgi.html#use_authentication">use_authentication</a>
     directive in the CGI config file, the <a href="cgis.html#cmd_cgi">command CGI</a> will refuse to write any commands to
-    the <a href="configmain.html#command_file">external command file</a>.
-    After all, you don't want the world to be able to control Naemon do you?<br><br></li>
+    the <a href="configmain.html#command_file">external command file</a>.<br><br></li>
 <li><strong>Implement Enhanced CGI Security Measures</strong>.
-    I would strongly suggest that you consider implementing enhanced security measures for the CGIs as described
+    It is strongly recommended that you implement enhanced security measures for the CGIs as described
     <a href="cgisecurity.html">here</a>.
     These measures can help ensure that the username/password you use to access the Naemon web interface are not
     intercepted by third parties.<br><br></li>

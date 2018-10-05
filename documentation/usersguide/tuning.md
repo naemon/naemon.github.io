@@ -12,8 +12,7 @@ title: Tuning Naemon For Maximum Performance
 
 <img src="images/tuning.png" border="0" style="float: right; clear: both;" alt="Tuning" title="Tuning">
 
-So you've finally got Naemon up and running and you want to know how you can
-tweak it a bit. Tuning Naemon to increase performance can be necessary when
+Tuning Naemon to increase performance can be necessary when
 you start monitoring a large number (> 10,000) of hosts and services. Here are
 a few things to look at for optimizing Naemon...
 
@@ -86,11 +85,10 @@ are probably starving Naemon of the checks it needs. That's not Naemon's fault
 - its yours. Under ideal conditions, all service checks would have a latency
 of 0, meaning they were executed at the exact time that they were scheduled to
 be executed. However, it is normal for some checks to have small latency
-values. I would recommend taking the minimum number of maximum concurrent
+values. It is recommended taking the minimum number of maximum concurrent
 checks reported when running Naemon with the <b>-s</b> command line argument
 and doubling it. Keep increasing it until the average check latency for your
-services is fairly low. More information on service check scheduling can be
-found <a href="checkscheduling.html">here</a>.
+services is fairly low.
 
 
 
@@ -187,17 +185,15 @@ href="cachedchecks.html">here</a>.
 #### Avoid Aggressive Host Checking
 
 <b>Don't use aggressive host checking</b>.
-Unless you're having problems with Naemon recognizing host recoveries, I would
-recommend not enabling the <a
+Unless you're having problems with Naemon recognizing host recoveries, it is
+not recommended enabling the <a
 href="configmain.html#use_agressive_host_checking">`use_aggressive_host_checking`</a>
 option. With this option turned off host checks will execute much faster,
 resulting in speedier processing of service check results. However, host
 recoveries can be missed under certain circumstances when this it turned off.
 For example, if a host recovers and all of the services associated with that
 host stay in non-OK states (and don't "wobble" between different non-OK
-states), Naemon may miss the fact that the host has recovered. A few people
-may need to enable this option, but the majority don't and I would recommend not
-using it unless you find it necessary...
+states), Naemon may miss the fact that the host has recovered.
 
 
 
