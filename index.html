@@ -5,13 +5,23 @@ title: Monitoring Suite
 <div class="jumbotron">
   <div class="container">
     <h1>Naemon</h1>
-    <p>Naemon is the new monitoring suite that aims to be fast, stable
-and innovative while giving you a clear view of the state of your
-network and applications.</p>
-	<p>The latest version of Naemon is <strong>{{ site.release_version }}</strong>,
-released <strong>{{ site.release_date }}</strong>.<br />
-	</p>
-    <p><a class="btn btn-primary btn-lg" href="/download" role="button" style="line-height: 0.7;">Download v{{ site.release_version }} &raquo;<span style="font-size: x-small;"><br>(released {{ site.release_date }})</span></a></p>
+    <p>Naemon is the new monitoring suite that aims to be fast, stable and innovative while giving you a clear view of the state of your network and applications.</p>
+    <p>The latest version of Naemon is <strong>{{ site.release_version }}</strong>, released <strong>{{ site.release_date }}</strong>.</p>
+    <div class="row">
+      <div class="col-md-5">
+        <p><a class="btn btn-primary btn-lg" href="/download" role="button" style="line-height: 0.7;">Download v{{ site.release_version }} &raquo;<span style="font-size: x-small;"><br>(released {{ site.release_date }})</span></a></p>
+      </div>
+      <div class="col-md-3" style="text-align: center;">
+        <p>Release Roadmap:</p>
+      </div>
+      <div class="col-md-4">
+        <div class="btn-group btn-group-md" role="group" aria-label="Release plan" style="width: 100%;">
+          <a class="btn btn-success" href="/download" role="button" style="width: 50%; padding: 6px 1px;">Stable: {{ site.release_date }}</a>
+          <a class="btn btn-info" href="/download#development-snapshot" role="button" style="width: 18%; padding: 6px 1px;">Nightly</a>
+          <a class="btn btn-warning" href="https://github.com/naemon/naemon-core/commits/master" target="_blank" role="button" style="width: 32%; padding: 6px 1px;">Next: {{ site.next_release }}</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
