@@ -1,4 +1,5 @@
 name: Naemon
+title: Naemon
 highlighter: rouge
 paginate: 10
 paginate_path: "news/page:num"
