@@ -31,3 +31,6 @@ test: .gem
 
 localtest: _site
 	TESTEXPECT=Naemon TESTTARGET=file://$(shell pwd)/_site/ PERL_DL_NONLAZY=1 perl -MExtUtils::Command::MM -e "test_harness(0)" t/*.t
+
+clean:
+	rm -rf _site
