@@ -22,6 +22,7 @@ The main configuration file is usually named *naemon.cfg* and located in the */e
 
 Below you will find descriptions of each main Naemon configuration file option...
 
+<a name="log_file"></a>
 #### Log File
 
 <table border="0">
@@ -39,6 +40,29 @@ This variable specifies where Naemon should create its main log file.
 
 This should be the first variable that you define in your configuration file, as Naemon will try to write errors that it finds in the rest of your configuration data to this file.
 If you have log rotation enabled, this file will automatically be rotated every hour, day, week, or month.
+
+
+<a name="include_dir"></a>
+#### Include Dir
+
+<table border="0">
+<tr>
+<td>Format:</td>
+<td><b>include_dir=&lt;directory_name&gt;</b></td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><font color="red"><b>include_dir=/etc/naemon/module-conf.d</b></font></td>
+</tr>
+</table>
+
+In order to provide drop-in support for new modules, you can also make use of
+the include_dir directive. The `include_dir` directive causes Naemon to parse
+any configuration (not just object configuration, as with cfg_dir) as if the
+contents of the files in the pointed-to directory was included on this line.
+The path to the directory is relative to the path of the main naemon.cfg
+file.
+
 
 <a name="cfg_file"></a>
 #### Object Configuration File
@@ -2577,7 +2601,7 @@ When in doubt, either broker nothing (if not using event broker modules) or brok
 
 * 0 = Broker nothing
 * -1 = Broker everything
-* # = See BROKER_* definitions in source code (include/broker.h) for other values that can be OR'ed together
+* \# = See BROKER_* definitions in source code (include/broker.h) for other values that can be OR'ed together
 
 <a name="broker_module"></a>
 #### Event Broker Modules
@@ -2753,3 +2777,22 @@ Values are as follows:
 THIS IS AN EXPERIMENTAL FEATURE AND MAY BE REMOVED IN FUTURE VERSIONS.
 ENABLING THIS OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED IMPROPERLY!
 {{ site.end }}
+
+
+<a name="host_down_disable_service_checks"></a>
+#### Host Down Disable Servicechecks
+<table border="0">
+<tr>
+<td>Format:</td>
+<td><b>host_down_disable_service_checks=&lt;0/1&gt;</b></td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><font color="red"><b>host_down_disable_service_checks=1</b></font></td>
+</tr>
+</table>
+
+This option will disable all service checks if the host is not in an UP state.
+
+While desirable in some environments, enabling this value can distort report
+values as the expected quantity of checks will not have been performed
