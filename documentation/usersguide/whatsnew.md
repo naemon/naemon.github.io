@@ -13,6 +13,38 @@ See upcoming changes from the next version on [github](https://github.com/naemon
 
 ### Notable Changes and New Features
 
+#### 1.0.9 - 18 Dec 2018
+##### Features
+  * Add host_down_disable_service_checks config option
+  * Add retained_scheduling_randomize_window setting
+
+##### Changed
+  * No on-demand host checks when service is in hard critical
+  * Log successful save of retention data
+  * Init: Increase time till SIGKILL is sent
+
+##### Bugfixes
+  * Make naemon-core depend on libnaemon
+  * Add conflicts/replaces tags for naemon-tools
+  * parse_check: Don't escape already escaped newlines
+  * Reload: Fix defuct for debian/ubuntu packaging (#150)
+  * Retain next_check schedule on restart (#156, 224)
+  * el6: use correct logrotate script
+  * fix pending dependencies
+  * fix orphaned checks logic
+  * reset is_executing flag when processing active host check result (#154)
+  * set CHECK_OPTION_ORPHAN_CHECK flag if check is scheduled from the orphan event handler
+  * fix memory leak when overriding checks
+  * fix query handler not returning command response
+  * Fix heap corruption when callback dereigsters itself
+
+#### Livestatus
+
+  * make listen() backlog adjustable with 'max_backlog' option
+  * pass errors from the query handler back to the client
+  * report command errors back via livestatus COMMAND requests
+
+
 #### 1.0.8 - 16 Jul 2018
 ##### Features
   * source defaults file if exists (#241)
