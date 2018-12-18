@@ -660,6 +660,28 @@ leave it enabled.
 * 0 = Don't use retained scheduling info
 * 1 = Use retained scheduling info (default)
 
+<a name="retained_scheduling_randomize_window"></a>
+#### Retained Scheduling Randomize Window Option
+
+<table border="0">
+<tr>
+<td>Format:</td>
+<td><b>retained_scheduling_randomize_window=&lt;seconds&gt;</b></td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><font color="red"><b>retained_scheduling_randomize_window=60</b></font></td>
+</tr>
+</table>
+
+If <a href="#use_retained_scheduling_info">use_retained_scheduling info</a> is enabled, this setting sets the window (in seconds), in which checks that were supposed to executed during a restart, is rescheduled.
+
+That is, if set to 60 seconds, then all checks that were missed due to a restart will be scheduled randomly to be executed in the first 60 seconds after a restart.
+
+If the retained_scheduling_randomize_window is larger than the objects check_interval, the check_interval is used instead.
+
+Default is 60 seconds.
+
 <a name="retained_host_attribute_mask"></a>
 <a name="retained_service_attribute_mask"></a>
 #### Retained Host and Service Attribute Masks
