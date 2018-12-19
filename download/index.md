@@ -11,6 +11,8 @@ We have build binary packages for several versions of RedHat/CentOS, Debian, SLE
 via the [Consol repository](http://labs.consol.de/repo/stable/). After the repository has been setup, you just
 have to  install the `naemon` package with your package manager.
 
+Stable releases are also available for recent platforms at the [obs home:naemon project](https://build.opensuse.org/project/show/home:naemon)
+
 The binary packages can also be downloaded here:
 
 <table>
@@ -36,8 +38,6 @@ The binary packages can also be downloaded here:
    <td>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles12sp1/">12 SP3</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles12sp1/">12 SP2</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles12sp1/">12 SP1</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles11sp3/">11 SP3</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/sles11sp4/">11 SP4</a><br>
    </td>
  </tr>
@@ -54,18 +54,17 @@ The binary packages can also be downloaded here:
    <td><img src="../images/ubuntu.png"></td>
    <td>Ubuntu</td>
    <td>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu18.10/">18.10 Cosmic</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu18.04/">18.04 Bionic</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu17.10/">17.10 Artful</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu16.04/">16.04 Xenial</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/ubuntu14.04/">14.04 Trusty</a><br>
    </td>
  </tr>
  <tr>
    <td><img src="../images/fedora.png" height="48" width="48"></td>
    <td>Fedora</td>
    <td>
+        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc29/">fc29</a><br>
         <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc28/">fc28</a><br>
-        <a href="http://labs.consol.de/naemon/release/v{{ site.release_version }}/fc27/">fc27</a><br>
    </td>
  </tr>
 </table>
