@@ -52,7 +52,7 @@ LONG TEXT LINE N  </font>| <font color="#FFA500">PERFDATA LINE 2</font><br>
 PERFDATA LINE N</font>
 </p>
 
-The performance data (shown in <font color="#FFA500">orange</font>) is optional.  If a plugin returns performance data in its output, it must separate the performance data from the other text output using a pipe (|) symbol.  Additional lines of long text output (shown in <font color="blue">blue</font>) are also optional.
+<p>The performance data (shown in <font color="#FFA500">orange</font>) is optional.  If a plugin returns performance data in its output, it must separate the performance data from the other text output using a pipe (|) symbol.  Additional lines of long text output (shown in <font color="blue">blue</font>) are also optional.</p>
 
 ### Plugin Output Examples
 
