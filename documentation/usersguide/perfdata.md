@@ -31,7 +31,7 @@ PING ok - Packet loss = 0%, RTA = 0.80 ms
 
 With this simple type of output, the entire line of text is available in the $HOSTOUTPUT$ or $SERVICEOUTPUT$ <a href="macros.html">macros</a> (depending on whether this plugin was used as a host check or service check).
 
-Plugins can return optional performance data in their output by sending the normal, human-readable text string that they usually would, followed by a pipe character (|), and then a string containing one or more performance data metrics.  Let's take the check_ping plugin as an example and assume that it has been enhanced to return percent packet loss and average round trip time as performance data metrics.  Sample output from the plugin might look like this:
+<p>Plugins can return optional performance data in their output by sending the normal, human-readable text string that they usually would, followed by a pipe character (|), and then a string containing one or more performance data metrics.  Let's take the check_ping plugin as an example and assume that it has been enhanced to return percent packet loss and average round trip time as performance data metrics.  Sample output from the plugin might look like this:</p>
 
 <pre>
 PING ok - Packet loss = 0%, RTA = 0.80 ms | percent_packet_loss=0, rta=0.80
