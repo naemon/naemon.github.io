@@ -108,7 +108,7 @@ A host definition is used to define a physical server, workstation, device, etc.
 <tr><td></td><td>retry_interval</td><td>#</td></tr>
 <tr><td></td><td>active_checks_enabled</td><td>[0/1]</td></tr>
 <tr><td></td><td>passive_checks_enabled</td><td>[0/1]</td></tr>
-<tr><td></td><td class="text-danger">check_period</td><td class="text-danger"><i>timeperiod_name</i></td></tr>
+<tr><td></td><td class="text-danger">check_period&#10033;&#10033;</td><td class="text-danger"><i>timeperiod_name</i></td></tr>
 <tr><td></td><td>obsess_over_host|obsess</td><td>[0/1]</td></tr>
 <tr><td></td><td>check_freshness</td><td>[0/1]</td></tr>
 <tr><td></td><td>freshness_threshold</td><td>#</td></tr>
@@ -323,6 +323,9 @@ This directive is used to determine whether or not passive checks are enabled fo
 <td valign="top"><strong>check_period</strong>:</td>
 <td>
 This directive is used to specify the short name of the <a href="#timeperiod">time period</a> during which active checks of this host can be made.
+    
+{{ site.note }}If it is not defined, Naemon will check it on a <b><i>as needed basis</i></b>, which can be defined as a 24x7 time frame.  This will also give a warning when running the Naemon check config command.{{ site.end }}
+    
 </td>
 </tr>
 <tr>
