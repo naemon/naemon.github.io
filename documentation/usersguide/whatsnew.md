@@ -13,6 +13,16 @@ See upcoming changes from the next version on [github](https://github.com/naemon
 
 ### Notable Changes and New Features
 
+#### 1.0.10 - 19 Mar 2019
+##### Bugfixes
+  * fix newline handling in spoolfiles
+
+#### Livestatus
+
+  * add new columns: service.parents, service.depends_notify, service.depends_exec,
+    host.depends_notify, host.depends_exec
+
+
 #### 1.0.9 - 18 Dec 2018
 ##### Features
   * Add host_down_disable_service_checks config option
