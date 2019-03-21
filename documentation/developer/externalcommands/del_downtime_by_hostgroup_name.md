@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`DEL_DOWNTIME_BY_HOSTGROUP_NAME;hostgroup_name;hostgroup_name;hostgroup_name;hostgroup_name;hostgroup_name;hostgroup_name`
+`DEL_DOWNTIME_BY_HOSTGROUP_NAME;hostgroup_name;hostname;service_description;downtime_start_time;comment`
 
 #### Description:
 
@@ -27,7 +27,7 @@ This command deletes all downtimes matching the specified filters.
 # This is a sample shell script showing how you can submit the DEL_DOWNTIME_BY_HOSTGROUP_NAME command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] DEL_DOWNTIME_BY_HOSTGROUP_NAME;hostgroup1;hostgroup1;hostgroup1;hostgroup1;hostgroup1;hostgroup1\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] DEL_DOWNTIME_BY_HOSTGROUP_NAME;hostgroup1;host1;service1;1478648441;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

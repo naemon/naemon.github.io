@@ -54,14 +54,14 @@ Filter by Category: <select onchange="_update_cmd_filter(this.value)">
 <h5 class='commands service'><a href='change_svc_check_command.html'>CHANGE_SVC_CHECK_COMMAND</a></h5>
 <h5 class='commands service'><a href='change_svc_check_timeperiod.html'>CHANGE_SVC_CHECK_TIMEPERIOD</a></h5>
 <h5 class='commands service'><a href='change_svc_event_handler.html'>CHANGE_SVC_EVENT_HANDLER</a></h5>
-<h5 class='commands host service'><a href='change_svc_modattr.html'>CHANGE_SVC_MODATTR</a></h5>
+<h5 class='commands service'><a href='change_svc_modattr.html'>CHANGE_SVC_MODATTR</a></h5>
 <h5 class='commands notification service'><a href='change_svc_notification_timeperiod.html'>CHANGE_SVC_NOTIFICATION_TIMEPERIOD</a></h5>
 <h5 class='commands host notification'><a href='delay_host_notification.html'>DELAY_HOST_NOTIFICATION</a></h5>
 <h5 class='commands notification service'><a href='delay_svc_notification.html'>DELAY_SVC_NOTIFICATION</a></h5>
 <h5 class='commands comment host'><a href='del_all_host_comments.html'>DEL_ALL_HOST_COMMENTS</a></h5>
 <h5 class='commands comment service'><a href='del_all_svc_comments.html'>DEL_ALL_SVC_COMMENTS</a></h5>
-<h5 class='commands downtime hostgroup'><a href='del_downtime_by_hostgroup_name.html'>DEL_DOWNTIME_BY_HOSTGROUP_NAME</a></h5>
-<h5 class='commands downtime host'><a href='del_downtime_by_host_name.html'>DEL_DOWNTIME_BY_HOST_NAME</a></h5>
+<h5 class='commands downtime hostgroup service'><a href='del_downtime_by_hostgroup_name.html'>DEL_DOWNTIME_BY_HOSTGROUP_NAME</a></h5>
+<h5 class='commands downtime host service'><a href='del_downtime_by_host_name.html'>DEL_DOWNTIME_BY_HOST_NAME</a></h5>
 <h5 class='commands comment downtime'><a href='del_downtime_by_start_time_comment.html'>DEL_DOWNTIME_BY_START_TIME_COMMENT</a></h5>
 <h5 class='commands comment'><a href='del_host_comment.html'>DEL_HOST_COMMENT</a></h5>
 <h5 class='commands downtime'><a href='del_host_downtime.html'>DEL_HOST_DOWNTIME</a></h5>

@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`DEL_DOWNTIME_BY_START_TIME_COMMENT;downtime_start_time;downtime_start_time;downtime_start_time`
+`DEL_DOWNTIME_BY_START_TIME_COMMENT;downtime_start_time;comment`
 
 #### Description:
 
@@ -27,7 +27,7 @@ title: External Command Reference
 # This is a sample shell script showing how you can submit the DEL_DOWNTIME_BY_START_TIME_COMMENT command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] DEL_DOWNTIME_BY_START_TIME_COMMENT;1478648441;1478648441;1478648441\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] DEL_DOWNTIME_BY_START_TIME_COMMENT;1478648441;This is an example comment.\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 

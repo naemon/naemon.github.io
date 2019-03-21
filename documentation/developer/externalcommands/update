@@ -161,6 +161,7 @@ sub parse_commands {
             my $what = _strip($3);
             $last_command->{'args'} .= ';' if $last_command->{'args'} ne "";
             $last_command->{'args'} .= lc($what)."=".$name;
+            $complete_line = "";
             next;
         }
         if($line =~ m/;$/mx) {

@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`CHANGE_SVC_MODATTR;host_name;host_name;service_description;value`
+`CHANGE_SVC_MODATTR;host_name;service_description;value`
 
 #### Description:
 
@@ -27,7 +27,7 @@ This command changes the modified attributes value for the specified service. Mo
 # This is a sample shell script showing how you can submit the CHANGE_SVC_MODATTR command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] CHANGE_SVC_MODATTR;host1;host1;service1;0\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] CHANGE_SVC_MODATTR;host1;service1;0\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 
