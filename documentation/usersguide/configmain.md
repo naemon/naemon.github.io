@@ -2514,13 +2514,21 @@ Some of these characters are interpreted by the shell (i.e. the backtick) and ca
 The following macros are stripped of the characters you specify:
 
 * **$HOSTOUTPUT$**
+* **$LONGHOSTOUTPUT$**
 * **$HOSTPERFDATA$**
 * **$HOSTACKAUTHOR$**
 * **$HOSTACKCOMMENT$**
 * **$SERVICEOUTPUT$**
+* **$LONGSERVICEOUTPUT$**
 * **$SERVICEPERFDATA$**
 * **$SERVICEACKAUTHOR$**
 * **$SERVICEACKCOMMENT$**
+* **$HOSTCHECKCOMMAND$**
+* **$SERVICECHECKCOMMAND$**
+* **$HOSTNOTES$**
+* **$SERVICENOTES$**
+* **$HOSTGROUPNOTES$**
+* **$SERVICEGROUPNOTES$**
 
 <a name="use_regexp_matching"></a>
 #### Regular Expression Matching Option
