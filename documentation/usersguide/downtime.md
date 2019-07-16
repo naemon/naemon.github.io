@@ -36,6 +36,8 @@ When the scheduled downtime is over, Naemon will allow normal notifications to b
 
 If the scheduled downtime is canceled prematurely (before it expires), a "DOWNTIMECANCELLED" notification will get sent out to the appropriate admins.
 
+If a notification has already been sent out befor the downtime starts, then Naemon will send a recovery notification, even when in downtime.
+
 ### Overlapping Scheduled Downtime
 
 Overlapping scheduled downtime allows you to extend a downtime, in case the work required takes longer than originally expected.
