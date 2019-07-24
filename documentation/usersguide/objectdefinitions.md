@@ -1947,7 +1947,7 @@ This directive is used to specify the short name(s) of the servicegroup(s) that 
 <tr>
 <td valign="top"><strong>dependent_service_description</strong>:</td>
 <td>
-This directive is used to identify the <i>description</i> of the <i>dependent</i> <a href="#service">service</a>.
+This directive is used to identify the <i>description(s)</i> of the <i>dependent</i> <a href="#service">service(s)</a>. Multiple servics should be separated by commas.
 </td>
 </tr>
 <tr>
