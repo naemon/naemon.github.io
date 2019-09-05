@@ -9,7 +9,7 @@ title: What's New
 
 ### Notable Changes and New Features
 
-### Upcoming next release
+#### Upcoming next release
 See upcoming changes from the next version on [github](https://github.com/naemon/naemon-core/blob/master/NEWS)
 
 #### 1.1.0 - 02 Sep 2019
