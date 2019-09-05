@@ -16,9 +16,6 @@ Technical and api documentation for Naemon.
 
 <a href="workers.html">Worker Processes</a>
 
-<a href="bugs/">List of Open Bugs in Nagios 4 compared to Naemon</a>
-
-
 
 ### API
 

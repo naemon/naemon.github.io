@@ -21,8 +21,7 @@ the [community page](/community) page.
 
 #### What Are The Differences To Nagios
 
-A lot of open Nagios 4 issues have been fixed in Naemon. See a complete list
-in the [developers section](/documentation/developer/bugs/).
+A lot of open Nagios 4 issues have been fixed in Naemon.
 
 Also we removed the CGIs in favor of the Thruk gui.
 
