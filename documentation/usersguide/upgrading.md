@@ -35,7 +35,7 @@ SLES / OpenSuse:
 ### Upgrading From Nagios 3.x Releases
 
 As newer and stable releases of Naemon are released, you should strongly consider upgrading as soon as possible.
-Newer releases usually contain <a href="/documentation/developer/bugs/">critical bug fixes</a>, so its important to stay up to date.
+Newer releases usually contain <a href="/documentation/usersguide/knownissues.html">critical bug fixes</a>, so its important to stay up to date.
 Assuming you've already installed Nagios in '/etc/nagios', you can install Naemon easily besides your currently installation.
 Here's the upgrade process...
 

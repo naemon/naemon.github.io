@@ -187,6 +187,7 @@ sub test_page {
             # will result in "Parsing of undecoded UTF-8 will give garbage when decoding entities..." otherwise
             my $content = decode_utf8($return->{'content'});
             $lint->parse($content);
+            $lint->eof();
             my @errors = $lint->errors;
             @errors = remove_some_exceptions_from_lint_errors($lint);
             is( scalar @errors, 0, "No HTML errors found on ".$opts->{'url'} );
