@@ -13,7 +13,7 @@ See upcoming changes from the next version on [github](https://github.com/naemon
 
 ### Notable Changes and New Features
 
-#### 1.0.10 - 02 Sep 2019
+#### 1.1.0 - 02 Sep 2019
 ##### Features
 
   * add internal last_update timestamp to track host/service changes
