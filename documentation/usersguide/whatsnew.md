@@ -13,6 +13,31 @@ See upcoming changes from the next version on [github](https://github.com/naemon
 
 ### Notable Changes and New Features
 
+#### 1.0.10 - 02 Sep 2019
+##### Features
+
+  * add internal last_update timestamp to track host/service changes
+  * speed up configuration check when using lots of dependencies
+
+##### Changed
+  * increased CURRENT_NEB_API_VERSION, this means you have to recompile your NEB modules
+
+##### Bugfixes
+  * bail out config check if parent host cannot be resolved
+  * bail out config check if group members cannot be resolved (#300)
+  * fix calculating group on demand macros
+  * fix last_hard_state when using neb modules (#287)
+  * fix loading neb modules multiple times
+
+#### Livestatus
+
+  * add new columns last_update to host and services
+  * send error when result set would be too large
+  * fix issue when reloading while processing a long query
+  * fix issue when parsing incomplete log entries
+  * fix issue with accessing downtimes and comments
+
+
 #### 1.0.10 - 19 Mar 2019
 ##### Bugfixes
   * fix newline handling in spoolfiles
