@@ -7,11 +7,10 @@ title: What's New
 
 <a name="changelog"></a>
 
-### Change Log
-
-See upcoming changes from the next version on [github](https://github.com/naemon/naemon-core/blob/master/NEWS)
-
 ### Notable Changes and New Features
+
+### Upcoming next release
+See upcoming changes from the next version on [github](https://github.com/naemon/naemon-core/blob/master/NEWS)
 
 #### 1.1.0 - 02 Sep 2019
 ##### Features
@@ -29,7 +28,7 @@ See upcoming changes from the next version on [github](https://github.com/naemon
   * fix last_hard_state when using neb modules (#287)
   * fix loading neb modules multiple times
 
-#### Livestatus
+##### Livestatus
 
   * add new columns last_update to host and services
   * send error when result set would be too large
@@ -42,7 +41,7 @@ See upcoming changes from the next version on [github](https://github.com/naemon
 ##### Bugfixes
   * fix newline handling in spoolfiles
 
-#### Livestatus
+##### Livestatus
 
   * add new columns: service.parents, service.depends_notify, service.depends_exec,
     host.depends_notify, host.depends_exec
@@ -73,7 +72,7 @@ See upcoming changes from the next version on [github](https://github.com/naemon
   * fix query handler not returning command response
   * Fix heap corruption when callback dereigsters itself
 
-#### Livestatus
+##### Livestatus
 
   * make listen() backlog adjustable with 'max_backlog' option
   * pass errors from the query handler back to the client
