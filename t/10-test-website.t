@@ -229,7 +229,7 @@ sub test_page {
                     next unless $match =~ $opts->{'check_external_links'};
                     $links_to_check->{$match} = 0 unless defined $links_to_check->{$match};
                 }
-                elsif($match =~ m/^\Q$mainurl\E/mx and $match !~ m/\.(css|js|gif|jpg|png|ico)$/mxi) {
+                elsif($match =~ m/^\Q$mainurl\E/mx and $match !~ m/\.(css|js|gif|jpg|png|ico|svg)$/mxi) {
                     $pages_to_check->{$match} = 0 unless defined $pages_to_check->{$match};
                     $link_referer->{$match}->{$opts->{'url'}} = 1;
                 } else {
