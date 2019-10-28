@@ -81,14 +81,10 @@ This is good because it gives you some control over how much load Naemon will
 impose on your monitoring host, but it can also slow things down. If you are
 seeing high latency values (> 10 or 15 seconds) for the majority of your
 service checks (via the <a href="cgis.html#extinfo_cgi">extinfo CGI</a>), you
-are probably starving Naemon of the checks it needs. That's not Naemon's fault
-- its yours. Under ideal conditions, all service checks would have a latency
-of 0, meaning they were executed at the exact time that they were scheduled to
-be executed. However, it is normal for some checks to have small latency
-values. It is recommended taking the minimum number of maximum concurrent
-checks reported when running Naemon with the <b>-s</b> command line argument
-and doubling it. Keep increasing it until the average check latency for your
-services is fairly low.
+are probably starving Naemon of the checks it needs. Under ideal conditions,
+all service checks would have a latency of 0, meaning they were executed at the
+exact time that they were scheduled to be executed. However, it is normal for
+some checks to have small latency values.
 
 
 
