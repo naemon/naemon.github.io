@@ -1283,13 +1283,9 @@ Any other values for this variable is poorly tested, so proceed at your own risk
 </tr>
 </table>
 
-This option determines whether or not Naemon will attempt to automatically reschedule active host and service checks to "smooth" them out over time.
-
-This can help to balance the load on the monitoring server, as it will attempt to keep the time between consecutive checks consistent, at the expense of executing checks on a more rigid schedule.
-
 {{ site.warning }}
-THIS IS AN EXPERIMENTAL FEATURE AND MAY BE REMOVED IN FUTURE VERSIONS.
-ENABLING THIS OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED IMPROPERLY!
+This functionality is obsolete and setting this option no longer has any effects.
+It remains for compatibility with older configuration files.
 {{ site.end }}
 
 <a name="auto_rescheduling_interval"></a>
@@ -1306,15 +1302,9 @@ ENABLING THIS OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED
 </tr>
 </table>
 
-This option determines how often (in seconds) Naemon will attempt to automatically reschedule checks.
-
-This option only has an effect if the <a href="#auto_reschedule_checks">auto_reschedule_checks</a> option is enabled.
-
-Default is 30 seconds.
-
 {{ site.warn }}
-THIS IS AN EXPERIMENTAL FEATURE AND MAY BE REMOVED IN FUTURE VERSIONS.
-ENABLING THIS OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED IMPROPERLY!
+This functionality is obsolete and setting this option no longer has any effects.
+It remains for compatibility with older configuration files.
 {{ site.end }}
 
 <a name="auto_rescheduling_window"></a>
@@ -1332,15 +1322,9 @@ ENABLING THIS OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED
 </tr>
 </table>
 
-This option determines the "window" of time (in seconds) that Naemon will look at when automatically rescheduling checks. Only host and service checks that occur in the next X seconds (determined by this variable) will be rescheduled.
-
-This option only has an effect if the <a href="#auto_reschedule_checks">auto_reschedule_checks</a> option is enabled.
-
-Default is 180 seconds (3 minutes).
-
 {{ site.warn }}
-THIS IS AN EXPERIMENTAL FEATURE AND MAY BE REMOVED IN FUTURE VERSIONS.
-ENABLING THIS OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED IMPROPERLY!
+This functionality is obsolete and setting this option no longer has any effects.
+It remains for compatibility with older configuration files.
 {{ site.end }}
 
 <a name="use_agressive_host_checking"></a>
