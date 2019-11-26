@@ -30,7 +30,7 @@ When scheduling host or service downtime you have the option of making it "trigg
 
 ### How Scheduled Downtime Affects Notifications
 
-When a host or service is in a period of scheduled downtime, Naemon will not allow normal notifications to be sent out for the host or service.  However, a "DOWNTIMESTART" notification will get sent out for the host or service, which will serve to put any admins on notice that they won't receive upcoming problem alerts.
+When a host or service is in a period of scheduled downtime, Naemon will not allow normal notifications to be sent out for the host or service.  However, a "DOWNTIMESTART" notification will get sent out for the host or service, which will serve to put any admins on notice that they won't receive upcoming problem alerts. Also a notification is sent, even if the object is in a downtime, if an acknowledgement is made with the notify flag set.
 
 When the scheduled downtime is over, Naemon will allow normal notifications to be sent out for the host or service again.  A "DOWNTIMEEND" notification will get sent out notifying admins that the scheduled downtime is over, and they will start receiving normal alerts again.
 
