@@ -105,7 +105,7 @@ Author website can be found here: <a href="http://pnp4nagios.org">pnp4nagios.org
 
 
 ### Merlin
-Merlin is a addon for distributed monitoring. Details can be found on <a href="https://kb.op5.com/display/MERLIN">op5.org</a>
+Merlin is a addon for distributed monitoring. Details can be found in <a href="https://docs.itrsgroup.com/docs/op5-monitor/7.5.0/topics/admin-manual/scalable-monitoring/merlin.html">ITRS OP5 Monitor manual</a>.
 
 
 
