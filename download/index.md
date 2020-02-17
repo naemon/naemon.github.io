@@ -18,6 +18,7 @@ The binary packages can also be downloaded here:
    <td><img src="../images/redhat.png"></td>
    <td>Redhat</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_8_Stream/">Redhat 8</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_7/">Redhat 7</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_6/">Redhat 6</a><br>
    </td>
@@ -26,6 +27,7 @@ The binary packages can also be downloaded here:
    <td><img src="../images/centos.png"></td>
    <td>CentOS</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_8_Stream/">CentOS 8</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_7/">CentOS 7</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_6/">CentOS 6</a><br>
    </td>
@@ -34,6 +36,7 @@ The binary packages can also be downloaded here:
    <td><img src="../images/sles.jpg"></td>
    <td>SLES</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_15/">15</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP4/">12 SP4</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP3/">12 SP3</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP2/">12 SP2</a><br>
@@ -53,6 +56,8 @@ The binary packages can also be downloaded here:
    <td><img src="../images/ubuntu.png"></td>
    <td>Ubuntu</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_19.10/">19.10 Eoan</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_19.04/">19.04 Disco</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_18.10/">18.10 Cosmic</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_18.04/">18.04 Bionic</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_16.04/">16.04 Xenial</a><br>
@@ -63,6 +68,8 @@ The binary packages can also be downloaded here:
    <td><img src="../images/fedora.png" height="48" width="48"></td>
    <td>Fedora</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_31/">fc31</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_30/">fc30</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_29/">fc29</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_28/">fc28</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_27/">fc27</a><br>
@@ -111,6 +118,11 @@ curl -s https://download.opensuse.org/repositories/home:/naemon/CentOS_6/home:na
 curl -s https://download.opensuse.org/repositories/home:/naemon/CentOS_7/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
 ```
 
+##### 8
+```
+curl -s https://download.opensuse.org/repositories/home:/naemon/CentOS_8_Stream/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
+```
+
 #### Fedora
 ##### 27
 ```
@@ -123,6 +135,14 @@ curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_28/home:n
 ##### 29
 ```
 curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_29/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
+```
+##### 30
+```
+curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_30/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
+```
+##### 31
+```
+curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_31/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
 ```
 
 #### Suse Linux Enterprise
@@ -144,6 +164,11 @@ zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/SLE_12
 ##### SLES 12 SP4
 ```
 zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP4/home:naemon.repo
+```
+
+##### SLES 15
+```
+zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/SLE_15/home:naemon.repo
 ```
 <a name="development_snapshot"></a>
 ### Development snapshot
