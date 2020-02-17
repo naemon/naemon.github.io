@@ -15,6 +15,7 @@ See upcoming changes from the next version on [github](https://github.com/naemon
 #### 1.2.0 - 17 Feb 2020
 ##### Features
   * Add new skip check options to set a particular state on skipped checks
+  * CentOS 8 support
 
 ##### Bugfixes
   * Retain flap detection option over restarts
