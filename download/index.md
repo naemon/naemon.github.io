@@ -26,6 +26,7 @@ The binary packages can also be downloaded here:
    <td><img src="../images/centos.png"></td>
    <td>CentOS</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_8_Stream/">CentOS 8</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_7/">CentOS 7</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_6/">CentOS 6</a><br>
    </td>
@@ -109,6 +110,11 @@ curl -s https://download.opensuse.org/repositories/home:/naemon/CentOS_6/home:na
 ##### 7
 ```
 curl -s https://download.opensuse.org/repositories/home:/naemon/CentOS_7/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
+```
+
+##### 8
+```
+curl -s https://download.opensuse.org/repositories/home:/naemon/CentOS_8_Stream/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
 ```
 
 #### Fedora
