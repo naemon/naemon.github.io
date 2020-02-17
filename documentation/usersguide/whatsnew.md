@@ -12,9 +12,22 @@ title: What's New
 #### Upcoming next release
 See upcoming changes from the next version on [github](https://github.com/naemon/naemon-core/blob/master/NEWS)
 
+#### 1.2.0 - 17 Feb 2020
+##### Features
+  * Add new skip check options to set a particular state on skipped checks
+
+##### Bugfixes
+  * Retain flap detection option over restarts
+  * Don't process perfdata file if perfdata is disabled
+
+##### Livestatus
+  * Add support for TCP sockets with the inet_addr option
+  * Add support for the statehist table, to calulate and query availability data
+  * Fix logging during argument parsing
+  * Fix deadlock when querying comments/downtimes
+
 #### 1.1.0 - 02 Sep 2019
 ##### Features
-
   * add internal last_update timestamp to track host/service changes
   * speed up configuration check when using lots of dependencies
 
@@ -29,7 +42,6 @@ See upcoming changes from the next version on [github](https://github.com/naemon
   * fix loading neb modules multiple times
 
 ##### Livestatus
-
   * add new columns last_update to host and services
   * send error when result set would be too large
   * fix issue when reloading while processing a long query
@@ -42,7 +54,6 @@ See upcoming changes from the next version on [github](https://github.com/naemon
   * fix newline handling in spoolfiles
 
 ##### Livestatus
-
   * add new columns: service.parents, service.depends_notify, service.depends_exec,
     host.depends_notify, host.depends_exec
 
