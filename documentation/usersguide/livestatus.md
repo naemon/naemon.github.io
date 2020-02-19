@@ -73,6 +73,18 @@ GET services
 OutputFormat: wrapped_json
 ```
 
+#### TCP support
+
+_New in version  1.2.0._
+
+Support querying Livestatus over TCP instead of the default UNIX socket. This is
+enabled through a `broker_module` configure option.
+
+Example configuring Livestatus to listen on TCP port 11621 on all available IPv4
+interfaces:
+```
+broker_module=/usr/lib64/livestatus.so inet_addr=0.0.0.0:11621
+```
 
 
 ### Tables
