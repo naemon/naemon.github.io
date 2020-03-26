@@ -6,17 +6,6 @@ title: Fast Startup Options
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="tuning.html">Performance Tuning</a>, <a href="largeinstalltweaks.html">Large Installation Tweaks</a>
 
 
-{{ site.warn }}
-Faster Startup Options are usually <b>no longer required</b> since Naemon has been heavily optimized.
-{{ site.end }}
-
-
-### Introduction
-
-There were a few things which increased the amount of time it took Naemon to startup (or restart).
-Luckily all of those issues have been addressed and fixed. So meanwhile slow startups are no
-longer a problem.
-
 
 ### Background
 
@@ -32,80 +21,6 @@ This configuration startup process involves a number of steps:
  - Verifying object relationship integrity
  - Checking for circular paths
  - and more...
-
-All the time consuming steps have been optimized or rewritten from scratch. But read
-on for details.
-
-
-
-### Evaluating Startup Times
-
-Before we get on to making things faster, we need to see what's possible and whether
-or not we should even bother with the whole thing.
-This is easy to do - simply start Naemon with the <b>-s</b> command line switch
-to get timing and scheduling information.
-
-A previous example used 10,000 services and took one minute to load and parse
-with Nagios 3.
-But fortunately Naemon loads that configuration in under one second!
-
-An example of the output (abbreviated to only show relevant portions) is shown below.
-For this example, I'm using a Naemon config that has 100,000 hosts defined and
-just over 1,000,000 services.
-
-Yes, we created <b>1 million services</b> in order to demonstrate the effect of
-faster startup times.
-
-```
-%> /usr/bin/naemon -s /etc/naemon/naemon.cfg
-
-Naemon Core 0.8.0
-Copyright (c) 2013-present Naemon Core Development Team and Community Contributors
-Copyright (c) 2009-2013 Nagios Core Development Team and Community Contributors
-Copyright (c) 1999-2009 Ethan Galstad
-Last Modified: 02-13-2014
-License: GPL
-
-Object Config Source: Config files (uncached)
-
-OBJECT CONFIG PROCESSING TIMES      (* = Potential for precache savings with -u option)
-----------------------------------
-Read:                 6.740797 sec
-Resolve:              0.366945 sec  *
-Recomb Contactgroups: 0.055454 sec  *
-Recomb Hostgroups:    0.091442 sec  *
-Dup Services:         1.462903 sec  *
-Recomb Servicegroups: 0.864578 sec  *
-Duplicate:            0.000034 sec  *
-Inherit:              0.348054 sec  *
-Register:             7.422951 sec
-Free:                 0.446037 sec
-                      ============
-TOTAL:                17.799233 sec  * = 0.797362 sec (4.48%) estimated savings
-
-Timing information on configuration verification is listed below.
-
-CONFIG VERIFICATION TIMES
-----------------------------------
-Object Relationships: 0.331025 sec
-Circular Paths:       0.062353 sec
-Misc:                 0.000152 sec
-                      ============
-TOTAL:                0.393530 sec
-```
-
-Okay, lets see what happened.
-Looking at the totals, it took roughly <b>17.8</b> seconds to process the configuration files and
-another <b>0.4</b> seconds to verify the config.
-That means that every time we start or restart Naemon with this configuration, it will
-take nearly <b>18 seconds</b> of startup work before it can monitor anything!
-
-This is already quite impressive considering the fact, that Naemon loads
-1 million services 3x faster than 10k services with its predecessor.
-
-
-Since Naemon thinks it can save <b>0.8 seconds</b> from the total time, you
-really shouldn't care about that unless you have millions of services.
 
 
 
@@ -166,17 +81,3 @@ have Naemon pre-process and pre-cache your config files for future use.
     </td>
   </tr>
 </table>
-
-
-
-### Skipping Circular Path Tests
-
-In the example above, it took nearly a seconds to perform this step of the configuration verification.
-
-Thats why this option is deprecated and will be removed in future naemon releases.
-
-
-
-### Conclusion
-
-All this steps are no longer required. Naemon is optimized and starts way faster than its predecessor.
