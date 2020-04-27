@@ -203,8 +203,10 @@ define host {
    action_url /pnp4nagios/index.php/graph?host=$HOSTNAME$&srv=_HOST_' class='tips' rel='/pnp4nagios/index.php/popup?host=$HOSTNAME$&srv=_HOST_
    register 0
 }
-
 ```
+
+After macro expansion, the `action_url` value is inserted verbatim into an `<a href='action_url'>`,
+so the strange quoting is a trick to add extra parameters in HTML.
 
 ### 11 - Add service performance template
 
