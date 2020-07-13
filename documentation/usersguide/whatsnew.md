@@ -12,6 +12,14 @@ title: What's New
 #### Upcoming next release
 See upcoming changes from the next version on [github](https://github.com/naemon/naemon-core/blob/master/NEWS)
 
+#### 1.2.1 - 13 Jul 2020
+##### Bugfixes
+  * fix executing commands with pipes
+  * fix external command to remove downtimes by filter
+
+##### Livestatus
+  * Increase max_response_size default to 500 MiB
+
 #### 1.2.0 - 17 Feb 2020
 ##### Features
   * Add new skip check options to set a particular state on skipped checks
