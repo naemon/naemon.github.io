@@ -18,7 +18,7 @@ title: External Command Reference
 
 #### Description:
 
-Allows you to acknowledge the current problem for the specified host. By acknowledging the current problem, future notifications (for the same host state) are disabled. If the 'sticky' option is set to one (1), the acknowledgement will remain until the host returns to an UP state. Otherwise the acknowledgement will automatically be removed when the host changes state. If the 'notify' option is set to one (1), a notification will be sent out to contacts indicating that the current host problem has been acknowledged, this is also true if the host is in a downtime. If the 'persistent' option is set to one (1), the comment associated with the acknowledgement will survive across restarts of the Naemon process. If not, the comment will be deleted the next time Naemon restarts.
+Allows you to acknowledge the current problem for the specified host. By acknowledging the current problem, future notifications (for the same host state) are disabled. If the 'sticky' option is set to one (1), the acknowledgement will remain until the host returns to an UP state. Otherwise the acknowledgement will automatically be removed when the host changes state. If the 'notify' option is set to one (1), a notification will be sent out to contacts indicating that the current host problem has been acknowledged. If the 'persistent' option is set to one (1), the comment associated with the acknowledgement will remain once the acknowledgement is removed. If not, the comment will be deleted when the acknowledgement is removed.
 
 #### Shell Script Usage Example:
 

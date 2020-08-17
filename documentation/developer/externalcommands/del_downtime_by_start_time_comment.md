@@ -18,7 +18,7 @@ title: External Command Reference
 
 #### Description:
 
-
+This command deletes all downtimes matching the specified filters.
 
 #### Shell Script Usage Example:
 
