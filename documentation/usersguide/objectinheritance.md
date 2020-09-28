@@ -269,9 +269,13 @@ The following table lists the object variables that will be implicitly inherited
 <table border="1">
 <tr><th>Object Type</th><th>Object Variable</th><th>Implied Source</th></tr>
 <tr>
-<td rowspan="4"><b>Services</b></td>
-<td><i>contact_groups</i></td>
+<td rowspan="5"><b>Services</b></td>
+<td><i>contact_groups</i> *</td>
 <td><i>contact_groups</i> in the associated host definition</td>
+</tr>
+<tr>
+<td><i>contacts</i> *</td>
+<td><i>contacts</i> in the associated host definition</td>
 </tr>
 <tr>
 <td><i>check_period</i></td>
@@ -286,9 +290,13 @@ The following table lists the object variables that will be implicitly inherited
 <td><i>notification_period</i> in the associated host definition</td>
 </tr>
 <tr>
-<td rowspan="3"><b>Host Escalations</b></td>
-<td><i>contact_groups</i></td>
+<td rowspan="4"><b>Host Escalations</b></td>
+<td><i>contact_groups</i> *</td>
 <td><i>contact_groups</i> in the associated host definition</td>
+</tr>
+<tr>
+<td><i>contacts</i> *</td>
+<td><i>contacts</i> in the associated host definition</td>
 </tr>
 <tr>
 <td><i>notification_interval</i></td>
@@ -299,9 +307,13 @@ The following table lists the object variables that will be implicitly inherited
 <td><i>notification_period</i> in the associated host definition</td>
 </tr>
 <tr>
-<td rowspan="3"><b>Service Escalations</b></td>
-<td><i>contact_groups</i></td>
+<td rowspan="4"><b>Service Escalations</b></td>
+<td><i>contact_groups</i> *</td>
 <td><i>contact_groups</i> in the associated service definition</td>
+</tr>
+<tr>
+<td><i>contacts</i> *</td>
+<td><i>contacts</i> in the associated service definition</td>
 </tr>
 <tr>
 <td><i>notification_interval</i></td>
@@ -312,6 +324,9 @@ The following table lists the object variables that will be implicitly inherited
 <td><i>notification_period</i> in the associated service definition</td>
 </tr>
 </table>
+
+<br>
+\* If either of <i>contacts</i> or <i>contact_groups</i> is specified, the object will not inherit neither <i>contacts</i> nor <i>contact_groups</i> from its related object.
 
 <a name="impliedescalations"></a>
 
