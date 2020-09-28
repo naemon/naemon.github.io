@@ -23,11 +23,11 @@ The decision to send out notifications is made in the service check and host che
 
 ### Who Gets Notified?
 
-Each host and service definition has a &lt;<i>contact_groups</i>&gt; option that specifies what contact groups receive notifications for that particular host or service.  Contact groups can contain one or more individual contacts.
+Each host and service definition has &lt;<i>contacts</i>&gt; and &lt;<i>contact_groups</i>&gt; options that specifies what contacts receive notifications for that particular host or service.  Contact groups can contain one or more individual contacts.
 
-When Naemon sends out a host or service notification, it will notify each contact that is a member of any contact groups specified in the &lt;<i>contactgroups</i>&gt; option of the service definition.  Naemon realizes that a contact may be a member of more than one contact group, so it removes duplicate contact notifications before it does anything.
+When Naemon sends out a host or service notification, it will notify each contact that is a member of any contact groups specified in the &lt;<i>contact_groups</i>&gt; option as well as individual contacts specified in the &lt;<i>contacts</i>&gt; option of the host/service definition. Naemon realizes that a contact may be a member of more than one contact group, so it removes duplicate contact notifications before it does anything.
 
-By default all services on a host notifies to the &lt;<i>contact_groups</i>&gt; configured in the host definition. There is however an exception to this; if a contact group is defined directly on a service, only that contact group will receive the notification. It will not be propagated to the contact group configured in the host definition if not explicity set on the service.
+By default all services on a host notifies the &lt;<i>contacts</i>&gt; and &lt;<i>contact_groups</i>&gt; configured in the host definition. There is however an exception to this; if either of &lt;<i>contacts</i>&gt; or &lt;<i>contact_groups</i>&gt; is configured on a service, notifications are only sent to those contacts.
 More information about this can be found in <a href="objectinheritance.html#implied_inheritance">here</a>.
 
 ### What Filters Must Be Passed In Order For Notifications To Be Sent?
