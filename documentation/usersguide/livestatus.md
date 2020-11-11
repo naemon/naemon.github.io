@@ -268,6 +268,10 @@ The following tables are available for livestatus queries.
 <tr><td>custom_variable_names</td><td>list</td><td>A list of the names of all custom variables</td></tr>
 <tr><td>custom_variable_values</td><td>list</td><td>A list of the values of the custom variables</td></tr>
 <tr><td>custom_variables</td><td>dict</td><td>A dictionary of the custom variables</td></tr>
+<tr><td>depends_exec</td><td>list</td><td>A list of all hosts this hosts depends on to execute</td></tr>
+<tr><td>depends_exec_with_info</td><td>list</td><td>A list of all hosts this hosts depends on to execute including information: host_name, failure_options, dependency_period and inherits_parent</td></tr>
+<tr><td>depends_notify</td><td>list</td><td>A list of all hosts this hosts depends on to notify</td></tr>
+<tr><td>depends_notify_with_info</td><td>list</td><td>A list of all hosts this hosts depends on to notify including information: host_name, failure_options, dependency_period and inherits_parent</td></tr>
 <tr><td>display_name</td><td>string</td><td>Optional display name of the host</td></tr>
 <tr><td>downtimes</td><td>list</td><td>A list of the ids of all scheduled downtimes of this host</td></tr>
 <tr><td>downtimes_with_info</td><td>list</td><td>A list of the all scheduled downtimes of the host with id, author and comment</td></tr>
@@ -300,6 +304,7 @@ The following tables are available for livestatus queries.
 <tr><td>last_time_down</td><td>time</td><td>The last time the host was DOWN (Unix timestamp)</td></tr>
 <tr><td>last_time_unreachable</td><td>time</td><td>The last time the host was UNREACHABLE (Unix timestamp)</td></tr>
 <tr><td>last_time_up</td><td>time</td><td>The last time the host was UP (Unix timestamp)</td></tr>
+<tr><td>last_update</td><td>time</td><td>Time of the last update of this host (Unix timestamp)</td></tr>
 <tr><td>latency</td><td>float</td><td>Time difference between scheduled check time and actual check time</td></tr>
 <tr><td>long_plugin_output</td><td>string</td><td>Complete output from check plugin</td></tr>
 <tr><td>low_flap_threshold</td><td>float</td><td>Low threshold of flap detection</td></tr>
@@ -313,10 +318,11 @@ The following tables are available for livestatus queries.
 <tr><td>notes</td><td>string</td><td>Optional notes for this host</td></tr>
 <tr><td>notes_expanded</td><td>string</td><td>The same as notes, but with the most important macros expanded</td></tr>
 <tr><td>notes_url</td><td>string</td><td>An optional URL with further information about the host</td></tr>
-<tr><td>notes_url_expanded</td><td>string</td><td>Same es notes_url, but with the most important macros expanded</td></tr>
+<tr><td>notes_url_expanded</td><td>string</td><td>Same as notes_url, but with the most important macros expanded</td></tr>
 <tr><td>notification_interval</td><td>float</td><td>Interval of periodic notification or 0 if its off</td></tr>
 <tr><td>notification_period</td><td>string</td><td>Time period in which problems of this host will be notified. If empty then notification will be always</td></tr>
 <tr><td>notifications_enabled</td><td>int</td><td>Whether notifications of the host are enabled (0/1)</td></tr>
+<tr><td>notified_on</td><td>int</td><td>Flags determining which states have been notified on</td></tr>
 <tr><td>num_services</td><td>int</td><td>The total number of services of the host</td></tr>
 <tr><td>num_services_crit</td><td>int</td><td>The number of the host's services with the soft state CRIT</td></tr>
 <tr><td>num_services_hard_crit</td><td>int</td><td>The number of the host's services with the hard state CRIT</td></tr>
@@ -341,7 +347,8 @@ The following tables are available for livestatus queries.
 <tr><td>services</td><td>list</td><td>A list of all services of the host</td></tr>
 <tr><td>services_with_info</td><td>list</td><td>A list of all services including detailed information about each service</td></tr>
 <tr><td>services_with_state</td><td>list</td><td>A list of all services of the host together with state and has_been_checked</td></tr>
-<tr><td>should_be_scheduled</td><td>int</td><td>Whether Naemon still tries to run checks on this host (0/1)</td></tr>
+<tr><td>should_be_scheduled</td><td>int</td><td>Whether naemon still tries to run checks on this host (0/1)</td></tr>
+<tr><td>staleness</td><td>float</td><td>Staleness indicator for this host</td></tr>
 <tr><td>state</td><td>int</td><td>The current state of the host (0: up, 1: down, 2: unreachable)</td></tr>
 <tr><td>state_type</td><td>int</td><td>Type of the current state (0: soft, 1: hard)</td></tr>
 <tr><td>statusmap_image</td><td>string</td><td>The name of in image file for the status map</td></tr>
@@ -387,6 +394,10 @@ The following tables are available for livestatus queries.
 <tr><td>custom_variable_names</td><td>list</td><td>A list of the names of all custom variables</td></tr>
 <tr><td>custom_variable_values</td><td>list</td><td>A list of the values of the custom variables</td></tr>
 <tr><td>custom_variables</td><td>dict</td><td>A dictionary of the custom variables</td></tr>
+<tr><td>depends_exec</td><td>list</td><td>A list of all hosts this hosts depends on to execute</td></tr>
+<tr><td>depends_exec_with_info</td><td>list</td><td>A list of all hosts this hosts depends on to execute including information: host_name, failure_options, dependency_period and inherits_parent</td></tr>
+<tr><td>depends_notify</td><td>list</td><td>A list of all hosts this hosts depends on to notify</td></tr>
+<tr><td>depends_notify_with_info</td><td>list</td><td>A list of all hosts this hosts depends on to notify including information: host_name, failure_options, dependency_period and inherits_parent</td></tr>
 <tr><td>display_name</td><td>string</td><td>Optional display name of the host</td></tr>
 <tr><td>downtimes</td><td>list</td><td>A list of the ids of all scheduled downtimes of this host</td></tr>
 <tr><td>downtimes_with_info</td><td>list</td><td>A list of the all scheduled downtimes of the host with id, author and comment</td></tr>
@@ -445,6 +456,7 @@ The following tables are available for livestatus queries.
 <tr><td>last_time_down</td><td>time</td><td>The last time the host was DOWN (Unix timestamp)</td></tr>
 <tr><td>last_time_unreachable</td><td>time</td><td>The last time the host was UNREACHABLE (Unix timestamp)</td></tr>
 <tr><td>last_time_up</td><td>time</td><td>The last time the host was UP (Unix timestamp)</td></tr>
+<tr><td>last_update</td><td>time</td><td>Time of the last update of this host (Unix timestamp)</td></tr>
 <tr><td>latency</td><td>float</td><td>Time difference between scheduled check time and actual check time</td></tr>
 <tr><td>long_plugin_output</td><td>string</td><td>Complete output from check plugin</td></tr>
 <tr><td>low_flap_threshold</td><td>float</td><td>Low threshold of flap detection</td></tr>
@@ -458,10 +470,11 @@ The following tables are available for livestatus queries.
 <tr><td>notes</td><td>string</td><td>Optional notes for this host</td></tr>
 <tr><td>notes_expanded</td><td>string</td><td>The same as notes, but with the most important macros expanded</td></tr>
 <tr><td>notes_url</td><td>string</td><td>An optional URL with further information about the host</td></tr>
-<tr><td>notes_url_expanded</td><td>string</td><td>Same es notes_url, but with the most important macros expanded</td></tr>
+<tr><td>notes_url_expanded</td><td>string</td><td>Same as notes_url, but with the most important macros expanded</td></tr>
 <tr><td>notification_interval</td><td>float</td><td>Interval of periodic notification or 0 if its off</td></tr>
 <tr><td>notification_period</td><td>string</td><td>Time period in which problems of this host will be notified. If empty then notification will be always</td></tr>
 <tr><td>notifications_enabled</td><td>int</td><td>Whether notifications of the host are enabled (0/1)</td></tr>
+<tr><td>notified_on</td><td>int</td><td>Flags determining which states have been notified on</td></tr>
 <tr><td>num_services</td><td>int</td><td>The total number of services of the host</td></tr>
 <tr><td>num_services_crit</td><td>int</td><td>The number of the host's services with the soft state CRIT</td></tr>
 <tr><td>num_services_hard_crit</td><td>int</td><td>The number of the host's services with the hard state CRIT</td></tr>
@@ -486,7 +499,8 @@ The following tables are available for livestatus queries.
 <tr><td>services</td><td>list</td><td>A list of all services of the host</td></tr>
 <tr><td>services_with_info</td><td>list</td><td>A list of all services including detailed information about each service</td></tr>
 <tr><td>services_with_state</td><td>list</td><td>A list of all services of the host together with state and has_been_checked</td></tr>
-<tr><td>should_be_scheduled</td><td>int</td><td>Whether Naemon still tries to run checks on this host (0/1)</td></tr>
+<tr><td>should_be_scheduled</td><td>int</td><td>Whether naemon still tries to run checks on this host (0/1)</td></tr>
+<tr><td>staleness</td><td>float</td><td>Staleness indicator for this host</td></tr>
 <tr><td>state</td><td>int</td><td>The current state of the host (0: up, 1: down, 2: unreachable)</td></tr>
 <tr><td>state_type</td><td>int</td><td>Type of the current state (0: soft, 1: hard)</td></tr>
 <tr><td>statusmap_image</td><td>string</td><td>The name of in image file for the status map</td></tr>
@@ -583,6 +597,10 @@ The following tables are available for livestatus queries.
 <tr><td>custom_variable_names</td><td>list</td><td>A list of the names of all custom variables of the service</td></tr>
 <tr><td>custom_variable_values</td><td>list</td><td>A list of the values of all custom variable of the service</td></tr>
 <tr><td>custom_variables</td><td>dict</td><td>A dictionary of the custom variables</td></tr>
+<tr><td>depends_exec</td><td>list</td><td>A list of all services this service depends on to execute</td></tr>
+<tr><td>depends_exec_with_info</td><td>list</td><td>A list of all services this service depends on to execute including information: host_name, service_description, failure_options, dependency_period and inherits_parent</td></tr>
+<tr><td>depends_notify</td><td>list</td><td>A list of all services this service depends on to notify</td></tr>
+<tr><td>depends_notify_with_info</td><td>list</td><td>A list of all services this service depends on to notify including information: host_name, service_description, failure_options, dependency_period and inherits_parent</td></tr>
 <tr><td>description</td><td>string</td><td>Description of the service (also used as key)</td></tr>
 <tr><td>display_name</td><td>string</td><td>An optional display name</td></tr>
 <tr><td>downtimes</td><td>list</td><td>A list of all downtime ids of the service</td></tr>
@@ -615,6 +633,7 @@ The following tables are available for livestatus queries.
 <tr><td>last_time_ok</td><td>time</td><td>The last time the service was OK (Unix timestamp)</td></tr>
 <tr><td>last_time_unknown</td><td>time</td><td>The last time the service was UNKNOWN (Unix timestamp)</td></tr>
 <tr><td>last_time_warning</td><td>time</td><td>The last time the service was in WARNING state (Unix timestamp)</td></tr>
+<tr><td>last_update</td><td>time</td><td>Time of the last update of this service (Unix timestamp)</td></tr>
 <tr><td>latency</td><td>float</td><td>Time difference between scheduled check time and actual check time</td></tr>
 <tr><td>long_plugin_output</td><td>string</td><td>Unabbreviated output of the last check plugin</td></tr>
 <tr><td>low_flap_threshold</td><td>float</td><td>Low threshold of flap detection</td></tr>
@@ -631,8 +650,10 @@ The following tables are available for livestatus queries.
 <tr><td>notification_interval</td><td>float</td><td>Interval of periodic notification or 0 if its off</td></tr>
 <tr><td>notification_period</td><td>string</td><td>The name of the notification period of the service. It this is empty, service problems are always notified.</td></tr>
 <tr><td>notifications_enabled</td><td>int</td><td>Whether notifications are enabled for the service (0/1)</td></tr>
+<tr><td>notified_on</td><td>int</td><td>Flags determining which states have been notified on</td></tr>
 <tr><td>obsess</td><td>int</td><td>Whether 'obsess' is enabled for the service (0/1)</td></tr>
 <tr><td>obsess_over_service</td><td>int</td><td>Whether 'obsess' is enabled for the service (0/1)</td></tr>
+<tr><td>parents</td><td>list</td><td>A list of all parent services (descriptions only, because they are all same-host)</td></tr>
 <tr><td>percent_state_change</td><td>float</td><td>Percent state change</td></tr>
 <tr><td>perf_data</td><td>string</td><td>Performance data of the last check plugin</td></tr>
 <tr><td>plugin_output</td><td>string</td><td>Output of the last check plugin</td></tr>
@@ -640,7 +661,8 @@ The following tables are available for livestatus queries.
 <tr><td>process_performance_data</td><td>int</td><td>Whether processing of performance data is enabled for the service (0/1)</td></tr>
 <tr><td>retry_interval</td><td>float</td><td>Number of basic interval lengths between checks when retrying after a soft error</td></tr>
 <tr><td>scheduled_downtime_depth</td><td>int</td><td>The number of scheduled downtimes the service is currently in</td></tr>
-<tr><td>should_be_scheduled</td><td>int</td><td>Whether Naemon still tries to run checks on this service (0/1)</td></tr>
+<tr><td>should_be_scheduled</td><td>int</td><td>Whether naemon still tries to run checks on this service (0/1)</td></tr>
+<tr><td>staleness</td><td>float</td><td>The staleness indicator for this service</td></tr>
 <tr><td>state</td><td>int</td><td>The current state of the service (0: OK, 1: WARN, 2: CRITICAL, 3: UNKNOWN)</td></tr>
 <tr><td>state_type</td><td>int</td><td>The type of the current state (0: soft, 1: hard)</td></tr>
 </table>
@@ -675,6 +697,10 @@ The following tables are available for livestatus queries.
 <tr><td>custom_variable_names</td><td>list</td><td>A list of the names of all custom variables of the service</td></tr>
 <tr><td>custom_variable_values</td><td>list</td><td>A list of the values of all custom variable of the service</td></tr>
 <tr><td>custom_variables</td><td>dict</td><td>A dictionary of the custom variables</td></tr>
+<tr><td>depends_exec</td><td>list</td><td>A list of all services this service depends on to execute</td></tr>
+<tr><td>depends_exec_with_info</td><td>list</td><td>A list of all services this service depends on to execute including information: host_name, service_description, failure_options, dependency_period and inherits_parent</td></tr>
+<tr><td>depends_notify</td><td>list</td><td>A list of all services this service depends on to notify</td></tr>
+<tr><td>depends_notify_with_info</td><td>list</td><td>A list of all services this service depends on to notify including information: host_name, service_description, failure_options, dependency_period and inherits_parent</td></tr>
 <tr><td>description</td><td>string</td><td>Description of the service (also used as key)</td></tr>
 <tr><td>display_name</td><td>string</td><td>An optional display name</td></tr>
 <tr><td>downtimes</td><td>list</td><td>A list of all downtime ids of the service</td></tr>
@@ -714,6 +740,10 @@ The following tables are available for livestatus queries.
 <tr><td>host_custom_variable_names</td><td>list</td><td>A list of the names of all custom variables</td></tr>
 <tr><td>host_custom_variable_values</td><td>list</td><td>A list of the values of the custom variables</td></tr>
 <tr><td>host_custom_variables</td><td>dict</td><td>A dictionary of the custom variables</td></tr>
+<tr><td>host_depends_exec</td><td>list</td><td>A list of all hosts this hosts depends on to execute</td></tr>
+<tr><td>host_depends_exec_with_info</td><td>list</td><td>A list of all hosts this hosts depends on to execute including information: host_name, failure_options, dependency_period and inherits_parent</td></tr>
+<tr><td>host_depends_notify</td><td>list</td><td>A list of all hosts this hosts depends on to notify</td></tr>
+<tr><td>host_depends_notify_with_info</td><td>list</td><td>A list of all hosts this hosts depends on to notify including information: host_name, failure_options, dependency_period and inherits_parent</td></tr>
 <tr><td>host_display_name</td><td>string</td><td>Optional display name of the host</td></tr>
 <tr><td>host_downtimes</td><td>list</td><td>A list of the ids of all scheduled downtimes of this host</td></tr>
 <tr><td>host_downtimes_with_info</td><td>list</td><td>A list of the all scheduled downtimes of the host with id, author and comment</td></tr>
@@ -746,6 +776,7 @@ The following tables are available for livestatus queries.
 <tr><td>host_last_time_down</td><td>time</td><td>The last time the host was DOWN (Unix timestamp)</td></tr>
 <tr><td>host_last_time_unreachable</td><td>time</td><td>The last time the host was UNREACHABLE (Unix timestamp)</td></tr>
 <tr><td>host_last_time_up</td><td>time</td><td>The last time the host was UP (Unix timestamp)</td></tr>
+<tr><td>host_last_update</td><td>time</td><td>Time of the last update of this host (Unix timestamp)</td></tr>
 <tr><td>host_latency</td><td>float</td><td>Time difference between scheduled check time and actual check time</td></tr>
 <tr><td>host_long_plugin_output</td><td>string</td><td>Complete output from check plugin</td></tr>
 <tr><td>host_low_flap_threshold</td><td>float</td><td>Low threshold of flap detection</td></tr>
@@ -759,10 +790,11 @@ The following tables are available for livestatus queries.
 <tr><td>host_notes</td><td>string</td><td>Optional notes for this host</td></tr>
 <tr><td>host_notes_expanded</td><td>string</td><td>The same as notes, but with the most important macros expanded</td></tr>
 <tr><td>host_notes_url</td><td>string</td><td>An optional URL with further information about the host</td></tr>
-<tr><td>host_notes_url_expanded</td><td>string</td><td>Same es notes_url, but with the most important macros expanded</td></tr>
+<tr><td>host_notes_url_expanded</td><td>string</td><td>Same as notes_url, but with the most important macros expanded</td></tr>
 <tr><td>host_notification_interval</td><td>float</td><td>Interval of periodic notification or 0 if its off</td></tr>
 <tr><td>host_notification_period</td><td>string</td><td>Time period in which problems of this host will be notified. If empty then notification will be always</td></tr>
 <tr><td>host_notifications_enabled</td><td>int</td><td>Whether notifications of the host are enabled (0/1)</td></tr>
+<tr><td>host_notified_on</td><td>int</td><td>Flags determining which states have been notified on</td></tr>
 <tr><td>host_num_services</td><td>int</td><td>The total number of services of the host</td></tr>
 <tr><td>host_num_services_crit</td><td>int</td><td>The number of the host's services with the soft state CRIT</td></tr>
 <tr><td>host_num_services_hard_crit</td><td>int</td><td>The number of the host's services with the hard state CRIT</td></tr>
@@ -787,7 +819,8 @@ The following tables are available for livestatus queries.
 <tr><td>host_services</td><td>list</td><td>A list of all services of the host</td></tr>
 <tr><td>host_services_with_info</td><td>list</td><td>A list of all services including detailed information about each service</td></tr>
 <tr><td>host_services_with_state</td><td>list</td><td>A list of all services of the host together with state and has_been_checked</td></tr>
-<tr><td>host_should_be_scheduled</td><td>int</td><td>Whether Naemon still tries to run checks on this host (0/1)</td></tr>
+<tr><td>host_should_be_scheduled</td><td>int</td><td>Whether naemon still tries to run checks on this host (0/1)</td></tr>
+<tr><td>host_staleness</td><td>float</td><td>Staleness indicator for this host</td></tr>
 <tr><td>host_state</td><td>int</td><td>The current state of the host (0: up, 1: down, 2: unreachable)</td></tr>
 <tr><td>host_state_type</td><td>int</td><td>Type of the current state (0: soft, 1: hard)</td></tr>
 <tr><td>host_statusmap_image</td><td>string</td><td>The name of in image file for the status map</td></tr>
@@ -817,6 +850,7 @@ The following tables are available for livestatus queries.
 <tr><td>last_time_ok</td><td>time</td><td>The last time the service was OK (Unix timestamp)</td></tr>
 <tr><td>last_time_unknown</td><td>time</td><td>The last time the service was UNKNOWN (Unix timestamp)</td></tr>
 <tr><td>last_time_warning</td><td>time</td><td>The last time the service was in WARNING state (Unix timestamp)</td></tr>
+<tr><td>last_update</td><td>time</td><td>Time of the last update of this service (Unix timestamp)</td></tr>
 <tr><td>latency</td><td>float</td><td>Time difference between scheduled check time and actual check time</td></tr>
 <tr><td>long_plugin_output</td><td>string</td><td>Unabbreviated output of the last check plugin</td></tr>
 <tr><td>low_flap_threshold</td><td>float</td><td>Low threshold of flap detection</td></tr>
@@ -833,8 +867,10 @@ The following tables are available for livestatus queries.
 <tr><td>notification_interval</td><td>float</td><td>Interval of periodic notification or 0 if its off</td></tr>
 <tr><td>notification_period</td><td>string</td><td>The name of the notification period of the service. It this is empty, service problems are always notified.</td></tr>
 <tr><td>notifications_enabled</td><td>int</td><td>Whether notifications are enabled for the service (0/1)</td></tr>
+<tr><td>notified_on</td><td>int</td><td>Flags determining which states have been notified on</td></tr>
 <tr><td>obsess</td><td>int</td><td>Whether 'obsess' is enabled for the service (0/1)</td></tr>
 <tr><td>obsess_over_service</td><td>int</td><td>Whether 'obsess' is enabled for the service (0/1)</td></tr>
+<tr><td>parents</td><td>list</td><td>A list of all parent services (descriptions only, because they are all same-host)</td></tr>
 <tr><td>percent_state_change</td><td>float</td><td>Percent state change</td></tr>
 <tr><td>perf_data</td><td>string</td><td>Performance data of the last check plugin</td></tr>
 <tr><td>plugin_output</td><td>string</td><td>Output of the last check plugin</td></tr>
@@ -861,7 +897,8 @@ The following tables are available for livestatus queries.
 <tr><td>servicegroup_num_services_unknown</td><td>int</td><td>The number of services in the group that are UNKNOWN</td></tr>
 <tr><td>servicegroup_num_services_warn</td><td>int</td><td>The number of services in the group that are WARN</td></tr>
 <tr><td>servicegroup_worst_service_state</td><td>int</td><td>The worst soft state of all of the groups services (OK <= WARN <= UNKNOWN <= CRIT)</td></tr>
-<tr><td>should_be_scheduled</td><td>int</td><td>Whether Naemon still tries to run checks on this service (0/1)</td></tr>
+<tr><td>should_be_scheduled</td><td>int</td><td>Whether naemon still tries to run checks on this service (0/1)</td></tr>
+<tr><td>staleness</td><td>float</td><td>The staleness indicator for this service</td></tr>
 <tr><td>state</td><td>int</td><td>The current state of the service (0: OK, 1: WARN, 2: CRITICAL, 3: UNKNOWN)</td></tr>
 <tr><td>state_type</td><td>int</td><td>The type of the current state (0: soft, 1: hard)</td></tr>
 </table>
@@ -875,7 +912,7 @@ The following tables are available for livestatus queries.
 </tr>
 <tr><td>accept_passive_checks</td><td>int</td><td>Whether the service accepts passive checks (0/1)</td></tr>
 <tr><td>acknowledged</td><td>int</td><td>Whether the current service problem has been acknowledged (0/1)</td></tr>
-<tr><td>acknowledgement_type</td><td>int</td><td>The type of the acknownledgement (0: none, 1: normal, 2: sticky)</td></tr>
+<tr><td>acknowledgement_type</td><td>int</td><td>The type of the acknowledgement (0: none, 1: normal, 2: sticky)</td></tr>
 <tr><td>action_url</td><td>string</td><td>An optional URL for actions or custom information about the service</td></tr>
 <tr><td>action_url_expanded</td><td>string</td><td>The action_url with (the most important) macros expanded</td></tr>
 <tr><td>active_checks_enabled</td><td>int</td><td>Whether active checks are enabled for the service (0/1)</td></tr>
@@ -896,6 +933,10 @@ The following tables are available for livestatus queries.
 <tr><td>custom_variable_names</td><td>list</td><td>A list of the names of all custom variables of the service</td></tr>
 <tr><td>custom_variable_values</td><td>list</td><td>A list of the values of all custom variable of the service</td></tr>
 <tr><td>custom_variables</td><td>dict</td><td>A dictionary of the custom variables</td></tr>
+<tr><td>depends_exec</td><td>list</td><td>A list of all services this service depends on to execute</td></tr>
+<tr><td>depends_exec_with_info</td><td>list</td><td>A list of all services this service depends on to execute including information: host_name, service_description, failure_options, dependency_period and inherits_parent</td></tr>
+<tr><td>depends_notify</td><td>list</td><td>A list of all services this service depends on to notify</td></tr>
+<tr><td>depends_notify_with_info</td><td>list</td><td>A list of all services this service depends on to notify including information: host_name, service_description, failure_options, dependency_period and inherits_parent</td></tr>
 <tr><td>description</td><td>string</td><td>Description of the service (also used as key)</td></tr>
 <tr><td>display_name</td><td>string</td><td>An optional display name</td></tr>
 <tr><td>downtimes</td><td>list</td><td>A list of all downtime ids of the service</td></tr>
@@ -935,6 +976,10 @@ The following tables are available for livestatus queries.
 <tr><td>host_custom_variable_names</td><td>list</td><td>A list of the names of all custom variables</td></tr>
 <tr><td>host_custom_variable_values</td><td>list</td><td>A list of the values of the custom variables</td></tr>
 <tr><td>host_custom_variables</td><td>dict</td><td>A dictionary of the custom variables</td></tr>
+<tr><td>host_depends_exec</td><td>list</td><td>A list of all hosts this hosts depends on to execute</td></tr>
+<tr><td>host_depends_exec_with_info</td><td>list</td><td>A list of all hosts this hosts depends on to execute including information: host_name, failure_options, dependency_period and inherits_parent</td></tr>
+<tr><td>host_depends_notify</td><td>list</td><td>A list of all hosts this hosts depends on to notify</td></tr>
+<tr><td>host_depends_notify_with_info</td><td>list</td><td>A list of all hosts this hosts depends on to notify including information: host_name, failure_options, dependency_period and inherits_parent</td></tr>
 <tr><td>host_display_name</td><td>string</td><td>Optional display name of the host</td></tr>
 <tr><td>host_downtimes</td><td>list</td><td>A list of the ids of all scheduled downtimes of this host</td></tr>
 <tr><td>host_downtimes_with_info</td><td>list</td><td>A list of the all scheduled downtimes of the host with id, author and comment</td></tr>
@@ -967,6 +1012,7 @@ The following tables are available for livestatus queries.
 <tr><td>host_last_time_down</td><td>time</td><td>The last time the host was DOWN (Unix timestamp)</td></tr>
 <tr><td>host_last_time_unreachable</td><td>time</td><td>The last time the host was UNREACHABLE (Unix timestamp)</td></tr>
 <tr><td>host_last_time_up</td><td>time</td><td>The last time the host was UP (Unix timestamp)</td></tr>
+<tr><td>host_last_update</td><td>time</td><td>Time of the last update of this host (Unix timestamp)</td></tr>
 <tr><td>host_latency</td><td>float</td><td>Time difference between scheduled check time and actual check time</td></tr>
 <tr><td>host_long_plugin_output</td><td>string</td><td>Complete output from check plugin</td></tr>
 <tr><td>host_low_flap_threshold</td><td>float</td><td>Low threshold of flap detection</td></tr>
@@ -980,10 +1026,11 @@ The following tables are available for livestatus queries.
 <tr><td>host_notes</td><td>string</td><td>Optional notes for this host</td></tr>
 <tr><td>host_notes_expanded</td><td>string</td><td>The same as notes, but with the most important macros expanded</td></tr>
 <tr><td>host_notes_url</td><td>string</td><td>An optional URL with further information about the host</td></tr>
-<tr><td>host_notes_url_expanded</td><td>string</td><td>Same es notes_url, but with the most important macros expanded</td></tr>
+<tr><td>host_notes_url_expanded</td><td>string</td><td>Same as notes_url, but with the most important macros expanded</td></tr>
 <tr><td>host_notification_interval</td><td>float</td><td>Interval of periodic notification or 0 if its off</td></tr>
 <tr><td>host_notification_period</td><td>string</td><td>Time period in which problems of this host will be notified. If empty then notification will be always</td></tr>
 <tr><td>host_notifications_enabled</td><td>int</td><td>Whether notifications of the host are enabled (0/1)</td></tr>
+<tr><td>host_notified_on</td><td>int</td><td>Flags determining which states have been notified on</td></tr>
 <tr><td>host_num_services</td><td>int</td><td>The total number of services of the host</td></tr>
 <tr><td>host_num_services_crit</td><td>int</td><td>The number of the host's services with the soft state CRIT</td></tr>
 <tr><td>host_num_services_hard_crit</td><td>int</td><td>The number of the host's services with the hard state CRIT</td></tr>
@@ -1008,7 +1055,8 @@ The following tables are available for livestatus queries.
 <tr><td>host_services</td><td>list</td><td>A list of all services of the host</td></tr>
 <tr><td>host_services_with_info</td><td>list</td><td>A list of all services including detailed information about each service</td></tr>
 <tr><td>host_services_with_state</td><td>list</td><td>A list of all services of the host together with state and has_been_checked</td></tr>
-<tr><td>host_should_be_scheduled</td><td>int</td><td>Whether Naemon still tries to run checks on this host (0/1)</td></tr>
+<tr><td>host_should_be_scheduled</td><td>int</td><td>Whether naemon still tries to run checks on this host (0/1)</td></tr>
+<tr><td>host_staleness</td><td>float</td><td>Staleness indicator for this host</td></tr>
 <tr><td>host_state</td><td>int</td><td>The current state of the host (0: up, 1: down, 2: unreachable)</td></tr>
 <tr><td>host_state_type</td><td>int</td><td>Type of the current state (0: soft, 1: hard)</td></tr>
 <tr><td>host_statusmap_image</td><td>string</td><td>The name of in image file for the status map</td></tr>
@@ -1064,6 +1112,7 @@ The following tables are available for livestatus queries.
 <tr><td>last_time_ok</td><td>time</td><td>The last time the service was OK (Unix timestamp)</td></tr>
 <tr><td>last_time_unknown</td><td>time</td><td>The last time the service was UNKNOWN (Unix timestamp)</td></tr>
 <tr><td>last_time_warning</td><td>time</td><td>The last time the service was in WARNING state (Unix timestamp)</td></tr>
+<tr><td>last_update</td><td>time</td><td>Time of the last update of this service (Unix timestamp)</td></tr>
 <tr><td>latency</td><td>float</td><td>Time difference between scheduled check time and actual check time</td></tr>
 <tr><td>long_plugin_output</td><td>string</td><td>Unabbreviated output of the last check plugin</td></tr>
 <tr><td>low_flap_threshold</td><td>float</td><td>Low threshold of flap detection</td></tr>
@@ -1080,8 +1129,10 @@ The following tables are available for livestatus queries.
 <tr><td>notification_interval</td><td>float</td><td>Interval of periodic notification or 0 if its off</td></tr>
 <tr><td>notification_period</td><td>string</td><td>The name of the notification period of the service. It this is empty, service problems are always notified.</td></tr>
 <tr><td>notifications_enabled</td><td>int</td><td>Whether notifications are enabled for the service (0/1)</td></tr>
+<tr><td>notified_on</td><td>int</td><td>Flags determining which states have been notified on</td></tr>
 <tr><td>obsess</td><td>int</td><td>Whether 'obsess' is enabled for the service (0/1)</td></tr>
 <tr><td>obsess_over_service</td><td>int</td><td>Whether 'obsess' is enabled for the service (0/1)</td></tr>
+<tr><td>parents</td><td>list</td><td>A list of all parent services (descriptions only, because they are all same-host)</td></tr>
 <tr><td>percent_state_change</td><td>float</td><td>Percent state change</td></tr>
 <tr><td>perf_data</td><td>string</td><td>Performance data of the last check plugin</td></tr>
 <tr><td>plugin_output</td><td>string</td><td>Output of the last check plugin</td></tr>
@@ -1089,9 +1140,50 @@ The following tables are available for livestatus queries.
 <tr><td>process_performance_data</td><td>int</td><td>Whether processing of performance data is enabled for the service (0/1)</td></tr>
 <tr><td>retry_interval</td><td>float</td><td>Number of basic interval lengths between checks when retrying after a soft error</td></tr>
 <tr><td>scheduled_downtime_depth</td><td>int</td><td>The number of scheduled downtimes the service is currently in</td></tr>
-<tr><td>should_be_scheduled</td><td>int</td><td>Whether Naemon still tries to run checks on this service (0/1)</td></tr>
+<tr><td>should_be_scheduled</td><td>int</td><td>Whether naemon still tries to run checks on this service (0/1)</td></tr>
+<tr><td>staleness</td><td>float</td><td>The staleness indicator for this service</td></tr>
 <tr><td>state</td><td>int</td><td>The current state of the service (0: OK, 1: WARN, 2: CRITICAL, 3: UNKNOWN)</td></tr>
 <tr><td>state_type</td><td>int</td><td>The type of the current state (0: soft, 1: hard)</td></tr>
+</table>
+
+
+#### statehist
+
+<table class='table-bordered table-striped sortable table-condensed table-hover livestatus_table'><tr><th data-defaultsort='asc'>Column</th>
+    <th data-sort='true'>Type</th>
+    <th data-sort='true'>Description</th>
+</tr>
+<tr><td>_host_</td><td></td><td>All columns from the <a href='#hosts'>hosts table</a> are available via current_host_ prefix.</td></tr>
+<tr><td>_service_</td><td></td><td>All columns from the <a href='#services'>services table</a> are available via current_service_ prefix.</td></tr>
+<tr><td>debug_info</td><td>string</td><td>Debug information</td></tr>
+<tr><td>duration</td><td>int</td><td>Duration of state (until - from)</td></tr>
+<tr><td>duration_critical</td><td>int</td><td>CRITICAL duration of state (until - from)</td></tr>
+<tr><td>duration_ok</td><td>int</td><td>OK duration of state ( until - from )</td></tr>
+<tr><td>duration_part</td><td>float</td><td>Duration part in regard to the query timeframe</td></tr>
+<tr><td>duration_part_critical</td><td>float</td><td>CRITICAL duration part in regard to the query timeframe</td></tr>
+<tr><td>duration_part_ok</td><td>float</td><td>OK duration part in regard to the query timeframe</td></tr>
+<tr><td>duration_part_unknown</td><td>float</td><td>UNKNOWN duration part in regard to the query timeframe</td></tr>
+<tr><td>duration_part_unmonitored</td><td>float</td><td>UNMONITORED duration part in regard to the query timeframe</td></tr>
+<tr><td>duration_part_warning</td><td>float</td><td>WARNING duration part in regard to the query timeframe</td></tr>
+<tr><td>duration_unknown</td><td>int</td><td>UNKNOWN duration of state (until - from)</td></tr>
+<tr><td>duration_unmonitored</td><td>int</td><td>UNMONITORED duration of state (until - from)</td></tr>
+<tr><td>duration_warning</td><td>int</td><td>WARNING duration of state (until - from)</td></tr>
+<tr><td>from</td><td>time</td><td>Start time of state (seconds since 1/1/1970)</td></tr>
+<tr><td>host_down</td><td>int</td><td>Shows if the host of this service is down</td></tr>
+<tr><td>host_name</td><td>string</td><td>Host name</td></tr>
+<tr><td>in_downtime</td><td>int</td><td>Shows if the host or service is in downtime</td></tr>
+<tr><td>in_host_downtime</td><td>int</td><td>Shows if the host of this service is in downtime</td></tr>
+<tr><td>in_notification_period</td><td>int</td><td>Shows if the host or service is within its notification period</td></tr>
+<tr><td>in_service_period</td><td>int</td><td>Shows if the host or service is within its service period</td></tr>
+<tr><td>is_flapping</td><td>int</td><td>Shows if the host or service is flapping</td></tr>
+<tr><td>lineno</td><td>int</td><td>The number of the line in the log file</td></tr>
+<tr><td>log_output</td><td>string</td><td>Logfile output relevant for this state</td></tr>
+<tr><td>notification_period</td><td>string</td><td>The notification period of the host or service in question</td></tr>
+<tr><td>service_description</td><td>string</td><td>Description of the service</td></tr>
+<tr><td>service_period</td><td>string</td><td>The service period of the host or service in question</td></tr>
+<tr><td>state</td><td>int</td><td>The state of the host or service in question - OK(0) / WARNING(1) / CRITICAL(2) / UNKNOWN(3) / UNMONITORED(-1)</td></tr>
+<tr><td>time</td><td>time</td><td>Time of the log event (seconds since 1/1/1970)</td></tr>
+<tr><td>until</td><td>time</td><td>End time of state (seconds since 1/1/1970)</td></tr>
 </table>
 
 
@@ -1103,7 +1195,7 @@ The following tables are available for livestatus queries.
 </tr>
 <tr><td>accept_passive_host_checks</td><td>int</td><td>Whether passive host checks are accepted in general (0/1)</td></tr>
 <tr><td>accept_passive_service_checks</td><td>int</td><td>Whether passive service checks are activated in general (0/1)</td></tr>
-<tr><td>cached_log_messages</td><td>int</td><td>The current number of log messages MK Livestatus keeps in memory</td></tr>
+<tr><td>cached_log_messages</td><td>int</td><td>The current number of log messages Naemon Livestatus keeps in memory</td></tr>
 <tr><td>check_external_commands</td><td>int</td><td>Whether Naemon checks for external commands at its command pipe (0/1)</td></tr>
 <tr><td>check_host_freshness</td><td>int</td><td>Whether host freshness checking is activated in general (0/1)</td></tr>
 <tr><td>check_service_freshness</td><td>int</td><td>Whether service freshness checking is activated in general (0/1)</td></tr>
@@ -1125,7 +1217,7 @@ The following tables are available for livestatus queries.
 <tr><td>livecheck_overflows_rate</td><td>float</td><td>The number of livecheck overflows per second</td></tr>
 <tr><td>livechecks</td><td>int</td><td>The number of checks executed via livecheck</td></tr>
 <tr><td>livechecks_rate</td><td>float</td><td>The averaged number of livechecks executed per second</td></tr>
-<tr><td>livestatus_version</td><td>string</td><td>The version of the MK Livestatus module</td></tr>
+<tr><td>livestatus_version</td><td>string</td><td>The version of the Naemon Livestatus module</td></tr>
 <tr><td>log_messages</td><td>int</td><td>The number of new log messages since program start</td></tr>
 <tr><td>log_messages_rate</td><td>float</td><td>the averaged number of new log messages per second</td></tr>
 <tr><td>nagios_pid</td><td>int</td><td>The process ID of the Naemon main process</td></tr>
@@ -1152,6 +1244,13 @@ The following tables are available for livestatus queries.
     <th data-sort='true'>Description</th>
 </tr>
 <tr><td>alias</td><td>string</td><td>The alias of the timeperiod</td></tr>
+<tr><td>days</td><td>list</td><td>Time per days, as 7 lists (sun-sat) of a list of even number of elements, representing start,stop,start,stop... in seconds since midnight</td></tr>
+<tr><td>exceptions_calendar_dates</td><td>list</td><td>List of objects representing exceptions for DATERANGE_CALENDAR_DATE. For time ranges, see "days" column.</td></tr>
+<tr><td>exceptions_month_date</td><td>list</td><td>List of objects representing exceptions for DATERANGE_MONTH_DATE. For time ranges, see "days" column.</td></tr>
+<tr><td>exceptions_month_day</td><td>list</td><td>List of objects representing exceptions for DATERANGE_MONTH_DAY. For time ranges, see "days" column.</td></tr>
+<tr><td>exceptions_month_week_day</td><td>list</td><td>List of objects representing exceptions for DATERANGE_MONTH_WEEK_DAY. For time ranges, see "days" column.</td></tr>
+<tr><td>exceptions_week_day</td><td>list</td><td>List of objects representing exceptions for DATERANGE_WEEK_DAY. For time ranges, see "days" column.</td></tr>
+<tr><td>exclusions</td><td>list</td><td>Exclusions for this timeperiod</td></tr>
 <tr><td>id</td><td>int</td><td>Timeperiod id</td></tr>
 <tr><td>in</td><td>int</td><td>Whether we are currently in this period (0/1)</td></tr>
 <tr><td>name</td><td>string</td><td>The name of the timeperiod</td></tr>
