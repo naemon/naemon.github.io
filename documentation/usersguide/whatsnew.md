@@ -12,6 +12,23 @@ title: What's New
 #### Upcoming next release
 See upcoming changes from the next version on [github](https://github.com/naemon/naemon-core/blob/master/NEWS)
 
+#### 1.2.2 - 13 Nov 2020
+##### Changes
+  * improved sample configuration
+  * improved external command help
+  * debian package source format changed
+  * debian packages changed to systemd
+
+##### Bugfixes
+  * fix scheduling flexible service downtime
+  * fix setting last_update whenever next_check changes
+  * fix worker crashing
+
+##### Livestatus
+  * improved table descriptions
+  * debian packages switched to systemd invoke
+  * debian packages source format changed
+
 #### 1.2.1 - 13 Jul 2020
 ##### Bugfixes
   * fix executing commands with pipes

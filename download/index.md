@@ -36,7 +36,10 @@ The binary packages can also be downloaded here:
    <td><img src="../images/sles.jpg"></td>
    <td>SLES</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_15_SP2/">15 SP2</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_15_SP1/">15 SP1</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_15/">15</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP5/">12 SP5</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP4/">12 SP4</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP3/">12 SP3</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP2/">12 SP2</a><br>
@@ -47,7 +50,8 @@ The binary packages can also be downloaded here:
    <td><img src="../images/debian.png"></td>
    <td>Debian</td>
    <td>
-        <a href="https://labs.consol.de/repo/stable/debian/dists/testing/main/binary-amd64/">10 Buster</a><br>
+        <a href="https://build.opensuse.org/project/repository_state/home:naemon/Debian_Testing">Testing</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_10/">10 Buster</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_9.0/">9 Stretch</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_8.0/">8 Jessie</a><br>
    </td>
@@ -56,23 +60,20 @@ The binary packages can also be downloaded here:
    <td><img src="../images/ubuntu.png"></td>
    <td>Ubuntu</td>
    <td>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_19.10/">19.10 Eoan</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_19.04/">19.04 Disco</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_18.10/">18.10 Cosmic</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_20.10/">20.10 Groovy Gorilla</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_20.04/">20.04 Focal Fossa</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_18.04/">18.04 Bionic</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_16.04/">16.04 Xenial</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_14.04/">14.04 Trusty</a><br>
    </td>
  </tr>
  <tr>
    <td><img src="../images/fedora.png" height="48" width="48"></td>
    <td>Fedora</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_33/">fc33</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_32/">fc32</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_31/">fc31</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_30/">fc30</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_29/">fc29</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_28/">fc28</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_27/">fc27</a><br>
    </td>
  </tr>
 </table>
@@ -80,6 +81,9 @@ The binary packages can also be downloaded here:
 ### Installing via repository<a name="repo_setup"></a>
 
 Packages are available either using the openSUSE Build Service (below) or via the [Consol repository](http://labs.consol.de/repo/stable/).
+
+This list is not synchronized with the build server, so there might be more repositories available at the
+[openSUSE Build Service Repository Overview](https://build.opensuse.org/repositories/home:naemon).
 
 #### Debian / Ubuntu
 ##### Install GPG key
@@ -95,24 +99,15 @@ echo "deb http://download.opensuse.org/repositories/home:/naemon/xUbuntu_$(lsb_r
 apt-get update
 ```
 
-##### Debian 9
+##### Debian 10
 ```
-echo "deb http://download.opensuse.org/repositories/home:/naemon/Debian_9.0/ ./" >> /etc/apt/sources.list.d/naemon-stable.list
-apt-get update
-```
-##### Debian 8
-```
-echo "deb http://download.opensuse.org/repositories/home:/naemon/Debian_9.0/ ./" >> /etc/apt/sources.list.d/naemon-stable.list
+echo "deb http://download.opensuse.org/repositories/home:/naemon/Debian_10/ ./" >> /etc/apt/sources.list.d/naemon-stable.list
 apt-get update
 ```
 
 #### Centos / Redhat
 When using Centos or Redhat you may have to add the <a href="http://fedoraproject.org/wiki/EPEL/FAQ#Using_EPEL">EPEL</a> repository to resolve all dependencies.
 
-##### 6
-```
-curl -s https://download.opensuse.org/repositories/home:/naemon/CentOS_6/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
-```
 ##### 7
 ```
 curl -s https://download.opensuse.org/repositories/home:/naemon/CentOS_7/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
@@ -124,18 +119,6 @@ curl -s https://download.opensuse.org/repositories/home:/naemon/CentOS_8_Stream/
 ```
 
 #### Fedora
-##### 27
-```
-curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_27/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
-```
-##### 28
-```
-curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_28/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
-```
-##### 29
-```
-curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_29/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
-```
 ##### 30
 ```
 curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_30/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
@@ -144,32 +127,27 @@ curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_30/home:n
 ```
 curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_31/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
 ```
+##### 32
+```
+curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_32/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
+```
+##### 33
+```
+curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_33/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
+```
 
 #### Suse Linux Enterprise
-##### SLES 12 SP1
+
+##### SLES 12 SP5
 ```
-zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP1/home:naemon.repo
+zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP5/home:naemon.repo
 ```
 
-##### SLES 12 SP2
+##### SLES 15 SP2
 ```
-zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP2/home:naemon.repo
-```
-
-##### SLES 12 SP3
-```
-zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP3/home:naemon.repo
+zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/SLE_15_SP2/home:naemon.repo
 ```
 
-##### SLES 12 SP4
-```
-zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP4/home:naemon.repo
-```
-
-##### SLES 15
-```
-zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/SLE_15/home:naemon.repo
-```
 <a name="development_snapshot"></a>
 ### Development snapshot
 For new user, we recommend you grab one of our nightly binary snapshots. You can also build yourself from source.
