@@ -5,9 +5,9 @@ paginate: 10
 paginate_path: "news/page:num"
 
 # site specific variables
-release_version: 1.2.2
-release_date: 13 Nov 2020
-next_release: May 2021
+release_version: 1.2.3
+release_date: 07 Dec 2020
+next_release: Jun 2021
 
 # custom "tags"
 hint: '<div class="alert alert-success" style="margin: 10px;"><i class="glyphicon glyphicon-thumbs-up"></i> <b>Tip</b>:&nbsp;'

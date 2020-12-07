@@ -12,6 +12,10 @@ title: What's New
 #### Upcoming next release
 See upcoming changes from the next version on [github](https://github.com/naemon/naemon-core/blob/master/NEWS)
 
+#### 1.2.3 - 07 Dec 2020
+##### Bugfixes
+  * fix package update on debian / ubuntu
+
 #### 1.2.2 - 13 Nov 2020
 ##### Changes
   * improved sample configuration
