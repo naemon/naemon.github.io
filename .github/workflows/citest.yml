@@ -1,0 +1,32 @@
+name: citest
+
+on:
+  push:
+  pull_request:
+  release:
+
+jobs:
+  citest:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      #- name: Setup tmate session, see https://github.com/marketplace/actions/debugging-with-tmate
+      #  uses: mxschmitt/action-tmate@v3
+      - name: prepare machine
+        run: |
+          sudo apt-get install autoconf
+          sudo apt-get install build-essential
+          sudo apt-get install devscripts
+          sudo apt-get install liburi-perl
+          sudo apt-get install libencode-perl
+          sudo apt-get install libwww-perl
+          sudo apt-get install libhtml-lint-perl
+          bundle install
+
+      - name: run build
+        run: |
+          bundle exec jekyll build
+
+      - name: run tests
+        run: |
+          bundle exec make test
