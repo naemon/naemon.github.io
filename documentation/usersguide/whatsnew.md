@@ -12,6 +12,17 @@ title: What's New
 #### Upcoming next release
 See upcoming changes from the next version on [github](https://github.com/naemon/naemon-core/blob/master/NEWS)
 
+#### 1.2.4 - 03 Mar 2021
+##### Changes
+  * improve config check when having lots of servicegroups
+  * change header file location in deb/rpm packages
+
+##### Bugfixes
+  * Fix check_command in svc neb broker call
+
+##### Livestatus
+  * improve contacts column performance
+
 #### 1.2.3 - 07 Dec 2020
 ##### Bugfixes
   * fix package update on debian / ubuntu
