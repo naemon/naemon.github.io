@@ -20,7 +20,6 @@ The binary packages can also be downloaded here:
    <td>
         <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_8_Stream/">Redhat 8</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_7/">Redhat 7</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_6/">Redhat 6</a><br>
    </td>
  </tr>
  <tr>
@@ -29,7 +28,6 @@ The binary packages can also be downloaded here:
    <td>
         <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_8_Stream/">CentOS 8</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_7/">CentOS 7</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_6/">CentOS 6</a><br>
    </td>
  </tr>
  <tr>
