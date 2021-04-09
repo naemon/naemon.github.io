@@ -103,4 +103,4 @@ output=HTTP OK: HTTP/1.1 302 Moved Temporarily - 324 bytes in 0.165 second respo
 
 Here is a incomplete lists of libraries using this API:
 
-- Perl: https://metacpan.org/pod/Nagios::Passive
+- Perl: <a href="https://metacpan.org/pod/Nagios::Passive" target="_blank">https://metacpan.org/pod/Nagios::Passive</a>
