@@ -26,6 +26,9 @@ for my $p (@{$pattern}) {
         # this page contains some examples which breaks this check
         next if $line =~ m/cgisecurity.html:/mx && $line =~ m/\/Location/mx;
 
+        # this page contains some examples which breaks this check
+        next if $line =~ m/spoolfolder.html:/mx && $line =~ m/\QActive Check Result File\E/mx;
+
         chomp($line);
         fail($line);
     }
