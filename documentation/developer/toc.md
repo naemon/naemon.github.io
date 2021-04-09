@@ -27,6 +27,8 @@ Technical and api documentation for Naemon.
 
 <a href="/documentation/developer/externalcommands/">External Commands</a>
 
+<a href="spoolfolder.html">Check Result Spoolfolder</a>
+
 
 
 ### Naemon Plugins
