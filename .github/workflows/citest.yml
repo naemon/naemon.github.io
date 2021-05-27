@@ -21,6 +21,7 @@ jobs:
           sudo apt-get install libencode-perl
           sudo apt-get install libwww-perl
           sudo apt-get install libhtml-lint-perl
+          sudo apt-get install ruby-bundler
           bundle install
 
       - name: run build
