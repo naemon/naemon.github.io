@@ -40,19 +40,16 @@ The first filter that notifications must pass is a test of whether or not notifi
 
 ### Service and Host Filters:
 
-The first filter for host or service notifications is a check to see if the host or service is in a period of <a href="downtime.html">scheduled downtime</a>.  If it is in a scheduled downtime, <b>no one gets notified</b>.  If it isn't in a period of downtime, it gets passed on to the next filter.  As a side note, notifications for services are suppressed if the host they're associated with is in a period of scheduled downtime.
+The following filters are done before a service/host notification is sent:
 
-The second filter for host or service notification is a check to see if the host or service is <a href="flapping.html">flapping</a> (if you enabled flap detection).  If the service or host is currently flapping, <b>no one gets notified</b>.  Otherwise it gets passed to the next filter.
+* If the host / service is in a scheduled downtime no notifications are sent. Service notifications are also supressed if the assosiated host is in a schedule downtime.
+* If the host / service is flapping, no notifications are sent.
+* Ensure that the current state matches the &lt;<i>notification_options</i>&gt; set in the object configuration.
+* Ensure that the &lt;<i>notification_period</i>&gt; for the object is currently valid. If not within a valid time-period, a notification is scheduled for the next valid time present in the time period.
+* For services check that the assosiated host is in a non-ok state. If the host is in a non-ok state no service notification is sent. Instead we send a single host notification.
+* If a previous notification was sent, and the object has remained in the same non-ok state, the &lt;<i>notification_interval</i>&gt; is checked if enough time has passed.
+* For recoveries, Naemon checks whether a notification was sent about the original problem. If no problem notification was sent, Naemon will not send a recovery notification.
 
-The third host or service filter that must be passed is the host- or service-specific notification options.  Each service definition contains options that determine whether or not notifications can be sent out for warning states, critical states, and recoveries.  Similarly, each host definition contains options that determine whether or not notifications can be sent out when the host goes down, becomes unreachable, or recovers.  If the host or service notification does not pass these options, <b>no one gets notified</b>.  If it does pass these options, the notification gets passed to the next filter...
-
-{{ site.note }}Notifications about host or service recoveries are only sent out if a notification was sent out for the original problem.  It doesn't make sense to get a recovery notification for something you never knew was a problem.{{ site.end }}
-
-The fourth host or service filter that must be passed is the time period test.  Each host and service definition has a &lt;<i>notification_period</i>&gt; option that specifies which time period contains valid notification times for the host or service.  If the time that the notification is being made does not fall within a valid time range in the specified time period, <b>no one gets contacted</b>.  If it falls within a valid time range, the notification gets passed to the next filter...
-
-{{ site.note }}If the time period filter is not passed, Naemon will reschedule the next notification for the host or service (if its in a non-OK state) for the next valid time present in the time period.  This helps ensure that contacts are notified of problems as soon as possible when the next valid time in time period arrives.{{ site.end }}
-
-The last set of host or service filters is conditional upon two things: (1) a notification was already sent out about a problem with the host or service at some point in the past and (2) the host or service has remained in the same non-OK state that it was when the last notification went out.  If these two criteria are met, then Naemon will check and make sure the time that has passed since the last notification went out either meets or exceeds the value specified by the &lt;<i>notification_interval</i>&gt; option in the host or service definition.  If not enough time has passed since the last notification, <b>no one gets contacted</b>.  If either enough time has passed since the last notification or the two criteria for this filter were not met, the notification will be sent out!  Whether or not it actually is sent to individual contacts is up to another set of filters...
 
 ### Contact Filters:
 
