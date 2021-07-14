@@ -42,11 +42,11 @@ The first filter that notifications must pass is a test of whether or not notifi
 
 The following filters are done before a service/host notification is sent:
 
-* If the host / service is in a scheduled downtime no notifications are sent. Service notifications are also supressed if the assosiated host is in a schedule downtime.
+* If the host / service is in a scheduled downtime no notifications are sent. Service notifications are also suppressed if the associated host is in a schedule downtime.
 * If the host / service is flapping, no notifications are sent.
 * Ensure that the current state matches the &lt;<i>notification_options</i>&gt; set in the object configuration.
 * Ensure that the &lt;<i>notification_period</i>&gt; for the object is currently valid. If not within a valid time-period, a notification is scheduled for the next valid time present in the time period.
-* For services check that the assosiated host is in a non-ok state. If the host is in a non-ok state no service notification is sent. Instead we send a single host notification.
+* For services check that the associated host is in a non-ok state. If the host is in a non-ok state no service notification is sent. Instead we send a single host notification.
 * If a previous notification was sent, and the object has remained in the same non-ok state, the &lt;<i>notification_interval</i>&gt; is checked if enough time has passed.
 * For recoveries, Naemon checks whether a notification was sent about the original problem. If no problem notification was sent, Naemon will not send a recovery notification.
 
