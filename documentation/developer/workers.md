@@ -60,7 +60,7 @@ The key API's to use are:
 - runcmd - for spawning and reaping commands
 - squeue - for maintaining a queue of the running job's timeouts
 - iocache - for bulk-reading requests and parsing them
-- iobroker - for multiplexing between running tasks and the master nagios process.
+- iobroker - for multiplexing between running tasks and the master naemon process.
 
 {{ site.info }}
 In particular, have a look at the "parse_command_kvvec()" and
@@ -110,7 +110,7 @@ share the load in round-robin fashion.
 Complete C-code for registering a generic worker with Naemon follows:
 
 ```c
-static int nagios_core_worker(const char *path)
+static int naemon_core_worker(const char *path)
 {
 	int sd, ret;
 	char response[128];
@@ -168,7 +168,7 @@ job_id=%d\0type=%d\0command=%s\0timeout=%u\0\1\0\0
 
 Note that values can contain equal signs, but cannot contain nul
 bytes, and cannot contain the message delimiter sequence.
-By including nagios/lib/worker.h and using worker_ioc2msg() followed
+By including naemon/lib/worker.h and using worker_ioc2msg() followed
 by worker_kvvec2buf_prealloc(), you will get a parsed key/value vector
 handed to you. Have a look in base/workers.c to see how it's done for
 the core workers.
@@ -242,13 +242,13 @@ struct and may leave them empty if so.
 
 ### Logging
 Worker processes can send events to the main Naemon process that
-will end up in the nagios.log file. The format is the same as that in
+will end up in the naemon.log file. The format is the same as that in
 requests and responses, but a log-message consists of a single
 key/value pair, where the key is always 'log'. Consequently, a request
 from a worker to the main process to log something looks like this:
 
 ```
-log=A random message that will get logged to nagios.log\0
+log=A random message that will get logged to naemon.log\0
 ```
 
 It's worth noting that Naemon will prefix the message with the worker
