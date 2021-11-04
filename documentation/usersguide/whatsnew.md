@@ -12,6 +12,15 @@ title: What's New
 #### Upcoming next release
 See upcoming changes from the next version on [github](https://github.com/naemon/naemon-core/blob/master/NEWS)
 
+#### 1.3.0 - 03 Nov 2021
+##### Features
+  * add vault macro neb broker api
+  * set environment variables in a more secure way
+
+##### Livestatus
+  * fix reload issue when using tcp listener
+  * fix contacts listed multiple times
+
 #### 1.2.4 - 03 Mar 2021
 ##### Changes
   * improve config check when having lots of servicegroups
