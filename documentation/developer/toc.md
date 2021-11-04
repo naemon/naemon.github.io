@@ -16,6 +16,8 @@ Technical and api documentation for Naemon.
 
 <a href="workers.html">Worker Processes</a>
 
+<a href="neb_broker.html">Naemon Event Broker Modules (NEB)</a>
+
 
 ### API
 
