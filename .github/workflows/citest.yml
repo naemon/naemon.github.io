@@ -26,8 +26,8 @@ jobs:
 
       - name: run build
         run: |
-          bundle exec jekyll build
+          make build
 
       - name: run tests
         run: |
-          bundle exec make test
+          make test
