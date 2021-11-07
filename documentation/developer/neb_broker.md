@@ -19,9 +19,11 @@ nothing else.
 
 Usually callbacks would be registered during the init function.
 
+module.c:
 ```C
 #include <naemon/naemon.h>
 
+NEB_API_VERSION(CURRENT_NEB_API_VERSION);
 static void *neb_handle = NULL;
 
 int nebmodule_init(int flags, char *arg, nebmodule *handle) {
@@ -35,6 +37,26 @@ int nebmodule_deinit(int flags, int reason) {
     return OK;
 }
 ```
+
+compile with:
+```bash
+  %> gcc $(pkg-config --cflags naemon) -shared -fPIC  module.c -o module.o
+```
+
+And load the module from your naemon.cfg with:
+```
+broker_module=..../module.o
+```
+
+If everything worked, you should see something like this in your naemon.log
+
+```
+[1636297273] module loaded
+[1636297273] Event broker module '/omd/sites/demo/var/tmp/mymodule.o' initialized successfully.
+```
+
+
+### Real World Examples
 
 Also have a look at real world examples:
 
@@ -53,8 +75,10 @@ Also have a look at real world examples:
 The vault callback can be used to dynamically set macro values. The module registers
 a single callback which sets the value of the supplied data structure.
 
+module.c:
 ```C
 #include <naemon/naemon.h>
+NEB_API_VERSION(CURRENT_NEB_API_VERSION);
 static void *neb_handle = NULL;
 static int handle_vault_macro(int cb, void *_ds) {
 	nebstruct_vault_macro_data *ds = (nebstruct_vault_macro_data *)_ds;
@@ -73,3 +97,14 @@ int nebmodule_deinit(__attribute__((unused)) int flags, __attribute__((unused)) 
 }
 
 ```
+
+compile with:
+```bash
+  %> gcc $(pkg-config --cflags naemon) -shared -fPIC  module.c -o module.o
+```
+
+And load the module from your naemon.cfg with:
+```
+broker_module=..../module.o
+```
+
