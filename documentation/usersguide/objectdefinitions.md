@@ -753,7 +753,7 @@ The different arguments to a service definition are outlined below.
 <tr><td></td><td>hostgroup_name</td><td><i>hostgroup_name</i></td></tr>
 <tr><td></td><td class="text-danger">service_description</td><td class="text-danger"><i>service_description</i></td></tr>
 <tr><td></td><td>display_name</td><td><i>display_name</i></td></tr>
-<tr><td></td><td>parents</td><td><i>service_descriptions</i></td></tr>
+<tr><td></td><td>parents</td><td><i>single service_description or list of host_name,service_description</i></td></tr>
 <tr><td></td><td>hourly_value</td><td>#</td></tr>
 <tr><td></td><td>servicegroups</td><td>servicegroup_names</td></tr>
 <tr><td></td><td>is_volatile</td><td>[0/1]</td></tr>
@@ -855,6 +855,8 @@ If not specified, this defaults to the value you specify for the <i>service_desc
 <td valign="top"><strong>parents</strong>:</td>
 <td>
 This directive is used to define a comma-delimited list of short names of the "parent" services for this particular service. Parent services are typically other services that need to be available in order for a check of this service to occur. For example, if a service checks the status of a disk using SSH, the disk check service would have the SSH service as a parent. If the service has no parent services, simply omit the "parents" directive. More complex service dependencies may be specified with service dependency objects.
+
+Valid option is either a single service description from the same host or a list of <i>host_name,servicedescription</i> tupel.
 </td>
 </tr>
 <tr>
