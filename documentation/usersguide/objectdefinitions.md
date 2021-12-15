@@ -856,7 +856,7 @@ If not specified, this defaults to the value you specify for the <i>service_desc
 <td>
 This directive is used to define a comma-delimited list of short names of the "parent" services for this particular service. Parent services are typically other services that need to be available in order for a check of this service to occur. For example, if a service checks the status of a disk using SSH, the disk check service would have the SSH service as a parent. If the service has no parent services, simply omit the "parents" directive. More complex service dependencies may be specified with service dependency objects.
 
-Valid option is either a single service description from the same host or a list of <i>host_name,servicedescription</i> tupel.
+Valid option is either a single service description from the same host or a comma separated list of <i>host_name,servicedescription</i> tupel.
 </td>
 </tr>
 <tr>
