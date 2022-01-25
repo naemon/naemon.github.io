@@ -25,9 +25,9 @@ Changes encoding style.
 
 Possible values:
 
-- utf8 *(Default)*
-- latin1
-- mixed
+- `utf8` *(Default)*
+- `latin1`
+- `mixed`
 
 ex.:
 
@@ -39,9 +39,8 @@ Enable/disable debug logging.
 
 Possible values:
 
-- 0 debug logging off *(Default)*
-- 1 debug logging on
-- 1
+- `0` debug logging off *(Default)*
+- `1` debug logging on
 
 ex.:
 
@@ -60,8 +59,8 @@ This is only used for queries using the AuthUser header.
 
 Possible values:
 
-- strict *(Default)*
-- loose
+- `strict` *(Default)*
+- `loose`
 
 ex.:
 
@@ -186,8 +185,8 @@ This is only used for queries using the AuthUser header.
 
 Possible values:
 
-- strict *(Default)*
-- loose
+- `strict` *(Default)*
+- `loose`
 
 ex.:
 
