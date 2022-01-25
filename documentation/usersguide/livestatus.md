@@ -39,7 +39,8 @@ Enable/disable debug logging.
 
 Possible values:
 
-- 0 *(Default)*
+- 0 debug logging off *(Default)*
+- 1 debug logging on
 - 1
 
 ex.:
