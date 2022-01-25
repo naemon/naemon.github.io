@@ -10,6 +10,201 @@ Livestatus is one of the standard APIs for Naemon. It can be used to query live
 status and configuration information from the Naemon core.
 Detail description is available on <a href="http://mathias-kettner.de/checkmk_livestatus.html">mathias-kettner.de</a>.
 
+### Module Options
+
+The livestatus module is usually loaded from the `/etc/naemon/module-conf.d/livestatus.cfg` file:
+
+    broker_module=/usr/lib64/naemon/naemon-livestatus/livestatus.so debug=0 /var/cache/naemon/live
+    event_broker_options=-1
+
+The module accepts a number of options:
+
+#### data_encoding
+
+Changes encoding style.
+
+Possible values:
+
+- `utf8` *(Default)*
+- `latin1`
+- `mixed`
+
+ex.:
+
+    broker_module=.../livestatus.so data_encoding=utf8 ...
+
+#### debug
+
+Enable/disable debug logging.
+
+Possible values:
+
+- `0` debug logging off *(Default)*
+- `1` debug logging on
+
+ex.:
+
+    broker_module=.../livestatus.so debug=1 ...
+
+#### group_authorization
+
+Sets group authorization mode.
+
+If GroupAuthorization is strict (default), a user must be a contact on all
+hosts in the hostgroup in able to see the hostgroup. If GroupAuthorization is
+loose it is sufficient for the user to be a contact on one of the hosts in the
+hostgroup.
+
+This is only used for queries using the AuthUser header.
+
+Possible values:
+
+- `strict` *(Default)*
+- `loose`
+
+ex.:
+
+    broker_module=.../livestatus.so group_authorization=strict ...
+
+#### hidden_custom_var_prefix
+
+Set prefix to hide custom variables by prefix.
+
+Possible values: any string value.
+
+ex.:
+
+    broker_module=.../livestatus.so hidden_custom_var_prefix=SECRET ...
+
+#### idle_timeout
+
+Timeout value for keepalive connections in milliseconds. Defaults to 300000 (300sec).
+
+Possible values: any positive integer value.
+
+ex.:
+
+    broker_module=.../livestatus.so idle_timeout=300 ...
+
+#### inet_addr
+
+Make livestatus listen on tcp address.
+
+Possible values: any socket description.
+
+ex.:
+
+    broker_module=.../livestatus.so inet_addr=0.0.0.0:6666 ...
+
+#### log_file
+
+Change path to logfile.
+
+Possible values: valid file locaton
+
+ex.:
+
+    broker_module=.../livestatus.so log_file=/var/log/livestatus.log ...
+
+#### max_backlog
+
+Set maximum number of backlog connections. Defaults to 3.
+
+Possible values: any positive integer value.
+
+ex.:
+
+    broker_module=.../livestatus.so max_backlog=3 ...
+
+#### max_cached_messages
+
+Set maximum number of cached log messages. Defaults to 500000.
+
+Possible values: any positive integer value.
+
+ex.:
+
+    broker_module=.../livestatus.so max_cached_messages=1000000 ...
+
+#### max_lines_per_logfile
+
+Set maximum number of lines read from each logfile. Defaults to 1000000.
+
+Possible values: any positive integer value.
+
+ex.:
+
+    broker_module=.../livestatus.so max_lines_per_logfile=2000000 ...
+
+#### max_response_size
+
+Sets maximum final response size in bytes. Defaults to 524288000 (500MiB).
+
+Possible values: any positive integer value.
+
+ex.:
+
+    broker_module=.../livestatus.so max_response_size=1048576000 ...
+
+#### num_client_threads
+
+**deprecated:** There is no limit of concurrent threads anymore.
+
+#### pnp_path
+
+Sets path to pnp rrd files. This is used to fill the `pnpgraph_present` columns.
+
+Possible values: any valid directory location.
+
+ex.:
+
+    broker_module=.../livestatus.so pnp_path=/var/lib/pnp4nagios/perfdata ...
+
+#### query_timeout
+
+Sets read timeout for queries in milliseconds. Defaults to 10000 (10sec).
+
+Possible values: any positive integer value.
+
+ex.:
+
+    broker_module=.../livestatus.so query_timeout=30000 ...
+
+#### service_authorization
+
+Sets service authorization mode.
+
+Naemon automatically regards a contact for a host also as a contact for all
+services of that host. We call this method loose. By setting it to strict, one
+must be an explicitly contact of a service in order to see it when using the
+AuthUser setting. Please note that Naemon makes all services that do not have
+any contact at all inherit all contacts of the host - regardless whether this
+option is set to strict or loose. The default option is loose.
+
+This is only used for queries using the AuthUser header.
+
+Possible values:
+
+- `strict` *(Default)*
+- `loose`
+
+ex.:
+
+    broker_module=.../livestatus.so service_authorization=strict ...
+
+#### thread_stack_size
+
+Sets threads stack size in bytes. Defaults to 65536.
+Read more in `man 3 pthread_attr_setstacksize`. There is usually no
+reason to change this.
+
+Possible values: any positive integer value.
+
+ex.:
+
+    broker_module=.../livestatus.so thread_stack_size=65536 ...
+
+
 ### Syntax
 Detailed description about the query language itself is on <a href="http://mathias-kettner.de/checkmk_livestatus.html">mathias-kettner.de</a>.
 
@@ -1255,5 +1450,3 @@ The following tables are available for livestatus queries.
 <tr><td>in</td><td>int</td><td>Whether we are currently in this period (0/1)</td></tr>
 <tr><td>name</td><td>string</td><td>The name of the timeperiod</td></tr>
 </table>
-
-
