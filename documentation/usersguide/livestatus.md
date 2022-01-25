@@ -51,6 +51,13 @@ ex.:
 
 Sets group authorization mode.
 
+If GroupAuthorization is strict (default), a user must be a contact on all
+hosts in the hostgroup in able to see the hostgroup. If GroupAuthorization is
+loose it is sufficient for the user to be a contact on one of the hosts in the
+hostgroup.
+
+This is only used for queries using the AuthUser header.
+
 Possible values:
 
 - strict *(Default)*
@@ -167,6 +174,15 @@ ex.:
 #### service_authorization
 
 Sets service authorization mode.
+
+Naemon automatically regards a contact for a host also as a contact for all
+services of that host. We call this method loose. By setting it to strict, one
+must be an explicitly contact of a service in order to see it when using the
+AuthUser setting. Please note that Naemon makes all services that do not have
+any contact at all inherit all contacts of the host - regardless whether this
+option is set to strict or loose. The default option is loose.
+
+This is only used for queries using the AuthUser header.
 
 Possible values:
 
