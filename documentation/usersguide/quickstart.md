@@ -7,7 +7,7 @@ title: Quickstart Installation Guides
 
 ### About Naemon
 
-Visit <a href="http://naemon.org/documentation/usersguide/" target="_blank">naemon.org/documentation/usersguide/</a> for more
+Visit <a href="https://www.naemon.io/documentation/usersguide/" target="_blank">naemon.io/documentation/usersguide/</a> for more
 information on Naemon - including features, capabilities, and technical specifications.
 
 ### Installation Introduction
@@ -30,7 +30,7 @@ Quickstart installation guides are currently available for the following Linux d
 </ul>
 
 Can't find a quickstart for your particular OS? Write one and help us extend our documentation, for more info
-see [Help Extending The Documentation](http://naemon.org/documentation/faq/#help_extending_the_documentation)
+see [Help Extending The Documentation](https://www.naemon.io/documentation/faq/#help_extending_the_documentation)
 
 ### Post-Installation Modifications
 

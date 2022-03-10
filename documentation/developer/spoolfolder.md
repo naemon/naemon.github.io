@@ -87,7 +87,7 @@ the same filename as the actual checkresult and append `.ok`.
 ### Example
 
 ```
-host_name=naemon.org
+host_name=naemon.io
 service_description=HTTP
 check_type=1
 check_options=0
