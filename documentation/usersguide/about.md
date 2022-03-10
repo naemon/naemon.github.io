@@ -6,7 +6,7 @@ title: About Naemon
 ### Naemon Overview
 
 More information about Naemon - including features and technical specifications can be
-found online at <a href="http://naemon.org" target="_blank"><b>naemon.org</b></a>.
+found online at <a href="https://www.naemon.io" target="_blank"><b>naemon.io</b></a>.
 
 
 <a name="whatis"></a>
@@ -108,7 +108,7 @@ Naemon Core can be found in the THANKS file in the root of the Naemon Core distr
 
 ### Downloading The Latest Version
 
-You can check for new versions of Naemon at <a href="http://naemon.org/download" target="_top">http://naemon.org/download</a>.
+You can check for new versions of Naemon at <a href="https://www.naemon.io/download" target="_top">https://www.naemon.io/download</a>.
 
 
 [thruk]: http://thruk.org/documentation.html

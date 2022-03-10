@@ -38,7 +38,7 @@ specify your main configuration file location like such:
 
 
 Naemon Stats 0.8.0
-Copyright (c) 2013-present Naemon Development Team (www.naemon.org)
+Copyright (c) 2013-present Naemon Development Team (www.naemon.io)
 Copyright (c) 2003-2008 Ethan Galstad (www.nagios.org)
 Last Modified: 02-13-2014
 License: GPL
