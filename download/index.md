@@ -49,6 +49,7 @@ The binary packages can also be downloaded here:
    <td>Debian</td>
    <td>
         <a href="https://build.opensuse.org/project/repository_state/home:naemon/Debian_Testing">Testing</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_11/">11 Bullseye</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_10/">10 Buster</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_9.0/">9 Stretch</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_8.0/">8 Jessie</a><br>
@@ -58,6 +59,8 @@ The binary packages can also be downloaded here:
    <td><img src="../images/ubuntu.png"></td>
    <td>Ubuntu</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_21.10/">21.10 Impish Indri</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_21.04/">21.04 Hirsute Hippo</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_20.10/">20.10 Groovy Gorilla</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_20.04/">20.04 Focal Fossa</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_18.04/">18.04 Bionic</a><br>
@@ -68,6 +71,8 @@ The binary packages can also be downloaded here:
    <td><img src="../images/fedora.png" height="48" width="48"></td>
    <td>Fedora</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_35/">fc35</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_34/">fc34</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_33/">fc33</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_32/">fc32</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_31/">fc31</a><br>
