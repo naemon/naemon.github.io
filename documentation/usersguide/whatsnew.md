@@ -12,6 +12,18 @@ title: What's New
 #### Upcoming next release
 See upcoming changes from the next version on [github](https://github.com/naemon/naemon-core/blob/master/NEWS)
 
+
+#### 1.3.1 - 22 Apr 2022
+##### Changed
+  * change homepage url to https://www.naemon.io
+
+##### Bugfixes
+  * fix running commands containing tilde sign
+  * improve updating last_update attribute
+
+##### Livestatus
+  * make Python API compatible with Python 2 & 3
+
 #### 1.3.0 - 03 Nov 2021
 ##### Features
   * add vault macro neb broker api
