@@ -21,8 +21,16 @@
 
     <script src="/js/jquery-1.10.2.min.js"></script>
     <script src="/js/bootstrap.min.3.1.0.js"></script>
+
     {{ page.extra_head }}
+
+    {% if layout.extra_css %}
+    <!-- Layout CSS -->
+    <link rel="stylesheet" href="/css/{{ layout.extra_css }}">
+    {% endif %}
+    
     {% if page.extra_css %}
+    <!-- Page CSS -->
     <link rel="stylesheet" href="/css/{{ page.extra_css }}">
     {% endif %}
   </head>
