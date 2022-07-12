@@ -48,15 +48,15 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 <div align="center">
 <table border="1" cellspacing="0" cellpadding="5">
 <tr class="Macros">
-<th class="Macros">Macro Name</th>
-<th class="Macros">Service Checks</th>
-<th class="Macros">Service Notifications</th>
-<th class="Macros">Host Checks</th>
-<th class="Macros">Host Notifications</th>
-<th class="Macros">Service Event Handlers and <a href="configmain.html#ocsp_command">OCSP</a></th>
-<th class="Macros">Host Event Handlers and <a href="configmain.html#ochp_command">OCHP</a></th>
-<th class="Macros">Service Perf Data</th>
-<th class="Macros">Host Perf Data</th>
+<th class="Macros th-sticky">Macro Name</th>
+<th class="Macros th-sticky">Service Checks</th>
+<th class="Macros th-sticky">Service Notifications</th>
+<th class="Macros th-sticky">Host Checks</th>
+<th class="Macros th-sticky">Host Notifications</th>
+<th class="Macros th-sticky">Service Event Handlers and <a href="configmain.html#ocsp_command">OCSP</a></th>
+<th class="Macros th-sticky">Host Event Handlers and <a href="configmain.html#ochp_command">OCHP</a></th>
+<th class="Macros th-sticky">Service Perf Data</th>
+<th class="Macros th-sticky">Host Perf Data</th>
 </tr>
 <tr>
 <td colspan='9' class='MacroType'>Host Macros: <a href="#note3"><sup>3</sup></a></td>
