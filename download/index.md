@@ -102,9 +102,9 @@ echo "deb http://download.opensuse.org/repositories/home:/naemon/xUbuntu_$(lsb_r
 apt-get update
 ```
 
-##### Debian 10
+##### Debian 11
 ```
-echo "deb http://download.opensuse.org/repositories/home:/naemon/Debian_10/ ./" >> /etc/apt/sources.list.d/naemon-stable.list
+echo "deb http://download.opensuse.org/repositories/home:/naemon/Debian_11/ ./" >> /etc/apt/sources.list.d/naemon-stable.list
 apt-get update
 ```
 
