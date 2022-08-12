@@ -48,17 +48,17 @@ The binary packages can also be downloaded here:
    <td><img src="../images/debian.png"></td>
    <td>Debian</td>
    <td>
-        <a href="https://build.opensuse.org/project/repository_state/home:naemon/Debian_Testing">Testing</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_Testing/">Testing</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_11/">11 Bullseye</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_10/">10 Buster</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_9.0/">9 Stretch</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_8.0/">8 Jessie</a><br>
    </td>
  </tr>
  <tr>
    <td><img src="../images/ubuntu.png"></td>
    <td>Ubuntu</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_22.04/">22.04 Jammy Jellyfish</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_21.10/">21.10 Impish Indri</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_21.04/">21.04 Hirsute Hippo</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_20.10/">20.10 Groovy Gorilla</a><br>
@@ -74,9 +74,6 @@ The binary packages can also be downloaded here:
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_35/">fc35</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_34/">fc34</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_33/">fc33</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_32/">fc32</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_31/">fc31</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_30/">fc30</a><br>
    </td>
  </tr>
 </table>
@@ -102,13 +99,13 @@ echo "deb http://download.opensuse.org/repositories/home:/naemon/xUbuntu_$(lsb_r
 apt-get update
 ```
 
-##### Debian 10
+##### Debian
 ```
-echo "deb http://download.opensuse.org/repositories/home:/naemon/Debian_10/ ./" >> /etc/apt/sources.list.d/naemon-stable.list
+echo "deb http://download.opensuse.org/repositories/home:/naemon/Debian_$(lsb_release -rs)/ ./" >> /etc/apt/sources.list.d/naemon-stable.list
 apt-get update
 ```
 
-#### Centos / Redhat
+#### Centos / Redhat / Rocky / Alma
 When using Centos or Redhat you may have to add the <a href="http://fedoraproject.org/wiki/EPEL/FAQ#Using_EPEL">EPEL</a> repository to resolve all dependencies.
 
 ##### 7
@@ -122,21 +119,8 @@ curl -s https://download.opensuse.org/repositories/home:/naemon/CentOS_8_Stream/
 ```
 
 #### Fedora
-##### 30
 ```
-curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_30/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
-```
-##### 31
-```
-curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_31/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
-```
-##### 32
-```
-curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_32/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
-```
-##### 33
-```
-curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_33/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
+curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_$(cut -f 3 -d " " /etc/redhat-release)/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
 ```
 
 #### Suse Linux Enterprise
@@ -155,8 +139,8 @@ zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/SLE_15
 ### Development snapshot
 For new user, we recommend you grab one of our nightly binary snapshots. You can also build yourself from source.
 
-Travis-CI core build status: <a href="https://travis-ci.org/naemon/naemon-core"><img style="vertical-align:sub;" src="https://travis-ci.org/naemon/naemon-core.png?branch=master" alt="Build Status"></a><br />
-Travis-CI suite build status: <a href="https://travis-ci.org/naemon/naemon"><img style="vertical-align:sub;" src="https://travis-ci.org/naemon/naemon.png?branch=master" alt="Build Status"></a>
+CI core build status: <a href="https://github.com/naemon/naemon-core/actions"><img style="vertical-align:sub;" src="https://img.shields.io/github/workflow/status/naemon/naemon-core/citest" alt="Build Status"></a><br />
+CI suite build status: <a href="https://github.com/naemon/naemon/actions"><img style="vertical-align:sub;" src="https://img.shields.io/github/workflow/status/naemon/naemon/citest" alt="Build Status"></a>
 
 #### openSuse Build Service
 There are daily builds available for recent platforms at the [obs home:naemon:daily project](https://build.opensuse.org/project/show/home:naemon:daily)
