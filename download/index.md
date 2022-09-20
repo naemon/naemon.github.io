@@ -89,19 +89,19 @@ This list is not synchronized with the build server, so there might be more repo
 ##### Install GPG key
 First you import the GPG key.
 ```
-curl -s "https://build.opensuse.org/projects/home:naemon/public_key" | sudo apt-key add -
+curl -s -o /etc/apt/trusted.gpg.d/naemon.asc "https://build.opensuse.org/projects/home:naemon/public_key"
 
 ```
 
 ##### Ubuntu
 ```
-echo "deb http://download.opensuse.org/repositories/home:/naemon/xUbuntu_$(lsb_release -rs)/ ./" >> /etc/apt/sources.list.d/naemon-stable.list
+echo "deb [signed-by=/etc/apt/trusted.gpg.d/naemon.asc] http://download.opensuse.org/repositories/home:/naemon/xUbuntu_$(lsb_release -rs)/ ./" >> /etc/apt/sources.list.d/naemon-stable.list
 apt-get update
 ```
 
 ##### Debian
 ```
-echo "deb http://download.opensuse.org/repositories/home:/naemon/Debian_$(lsb_release -rs)/ ./" >> /etc/apt/sources.list.d/naemon-stable.list
+echo "deb [signed-by=/etc/apt/trusted.gpg.d/naemon.asc] http://download.opensuse.org/repositories/home:/naemon/Debian_$(lsb_release -rs)/ ./" >> /etc/apt/sources.list.d/naemon-stable.list
 apt-get update
 ```
 
