@@ -9,8 +9,8 @@ title: Plugin API
 If you're looking at writing your own plugins for Naemon, please make sure to visit these other resources:
 
 <ul>
-<li>The official <a href="http://sourceforge.net/projects/nagiosplug/">Nagios plugin project website</a></li>
-<li>The official <a href="http://nagiosplug.sourceforge.net/developer-guidelines.html">Nagios plugin development guidelines</a></li>
+<li>The official <a href="https://nagios-plugins.org/">Nagios plugin project website</a></li>
+<li>The official <a href="https://nagios-plugins.org/doc/guidelines.html">Nagios plugin development guidelines</a></li>
 </ul>
 
 ### Plugin Overview
