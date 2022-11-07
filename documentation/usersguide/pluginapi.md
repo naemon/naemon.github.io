@@ -8,10 +8,13 @@ title: Plugin API
 
 If you're looking at writing your own plugins for Naemon, please make sure to visit these other resources:
 
-<ul>
-<li>The official <a href="http://sourceforge.net/projects/nagiosplug/">Nagios plugin project website</a></li>
-<li>The official <a href="http://nagiosplug.sourceforge.net/developer-guidelines.html">Nagios plugin development guidelines</a></li>
-</ul>
+* The [monitoring plugin project website](https://monitoring-plugins.org/)
+* The [monitoring plugin development guidelines](https://monitoring-plugins.org/doc/guidelines.html)
+
+The above pages are the continuation of:
+
+* The [Nagios plugin project website](https://nagios-plugins.org)
+* The [Nagios plugin development guidelines](https://nagios-plugins.org/doc/guidelines.html)
 
 ### Plugin Overview
 
@@ -52,7 +55,9 @@ LONG TEXT LINE N  </font>| <font color="#FFA500">PERFDATA LINE 2</font><br>
 PERFDATA LINE N</font>
 </p>
 
-<p>The performance data (shown in <font color="#FFA500">orange</font>) is optional.  If a plugin returns performance data in its output, it must separate the performance data from the other text output using a pipe (|) symbol.  Additional lines of long text output (shown in <font color="blue">blue</font>) are also optional.</p>
+The performance data (shown in <font color="#FFA500">orange</font>) is optional.  If a plugin returns performance data in its output, it must separate the performance data from the other text output using a pipe (`|`) symbol.  The basic format is `label=value[unit];[warn];[crit];[min];[max]` where `[]` means optional.  See [official development guidelines](https://monitoring-plugins.org/doc/guidelines.html#AEN201) for details.
+
+Additional lines of long text output (shown in <font color="blue">blue</font>) are also optional.
 
 ### Plugin Output Examples
 
