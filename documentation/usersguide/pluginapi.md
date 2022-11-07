@@ -2,7 +2,7 @@
 layout: doctoc
 title: Plugin API
 ---
-<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="plugins.html">Plugin Overview</a>, <a href="epnplugins.html">Developing Plugins For Use With Embedded Perl</a>, <a href="perfdata.html">Performance Data</a>
+<span class="glyphicon glyphicon-arrow-right"></span> See Also: [Plugin Overview](plugins.html), [Developing Plugins For Use With Embedded Perl](epnplugins.html), [Performance Data](perfdata.html)
 
 ### Other Resources
 
@@ -20,10 +20,8 @@ The above pages are the continuation of:
 
 Scripts and executables must do two things (at a minimum) in order to function as Naemon plugins:
 
-<ul>
-<li>Exit with one of several possible return values</li>
-<li>Return at least one line of text output to STDOUT</li>
-</ul>
+* Exit with one of several possible return values
+* Return at least one line of text output to STDOUT
 
 The inner workings of your plugin are unimportant to Naemon.  Your plugin could check the status of a TCP port, run a database query, check disk free space, or do whatever else it needs to check something.   The details will depend on what needs to be checked - that's up to you.
 
@@ -39,7 +37,7 @@ Naemon determines the status of a host or service by evaluating the return code 
 <tr><td>3</td><td>UNKNOWN</td><td>DOWN/UNREACHABLE</td></tr>
 </table>
 
-{{ site.note }}If the <a href="configmain.html#use_aggressive_host_checking">use_aggressive_host_checking</a> option is enabled, return codes of 1 will result in a host state of DOWN or UNREACHABLE.  Otherwise return codes of 1 will result in a host state of UP.  The process by which Naemon determines whether or not a host is DOWN or UNREACHABLE is discussed <a href="networkreachability.html">here</a>.{{ site.end }}
+{{ site.note }}If the [use_aggressive_host_checking](configmain.html#use_aggressive_host_checking) option is enabled, return codes of 1 will result in a host state of `DOWN` or `UNREACHABLE`.  Otherwise return codes of 1 will result in a host state of `UP`.  The process by which Naemon determines whether or not a host is `DOWN` or `UNREACHABLE` is discussed [here](networkreachability.html).{{ site.end }}
 
 ### Plugin Output Spec
 
@@ -63,17 +61,19 @@ Additional lines of long text output (shown in <font color="blue">blue</font>) a
 
 Let's see some examples of possible plugin output...
 
-<strong>Case 1: One line of output (text only)</strong><br>
+**Case 1: One line of output (text only)**
+
 Assume we have a plugin that returns one line of output that looks like this:
 
 <div style="padding: 0 0 0 25px;">
 <div style="display: inline; color: red;">DISK OK - free space: / 3326 MB (56%);</div>
 </div>
 
-If this plugin was used to perform a service check, the entire line of output will be stored in the <a href="macrolist.html#serviceoutput">$SERVICEOUTPUT$</a> macro.
+If this plugin was used to perform a service check, the entire line of output will be stored in the [`$SERVICEOUTPUT$`](macrolist.html#serviceoutput) macro.
 
-<strong>Case 2: One line of output (text and perfdata)</strong><br>
-A plugin can return optional performance data for use by external applications.  To do this, the performance data must be separated from the text output with a pipe (|) symbol like such:
+**Case 2: One line of output (text and perfdata)**
+
+A plugin can return optional performance data for use by external applications.  To do this, the performance data must be separated from the text output with a pipe (`|`) symbol like such:
 
 <div style="padding: 0 0 0 25px;">
 <div style="display: inline; color: red;">DISK OK - free space: / 3326 MB (56%);</div><div style="display: inline;">&nbsp;|&nbsp;</div><div style="display: inline; color: orange;">/=2643MB;5948;5958;0;5968</div>
@@ -81,11 +81,12 @@ A plugin can return optional performance data for use by external applications. 
 
 <div style="float: left;">If this plugin was used to perform a service check, the</div>
 <div style="display: inline; color: red;">&nbsp;red&nbsp;</div>
-<div style="display: inline;">portion of output (left of the pipe separator) will be stored in the <a href="macrolist.html#serviceoutput">$SERVICEOUTPUT$</a> macro and the</div>
+<div style="display: inline;">portion of output (left of the pipe separator) will be stored in the [`$SERVICEOUTPUT$`](macrolist.html#serviceoutput) macro and the</div>
 <div style="color: orange; display: inline;">&nbsp;orange&nbsp;</div>
-<div style="display: inline;">portion of output (right of the pipe separator) will be stored in the <a href="macrolist.html#serviceperfdata">$SERVICEPERFDATA$</a> macro.</div>
+<div style="display: inline;">portion of output (right of the pipe separator) will be stored in the [`$SERVICEPERFDATA$`](macrolist.html#serviceperfdata) macro.</div>
 
-<strong>Case 3: Multiple lines of output (text and perfdata)</strong><br>
+**Case 3: Multiple lines of output (text and perfdata)**
+
 A plugin optionally return multiple lines of both text output and perfdata, like such:
 
 <div style="padding: 0 0 0 25px;">
@@ -98,9 +99,9 @@ A plugin optionally return multiple lines of both text output and perfdata, like
 <font color="#FFA500">/var/log=818MB;970;975;0;980</font><br>
 </div>
 
-If this plugin was used to perform a service check, the <font color="red">red</font> portion of first line of output (left of the pipe separator) will be stored in the <a href="macrolist.html#serviceoutput">$SERVICEOUTPUT$</a> macro.
+If this plugin was used to perform a service check, the <font color="red">red</font> portion of first line of output (left of the pipe separator) will be stored in the [`$SERVICEOUTPUT$`](macrolist.html#serviceoutput) macro.
 
-The <font color="#FFA500">orange</font> portions of the first and subsequent lines are concatenated (with spaces) are stored in the <a href="macrolist.html#serviceperfdata">$SERVICEPERFDATA$</a> macro.  The <font color="blue">blue</font> portions of the 2nd - 5th lines of output will be concatenated (with escaped newlines) and stored in <a href="macrolist.html#longserviceoutput">$LONGSERVICEOUTPUT$</a> the macro.
+The <font color="#FFA500">orange</font> portions of the first and subsequent lines are concatenated (with spaces) are stored in the [`$SERVICEPERFDATA$`](macrolist.html#serviceperfdata) macro.  The <font color="blue">blue</font> portions of the 2nd - 5th lines of output will be concatenated (with escaped newlines) and stored in the [`$LONGSERVICEOUTPUT$`](macrolist.html#longserviceoutput) macro.
 
 The final contents of each macro are listed below:
 
@@ -113,17 +114,15 @@ The final contents of each macro are listed below:
 
 With regards to multiple lines of output, you have the following options for returning performance data:
 
-<ul>
-<li>You can choose to return no performance data whatsoever</li>
-<li>You can return performance data on the first line only</li>
-<li>You can return performance data only in subsequent lines (after the first)</li>
-<li>You can return performance data in both the first line and subsequent lines (as shown above)</li>
-</ul>
+* You can choose to return no performance data whatsoever
+* You can return performance data on the first line only
+* You can return performance data only in subsequent lines (after the first)
+* You can return performance data in both the first line and subsequent lines (as shown above)
 
 ### Plugin Output Length Restrictions
 
-Naemon will only read the first 8 KB of data that a plugin returns. This is done in order to prevent runaway plugins from dumping megs or gigs of data back to Naemon. This 8 KB output limit is fairly easy to change if you need.  Simply edit the value of the MAX_PLUGIN_OUTPUT_LENGTH definition in the <i>naemon.h</i> file of the source code and the same for MAX_EXTERNAL_COMMAND_LENGTH in common.h and recompile Naemon.  There's nothing else you need to change!
+Naemon will only read the first 8 KB of data that a plugin returns. This is done in order to prevent runaway plugins from dumping megs or gigs of data back to Naemon. This 8 KB output limit is fairly easy to change if you need.  Simply edit the value of the `MAX_PLUGIN_OUTPUT_LENGTH` definition in the `naemon.h` file of the source code and the same for `MAX_EXTERNAL_COMMAND_LENGTH` in `common.h` and recompile Naemon.  There's nothing else you need to change!
 
 ### Examples
 
-If you're looking for some example plugins to study, then you can download Monitoring-Plugins plugins or Nagios-Plugins and look through the code for various C, Perl, and shell script plugins.  Information on obtaining Naemon plugins can be found <a href="plugins.html">here</a>.
+If you're looking for some example plugins to study, then you can download Monitoring-Plugins plugins or Nagios-Plugins and look through the code for various C, Perl, and shell script plugins.  Information on obtaining Naemon plugins can be found [here](plugins.html).
