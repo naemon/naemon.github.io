@@ -2,6 +2,7 @@
 layout: doctoc
 title: Plugin API
 ---
+<style>table, td { border: 1px solid; } td { padding: 2px; padding-left: 5px; }</style>
 <span class="glyphicon glyphicon-arrow-right"></span> See Also: [Plugin Overview](plugins.html), [Developing Plugins For Use With Embedded Perl](epnplugins.html), [Performance Data](perfdata.html)
 
 ### Other Resources
@@ -29,13 +30,12 @@ The inner workings of your plugin are unimportant to Naemon.  Your plugin could 
 
 Naemon determines the status of a host or service by evaluating the return code from plugins.  The following tables shows a list of valid return codes, along with their corresponding service or host states.
 
-<table border="1">
-<tr><th>Plugin Return Code</th><th>Service State</th><th>Host State</th></tr>
-<tr><td>0</td><td>OK</td><td>UP</td></tr>
-<tr><td>1</td><td>WARNING</td><td>UP or DOWN/UNREACHABLE*</td></tr>
-<tr><td>2</td><td>CRITICAL</td><td>DOWN/UNREACHABLE</td></tr>
-<tr><td>3</td><td>UNKNOWN</td><td>DOWN/UNREACHABLE</td></tr>
-</table>
+| Plugin Return Code | Service State | Host State                   |
+|--------------------|:-------------:|:----------------------------:|
+| 0                  | `OK`          | `UP`                         |
+| 1                  | `WARNING`     | `UP` or `DOWN`/`UNREACHABLE` |
+| 2                  | `CRITICAL`    | `DOWN`/`UNREACHABLE`         |
+| 3                  | `UNKNOWN`     | `DOWN`/`UNREACHABLE`         |
 
 {{ site.note }}If the [use_aggressive_host_checking](configmain.html#use_aggressive_host_checking) option is enabled, return codes of 1 will result in a host state of `DOWN` or `UNREACHABLE`.  Otherwise return codes of 1 will result in a host state of `UP`.  The process by which Naemon determines whether or not a host is `DOWN` or `UNREACHABLE` is discussed [here](networkreachability.html).{{ site.end }}
 
@@ -105,12 +105,11 @@ The <font color="#FFA500">orange</font> portions of the first and subsequent lin
 
 The final contents of each macro are listed below:
 
-<table>
-<tr><td align="left"><b>Macro</b></td><td align="left"><b>Value</b></td></tr>
-<tr><td>$SERVICEOUTPUT$</td><td><font color="red">DISK OK - free space: / 3326 MB (56%);</font></td></tr>
-<tr><td>$SERVICEPERFDATA$</td><td><font color="#FFA500">/=2643MB;5948;5958;0;5968 /boot=68MB;88;93;0;98 /home=69357MB;253404;253409;0;253414 /var/log=818MB;970;975;0;980</font></td></tr>
-<tr><td>$LONGSERVICEOUTPUT$</td><td><font color="blue">/ 15272 MB (77%);\n/boot 68 MB (69%);\n/var/log 819 MB (84%);</font></td></tr>
-</table>
+| Macro | Value |
+|-------|-----------------------------------|
+| `$SERVICEOUTPUT$`     | <font color="red">DISK OK - free space: / 3326 MB (56%);</font> |
+| `$SERVICEPERFDATA$`   | <font color="#FFA500">/=2643MB;5948;5958;0;5968 /boot=68MB;88;93;0;98 /home=69357MB;253404;253409;0;253414 /var/log=818MB;970;975;0;980</font> |
+| `$LONGSERVICEOUTPUT$` | <font color="blue">/ 15272 MB (77%);\n/boot 68 MB (69%);\n/var/log 819 MB (84%);</font> |
 
 With regards to multiple lines of output, you have the following options for returning performance data:
 
