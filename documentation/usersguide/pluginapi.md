@@ -44,7 +44,7 @@ Naemon determines the status of a host or service by evaluating the return code 
 At a minimum, plugins should return at least one of text output.  Optionally, plugins may return multiple lines of output.  Plugins may also return optional performance data that can be processed by external applications.  The basic format for plugin output is shown below:
 
 <p><font color="red">TEXT OUTPUT</font> | <font color="#FFA500">OPTIONAL PERFDATA</font><br>
-<font color="blue">LONG TEXT LINE 1<br>
+<font color="#00A500">LONG TEXT LINE 1<br>
 LONG TEXT LINE 2<br>
 ...<br>
 LONG TEXT LINE N  </font>| <font color="#FFA500">PERFDATA LINE 2</font><br>
@@ -55,7 +55,7 @@ PERFDATA LINE N</font>
 
 The performance data (shown in <font color="#FFA500">orange</font>) is optional.  If a plugin returns performance data in its output, it must separate the performance data from the other text output using a pipe (`|`) symbol.  The basic format is `label=value[unit];[warn];[crit];[min];[max]` where `[]` means optional.  See [official development guidelines](https://monitoring-plugins.org/doc/guidelines.html#AEN201) for details.
 
-Additional lines of long text output (shown in <font color="blue">blue</font>) are also optional.
+Additional lines of long text output (shown in <font color="#00A500">green</font>) are also optional.
 
 ### Plugin Output Examples
 
@@ -91,17 +91,17 @@ A plugin optionally return multiple lines of both text output and perfdata, like
 
 <div style="padding: 0 0 0 25px;">
 <font color="red">DISK OK - free space: / 3326 MB (56%);</font>&nbsp;|&nbsp;<font color="#FFA500">/=2643MB;5948;5958;0;5968</font><br>
-<font color="blue">/ 15272 MB (77%);</font><br>
-<font color="blue">/boot 68 MB (69%);</font><br>
-<font color="blue">/home 69357 MB (27%);</font><br>
-<font color="blue">/var/log 819 MB (84%);</font>&nbsp;|&nbsp;<font color="#FFA500">/boot=68MB;88;93;0;98</font><br>
+<font color="#00A500">/ 15272 MB (77%);</font><br>
+<font color="#00A500">/boot 68 MB (69%);</font><br>
+<font color="#00A500">/home 69357 MB (27%);</font><br>
+<font color="#00A500">/var/log 819 MB (84%);</font>&nbsp;|&nbsp;<font color="#FFA500">/boot=68MB;88;93;0;98</font><br>
 <font color="#FFA500">/home=69357MB;253404;253409;0;253414 </font><br>
 <font color="#FFA500">/var/log=818MB;970;975;0;980</font><br>
 </div>
 
 If this plugin was used to perform a service check, the <font color="red">red</font> portion of first line of output (left of the pipe separator) will be stored in the [`$SERVICEOUTPUT$`](macrolist.html#serviceoutput) macro.
 
-The <font color="#FFA500">orange</font> portions of the first and subsequent lines are concatenated (with spaces) are stored in the [`$SERVICEPERFDATA$`](macrolist.html#serviceperfdata) macro.  The <font color="blue">blue</font> portions of the 2nd - 5th lines of output will be concatenated (with escaped newlines) and stored in the [`$LONGSERVICEOUTPUT$`](macrolist.html#longserviceoutput) macro.
+The <font color="#FFA500">orange</font> portions of the first and subsequent lines are concatenated (with spaces) are stored in the [`$SERVICEPERFDATA$`](macrolist.html#serviceperfdata) macro.  The <font color="#00A500">green</font> portions of the 2nd - 5th lines of output will be concatenated (with escaped newlines) and stored in the [`$LONGSERVICEOUTPUT$`](macrolist.html#longserviceoutput) macro.
 
 The final contents of each macro are listed below:
 
@@ -109,7 +109,7 @@ The final contents of each macro are listed below:
 |-------|-----------------------------------|
 | `$SERVICEOUTPUT$`     | <font color="red">DISK OK - free space: / 3326 MB (56%);</font> |
 | `$SERVICEPERFDATA$`   | <font color="#FFA500">/=2643MB;5948;5958;0;5968 /boot=68MB;88;93;0;98 /home=69357MB;253404;253409;0;253414 /var/log=818MB;970;975;0;980</font> |
-| `$LONGSERVICEOUTPUT$` | <font color="blue">/ 15272 MB (77%);\n/boot 68 MB (69%);\n/var/log 819 MB (84%);</font> |
+| `$LONGSERVICEOUTPUT$` | <font color="#00A500">/ 15272 MB (77%);\n/boot 68 MB (69%);\n/var/log 819 MB (84%);</font> |
 
 With regards to multiple lines of output, you have the following options for returning performance data:
 
