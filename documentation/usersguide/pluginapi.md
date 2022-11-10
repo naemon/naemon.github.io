@@ -120,7 +120,7 @@ With regards to multiple lines of output, you have the following options for ret
 
 ### Plugin Output Length Restrictions
 
-Naemon will only read the first 8 KB of data that a plugin returns. This is done in order to prevent runaway plugins from dumping megs or gigs of data back to Naemon. This 8 KB output limit is fairly easy to change if you need.  Simply edit the value of the `MAX_PLUGIN_OUTPUT_LENGTH` definition in the `naemon.h` file of the source code and the same for `MAX_EXTERNAL_COMMAND_LENGTH` in `common.h` and recompile Naemon.  There's nothing else you need to change!
+There is no plugin output length restriction in Naemon.
 
 ### Examples
 
