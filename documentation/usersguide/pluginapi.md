@@ -87,7 +87,7 @@ A plugin optionally return multiple lines of both text output and perfdata, like
 
 <div style="padding: 0 0 0 25px;">
 <font color="red">DISK OK - free space: / 3326 MB (56%);</font>&nbsp;|&nbsp;<font color="#FFA500">/=2643MB;5948;5958;0;5968</font><br>
-<font color="#00A500">/ 15272 MB (77%);</font><br>
+<font color="#00A500">/ 3326 MB (56%);</font><br>
 <font color="#00A500">/boot 68 MB (69%);</font><br>
 <font color="#00A500">/home 69357 MB (27%);</font><br>
 <font color="#00A500">/var/log 819 MB (84%);</font>&nbsp;|&nbsp;<font color="#FFA500">/boot=68MB;88;93;0;98</font><br>
@@ -105,7 +105,7 @@ The final contents of each macro are listed below:
 |-------|-----------------------------------|
 | `$SERVICEOUTPUT$`     | <font color="red">DISK OK - free space: / 3326 MB (56%);</font> |
 | `$SERVICEPERFDATA$`   | <font color="#FFA500">/=2643MB;5948;5958;0;5968 /boot=68MB;88;93;0;98 /home=69357MB;253404;253409;0;253414 /var/log=818MB;970;975;0;980</font> |
-| `$LONGSERVICEOUTPUT$` | <font color="#00A500">/ 15272 MB (77%);\n/boot 68 MB (69%);\n/var/log 819 MB (84%);</font> |
+| `$LONGSERVICEOUTPUT$` | <font color="#00A500">/ 3326 MB (56%);\n/boot 68 MB (69%);\n/var/log 819 MB (84%);</font> |
 
 With regards to multiple lines of output, you have the following options for returning performance data:
 
