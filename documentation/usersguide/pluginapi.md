@@ -37,7 +37,7 @@ Naemon determines the status of a host or service by evaluating the return code 
 | 2                  | `CRITICAL`    | `DOWN`/`UNREACHABLE`         |
 | 3                  | `UNKNOWN`     | `DOWN`/`UNREACHABLE`         |
 
-{{ site.note }}If the [use_aggressive_host_checking](configmain.html#use_aggressive_host_checking) option is enabled, return codes of 1 will result in a host state of `DOWN` or `UNREACHABLE`.  Otherwise return codes of 1 will result in a host state of `UP`.  The process by which Naemon determines whether or not a host is `DOWN` or `UNREACHABLE` is discussed [here](networkreachability.html).{{ site.end }}
+{{ site.note }}{{ "If the [use_aggressive_host_checking](configmain.html#use_aggressive_host_checking) option is enabled, return codes of 1 will result in a host state of `DOWN` or `UNREACHABLE`.  Otherwise return codes of 1 will result in a host state of `UP`.  The process by which Naemon determines whether or not a host is `DOWN` or `UNREACHABLE` is discussed [here](networkreachability.html)." | markdownify}}{{ site.end }}
 
 ### Plugin Output Spec
 
@@ -79,11 +79,7 @@ A plugin can return optional performance data for use by external applications. 
 <div style="display: inline; color: red;">DISK OK - free space: / 3326 MB (56%);</div><div style="display: inline;">&nbsp;|&nbsp;</div><div style="display: inline; color: orange;">/=2643MB;5948;5958;0;5968</div>
 </div>
 
-<div style="float: left;">If this plugin was used to perform a service check, the</div>
-<div style="display: inline; color: red;">&nbsp;red&nbsp;</div>
-<div style="display: inline;">portion of output (left of the pipe separator) will be stored in the [`$SERVICEOUTPUT$`](macrolist.html#serviceoutput) macro and the</div>
-<div style="color: orange; display: inline;">&nbsp;orange&nbsp;</div>
-<div style="display: inline;">portion of output (right of the pipe separator) will be stored in the [`$SERVICEPERFDATA$`](macrolist.html#serviceperfdata) macro.</div>
+If this plugin was used to perform a service check, the <font color="red">red</font> portion of output (left of the pipe separator) will be stored in the [`$SERVICEOUTPUT$`](macrolist.html#serviceoutput) macro and the <font color="#FFA500">orange</font> portion of output (right of the pipe separator) will be stored in the [`$SERVICEPERFDATA$`](macrolist.html#serviceperfdata) macro.
 
 **Case 3: Multiple lines of output (text and perfdata)**
 
