@@ -14,7 +14,7 @@ title: External Command Reference
 
 #### Command Format:
 
-`CHANGE_HOST_CHECK_TIMEPERIOD;host_name;timeperiod`
+`CHANGE_HOST_CHECK_TIMEPERIOD;host_name;check_timeperiod`
 
 #### Description:
 

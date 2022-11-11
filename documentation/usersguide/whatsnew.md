@@ -12,6 +12,23 @@ title: What's New
 #### Upcoming next release
 See upcoming changes from the next version on [github](https://github.com/naemon/naemon-core/blob/master/NEWS)
 
+#### 1.4.0 - 11 Nov 2022
+##### Breaking Changes:
+  * Due to object structure changes, it is recommended to recompile any
+    NEB mobules when upgrading to 1.4.0
+
+##### Features
+  * Support for expiring acknowledgments
+
+##### Changed
+  * Improvements to Debian packaging, including multiarch installs
+
+##### Bugfixes
+  * Fix a crash for external command: CHANGE_CONTACT_HOST_NOTIFICATION_TIMEPERIOD 
+  * Fix a crash for external command: CHANGE_HOST_CHECK_TIMEPERIOD
+
+##### Livestatus
+  * Allow multiline output when submitting passive checks by allowing escaped newlines
 
 #### 1.3.1 - 22 Apr 2022
 ##### Changed
