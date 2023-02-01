@@ -12,6 +12,23 @@ title: What's New
 #### Upcoming next release
 See upcoming changes from the next version on [github](https://github.com/naemon/naemon-core/blob/master/NEWS)
 
+#### 1.4.1 - 01 Feb 2023
+##### Features
+  * None
+
+##### Changed
+  * Use /run/naemon instead of /var/run/naemon
+
+##### Bugfixes
+  * Fix bashisms in scripts
+  * Fix fg: no job control output
+  * Fix memory leak in cmd parser
+  * Fix closing worker filehandles
+
+##### Livestatus
+  * Fix service parents to be always a list of host,service tupels
+  * Fix g_tree_foreach: assertion `tree != NULL' in logs table
+
 #### 1.4.0 - 11 Nov 2022
 ##### Breaking Changes:
   * Due to object structure changes, it is recommended to recompile any
