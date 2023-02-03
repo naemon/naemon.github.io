@@ -16,33 +16,19 @@ The binary packages can also be downloaded here:
 <table>
  <tr>
    <td><img src="../images/redhat.png"></td>
-   <td>Redhat</td>
-   <td>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_8_Stream/">Redhat 8</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_7/">Redhat 7</a><br>
-   </td>
- </tr>
- <tr>
-   <td><img src="../images/centos.png"></td>
-   <td>CentOS</td>
-   <td>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_8_Stream/">CentOS 8</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_7/">CentOS 7</a><br>
+   <td>Enterprise Linux (Red Hat, RockyLinux, AlmaLinux etc)</td>
+   <td>,
+        <a href="https://download.opensuse.org/repositories/home:/naemon/AlmaLinux_9/">EL9</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/AlmaLinux_8/">EL8</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_7/">EL7</a><br>
    </td>
  </tr>
  <tr>
    <td><img src="../images/sles.jpg"></td>
    <td>SLES</td>
    <td>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_15_SP2/">15 SP2</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_15_SP1/">15 SP1</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_15/">15</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP5/">12 SP5</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP4/">12 SP4</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP3/">12 SP3</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP2/">12 SP2</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP1/">12 SP1</a><br>
-   </td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/15.4/">15 SP4</a><br>
+  </td>
  </tr>
  <tr>
    <td><img src="../images/debian.png"></td>
@@ -58,22 +44,21 @@ The binary packages can also be downloaded here:
    <td><img src="../images/ubuntu.png"></td>
    <td>Ubuntu</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_22.10/">22.10 Kinetic Kudu</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_22.04/">22.04 Jammy Jellyfish</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_21.10/">21.10 Impish Indri</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_21.04/">21.04 Hirsute Hippo</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_20.10/">20.10 Groovy Gorilla</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_20.04/">20.04 Focal Fossa</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_18.04/">18.04 Bionic</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_16.04/">16.04 Xenial</a><br>
    </td>
  </tr>
  <tr>
    <td><img src="../images/fedora.png" height="48" width="48"></td>
    <td>Fedora</td>
    <td>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_35/">fc35</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_34/">fc34</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_33/">fc33</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_37/">fc37</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_36/">fc36</a><br>
    </td>
  </tr>
 </table>
