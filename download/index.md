@@ -17,7 +17,7 @@ The binary packages can also be downloaded here:
  <tr>
    <td><img src="../images/redhat.png"></td>
    <td>Enterprise Linux (Red Hat, RockyLinux, AlmaLinux etc)</td>
-   <td>,
+   <td>
         <a href="https://download.opensuse.org/repositories/home:/naemon/AlmaLinux_9/">EL9</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/AlmaLinux_8/">EL8</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_7/">EL7</a><br>
@@ -100,7 +100,12 @@ curl -s https://download.opensuse.org/repositories/home:/naemon/CentOS_7/home:na
 
 ##### 8
 ```
-curl -s https://download.opensuse.org/repositories/home:/naemon/CentOS_8_Stream/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
+curl -s https://download.opensuse.org/repositories/home:/naemon/AlmaLinux_8/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
+```
+
+##### 9
+```
+curl -s https://download.opensuse.org/repositories/home:/naemon/AlmaLinux_9/home:naemon.repo >> /etc/yum.repos.d/naemon-stable.repo
 ```
 
 #### Fedora
@@ -110,14 +115,9 @@ curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_$(cut -f 
 
 #### Suse Linux Enterprise
 
-##### SLES 12 SP5
+##### SLES 15 SP4
 ```
-zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/SLE_12_SP5/home:naemon.repo
-```
-
-##### SLES 15 SP2
-```
-zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/SLE_15_SP2/home:naemon.repo
+zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/15.4/home:naemon.repo
 ```
 
 <a name="development_snapshot"></a>
