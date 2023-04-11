@@ -124,8 +124,8 @@ zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/15.4/h
 ### Development snapshot
 For new user, we recommend you grab one of our nightly binary snapshots. You can also build yourself from source.
 
-CI core build status: <a href="https://github.com/naemon/naemon-core/actions"><img style="vertical-align:sub;" src="https://img.shields.io/github/workflow/status/naemon/naemon-core/citest" alt="Build Status"></a><br />
-CI suite build status: <a href="https://github.com/naemon/naemon/actions"><img style="vertical-align:sub;" src="https://img.shields.io/github/workflow/status/naemon/naemon/citest" alt="Build Status"></a>
+CI core build status: <a href="https://github.com/naemon/naemon-core/actions"><img style="vertical-align:sub;" src="https://img.shields.io/github/actions/workflow/status/naemon/naemon-core/citest.yml" alt="Build Status"></a><br />
+CI suite build status: <a href="https://github.com/naemon/naemon/actions"><img style="vertical-align:sub;" src="https://img.shields.io/github/actions/workflow/status/naemon/naemon/citest.yml" alt="Build Status"></a>
 
 #### openSuse Build Service
 There are daily builds available for recent platforms at the [obs home:naemon:daily project](https://build.opensuse.org/project/show/home:naemon:daily)
