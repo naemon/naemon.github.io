@@ -74,7 +74,7 @@ This list is not synchronized with the build server, so there might be more repo
 ##### Install GPG key
 First you import the GPG key.
 ```
-curl -s -o /etc/apt/trusted.gpg.d/naemon.asc "https://build.opensuse.org/projects/home:naemon/public_key"
+curl -s -o /etc/apt/trusted.gpg.d/naemon.asc "https://build.opensuse.org/projects/home:naemon/signing_keys/download?kind=gpg"
 
 ```
 
