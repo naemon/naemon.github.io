@@ -28,6 +28,7 @@ The binary packages can also be downloaded here:
    <td>SLES</td>
    <td>
         <a href="https://download.opensuse.org/repositories/home:/naemon/15.4/">15 SP4</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/15.5/">15 SP5</a><br>
   </td>
  </tr>
  <tr>
@@ -44,6 +45,8 @@ The binary packages can also be downloaded here:
    <td><img src="../images/ubuntu.png"></td>
    <td>Ubuntu</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_23.10/">23.10 Mantic Minotaur</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_23.04/">23.04 Lunar Lobster</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_22.10/">22.10 Kinetic Kudu</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_22.04/">22.04 Jammy Jellyfish</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_21.10/">21.10 Impish Indri</a><br>
@@ -57,6 +60,8 @@ The binary packages can also be downloaded here:
    <td><img src="../images/fedora.png" height="48" width="48"></td>
    <td>Fedora</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_39/">fc39</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_38/">fc38</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_37/">fc37</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_36/">fc36</a><br>
    </td>
@@ -118,6 +123,11 @@ curl -s https://download.opensuse.org/repositories/home:/naemon/Fedora_$(cut -f 
 ##### SLES 15 SP4
 ```
 zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/15.4/home:naemon.repo
+```
+
+##### SLES 15 SP5
+```
+zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/15.5/home:naemon.repo
 ```
 
 <a name="development_snapshot"></a>

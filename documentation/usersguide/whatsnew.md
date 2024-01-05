@@ -10,7 +10,30 @@ title: What's New
 ### Notable Changes and New Features
 
 #### Upcoming next release
+
 See upcoming changes from the next version on [github](https://github.com/naemon/naemon-core/blob/master/NEWS)
+
+#### 1.4.2 - 04 Jan 2024
+##### Features
+* remove size limit on external command argument length
+* performance improvements when having lots of comments
+* respawn dead core worker
+
+##### Changed
+* write objects.precache into a tmp file first
+* increased CURRENT_NEB_API_VERSION to 6 (neb modules need to be rebuild)
+
+##### Bugfixes
+* fix build error on fedora
+* fix latency calculation having negative value sometimes
+
+##### Livestatus
+* contacts: add host/service_notification_commands column
+* contacts: add groups column
+* do not print error message if client dissconects
+* avoid Cannot delete non-existing downtime/comment error during startup
+* fix too low thread stacksize
+* reopen logfile if cores last_log_rotation changed
 
 #### 1.4.1 - 01 Feb 2023
 ##### Features
@@ -41,7 +64,7 @@ See upcoming changes from the next version on [github](https://github.com/naemon
   * Improvements to Debian packaging, including multiarch installs
 
 ##### Bugfixes
-  * Fix a crash for external command: CHANGE_CONTACT_HOST_NOTIFICATION_TIMEPERIOD 
+  * Fix a crash for external command: CHANGE_CONTACT_HOST_NOTIFICATION_TIMEPERIOD
   * Fix a crash for external command: CHANGE_HOST_CHECK_TIMEPERIOD
 
 ##### Livestatus
