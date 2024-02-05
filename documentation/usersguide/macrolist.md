@@ -237,6 +237,22 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 <td class='MacroName'><a href="#totalhostservicescritical">$TOTALHOSTSERVICESCRITICAL$</a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
+<tr>
+<td class='MacroName'><a href="#hostproblemstart">$HOSTPROBLEMSTART$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
+</tr>
+<tr>
+<td class='MacroName'><a href="#hostproblemend">$HOSTPROBLEMEND$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
+</tr>
+<tr>
+<td class='MacroName'><a href="#hostproblemdurationsec">$HOSTPROBLEMDURATIONSEC$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
+</tr>
+<tr>
+<td class='MacroName'><a href="#hostproblemduration">$HOSTPROBLEMDURATION$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
+</tr>
 <tr><td colspan='9'><br></td></tr>
 <tr class="Macros">
 <th class="Macros">Macro Name</th>
@@ -442,6 +458,22 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 <tr>
 <td class='MacroName'><a href="#servicenotes">$SERVICENOTES$</a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroNo">No</td><td class="MacroNo">No</td><td class="MacroYes">Yes</td><td class="MacroNo">No</td><td class="MacroYes">Yes</td><td class="MacroNo">No</td>
+</tr>
+<tr>
+<td class='MacroName'><a href="#serviceproblemstart">$SERVICEPROBLEMSTART$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
+</tr>
+<tr>
+<td class='MacroName'><a href="#serviceproblemend">$SERVICEPROBLEMEND$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
+</tr>
+<tr>
+<td class='MacroName'><a href="#serviceproblemdurationsec">$SERVICEPROBLEMDURATIONSEC$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
+</tr>
+<tr>
+<td class='MacroName'><a href="#serviceproblemduration">$SERVICEPROBLEMDURATION$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr><td colspan='9'><br></td></tr>
 <tr class="Macros">
@@ -1010,6 +1042,22 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 <td class="MacroName"><a name="totalhostservicescritical">$TOTALHOSTSERVICESCRITICAL$</a></td>
 <td class="MacroDescription">The total number of services associated with the host that are in a CRITICAL state.</td>
 </tr>
+<tr>
+<td class="MacroName"><a name="hostproblemstart">$HOSTPROBLEMSTART$</a></td>
+<td class="MacroDescription">This is a timestamp in time_t format (seconds since the UNIX epoch) indicating the time at which the host state changed into a non-Up state.</td>
+</tr>
+<tr>
+<td class="MacroName"><a name="hostproblemend">$HOSTPROBLEMEND$</a></td>
+<td class="MacroDescription">This is a timestamp in time_t format (seconds since the UNIX epoch) indicating the time at which the host state changed changed back into Up state.</td>
+</tr>
+<tr>
+<td class="MacroName"><a name="hostproblemdurationsec">$HOSTPROBLEMDURATIONSEC$</a></td>
+<td class="MacroDescription">The duration in seconds bettwen $HOSTPROBLEMSTART$ and $HOSTPROBLEMEND$.</td>
+</tr>
+<tr>
+<td class="MacroName"><a name="hostproblemduration">$HOSTPROBLEMDURATION$</a></td>
+<td class="MacroDescription">The duration bettwen $HOSTPROBLEMSTART$ and $HOSTPROBLEMEND$ in a human readable format e.g.: 1d 10h 8m 35s</td>
+</tr>
 <tr><td colspan='2'><br></td></tr>
 <tr>
 <td colspan='2' class='MacroType'>Host Group Macros: <a href="#note5"><sup>5</sup></a></td>
@@ -1193,6 +1241,22 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 <tr>
 <td class="MacroName"><a name="servicenotes">$SERVICENOTES$</a></td>
 <td class="MacroDescription">Notes for the service.  This macro may contain other macros (e.g. $HOSTNAME$ or $SERVICESTATE$), which can be useful when you want to service-specific status information, etc. in the description</td>
+</tr>
+<tr>
+<td class="MacroName"><a name="serviceproblemstart">$SERVICEPROBLEMSTART$</a></td>
+<td class="MacroDescription">This is a timestamp in time_t format (seconds since the UNIX epoch) indicating the time at which the service state changed into a non-Ok state.</td>
+</tr>
+<tr>
+<td class="MacroName"><a name="serviceproblemend">$SERVICEPROBLEMEND$</a></td>
+<td class="MacroDescription">This is a timestamp in time_t format (seconds since the UNIX epoch) indicating the time at which the service state changed changed back into Ok state.</td>
+</tr>
+<tr>
+<td class="MacroName"><a name="serviceproblemdurationsec">$SERVICEPROBLEMDURATIONSEC$</a></td>
+<td class="MacroDescription">The duration in seconds bettwen $SERVICEPROBLEMSTART$ and $SERVICEPROBLEMEND$.</td>
+</tr>
+<tr>
+<td class="MacroName"><a name="serviceproblemduration">$SERVICEPROBLEMDURATION$</a></td>
+<td class="MacroDescription">The duration bettwen $SERVICEPROBLEMSTART$ and $SERVICEPROBLEMEND$ in a human readable format e.g.: 1d 10h 8m 35s</td>
 </tr>
 <tr><td colspan='2'><br></td></tr>
 <tr>
