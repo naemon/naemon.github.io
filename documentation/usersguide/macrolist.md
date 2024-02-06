@@ -237,6 +237,22 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 <td class='MacroName'><a href="#totalhostservicescritical">$TOTALHOSTSERVICESCRITICAL$</a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
+<tr>
+<td class='MacroName'><a href="#hostproblemstart">$HOSTPROBLEMSTART$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
+</tr>
+<tr>
+<td class='MacroName'><a href="#hostproblemend">$HOSTPROBLEMEND$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
+</tr>
+<tr>
+<td class='MacroName'><a href="#hostproblemdurationsec">$HOSTPROBLEMDURATIONSEC$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
+</tr>
+<tr>
+<td class='MacroName'><a href="#hostproblemduration">$HOSTPROBLEMDURATION$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
+</tr>
 <tr><td colspan='9'><br></td></tr>
 <tr class="Macros">
 <th class="Macros">Macro Name</th>
@@ -442,6 +458,22 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 <tr>
 <td class='MacroName'><a href="#servicenotes">$SERVICENOTES$</a></td>
 <td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroNo">No</td><td class="MacroNo">No</td><td class="MacroYes">Yes</td><td class="MacroNo">No</td><td class="MacroYes">Yes</td><td class="MacroNo">No</td>
+</tr>
+<tr>
+<td class='MacroName'><a href="#serviceproblemstart">$SERVICEPROBLEMSTART$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
+</tr>
+<tr>
+<td class='MacroName'><a href="#serviceproblemend">$SERVICEPROBLEMEND$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
+</tr>
+<tr>
+<td class='MacroName'><a href="#serviceproblemdurationsec">$SERVICEPROBLEMDURATIONSEC$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
+</tr>
+<tr>
+<td class='MacroName'><a href="#serviceproblemduration">$SERVICEPROBLEMDURATION$</a></td>
+<td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td><td class="MacroYes">Yes</td>
 </tr>
 <tr><td colspan='9'><br></td></tr>
 <tr class="Macros">
@@ -888,11 +920,11 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a name="hostproblemid">$HOSTPROBLEMID$</a></td>
-<td class="MacroDescription">A globally unique number associated with the host's current problem state.  Every time a host (or service) transitions from an UP or OK state to a problem state, a global problem ID number is incremented by one (1).  This macro will be non-zero if the host is currently a non-UP state.  State transitions between non-UP states (e.g. DOWN to UNREACHABLE) do not cause this problem id to increase.  If the host is currently in an UP state, this macro will be set to zero (0).  Combined with event handlers, this macro could be used to automatically open trouble tickets when hosts first enter a problem state.</td>
+<td class="MacroDescription">A globally unique UUIDv4 (e.g. 29304481-91eb-4a2f-8b6d-8858b4548741) associated with the host's current problem state.  Every time a host (or service) transitions from an UP or OK state to a problem state, a global problem UUID is generated.  This macro will be a UUID string if the host is currently a non-UP state.  State transitions between non-UP states (e.g. DOWN to UNREACHABLE) do not cause this problem id to change.  If the host is currently in an UP state, this macro will be set to an empty string.  Combined with event handlers, this macro could be used to automatically open trouble tickets when hosts first enter a problem state.</td>
 </tr>
 <tr>
 <td class="MacroName"><a name="lasthostproblemid">$LASTHOSTPROBLEMID$</a></td>
-<td class="MacroDescription">The previous (globally unique) problem number that was given to the host.  Combined with event handlers, this macro could be used for automatically closing trouble tickets, etc. when a host recovers to an UP state.</td>
+<td class="MacroDescription">The previous (globally unique) problem UUID that was given to the host.  Combined with event handlers, this macro could be used for automatically closing trouble tickets, etc. when a host recovers to an UP state.</td>
 </tr>
 <tr>
 <td class="MacroName"><a name="hostlatency">$HOSTLATENCY$</a></td>
@@ -1010,6 +1042,22 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 <td class="MacroName"><a name="totalhostservicescritical">$TOTALHOSTSERVICESCRITICAL$</a></td>
 <td class="MacroDescription">The total number of services associated with the host that are in a CRITICAL state.</td>
 </tr>
+<tr>
+<td class="MacroName"><a name="hostproblemstart">$HOSTPROBLEMSTART$</a></td>
+<td class="MacroDescription">This is a timestamp in time_t format (seconds since the UNIX epoch) indicating the time at which the host state changed into a non-Up state.</td>
+</tr>
+<tr>
+<td class="MacroName"><a name="hostproblemend">$HOSTPROBLEMEND$</a></td>
+<td class="MacroDescription">This is a timestamp in time_t format (seconds since the UNIX epoch) indicating the time at which the host state changed changed back into Up state.</td>
+</tr>
+<tr>
+<td class="MacroName"><a name="hostproblemdurationsec">$HOSTPROBLEMDURATIONSEC$</a></td>
+<td class="MacroDescription">The duration in seconds between $HOSTPROBLEMSTART$ and $HOSTPROBLEMEND$.</td>
+</tr>
+<tr>
+<td class="MacroName"><a name="hostproblemduration">$HOSTPROBLEMDURATION$</a></td>
+<td class="MacroDescription">The duration between $HOSTPROBLEMSTART$ and $HOSTPROBLEMEND$ in a human readable format e.g.: 1d 10h 8m 35s</td>
+</tr>
 <tr><td colspan='2'><br></td></tr>
 <tr>
 <td colspan='2' class='MacroType'>Host Group Macros: <a href="#note5"><sup>5</sup></a></td>
@@ -1088,11 +1136,11 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a name="serviceproblemid">$SERVICEPROBLEMID$</a></td>
-<td class="MacroDescription">A globally unique number associated with the service's current problem state.  Every time a service (or host) transitions from an OK or UP state to a problem state, a global problem ID number is incremented by one (1).  This macro will be non-zero if the service is currently a non-OK state.  State transitions between non-OK states (e.g. WARNING to CRITICAL) do not cause this problem id to increase.  If the service is currently in an OK state, this macro will be set to zero (0).  Combined with event handlers, this macro could be used to automatically open trouble tickets when services first enter a problem state.</td>
+<td class="MacroDescription">A globally unique UUIDv4 (e.g. 39dbb346-f483-49fe-8211-feec8edf90ea) associated with the service's current problem state.  Every time a service (or host) transitions from an OK or UP state to a problem state, a global problem UUID is generated.  This macro will be a UUID if the service is currently a non-OK state.  State transitions between non-OK states (e.g. WARNING to CRITICAL) do not cause this problem id to change.  If the service is currently in an OK state, this macro will be set to an empty string.  Combined with event handlers, this macro could be used to automatically open trouble tickets when services first enter a problem state.</td>
 </tr>
 <tr>
 <td class="MacroName"><a name="lastserviceproblemid">$LASTSERVICEPROBLEMID$</a></td>
-<td class="MacroDescription">The previous (globally unique) problem number that was given to the service.  Combined with event handlers, this macro could be used for automatically closing trouble tickets, etc. when a service recovers to an OK state.</td>
+<td class="MacroDescription">The previous (globally unique) problem UUID that was given to the service.  Combined with event handlers, this macro could be used for automatically closing trouble tickets, etc. when a service recovers to an OK state.</td>
 </tr>
 <tr>
 <td class="MacroName"><a name="servicelatency">$SERVICELATENCY$</a></td>
@@ -1193,6 +1241,22 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 <tr>
 <td class="MacroName"><a name="servicenotes">$SERVICENOTES$</a></td>
 <td class="MacroDescription">Notes for the service.  This macro may contain other macros (e.g. $HOSTNAME$ or $SERVICESTATE$), which can be useful when you want to service-specific status information, etc. in the description</td>
+</tr>
+<tr>
+<td class="MacroName"><a name="serviceproblemstart">$SERVICEPROBLEMSTART$</a></td>
+<td class="MacroDescription">This is a timestamp in time_t format (seconds since the UNIX epoch) indicating the time at which the service state changed into a non-Ok state.</td>
+</tr>
+<tr>
+<td class="MacroName"><a name="serviceproblemend">$SERVICEPROBLEMEND$</a></td>
+<td class="MacroDescription">This is a timestamp in time_t format (seconds since the UNIX epoch) indicating the time at which the service state changed changed back into Ok state.</td>
+</tr>
+<tr>
+<td class="MacroName"><a name="serviceproblemdurationsec">$SERVICEPROBLEMDURATIONSEC$</a></td>
+<td class="MacroDescription">The duration in seconds between $SERVICEPROBLEMSTART$ and $SERVICEPROBLEMEND$.</td>
+</tr>
+<tr>
+<td class="MacroName"><a name="serviceproblemduration">$SERVICEPROBLEMDURATION$</a></td>
+<td class="MacroDescription">The duration between $SERVICEPROBLEMSTART$ and $SERVICEPROBLEMEND$ in a human readable format e.g.: 1d 10h 8m 35s</td>
 </tr>
 <tr><td colspan='2'><br></td></tr>
 <tr>
@@ -1368,7 +1432,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a name="hostnotificationid">$HOSTNOTIFICATIONID$</a></td>
-<td class="MacroDescription">A unique number identifying a host notification.  Notification ID numbers are unique across both hosts and service notifications, so you could potentially use this unique number as a primary key in a notification database.  Notification ID numbers should remain unique across restarts of the Naemon process, so long as you have state retention enabled.  The notification ID number is incremented by one (1) each time a new host notification is sent out, and regardless of how many contacts are notified.</td>
+<td class="MacroDescription">A unique UUIDv4 (e.g. 3a07d4f2-575e-413b-8166-9ccdd22d418a) identifying a host notification.  Notification UUID strings are unique across both hosts and service notifications, so you could potentially use this unique string as a primary key in a notification database.  Notification UUIDs should remain unique across restarts of the Naemon process, so long as you have state retention enabled.  The notification UUID is generated each time a new host notification is sent out, and the same regardless of how many contacts are notified.</td>
 </tr>
 <tr>
 <td class="MacroName"><a name="servicenotificationnumber">$SERVICENOTIFICATIONNUMBER$</a></td>
@@ -1376,7 +1440,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a name="servicenotificationid">$SERVICENOTIFICATIONID$</a></td>
-<td class="MacroDescription">A unique number identifying a service notification.  Notification ID numbers are unique across both hosts and service notifications, so you could potentially use this unique number as a primary key in a notification database.  Notification ID numbers should remain unique across restarts of the Naemon process, so long as you have state retention enabled.  The notification ID number is incremented by one (1) each time a new service notification is sent out, and regardless of how many contacts are notified.</td>
+<td class="MacroDescription">A unique UUIDv4 (e.g. cebd5487-538f-4f5b-87cc-8e18b4e2170c) identifying a service notification.  Notification UUID strings are unique across both hosts and service notifications, so you could potentially use this unique string as a primary key in a notification database.  Notification UUIDs should remain unique across restarts of the Naemon process, so long as you have state retention enabled.  The notification UUID is generated each time a new service notification is sent out, and the same regardless of how many contacts are notified.</td>
 </tr>
 <tr><td colspan='2'><br></td></tr>
 <tr>

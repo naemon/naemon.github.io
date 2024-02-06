@@ -26,8 +26,9 @@ Changes the value of a custom contact variable.
 #!/bin/sh
 # This is a sample shell script showing how you can submit the CHANGE_CUSTOM_CONTACT_VAR command
 # to Naemon. Adjust variables to fit your environment as necessary.
+# This will change value of the custom variable: $_CONTACTSOMEVAR$
 
-printf "[%lu] CHANGE_CUSTOM_CONTACT_VAR;naemonadmin;_SOMEVAR;some new value\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] CHANGE_CUSTOM_CONTACT_VAR;naemonadmin;SOMEVAR;some new value\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
 
 
