@@ -1052,11 +1052,11 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a name="hostproblemdurationsec">$HOSTPROBLEMDURATIONSEC$</a></td>
-<td class="MacroDescription">The duration in seconds bettwen $HOSTPROBLEMSTART$ and $HOSTPROBLEMEND$.</td>
+<td class="MacroDescription">The duration in seconds between $HOSTPROBLEMSTART$ and $HOSTPROBLEMEND$.</td>
 </tr>
 <tr>
 <td class="MacroName"><a name="hostproblemduration">$HOSTPROBLEMDURATION$</a></td>
-<td class="MacroDescription">The duration bettwen $HOSTPROBLEMSTART$ and $HOSTPROBLEMEND$ in a human readable format e.g.: 1d 10h 8m 35s</td>
+<td class="MacroDescription">The duration between $HOSTPROBLEMSTART$ and $HOSTPROBLEMEND$ in a human readable format e.g.: 1d 10h 8m 35s</td>
 </tr>
 <tr><td colspan='2'><br></td></tr>
 <tr>
@@ -1252,11 +1252,11 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a name="serviceproblemdurationsec">$SERVICEPROBLEMDURATIONSEC$</a></td>
-<td class="MacroDescription">The duration in seconds bettwen $SERVICEPROBLEMSTART$ and $SERVICEPROBLEMEND$.</td>
+<td class="MacroDescription">The duration in seconds between $SERVICEPROBLEMSTART$ and $SERVICEPROBLEMEND$.</td>
 </tr>
 <tr>
 <td class="MacroName"><a name="serviceproblemduration">$SERVICEPROBLEMDURATION$</a></td>
-<td class="MacroDescription">The duration bettwen $SERVICEPROBLEMSTART$ and $SERVICEPROBLEMEND$ in a human readable format e.g.: 1d 10h 8m 35s</td>
+<td class="MacroDescription">The duration between $SERVICEPROBLEMSTART$ and $SERVICEPROBLEMEND$ in a human readable format e.g.: 1d 10h 8m 35s</td>
 </tr>
 <tr><td colspan='2'><br></td></tr>
 <tr>
