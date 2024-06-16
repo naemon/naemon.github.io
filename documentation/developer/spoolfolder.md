@@ -49,7 +49,7 @@ latency=0.0
 start_time=1617969160.0
 finish_time=1617969169.0
 early_timeout=0
-exited_ok=0
+exited_ok=1
 return_code=0
 output=...
 ```
