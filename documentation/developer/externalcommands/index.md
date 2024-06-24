@@ -27,7 +27,9 @@ Filter by Category: <select onchange="_update_cmd_filter(this.value)">
 
 
 <h5 class='commands host'><a href='acknowledge_host_problem.html'>ACKNOWLEDGE_HOST_PROBLEM</a></h5>
+<h5 class='commands host'><a href='acknowledge_host_problem_expire.html'>ACKNOWLEDGE_HOST_PROBLEM_EXPIRE</a></h5>
 <h5 class='commands service'><a href='acknowledge_svc_problem.html'>ACKNOWLEDGE_SVC_PROBLEM</a></h5>
+<h5 class='commands service'><a href='acknowledge_svc_problem_expire.html'>ACKNOWLEDGE_SVC_PROBLEM_EXPIRE</a></h5>
 <h5 class='commands comment host'><a href='add_host_comment.html'>ADD_HOST_COMMENT</a></h5>
 <h5 class='commands comment service'><a href='add_svc_comment.html'>ADD_SVC_COMMENT</a></h5>
 <h5 class='commands contact notification'><a href='change_contact_host_notification_timeperiod.html'>CHANGE_CONTACT_HOST_NOTIFICATION_TIMEPERIOD</a></h5>

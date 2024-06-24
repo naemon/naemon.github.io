@@ -63,6 +63,12 @@ informational, warning or danger. See code snippets below
 &#123;&#123; site.warn &#125;&#125;It's not possible to use Markdown inside a html block...&#123;&#123; site.end &#125;&#125;
 </pre>
 
+#### Note
+
+{{ site.note }}{{ "You can use the Liquid filter `markdownify` to use markdown syntax inside html blocks." | markdownify }}{{ site.end }}
+<pre>
+&#123;&#123; site.note &#125;&#125;&#123;&#123; &quot;You can use the Liquid filter `markdownify` ...&quot; | markdownify &#125;&#125;...&#123;&#123; site.end &#125;&#125;
+</pre>
 
 #### Danger
 
