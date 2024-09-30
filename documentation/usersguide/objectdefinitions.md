@@ -291,6 +291,8 @@ This directive is used to define the number of "time units" between regularly sc
 Unless you've changed the <a href="configmain.html#interval_length">interval_length</a> directive from the default value of 60, this number will mean minutes.
 
 More information on can be found in the <a href="hostchecks.html">host checks</a> documentation.
+
+<strong>normal_check_interval</strong> is an alias for this directive.
 </td>
 </tr>
 <tr>
@@ -305,12 +307,16 @@ Once the host has been retried <b>max_check_attempts</b> times without a change 
 If set to 0, the <b>check_interval</b> is used instead.
 
 More information on can be found in the <a href="hostchecks.html">host checks</a> documentation.
+
+<strong>retry_check_interval</strong> is an alias for this directive.
 </td>
 </tr>
 <tr>
 <td valign="top"><strong>active_checks_enabled <a href="#retention_notes" class="bg-danger">*</a></strong>:</td>
 <td>
 This directive is used to determine whether or not active checks (either regularly scheduled or on-demand) of this host are enabled. Values: 0 = disable active host checks, 1 = enable active host checks (default).
+
+<strong>checks_enabled</strong> is an alias for this directive.
 </td>
 </tr>
 <tr>
@@ -924,6 +930,8 @@ This directive is used to define the number of "time units" to wait before sched
 Unless you've changed the <a href="configmain.html#interval_length">interval_length</a> directive from the default value of 60, this number will mean minutes.
 
 More information can be found in the <a href="servicechecks.html">service checks</a> documentation.
+
+<strong>normal_check_interval</strong> is an alias for this directive.
 </td>
 </tr>
 <tr>
@@ -938,12 +946,16 @@ Once the service has been retried <b>max_check_attempts</b> times without a chan
 If set to 0, the <b>check_interval</b> is used instead.
 
 More information can be found in the <a href="servicechecks.html">service checks</a> documentation.
+
+<strong>retry_check_interval</strong> is an alias for this directive.
 </td>
 </tr>
 <tr>
 <td valign="top"><strong>active_checks_enabled <a href="#retention_notes" class="bg-danger">*</a></strong>:</td>
 <td>
 This directive is used to determine whether or not active checks of this service are enabled. Values: 0 = disable active service checks, 1 = enable active service checks (default).
+
+<strong>checks_enabled</strong> is an alias for this directive.
 </td>
 </tr>
 <tr>
