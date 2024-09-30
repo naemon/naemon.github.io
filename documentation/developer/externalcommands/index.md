@@ -141,6 +141,7 @@ Filter by Category: <select onchange="_update_cmd_filter(this.value)">
 <h5 class='commands service'><a href='enable_svc_event_handler.html'>ENABLE_SVC_EVENT_HANDLER</a></h5>
 <h5 class='commands service'><a href='enable_svc_flap_detection.html'>ENABLE_SVC_FLAP_DETECTION</a></h5>
 <h5 class='commands notification service'><a href='enable_svc_notifications.html'>ENABLE_SVC_NOTIFICATIONS</a></h5>
+<h5 class='commands process'><a href='log.html'>LOG</a></h5>
 <h5 class='commands process'><a href='process_file.html'>PROCESS_FILE</a></h5>
 <h5 class='commands host'><a href='process_host_check_result.html'>PROCESS_HOST_CHECK_RESULT</a></h5>
 <h5 class='commands service'><a href='process_service_check_result.html'>PROCESS_SERVICE_CHECK_RESULT</a></h5>
