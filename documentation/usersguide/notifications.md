@@ -88,6 +88,25 @@ When crafting your notification commands, you need to take into account what typ
 <tr><td>DOWNTIMECANCELLED</td><td>The period of <a href="downtime.html">scheduled downtime</a> for the host or service was just canceled.  Notifications about problems can now resume.</td></tr>
 </table>
 
+### Global notification handlers
+Global host and service notification handlers are run for <i>every</i> host or service,
+immediately prior to any host- or service-specific contact. The global notification handlers are only executed once per notification, regardless of the number of defined contacts for the particular host or service.
+
+You can specify global notification handler commands by using the <a href="configmain.html#global_host_notification_handler">global_host_notification_handler</a> and <a href="configmain.html#global_service_notification_handler">global_service_notification_handler</a> options in your main configuration file.
+
+Global notification handlers will respect these host- or service-specific filters:
+<ul>
+<li>Defined states in the &lt;<i>notification_options</i>&gt; object configuration.</li>
+<li>The &lt;<i>notification_period</i>&gt; for the object is currently valid.</li>
+<li>Value of &lt;<i>notifications_enabled</i>&gt; from the object configuration.</li>
+</ul>
+
+Global notification handlers will respect this global filter:
+<ul>
+<li>Value of <a href="configmain.html#enable_notifications">enable_notifications</a> directive in the main config file.</li>
+</ul>
+
+
 ### Helpful Resources
 
 There are many ways you could configure Naemon to send notifications out.  Its up to you to decide which method(s) you want to use.  Once you do that you'll have to install any necessary software and configure notification commands in your config files before you can use them.  Here are just a few possible notification methods:
