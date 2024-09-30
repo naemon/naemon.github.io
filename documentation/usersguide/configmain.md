@@ -827,6 +827,30 @@ Use this option to keep contact notifications from being logged.
 * 0 = Don't log notifications
 * 1 = Log notifications
 
+<a name="log_global_notifications"></a>
+#### Global Notification Logging Option
+
+<table border="0">
+<tr>
+<td>Format:</td>
+<td><b>log_global_notifications=&lt;0/1&gt;</b></td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><font color="red"><b>log_global_notifications=1</b></font></td>
+</tr>
+</table>
+
+This variable determines whether or not notification send by the global notification handler are logged.
+
+If you have a lot of notifications
+or regular service failures your log file will grow relatively quickly.
+
+Use this option to keep global notifications from being logged.
+
+* 0 = Don't log global notifications
+* 1 = Log global notifications
+
 <a name="log_service_retries"></a>
 #### Service Check Retry Logging Option
 
@@ -1010,6 +1034,56 @@ The <i>command</i> argument is the short name of a command that you define in yo
 The maximum amount of time that this command can run is controlled by the <a href="#event_handler_timeout">event_handler_timeout</a> option.
 
 More information on event handlers can be found <a href="eventhandlers.html">here</a>.
+
+<a name="global_host_notification_handler"></a>
+#### Global Host Notification Handler Option
+
+<table border="0">
+<tr>
+<td>Format:</td>
+<td><b>global_host_notification_handler=&lt;command&gt;</b></td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><font color="red"><b>global_host_notification_handler=send-generic-host-notification</b></font></td>
+</tr>
+</table>
+
+This option allow you to specify a host notification handler command that is to be run for every host.
+The global notification handler is executed immediately prior to the other notifications that you have optionally specified in each host definition.
+
+The global notification command will also be executed for hosts, that have no contacts assigned.
+
+The <i>command</i> argument is the short name of a command that you define in your <a href="configobject.html">object configuration file</a>.
+
+The maximum amount of time that this command can run is controlled by the <a href="#notification_timeout">notification_timeout</a> option.
+
+More information on notifications can be found <a href="notifications.html">here</a>.
+
+<a name="global_service_notification_handler"></a>
+#### Global Service Notification Handler Option
+
+<table border="0">
+<tr>
+<td>Format:</td>
+<td><b>global_service_notification_handler=&lt;command&gt;</b></td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><font color="red"><b>global_service_notification_handler=send-generic-service-notification</b></font></td>
+</tr>
+</table>
+
+This option allow you to specify a service notification handler command that is to be run for every service.
+The global notification handler is executed immediately prior to the other notifications that you have optionally specified in each service definition.
+
+The global notification command will also be executed for services, that have no contacts assigned.
+
+The <i>command</i> argument is the short name of a command that you define in your <a href="configobject.html">object configuration file</a>.
+
+The maximum amount of time that this command can run is controlled by the <a href="#notification_timeout">notification_timeout</a> option.
+
+More information on notifications can be found <a href="notifications.html">here</a>.
 
 <a name="service_inter_check_delay_method"></a>
 #### Service Inter-Check Delay Method
