@@ -27,8 +27,9 @@ The binary packages can also be downloaded here:
    <td><img src="../images/sles.jpg"></td>
    <td>SLES</td>
    <td>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/15.4/">15 SP4</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/15.6/">15 SP6</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/15.5/">15 SP5</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/15.4/">15 SP4</a><br>
   </td>
  </tr>
  <tr>
@@ -36,6 +37,7 @@ The binary packages can also be downloaded here:
    <td>Debian</td>
    <td>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_Testing/">Testing</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_12/">12 Bookworm</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_11/">11 Bullseye</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_10/">10 Buster</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_9.0/">9 Stretch</a><br>
@@ -45,6 +47,7 @@ The binary packages can also be downloaded here:
    <td><img src="../images/ubuntu.png"></td>
    <td>Ubuntu</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_24.04/">24.04 Noble Numbat</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_23.10/">23.10 Mantic Minotaur</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_23.04/">23.04 Lunar Lobster</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_22.10/">22.10 Kinetic Kudu</a><br>
@@ -60,6 +63,7 @@ The binary packages can also be downloaded here:
    <td><img src="../images/fedora.png" height="48" width="48"></td>
    <td>Fedora</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_40/">fc40</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_39/">fc39</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_38/">fc38</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_37/">fc37</a><br>
