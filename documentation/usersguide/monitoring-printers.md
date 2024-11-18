@@ -34,7 +34,7 @@ The sample configuration entries below reference objects that are defined in the
 
 ### Overview
 
-<img src="images/monitoring-printers.png" border="0" alt="Monitoring a Network Printer" title="Monitoring a Network Printer" style="float: right;">
+<img src="images/svg/monitoring-printers.svg" border="0" class="svg-image" alt="Monitoring a Network Printer" title="Monitoring a Network Printer" style="float: right;">
 
 Monitoring the status of a networked printer is pretty simple.  JetDirect-enabled printers usually have SNMP enabled, which allows Naemon to monitor their status using the <i>check_hpjd</i> plugin.
 

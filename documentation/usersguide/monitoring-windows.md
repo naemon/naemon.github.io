@@ -20,7 +20,7 @@ Publicly available services that are provided by Windows machines (HTTP, FTP, PO
 
 ### Overview
 
-<img src="images/monitoring-windows.png" border="0" alt="Monitoring a Windows Machine" title="Monitoring a Windows Machine" style="float: right;">
+<img src="images/svg/monitoring-windows.svg" border="0" class="svg-image" alt="Monitoring a Windows Machine" title="Monitoring a Windows Machine" style="float: right;">
 
 Monitoring private services or attributes of a Windows machine requires that you install an agent on it.  This agent acts as a proxy between the Naemon plugin that does the monitoring and the actual service or attribute of the Windows machine.  Without installing an agent on the Windows box, Naemon would be unable to monitor local services or attributes of the Windows box.
 

@@ -35,7 +35,7 @@ A <a href="livestatus.html">detailed description</a> is available on a dedicated
 
 ### NRPE
 
-<img src="images/nrpe.png" border="0" alt="NRPE" title="NRPE" style="float: right; padding: 0 0 0 10px;">
+<img src="images/svg/nrpe.svg" class="svg-image" border="0" alt="NRPE" title="NRPE" style="float: right;">
 
 NRPE is an addon that allows you to execute <a href="plugins.html">plugins</a> on remote Linux/Unix hosts.
 This is useful if you need to monitor local resources/attributes like disk usage, CPU load, memory usage,
@@ -48,7 +48,7 @@ The NRPE addon and documentation can be found at <a href="http://www.nagios.org/
 
 ### NSCA
 
-<img src="images/nsca.png" border="0" alt="NSCA" title="NSCA" style="float: right; padding: 0 0 0 10px;">
+<img src="images/svg/nsca.svg" class="svg-image" border="0" alt="NSCA" title="NSCA" style="float: right;">
 
 NSCA is an addon that allows you to send <a href="passivechecks.html">passive check</a> results from remote Linux/Unix
 hosts to the Naemon running on the monitoring server.

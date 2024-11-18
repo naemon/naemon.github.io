@@ -27,7 +27,7 @@ You can monitor the following things on managed switches, hubs, and routers:
 
 ### Overview
 
-<img src="images/monitoring-routers.png" border="0" alt="Monitoring a Router or Switch" title="Monitoring a Router or Switch" style="float: right;">
+<img src="images/svg/monitoring-routers.svg" class="svg-image" border="0" alt="Monitoring a Router or Switch" title="Monitoring a Router or Switch" style="float: right;">
 
 Monitoring switches and routers can either be easy or more involved - depending on what equipment you have and what you want to monitor.  As they are critical infrastructure components, you'll no doubt want to monitor them in at least some basic manner.
 
