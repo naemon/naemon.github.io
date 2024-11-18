@@ -13,6 +13,35 @@ title: What's New
 
 See upcoming changes from the next version on [github](https://github.com/naemon/naemon-core/blob/master/NEWS)
 
+#### 1.4.3 - Nov 19 2024
+##### Features
+* add global notifications handler
+* add external command to add log entries
+* add hint of previous object when duplicate detection fails
+* add options to keep services running as long as they are up
+* add problem timestamps and duration
+
+##### Changed
+* clean up output of naemon -V
+* change problem_id and notification_id to uuids
+* change service parents suppressing only normal notifcations
+
+##### Bugfixes
+* fix leaking object.cache file references
+* fix host not being in hard state with max_check_attempts=1
+* throw config errors if boolean values cannot be parsed
+* fix retrieving comments after deleting first
+* fix rpm installation race condition
+* fix resetting modified_attributes
+
+##### Livestatus
+* add support for new log types HOST/SERVICE NOTE
+* improve performance on logs table
+* fix crash on core reload
+* fix crash when requesting invalid table names
+* fix crash if stats queries errors halfway
+* fix crash on stats queries on the logs table
+
 #### 1.4.2 - 04 Jan 2024
 ##### Features
 * remove size limit on external command argument length
