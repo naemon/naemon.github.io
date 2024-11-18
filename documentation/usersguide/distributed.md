@@ -17,7 +17,7 @@ The goal in the distributed monitoring environment that I will describe is to of
 
 The diagram below should help give you a general idea of how distributed monitoring works with Naemon.  I'll be referring to the items shown in the diagram as I explain things...
 
-<a href="images/distributed.png"><img src="images/distributed.png" border="1" width="200" height="250"></a>
+<a href="images/svg/distributed.svg"><img src="images/svg/distributed.svg" class="svg-image" border="1"></a>
 
 ### Central Server vs. Distributed Servers
 

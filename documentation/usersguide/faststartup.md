@@ -53,7 +53,7 @@ have Naemon pre-process and pre-cache your config files for future use.
     </td>
     <td valign="top">
       <div style="float: right; clear: right; padding: 0 0 25px 25px;">
-        <img src="images/fast-startup1.png" alt="Pre-Caching Object Config Files" title="Pre-Caching Object Config Files" border="0">
+        <img src="images/svg/fast-startup1.svg" class="svg-image" alt="Pre-Caching Object Config Files" title="Pre-Caching Object Config Files" border="0">
       </div>
     </td>
   </tr>
@@ -76,7 +76,7 @@ have Naemon pre-process and pre-cache your config files for future use.
     </td>
     <td valign="top">
       <div style="float: right; padding: 0 0 0 25px;">
-        <img src="images/fast-startup2.png" alt="Pre-Caching Object Config Files" title="Pre-Caching Object Config Files" border="0">
+        <img src="images/svg/fast-startup2.svg" class="svg-image" alt="Pre-Caching Object Config Files" title="Pre-Caching Object Config Files" border="0">
       </div>
     </td>
   </tr>

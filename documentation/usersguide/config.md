@@ -10,7 +10,7 @@ There are several different configuration files that you're going to need to cre
 
 {{ site.note }}Sample configuration files are installed in the <i>/etc/naemon/conf.d/</i> directory when you follow the <a href="quickstart.html">quickstart installation guide</a>.{{ site.end }}
 
-<img src="images/configoverview.png" border="0" style="float: right" alt="Config Overview" title="Config Overview">
+<img src="images/svg/configoverview.svg" border="0" style="float: right" class="svg-image" alt="Config Overview" title="Config Overview">
 
 ### Main Configuration File
 
