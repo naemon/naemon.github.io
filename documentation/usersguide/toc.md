@@ -7,11 +7,11 @@
 
 [Components](about#components)
 
-[System requirements](about#system_requirements)
+[System requirements](about#system-requirements)
 
 [Licensing](about#licensing)
 
-[Downloading the latest version](about#downloading_the_latest_version)
+[Downloading the latest version](about#downloading-the-latest-version)
 
 
 

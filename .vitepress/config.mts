@@ -48,6 +48,7 @@ export default defineConfig({
         items: [
           {
             text: 'Users Guide', link: '/documentation/usersguide/toc', items: [
+              { text: 'What is Naemon', link: '/documentation/usersguide/about' },
               { text: 'What\'s New', link: '/documentation/usersguide/whatsnew' }
             ]
           },
