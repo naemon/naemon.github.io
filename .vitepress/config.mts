@@ -9,6 +9,10 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
+
+  // Can be removed as soon as the legacy content is removed
+  srcExclude: [ '**/legacy/**' ],
+
   themeConfig: {
 
     logo: '/images/svg/naemonlogo.svg',
