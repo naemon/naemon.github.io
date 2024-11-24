@@ -53,7 +53,8 @@ export default defineConfig({
           },
           {
             text: 'Developers', link: '/documentation/developer/toc', items: [
-              { text: 'Build', link: '/documentation/developer/build' },
+              { text: 'Build Naemon From Scratch', link: '/documentation/developer/build' },
+              { text: 'Worker Processes', link: '/documentation/developer/workers' },
               { text: 'Naemon Website', link: '/documentation/developer/website' }
             ]
           },
