@@ -55,6 +55,7 @@ export default defineConfig({
             text: 'Developers', link: '/documentation/developer/toc', items: [
               { text: 'Build Naemon From Scratch', link: '/documentation/developer/build' },
               { text: 'Worker Processes', link: '/documentation/developer/workers' },
+              { text: 'Naemon Event Broker Modules (NEB)', link: '/documentation/developer/neb_broker' },
               { text: 'Naemon Website', link: '/documentation/developer/website' }
             ]
           },
