@@ -1,0 +1,15 @@
+/* Custom CSS for the Naemon web site
+ * see https://vitepress.dev/guide/extending-default-theme#customizing-css
+ * and https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+:root {
+    --vp-c-brand-1: #039BE5;
+    --vp-c-brand-2: #0277BD;
+    --vp-c-brand-3: #01579B;
+
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: -webkit-linear-gradient(-45deg, #4FC3F7 50%, var(--vp-c-brand-1));
+  
+    --vp-home-hero-image-background-image: linear-gradient(45deg, var(--vp-c-brand-2) 50%,  var(--vp-c-brand-1) 50%);
+    --vp-home-hero-image-filter: blur(68px);
+}
