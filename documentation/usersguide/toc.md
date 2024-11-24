@@ -32,7 +32,7 @@
 [Community](/community)
 
 
-### Getting Started
+## Getting Started
 
 [Advice for beginners](beginners)
 
@@ -52,7 +52,7 @@
 
 [How to install PNP graphs](addon-pnp-quickstart)
 
-### Configuring Naemon
+## Configuring Naemon
 
 [Configuration overview](config)
 
@@ -68,7 +68,7 @@
 
 
 
-### Running Naemon
+## Running Naemon
 
 [Verifying your configuration](verifyconfig)
 
@@ -77,7 +77,7 @@
 
 
 
-### The Basics {#basics}
+## The Basics {#basics}
 
 [Plugins](plugins)
 
@@ -105,7 +105,7 @@
 
 
 
-### Advanced Topics
+## Advanced Topics
 
 [External commands](extcommands)
 
@@ -152,7 +152,7 @@
 [Time-saving tips for object definitions](objecttricks)
 
 
-### Security and Performance Tuning
+## Security and Performance Tuning
 
 [Security considerations](security)
 
@@ -166,7 +166,7 @@
 
 [Using the naemonstats utility](naemonstats)
 
-### Naemon Addons
+## Naemon Addons
 
 [Thruk](addons#thruk)
 
@@ -198,7 +198,7 @@
 
 
 
-### Integration With Other Software
+## Integration With Other Software
 
 [Integration Overview](integration)
 
@@ -208,7 +208,7 @@
 
 
 
-### Development
+## Development
 
 [Plugin API](pluginapi)
 
@@ -216,9 +216,11 @@
 
 [Developer Documentation](/documentation/developer/)
 
+## Naemon Logo
 
+[Naemon Logo](/logo)
 
-### Licensing
+## Licensing
 
 Copyright &copy; 2014-     Naemon Development Team and Community Contributors
 
