@@ -50,3 +50,10 @@ The container watches for file changes and will automatically regenerate the web
 ```
 docker run --rm -it -v "$PWD":/site -p "5173:5173" naemon/docs:latest
 ```
+
+### Important for the Migration
+
+1. Remove all HTML from the Markdown files. Probably in 99% it's not required and can be done using Markdown.
+2. All headlines have to get reduced by one ( remove one hashtag `###` gets to `##`)
+3. You can modify HTML anchors like so: `## What Is Naemon? {#whatis}`
+4. Add code blocks `like this` for code instead of quotes 'like so'.
