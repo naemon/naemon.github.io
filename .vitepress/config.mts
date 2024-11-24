@@ -58,6 +58,7 @@ export default defineConfig({
               { text: 'Naemon Event Broker Modules (NEB)', link: '/documentation/developer/neb_broker' },
               { text: 'API Incompatibilities between Nagios 3', link: '/documentation/developer/api-incompat3to4' },
               { text: 'Query Handlers', link: '/documentation/developer/queryhandlers' },
+              { text: 'Check Result Spoolfolder', link: '/documentation/developer/spoolfolder' },
               { text: 'Naemon Website', link: '/documentation/developer/website' }
             ]
           },
