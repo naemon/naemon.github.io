@@ -25,7 +25,7 @@ In the next step, edit the file, apply all the required changes and command your
 
 Please see the documentation of how to setup a local copy of the Naemon website.
 
-[a relative link](other_file.md)
+[Run Naemon Website Locally ](./documentation/developer/website.md)
 
 ### In a nutshell
 ```
