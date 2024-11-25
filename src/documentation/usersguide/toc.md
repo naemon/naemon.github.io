@@ -27,7 +27,7 @@
 
 ## Support
 
-[Support](support)
+[Support](support) :white_check_mark:
 
 [Community](/community) :white_check_mark:
 
