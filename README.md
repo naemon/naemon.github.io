@@ -14,10 +14,10 @@ We are currently migrating the website from [Jekyll](http://jekyllrb.com/) to [V
 To do so, all old files got moved into the `legacy` folder using `git mv`. This will prevent to git history.
 
 To migrate a page from Jekyll to VitePress, you have to use the `git mv` command, to move the file from the `legacy` folder into the
-new VitePress project.
+new VitePress project located in `src`.
 
 ```
-git mv legacy/README.md README.md
+git mv legacy/documentation/usersguide/config-incompat3to4.md src/documentation/usersguide/
 ```
 
 In the next step, edit the file, apply all the required changes and command your work.

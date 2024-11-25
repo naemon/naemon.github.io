@@ -21,7 +21,7 @@
 
 [Known issues](whatsnew#known-issues) :white_check_mark:
 
-[Configuration Incompatibilities Nagios 3 -> Naemon](config-incompat3to4)
+[Configuration Incompatibilities Nagios 3 -> Naemon](config-incompat3to4) :white_check_mark:
 
 
 
