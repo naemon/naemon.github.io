@@ -10,6 +10,8 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
 
+  srcDir: 'src',
+
   // Can be removed as soon as the legacy content is removed
   srcExclude: [ '**/legacy/**' ],
 

@@ -4,7 +4,9 @@ This repository contains the documentation and website of the Naemon project.
 
 The naemon website.
 
-Build with [VitePress](https://vitepress.dev/).
+## Contributing
+
+This site is built with [VitePress](https://vitepress.dev/). The site content is written in Markdown located in the `src` folder. For simple edits, you can directly edit the file on GitHub and generate a Pull Request.
 
 ## Work in process
 
