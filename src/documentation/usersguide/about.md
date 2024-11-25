@@ -91,7 +91,7 @@ AND FITNESS FOR A PARTICULAR PURPOSE.
 
 Several people have contributed to Naemon by either reporting bugs, suggesting improvements,
 writing plugins, etc.  A list of some of the many contributors to the development of
-Naemon Core can be found in the THANKS file in the root of the Naemon Core distribution.
+Naemon Core can be found in the [THANKS](https://github.com/naemon/naemon-core/blob/master/THANKS) file in the root of the Naemon Core distribution.
 
 
 

@@ -3,23 +3,23 @@
 
 ## About
 
-[What is Naemon?](about#whatis)
+[What is Naemon?](about#whatis) :white_check_mark:
 
-[Components](about#components)
+[Components](about#components) :white_check_mark:
 
-[System requirements](about#system-requirements)
+[System requirements](about#system-requirements) :white_check_mark:
 
-[Licensing](about#licensing)
+[Licensing](about#licensing) :white_check_mark:
 
-[Downloading the latest version](about#downloading-the-latest-version)
+[Downloading the latest version](about#downloading-the-latest-version) :white_check_mark:
 
 
 
 ## Release Notes
 
-[What's new in this version](whatsnew)
+[What's new in this version](whatsnew) :white_check_mark:
 
-[Known issues](knownissues)
+[Known issues](whatsnew#known-issues) :white_check_mark:
 
 [Configuration Incompatibilities Nagios 3 -> Naemon](config-incompat3to4)
 
@@ -29,7 +29,7 @@
 
 [Support](support)
 
-[Community](/community)
+[Community](/community) :white_check_mark:
 
 
 ## Getting Started
@@ -218,7 +218,7 @@
 
 ## Naemon Logo
 
-[Naemon Logo](/logo)
+[Naemon Logo](/logo) :white_check_mark:
 
 ## Licensing
 

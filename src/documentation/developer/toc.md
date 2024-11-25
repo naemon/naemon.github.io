@@ -5,24 +5,24 @@ Technical and api documentation for Naemon.
 
 ## Core
 
-[Build Naemon From Scratch](build)
+[Build Naemon From Scratch](build) :white_check_mark:
 
-[Worker Processes](workers)
+[Worker Processes](workers) :white_check_mark:
 
-[Naemon Event Broker Modules (NEB)](neb_broker)
+[Naemon Event Broker Modules (NEB)](neb_broker) :white_check_mark:
 
 
 ## API
 
-[API Incompatibilities between Nagios 3 and Naemon](api-incompat3to4)
+[API Incompatibilities between Nagios 3 and Naemon](api-incompat3to4) :white_check_mark:
 
-[Query Handlers](queryhandlers)
+[Query Handlers](queryhandlers) :white_check_mark:
 
 [Livestatus](/documentation/usersguide/livestatus)
 
 [External Commands](/documentation/developer/externalcommands/)
 
-[Check Result Spoolfolder](spoolfolder)
+[Check Result Spoolfolder](spoolfolder) :white_check_mark:
 
 
 ## Naemon Plugins
@@ -31,9 +31,9 @@ Technical and api documentation for Naemon.
 
 [Developing Plugins For Use With Embedded Perl](/documentation/usersguide/epnplugins)
 
-[Monitoring Plugins Developer Guidelines](https://www.monitoring-plugins.org/doc/guidelines.html)
+[Monitoring Plugins Developer Guidelines](https://www.monitoring-plugins.org/doc/guidelines.html) :white_check_mark:
 
 
 ## Documentation / Website
 
-[Run Naemon Website Locally](website)
+[Run Naemon Website Locally](website) :white_check_mark:
