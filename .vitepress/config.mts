@@ -72,7 +72,7 @@ export default defineConfig({
               {
                 text: 'How to monitor', items: [
                   { text: 'Windows', link: '/documentation/usersguide/monitoring-windows' },
-
+                  { text: 'Linux / Unix', link: '/documentation/usersguide/monitoring-linux' },
                 ]
               },
 
