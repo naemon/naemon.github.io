@@ -68,6 +68,7 @@ export default defineConfig({
                   { text: 'SLES', link: '/documentation/usersguide/quickstart-sles' }
                 ]
               },
+              { text: 'Upgrading Naemon', link: '/documentation/usersguide/upgrading' },
 
 
               { text: 'Naemon Logo', link: '/logo' }
