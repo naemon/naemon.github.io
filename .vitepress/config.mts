@@ -13,7 +13,7 @@ export default defineConfig({
   srcDir: 'src',
 
   // Can be removed as soon as the legacy content is removed
-  srcExclude: [ '**/legacy/**' ],
+  srcExclude: ['**/legacy/**'],
 
   themeConfig: {
 
@@ -58,7 +58,18 @@ export default defineConfig({
               { text: 'What\'s New', link: '/documentation/usersguide/whatsnew' },
               { text: 'Configuration Incompatibilities Nagios 3 -> Naemon', link: '/documentation/usersguide/config-incompat3to4' },
               { text: 'Support', link: '/documentation/usersguide/support' },
-              { text: 'Advice for Beginners ', link: '/documentation/usersguide/beginners' },
+              { text: 'Advice for Beginners', link: '/documentation/usersguide/beginners' },
+              {
+                text: 'Quickstart Installation Guides', link: '/documentation/usersguide/quickstart', items: [
+                  { text: 'Ubuntu', link: '/documentation/usersguide/quickstart-ubuntu' },
+                  { text: 'Debian', link: '/documentation/usersguide/quickstart-debian' },
+                  { text: 'Red Hat', link: '/documentation/usersguide/quickstart-redhat' },
+                  { text: 'CentOS', link: '/documentation/usersguide/quickstart-centos' },
+                  { text: 'SLES', link: '/documentation/usersguide/quickstart-sles' }
+                ]
+              },
+
+
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },

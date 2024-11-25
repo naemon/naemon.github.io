@@ -13,6 +13,7 @@ have to  install the `naemon` package with your package manager.
 The binary packages can also be downloaded here:
 
 <table>
+<tbody>
  <tr>
    <td><i class="fa-brands fa-redhat"></i></td>
    <td>Enterprise Linux (Red Hat, RockyLinux, AlmaLinux etc)</td>
@@ -69,6 +70,7 @@ The binary packages can also be downloaded here:
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_36/">fc36</a><br>
    </td>
  </tr>
+</tbody>
 </table>
 
 

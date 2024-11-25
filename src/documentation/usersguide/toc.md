@@ -36,7 +36,7 @@
 
 [Advice for beginners](beginners) :white_check_mark:
 
-[Quickstart installation guide](quickstart)
+[Quickstart installation guide](quickstart) :white_check_mark:
 
 [Upgrading from previous versions](upgrading)
 

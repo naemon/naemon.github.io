@@ -118,13 +118,13 @@ vi /etc/apache2/conf-available/pnp4nagios.conf
 vi /etc/apache2/conf.d/pnp4nagios.conf
 ```
 
-edit row: *AuthName "Nagios Access"*
+edit row: `AuthName "Nagios Access"`
 
-replace with: *AuthName "Naemon Access"*
+replace with: `AuthName "Naemon Access"`
 
-edit row: *AuthUserFile /usr/local/nagios/etc/htpasswd.users*
+edit row: `AuthUserFile /usr/local/nagios/etc/htpasswd.users`
 
-replace with: *AuthUserFile /etc/naemon/htpasswd*
+replace with: `AuthUserFile /etc/naemon/htpasswd`
 
 ### 7 - Modify config_local.php for Naemon
 
@@ -132,9 +132,9 @@ replace with: *AuthUserFile /etc/naemon/htpasswd*
 vi /usr/local/pnp4nagios/etc/config_local.php
 ```
 
-edit row: *$conf['nagios_base'] = "/nagios/cgi-bin";*
+edit row: `$conf['nagios_base'] = "/nagios/cgi-bin";`
 
-replace with: *$conf['nagios_base'] = "/naemon/cgi-bin";*
+replace with: `$conf['nagios_base'] = "/naemon/cgi-bin";`
 
 ### 8 - Enable Naemon performance data
 
@@ -142,9 +142,9 @@ replace with: *$conf['nagios_base'] = "/naemon/cgi-bin";*
 vi /etc/naemon/naemon.cfg
 ```
 
-edit row: *process_performance_data=0"*
+edit row: `process_performance_data=0"`
 
-replace with: *process_performance_data=1"*
+replace with: `process_performance_data=1"`
 
 Add the following entries at the bottom of /etc/naemon/naemon.cfg to setup performance data settings
 

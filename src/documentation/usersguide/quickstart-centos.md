@@ -1,10 +1,6 @@
----
-layout: doctoc
-title: CentOS Quickstart
----
-<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="quickstart.html">Quickstart Installation Guides</a>, <a href="security.html">Security Considerations</a>
+# CentOS Quickstart
 
-### Introduction
+## Introduction
 
 This guide is intended to provide you with simple instructions on how to install Naemon from packages on Ubuntu and have it monitoring your local machine within 10 minutes. No advanced installation options are discussed here - just the basics that will work for 95% of users who want to get started.
 
@@ -12,21 +8,22 @@ These instructions were written for:
 
 * CentOS Server 6.7
 
-### What You'll End Up With
+## What You'll End Up With
 
 If you follow these instructions, here's what you'll end up with:
 
-<ul>
-<li>Nagios plugins will be installed underneath /usr/lib64/nagios/plugins/</li>
-<li>Naemon will be configured to monitor a few aspects of your local system (CPU load, disk usage, etc.)</li>
-<li>The Naemon web interface will be accessible at http://localhost/naemon/</li>
-</ul>
 
-### Install instruction 
+ - Monitoring plugins will be installed underneath `/usr/lib64/nagios/plugins/`
+ - Naemon will be configured to monitor a few aspects of your local system (CPU load, disk usage, etc.)
+ - The Naemon web interface will be accessible at `http://localhost/naemon/`
 
-{{ site.warn }}Don't forget to change your password from default, instruction are found below version specific installation instructions <a href="#change_default_password_for_thruk">here</a>{{ site.end }}
 
-#### CentOS Server 6.7
+## Install instruction 
+
+> [!WARNING]
+> Don't forget to change your password from default, instruction are found below version specific installation instructions [here](#change-default-password-for-thruk)
+
+### CentOS Server 6.7
 
 **Install the labs.consol.de repository**
 
@@ -58,9 +55,9 @@ setenforce 0
 vi /etc/selinux/config
 ```
 
-edit row: *"SELINUX=enforcing"*
+edit row: `SELINUX=enforcing`
 
-replace with: *"SELINUX=disabled"*
+replace with: `SELINUX=disabled`
 
 **Install Nagios plugins**
 
@@ -77,7 +74,7 @@ chkconfig naemon on && service naemon start
 chkconfig thruk on && service thruk start
 ```
 
-### Change default password for Thruk
+## Change default password for Thruk
 
 It's most important to change your password to protect your site for unauthorized access
 
@@ -85,7 +82,7 @@ It's most important to change your password to protect your site for unauthorize
 htpasswd /etc/thruk/htpasswd thrukadmin
 ```
 
-### Login to the Web Interface
+## Login to the Web Interface
 
 You should now be able to access the Naemon web interface at the URL below.  You'll be prompted for the username admin and password you specified earlier or admin if you did not change your password.
 
