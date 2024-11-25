@@ -34,7 +34,7 @@
 
 ## Getting Started
 
-[Advice for beginners](beginners)
+[Advice for beginners](beginners) :white_check_mark:
 
 [Quickstart installation guide](quickstart)
 

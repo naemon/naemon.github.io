@@ -58,6 +58,7 @@ export default defineConfig({
               { text: 'What\'s New', link: '/documentation/usersguide/whatsnew' },
               { text: 'Configuration Incompatibilities Nagios 3 -> Naemon', link: '/documentation/usersguide/config-incompat3to4' },
               { text: 'Support', link: '/documentation/usersguide/support' },
+              { text: 'Advice for Beginners ', link: '/documentation/usersguide/beginners' },
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },
