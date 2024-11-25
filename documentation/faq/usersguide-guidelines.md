@@ -1,27 +1,21 @@
----
-layout: affix
-title: Usersguide guidelines
----
+# Usersguide guidelines
+
 
 This document will help the community to mainstream Naemon usersguide to make it easy to follow with
 a common look and feel for the best user experience possible.
 
-### Naming
+## Naming
 
-* **Naemon** - The preferred name for Naemon Suite
-* Naemon Suite - The entire suite, both the Naemon Core and Thruk Monitoring Webinterface
-* Naemon Core - The monitoring engine
-* Thruk - Monitoring Webinterface used by Naemon (also compatible with Icinga, Shinken and Nagios)
+- **Naemon** - The preferred name for Naemon Suite
+- Naemon Suite - The entire suite, both the Naemon Core and Thruk Monitoring Webinterface
+- Naemon Core - The monitoring engine
+- Thruk - Monitoring Webinterface used by Naemon (also compatible with Icinga, Shinken and Nagios)
 
-### Syntax
+## Syntax
 
-#### Code snippets
-<p>Use &lt;pre&gt;...&lt;/pre&gt; or ```...``` for all code snippets in the documentation</p>
+### Code snippets
+Use \`\`\`...\`\`\` for all code snippets in the documentation.
 
-```
-mkdir download
-cd download
-```
 <pre>
 ```bash
 mkdir download
@@ -29,51 +23,50 @@ cd download
 ```
 </pre>
 
-{{ site.info }}The language is optional. Common languages are 'bash', 'c' or 'perl'.{{ site.end }}
+
+```bash
+mkdir download
+cd download
+```
+
+> [!INFO]
+> The language is optional. Common languages are `bash`, `c` or `perl`.
 
 
 ### Alerts
-Alerts are used in the text to highlight something specific. It could be success,
+Alerts are used in the text to highlight something specific. It could be `NOTE`,
+`TIP`, `IMPORTANT`, `WARNING` or `CAUTION`
 informational, warning or danger. See code snippets below
 
+```md
+> [!NOTE]
+> Some useful hint.
 
-#### Success or Hints
+> [!TIP]
+> Some useful tips.
 
-{{ site.hint }}Some useful hint.{{ site.end }}
+> [!IMPORTANT]
+> Informational Alert
 
-<pre>
-&#123;&#123; site.hint &#125;&#125;Some useful hint.&#123;&#123; site.end &#125;&#125;
-</pre>
+> [!WARNING]
+> It is not possible to use Markdown inside a html block.
 
-
-#### Information
-
-{{ site.info }}Informational Alert{{ site.end }}
-
-<pre>
-&#123;&#123; site.info &#125;&#125;Informational Alert&#123;&#123; site.end &#125;&#125;
-</pre>
+> [!CAUTION]
+> Make a backup before you upgrade
+```
 
 
-#### Warning
+> [!NOTE]
+> Some useful hint.
 
-{{ site.warn }}It's not possible to use Markdown inside a html block. Don't forget that &lt;table&gt;...&lt;/table&gt; are inside a html block as well{{ site.end }}
+> [!TIP]
+> Some useful tips.
 
-<pre>
-&#123;&#123; site.warn &#125;&#125;It's not possible to use Markdown inside a html block...&#123;&#123; site.end &#125;&#125;
-</pre>
+> [!IMPORTANT]
+> Informational Alert
 
-#### Note
+> [!WARNING]
+> It is not possible to use Markdown inside a html block.
 
-{{ site.note }}{{ "You can use the Liquid filter `markdownify` to use markdown syntax inside html blocks." | markdownify }}{{ site.end }}
-<pre>
-&#123;&#123; site.note &#125;&#125;&#123;&#123; &quot;You can use the Liquid filter `markdownify` ...&quot; | markdownify &#125;&#125;...&#123;&#123; site.end &#125;&#125;
-</pre>
-
-#### Danger
-
-{{ site.danger }}Make a backup before you upgrade{{ site.end }}
-
-<pre>
-&#123;&#123; site.danger &#125;&#125;Make a backup before you upgrade&#123;&#123; site.end &#125;&#125;
-</pre>
+> [!CAUTION]
+> Make a backup before you upgrade

@@ -1,42 +1,26 @@
----
-layout: doc
-title: Documentation
----
 
-### Run Naemon Website Locally
+# Run Naemon Website Locally
 
-#### Ubuntu 12.04
+The Naemon Website is build with [VitePress](https://vitepress.dev) and can run on any operating system.
 
-For example on Ubuntu 12.04. We don't have a recent bundler here, so just use
-gem directly.
+## Installation
 
-```bash
-  %> sudo apt-get install ruby1.9.3 ruby1.9.1-dev   # yes, thats not a typo
-  %> cd /tmp && git clone https://github.com/naemon/naemon.github.io.git
-  %> cd /tmp/naemon.github.io
-  %> GEM_HOME=.gem gem1.9.3 install github-pages
-```
+### Prerequisites
 
-After the initial installation, start the server with the following command:
+ - [Node.js](https://nodejs.org/) version 18 or higher.
+ - Text Editor with [Markdown](https://en.wikipedia.org/wiki/Markdown) syntax support.
+   - [Visual Studio Code](https://code.visualstudio.com/) for example. 
 
 ```bash
-  %> GEM_HOME=.gem ./.gem/bin/jekyll serve --watch
+git clone https://github.com/naemon/naemon.github.io.git
+cd naemon.github.io/
+
+npm install
 ```
 
-
-#### OSX
-
-On OSX we use <a href="http://brew.sh">brew</a> to install ruby 1.9:
-
+Now you are ready to start the development server
 ```bash
-  %> brew install ruby193
-  %> cd /tmp && git clone https://github.com/naemon/naemon.github.io.git
-  %> cd /tmp/naemon.github.io
-  %> PATH=/usr/local/opt/ruby193/bin:$PATH GEM_HOME=.gem gem install github-pages
+npm run docs:dev
 ```
 
-After the initial installation, start the server with the following command:
-
-```bash
-  %> PATH=/usr/local/opt/ruby193/bin:$PATH GEM_HOME=.gem ./.gem/bin/jekyll serve --watch
-```
+The dev server should be running at `http://localhost:5173` . Visit the URL in your browser to see the Naemon Website running.

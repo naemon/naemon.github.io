@@ -1,33 +1,51 @@
----
-title: The Logo
-layout: default
----
+# Naemon Logo
+
 
 Here you will find some resources if you need the naemon logo, for example to link to this page:
 
 
-
 ## Small
 
-<img src="/images/logo_small.png" width="100" height="17" alt="naemon logo">
-<a href="/images/logo_small.png">download</a>
+![Small Naemon Logo](/images/logo/logo_small.png)
+
+<i class="fa-regular fa-image"></i>&nbsp;
+Image size: 100x17px
+
+<i class="fa-solid fa-download"></i>&nbsp;
+[download as PNG](/images/logo/logo_small.png)
 
 
 ## Mid Size
 
-<img src="/images/logo_middle.png" width="300" height="50" alt="naemon logo">
-<a href="/images/logo_middle.png">download</a>
+![Mid Naemon Logo](/images/logo/logo_middle.png)
+
+<i class="fa-regular fa-image"></i>&nbsp;
+Image size: 300x50px
+
+<i class="fa-solid fa-download"></i>&nbsp;
+[download as PNG](/images/logo/logo_middle.png)
 
 ## Large Size
 
-<img src="/images/logo_middle.png" width="300" height="50" alt="naemon logo">
-<a href="/images/logo_large.png">download</a>
+![Large Naemon Logo](/images/logo/logo_large.png)
 
-## SVG / Raw
+<i class="fa-regular fa-image"></i>&nbsp;
+Image size: 1324x219px
 
-<img src="/images/logo_middle.png" width="300" height="50" alt="naemon logo">
-<a href="/images/naemonlogo.svg">download</a>
+<i class="fa-solid fa-download"></i>&nbsp;
+[download as PNG](/images/logo/logo_large.png)
+
+## SVG
+
+Scalable Vector Graphic
+
+![Naemon Logo as SVG](/images/logo/naemonlogo.svg)
+
+<i class="fa-solid fa-download"></i>&nbsp;
+[download as SVG](/images/logo/naemonlogo.svg)
+
+
 
 ## Credits
 
-The logo was designed by Elin Norén and can be used under the terms of the <a href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en" target="_blank">cc-by-sa license</a>.
+The logo was designed by Elin Norén and can be used under the terms of the [cc-by-sa license](https://creativecommons.org/licenses/by-sa/3.0/de/deed.en).

@@ -1,233 +1,226 @@
----
-layout: doctoc
-title: User Documentation
-body_class: toc
----
+# User Documentation
 
-## Table of Contents
 
-### About
+## About
 
-<a href="about.html#whatis">What is Naemon?</a>
+[What is Naemon?](about#whatis)
 
-<a href="about.html#components">Components</a>
+[Components](about#components)
 
-<a href="about.html#system_requirements">System requirements</a>
+[System requirements](about#system-requirements)
 
-<a href="about.html#licensing">Licensing</a>
+[Licensing](about#licensing)
 
-<a href="about.html#downloading_the_latest_version">Downloading the latest version</a>
+[Downloading the latest version](about#downloading-the-latest-version)
 
 
 
-### Release Notes
+## Release Notes
 
-<a href="whatsnew.html">What's new in this version</a>
+[What's new in this version](whatsnew)
 
-<a href="knownissues.html">Known issues</a>
+[Known issues](knownissues)
 
-<a href="config-incompat3to4.html">Configuration Incompatibilities Nagios 3 -&gt; Naemon</a>
+[Configuration Incompatibilities Nagios 3 -> Naemon](config-incompat3to4)
 
 
 
-### Support
+## Support
 
-<a href="support.html">Support</a>
+[Support](support)
 
-<a href="/community">Community</a>
+[Community](/community)
 
 
+## Getting Started
 
-### Getting Started
+[Advice for beginners](beginners)
 
-<a href="beginners.html">Advice for beginners</a>
+[Quickstart installation guide](quickstart)
 
-<a href="quickstart.html">Quickstart installation guide</a>
+[Upgrading from previous versions](upgrading)
 
-<a href="upgrading.html">Upgrading from previous versions</a>
+[How to monitor a Windows machine](monitoring-windows)
 
-<a href="monitoring-windows.html">How to monitor a Windows machine</a>
+[How to monitor a Linux/Unix machine](monitoring-linux)
 
-<a href="monitoring-linux.html">How to monitor a Linux/Unix machine</a>
+[How to monitor a network printer](monitoring-printers)
 
-<a href="monitoring-printers.html">How to monitor a network printer</a>
+[How to monitor a router/switch](monitoring-routers)
 
-<a href="monitoring-routers.html">How to monitor a router/switch</a>
+[How to monitor network services (HTTP, FTP, SSH, etc.)](monitoring-networkservices)
 
-<a href="monitoring-networkservices.html">How to monitor network services (HTTP, FTP, SSH, etc.)</a>
+[How to install PNP graphs](addon-pnp-quickstart)
 
-<a href="addon-pnp-quickstart.html">How to install PNP graphs</a>
+## Configuring Naemon
 
-### Configuring Naemon
+[Configuration overview](config)
 
-<a href="config.html">Configuration overview</a>
+[Main configuration file options](configmain)
 
-<a href="configmain.html">Main configuration file options</a>
+[Object configuration overview](configobject)
 
-<a href="configobject.html">Object configuration overview</a>
+[Object definitions](objectdefinitions)
 
-<a href="objectdefinitions.html">Object definitions</a>
+[CGI configuration file options](configcgi)
 
-<a href="configcgi.html">CGI configuration file options</a>
+[Configuring authorization for the CGIs](cgiauth)
 
-<a href="cgiauth.html">Configuring authorization for the CGIs</a>
 
 
+## Running Naemon
 
-### Running Naemon
+[Verifying your configuration](verifyconfig)
 
-<a href="verifyconfig.html">Verifying your configuration</a>
+[Starting and stopping Naemon](startstop)
 
-<a href="startstop.html">Starting and stopping Naemon</a>
 
 
 
+## The Basics {#basics}
 
-<a name="basics"></a>
+[Plugins](plugins)
 
-### The Basics
+[Macros and how they work](macros)
 
-<a href="plugins.html">Plugins</a>
+[Standard macros available in Naemon](macrolist)
 
-<a href="macros.html">Macros and how they work</a>
+[Host checks](hostchecks)
 
-<a href="macrolist.html">Standard macros available in Naemon</a>
+[Service checks](servicechecks)
 
-<a href="hostchecks.html">Host checks</a>
+[Active checks](activechecks)
 
-<a href="servicechecks.html">Service checks</a>
+[Passive checks](passivechecks)
 
-<a href="activechecks.html">Active checks</a>
+[State types](statetypes)
 
-<a href="passivechecks.html">Passive checks</a>
+[Time periods](timeperiods)
 
-<a href="statetypes.html">State types</a>
+[Determining status and reachability of network hosts](networkreachability)
 
-<a href="timeperiods.html">Time periods</a>
+[Notifications](notifications)
 
-<a href="networkreachability.html">Determining status and reachability of network hosts</a>
+[Information on the CGIs](cgis)
 
-<a href="notifications.html">Notifications</a>
 
-<a href="cgis.html">Information on the CGIs</a>
 
+## Advanced Topics
 
+[External commands](extcommands)
 
-### Advanced Topics
+[Event handlers](eventhandlers)
 
-<a href="extcommands.html">External commands</a>
+[Volatile services](volatileservices)
 
-<a href="eventhandlers.html">Event handlers</a>
+[Service and host result freshness checks](freshness)
 
-<a href="volatileservices.html">Volatile services</a>
+[Distributed monitoring](distributed)
 
-<a href="freshness.html">Service and host result freshness checks</a>
+[Redundant and failover monitoring](redundancy)
 
-<a href="distributed.html">Distributed monitoring</a>
+[Detection and handling of state flapping](flapping)
 
-<a href="redundancy.html">Redundant and failover monitoring</a>
+[Notification escalations](escalations)
 
-<a href="flapping.html">Detection and handling of state flapping</a>
+[On-call notification rotations](oncallrotation)
 
-<a href="escalations.html">Notification escalations</a>
+[Monitoring service and host clusters](clusters)
 
-<a href="oncallrotation.html">On-call notification rotations</a>
+[Host and service dependencies](dependencies)
 
-<a href="clusters.html">Monitoring service and host clusters</a>
+[State stalking](stalking)
 
-<a href="dependencies.html">Host and service dependencies</a>
+[Performance data](perfdata)
 
-<a href="stalking.html">State stalking</a>
+[Scheduled host and service downtime](downtime)
 
-<a href="perfdata.html">Performance data</a>
+[Using the embedded Perl interpreter](embeddedperl)
 
-<a href="downtime.html">Scheduled host and service downtime</a>
+[Adaptive monitoring](adaptive)
 
-<a href="embeddedperl.html">Using the embedded Perl interpreter</a>
+[Predictive dependency checks](dependencychecks)
 
-<a href="adaptive.html">Adaptive monitoring</a>
+[Cached checks](cachedchecks)
 
-<a href="dependencychecks.html">Predictive dependency checks</a>
+[Passive host state translation](passivestatetranslation)
 
-<a href="cachedchecks.html">Cached checks</a>
+[Custom CGI headers and footers](cgiincludes)
 
-<a href="passivestatetranslation.html">Passive host state translation</a>
+[Object inheritance](objectinheritance)
 
-<a href="cgiincludes.html">Custom CGI headers and footers</a>
+[Time-saving tips for object definitions](objecttricks)
 
-<a href="objectinheritance.html">Object inheritance</a>
 
-<a href="objecttricks.html">Time-saving tips for object definitions</a>
+## Security and Performance Tuning
 
+[Security considerations](security)
 
+[Enhanced CGI security and authentication](cgisecurity)
 
-### Security and Performance Tuning
+[Tuning Naemon for maximum performance](tuning)
 
-<a href="security.html">Security considerations</a>
+[Fast startup options](faststartup)
 
-<a href="cgisecurity.html">Enhanced CGI security and authentication</a>
+[Large installation tweaks](largeinstalltweaks)
 
-<a href="tuning.html">Tuning Naemon for maximum performance</a>
+[Using the naemonstats utility](naemonstats)
 
-<a href="faststartup.html">Fast startup options</a>
+## Naemon Addons
 
-<a href="largeinstalltweaks.html">Large installation tweaks</a>
+[Thruk](addons#thruk)
 
-<a href="naemonstats.html">Using the naemonstats utility</a>
+[Livestatus](livestatus)
 
-### Naemon Addons
+[NRPE](addons#nrpe)
 
-<a href="addons.html#thruk">Thruk</a>
+[NSCA](addons#nsca)
 
-<a href="livestatus.html">Livestatus</a>
+[NDOUtils](addons#ndoutils)
 
-<a href="addons.html#nrpe">NRPE</a>
+[Statusengine 2](addons#statusengine_2)
 
-<a href="addons.html#nsca">NSCA</a>
+[Statusengine 3](addons#statusengine_3)
 
-<a href="addons.html#ndoutils">NDOUtils</a>
+[PNP](addons#pnp)
 
-<a href="addons.html#statusengine_2">Statusengine 2</a>
+[Graphing Performance Info With MRTG](mrtggraphs)
 
-<a href="addons.html#statusengine_3">Statusengine 3</a>
+[Merlin](addons#merlin)
 
-<a href="addons.html#pnp">PNP</a>
+[Mod-Gearman](addons#mod-gearman)
 
-<a href="mrtggraphs.html">Graphing Performance Info With MRTG</a>
+[OMD](addons#omd)
 
-<a href="addons.html#merlin">Merlin</a>
+[Other addons](addons#others)
 
-<a href="addons.html#mod-gearman">Mod-Gearman</a>
+[Nagios Exchange](http://exchange.nagios.org/)
 
-<a href="addons.html#omd">OMD</a>
 
-<a href="addons.html#others">Other addons</a>
 
-<a href="http://exchange.nagios.org/" target="_blank">Nagios Exchange</a>
+## Integration With Other Software
 
+[Integration Overview](integration)
 
+[SNMP Traps](int-snmptrap)
 
-### Integration With Other Software
+[TCP Wrappers](int-tcpwrappers)
 
-<a href="integration.html">Integration Overview</a>
 
-<a href="int-snmptrap.html">SNMP Traps</a>
 
-<a href="int-tcpwrappers.html">TCP Wrappers</a>
+## Development
 
+[Plugin API](pluginapi)
 
+[Developing Plugins For Use With Embedded Perl](epnplugins)
 
-### Development
+[Developer Documentation](/documentation/developer/)
 
-<a href="pluginapi.html">Plugin API</a>
+## Naemon Logo
 
-<a href="epnplugins.html">Developing Plugins For Use With Embedded Perl</a>
+[Naemon Logo](/logo)
 
-<a href="/documentation/developer/">Developer Documentation</a>
-
-
-
-### Licensing
+## Licensing
 
 Copyright &copy; 2014-     Naemon Development Team and Community Contributors
 
@@ -235,6 +228,6 @@ Copyright &copy; 2009-2010 Nagios Core Development Team and Community Contributo
 
 Copyright &copy; 1999-2009 Ethan Galstad
 
-Portions copyright by Nagios Community members.  See the THANKS file for more information.
+Portions copyright by Nagios Community members.  See the [THANKS](https://github.com/naemon/naemon-core/blob/master/THANKS) file for more information.
 
 Nagios, Nagios Core, NRPE, NSCA, and the Nagios logo are trademarks, servicemarks, registered servicemarks or registered trademarks of Nagios Enterprises.  All other trademarks, servicemarks, registered trademarks, and registered servicemarks mentioned herein may be the property of their respective owner(s).  The information contained herein is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE.

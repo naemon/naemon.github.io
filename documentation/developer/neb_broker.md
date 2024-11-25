@@ -1,7 +1,4 @@
----
-layout: doctoc
-title: Naemon Event Broker Modules (NEB)
----
+# Naemon Event Broker Modules (NEB)
 
 Everything related to Naemon event broker modules (NEB).
 
@@ -19,8 +16,9 @@ nothing else.
 
 Usually callbacks would be registered during the init function.
 
-module.c:
 ```C
+// module.c
+
 #include <naemon/naemon.h>
 
 NEB_API_VERSION(CURRENT_NEB_API_VERSION);
@@ -43,12 +41,12 @@ compile with:
   %> gcc $(pkg-config --cflags naemon) -shared -fPIC  module.c -o module.o
 ```
 
-And load the module from your naemon.cfg with:
+And load the module from your `naemon.cfg` with:
 ```
 broker_module=..../module.o
 ```
 
-If everything worked, you should see something like this in your naemon.log
+If everything worked, you should see something like this in your `naemon.log`
 
 ```
 [1636297273] module loaded
@@ -70,13 +68,14 @@ Also have a look at real world examples:
 
 ### Callback Types
 
-#### NEBCALLBACK_VAULT_MACRO_DATA
+#### `NEBCALLBACK_VAULT_MACRO_DATA`
 
 The vault callback can be used to dynamically set macro values. The module registers
 a single callback which sets the value of the supplied data structure.
 
-module.c:
 ```C
+// module.c
+
 #include <naemon/naemon.h>
 NEB_API_VERSION(CURRENT_NEB_API_VERSION);
 static void *neb_handle = NULL;
@@ -103,8 +102,8 @@ compile with:
   %> gcc $(pkg-config --cflags naemon) -shared -fPIC  module.c -o module.o
 ```
 
-And load the module from your naemon.cfg with:
+And load the module from your `naemon.cfg` with:
 ```
-broker_module=..../module.o
+broker_module=/path/to/module.o
 ```
 

@@ -1,47 +1,39 @@
----
-layout: doc
-title: Developer Documentation
-body_class: toc
----
+
+# Developer Documentation
 
 Technical and api documentation for Naemon.
 
-## Table of Contents
+## Core
+
+[Build Naemon From Scratch](build)
+
+[Worker Processes](workers)
+
+[Naemon Event Broker Modules (NEB)](neb_broker)
 
 
+## API
 
-### Core
+[API Incompatibilities between Nagios 3 and Naemon](api-incompat3to4)
 
-<a href="build.html">Build Naemon From Scratch</a>
+[Query Handlers](queryhandlers)
 
-<a href="workers.html">Worker Processes</a>
+[Livestatus](/documentation/usersguide/livestatus)
 
-<a href="neb_broker.html">Naemon Event Broker Modules (NEB)</a>
+[External Commands](/documentation/developer/externalcommands/)
 
-
-### API
-
-<a href="api-incompat3to4.html">API Incompatibilities between Nagios 3 and Naemon</a>
-
-<a href="queryhandlers.html">Query Handlers</a>
-
-<a href="/documentation/usersguide/livestatus.html">Livestatus</a>
-
-<a href="/documentation/developer/externalcommands/">External Commands</a>
-
-<a href="spoolfolder.html">Check Result Spoolfolder</a>
+[Check Result Spoolfolder](spoolfolder)
 
 
+## Naemon Plugins
 
-### Naemon Plugins
+[Plugin API](/documentation/usersguide/pluginapi)
 
-<a href="/documentation/usersguide/pluginapi.html">Plugin API</a>
+[Developing Plugins For Use With Embedded Perl](/documentation/usersguide/epnplugins)
 
-<a href="/documentation/usersguide/epnplugins.html">Developing Plugins For Use With Embedded Perl</a>
-
-<a href="https://www.monitoring-plugins.org/doc/guidelines.html">Monitoring Plugins Developer Guidelines</a>
+[Monitoring Plugins Developer Guidelines](https://www.monitoring-plugins.org/doc/guidelines.html)
 
 
-### Documentation / Website
+## Documentation / Website
 
-<a href="website.html">Run Naemon Website Locally</a>
+[Run Naemon Website Locally](website)

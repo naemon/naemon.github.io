@@ -1,31 +1,28 @@
----
-layout: doctoc
-title: Check Result Spoolfolder
----
+# Check Result Spoolfolder
 
 A brief intro to the Naemon checkresult spoolfolder
 
-### Purpose
+## Purpose
 The purpose of the checkresult spoolfolder as set by the `check_result_path`
 configuration option is a fast and scalable option to submit active and
 passive host and service results. It is usually an internal API, but
 it can be used to submit check results from 3rd party scripts as well.
 
-### When should i use this spoolfolder
+## When should i use this spoolfolder
 There is more than one way to submit check results. The spoolfolder should
 be used if one of the following criteria matches:
 
 - Want to submit active check results
 - Want to submit many results at once
 
-### Architecure Overview
+## Architecure Overview
 
 1. Script runs host/service check and writes result into
    new file below `check_result_path`.
 2. When finished writing the file, write a .ok file.
 3. Naemon will reap the results and delete the file.
 
-### Spoolfile
+## Spoolfile
 The spoolfile must match the pattern `cXXXXXX`. It must start with a literal
 `c` and the filename must be 7 bytes long.
 
@@ -57,34 +54,23 @@ output=...
 When the file is finished and closed, create an empty file `cXXXXXX.ok` using
 the same filename as the actual checkresult and append `.ok`.
 
-#### Checkresult Attributes
+### Checkresult Attributes
 
-`host_name`: Contains the host name.
-
-`service_description`: Contains the service description. (Optional, skip for host results).
-
-`check_type`: Can be either `0` for active check results or `1` for passive check results.
-
-`check_options`: Should be 0.
-
-`scheduled_check`: Should be 1. But does not make any difference otherwise.
-
-`latency`: Latency in seconds (with fractions)..
-
-`start_time`: Unix timestamp (with fractions) when the check started.
-
-`finish_time`: Unix timestamp (with fractions) when the check finished.
-
-`early_timeout`: Should be 0, otherwise Naemon will create a generic timeout result.
-
-`exited_ok`: Should be 1. If 0, Naemon will discard the result and put a error message into the plugin output.
-
-`return_code`: The check plugin return code as 0:OK, 1:WARNING, 2:CRTICIAL and 3:UNKNOWN
-
-`output`: Contains the plugin output (with performance data) in a single line. Newlines must be escaped as `\n`.
+ - `host_name`: Contains the host name.
+ - `service_description`: Contains the service description. (Optional, skip for host results).
+ - `check_type`: Can be either `0` for active check results or `1` for passive check results.
+ - `check_options`: Should be 0.
+ - `scheduled_check`: Should be 1. But does not make any difference otherwise.
+ - `latency`: Latency in seconds (with fractions)..
+ - `start_time`: Unix timestamp (with fractions) when the check started.
+ - `finish_time`: Unix timestamp (with fractions) when the check finished.
+ - `early_timeout`: Should be 0, otherwise Naemon will create a generic timeout result.
+ - `exited_ok`: Should be 1. If 0, Naemon will discard the result and put a error message into the plugin output.
+ - `return_code`: The check plugin return code as 0:OK, 1:WARNING, 2:CRTICIAL and 3:UNKNOWN
+ - `output`: Contains the plugin output (with performance data) in a single line. Newlines must be escaped as `\n`.
 
 
-### Example
+## Example
 
 ```
 host_name=naemon.io
@@ -99,8 +85,8 @@ output=HTTP OK: HTTP/1.1 302 Moved Temporarily - 324 bytes in 0.165 second respo
 ```
 
 
-### Libraries
+## Libraries
 
 Here is a incomplete lists of libraries using this API:
 
-- Perl: <a href="https://metacpan.org/pod/Nagios::Passive" target="_blank">https://metacpan.org/pod/Nagios::Passive</a>
+- Perl: [https://metacpan.org/pod/Nagios::Passive](https://metacpan.org/pod/Nagios::Passive)
