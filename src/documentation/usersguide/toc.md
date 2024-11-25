@@ -46,7 +46,7 @@
 
 [How to monitor a network printer](monitoring-printers) :white_check_mark:
 
-[How to monitor a router/switch](monitoring-routers)
+[How to monitor a router/switch](monitoring-routers) :white_check_mark:
 
 [How to monitor network services (HTTP, FTP, SSH, etc.)](monitoring-networkservices)
 

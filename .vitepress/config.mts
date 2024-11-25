@@ -74,6 +74,7 @@ export default defineConfig({
                   { text: 'Windows', link: '/documentation/usersguide/monitoring-windows' },
                   { text: 'Linux / Unix', link: '/documentation/usersguide/monitoring-linux' },
                   { text: 'Network Printer', link: '/documentation/usersguide/monitoring-printers' },
+                  { text: 'Routers / Switches', link: '/documentation/usersguide/monitoring-routers' },
                 ]
               },
 

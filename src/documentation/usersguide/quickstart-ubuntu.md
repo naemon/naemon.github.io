@@ -124,7 +124,7 @@ replace with `$USER1$=/usr/lib/nagios/plugins`
 
 **Restart services**
 
-```basg
+```bash
 sudo service naemon restart
 sudo service apache2 restart
 ```
