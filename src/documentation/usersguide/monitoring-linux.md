@@ -8,14 +8,13 @@
 
 This document describes how you can monitor "private" services and attributes of Linux/UNIX servers, such as:
 
-<ul>
-<li>CPU load</li>
-<li>Memory usage</li>
-<li>Disk usage</li>
-<li>Logged in users</li>
-<li>Running processes</li>
-<li>etc.</li>
-</ul>
+ - CPU load
+ - Memory usage
+ - Disk usage
+ - Logged in users
+ - Running processes
+ - etc.
+
 
 Publicly available services that are provided by Linux servers (HTTP, FTP, SSH, SMTP, etc.) can be monitored easily by following the documentation on [monitoring network services](monitoring-networkservices).
 
@@ -29,7 +28,7 @@ The sample configuration entries below reference objects that are defined in the
 > [!NOTE]
 > This document has not been completed. It is recommended that you read the documentation on the [NRPE addon](addons#nrpe) for instructions on how to monitor a remote Linux/Unix server.
 
-There are several different ways to monitor attributes or remote Linux/Unix servers.  One is by using shared SSH keys and the <i>check_by_ssh</i> plugin to execute plugins on remote servers.  This method will not be covered here, but can result in high load on your monitoring server if you are monitoring hundreds or thousands of services.  The overhead of setting up/destroying SSH connections is the cause of this.
+There are several different ways to monitor attributes or remote Linux/Unix servers.  One is by using shared SSH keys and the `check_by_ssh` plugin to execute plugins on remote servers.  This method will not be covered here, but can result in high load on your monitoring server if you are monitoring hundreds or thousands of services.  The overhead of setting up/destroying SSH connections is the cause of this.
 
 ![NRPE image](/images/usersguide/svg/monitoring-windows.svg) {.img-bg}
 

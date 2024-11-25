@@ -40,11 +40,11 @@
 
 [Upgrading from previous versions](upgrading) :white_check_mark:
 
-[How to monitor a Windows machine](monitoring-windows)
+[How to monitor a Windows machine](monitoring-windows) :white_check_mark:
 
-[How to monitor a Linux/Unix machine](monitoring-linux)
+[How to monitor a Linux/Unix machine](monitoring-linux) :white_check_mark:
 
-[How to monitor a network printer](monitoring-printers)
+[How to monitor a network printer](monitoring-printers) :white_check_mark:
 
 [How to monitor a router/switch](monitoring-routers)
 

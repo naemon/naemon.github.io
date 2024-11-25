@@ -43,11 +43,11 @@ Before you can begin monitoring local services and attributes of Windows machine
 1.  Download the latest stable version of the NSClient++ addon from [NSClient++](https://nsclient.org/)
 2.  Install NSClient++ and use the "Complete" setup type to make sure you got all features. On the next page use the default path for `nsclient.ini` and make sure `Install sample configuration` are checked
 3.  Enter all hosts that are allowed to connect to NSClient++, separate multiple IP's with `,`. Make sure to check the following:
-  * "Check Enable common check plugins"
-  * "Enable NRPE server (check_nrpe)"
-  * "Enable WMI checks".  
+  - "Check Enable common check plugins"
+  - "Enable NRPE server (check_nrpe)"
+  - "Enable WMI checks".  
   NSClient++ should be installed as a service and start automatic.
-1.  This should be enough to start with some basic Windows monitoring.
+4.  This should be enough to start with some basic Windows monitoring.
 
 ## Configuring Naemon
 
@@ -109,21 +109,21 @@ Add the following
 ```
 define service {
   service_description            Memory
-  hostgroup_name                microsoft-windows
+  hostgroup_name                 microsoft-windows
   use                            generic-service
   check_command                  check_nrpe!alias_mem
 }
 
 define service {
   service_description            Hard drives
-  hostgroup_name                microsoft-windows
+  hostgroup_name                 microsoft-windows
   use                            generic-service
   check_command                  check_nrpe!alias_disk
 }
 
 define service {
   service_description            CPU load
-  hostgroup_name                microsoft-windows
+  hostgroup_name                 microsoft-windows
   use                            generic-service
   check_command                  check_nrpe!alias_cpu
 }
