@@ -70,9 +70,9 @@
 
 ## Running Naemon
 
-[Verifying your configuration](verifyconfig)
+[Verifying your configuration](verifyconfig) :white_check_mark:
 
-[Starting and stopping Naemon](startstop)
+[Starting and stopping Naemon](startstop) :white_check_mark:
 
 
 
