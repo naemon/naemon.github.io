@@ -38,7 +38,7 @@
 
 [Quickstart installation guide](quickstart) :white_check_mark:
 
-[Upgrading from previous versions](upgrading)
+[Upgrading from previous versions](upgrading) :white_check_mark:
 
 [How to monitor a Windows machine](monitoring-windows)
 
@@ -194,7 +194,7 @@
 
 [Other addons](addons#others)
 
-[Nagios Exchange](http://exchange.nagios.org/)
+[Nagios Exchange](http://exchange.nagios.org/) :white_check_mark:
 
 
 
@@ -214,7 +214,7 @@
 
 [Developing Plugins For Use With Embedded Perl](epnplugins)
 
-[Developer Documentation](/documentation/developer/)
+[Developer Documentation](/documentation/developer/toc) :white_check_mark:
 
 ## Naemon Logo
 

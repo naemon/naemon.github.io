@@ -69,6 +69,12 @@ export default defineConfig({
                 ]
               },
               { text: 'Upgrading Naemon', link: '/documentation/usersguide/upgrading' },
+              {
+                text: 'How to monitor', items: [
+                  { text: 'Windows', link: '/documentation/usersguide/monitoring-windows' },
+
+                ]
+              },
 
 
               { text: 'Naemon Logo', link: '/logo' }
