@@ -1,13 +1,5 @@
 # Red Hat Quickstart
 
-
-Works in Markdown: {{ $RELEASE_VERSION  }}
-
-```
-But not in code block {{ $RELEASE_VERSION  }}
-```
-
-
 ## Introduction
 
 This guide is intended to provide you with simple instructions on how to install Naemon from packages on Ubuntu and have it monitoring your local machine within 10 minutes. No advanced installation options are discussed here - just the basics that will work for 95% of users who want to get started.
@@ -35,37 +27,37 @@ If you follow these instructions, here's what you'll end up with:
 
 **Install dependencies**
 
-```
+```bash
 yum install wget gd libXpm httpd
 ```
 
 **Enable RHEL Server Optional repository**
 
-```
+```bash
 sudo yum-config-manager --enable rhel-6-[operating_system]-optional-rpms
 ```
 
 *operating_system - type of operating system installed. Enter either workstation, client or server.*
 
-```
+```bash
 yum install xorg-x11-server-Xvfb
 ```
 
 **Enable epel repository, required for both dependency (mod_fcgid), nrpe and nagios-plugins**
 
-```
+```bash
 rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 ```
 
 **Install mod_fcgid**
 
-```
+```bash
 yum install mod_fcgid
 ```
 
 **Download Naemon**
 
-```
+```bash-vue
 cd ~/
 mkdir naemon
 cd naemon/
@@ -81,7 +73,7 @@ wget http://labs.consol.de/naemon/release/v{{ $RELEASE_VERSION  }}/rhel6/x86_64/
 
 **Install Naemon**
 
-```
+```bash
 yum install naemon*
 ```
 
@@ -93,7 +85,7 @@ setenforce 0
 
 **Make it persistent**
 
-```
+```bash
 vi /etc/selinux/config
 ```
 
@@ -103,13 +95,13 @@ replace with: `SELINUX=disabled`
 
 **Install Nagios plugins**
 
-```
+```bash
 yum install nagios-plugins nagios-plugins-all nagios-plugins-nrpe nrpe
 ```
 
 **Change path to Nagios plugins**
 
-```
+```bash
 vi /etc/naemon/resource.cfg 
 ```
 
@@ -119,7 +111,7 @@ replace with: `$USER1$=/usr/lib64/nagios/plugins`
 
 **Start services**
 
-```
+```bash
 service iptables stop # This is just for testing and will restart the firewall after reboot, please adjust your IP-tables accordingly
 chkconfig httpd on && service httpd start
 chkconfig naemon on && service naemon start

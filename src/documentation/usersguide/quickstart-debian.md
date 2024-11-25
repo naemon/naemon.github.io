@@ -31,20 +31,22 @@ If you follow these instructions, here's what you'll end up with:
 
 **Add Consol Labs Repository**  
 Install dirmngr if you do not already have it:
-```
+```bash
 apt-get install dirmngr
 ```
+
 Install GPG Key
-```
+```bash
 gpg --keyserver keys.gnupg.net --recv-keys F8C1CA08A57B9ED7
 gpg --armor --export F8C1CA08A57B9ED7 | apt-key add -
 ```
+
 Add the apt Repository
-```
+```bash
 echo "deb http://labs.consol.de/repo/stable/debian $(lsb_release -cs) main" > /etc/apt/sources.list.d/labs-consol-stable.list
 ```
 **Install Naemon**
-```
+```bash
 apt-get update
 apt-get install naemon
 ```
@@ -54,13 +56,13 @@ apt-get install naemon
 
 **Install dependencies**
 
-```
+```bash
 apt-get install apache2 apache2-utils libapache2-mod-fcgid libfontconfig1 libgd3 libjpeg8 libmysqlclient18 libpng12-0 libxpm4 xvfb 
 ```
 
 **Download Naemon**
 
-```
+```bash-vue
 cd ~/
 mkdir naemon
 cd naemon/
@@ -76,19 +78,19 @@ wget http://labs.consol.de/naemon/release/v{{ $RELEASE_VERSION  }}/debian8/amd64
 
 **Install Naemon**
 
-```
+```bash
 dpkg -i naemon*.deb
 ```
 
 **Install Nagios plugins**
 
-```
+```bash
 apt-get install nagios-plugins
 ```
 
 **Change path to Nagios plugins**
 
-```
+```bash
 vi /etc/naemon/resource.cfg 
 ```
 find `$USER1$=/usr/lib/naemon/plugins`
@@ -97,7 +99,7 @@ replace with `$USER1$=/usr/lib/nagios/plugins`
 
 **Restart services**
 
-```
+```bash
 service naemon restart
 service apache2 restart
 ```
@@ -106,13 +108,13 @@ service apache2 restart
 
 **Install dependencies**
 
-```
+```bash
 apt-get install apache2 libapache2-mod-fcgid libfontconfig1 libgd2-xpm libjpeg8 libmysqlclient18 libpng12-0 libxpm4 xvfb 
 ```
 
 **Download Naemon**
 
-```
+```bash-vue
 cd ~/
 mkdir naemon
 cd naemon/
@@ -128,19 +130,19 @@ wget http://labs.consol.de/naemon/release/v{{ $RELEASE_VERSION  }}/debian7/amd64
 
 **Install Naemon**
 
-```
+```bash
 dpkg -i naemon*.deb
 ```
 
 **Install Nagios plugins**
 
-```
+```bash
 apt-get install nagios-plugins
 ```
 
 **Change path to Nagios plugins**
 
-```
+```bash
 vi /etc/naemon/resource.cfg 
 ```
 find `$USER1$=/usr/lib/naemon/plugins`
@@ -149,7 +151,7 @@ replace with `$USER1$=/usr/lib/nagios/plugins`
 
 **Restart services**
 
-```
+```bash
 service naemon restart
 service apache2 restart
 ```
@@ -159,13 +161,13 @@ service apache2 restart
 
 **Install dependencies**
 
-```
+```bash
 apt-get install apache2 libapache2-mod-fcgid libfontconfig1 libgd2-xpm libjpeg8 libmysqlclient16 libpng12-0 libxpm4 xvfb 
 ```
 
 **Download Naemon**
 
-```
+```bash-vue
 cd ~/
 mkdir naemon
 cd naemon/
@@ -181,19 +183,19 @@ wget http://labs.consol.de/naemon/release/v{{ $RELEASE_VERSION  }}/debian6/amd64
 
 **Install Naemon**
 
-```
+```bash
 dpkg -i naemon*.deb
 ```
 
 **Install Nagios plugins**
 
-```
+```bash
 apt-get install nagios-plugins
 ```
 
 **Change path to Nagios plugins**
 
-```
+```bash
 vi /etc/naemon/resource.cfg 
 ```
 find `$USER1$=/usr/lib/naemon/plugins`
@@ -202,7 +204,7 @@ replace with `$USER1$=/usr/lib/nagios/plugins`
 
 **Restart services**
 
-```
+```bash
 service naemon restart
 service apache2 restart
 ```

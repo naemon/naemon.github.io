@@ -27,19 +27,19 @@ If you follow these instructions, here's what you'll end up with:
 
 **Install the labs.consol.de repository**
 
-```
+```bash
 yum install https://labs.consol.de/repo/stable/rhel6/i386/labs-consol-stable.rhel6.noarch.rpm
 ```
 
 **Enable epel repository, required for both dependency (mod_fcgid), nrpe and nagios-plugins**
 
-```
+```bash
 yum -y install epel-release
 ```
 
 **Install Naemon**
 
-```
+```bash
 yum install naemon*
 ```
 
@@ -51,7 +51,7 @@ setenforce 0
 
 **Make it persistent**
 
-```
+```bash
 vi /etc/selinux/config
 ```
 
@@ -61,7 +61,7 @@ replace with: `SELINUX=disabled`
 
 **Install Nagios plugins**
 
-```
+```bash
 yum install nagios-plugins nagios-plugins-all nagios-plugins-nrpe nrpe
 ```
 

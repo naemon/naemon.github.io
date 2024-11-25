@@ -33,13 +33,13 @@ Since 0.8.0 is not available as stable for Ubuntu 14.04 you will have to install
 
 **Install dependencies**
 
-```
+```bash
 sudo apt-get install bsd-mailx apache2 apache2-utils libapache2-mod-fcgid libfontconfig1 libjpeg62 libgd3 libxpm4 xvfb libmysqlclient18
 ```
 
 **Configure Consol Labs repository**
 
-```
+```bash
 gpg --keyserver keys.gnupg.net --recv-keys F8C1CA08A57B9ED7
 gpg --armor --export F8C1CA08A57B9ED7 | apt-key add -
 sudo su -
@@ -50,19 +50,19 @@ exit
 
 **Install Naemon**
 
-```
+```bash
 sudo apt-get install naemon
 ```
 
 **Install Nagios plugins**
 
-```
+```bash
 sudo apt-get install nagios-plugins
 ```
 
 **Change path to Nagios plugins**
 
-```
+```bash
 sudo vi /etc/naemon/resource.cfg
 ```
 find `$USER1$=/usr/lib/naemon/plugins`
@@ -71,7 +71,7 @@ replace with `$USER1$=/usr/lib/nagios/plugins`
 
 **Restart services**
 
-```
+```bash
 sudo service naemon restart
 sudo service apache2 restart
 ```
@@ -81,13 +81,13 @@ sudo service apache2 restart
 
 **Install dependencies**
 
-```
+```bash
 sudo apt-get install bsd-mailx apache2 apache2-utils libapache2-mod-fcgid libfontconfig1 libjpeg62 libgd3 libxpm4 xvfb libmysqlclient18
 ```
 
 **Download Naemon**
 
-```
+```bash-vue
 cd ~/
 mkdir naemon
 cd naemon/
@@ -103,19 +103,19 @@ wget http://labs.consol.de/naemon/release/v{{ $RELEASE_VERSION  }}/ubuntu13.10/a
 
 **Install Naemon**
 
-```
+```bash
 sudo dpkg -i naemon*.deb
 ```
 
 **Install Nagios plugins**
 
-```
+```bash
 sudo apt-get install nagios-plugins
 ```
 
 **Change path to Nagios plugins**
 
-```
+```bash
 sudo vi /etc/naemon/resource.cfg 
 ```
 find `$USER1$=/usr/lib/naemon/plugins`
@@ -124,7 +124,7 @@ replace with `$USER1$=/usr/lib/nagios/plugins`
 
 **Restart services**
 
-```
+```basg
 sudo service naemon restart
 sudo service apache2 restart
 ```
@@ -133,13 +133,13 @@ sudo service apache2 restart
 
 **Install dependencies**
 
-```
+```bash
 sudo apt-get install bsd-mailx apache2 libapache2-mod-fcgid libfontconfig1 libgd2-xpm libjpeg62 libxpm4 xvfb
 ```
 
 **Download Naemon**
 
-```
+```bash-vue
 cd ~/
 mkdir naemon
 cd naemon/
@@ -155,19 +155,19 @@ wget http://labs.consol.de/naemon/release/v{{ $RELEASE_VERSION  }}/ubuntu13.04/a
 
 **Install Naemon**
 
-```
+```bash
 sudo dpkg -i naemon*.deb
 ```
 
 **Install Nagios plugins**
 
-```
+```bash
 sudo apt-get install nagios-plugins
 ```
 
 **Change path to Nagios plugins**
 
-```
+```bash
 sudo vi /etc/naemon/resource.cfg 
 ```
 
@@ -177,7 +177,7 @@ replace with `$USER1$=/usr/lib/nagios/plugins`
 
 **Restart services**
 
-```
+```bash
 sudo service naemon restart
 sudo service apache2 restart
 ```
@@ -187,13 +187,13 @@ sudo service apache2 restart
 
 **Install dependencies**
 
-```
+```bash
 sudo apt-get install bsd-mailx apache2 libmysqlclient18 libapache2-mod-fcgid libfontconfig1 libgd2-xpm libjpeg62 libxpm4 xvfb
 ```
 
 **Download Naemon**
 
-```
+```bash-vue
 cd ~/
 mkdir naemon
 cd naemon/
@@ -209,13 +209,13 @@ wget http://labs.consol.de/naemon/release/v{{ $RELEASE_VERSION  }}/ubuntu12.10/a
 
 **Install Naemon**
 
-```
+```bash
 sudo dpkg -i naemon*.deb
 ```
 
 **Install Nagios plugins**
 
-```
+```bash
 sudo apt-get install nagios-plugins
 ```
 
@@ -231,7 +231,7 @@ replace with `$USER1$=/usr/lib/nagios/plugins`
 
 **Restart services**
 
-```
+```bash
 sudo service naemon restart
 sudo service apache2 restart
 ```
@@ -240,13 +240,13 @@ sudo service apache2 restart
 
 **Install dependencies**
 
-```
+```bash
 sudo apt-get install bsd-mailx apache2 libapache2-mod-fcgid libfontconfig1 libgd2-xpm libjpeg62 libxpm4 xvfb libmysqlclient18
 ```
 
 **Download Naemon**
 
-```
+```bash-vue
 cd ~/
 mkdir naemon
 cd naemon/
@@ -262,19 +262,19 @@ wget http://labs.consol.de/naemon/release/v{{ $RELEASE_VERSION  }}/ubuntu12.04/a
 
 **Install Naemon**
 
-```
+```bash
 sudo dpkg -i naemon*.deb
 ```
 
 **Install Nagios plugins**
 
-```
+```bash
 sudo apt-get install nagios-plugins
 ```
 
 **Change path to Nagios plugins**
 
-```
+```bash
 sudo vi /etc/naemon/resource.cfg 
 ```
 
@@ -284,7 +284,7 @@ replace with `$USER1$=/usr/lib/nagios/plugins`
 
 **Restart services**
 
-```
+```bash
 sudo service naemon restart
 sudo service apache2 restart
 ```
@@ -294,13 +294,13 @@ sudo service apache2 restart
 
 **Install dependencies**
 
-```
+```bash
 sudo apt-get install bsd-mailx apache2 libapache2-mod-fcgid libfontconfig1 libgd2-xpm libjpeg62 libmysqlclient16 libxpm4 xvfb
 ```
 
 **Download Naemon**
 
-```
+```bash-vue
 cd ~/
 mkdir naemon
 cd naemon/
@@ -316,19 +316,19 @@ wget http://labs.consol.de/naemon/release/v{{ $RELEASE_VERSION  }}/ubuntu10.04/a
 
 **Install Naemon**
 
-```
+```bash
 sudo dpkg -i naemon*.deb
 ```
 
 **Install Nagios plugins**
 
-```
+```bash
 sudo apt-get install nagios-plugins
 ```
 
 **Change path to Nagios plugins**
 
-```
+```bash
 sudo vi /etc/naemon/resource.cfg 
 ```
 
@@ -338,7 +338,7 @@ replace with `$USER1$=/usr/lib/nagios/plugins`
 
 **Restart services**
 
-```
+```bash
 sudo service naemon restart
 sudo service apache2 restart
 ```

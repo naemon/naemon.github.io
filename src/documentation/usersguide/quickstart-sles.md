@@ -27,7 +27,7 @@ The Naemon web interface will be accessible at `http://localhost/naemon/`
 
 **Download Naemon**
 
-```
+```bash
 cd ~/
 mkdir naemon
 cd naemon/
@@ -36,19 +36,19 @@ wget -r -np -nH --cut-dirs=6 -R index.* robots.txt http://labs.consol.de/naemon/
 
 **Install Naemon**
 
-```
+```bash
 zypper install naemon*
 ```
 
 **Install Nagios plugins**
 
-```
+```bash
 zypper install nagios-plugins nagios-plugins-extras
 ```
 
 **Change path to Nagios plugins**
 
-```
+```bash
 vi /etc/naemon/resource.cfg 
 ```
 
@@ -58,7 +58,7 @@ replace with: `$USER1$=/usr/lib/nagios/plugins`
 
 **Start services**
 
-```
+```bash
 chkconfig -a apache2
 chkconfig -a naemon
 service apache2 restart
