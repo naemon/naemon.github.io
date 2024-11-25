@@ -1,23 +1,20 @@
----
-layout: doctoc
-title: Addon PNP4Nagios Quickstart
----
-<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="addons.html">Addons</a>
+# Addon PNP4Nagios Quickstart
 
 ## Introduction
 
-<a href="images/pnp4nagios-example1.png"><img src="images/pnp4nagios-example1.png" border="0" hspace="10" width="40%" height="40%" alt="pnp4nagios example with Naemon" title="pnp4nagios example with Naemon" style="float: right;"></a>
+![pnp4nagios example with Naemon](/images/usersguide/pixel/pnp4nagios-example1.png) {.img-bg}
+
 
 This guide will help you install PNP4Nagios which gives you graphs for your performance data well integrated with Thruk. Since most package for PNP4Nagios requires Nagios we will have to build it from source. Please don't panic, this guide will help you step by step to add one of the most important addons to Naemon.
 
 These instructions were written for:
 
-* PNP4Nagios 0.6.24
-* Ubuntu Server
-* CentOS Server
-* Redhat Server
-* Debian Server
-* SUSE Linux Enterprise Server
+ -  PNP4Nagios 0.6.24
+ -  Ubuntu Server
+ -  CentOS Server
+ -  Redhat Server
+ -  Debian Server
+ -  SUSE Linux Enterprise Server
 
 ## Install instruction
 
@@ -25,20 +22,20 @@ These instructions were written for:
 
 #### Redhat / CentOS
 
-```
+```bash
 yum install gcc-c++ rrdtool perl-Time-HiRes perl-rrdtool php-gd php php-cli wget
 
 ```
 
 #### Debian / Ubuntu
 
-```
+```bash
 apt-get install make rrdtool librrds-perl g++ php5-cli php5-gd libapache2-mod-php5
 ```
 
 #### SLES
 
-```
+```bash
 zypper install gcc-c++ rrdtool php53-gd php53 apache2-mod_php53 php53-zlib php53-sockets
 ```
 
@@ -47,7 +44,7 @@ zypper install gcc-c++ rrdtool php53-gd php53 apache2-mod_php53 php53-zlib php53
 
 ### 2 - Download PNP4Nagios
 
-```
+```bash
 cd ~/
 mkdir src
 cd src
@@ -56,14 +53,14 @@ wget http://downloads.sourceforge.net/project/pnp4nagios/PNP-0.6/pnp4nagios-0.6.
 
 ### 3 - Extract PNP4Nagios source
 
-```
+```bash
 tar -xzvf pnp4nagios-0.6.24.tar.gz -C /usr/local/src/
 ```
 
 
 ### 4 - Build and install PNP4Nagios
 
-```
+```bash
 cd /usr/local/src/pnp4nagios-0.6.24/
 ./configure --with-nagios-user=naemon --with-nagios-group=naemon
 make all
@@ -77,7 +74,7 @@ make install-init
 
 #### Redhat / CentOS
 
-```
+```bash
 chkconfig npcd on
 service npcd start
 ```
@@ -91,7 +88,7 @@ service npcd start
 
 #### SLES
 
-```
+```bash
 chkconfig -a npcd
 service npcd start
 ```
@@ -100,13 +97,13 @@ service npcd start
 
 #### Redhat / CentOS
 
-```
+```bash
 vi /etc/httpd/conf.d/pnp4nagios.conf
 ```
 
 #### Ubuntu 13.10
 
-```
+```bash
 mv /etc/httpd/conf.d/pnp4nagios.conf /etc/apache2/conf-available
 ln -sf /etc/apache2/conf-available/pnp4nagios.conf /etc/apache2/conf-enabled/pnp4nagios.conf
 vi /etc/apache2/conf-available/pnp4nagios.conf
@@ -114,7 +111,7 @@ vi /etc/apache2/conf-available/pnp4nagios.conf
 
 #### Debian / Ubuntu / SLES
 
-```
+```bash
 vi /etc/apache2/conf.d/pnp4nagios.conf
 ```
 
@@ -128,7 +125,7 @@ replace with: `AuthUserFile /etc/naemon/htpasswd`
 
 ### 7 - Modify config_local.php for Naemon
 
-```
+```bash
 vi /usr/local/pnp4nagios/etc/config_local.php
 ```
 
@@ -138,7 +135,7 @@ replace with: `$conf['nagios_base'] = "/naemon/cgi-bin";`
 
 ### 8 - Enable Naemon performance data
 
-```
+```bash
 vi /etc/naemon/naemon.cfg
 ```
 
@@ -170,7 +167,7 @@ host_perfdata_file_processing_command=process-host-perfdata-file
 
 ### 9 - Add process performance commands
 
-```
+```bash
 vi /etc/naemon/conf.d/commands.cfg
 ```
 
@@ -178,19 +175,19 @@ Add the following entries at the bottom of /etc/naemon/conf.d/commands.cfg
 
 ```
 define command{
-       command_name    process-service-perfdata-file
-       command_line    /bin/mv /usr/local/pnp4nagios/var/service-perfdata /usr/local/pnp4nagios/var/spool/service-perfdata.$TIMET$
+  command_name    process-service-perfdata-file
+  command_line    /bin/mv /usr/local/pnp4nagios/var/service-perfdata /usr/local/pnp4nagios/var/spool/service-perfdata.$TIMET$
 }
 
 define command{
-       command_name    process-host-perfdata-file
-       command_line    /bin/mv /usr/local/pnp4nagios/var/host-perfdata /usr/local/pnp4nagios/var/spool/host-perfdata.$TIMET$
+  command_name    process-host-perfdata-file
+  command_line    /bin/mv /usr/local/pnp4nagios/var/host-perfdata /usr/local/pnp4nagios/var/spool/host-perfdata.$TIMET$
 }
 ```
 
 ### 10 - Add host performance template
 
-```
+```bash
 vi /etc/naemon/conf.d/templates/hosts.cfg
 ```
 
@@ -198,10 +195,10 @@ Add the following entries at the bottom of /etc/naemon/conf.d/templates/hosts.cf
 
 ```
 define host {
-   name host-pnp
-   process_perf_data 1
-   action_url /pnp4nagios/index.php/graph?host=$HOSTNAME$&srv=_HOST_' class='tips' rel='/pnp4nagios/index.php/popup?host=$HOSTNAME$&srv=_HOST_
-   register 0
+  name              host-pnp
+  process_perf_data 1
+  action_url        /pnp4nagios/index.php/graph?host=$HOSTNAME$&srv=_HOST_' class='tips' rel='/pnp4nagios/index.php/popup?host=$HOSTNAME$&srv=_HOST_
+  register          0
 }
 ```
 
@@ -210,7 +207,7 @@ so the strange quoting is a trick to add extra parameters in HTML.
 
 ### 11 - Add service performance template
 
-```
+```bash
 vi /etc/naemon/conf.d/templates/services.cfg
 ```
 
@@ -218,10 +215,10 @@ Add the following entries at the bottom of /etc/naemon/conf.d/templates/services
 
 ```
 define service {
-   name service-pnp
-   process_perf_data 1
-   action_url /pnp4nagios/index.php/graph?host=$HOSTNAME$&srv=$SERVICEDESC$' class='tips' rel='/pnp4nagios/index.php/popup?host=$HOSTNAME$&srv=$SERVICEDESC$
-   register 0
+  name              service-pnp
+  process_perf_data 1
+  action_url        /pnp4nagios/index.php/graph?host=$HOSTNAME$&srv=$SERVICEDESC$' class='tips' rel='/pnp4nagios/index.php/popup?host=$HOSTNAME$&srv=$SERVICEDESC$
+  register          0
 }
 ```
 
@@ -229,14 +226,14 @@ define service {
 
 #### Redhat / CentOS
 
-```
+```bash
 service httpd restart
 service naemon restart
 ```
 
 #### Debian / Ubuntu / SLES
 
-```
+```bash
 service apache2 restart
 service naemon restart
 ```
@@ -246,7 +243,7 @@ service naemon restart
 Browse http://server/pnp4nagios and authenticate and verify that everything are OK, fix problems as they occur
 
 ### 14 - Remove PNP4Nagios installation file
-```
+```bash
 rm /usr/local/pnp4nagios/share/install.php
 ```
 

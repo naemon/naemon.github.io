@@ -65,7 +65,8 @@ export default defineConfig({
                   { text: 'Debian', link: '/documentation/usersguide/quickstart-debian' },
                   { text: 'Red Hat', link: '/documentation/usersguide/quickstart-redhat' },
                   { text: 'CentOS', link: '/documentation/usersguide/quickstart-centos' },
-                  { text: 'SLES', link: '/documentation/usersguide/quickstart-sles' }
+                  { text: 'SLES', link: '/documentation/usersguide/quickstart-sles' },
+                  { text: 'Addon PNP4Nagios', link: '/documentation/usersguide/addon-pnp-quickstart' }
                 ]
               },
               { text: 'Upgrading Naemon', link: '/documentation/usersguide/upgrading' },
@@ -79,6 +80,9 @@ export default defineConfig({
                 ]
               },
 
+
+              { text: 'Verifying configuration', link: '/documentation/usersguide/verifyconfig' },
+              { text: 'Restart Naemon', link: '/documentation/usersguide/startstop' },
 
               { text: 'Naemon Logo', link: '/logo' }
             ]

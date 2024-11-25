@@ -48,9 +48,9 @@
 
 [How to monitor a router/switch](monitoring-routers) :white_check_mark:
 
-[How to monitor network services (HTTP, FTP, SSH, etc.)](monitoring-networkservices)
+[How to monitor network services (HTTP, FTP, SSH, etc.)](monitoring-networkservices) :white_check_mark:
 
-[How to install PNP graphs](addon-pnp-quickstart)
+[How to install PNP graphs](addon-pnp-quickstart) :white_check_mark:
 
 ## Configuring Naemon
 
