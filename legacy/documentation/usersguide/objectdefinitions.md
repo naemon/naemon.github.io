@@ -29,7 +29,7 @@ for otherwise tedious configuration tasks.{{ site.end }}
 <ol>
 <li>Lines that start with a '#' character are taken to be comments and are not processed</li>
 <li>Directive names are case-sensitive</li>
-<li>Characters that appear after a semicolon (;) in configuration lines are treated as comments and are not processed</li>
+<li>Characters that appear after a semicolon (;) (unless escaped by backslash) in configuration lines are treated as comments and are not processed</li>
 </ol>
 {{ site.end }}
 
@@ -840,7 +840,7 @@ The hostgroup_name may be used instead of, or in addition to, the host_name dire
 </td>
 </tr>
 <tr>
-<td valign="top"><strong>service_description;</strong>:</td>
+<td valign="top"><strong>service_description</strong>:</td>
 <td>
 This directive is used to define the description of the service, which may contain spaces, dashes, and colons (semicolons, apostrophes, and quotation marks should be avoided).
 
@@ -1856,6 +1856,8 @@ Note that the command line is <i>not</i> surrounded in quotes.
 Also, if you want to pass a dollar sign ($) on the command line, you have to escape it with another dollar sign.
 </p>
 <p><strong>NOTE</strong>: You may not include a <b>semicolon</b> (;) in the <i>command_line</i> directive, because everything after it will be ignored as a config file comment.
+
+It is possible to escape semicolons with a backslash.
 
 You can work around this limitation by setting one of the <a href="macrolist.html#user"><b>$USER$</b></a> macros in your <a
 href="configmain.html#resource_file">resource file</a> to a semicolon and then referencing the appropriate $USER$ macro in the <i>command_line</i> directive in place of the semicolon.
