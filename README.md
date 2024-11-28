@@ -32,7 +32,7 @@ Please see the documentation of how to setup a local copy of the Naemon website.
 ### In a nutshell
 ```
 git clone https://github.com/naemon/naemon.github.io.git
-cd naemon.github.io.git/
+cd naemon.github.io/
 
 npm install
 npm run docs:dev
@@ -59,3 +59,4 @@ docker run --rm -it -v "$PWD":/site -p "5173:5173" naemon/docs:latest
 2. All headlines have to get reduced by one ( remove one hashtag `###` gets to `##`)
 3. You can modify HTML anchors like so: `## What Is Naemon? {#whatis}`
 4. Add code blocks `like this` for code instead of quotes 'like so'.
+
