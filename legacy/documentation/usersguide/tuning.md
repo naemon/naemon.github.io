@@ -183,7 +183,7 @@ href="cachedchecks.html">here</a>.
 <b>Don't use aggressive host checking</b>.
 Unless you're having problems with Naemon recognizing host recoveries, it is
 not recommended enabling the <a
-href="configmain.html#use_agressive_host_checking">`use_aggressive_host_checking`</a>
+href="configmain.html#use_aggressive_host_checking">`use_aggressive_host_checking`</a>
 option. With this option turned off host checks will execute much faster,
 resulting in speedier processing of service check results. However, host
 recoveries can be missed under certain circumstances when this it turned off.
