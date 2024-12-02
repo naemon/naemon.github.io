@@ -54,9 +54,9 @@
 
 ## Configuring Naemon
 
-[Configuration overview](config)
+[Configuration overview](config) :white_check_mark:
 
-[Main configuration file options](configmain)
+[Main configuration file options](configmain) :white_check_mark:
 
 [Object configuration overview](configobject)
 
