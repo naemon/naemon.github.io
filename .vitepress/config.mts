@@ -53,7 +53,10 @@ export default defineConfig({
         collapsed: false,
         items: [
           {
-            text: 'Users Guide', link: '/documentation/usersguide/toc', items: [
+            text: 'Users Guide',
+            link: '/documentation/usersguide/toc',
+            collapsed: true,
+            items: [
               { text: 'What is Naemon', link: '/documentation/usersguide/about' },
               { text: 'What\'s New', link: '/documentation/usersguide/whatsnew' },
               { text: 'Configuration Incompatibilities Nagios 3 -> Naemon', link: '/documentation/usersguide/config-incompat3to4' },
@@ -90,7 +93,10 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Developers', link: '/documentation/developer/toc', items: [
+            text: 'Developers',
+            link: '/documentation/developer/toc',
+            collapsed: true,
+            items: [
               { text: 'Build Naemon From Scratch', link: '/documentation/developer/build' },
               { text: 'Worker Processes', link: '/documentation/developer/workers' },
               { text: 'Naemon Event Broker Modules (NEB)', link: '/documentation/developer/neb_broker' },
@@ -101,7 +107,10 @@ export default defineConfig({
             ]
           },
           {
-            text: 'FAQ', link: '/documentation/faq', items: [
+            text: 'FAQ',
+            link: '/documentation/faq',
+            collapsed: true,
+            items: [
               { text: 'Usersguide guidelines', link: '/documentation/faq/usersguide-guidelines' },
               { text: 'Markdown guide', link: '/documentation/faq/vitepress-markdown-guide' }
             ]
