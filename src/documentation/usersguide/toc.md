@@ -60,7 +60,7 @@
 
 [Object configuration overview](configobject) :white_check_mark:
 
-[Object definitions](objectdefinitions)
+[Object definitions](objectdefinitions) :white_check_mark:
 
 [CGI configuration file options](configcgi)
 
