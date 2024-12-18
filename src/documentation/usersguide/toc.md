@@ -64,7 +64,7 @@
 
 [CGI configuration file options](configcgi) :white_check_mark:
 
-[Configuring authorization for the CGIs](cgiauth)
+[Configuring authorization for the CGIs](cgiauth) :white_check_mark:
 
 
 
