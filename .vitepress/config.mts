@@ -92,6 +92,7 @@ export default defineConfig({
               { text: 'Object definitions', link: '/documentation/usersguide/objectdefinitions' },
               { text: 'CGI Configuration File Options', link: '/documentation/usersguide/configcgi' },
               { text: 'Authentication And Authorization CGIs', link: '/documentation/usersguide/cgiauth' },
+              { text: 'Plugins', link: '/documentation/usersguide/plugins' },
 
               { text: 'Naemon Logo', link: '/logo' }
             ]

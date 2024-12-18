@@ -79,7 +79,7 @@
 
 ## The Basics {#basics}
 
-[Plugins](plugins)
+[Plugins](plugins) :white_check_mark:
 
 [Macros and how they work](macros)
 
