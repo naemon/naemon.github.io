@@ -31,13 +31,13 @@ Grant access by contact:
 
 Grant access by group:
 
-* <a href="configcgi.html#authorized_contactgroup_for_system_information">authorized contactgroup for system information</a>
-* <a href="configcgi.html#authorized_contactgroup_for_system_commands">authorized contactgroup for system commands</a>
-* <a href="configcgi.html#authorized_contactgroup_for_configuration_information">authorized contactgroup for configuration information</a>
-* <a href="configcgi.html#authorized_contactgroup_for_all_hosts">authorized contactgroup for all hosts</a>
-* <a href="configcgi.html#authorized_contactgroup_for_all_host_commands">authorized contactgroup for all host commands</a>
-* <a href="configcgi.html#authorized_contactgroup_for_all_services">authorized contactgroup for all services</a>
-* <a href="configcgi.html#authorized_contactgroup_for_all_service_commands">authorized contactgroup for all service commands</a>
+* <a href="configcgi.html#authorized_for_system_information">authorized contactgroup for system information</a>
+* <a href="configcgi.html#authorized_for_system_commands">authorized contactgroup for system commands</a>
+* <a href="configcgi.html#authorized_for_configuration_information">authorized contactgroup for configuration information</a>
+* <a href="configcgi.html#authorized_for_all_hosts">authorized contactgroup for all hosts</a>
+* <a href="configcgi.html#authorized_for_all_host_commands">authorized contactgroup for all host commands</a>
+* <a href="configcgi.html#authorized_for_all_services">authorized contactgroup for all services</a>
+* <a href="configcgi.html#authorized_for_all_service_commands">authorized contactgroup for all service commands</a>
 
 
 ### CGI Authorization Requirements

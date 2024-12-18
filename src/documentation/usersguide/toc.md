@@ -62,7 +62,7 @@
 
 [Object definitions](objectdefinitions) :white_check_mark:
 
-[CGI configuration file options](configcgi)
+[CGI configuration file options](configcgi) :white_check_mark:
 
 [Configuring authorization for the CGIs](cgiauth)
 

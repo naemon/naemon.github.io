@@ -90,7 +90,7 @@ export default defineConfig({
               { text: 'Main configuration file options', link: '/documentation/usersguide/configmain' },
               { text: 'Object configuration overview', link: '/documentation/usersguide/configobject' },
               { text: 'Object definitions', link: '/documentation/usersguide/objectdefinitions' },
-             
+              { text: 'CGI Configuration File Options', link: '/documentation/usersguide/configcgi' },
 
               { text: 'Naemon Logo', link: '/logo' }
             ]

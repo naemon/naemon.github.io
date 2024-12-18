@@ -15,7 +15,7 @@ The binary packages can also be downloaded here:
 <table>
 <tbody>
  <tr>
-   <td><i class="fa-brands fa-redhat"></i></td>
+   <td><i class="fa-brands fa-redhat fa-2x"></i></td>
    <td>Enterprise Linux (Red Hat, RockyLinux, AlmaLinux etc)</td>
    <td>
         <a href="https://download.opensuse.org/repositories/home:/naemon/AlmaLinux_9/">EL9</a><br>
@@ -24,7 +24,7 @@ The binary packages can also be downloaded here:
    </td>
  </tr>
  <tr>
-   <td><i class="fa-brands fa-suse"></i></td>
+   <td><i class="fa-brands fa-suse fa-2x"></i></td>
    <td>SLES</td>
    <td>
         <a href="https://download.opensuse.org/repositories/home:/naemon/15.6/">15 SP6</a><br>
@@ -33,7 +33,7 @@ The binary packages can also be downloaded here:
   </td>
  </tr>
  <tr>
-   <td><i class="fa-brands fa-debian"></i></td>
+   <td><i class="fa-brands fa-debian fa-2x"></i></td>
    <td>Debian</td>
    <td>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_Testing/">Testing</a><br>
@@ -44,7 +44,7 @@ The binary packages can also be downloaded here:
    </td>
  </tr>
  <tr>
-   <td><i class="fa-brands fa-ubuntu"></i></td>
+   <td><i class="fa-brands fa-ubuntu fa-2x"></i></td>
    <td>Ubuntu</td>
    <td>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_24.04/">24.04 Noble Numbat</a><br>
@@ -60,7 +60,7 @@ The binary packages can also be downloaded here:
    </td>
  </tr>
  <tr>
-   <td><i class="fa-brands fa-fedora"></i></td>
+   <td><i class="fa-brands fa-fedora fa-2x"></i></td>
    <td>Fedora</td>
    <td>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_40/">fc40</a><br>
