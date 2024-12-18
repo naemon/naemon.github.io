@@ -23,7 +23,7 @@ Below you will find descriptions of each main Naemon configuration file option..
 
 ### Log File {#log_file}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -31,7 +31,7 @@ Below you will find descriptions of each main Naemon configuration file option..
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>log_file=/var/log/naemon/naemon.log</b></font></td>
+<td><span class="text-red bold">log_file=/var/log/naemon/naemon.log</span></td>
 </tr>
 </tbody>
 </table>
@@ -44,7 +44,7 @@ If you have log rotation enabled, this file will automatically be rotated every 
 
 ### Include Dir {#include_dir}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -52,7 +52,7 @@ If you have log rotation enabled, this file will automatically be rotated every 
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>include_dir=/etc/naemon/module-conf.d</b></font></td>
+<td><span class="text-red bold">include_dir=/etc/naemon/module-conf.d</span></td>
 </tr>
 </tbody>
 </table>
@@ -67,7 +67,7 @@ file.
 
 ### Object Configuration File {#cfg_file}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -76,9 +76,9 @@ file.
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>cfg_file=/etc/naemon/hosts.cfg</b></font><br>
-<font color="red"><b>cfg_file=/etc/naemon/services.cfg</b></font><br>
-<font color="red"><b>cfg_file=/etc/naemon/commands.cfg</b></font><br>
+<span class="text-red bold">cfg_file=/etc/naemon/hosts.cfg</span><br>
+<span class="text-red bold">cfg_file=/etc/naemon/services.cfg</span><br>
+<span class="text-red bold">cfg_file=/etc/naemon/commands.cfg</span><br>
 </td>
 </tr>
 </tbody>
@@ -94,7 +94,7 @@ multiple `cfg_file=` statements to have each of them processed.
 
 ### Object Configuration Directory {#cfg_dir}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -103,9 +103,9 @@ multiple `cfg_file=` statements to have each of them processed.
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>cfg_dir=/etc/naemon/commands</b></font><br>
-<font color="red"><b>cfg_dir=/etc/naemon/services</b></font><br>
-<font color="red"><b>cfg_dir=/etc/naemon/hosts</b></font><br>
+<span class="text-red bold">cfg_dir=/etc/naemon/commands</span><br>
+<span class="text-red bold">cfg_dir=/etc/naemon/services</span><br>
+<span class="text-red bold">cfg_dir=/etc/naemon/hosts</span><br>
 </td>
 </tr>
 </tbody>
@@ -124,7 +124,7 @@ You can separate your configuration files into different directories and specify
 
 ### Object Cache File {#object_cache_file}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -133,7 +133,7 @@ You can separate your configuration files into different directories and specify
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>object_cache_file=/var/lib/naemon/objects.cache</b></font>
+<span class="text-red bold">object_cache_file=/var/lib/naemon/objects.cache</span>
 </td>
 </tr>
 </tbody>
@@ -149,7 +149,7 @@ the source [object config files](#cfg_file) while Naemon is running without affe
 
 ### Precached Object File {#precached_object_file}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -158,7 +158,7 @@ the source [object config files](#cfg_file) while Naemon is running without affe
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>precached_object_file=/var/lib/naemon/objects.precache</b></font>
+<span class="text-red bold">precached_object_file=/var/lib/naemon/objects.precache</span>
 </td>
 </tr>
 </tbody>
@@ -175,7 +175,7 @@ Read more information on how to speed up start times [here](faststartup).
 
 ### Resource File {#resource_file}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -183,7 +183,7 @@ Read more information on how to speed up start times [here](faststartup).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>resource_file=/etc/naemon/resource.cfg</b></font></td>
+<td><span class="text-red bold">resource_file=/etc/naemon/resource.cfg</span></td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ the Naemon distribution for an example of how to define `$USERn$` macros.
 
 ### Temp File {#temp_file}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -209,7 +209,7 @@ the Naemon distribution for an example of how to define `$USERn$` macros.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>temp_file=/var/lib/naemon/naemon.tmp</b></font></td>
+<td><span class="text-red bold">temp_file=/var/lib/naemon/naemon.tmp</span></td>
 </tr>
 </tbody>
 </table>
@@ -220,7 +220,7 @@ The file is deleted when it is no longer needed.
 
 ### Temp Path {#temp_path}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -228,7 +228,7 @@ The file is deleted when it is no longer needed.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>temp_path=/tmp</b></font></td>
+<td><span class="text-red bold">temp_path=/tmp</span></td>
 </tr>
 </tbody>
 </table>
@@ -239,7 +239,7 @@ You should run *tmpwatch*, or a similar utility, on this directory occasionally 
 
 ### Status File {#status_file}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -247,7 +247,7 @@ You should run *tmpwatch*, or a similar utility, on this directory occasionally 
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>status_file=/var/lib/status.dat</b></font></td>
+<td><span class="text-red bold">status_file=/var/lib/status.dat</span></td>
 </tr>
 </tbody>
 </table>
@@ -262,7 +262,7 @@ This file is deleted every time Naemon stops and recreated when it starts.
 
 ### Status File Update Interval {#status_update_interval}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -270,7 +270,7 @@ This file is deleted every time Naemon stops and recreated when it starts.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>status_update_interval=15</b></font></td>
+<td><span class="text-red bold">status_update_interval=15</span></td>
 </tr>
 </tbody>
 </table>
@@ -281,7 +281,7 @@ The minimum update interval is 1 second.
 
 ### Naemon User  <Badge type="danger">removed</Badge> {#naemon_user}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -289,7 +289,7 @@ The minimum update interval is 1 second.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>naemon_user=naemon</b></font></td>
+<td><span class="text-red bold">naemon_user=naemon</span></td>
 </tr>
 </tbody>
 </table>
@@ -302,7 +302,7 @@ You may specify either a username or a UID.
 
 ### Naemon Group  <Badge type="danger">removed</Badge> {#naemon_group}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -310,7 +310,7 @@ You may specify either a username or a UID.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>naemon_group=naemon</b></font></td>
+<td><span class="text-red bold">naemon_group=naemon</span></td>
 </tr>
 </tbody>
 </table>
@@ -323,7 +323,7 @@ You may specify either a groupname or a GID.
 
 ### Notifications Option {#enable_notifications}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -331,7 +331,7 @@ You may specify either a groupname or a GID.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>enable_notifications=1</b></font></td>
+<td><span class="text-red bold">enable_notifications=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -352,7 +352,7 @@ Values are as follows:
 
 ### Service Check Execution Option {#execute_service_checks}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -360,7 +360,7 @@ Values are as follows:
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>execute_service_checks=1</b></font></td>
+<td><span class="text-red bold">execute_service_checks=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -383,7 +383,7 @@ Values are as follows:
 
 ### Passive Service Check Acceptance Option {#accept_passive_service_checks}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -391,7 +391,7 @@ Values are as follows:
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>accept_passive_service_checks=1</b></font></td>
+<td><span class="text-red bold">accept_passive_service_checks=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -412,7 +412,7 @@ Values are as follows:
 
 ### Host Check Execution Option {#execute_host_checks}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -420,7 +420,7 @@ Values are as follows:
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>execute_host_checks=1</b></font></td>
+<td><span class="text-red bold">execute_host_checks=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -443,7 +443,7 @@ Values are as follows:
 
 ### Passive Host Check Acceptance Option {#accept_passive_host_checks}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -451,7 +451,7 @@ Values are as follows:
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>accept_passive_host_checks=1</b></font></td>
+<td><span class="text-red bold">accept_passive_host_checks=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -472,7 +472,7 @@ Values are as follows:
 
 ### Event Handler Option {#enable_event_handlers}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -480,7 +480,7 @@ Values are as follows:
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>enable_event_handlers=1</b></font></td>
+<td><span class="text-red bold">enable_event_handlers=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -501,7 +501,7 @@ Values are as follows:
 
 ### External Command Check Option {#check_external_commands}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -509,7 +509,7 @@ Values are as follows:
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>check_external_commands=1</b></font></td>
+<td><span class="text-red bold">check_external_commands=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -525,7 +525,7 @@ This option must be enabled if you plan on using the [command CGI](cgis#cmd_cgi)
 
 ### External Command File {#command_file}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -533,7 +533,7 @@ This option must be enabled if you plan on using the [command CGI](cgis#cmd_cgi)
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>command_file=/var/lib/naemon/rw/naemon.cmd</b></font></td>
+<td><span class="text-red bold">command_file=/var/lib/naemon/rw/naemon.cmd</span></td>
 </tr>
 </tbody>
 </table>
@@ -552,7 +552,7 @@ Check out the [the query socket](#query_socket) for a way to submit these comman
 
 ### Lock File {#lock_file}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -560,7 +560,7 @@ Check out the [the query socket](#query_socket) for a way to submit these comman
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>lock_file=/tmp/naemon.lock</b></font></td>
+<td><span class="text-red bold">lock_file=/tmp/naemon.lock</span></td>
 </tr>
 </tbody>
 </table>
@@ -571,7 +571,7 @@ This file contains the process id (PID) number of the running Naemon process.
 
 ### State Retention Option {#retain_state_information}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -579,7 +579,7 @@ This file contains the process id (PID) number of the running Naemon process.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>retain_state_information=1</b></font></td>
+<td><span class="text-red bold">retain_state_information=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -596,7 +596,7 @@ it shuts down (or restarts) and will read in previously saved state information 
 
 ### State Retention File {#state_retention_file}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -604,7 +604,7 @@ it shuts down (or restarts) and will read in previously saved state information 
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>state_retention_file=/var/lib/naemon/retention.dat</b></font></td>
+<td><span class="text-red bold">state_retention_file=/var/lib/naemon/retention.dat</span></td>
 </tr>
 </tbody>
 </table>
@@ -618,7 +618,7 @@ must enable the [retain_state_information](#retain_state_information) option.
 
 ### Automatic State Retention Update Interval {#retention_update_interval}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -626,7 +626,7 @@ must enable the [retain_state_information](#retain_state_information) option.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>retention_update_interval=60</b></font></td>
+<td><span class="text-red bold">retention_update_interval=60</span></td>
 </tr>
 </tbody>
 </table>
@@ -639,7 +639,7 @@ If you have disabled state retention (with the [retain_state_information](#retai
 
 ### Use Retained Program State Option {#use_retained_program_state}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -647,7 +647,7 @@ If you have disabled state retention (with the [retain_state_information](#retai
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>use_retained_program_state=1</b></font></td>
+<td><span class="text-red bold">use_retained_program_state=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -667,7 +667,7 @@ If you do not have [state retention](#retain_state_information) enabled, this op
 
 ### Use Retained Scheduling Info Option {#use_retained_scheduling_info}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -675,7 +675,7 @@ If you do not have [state retention](#retain_state_information) enabled, this op
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>use_retained_scheduling_info=1</b></font></td>
+<td><span class="text-red bold">use_retained_scheduling_info=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -693,7 +693,7 @@ leave it enabled.
 
 ### Retained Scheduling Randomize Window Option {#retained_scheduling_randomize_window}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -701,7 +701,7 @@ leave it enabled.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>retained_scheduling_randomize_window=60</b></font></td>
+<td><span class="text-red bold">retained_scheduling_randomize_window=60</span></td>
 </tr>
 </tbody>
 </table>
@@ -716,7 +716,7 @@ Default is 60 seconds.
 
 ### Retained Host and Service Attribute Masks {#retained_service_attribute_mask}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -728,8 +728,8 @@ Default is 60 seconds.
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>retained_host_attribute_mask=0</b></font><br>
-<font color="red"><b>retained_service_attribute_mask=0</b></font>
+<span class="text-red bold">retained_host_attribute_mask=0</span><br>
+<span class="text-red bold">retained_service_attribute_mask=0</span>
 </td>
 </tr>
 </tbody>
@@ -747,7 +747,7 @@ By default, all host and service attributes are retained.
 
 ### Retained Process Attribute Masks {#retained_process_service_attribute_mask}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -759,8 +759,8 @@ By default, all host and service attributes are retained.
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>retained_process_host_attribute_mask=0</b></font><br>
-<font color="red"><b>retained_process_service_attribute_mask=0</b></font>
+<span class="text-red bold">retained_process_host_attribute_mask=0</span><br>
+<span class="text-red bold">retained_process_service_attribute_mask=0</span>
 </td>
 </tr>
 </tbody>
@@ -782,7 +782,7 @@ By default, all process attributes are retained.
 
 ### Retained Contact Attribute Masks {#retained_contact_service_attribute_mask}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -794,8 +794,8 @@ By default, all process attributes are retained.
 <tr>
 <td>Example:</td>
 <td>
-<font color="red"><b>retained_contact_host_attribute_mask=0</b></font><br>
-<font color="red"><b>retained_contact_service_attribute_mask=0</b></font>
+<span class="text-red bold">retained_contact_host_attribute_mask=0</span><br>
+<span class="text-red bold">retained_contact_service_attribute_mask=0</span>
 </td>
 </tr>
 </tbody>
@@ -814,7 +814,7 @@ By default, all process attributes are retained.
 
 ### Syslog Logging Option {#use_syslog}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -822,7 +822,7 @@ By default, all process attributes are retained.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>use_syslog=1</b></font></td>
+<td><span class="text-red bold">use_syslog=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -837,7 +837,7 @@ are as follows:
 
 ### Notification Logging Option {#log_notifications}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -845,7 +845,7 @@ are as follows:
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>log_notifications=1</b></font></td>
+<td><span class="text-red bold">log_notifications=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -862,7 +862,7 @@ Use this option to keep contact notifications from being logged.
 
 ### Global Notification Logging Option <Badge type="tip" text="1.4.3" /> {#log_global_notifications}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -870,7 +870,7 @@ Use this option to keep contact notifications from being logged.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>log_global_notifications=1</b></font></td>
+<td><span class="text-red bold">log_global_notifications=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -887,7 +887,7 @@ Use this option to keep global notifications from being logged.
 
 ### Service Check Retry Logging Option {#log_service_retries}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -895,7 +895,7 @@ Use this option to keep global notifications from being logged.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>log_service_retries=1</b></font></td>
+<td><span class="text-red bold">log_service_retries=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -913,7 +913,7 @@ Logging service check retries is mostly useful when attempting to debug Naemon o
 
 ### Host Check Retry Logging Option {#log_host_retries}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -921,7 +921,7 @@ Logging service check retries is mostly useful when attempting to debug Naemon o
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>log_host_retries=1</b></font></td>
+<td><span class="text-red bold">log_host_retries=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -935,7 +935,7 @@ Logging host check retries is mostly useful when attempting to debug Naemon or t
 
 ### Event Handler Logging Option {#log_event_handlers}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -943,7 +943,7 @@ Logging host check retries is mostly useful when attempting to debug Naemon or t
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>log_event_handlers=1</b></font></td>
+<td><span class="text-red bold">log_event_handlers=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -959,7 +959,7 @@ Logging event handlers is most useful when debugging Naemon or first trying out 
 
 ### Initial States Logging Option {#log_initial_states}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -967,7 +967,7 @@ Logging event handlers is most useful when debugging Naemon or first trying out 
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>log_initial_states=1</b></font></td>
+<td><span class="text-red bold">log_initial_states=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -983,7 +983,7 @@ Enabling this option is useful if you are using an application that scans the lo
 
 ### External Command Logging Option {#log_external_commands}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -991,7 +991,7 @@ Enabling this option is useful if you are using an application that scans the lo
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>log_external_commands=1</b></font></td>
+<td><span class="text-red bold">log_external_commands=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -1008,7 +1008,7 @@ To enable or disable logging of passive checks, use the [log_passive_checks](#lo
 
 ### Passive Check Logging Option {#log_passive_checks}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1016,7 +1016,7 @@ To enable or disable logging of passive checks, use the [log_passive_checks](#lo
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>log_passive_checks=1</b></font></td>
+<td><span class="text-red bold">log_passive_checks=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -1030,7 +1030,7 @@ If you are setting up a [distributed monitoring environment](distributed) or pla
 
 ### Global Host Event Handler Option {#global_host_event_handler}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1038,7 +1038,7 @@ If you are setting up a [distributed monitoring environment](distributed) or pla
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>global_host_event_handler=log-host-event-to-db</b></font></td>
+<td><span class="text-red bold">global_host_event_handler=log-host-event-to-db</span></td>
 </tr>
 </tbody>
 </table>
@@ -1055,7 +1055,7 @@ More information on event handlers can be found [here](eventhandlers).
 
 ### Global Service Event Handler Option {#global_service_event_handler}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1063,7 +1063,7 @@ More information on event handlers can be found [here](eventhandlers).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>global_service_event_handler=log-service-event-to-db</b></font></td>
+<td><span class="text-red bold">global_service_event_handler=log-service-event-to-db</span></td>
 </tr>
 </tbody>
 </table>
@@ -1080,7 +1080,7 @@ More information on event handlers can be found [here](eventhandlers).
 
 ### Global Host Notification Handler Option<Badge type="tip" text="1.4.3" /> {#global_host_notification_handler}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1088,7 +1088,7 @@ More information on event handlers can be found [here](eventhandlers).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>global_host_notification_handler=send-generic-host-notification</b></font></td>
+<td><span class="text-red bold">global_host_notification_handler=send-generic-host-notification</span></td>
 </tr>
 </tbody>
 </table>
@@ -1106,7 +1106,7 @@ More information on notifications can be found [here](notifications).
 
 ### Global Service Notification Handler Option<Badge type="tip" text="1.4.3" /> {#global_service_notification_handler}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1114,7 +1114,7 @@ More information on notifications can be found [here](notifications).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>global_service_notification_handler=send-generic-service-notification</b></font></td>
+<td><span class="text-red bold">global_service_notification_handler=send-generic-service-notification</span></td>
 </tr>
 </tbody>
 </table>
@@ -1132,7 +1132,7 @@ More information on notifications can be found [here](notifications).
 
 ### Service Inter-Check Delay Method <Badge type="danger">removed</Badge> {#service_inter_check_delay_method}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1140,7 +1140,7 @@ More information on notifications can be found [here](notifications).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>service_inter_check_delay_method=s</b></font></td>
+<td><span class="text-red bold">service_inter_check_delay_method=s</span></td>
 </tr>
 </tbody>
 </table>
@@ -1162,7 +1162,7 @@ Values are as follows:
 
 ### Maximum Service Check Spread <Badge type="danger">removed</Badge> {#max_service_check_spread}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1170,7 +1170,7 @@ Values are as follows:
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>max_service_check_spread=30</b></font></td>
+<td><span class="text-red bold">max_service_check_spread=30</span></td>
 </tr>
 </tbody>
 </table>
@@ -1185,7 +1185,7 @@ Default value is **30** (minutes).
 
 ### Service Interleave Factor <Badge type="danger">removed</Badge> {#service_interleave_factor}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1193,7 +1193,7 @@ Default value is **30** (minutes).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>service_interleave_factor=s</b></font></td>
+<td><span class="text-red bold">service_interleave_factor=s</span></td>
 </tr>
 </tbody>
 </table>
@@ -1215,7 +1215,7 @@ An interleave factor of 1 is equivalent to not interleaving the service checks.
 
 ### Maximum Concurrent Service Checks {#max_concurrent_checks}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1223,7 +1223,7 @@ An interleave factor of 1 is equivalent to not interleaving the service checks.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>max_concurrent_checks=20</b></font></td>
+<td><span class="text-red bold">max_concurrent_checks=20</span></td>
 </tr>
 </tbody>
 </table>
@@ -1238,7 +1238,7 @@ You'll have to modify this value based on the system resources you have availabl
 
 ### Check Result Reaper Frequency {#check_result_reaper_frequency}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1246,7 +1246,7 @@ You'll have to modify this value based on the system resources you have availabl
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>check_result_reaper_frequency=5</b></font></td>
+<td><span class="text-red bold">check_result_reaper_frequency=5</span></td>
 </tr>
 </tbody>
 </table>
@@ -1259,7 +1259,7 @@ These events constitute the core of the monitoring logic in Naemon.
 
 ### Maximum Check Result Reaper Time {#max_check_result_reaper_time}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1267,7 +1267,7 @@ These events constitute the core of the monitoring logic in Naemon.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>max_check_result_reaper_time=30</b></font></td>
+<td><span class="text-red bold">max_check_result_reaper_time=30</span></td>
 </tr>
 </tbody>
 </table>
@@ -1282,7 +1282,7 @@ This variable allows you to limit the amount of time that an individual reaper e
 
 ### Check Result Path {#check_result_path}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1290,7 +1290,7 @@ This variable allows you to limit the amount of time that an individual reaper e
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>check_result_path=/var/spool/naemon/checkresults</b></font></td>
+<td><span class="text-red bold">check_result_path=/var/spool/naemon/checkresults</span></td>
 </tr>
 </tbody>
 </table>
@@ -1308,7 +1308,7 @@ problems with check results being processed (incorrectly) by the wrong instance 
 
 ### Max Check Result File Age {#max_check_result_file_age}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1316,7 +1316,7 @@ problems with check results being processed (incorrectly) by the wrong instance 
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>max_check_result_file_age=3600</b></font></td>
+<td><span class="text-red bold">max_check_result_file_age=3600</span></td>
 </tr>
 </tbody>
 </table>
@@ -1329,7 +1329,7 @@ By using a value of zero (0) with this option, Naemon will process all check res
 
 ### Host Inter-Check Delay Method <Badge type="danger">removed</Badge> {#host_inter_check_delay_method}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1337,7 +1337,7 @@ By using a value of zero (0) with this option, Naemon will process all check res
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>host_inter_check_delay_method=s</b></font></td>
+<td><span class="text-red bold">host_inter_check_delay_method=s</span></td>
 </tr>
 </tbody>
 </table>
@@ -1357,7 +1357,7 @@ Using no delay will cause all host checks to be scheduled for execution at the s
 
 ### Maximum Host Check Spread <Badge type="danger">removed</Badge> {#max_host_check_spread}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1365,7 +1365,7 @@ Using no delay will cause all host checks to be scheduled for execution at the s
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>max_host_check_spread=30</b></font></td>
+<td><span class="text-red bold">max_host_check_spread=30</span></td>
 </tr>
 </tbody>
 </table>
@@ -1380,7 +1380,7 @@ Default value is <b>30</b> (minutes).
 
 ### Timing Interval Length {#interval_length}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1388,7 +1388,7 @@ Default value is <b>30</b> (minutes).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>interval_length=60</b></font></td>
+<td><span class="text-red bold">interval_length=60</span></td>
 </tr>
 </tbody>
 </table>
@@ -1401,7 +1401,7 @@ This is the number of seconds per "unit interval" used for timing in the schedul
 
 ### Auto-Rescheduling Option <Badge type="danger">removed</Badge> {#auto_reschedule_checks}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1409,7 +1409,7 @@ This is the number of seconds per "unit interval" used for timing in the schedul
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>auto_reschedule_checks=1</b></font></td>
+<td><span class="text-red bold">auto_reschedule_checks=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -1420,7 +1420,7 @@ This is the number of seconds per "unit interval" used for timing in the schedul
 
 ### Auto-Rescheduling Interval  <Badge type="danger">removed</Badge> {#auto_rescheduling_interval}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1428,7 +1428,7 @@ This is the number of seconds per "unit interval" used for timing in the schedul
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>auto_rescheduling_interval=30</b></font></td>
+<td><span class="text-red bold">auto_rescheduling_interval=30</span></td>
 </tr>
 </tbody>
 </table>
@@ -1439,7 +1439,7 @@ This is the number of seconds per "unit interval" used for timing in the schedul
 
 ### Auto-Rescheduling Window <Badge type="danger">removed</Badge> {#auto_rescheduling_window}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1447,7 +1447,7 @@ This is the number of seconds per "unit interval" used for timing in the schedul
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>auto_rescheduling_window=180</b></font></td>
+<td><span class="text-red bold">auto_rescheduling_window=180</span></td>
 </tr>
 </tbody>
 </table>
@@ -1458,7 +1458,7 @@ This is the number of seconds per "unit interval" used for timing in the schedul
 
 ### Aggressive Host Checking Option {#use_aggressive_host_checking}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1466,7 +1466,7 @@ This is the number of seconds per "unit interval" used for timing in the schedul
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>use_aggressive_host_checking=0</b></font></td>
+<td><span class="text-red bold">use_aggressive_host_checking=0</span></td>
 </tr>
 </tbody>
 </table>
@@ -1484,7 +1484,7 @@ Unless you have problems with Naemon not recognizing that a host recovered, it i
 
 ### Translate Passive Host Checks Option {#translate_passive_host_checks}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1492,7 +1492,7 @@ Unless you have problems with Naemon not recognizing that a host recovered, it i
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>translate_passive_host_checks=1</b></font></td>
+<td><span class="text-red bold">translate_passive_host_checks=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -1508,7 +1508,7 @@ More information on passive check state translation can be found [here](passives
 
 ### Passive Host Checks Are SOFT Option {#passive_host_checks_are_soft}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1516,7 +1516,7 @@ More information on passive check state translation can be found [here](passives
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>passive_host_checks_are_soft=1</b></font></td>
+<td><span class="text-red bold">passive_host_checks_are_soft=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -1532,7 +1532,7 @@ You can change this behavior by enabling this option.
 
 ### Predictive Host Dependency Checks Option {#enable_predictive_host_dependency_checks}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1540,7 +1540,7 @@ You can change this behavior by enabling this option.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>enable_predictive_host_dependency_checks=1</b></font></td>
+<td><span class="text-red bold">enable_predictive_host_dependency_checks=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -1556,7 +1556,7 @@ More information on how predictive checks work can be found [here](dependencyche
 
 ### Predictive Service Dependency Checks Option {#enable_predictive_service_dependency_checks}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1564,7 +1564,7 @@ More information on how predictive checks work can be found [here](dependencyche
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>enable_predictive_service_dependency_checks=1</b></font></td>
+<td><span class="text-red bold">enable_predictive_service_dependency_checks=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -1580,7 +1580,7 @@ More information on how predictive checks work can be found [here](dependencyche
 
 ### Cached Host Check Horizon {#cached_host_check_horizon}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1588,7 +1588,7 @@ More information on how predictive checks work can be found [here](dependencyche
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>cached_host_check_horizon=15</b></font></td>
+<td><span class="text-red bold">cached_host_check_horizon=15</span></td>
 </tr>
 </tbody>
 </table>
@@ -1605,7 +1605,7 @@ More information on cached checks can be found [here](cachedchecks).
 
 ### Cached Service Check Horizon {#cached_service_check_horizon}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1613,7 +1613,7 @@ More information on cached checks can be found [here](cachedchecks).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>cached_service_check_horizon=15</b></font></td>
+<td><span class="text-red bold">cached_service_check_horizon=15</span></td>
 </tr>
 </tbody>
 </table>
@@ -1630,7 +1630,7 @@ More information on cached checks can be found [here](cachedchecks).
 
 ### Large Installation Tweaks Option <Badge type="danger">removed</Badge> {#use_large_installation_tweaks}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1638,7 +1638,7 @@ More information on cached checks can be found [here](cachedchecks).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>use_large_installation_tweaks=0</b></font></td>
+<td><span class="text-red bold">use_large_installation_tweaks=0</span></td>
 </tr>
 </tbody>
 </table>
@@ -1652,7 +1652,7 @@ These shortcuts result in the loss of a few features, but larger installations w
 
 ### Child Process Memory Option <Badge type="danger">removed</Badge> {#free_child_process_memory}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1660,7 +1660,7 @@ These shortcuts result in the loss of a few features, but larger installations w
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>free_child_process_memory=0</b></font></td>
+<td><span class="text-red bold">free_child_process_memory=0</span></td>
 </tr>
 </tbody>
 </table>
@@ -1676,7 +1676,7 @@ By defining this option in your configuration file, you are able to override thi
 
 ### Child Processes Fork Twice <Badge type="danger">removed</Badge> {#child_processes_fork_twice}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1684,7 +1684,7 @@ By defining this option in your configuration file, you are able to override thi
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>child_processes_fork_twice=0</b></font></td>
+<td><span class="text-red bold">child_processes_fork_twice=0</span></td>
 </tr>
 </tbody>
 </table>
@@ -1700,7 +1700,7 @@ By defining this option in your configuration file, you are able to override thi
 
 ### Environment Macros Option <Badge type="danger">removed</Badge> {#enable_environment_macros}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1708,7 +1708,7 @@ By defining this option in your configuration file, you are able to override thi
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>enable_environment_macros=0</b></font></td>
+<td><span class="text-red bold">enable_environment_macros=0</span></td>
 </tr>
 </tbody>
 </table>
@@ -1722,7 +1722,7 @@ In large Naemon installations this can be problematic because it takes additiona
 
 ### Flap Detection Option {#enable_flap_detection}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1730,7 +1730,7 @@ In large Naemon installations this can be problematic because it takes additiona
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>enable_flap_detection=0</b></font></td>
+<td><span class="text-red bold">enable_flap_detection=0</span></td>
 </tr>
 </tbody>
 </table>
@@ -1763,7 +1763,7 @@ it via the web interface.
 
 ### Low Service Flap Threshold {#low_service_flap_threshold}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1771,7 +1771,7 @@ it via the web interface.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>low_service_flap_threshold=25.0</b></font></td>
+<td><span class="text-red bold">low_service_flap_threshold=25.0</span></td>
 </tr>
 </tbody>
 </table>
@@ -1782,7 +1782,7 @@ For more information on how flap detection and handling works (and how this opti
 
 ### High Service Flap Threshold {#high_service_flap_threshold}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1790,7 +1790,7 @@ For more information on how flap detection and handling works (and how this opti
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>high_service_flap_threshold=50.0</b></font></td>
+<td><span class="text-red bold">high_service_flap_threshold=50.0</span></td>
 </tr>
 </tbody>
 </table>
@@ -1801,7 +1801,7 @@ For more information on how flap detection and handling works (and how this opti
 
 ### Low Host Flap Threshold {#low_host_flap_threshold}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1809,7 +1809,7 @@ For more information on how flap detection and handling works (and how this opti
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>low_host_flap_threshold=25.0</b></font></td>
+<td><span class="text-red bold">low_host_flap_threshold=25.0</span></td>
 </tr>
 </tbody>
 </table>
@@ -1820,7 +1820,7 @@ For more information on how flap detection and handling works (and how this opti
 
 ### High Host Flap Threshold {#high_host_flap_threshold}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1828,7 +1828,7 @@ For more information on how flap detection and handling works (and how this opti
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>high_host_flap_threshold=50.0</b></font></td>
+<td><span class="text-red bold">high_host_flap_threshold=50.0</span></td>
 </tr>
 </tbody>
 </table>
@@ -1839,7 +1839,7 @@ For more information on how flap detection and handling works (and how this opti
 
 ### Soft State Dependencies Option {#soft_state_dependencies}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1847,7 +1847,7 @@ For more information on how flap detection and handling works (and how this opti
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>soft_state_dependencies=0</b></font></td>
+<td><span class="text-red bold">soft_state_dependencies=0</span></td>
 </tr>
 </tbody>
 </table>
@@ -1863,7 +1863,7 @@ If you want it to use the latest state (regardless of whether its a soft or hard
 
 ### Service Check Timeout {#service_check_timeout}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1871,7 +1871,7 @@ If you want it to use the latest state (regardless of whether its a soft or hard
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>service_check_timeout=60</b></font></td>
+<td><span class="text-red bold">service_check_timeout=60</span></td>
 </tr>
 </tbody>
 </table>
@@ -1892,7 +1892,7 @@ If a service check runs longer than this limit, Naemon will kill it off thinking
 
 ### Host Check Timeout {#host_check_timeout}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1900,7 +1900,7 @@ If a service check runs longer than this limit, Naemon will kill it off thinking
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>host_check_timeout=60</b></font></td>
+<td><span class="text-red bold">host_check_timeout=60</span></td>
 </tr>
 </tbody>
 </table>
@@ -1921,7 +1921,7 @@ If a host check runs longer than this limit, Naemon will kill it off thinking it
 
 ### Event Handler Timeout {#event_handler_timeout}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1929,7 +1929,7 @@ If a host check runs longer than this limit, Naemon will kill it off thinking it
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>event_handler_timeout=60</b></font></td>
+<td><span class="text-red bold">event_handler_timeout=60</span></td>
 </tr>
 </tbody>
 </table>
@@ -1948,7 +1948,7 @@ If an event handler runs longer than this limit, Naemon will kill it off thinkin
 
 ### Notification Timeout {#notification_timeout}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1956,7 +1956,7 @@ If an event handler runs longer than this limit, Naemon will kill it off thinkin
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>notification_timeout=60</b></font></td>
+<td><span class="text-red bold">notification_timeout=60</span></td>
 </tr>
 </tbody>
 </table>
@@ -1975,7 +1975,7 @@ If a notification command runs longer than this limit, Naemon will kill it off t
 
 ### Obsessive Compulsive Service Processor Timeout {#ocsp_timeout}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -1983,7 +1983,7 @@ If a notification command runs longer than this limit, Naemon will kill it off t
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>ocsp_timeout=5</b></font></td>
+<td><span class="text-red bold">ocsp_timeout=5</span></td>
 </tr>
 </tbody>
 </table>
@@ -1994,7 +1994,7 @@ If a command exceeds this time limit it will be killed and a warning will be log
 
 ### Obsessive Compulsive Host Processor Timeout {#ochp_timeout}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2002,7 +2002,7 @@ If a command exceeds this time limit it will be killed and a warning will be log
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>ochp_timeout=5</b></font></td>
+<td><span class="text-red bold">ochp_timeout=5</span></td>
 </tr>
 </tbody>
 </table>
@@ -2013,7 +2013,7 @@ If a command exceeds this time limit it will be killed and a warning will be log
 
 ### Performance Data Processor Command Timeout {#perfdata_timeout}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2021,7 +2021,7 @@ If a command exceeds this time limit it will be killed and a warning will be log
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>perfdata_timeout=5</b></font></td>
+<td><span class="text-red bold">perfdata_timeout=5</span></td>
 </tr>
 </tbody>
 </table>
@@ -2032,7 +2032,7 @@ If a command exceeds this time limit it will be killed and a warning will be log
 
 ### Obsess Over Services Option {#obsess_over_services}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2040,7 +2040,7 @@ If a command exceeds this time limit it will be killed and a warning will be log
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>obsess_over_services=1</b></font></td>
+<td><span class="text-red bold">obsess_over_services=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -2056,7 +2056,7 @@ If you're not doing distributed monitoring, don't enable this option.
 
 ### Obsessive Compulsive Service Processor Command {#ocsp_command}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2064,7 +2064,7 @@ If you're not doing distributed monitoring, don't enable this option.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>ocsp_command=obsessive_service_handler</b></font></td>
+<td><span class="text-red bold">ocsp_command=obsessive_service_handler</span></td>
 </tr>
 </tbody>
 </table>
@@ -2083,7 +2083,7 @@ This command is only executed if the [obsess_over_services](#obsess_over_service
 
 ### Obsess Over Hosts Option {#obsess_over_hosts}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2091,7 +2091,7 @@ This command is only executed if the [obsess_over_services](#obsess_over_service
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>obsess_over_hosts=1</b></font></td>
+<td><span class="text-red bold">obsess_over_hosts=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -2107,7 +2107,7 @@ If you're not doing distributed monitoring, don't enable this option.
 
 ### Obsessive Compulsive Host Processor Command {#ochp_command}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2115,7 +2115,7 @@ If you're not doing distributed monitoring, don't enable this option.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>ochp_command=obsessive_host_handler</b></font></td>
+<td><span class="text-red bold">ochp_command=obsessive_host_handler</span></td>
 </tr>
 </tbody>
 </table>
@@ -2134,7 +2134,7 @@ This command is only executed if the [obsess_over_hosts](#obsess_over_hosts) opt
 
 ### Performance Data Processing Option {#process_performance_data}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2142,7 +2142,7 @@ This command is only executed if the [obsess_over_hosts](#obsess_over_hosts) opt
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>process_performance_data=1</b></font></td>
+<td><span class="text-red bold">process_performance_data=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -2154,7 +2154,7 @@ This value determines whether or not Naemon will process host and service check 
 
 ### Host Performance Data Processing Command {#host_perfdata_command}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2162,7 +2162,7 @@ This value determines whether or not Naemon will process host and service check 
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>host_perfdata_command=process-host-perfdata</b></font></td>
+<td><span class="text-red bold">host_perfdata_command=process-host-perfdata</span></td>
 </tr>
 </tbody>
 </table>
@@ -2175,7 +2175,7 @@ This command is only executed if the [process_performance_data](#process_perform
 
 ### Service Performance Data Processing Command {#service_perfdata_command}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2183,7 +2183,7 @@ This command is only executed if the [process_performance_data](#process_perform
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>service_perfdata_command=process-service-perfdata</b></font></td>
+<td><span class="text-red bold">service_perfdata_command=process-service-perfdata</span></td>
 </tr>
 </tbody>
 </table>
@@ -2196,7 +2196,7 @@ This command is only executed if the [process_performance_data](#process_perform
 
 ### Host Performance Data File {#host_perfdata_file}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2204,7 +2204,7 @@ This command is only executed if the [process_performance_data](#process_perform
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>host_perfdata_file=/var/lib/naemon/host-perfdata.dat</b></font></td>
+<td><span class="text-red bold">host_perfdata_file=/var/lib/naemon/host-perfdata.dat</span></td>
 </tr>
 </tbody>
 </table>
@@ -2217,7 +2217,7 @@ Performance data is only written to this file if the [process_performance_data](
 
 ### Service Performance Data File {#service_perfdata_file}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2225,7 +2225,7 @@ Performance data is only written to this file if the [process_performance_data](
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>service_perfdata_file=/var/lib/naemon/service-perfdata.dat</b></font></td>
+<td><span class="text-red bold">service_perfdata_file=/var/lib/naemon/service-perfdata.dat</span></td>
 </tr>
 </tbody>
 </table>
@@ -2238,7 +2238,7 @@ Performance data is only written to this file if the [process_performance_data](
 
 ### Host Performance Data File Template {#host_perfdata_file_template}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2246,7 +2246,7 @@ Performance data is only written to this file if the [process_performance_data](
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>host_perfdata_file_template=[HOSTPERFDATA]\t$TIMET$\t$HOSTNAME$\t$HOSTEXECUTIONTIME$\t$HOSTOUTPUT$\t$HOSTPERFDATA$</b></font></td>
+<td><span class="text-red bold">host_perfdata_file_template=[HOSTPERFDATA]\t$TIMET$\t$HOSTNAME$\t$HOSTEXECUTIONTIME$\t$HOSTOUTPUT$\t$HOSTPERFDATA$</span></td>
 </tr>
 </tbody>
 </table>
@@ -2259,7 +2259,7 @@ A newline is automatically added after each write to the performance data file.
 
 ### Service Performance Data File Template {#service_perfdata_file_template}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2267,7 +2267,7 @@ A newline is automatically added after each write to the performance data file.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>service_perfdata_file_template=[SERVICEPERFDATA]\t$TIMET$\t$HOSTNAME$\t$SERVICEDESC$\t$SERVICEEXECUTIONTIME$\t$SERVICELATENCY$\t$SERVICEOUTPUT$\t$SERVICEPERFDATA$</b></font></td>
+<td><span class="text-red bold">service_perfdata_file_template=[SERVICEPERFDATA]\t$TIMET$\t$HOSTNAME$\t$SERVICEDESC$\t$SERVICEEXECUTIONTIME$\t$SERVICELATENCY$\t$SERVICEOUTPUT$\t$SERVICEPERFDATA$</span></td>
 </tr>
 </tbody>
 </table>
@@ -2280,7 +2280,7 @@ A newline is automatically added after each write to the performance data file.
 
 ### Host Performance Data File Mode {#host_perfdata_file_mode}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2288,7 +2288,7 @@ A newline is automatically added after each write to the performance data file.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>host_perfdata_file_mode=a</b></font></td>
+<td><span class="text-red bold">host_perfdata_file_mode=a</span></td>
 </tr>
 </tbody>
 </table>
@@ -2303,7 +2303,7 @@ Unless the file is a named pipe you'll probably want to use the default mode of 
 
 ### Service Performance Data File Mode {#service_perfdata_file_mode}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2311,7 +2311,7 @@ Unless the file is a named pipe you'll probably want to use the default mode of 
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>service_perfdata_file_mode=a</b></font></td>
+<td><span class="text-red bold">service_perfdata_file_mode=a</span></td>
 </tr>
 </tbody>
 </table>
@@ -2326,7 +2326,7 @@ Unless the file is a named pipe you'll probably want to use the default mode of 
 
 ### Host Performance Data File Processing Interval {#host_perfdata_file_processing_interval}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2334,7 +2334,7 @@ Unless the file is a named pipe you'll probably want to use the default mode of 
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>host_perfdata_file_processing_interval=0</b></font></td>
+<td><span class="text-red bold">host_perfdata_file_processing_interval=0</span></td>
 </tr>
 </tbody>
 </table>
@@ -2345,7 +2345,7 @@ A value of 0 indicates that the performance data file should not be processed at
 
 ### Service Performance Data File Processing Interval {#service_perfdata_file_processing_interval}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2353,7 +2353,7 @@ A value of 0 indicates that the performance data file should not be processed at
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>service_perfdata_file_processing_interval=0</b></font></td>
+<td><span class="text-red bold">service_perfdata_file_processing_interval=0</span></td>
 </tr>
 </tbody>
 </table>
@@ -2364,7 +2364,7 @@ A value of 0 indicates that the performance data file should not be processed at
 
 ### Host Performance Data File Processing Command {#host_perfdata_file_processing_command}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2372,7 +2372,7 @@ A value of 0 indicates that the performance data file should not be processed at
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>host_perfdata_file_processing_command=process-host-perfdata-file</b></font></td>
+<td><span class="text-red bold">host_perfdata_file_processing_command=process-host-perfdata-file</span></td>
 </tr>
 </tbody>
 </table>
@@ -2385,7 +2385,7 @@ The interval at which this command is executed is determined by the [host_perfda
 
 ### Service Performance Data File Processing Command {#service_perfdata_file_processing_command}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2393,7 +2393,7 @@ The interval at which this command is executed is determined by the [host_perfda
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>service_perfdata_file_processing_command=process-service-perfdata-file</b></font></td>
+<td><span class="text-red bold">service_perfdata_file_processing_command=process-service-perfdata-file</span></td>
 </tr>
 </tbody>
 </table>
@@ -2406,7 +2406,7 @@ The interval at which this command is executed is determined by the [service_per
 
 ### Orphaned Service Check Option {#check_for_orphaned_services}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2414,7 +2414,7 @@ The interval at which this command is executed is determined by the [service_per
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>check_for_orphaned_services=1</b></font></td>
+<td><span class="text-red bold">check_for_orphaned_services=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -2436,7 +2436,7 @@ If you start seeing service checks that never seem to get rescheduled, enable th
 
 ### Orphaned Host Check Option {#check_for_orphaned_hosts}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2444,7 +2444,7 @@ If you start seeing service checks that never seem to get rescheduled, enable th
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>check_for_orphaned_hosts=1</b></font></td>
+<td><span class="text-red bold">check_for_orphaned_hosts=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -2466,7 +2466,7 @@ If you start seeing host checks that never seem to get rescheduled, enable this 
 
 ### Service Freshness Checking Option {#check_service_freshness}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2474,7 +2474,7 @@ If you start seeing host checks that never seem to get rescheduled, enable this 
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>check_service_freshness=0</b></font></td>
+<td><span class="text-red bold">check_service_freshness=0</span></td>
 </tr>
 </tbody>
 </table>
@@ -2490,7 +2490,7 @@ More information on freshness checking can be found [here](freshness).
 
 ### Service Freshness Check Interval {#service_freshness_check_interval}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2498,7 +2498,7 @@ More information on freshness checking can be found [here](freshness).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>service_freshness_check_interval=60</b></font></td>
+<td><span class="text-red bold">service_freshness_check_interval=60</span></td>
 </tr>
 </tbody>
 </table>
@@ -2511,7 +2511,7 @@ More information on freshness checking can be found [here](freshness).
 
 ### Host Freshness Checking Option {#check_host_freshness}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2519,7 +2519,7 @@ More information on freshness checking can be found [here](freshness).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>check_host_freshness=0</b></font></td>
+<td><span class="text-red bold">check_host_freshness=0</span></td>
 </tr>
 </tbody>
 </table>
@@ -2535,7 +2535,7 @@ More information on freshness checking can be found [here](freshness).
 
 ### Host Freshness Check Interval {#host_freshness_check_interval}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2543,7 +2543,7 @@ More information on freshness checking can be found [here](freshness).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>host_freshness_check_interval=60</b></font></td>
+<td><span class="text-red bold">host_freshness_check_interval=60</span></td>
 </tr>
 </tbody>
 </table>
@@ -2556,7 +2556,7 @@ More information on freshness checking can be found [here](freshness).
 
 ### Additional Freshness Threshold Latency Option {#additional_freshness_latency}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2564,7 +2564,7 @@ More information on freshness checking can be found [here](freshness).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>additional_freshness_latency=15</b></font></td>
+<td><span class="text-red bold">additional_freshness_latency=15</span></td>
 </tr>
 </tbody>
 </table>
@@ -2575,7 +2575,7 @@ More information on freshness checking can be found [here](freshness).
 
 ### Date Format {#date_format}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2583,7 +2583,7 @@ More information on freshness checking can be found [here](freshness).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>date_format=us</b></font></td>
+<td><span class="text-red bold">date_format=us</span></td>
 </tr>
 </tbody>
 </table>
@@ -2602,7 +2602,7 @@ Possible options (along with example output) include:
 
 ### Timezone Option {#use_timezone}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2610,7 +2610,7 @@ Possible options (along with example output) include:
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>use_timezone=US/Mountain</b></font></td>
+<td><span class="text-red bold">use_timezone=US/Mountain</span></td>
 </tr>
 </tbody>
 </table>
@@ -2629,7 +2629,7 @@ If not specified, Naemon will use the system configured timezone.
 
 ### Illegal Object Name Characters {#illegal_object_name_chars}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2637,7 +2637,7 @@ If not specified, Naemon will use the system configured timezone.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>illegal_object_name_chars=`~!$%^&amp;*"|'&lt;&gt;?,()=</b></font></td>
+<td><span class="text-red bold">illegal_object_name_chars=`~!$%^&amp;*"|'&lt;&gt;?,()=</span></td>
 </tr>
 </tbody>
 </table>
@@ -2650,7 +2650,7 @@ Doing may give you problems in the web interface, notification commands, etc.
 
 ### Illegal Macro Output Characters {#illegal_macro_output_chars}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2658,7 +2658,7 @@ Doing may give you problems in the web interface, notification commands, etc.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>illegal_macro_output_chars=`~$^&amp;"|'&lt;&gt;</b></font></td>
+<td><span class="text-red bold">illegal_macro_output_chars=`~$^&amp;"|'&lt;&gt;</span></td>
 </tr>
 </tbody>
 </table>
@@ -2692,7 +2692,7 @@ The following macros are stripped of the characters you specify:
 
 ### Regular Expression Matching Option {#use_regexp_matching}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2700,7 +2700,7 @@ The following macros are stripped of the characters you specify:
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>use_regexp_matching=0</b></font></td>
+<td><span class="text-red bold">use_regexp_matching=0</span></td>
 </tr>
 </tbody>
 </table>
@@ -2714,7 +2714,7 @@ More information on how this works can be found [here](objecttricks).
 
 ### True Regular Expression Matching Option {#use_true_rgexp_matching}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2722,7 +2722,7 @@ More information on how this works can be found [here](objecttricks).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>use_true_regexp_matching=0</b></font></td>
+<td><span class="text-red bold">use_true_regexp_matching=0</span></td>
 </tr>
 </tbody>
 </table>
@@ -2740,7 +2740,7 @@ More information on how this works can be found [here](objecttricks).
 
 ### Administrator Email Address {#admin_email}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2748,7 +2748,7 @@ More information on how this works can be found [here](objecttricks).
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>admin_email=root@localhost.localdomain</b></font></td>
+<td><span class="text-red bold">admin_email=root@localhost.localdomain</span></td>
 </tr>
 </tbody>
 </table>
@@ -2758,7 +2758,7 @@ This value can be used in notification commands by using the `$ADMINEMAIL$` [mac
 
 ### Administrator Pager {#admin_pager}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2766,7 +2766,7 @@ This value can be used in notification commands by using the `$ADMINEMAIL$` [mac
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>admin_pager=pageroot@localhost.localdomain</b></font></td>
+<td><span class="text-red bold">admin_pager=pageroot@localhost.localdomain</span></td>
 </tr>
 </tbody>
 </table>
@@ -2775,7 +2775,7 @@ This is the pager number (or pager email gateway) for the administrator of the l
 
 ### Event Broker Options {#event_broker_options}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2783,7 +2783,7 @@ This is the pager number (or pager email gateway) for the administrator of the l
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>event_broker_options=-1</b></font></td>
+<td><span class="text-red bold">event_broker_options=-1</span></td>
 </tr>
 </tbody>
 </table>
@@ -2800,7 +2800,7 @@ When in doubt, either broker nothing (if not using event broker modules) or brok
 
 ### Event Broker Modules {#broker_module}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2809,7 +2809,7 @@ When in doubt, either broker nothing (if not using event broker modules) or brok
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>broker_module=/usr/lib64/naemon-livestatus/livestatus.so /var/cache/naemon/live</b></font></td>
+<td><span class="text-red bold">broker_module=/usr/lib64/naemon-livestatus/livestatus.so /var/cache/naemon/live</span></td>
 </tr>
 </tbody>
 </table>
@@ -2823,7 +2823,7 @@ Arguments that should be passed to the module at startup are separated from the 
 
 ### Debug File {#debug_file}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2831,7 +2831,7 @@ Arguments that should be passed to the module at startup are separated from the 
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>debug_file=/var/lib/naemon/naemon.debug</b></font></td>
+<td><span class="text-red bold">debug_file=/var/lib/naemon/naemon.debug</span></td>
 </tr>
 </tbody>
 </table>
@@ -2840,7 +2840,7 @@ This option determines where Naemon should write debugging information. What (if
 
 ### Debug Level {#debug_level}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2848,7 +2848,7 @@ This option determines where Naemon should write debugging information. What (if
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>debug_level=24</b></font></td>
+<td><span class="text-red bold">debug_level=24</span></td>
 </tr>
 </tbody>
 </table>
@@ -2869,7 +2869,7 @@ This value is a logical OR of the values below.
 
 ### Debug Verbosity {#debug_verbosity}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2877,7 +2877,7 @@ This value is a logical OR of the values below.
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>debug_verbosity=1</b></font></td>
+<td><span class="text-red bold">debug_verbosity=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -2890,7 +2890,7 @@ This option determines how much debugging information Naemon should write to the
 
 ### Maximum Debug File Size {#max_debug_file_size}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2898,7 +2898,7 @@ This option determines how much debugging information Naemon should write to the
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>max_debug_file_size=1000000</b></font></td>
+<td><span class="text-red bold">max_debug_file_size=1000000</span></td>
 </tr>
 </tbody>
 </table>
@@ -2919,7 +2919,7 @@ This option can be used to do changes to how Naemon distributes jobs to the work
 
 ### Check workers {#check_workers}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2927,7 +2927,7 @@ This option can be used to do changes to how Naemon distributes jobs to the work
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>check_workers=6</b></font></td>
+<td><span class="text-red bold">check_workers=6</span></td>
 </tr>
 </tbody>
 </table>
@@ -2938,7 +2938,7 @@ If you're experiencing checks that don't run the way they should, it could be an
 
 ### Query socket {#query_socket}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2946,7 +2946,7 @@ If you're experiencing checks that don't run the way they should, it could be an
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>query_socket=/var/lib/naemon/naemon.qh</b></font></td>
+<td><span class="text-red bold">query_socket=/var/lib/naemon/naemon.qh</span></td>
 </tr>
 </tbody>
 </table>
@@ -2955,7 +2955,7 @@ This is the socket you can use for two-way communication with the Naemon process
 
 ### Circular Dependencies <Badge type="tip" text="1.0.7" /> {#circular_dependencies}
 
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2963,7 +2963,7 @@ This is the socket you can use for two-way communication with the Naemon process
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>allow_circular_dependencies=1</b></font></td>
+<td><span class="text-red bold">allow_circular_dependencies=1</span></td>
 </tr>
 </tbody>
 </table>
@@ -2985,7 +2985,7 @@ ENABLING THIS OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED
 
 
 ### Host Down Disable Servicechecks {#host_down_disable_service_checks}
-<table border="0">
+<table>
 <tbody>
 <tr>
 <td>Format:</td>
@@ -2993,7 +2993,7 @@ ENABLING THIS OPTION CAN DEGRADE PERFORMANCE - RATHER THAN INCREASE IT - IF USED
 </tr>
 <tr>
 <td>Example:</td>
-<td><font color="red"><b>host_down_disable_service_checks=1</b></font></td>
+<td><span class="text-red bold">host_down_disable_service_checks=1</span></td>
 </tr>
 </tbody>
 </table>

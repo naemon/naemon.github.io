@@ -58,7 +58,7 @@
 
 [Main configuration file options](configmain) :white_check_mark:
 
-[Object configuration overview](configobject)
+[Object configuration overview](configobject) :white_check_mark:
 
 [Object definitions](objectdefinitions)
 

@@ -88,7 +88,8 @@ export default defineConfig({
               { text: 'Restart Naemon', link: '/documentation/usersguide/startstop' },
               { text: 'Configuration Overview', link: '/documentation/usersguide/config' },
               { text: 'Main configuration file options', link: '/documentation/usersguide/configmain' },
-
+              { text: 'Main configuration file options', link: '/documentation/usersguide/configmain' },
+              { text: 'Object configuration overview', link: '/documentation/usersguide/configobject' },
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },

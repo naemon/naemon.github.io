@@ -14,6 +14,14 @@
     --vp-home-hero-image-filter: blur(68px);
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.text-red {
+    color: red;
+}
+
 /* Adds a background color to images to be better visible */
 .img-bg {
     background-color: var(--vp-custom-block-note-bg);
