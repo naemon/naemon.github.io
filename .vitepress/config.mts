@@ -94,6 +94,8 @@ export default defineConfig({
               { text: 'Authentication And Authorization CGIs', link: '/documentation/usersguide/cgiauth' },
               { text: 'Plugins', link: '/documentation/usersguide/plugins' },
               { text: 'Macros', link: '/documentation/usersguide/macros' },
+              { text: 'Standard Macros in Naemon', link: '/documentation/usersguide/macrolist' },
+              
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },

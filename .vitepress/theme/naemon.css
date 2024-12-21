@@ -42,3 +42,31 @@
     width: 100%;
     text-align: center;
 }
+
+/* Large content for wide pages such as the default macro list */
+.page-large-content #VPContent {
+    padding-right: 15px;
+}
+
+.page-large-content .VPNavBar.has-sidebar .content {
+    padding-right: 15px;
+}
+
+
+/* Macro List classes */
+.MacroYes {
+    background-color: var(--vp-code-line-diff-add-color);
+}
+
+/* Fix tables to be able to have a static header */
+.table-container table {
+    position: relative;
+    display: initial !important;
+}
+
+/* Add static header to large tables */
+.th-sticky {
+    position: sticky;
+    top: var(--vp-nav-height);
+    z-index: 100; /* Ensure the header is above other content */
+}
