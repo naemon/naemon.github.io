@@ -81,7 +81,7 @@
 
 [Plugins](plugins) :white_check_mark:
 
-[Macros and how they work](macros)
+[Macros and how they work](macros) :white_check_mark:
 
 [Standard macros available in Naemon](macrolist)
 

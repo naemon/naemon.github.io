@@ -9,8 +9,8 @@
 
     --vp-home-hero-name-color: transparent;
     --vp-home-hero-name-background: -webkit-linear-gradient(-45deg, #4FC3F7 50%, var(--vp-c-brand-1));
-  
-    --vp-home-hero-image-background-image: linear-gradient(45deg, var(--vp-c-brand-2) 50%,  var(--vp-c-brand-1) 50%);
+
+    --vp-home-hero-image-background-image: linear-gradient(45deg, var(--vp-c-brand-2) 50%, var(--vp-c-brand-1) 50%);
     --vp-home-hero-image-filter: blur(68px);
 
     --red-light: #D73A49;
@@ -23,11 +23,11 @@
 }
 
 .text-red {
-    color: var(--red-light);
+    color: var(--red-light) !important;
 }
 
 .dark .text-red {
-    color: var(--red-dark);
+    color: var(--red-dark) !important;
 }
 
 /* Adds a background color to images to be better visible */

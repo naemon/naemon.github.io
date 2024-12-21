@@ -93,7 +93,7 @@ export default defineConfig({
               { text: 'CGI Configuration File Options', link: '/documentation/usersguide/configcgi' },
               { text: 'Authentication And Authorization CGIs', link: '/documentation/usersguide/cgiauth' },
               { text: 'Plugins', link: '/documentation/usersguide/plugins' },
-
+              { text: 'Macros', link: '/documentation/usersguide/macros' },
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },
