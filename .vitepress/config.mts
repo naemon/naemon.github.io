@@ -100,6 +100,7 @@ export default defineConfig({
               { text: 'Active Checks', link: '/documentation/usersguide/activechecks' },
               { text: 'Passive Checks', link: '/documentation/usersguide/passivechecks' },
               { text: 'State Types', link: '/documentation/usersguide/statetypes' },
+              { text: 'Time Periods', link: '/documentation/usersguide/timeperiods' },
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },

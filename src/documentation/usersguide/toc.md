@@ -95,7 +95,7 @@
 
 [State types](statetypes) :white_check_mark:
 
-[Time periods](timeperiods)
+[Time periods](timeperiods) :white_check_mark:
 
 [Determining status and reachability of network hosts](networkreachability)
 
