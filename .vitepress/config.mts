@@ -97,6 +97,7 @@ export default defineConfig({
               { text: 'Standard Macros in Naemon', link: '/documentation/usersguide/macrolist' },
               { text: 'Host Checks', link: '/documentation/usersguide/hostchecks' },
               { text: 'Service Checks', link: '/documentation/usersguide/servicechecks' },
+              { text: 'Active Checks', link: '/documentation/usersguide/activechecks' },
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },

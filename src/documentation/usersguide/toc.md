@@ -89,7 +89,7 @@
 
 [Service checks](servicechecks) :white_check_mark:
 
-[Active checks](activechecks)
+[Active checks](activechecks) :white_check_mark:
 
 [Passive checks](passivechecks)
 
