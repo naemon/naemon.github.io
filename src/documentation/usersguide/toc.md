@@ -87,7 +87,7 @@
 
 [Host checks](hostchecks) :white_check_mark:
 
-[Service checks](servicechecks)
+[Service checks](servicechecks) :white_check_mark:
 
 [Active checks](activechecks)
 
