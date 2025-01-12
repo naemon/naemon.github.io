@@ -97,7 +97,7 @@
 
 [Time periods](timeperiods) :white_check_mark:
 
-[Determining status and reachability of network hosts](networkreachability)
+[Determining status and reachability of network hosts](networkreachability) :white_check_mark:
 
 [Notifications](notifications)
 

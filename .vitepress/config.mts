@@ -101,6 +101,7 @@ export default defineConfig({
               { text: 'Passive Checks', link: '/documentation/usersguide/passivechecks' },
               { text: 'State Types', link: '/documentation/usersguide/statetypes' },
               { text: 'Time Periods', link: '/documentation/usersguide/timeperiods' },
+              { text: 'Network Reachability', link: '/documentation/usersguide/networkreachability' },
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },
