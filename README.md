@@ -60,3 +60,12 @@ docker run --rm -it -v "$PWD":/site -p "5173:5173" naemon/docs:latest
 3. You can modify HTML anchors like so: `## What Is Naemon? {#whatis}`
 4. Add code blocks `like this` for code instead of quotes 'like so'.
 
+
+### Goals and Motivation
+
+1. Get a dependency free documentation, (only Nodejs and VitePress) but no GitHub Pages, Jekyll and Ruby anymore.
+2. Modern Design with Light and Dark mode
+3. Search
+4. All images should be replaced with SVGs
+5. All HTML should be replaced with Markdown. This ensures that the documentation can be modified more easily.
+6. Be compatible to old URLs whenever possible.
