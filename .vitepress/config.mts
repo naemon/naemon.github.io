@@ -102,6 +102,7 @@ export default defineConfig({
               { text: 'State Types', link: '/documentation/usersguide/statetypes' },
               { text: 'Time Periods', link: '/documentation/usersguide/timeperiods' },
               { text: 'Network Reachability', link: '/documentation/usersguide/networkreachability' },
+              { text: 'Notifications', link: '/documentation/usersguide/notifications' },
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },

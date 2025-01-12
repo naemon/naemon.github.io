@@ -99,7 +99,7 @@
 
 [Determining status and reachability of network hosts](networkreachability) :white_check_mark:
 
-[Notifications](notifications)
+[Notifications](notifications) :white_check_mark:
 
 [Information on the CGIs](cgis)
 
