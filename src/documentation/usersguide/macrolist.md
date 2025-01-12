@@ -36,7 +36,7 @@ They are as follows:
 The tables below list all macros currently available in Naemon, along with a brief description of
 each and the types of commands in which they are valid. If a macro is used in a command
 in which it is invalid, it is replaced with an empty string. It should be noted that
-macros consist of all uppercase characters and are enclosed in <b>$</b> characters.
+macros consist of all uppercase characters and are enclosed in `$` characters.
 
 
 
@@ -876,39 +876,39 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="hostname">$HOSTNAME$</a></td>
-<td class="MacroDescription">Short name for the host (i.e. "biglinuxbox").  This value is taken from the <i>host_name</i> directive in the <a href="objectdefinitions.html#host">host definition</a>.</td>
+<td class="MacroDescription">Short name for the host (i.e. <code>biglinuxbox</code>).  This value is taken from the <code>host_name</code> directive in the <a href="objectdefinitions.html#host">host definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostdisplayname">$HOSTDISPLAYNAME$</a></td>
-<td class="MacroDescription">An alternate display name for the host.  This value is taken from the <i>display_name</i> directive in the <a href="objectdefinitions.html#host">host definition</a>.</td>
+<td class="MacroDescription">An alternate display name for the host.  This value is taken from the <code>display_name</code> directive in the <a href="objectdefinitions.html#host">host definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostalias">$HOSTALIAS$</a></td>
-<td class="MacroDescription">Long name/description for the host.  This value is taken from the <i>alias</i> directive in the <a href="objectdefinitions.html#host">host definition</a>.</td>
+<td class="MacroDescription">Long name/description for the host.  This value is taken from the <code>alias</code> directive in the <a href="objectdefinitions.html#host">host definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostaddress">$HOSTADDRESS$</a></td>
-<td class="MacroDescription">Address of the host.  This value is taken from the <i>address</i> directive in the <a href="objectdefinitions.html#host">host definition</a>.</td>
+<td class="MacroDescription">Address of the host.  This value is taken from the <code>address</code> directive in the <a href="objectdefinitions.html#host">host definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hoststate">$HOSTSTATE$</a></td>
-<td class="MacroDescription">A string indicating the current state of the host ("UP", "DOWN", or "UNREACHABLE").</td>
+<td class="MacroDescription">A string indicating the current state of the host (<code>UP</code>, <code>DOWN</code>, or <code>UNREACHABLE</code>).</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hoststateid">$HOSTSTATEID$</a></td>
-<td class="MacroDescription">A number that corresponds to the current state of the host: 0=UP, 1=DOWN, 2=UNREACHABLE.</td>
+<td class="MacroDescription">A number that corresponds to the current state of the host: <code>0</code>=UP, <code>1</code>=DOWN, <code>2</code>=UNREACHABLE.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="lasthoststate">$LASTHOSTSTATE$</a></td>
-<td class="MacroDescription">A string indicating the last state of the host ("UP", "DOWN", or "UNREACHABLE").</td>
+<td class="MacroDescription">A string indicating the last state of the host (<code>UP</code>, <code>DOWN</code>, or <code>UNREACHABLE</code>).</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="lasthoststateid">$LASTHOSTSTATEID$</a></td>
-<td class="MacroDescription">A number that corresponds to the last state of the host: 0=UP, 1=DOWN, 2=UNREACHABLE.</td>
+<td class="MacroDescription">A number that corresponds to the last state of the host: <code>0</code>=UP, <code>1</code>=DOWN, <code>2</code>=UNREACHABLE.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hoststatetype">$HOSTSTATETYPE$</a></td>
-<td class="MacroDescription">A string indicating the <a href="statetypes.html">state type</a> for the current host check ("HARD" or "SOFT"). Soft states occur when host checks return a non-OK (non-UP) state and are in the process of being retried. Hard states result when host checks have been checked a specified maximum number of times.</td>
+<td class="MacroDescription">A string indicating the <a href="statetypes.html">state type</a> for the current host check (<code>HARD</code> or <code>SOFT</code>). Soft states occur when host checks return a non-OK (non-UP) state and are in the process of being retried. Hard states result when host checks have been checked a specified maximum number of times.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostattempt">$HOSTATTEMPT$</a></td>
@@ -920,7 +920,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="hosteventid">$HOSTEVENTID$</a></td>
-<td class="MacroDescription">A globally unique number associated with the host's current state.  Every time a host (or service) experiences a state change, a global event ID number is incremented by one (1).  If a host has experienced no state changes, this macro will be set to zero (0).</td>
+<td class="MacroDescription">A globally unique number associated with the host's current state.  Every time a host (or service) experiences a state change, a global event ID number is incremented by one (1).  If a host has experienced no state changes, this macro will be set to zero (<code>0</code>).</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="lasthosteventid">$LASTHOSTEVENTID$</a></td>
@@ -928,7 +928,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="hostproblemid">$HOSTPROBLEMID$</a></td>
-<td class="MacroDescription">A globally unique UUIDv4 (e.g. 29304481-91eb-4a2f-8b6d-8858b4548741) associated with the host's current problem state.  Every time a host (or service) transitions from an UP or OK state to a problem state, a global problem UUID is generated.  This macro will be a UUID string if the host is currently a non-UP state.  State transitions between non-UP states (e.g. DOWN to UNREACHABLE) do not cause this problem id to change.  If the host is currently in an UP state, this macro will be set to an empty string.  Combined with event handlers, this macro could be used to automatically open trouble tickets when hosts first enter a problem state.</td>
+<td class="MacroDescription">A globally unique UUIDv4 (e.g. <code>29304481-91eb-4a2f-8b6d-8858b4548741</code>) associated with the host's current problem state.  Every time a host (or service) transitions from an UP or OK state to a problem state, a global problem UUID is generated.  This macro will be a UUID string if the host is currently a non-UP state.  State transitions between non-UP states (e.g. DOWN to UNREACHABLE) do not cause this problem id to change.  If the host is currently in an UP state, this macro will be set to an empty string.  Combined with event handlers, this macro could be used to automatically open trouble tickets when hosts first enter a problem state.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="lasthostproblemid">$LASTHOSTPROBLEMID$</a></td>
@@ -944,7 +944,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="hostduration">$HOSTDURATION$</a></td>
-<td class="MacroDescription">A string indicating the amount of time that the host has spent in its current state.  Format is "XXh YYm ZZs", indicating hours, minutes and seconds.</td>
+<td class="MacroDescription">A string indicating the amount of time that the host has spent in its current state.  Format is <code>XXh YYm ZZs</code>, indicating hours, minutes and seconds.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostdurationsec">$HOSTDURATIONSEC$</a></td>
@@ -988,7 +988,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="hostoutput">$HOSTOUTPUT$</a></td>
-<td class="MacroDescription">The first line of text output from the last host check (i.e. "Ping OK").</td>
+<td class="MacroDescription">The first line of text output from the last host check (i.e. <code>Ping OK</code>).</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="longhostoutput">$LONGHOSTOUTPUT$</a></td>
@@ -1004,31 +1004,31 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="hostackauthor">$HOSTACKAUTHOR$</a> <a href="#note8"><sup>8</sup></a></td>
-<td class="MacroDescription">A string containing the name of the user who acknowledged the host problem.  This macro is only valid in notifications where the $NOTIFICATIONTYPE$ macro is set to "ACKNOWLEDGEMENT".</td>
+<td class="MacroDescription">A string containing the name of the user who acknowledged the host problem.  This macro is only valid in notifications where the <code>$NOTIFICATIONTYPE$</code> macro is set to <code>ACKNOWLEDGEMENT</code>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostackauthorname">$HOSTACKAUTHORNAME$</a> <a href="#note8"><sup>8</sup></a></td>
-<td class="MacroDescription">A string containing the short name of the contact (if applicable) who acknowledged the host problem.  This macro is only valid in notifications where the $NOTIFICATIONTYPE$ macro is set to "ACKNOWLEDGEMENT".</td>
+<td class="MacroDescription">A string containing the short name of the contact (if applicable) who acknowledged the host problem.  This macro is only valid in notifications where the <code>$NOTIFICATIONTYPE$</code> macro is set to <code>ACKNOWLEDGEMENT</code>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostackauthoralias">$HOSTACKAUTHORALIAS$</a> <a href="#note8"><sup>8</sup></a></td>
-<td class="MacroDescription">A string containing the alias of the contact (if applicable) who acknowledged the host problem.  This macro is only valid in notifications where the $NOTIFICATIONTYPE$ macro is set to "ACKNOWLEDGEMENT".</td>
+<td class="MacroDescription">A string containing the alias of the contact (if applicable) who acknowledged the host problem.  This macro is only valid in notifications where the <code>$NOTIFICATIONTYPE$</code> macro is set to <code>ACKNOWLEDGEMENT</code>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostackcomment">$HOSTACKCOMMENT$</a> <a href="#note8"><sup>8</sup></a></td>
-<td class="MacroDescription">A string containing the acknowledgement comment that was entered by the user who acknowledged the host problem.  This macro is only valid in notifications where the $NOTIFICATIONTYPE$ macro is set to "ACKNOWLEDGEMENT".</td>
+<td class="MacroDescription">A string containing the acknowledgement comment that was entered by the user who acknowledged the host problem.  This macro is only valid in notifications where the <code>$NOTIFICATIONTYPE$</code> macro is set to <code>ACKNOWLEDGEMENT</code>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostactionurl">$HOSTACTIONURL$</a></td>
-<td class="MacroDescription">Action URL for the host.  This macro may contain other macros (e.g. $HOSTNAME$), which can be useful when you want to pass the host name to a web page.</td>
+<td class="MacroDescription">Action URL for the host.  This macro may contain other macros (e.g. <code>$HOSTNAME$</code>), which can be useful when you want to pass the host name to a web page.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostnotesurl">$HOSTNOTESURL$</a></td>
-<td class="MacroDescription">Notes URL for the host.  This macro may contain other macros (e.g. $HOSTNAME$), which can be useful when you want to pass the host name to a web page.</td>
+<td class="MacroDescription">Notes URL for the host.  This macro may contain other macros (e.g. <code>$HOSTNAME$</code>), which can be useful when you want to pass the host name to a web page.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostnotes">$HOSTNOTES$</a></td>
-<td class="MacroDescription">Notes for the host.  This macro may contain other macros (e.g. $HOSTNAME$), which can be useful when you want to host-specific status information, etc. in the description.</td>
+<td class="MacroDescription">Notes for the host.  This macro may contain other macros (e.g. <code>$HOSTNAME$</code>), which can be useful when you want to host-specific status information, etc. in the description.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="totalhostservices">$TOTALHOSTSERVICES$</a></td>
@@ -1060,11 +1060,11 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="hostproblemdurationsec">$HOSTPROBLEMDURATIONSEC$</a></td>
-<td class="MacroDescription">The duration in seconds between $HOSTPROBLEMSTART$ and $HOSTPROBLEMEND$.</td>
+<td class="MacroDescription">The duration in seconds between <code>$HOSTPROBLEMSTART$</code> and <code>$HOSTPROBLEMEND$</code>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostproblemduration">$HOSTPROBLEMDURATION$</a></td>
-<td class="MacroDescription">The duration between $HOSTPROBLEMSTART$ and $HOSTPROBLEMEND$ in a human readable format e.g.: 1d 10h 8m 35s</td>
+<td class="MacroDescription">The duration between <code>$HOSTPROBLEMSTART$</code> and <code>$HOSTPROBLEMEND$</code> in a human readable format e.g.: 1d 10h 8m 35s</td>
 </tr>
 <tr><td colspan='2'><br></td></tr>
 <tr>
@@ -1072,7 +1072,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="hostgroupalias">$HOSTGROUPALIAS$</a> <a href="#note5"><sup>5</sup></a></td>
-<td class="MacroDescription">The long name / alias of either 1) the hostgroup name passed as an on-demand macro argument or 2) the primary hostgroup associated with the current host (if not used in the context of an on-demand macro). This value is taken from the <i>alias</i> directive in the <a href="objectdefinitions.html#hostgroup">hostgroup definition</a>.</td>
+<td class="MacroDescription">The long name / alias of either 1) the hostgroup name passed as an on-demand macro argument or 2) the primary hostgroup associated with the current host (if not used in the context of an on-demand macro). This value is taken from the <code>alias</code> directive in the <a href="objectdefinitions.html#hostgroup">hostgroup definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostgroupmembers">$HOSTGROUPMEMBERS$</a> <a href="#note5"><sup>5</sup></a></td>
@@ -1080,15 +1080,15 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="hostgroupnotes">$HOSTGROUPNOTES$</a> <a href="#note5"><sup>5</sup></a></td>
-<td class="MacroDescription">The notes associated with either 1) the hostgroup name passed as an on-demand macro argument or 2) the primary hostgroup associated with the current host (if not used in the context of an on-demand macro). This value is taken from the <i>notes</i> directive in the <a href="objectdefinitions.html#hostgroup">hostgroup definition</a>.</td>
+<td class="MacroDescription">The notes associated with either 1) the hostgroup name passed as an on-demand macro argument or 2) the primary hostgroup associated with the current host (if not used in the context of an on-demand macro). This value is taken from the <code>notes</code> directive in the <a href="objectdefinitions.html#hostgroup">hostgroup definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostgroupnotesurl">$HOSTGROUPNOTESURL$</a> <a href="#note5"><sup>5</sup></a></td>
-<td class="MacroDescription">The notes URL associated with either 1) the hostgroup name passed as an on-demand macro argument or 2) the primary hostgroup associated with the current host (if not used in the context of an on-demand macro). This value is taken from the <i>notes_url</i> directive in the <a href="objectdefinitions.html#hostgroup">hostgroup definition</a>.</td>
+<td class="MacroDescription">The notes URL associated with either 1) the hostgroup name passed as an on-demand macro argument or 2) the primary hostgroup associated with the current host (if not used in the context of an on-demand macro). This value is taken from the <code>notes_url</code> directive in the <a href="objectdefinitions.html#hostgroup">hostgroup definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostgroupactionurl">$HOSTGROUPACTIONURL$</a> <a href="#note5"><sup>5</sup></a></td>
-<td class="MacroDescription">The action URL associated with either 1) the hostgroup name passed as an on-demand macro argument or 2) the primary hostgroup associated with the current host (if not used in the context of an on-demand macro). This value is taken from the <i>action_url</i> directive in the <a href="objectdefinitions.html#hostgroup">hostgroup definition</a>.</td>
+<td class="MacroDescription">The action URL associated with either 1) the hostgroup name passed as an on-demand macro argument or 2) the primary hostgroup associated with the current host (if not used in the context of an on-demand macro). This value is taken from the <code>action_url</code> directive in the <a href="objectdefinitions.html#hostgroup">hostgroup definition</a>.</td>
 </tr>
 <tr><td colspan='2'><br></td></tr>
 <tr>
@@ -1096,31 +1096,31 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="servicedesc">$SERVICEDESC$</a></td>
-<td class="MacroDescription">The long name/description of the service (i.e. "Main Website").  This value is taken from the <i>service_description</i> directive of the <a href="objectdefinitions.html#service">service definition</a>.</td>
+<td class="MacroDescription">The long name/description of the service (i.e. <code>Main Website</code>).  This value is taken from the <code>service_description</code> directive of the <a href="objectdefinitions.html#service">service definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="servicedisplayname">$SERVICEDISPLAYNAME$</a></td>
-<td class="MacroDescription">An alternate display name for the service.  This value is taken from the <i>display_name</i> directive in the <a href="objectdefinitions.html#service">service definition</a>.</td>
+<td class="MacroDescription">An alternate display name for the service.  This value is taken from the <code>display_name</code> directive in the <a href="objectdefinitions.html#service">service definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="servicestate">$SERVICESTATE$</a></td>
-<td class="MacroDescription">A string indicating the current state of the service ("OK", "WARNING", "UNKNOWN", or "CRITICAL").</td>
+<td class="MacroDescription">A string indicating the current state of the service (<code>OK</code>, <code>WARNING</code>, <code>UNKNOWN</code>, or <code>CRITICAL</code>).</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="servicestateid">$SERVICESTATEID$</a></td>
-<td class="MacroDescription">A number that corresponds to the current state of the service: 0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN.</td>
+<td class="MacroDescription">A number that corresponds to the current state of the service: <code>0</code>=OK, <code>1</code>=WARNING, <code>2</code>=CRITICAL, <code>3</code>=UNKNOWN.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="lastservicestate">$LASTSERVICESTATE$</a></td>
-<td class="MacroDescription">A string indicating the last state of the service ("OK", "WARNING", "UNKNOWN", or "CRITICAL").</td>
+<td class="MacroDescription">A string indicating the last state of the service (<code>OK</code>, <code>WARNING</code>, <code>UNKNOWN</code>, or <code>CRITICAL</code>).</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="lastservicestateid">$LASTSERVICESTATEID$</a></td>
-<td class="MacroDescription">A number that corresponds to the last state of the service: 0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN.</td>
+<td class="MacroDescription">A number that corresponds to the last state of the service: <code>0</code>=OK, <code>1</code>=WARNING, <code>2</code>=CRITICAL, <code>3</code>=UNKNOWN.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="servicestatetype">$SERVICESTATETYPE$</a></td>
-<td class="MacroDescription">A string indicating the <a href="statetypes.html">state type</a> for the current service check ("HARD" or "SOFT"). Soft states occur when service checks return a non-OK state and are in the process of being retried. Hard states result when service checks have been checked a specified maximum number of times.</td>
+<td class="MacroDescription">A string indicating the <a href="statetypes.html">state type</a> for the current service check (<code>HARD</code> or <code>SOFT</code>). Soft states occur when service checks return a non-OK state and are in the process of being retried. Hard states result when service checks have been checked a specified maximum number of times.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="serviceattempt">$SERVICEATTEMPT$</a></td>
@@ -1132,11 +1132,11 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="serviceisvolatile">$SERVICEISVOLATILE$</a></td>
-<td class="MacroDescription">Indicates whether the service is marked as being volatile or not: 0 = not volatile, 1 = volatile.</td>
+<td class="MacroDescription">Indicates whether the service is marked as being volatile or not: <code>0</code> = not volatile, <code>1</code> = volatile.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="serviceeventid">$SERVICEEVENTID$</a></td>
-<td class="MacroDescription">A globally unique number associated with the service's current state.  Every time a a service (or host) experiences a state change, a global event ID number is incremented by one (1).  If a service has experienced no state changes, this macro will be set to zero (0).</td>
+<td class="MacroDescription">A globally unique number associated with the service's current state.  Every time a a service (or host) experiences a state change, a global event ID number is incremented by one (1).  If a service has experienced no state changes, this macro will be set to zero (<code>0</code>).</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="lastserviceeventid">$LASTSERVICEEVENTID$</a></td>
@@ -1144,7 +1144,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="serviceproblemid">$SERVICEPROBLEMID$</a></td>
-<td class="MacroDescription">A globally unique UUIDv4 (e.g. 39dbb346-f483-49fe-8211-feec8edf90ea) associated with the service's current problem state.  Every time a service (or host) transitions from an OK or UP state to a problem state, a global problem UUID is generated.  This macro will be a UUID if the service is currently a non-OK state.  State transitions between non-OK states (e.g. WARNING to CRITICAL) do not cause this problem id to change.  If the service is currently in an OK state, this macro will be set to an empty string.  Combined with event handlers, this macro could be used to automatically open trouble tickets when services first enter a problem state.</td>
+<td class="MacroDescription">A globally unique UUIDv4 (e.g. <code>39dbb346-f483-49fe-8211-feec8edf90ea</code>) associated with the service's current problem state.  Every time a service (or host) transitions from an OK or UP state to a problem state, a global problem UUID is generated.  This macro will be a UUID if the service is currently a non-OK state.  State transitions between non-OK states (e.g. WARNING to CRITICAL) do not cause this problem id to change.  If the service is currently in an OK state, this macro will be set to an empty string.  Combined with event handlers, this macro could be used to automatically open trouble tickets when services first enter a problem state.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="lastserviceproblemid">$LASTSERVICEPROBLEMID$</a></td>
@@ -1160,7 +1160,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="serviceduration">$SERVICEDURATION$</a></td>
-<td class="MacroDescription">A string indicating the amount of time that the service has spent in its current state. Format is "XXh YYm ZZs", indicating hours, minutes and seconds.</td>
+<td class="MacroDescription">A string indicating the amount of time that the service has spent in its current state. Format is <code>XXh YYm ZZs</code>, indicating hours, minutes and seconds.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="servicedurationsec">$SERVICEDURATIONSEC$</a></td>
@@ -1176,7 +1176,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="servicegroupname">$SERVICEGROUPNAME$</a></td>
-<td class="MacroDescription">The short name of the servicegroup that this service belongs to. This value is taken from the <i>servicegroup_name</i> directive in the <a href="objectdefinitions.html#servicegroup">servicegroup</a> definition. If the service belongs to more than one servicegroup this macro will contain the name of just one of them.</td>
+<td class="MacroDescription">The short name of the servicegroup that this service belongs to. This value is taken from the <code>servicegroup_name</code> directive in the <a href="objectdefinitions.html#servicegroup">servicegroup</a> definition. If the service belongs to more than one servicegroup this macro will contain the name of just one of them.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="servicegroupnames">$SERVICEGROUPNAMES$</a></td>
@@ -1208,7 +1208,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="serviceoutput">$SERVICEOUTPUT$</a></td>
-<td class="MacroDescription">The first line of text output from the last service check (i.e. "Ping OK").</td>
+<td class="MacroDescription">The first line of text output from the last service check (i.e. <code>Ping OK</code>).</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="longserviceoutput">$LONGSERVICEOUTPUT$</a></td>
@@ -1224,31 +1224,31 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="serviceackauthor">$SERVICEACKAUTHOR$</a> <a href="#note8"><sup>8</sup></a></td>
-<td class="MacroDescription">A string containing the name of the user who acknowledged the service problem. This macro is only valid in notifications where the $NOTIFICATIONTYPE$ macro is set to "ACKNOWLEDGEMENT".</td>
+<td class="MacroDescription">A string containing the name of the user who acknowledged the service problem. This macro is only valid in notifications where the <code>$NOTIFICATIONTYPE$</code> macro is set to <code>ACKNOWLEDGEMENT</code>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="serviceackauthorname">$SERVICEACKAUTHORNAME$</a> <a href="#note8"><sup>8</sup></a></td>
-<td class="MacroDescription">A string containing the short name of the contact (if applicable) who acknowledged the service problem. This macro is only valid in notifications where the $NOTIFICATIONTYPE$ macro is set to "ACKNOWLEDGEMENT".</td>
+<td class="MacroDescription">A string containing the short name of the contact (if applicable) who acknowledged the service problem. This macro is only valid in notifications where the <code>$NOTIFICATIONTYPE$</code> macro is set to <code>ACKNOWLEDGEMENT</code>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="serviceackauthoralias">$SERVICEACKAUTHORALIAS$</a> <a href="#note8"><sup>8</sup></a></td>
-<td class="MacroDescription">A string containing the alias of the contact (if applicable) who acknowledged the service problem. This macro is only valid in notifications where the $NOTIFICATIONTYPE$ macro is set to "ACKNOWLEDGEMENT".</td>
+<td class="MacroDescription">A string containing the alias of the contact (if applicable) who acknowledged the service problem. This macro is only valid in notifications where the <code>$NOTIFICATIONTYPE$</code> macro is set to <code>ACKNOWLEDGEMENT</code>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="serviceackcomment">$SERVICEACKCOMMENT$</a> <a href="#note8"><sup>8</sup></a></td>
-<td class="MacroDescription">A string containing the acknowledgement comment that was entered by the user who acknowledged the service problem. This macro is only valid in notifications where the $NOTIFICATIONTYPE$ macro is set to "ACKNOWLEDGEMENT".</td>
+<td class="MacroDescription">A string containing the acknowledgement comment that was entered by the user who acknowledged the service problem. This macro is only valid in notifications where the <code>$NOTIFICATIONTYPE$</code> macro is set to <code>ACKNOWLEDGEMENT</code>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="serviceactionurl">$SERVICEACTIONURL$</a></td>
-<td class="MacroDescription">Action URL for the service.  This macro may contain other macros (e.g. $HOSTNAME$ or $SERVICEDESC$), which can be useful when you want to pass the service name to a web page.</td>
+<td class="MacroDescription">Action URL for the service.  This macro may contain other macros (e.g. <code>$HOSTNAME$</code> or <code>$SERVICEDESC$</code>), which can be useful when you want to pass the service name to a web page.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="servicenotesurl">$SERVICENOTESURL$</a></td>
-<td class="MacroDescription">Notes URL for the service.  This macro may contain other macros (e.g. $HOSTNAME$ or $SERVICEDESC$), which can be useful when you want to pass the service name to a web page.</td>
+<td class="MacroDescription">Notes URL for the service.  This macro may contain other macros (e.g. <code>$HOSTNAME$</code> or <code>$SERVICEDESC$</code>), which can be useful when you want to pass the service name to a web page.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="servicenotes">$SERVICENOTES$</a></td>
-<td class="MacroDescription">Notes for the service.  This macro may contain other macros (e.g. $HOSTNAME$ or $SERVICESTATE$), which can be useful when you want to service-specific status information, etc. in the description</td>
+<td class="MacroDescription">Notes for the service.  This macro may contain other macros (e.g. <code>$HOSTNAME$</code> or <code>$SERVICESTATE$</code>), which can be useful when you want to service-specific status information, etc. in the description</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="serviceproblemstart">$SERVICEPROBLEMSTART$</a></td>
@@ -1260,11 +1260,11 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="serviceproblemdurationsec">$SERVICEPROBLEMDURATIONSEC$</a></td>
-<td class="MacroDescription">The duration in seconds between $SERVICEPROBLEMSTART$ and $SERVICEPROBLEMEND$.</td>
+<td class="MacroDescription">The duration in seconds between <code>$SERVICEPROBLEMSTART$</code> and <code>$SERVICEPROBLEMEND$</code>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="serviceproblemduration">$SERVICEPROBLEMDURATION$</a></td>
-<td class="MacroDescription">The duration between $SERVICEPROBLEMSTART$ and $SERVICEPROBLEMEND$ in a human readable format e.g.: 1d 10h 8m 35s</td>
+<td class="MacroDescription">The duration between <code>$SERVICEPROBLEMSTART$</code> and <code>$SERVICEPROBLEMEND$</code> in a human readable format e.g.: 1d 10h 8m 35s</td>
 </tr>
 <tr><td colspan='2'><br></td></tr>
 <tr>
@@ -1272,7 +1272,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="servicegroupalias">$SERVICEGROUPALIAS$</a> <a href="#note6"><sup>6</sup></a></td>
-<td class="MacroDescription">The long name / alias of either 1) the servicegroup name passed as an on-demand macro argument or 2) the primary servicegroup associated with the current service (if not used in the context of an on-demand macro). This value is taken from the <i>alias</i> directive in the <a href="objectdefinitions.html#servicegroup">servicegroup definition</a>.</td>
+<td class="MacroDescription">The long name / alias of either 1) the servicegroup name passed as an on-demand macro argument or 2) the primary servicegroup associated with the current service (if not used in the context of an on-demand macro). This value is taken from the <code>alias</code> directive in the <a href="objectdefinitions.html#servicegroup">servicegroup definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="servicegroupmembers">$SERVICEGROUPMEMBERS$</a> <a href="#note6"><sup>6</sup></a></td>
@@ -1280,15 +1280,15 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="servicegroupnotes">$SERVICEGROUPNOTES$</a> <a href="#note6"><sup>6</sup></a></td>
-<td class="MacroDescription">The notes associated with either 1) the servicegroup name passed as an on-demand macro argument or 2) the primary servicegroup associated with the current service (if not used in the context of an on-demand macro). This value is taken from the <i>notes</i> directive in the <a href="objectdefinitions.html#servicegroup">servicegroup definition</a>.</td>
+<td class="MacroDescription">The notes associated with either 1) the servicegroup name passed as an on-demand macro argument or 2) the primary servicegroup associated with the current service (if not used in the context of an on-demand macro). This value is taken from the <code>notes</code> directive in the <a href="objectdefinitions.html#servicegroup">servicegroup definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="servicegroupnotesurl">$SERVICEGROUPNOTESURL$</a> <a href="#note6"><sup>6</sup></a></td>
-<td class="MacroDescription">The notes URL associated with either 1) the servicegroup name passed as an on-demand macro argument or 2) the primary servicegroup associated with the current service (if not used in the context of an on-demand macro). This value is taken from the <i>notes_url</i> directive in the <a href="objectdefinitions.html#servicegroup">servicegroup definition</a>.</td>
+<td class="MacroDescription">The notes URL associated with either 1) the servicegroup name passed as an on-demand macro argument or 2) the primary servicegroup associated with the current service (if not used in the context of an on-demand macro). This value is taken from the <code>notes_url</code> directive in the <a href="objectdefinitions.html#servicegroup">servicegroup definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="servicegroupactionurl">$SERVICEGROUPNOTES$</a> <a href="#note6"><sup>6</sup></a></td>
-<td class="MacroDescription">The action URL associated with either 1) the servicegroup name passed as an on-demand macro argument or 2) the primary servicegroup associated with the current service (if not used in the context of an on-demand macro). This value is taken from the <i>action_url</i> directive in the <a href="objectdefinitions.html#servicegroup">servicegroup definition</a>.</td>
+<td class="MacroDescription">The action URL associated with either 1) the servicegroup name passed as an on-demand macro argument or 2) the primary servicegroup associated with the current service (if not used in the context of an on-demand macro). This value is taken from the <code>action_url</code> directive in the <a href="objectdefinitions.html#servicegroup">servicegroup definition</a>.</td>
 </tr>
 <tr><td colspan='2'><br></td></tr>
 <tr>
@@ -1296,26 +1296,26 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="contactname">$CONTACTNAME$</a></td>
-<td class="MacroDescription">Short name for the contact (i.e. "jdoe") that is being notified of a host or service problem.  This value is taken from the <i>contact_name</i> directive in the <a href="objectdefinitions.html#contact">contact definition</a>.</td>
+<td class="MacroDescription">Short name for the contact (i.e. <code>jdoe</code>) that is being notified of a host or service problem.  This value is taken from the <code>contact_name</code> directive in the <a href="objectdefinitions.html#contact">contact definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="contactalias">$CONTACTALIAS$</a></td>
-<td class="MacroDescription">Long name/description for the contact (i.e. "John Doe") being notified.  This value is taken from the <i>alias</i> directive in the <a href="objectdefinitions.html#contact">contact definition</a>.</td></tr>
+<td class="MacroDescription">Long name/description for the contact (i.e. <code>John Doe</code>) being notified.  This value is taken from the <code>alias</code> directive in the <a href="objectdefinitions.html#contact">contact definition</a>.</td></tr>
 <tr>
 <td class="MacroName"><a id="contactemail">$CONTACTEMAIL$</a></td>
-<td class="MacroDescription">Email address of the contact being notified.  This value is taken from the <i>email</i> directive in the <a href="objectdefinitions.html#contact">contact definition</a>.</td>
+<td class="MacroDescription">Email address of the contact being notified.  This value is taken from the <code>email</code> directive in the <a href="objectdefinitions.html#contact">contact definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="contactpager">$CONTACTPAGER$</a></td>
-<td class="MacroDescription">Pager number/address of the contact being notified.  This value is taken from the <i>pager</i> directive in the <a href="objectdefinitions.html#contact">contact definition</a>.</td>
+<td class="MacroDescription">Pager number/address of the contact being notified.  This value is taken from the <code>pager</code> directive in the <a href="objectdefinitions.html#contact">contact definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="contactaddress">$CONTACTADDRESSn$</a></td>
-<td class="MacroDescription">Address of the contact being notified.  Each contact can have six different addresses (in addition to email address and pager number).  The macros for these addresses are $CONTACTADDRESS1$ - $CONTACTADDRESS6$.  This value is taken from the <i>addressx</i> directive in the <a href="objectdefinitions.html#contact">contact definition</a>.</td>
+<td class="MacroDescription">Address of the contact being notified.  Each contact can have six different addresses (in addition to email address and pager number).  The macros for these addresses are <code>$CONTACTADDRESS1$</code> - <code>$CONTACTADDRESS6$</code>.  This value is taken from the <code>addressx</code> directive in the <a href="objectdefinitions.html#contact">contact definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="contactgroupname">$CONTACTGROUPNAME$</a></td>
-<td class="MacroDescription">The short name of the contactgroup that this contact is a member of. This value is taken from the <i>contactgroup_name</i> directive in the <a href="objectdefinitions.html#contactgroup">contactgroup</a> definition. If the contact belongs to more than one contactgroup this macro will contain the name of just one of them.</td>
+<td class="MacroDescription">The short name of the contactgroup that this contact is a member of. This value is taken from the <code>contactgroup_name</code> directive in the <a href="objectdefinitions.html#contactgroup">contactgroup</a> definition. If the contact belongs to more than one contactgroup this macro will contain the name of just one of them.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="contactgroupnames">$CONTACTGROUPNAMES$</a></td>
@@ -1327,7 +1327,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="contactgroupalias">$CONTACTGROUPALIAS$</a> <a href="#note7"><sup>7</sup></a></td>
-<td class="MacroDescription">The long name / alias of either 1) the contactgroup name passed as an on-demand macro argument or 2) the primary contactgroup associated with the current contact (if not used in the context of an on-demand macro). This value is taken from the <i>alias</i> directive in the <a href="objectdefinitions.html#contactgroup">contactgroup definition</a>.</td>
+<td class="MacroDescription">The long name / alias of either 1) the contactgroup name passed as an on-demand macro argument or 2) the primary contactgroup associated with the current contact (if not used in the context of an on-demand macro). This value is taken from the <code>alias</code> directive in the <a href="objectdefinitions.html#contactgroup">contactgroup definition</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="contactgroupmembers">$CONTACTGROUPMEMBERS$</a> <a href="#note7"><sup>7</sup></a></td>
@@ -1407,7 +1407,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="notificationtype">$NOTIFICATIONTYPE$</a></td>
-<td class="MacroDescription">A string identifying the type of notification that is being sent ("PROBLEM", "RECOVERY", "ACKNOWLEDGEMENT", "FLAPPINGSTART", "FLAPPINGSTOP", "FLAPPINGDISABLED", "DOWNTIMESTART", "DOWNTIMEEND", or "DOWNTIMECANCELLED").</td>
+<td class="MacroDescription">A string identifying the type of notification that is being sent (<code>PROBLEM</code>, <code>RECOVERY</code>, <code>ACKNOWLEDGEMENT</code>, <code>FLAPPINGSTART</code>, <code>FLAPPINGSTOP</code>, <code>FLAPPINGDISABLED</code>, <code>DOWNTIMESTART</code>, <code>DOWNTIMEEND</code>, or <code>DOWNTIMECANCELLED</code>).</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="notificationrecipients">$NOTIFICATIONRECIPIENTS$</a></td>
@@ -1415,24 +1415,24 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="notificationisescalated">$NOTIFICATIONISESCALATED$</a></td>
-<td class="MacroDescription">An integer indicating whether this was sent to normal contacts for the host or service or if it was escalated. 0 = Normal (non-escalated) notification , 1 = Escalated notification.</td>
+<td class="MacroDescription">An integer indicating whether this was sent to normal contacts for the host or service or if it was escalated. <code>0</code> = Normal (non-escalated) notification , <code>1</code> = Escalated notification.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="notificationauthor">$NOTIFICATIONAUTHOR$</a></td>
-<td class="MacroDescription">A string containing the name of the user who authored the notification.  If the $NOTIFICATIONTYPE$ macro is set to "DOWNTIMESTART" or "DOWNTIMEEND", this will be the name of the user who scheduled downtime for the host or service.  If the $NOTIFICATIONTYPE$ macro is "ACKNOWLEDGEMENT", this will be the name of the user who acknowledged the host or service problem.  If the $NOTIFICATIONTYPE$ macro is "CUSTOM", this will be name of the user who initiated the custom host or service notification.
+<td class="MacroDescription">A string containing the name of the user who authored the notification.  If the <code>$NOTIFICATIONTYPE$</code> macro is set to <code>DOWNTIMESTART</code> or <code>DOWNTIMEEND</code>, this will be the name of the user who scheduled downtime for the host or service.  If the <code>$NOTIFICATIONTYPE$</code> macro is <code>ACKNOWLEDGEMENT</code>, this will be the name of the user who acknowledged the host or service problem.  If the <code>$NOTIFICATIONTYPE$</code> macro is <code>CUSTOM</code>, this will be name of the user who initiated the custom host or service notification.
 </td>
 </tr>
 <tr>
 <td class="MacroName"><a id="notificationauthorname">$NOTIFICATIONAUTHORNAME$</a></td>
-<td class="MacroDescription">A string containing the short name of the contact (if applicable) specified in the $NOTIFICATIONAUTHOR$ macro.</td>
+<td class="MacroDescription">A string containing the short name of the contact (if applicable) specified in the <code>$NOTIFICATIONAUTHOR$</code> macro.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="notificationauthoralias">$NOTIFICATIONAUTHORALIAS$</a></td>
-<td class="MacroDescription">A string containing the alias of the contact (if applicable) specified in the $NOTIFICATIONAUTHOR$ macro.</td>
+<td class="MacroDescription">A string containing the alias of the contact (if applicable) specified in the <code>$NOTIFICATIONAUTHOR$</code> macro.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="notificationcomment">$NOTIFICATIONCOMMENT$</a></td>
-<td class="MacroDescription">A string containing the comment that was entered by the notification author.    If the $NOTIFICATIONTYPE$ macro is set to "DOWNTIMESTART" or "DOWNTIMEEND", this will be the comment entered by the user who scheduled downtime for the host or service.  If the $NOTIFICATIONTYPE$ macro is "ACKNOWLEDGEMENT", this will be the comment entered by the user who acknowledged the host or service problem.  If the $NOTIFICATIONTYPE$ macro is "CUSTOM", this will be comment entered by the user who initiated the custom host or service notification.</td>
+<td class="MacroDescription">A string containing the comment that was entered by the notification author.    If the <code>$NOTIFICATIONTYPE$</code> macro is set to <code>DOWNTIMESTART</code> or <code>DOWNTIMEEND</code>, this will be the comment entered by the user who scheduled downtime for the host or service.  If the <code>$NOTIFICATIONTYPE$</code> macro is <code>ACKNOWLEDGEMENT</code>, this will be the comment entered by the user who acknowledged the host or service problem.  If the <code>$NOTIFICATIONTYPE$</code> macro is <code>CUSTOM</code>, this will be comment entered by the user who initiated the custom host or service notification.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="hostnotificationnumber">$HOSTNOTIFICATIONNUMBER$</a></td>
@@ -1440,7 +1440,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="hostnotificationid">$HOSTNOTIFICATIONID$</a></td>
-<td class="MacroDescription">A unique UUIDv4 (e.g. 3a07d4f2-575e-413b-8166-9ccdd22d418a) identifying a host notification.  Notification UUID strings are unique across both hosts and service notifications, so you could potentially use this unique string as a primary key in a notification database.  Notification UUIDs should remain unique across restarts of the Naemon process, so long as you have state retention enabled.  The notification UUID is generated each time a new host notification is sent out, and the same regardless of how many contacts are notified.</td>
+<td class="MacroDescription">A unique UUIDv4 (e.g. <code>3a07d4f2-575e-413b-8166-9ccdd22d418a</code>) identifying a host notification.  Notification UUID strings are unique across both hosts and service notifications, so you could potentially use this unique string as a primary key in a notification database.  Notification UUIDs should remain unique across restarts of the Naemon process, so long as you have state retention enabled.  The notification UUID is generated each time a new host notification is sent out, and the same regardless of how many contacts are notified.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="servicenotificationnumber">$SERVICENOTIFICATIONNUMBER$</a></td>
@@ -1448,7 +1448,7 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="servicenotificationid">$SERVICENOTIFICATIONID$</a></td>
-<td class="MacroDescription">A unique UUIDv4 (e.g. cebd5487-538f-4f5b-87cc-8e18b4e2170c) identifying a service notification.  Notification UUID strings are unique across both hosts and service notifications, so you could potentially use this unique string as a primary key in a notification database.  Notification UUIDs should remain unique across restarts of the Naemon process, so long as you have state retention enabled.  The notification UUID is generated each time a new service notification is sent out, and the same regardless of how many contacts are notified.</td>
+<td class="MacroDescription">A unique UUIDv4 (e.g. <code>cebd5487-538f-4f5b-87cc-8e18b4e2170c</code>) identifying a service notification.  Notification UUID strings are unique across both hosts and service notifications, so you could potentially use this unique string as a primary key in a notification database.  Notification UUIDs should remain unique across restarts of the Naemon process, so long as you have state retention enabled.  The notification UUID is generated each time a new service notification is sent out, and the same regardless of how many contacts are notified.</td>
 </tr>
 <tr><td colspan='2'><br></td></tr>
 <tr>
@@ -1456,19 +1456,19 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 </tr>
 <tr>
 <td class="MacroName"><a id="longdatetime">$LONGDATETIME$</a></td>
-<td class="MacroDescription">Current date/time stamp (i.e. <i>Fri Oct 13 00:30:28 CDT 2000</i>).  Format of date is determined by <a href="configmain.html#date_format">date_format</a> directive.</td>
+<td class="MacroDescription">Current date/time stamp (i.e. <code>Fri Oct 13 00:30:28 CDT 2000</code>).  Format of date is determined by <a href="configmain.html#date_format">date_format</a> directive.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="shortdatetime">$SHORTDATETIME$</a></td>
-<td class="MacroDescription">Current date/time stamp (i.e. <i>10-13-2000 00:30:28</i>).  Format of date is determined by <a href="configmain.html#date_format">date_format</a> directive.</td>
+<td class="MacroDescription">Current date/time stamp (i.e. <code>10-13-2000 00:30:28</code>).  Format of date is determined by <a href="configmain.html#date_format">date_format</a> directive.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="date">$DATE$</a></td>
-<td class="MacroDescription">Date stamp (i.e. <i>10-13-2000</i>).  Format of date is determined by <a href="configmain.html#date_format">date_format</a> directive.</td>
+<td class="MacroDescription">Date stamp (i.e. <code>10-13-2000</code>).  Format of date is determined by <a href="configmain.html#date_format">date_format</a> directive.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="time">$TIME$</a></td>
-<td class="MacroDescription">Current time stamp (i.e. <i>00:30:28</i>).</td>
+<td class="MacroDescription">Current time stamp (i.e. <code>00:30:28</code>).</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="timet">$TIMET$</a></td>
@@ -1481,8 +1481,8 @@ macros consist of all uppercase characters and are enclosed in <b>$</b> characte
 This is a special on-demand macro that returns a 1 or 0 depending on whether or not a particular time is valid within a specified timeperiod.  There are two ways of using this macro:
 </p>
 <ol>
-<li><strong>$ISVALIDTIME:24x7$</strong> will be set to "1" if the current time is valid within the "24x7" timeperiod.  If not, it will be set to "0".</li>
-<li><strong>$ISVALIDTIME:24x7:<i>timestamp</i>$</strong> will be set to "1" if the time specified by the "timestamp" argument (which must be in time_t format) is valid within the "24x7" timeperiod.  If not, it will be set to "0".</li>
+<li><code>$ISVALIDTIME:24x7$</code> will be set to <code>1</code> if the current time is valid within the "24x7" timeperiod.  If not, it will be set to <code>0</code>.</li>
+<li><code>$ISVALIDTIME:24x7:<i>timestamp</i>$</code> will be set to <code>1</code> if the time specified by the "timestamp" argument (which must be in time_t format) is valid within the "24x7" timeperiod.  If not, it will be set to <code>0</code>.</li>
 </ol>
 </td>
 </tr>
@@ -1493,8 +1493,8 @@ This is a special on-demand macro that returns a 1 or 0 depending on whether or 
 This is a special on-demand macro that returns the next valid time (in time_t format) for a specified timeperiod.  There are two ways of using this macro:
 </p>
 <ol>
-<li><strong>$NEXTVALIDTIME:24x7$</strong> will return the next valid time - from and including the current time - in the "24x7" timeperiod.</li>
-<li><strong>$NEXTVALIDTIME:24x7:<i>timestamp</i>$</strong> will return the next valid time - from and including the time specified by the "timestamp" argument (which must be specified in time_t format) - in the "24x7" timeperiod.</li>
+<li><code>$NEXTVALIDTIME:24x7$</code> will return the next valid time - from and including the current time - in the "24x7" timeperiod.</li>
+<li><code>$NEXTVALIDTIME:24x7:<i>timestamp</i>$</code> will return the next valid time - from and including the time specified by the "timestamp" argument (which must be specified in time_t format) - in the "24x7" timeperiod.</li>
 </ol>
 <p>
 If a next valid time cannot be found in the specified timeperiod, the macro will be set to "0".
@@ -1563,11 +1563,11 @@ If a next valid time cannot be found in the specified timeperiod, the macro will
 </tr>
 <tr>
 <td class="MacroName"><a id="processstarttime">$PROCESSSTARTTIME$</a></td>
-<td class="MacroDescription">Time stamp in time_t format (seconds since the UNIX epoch) indicating when the Naemon process was last (re)started.  You can determine the number of seconds that Naemon has been running (since it was last restarted) by subtracting $PROCESSSTARTTIME$ from <a href="#timet">$TIMET$</a>.</td>
+<td class="MacroDescription">Time stamp in time_t format (seconds since the UNIX epoch) indicating when the Naemon process was last (re)started.  You can determine the number of seconds that Naemon has been running (since it was last restarted) by subtracting <code>$PROCESSSTARTTIME$</code> from <a href="#timet">$TIMET$</a>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="eventstarttime">$EVENTSTARTTIME$</a></td>
-<td class="MacroDescription">Time stamp in time_t format (seconds since the UNIX epoch) indicating when the Naemon process starting process events (checks, etc.).  You can determine the number of seconds that it took for Naemon to startup by subtracting $PROCESSSTARTTIME$ from $EVENTSTARTTIME$.</td>
+<td class="MacroDescription">Time stamp in time_t format (seconds since the UNIX epoch) indicating when the Naemon process starting process events (checks, etc.).  You can determine the number of seconds that it took for Naemon to startup by subtracting <code>$PROCESSSTARTTIME$</code> from <code>$EVENTSTARTTIME$</code>.</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="adminemail">$ADMINEMAIL$</a></td>
@@ -1579,11 +1579,11 @@ If a next valid time cannot be found in the specified timeperiod, the macro will
 </tr>
 <tr>
 <td class="MacroName"><a id="arg">$ARGn$</a></td>
-<td class="MacroDescription">The <i>n</i>th argument passed to the command (notification, event handler, service check, etc.). Naemon supports up to 32 argument macros ($ARG1$ through $ARG32$).</td>
+<td class="MacroDescription">The <i>n</i>th argument passed to the command (notification, event handler, service check, etc.). Naemon supports up to 32 argument macros (<code>$ARG1$</code> through <code>$ARG32$</code>).</td>
 </tr>
 <tr>
 <td class="MacroName"><a id="user">$USERn$</a></td>
-<td class="MacroDescription">The <i>n</i>th user-definable macro. User macros can be defined in one or more <a href="configmain.html#resource_file">resource files</a>. Naemon supports up to 256 user macros ($USER1$ through $USER256$).</td>
+<td class="MacroDescription">The <i>n</i>th user-definable macro. User macros can be defined in one or more <a href="configmain.html#resource_file">resource files</a>. Naemon supports up to 256 user macros (<code>$USER1$</code> through <code>$USER256$</code>).</td>
 </tr>
 </tbody>
 </table>
@@ -1610,19 +1610,19 @@ If a next valid time cannot be found in the specified timeperiod, the macro will
 </p>
 <a id="note5"></a>
 <p>
-<sup><b>5</b></sup>  These macros are normally associated with the first/primary hostgroup associated with the current host.  They could therefore be considered host macros in many cases.  However, these macros are not available as on-demand host macros.  Instead, they can be used as on-demand hostgroup macros when you pass the name of a hostgroup to the macro.  For example: $HOSTGROUPMEMBERS:hg1$ would return a comma-delimited list of all (host) members of the hostgroup <i>hg1</i>.
+<sup><b>5</b></sup>  These macros are normally associated with the first/primary hostgroup associated with the current host.  They could therefore be considered host macros in many cases.  However, these macros are not available as on-demand host macros.  Instead, they can be used as on-demand hostgroup macros when you pass the name of a hostgroup to the macro.  For example: <code>$HOSTGROUPMEMBERS:hg1$</code> would return a comma-delimited list of all (host) members of the hostgroup <code>hg1</code>.
 </p>
 <a id="note6"></a>
 <p>
-<sup><b>6</b></sup>  These macros are normally associated with the first/primary servicegroup associated with the current service.  They could therefore be considered service macros in many cases.  However, these macros are not available as on-demand service macros.  Instead, they can be used as on-demand servicegroup macros when you pass the name of a servicegroup to the macro.  For example: $SERVICEGROUPMEMBERS:sg1$ would return a comma-delimited list of all (service) members of the servicegroup <i>sg1</i>.
+<sup><b>6</b></sup>  These macros are normally associated with the first/primary servicegroup associated with the current service.  They could therefore be considered service macros in many cases.  However, these macros are not available as on-demand service macros.  Instead, they can be used as on-demand servicegroup macros when you pass the name of a servicegroup to the macro.  For example: <code>$SERVICEGROUPMEMBERS:sg1$</code> would return a comma-delimited list of all (service) members of the servicegroup <code>sg1</code>.
 </p>
 <a id="note7"></a>
 <p>
-<sup><b>7</b></sup>  These macros are normally associated with the first/primary contactgroup associated with the current contact.  They could therefore be considered contact macros in many cases.  However, these macros are not available as on-demand contact macros.  Instead, they can be used as on-demand contactgroup macros when you pass the name of a contactgroup to the macro.  For example: $CONTACTGROUPMEMBERS:cg1$ would return a comma-delimited list of all (contact) members of the contactgroup <i>cg1</i>.
+<sup><b>7</b></sup>  These macros are normally associated with the first/primary contactgroup associated with the current contact.  They could therefore be considered contact macros in many cases.  However, these macros are not available as on-demand contact macros.  Instead, they can be used as on-demand contactgroup macros when you pass the name of a contactgroup to the macro.  For example: <code>$CONTACTGROUPMEMBERS:cg1$</code> would return a comma-delimited list of all (contact) members of the contactgroup <code>cg1</code>.
 </p>
 <a id="note8"></a>
 <p>
-<sup><b>8</b></sup>  These acknowledgement macros are deprecated. Use the more generic $NOTIFICATIONAUTHOR$, $NOTIFICATIONAUTHORNAME$, $NOTIFICATIONAUTHORALIAS$ or $NOTIFICATIONAUTHORCOMMENT$ macros instead.
+<sup><b>8</b></sup>  These acknowledgement macros are deprecated. Use the more generic <code>$NOTIFICATIONAUTHOR$</code>, <code>$NOTIFICATIONAUTHORNAME$</code>, <code>$NOTIFICATIONAUTHORALIAS$</code> or <code>$NOTIFICATIONAUTHORCOMMENT$</code> macros instead.
 </p>
 <a id="note9"></a>
 <p>
