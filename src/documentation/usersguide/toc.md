@@ -83,7 +83,7 @@
 
 [Macros and how they work](macros) :white_check_mark:
 
-[Standard macros available in Naemon](macrolist)
+[Standard macros available in Naemon](macrolist) :white_check_mark:
 
 [Host checks](hostchecks)
 
