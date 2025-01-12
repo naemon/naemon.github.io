@@ -91,7 +91,7 @@
 
 [Active checks](activechecks) :white_check_mark:
 
-[Passive checks](passivechecks)
+[Passive checks](passivechecks) :white_check_mark:
 
 [State types](statetypes)
 

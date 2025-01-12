@@ -98,6 +98,7 @@ export default defineConfig({
               { text: 'Host Checks', link: '/documentation/usersguide/hostchecks' },
               { text: 'Service Checks', link: '/documentation/usersguide/servicechecks' },
               { text: 'Active Checks', link: '/documentation/usersguide/activechecks' },
+              { text: 'Passive Checks', link: '/documentation/usersguide/passivechecks' },
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },
