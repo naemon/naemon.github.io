@@ -1,5 +1,8 @@
 # Authentication And Authorization In The CGIs
 
+> [!DANGER] The CGIs have been removed from Naemon
+> The documentation is only here for legacy reasons. Please see the [Addons](addons) page for alternatives.
+
 * Issuing Naemon process commands via the [command CGI](cgis#cmd_cgi)
 * Viewing host group, contact, contact group, time period, and command definitions via the [configuration CGI](cgis#config_cgi)
 

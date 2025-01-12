@@ -101,7 +101,7 @@
 
 [Notifications](notifications) :white_check_mark:
 
-[Information on the CGIs](cgis)
+[Information on the CGIs](cgis) :white_check_mark:
 
 
 

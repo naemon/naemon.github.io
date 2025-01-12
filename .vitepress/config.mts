@@ -103,6 +103,7 @@ export default defineConfig({
               { text: 'Time Periods', link: '/documentation/usersguide/timeperiods' },
               { text: 'Network Reachability', link: '/documentation/usersguide/networkreachability' },
               { text: 'Notifications', link: '/documentation/usersguide/notifications' },
+              { text: 'Information on the CGIs', link: '/documentation/usersguide/cgis' },
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },

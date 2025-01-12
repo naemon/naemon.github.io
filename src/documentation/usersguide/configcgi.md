@@ -1,5 +1,8 @@
 # CGI Configuration File Options
 
+> [!DANGER] The CGIs have been removed from Naemon
+> The documentation is only here for legacy reasons. Please see the [Addons](addons) page for alternatives.
+
 ## Notes
 
 When creating and/or editing configuration files, keep the following in mind:
