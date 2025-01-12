@@ -93,7 +93,7 @@
 
 [Passive checks](passivechecks) :white_check_mark:
 
-[State types](statetypes)
+[State types](statetypes) :white_check_mark:
 
 [Time periods](timeperiods)
 

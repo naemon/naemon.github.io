@@ -99,6 +99,7 @@ export default defineConfig({
               { text: 'Service Checks', link: '/documentation/usersguide/servicechecks' },
               { text: 'Active Checks', link: '/documentation/usersguide/activechecks' },
               { text: 'Passive Checks', link: '/documentation/usersguide/passivechecks' },
+              { text: 'State Types', link: '/documentation/usersguide/statetypes' },
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },
