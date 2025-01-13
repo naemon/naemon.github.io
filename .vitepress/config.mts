@@ -15,6 +15,15 @@ export default defineConfig({
   // Can be removed as soon as the legacy content is removed
   srcExclude: ['**/legacy/**'],
 
+  vite: {
+    server: {
+      fs: {
+        // Allow serving files from one level up to the project root
+        allow: ['..', '../..'],
+      },
+    }
+  },
+
   themeConfig: {
 
     logo: '/images/svg/naemonlogo.svg',

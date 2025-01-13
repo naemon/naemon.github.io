@@ -1,13 +1,17 @@
 {
+  "name": "naemon-docs",
+  "private": true,
+  "version": "0.0.0",
   "devDependencies": {
     "vitepress": "^1.5.0"
   },
   "scripts": {
-    "docs:dev": "vitepress dev --host",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:dev": "npx vitepress dev --host",
+    "docs:build": "npx vitepress build",
+    "docs:preview": "npx vitepress preview"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.0"
   }
 }
+
