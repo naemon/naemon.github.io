@@ -11,7 +11,7 @@ WORKDIR /opt/node_app
 
 COPY package.json package-lock.json* ./
 RUN npm install --verbose --include=dev && npm cache clean --force
-ENV PATH /opt/node_app/node_modules/.bin:$PATH
+ENV PATH=/opt/node_app/node_modules/.bin:$PATH
 
 HEALTHCHECK --interval=30s CMD node healthcheck.js
 
