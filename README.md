@@ -48,6 +48,12 @@ First build the Docker image which will contain N Nodejs - thats all this docume
 docker build . -t naemon/docs
 ```
 
+or simply run:
+
+```sh
+make docker-build
+```
+
 Now run the Docker container and navigate to `http://127.0.0.1:5173` in your browser.
 The container watches for file changes and will automatically regenerate the website if needed.
 
@@ -62,6 +68,12 @@ docker run \
   -v /opt/node_app/app/.vitepress/dist \
   -v $PWD/package.json:/opt/node_app/package.json \
   naemon/docs:latest
+```
+
+or simply run:
+
+```sh
+make docker-server
 ```
 
 ### Important for the Migration
