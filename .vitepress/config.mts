@@ -1,4 +1,9 @@
-import { defineConfig } from 'vitepress'
+import path from 'path'
+import { writeFileSync } from 'fs'
+import { Feed } from 'feed'
+import { defineConfig, createContentLoader, type SiteConfig } from 'vitepress'
+
+const hostname: string = 'https://www.naemon.io'
 
 
 // https://vitepress.dev/reference/site-config
@@ -24,6 +29,9 @@ export default defineConfig({
     }
   },
 
+  // https://vitepress.dev/guide/routing#generating-clean-url
+  cleanUrls: true,
+
   themeConfig: {
 
     logo: '/images/svg/naemonlogo.svg',
@@ -42,6 +50,7 @@ export default defineConfig({
           { text: 'FAQ', link: '/documentation/faq' },
         ]
       },
+      { text: 'News', link: '/news' },
       { text: 'Get involved', link: '/community' },
     ],
 
@@ -51,7 +60,7 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Download',
         items: [
           { text: 'Download', link: '/download' },
         ]
@@ -155,5 +164,58 @@ export default defineConfig({
     editLink: {
       pattern: 'https://github.com/naemon/naemon.github.io/edit/main/:path'
     }
+  },
+
+  // rewrite urls from existing news
+  // https://vitepress.dev/reference/site-config#routing
+  rewrites: {
+    'news/:year(\\d+)-:mon(\\d+)-:day(\\d+)-:slug(.*\\.md)': 'project/:year/:mon/:day/:slug'
+  },
+
+  // write news feed from news folder
+  buildEnd: async (config: SiteConfig) => {
+    const feed = new Feed({
+      title: 'Naemon',
+      description: 'Naemon news blog',
+      id: hostname,
+      link: hostname,
+      language: 'en',
+      image: `${hostname}/public/images/logo/logo_small.png`,
+      favicon: `${hostname}/public/favicon.ico`,
+      copyright:
+        'Copyright (c) 2025-present, Naemon Team'
+    })
+
+    const posts = await createContentLoader('news/*.md', {
+      excerpt: true,
+      render: true
+    }).load()
+
+    posts.sort(
+      (a, b) =>
+        +new Date(b.frontmatter.date as string) -
+        +new Date(a.frontmatter.date as string)
+    )
+
+    for (const { url, excerpt, frontmatter, html } of posts) {
+      feed.addItem({
+        title: frontmatter.title,
+        id: `${hostname}${url}`,
+        link: `${hostname}${url}`,
+        description: excerpt,
+        content: html,
+        author: [
+          {
+            name: 'Naemon Team',
+            email: 'team@naemon.io',
+            link: hostname
+          }
+        ],
+        date: frontmatter.date
+      })
+    }
+
+    writeFileSync(path.join(config.outDir, 'news/feed'), feed.rss2())
+    writeFileSync(path.join(config.outDir, 'news/feed.rss'), feed.rss2())
   }
 })
