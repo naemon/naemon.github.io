@@ -36,6 +36,13 @@
     padding: 10px;
 }
 
+.img-bg img {
+    /* Center images */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .fa-icon-bg {
     background-color: var(--vp-custom-block-note-bg);
     padding: 15px;

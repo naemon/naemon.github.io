@@ -71,7 +71,7 @@ where...
 > [!NOTE]
 > A service must be defined in Naemon before you can submit passive check results for it!  Naemon will ignore all check results for services that had not been configured before it was last (re)started.
 
-> [!HINT]
+> [!TIP]
 > An example shell script of how to submit passive service check results to Naemon can be found in the documentation on [volatile services](volatileservices).
 
 

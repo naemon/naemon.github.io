@@ -109,7 +109,7 @@
 
 [External commands](extcommands)
 
-[Event handlers](eventhandlers)
+[Event handlers](eventhandlers) :white_check_mark:
 
 [Volatile services](volatileservices)
 

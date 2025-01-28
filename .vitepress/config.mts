@@ -122,6 +122,9 @@ export default defineConfig({
               { text: 'Network Reachability', link: '/documentation/usersguide/networkreachability' },
               { text: 'Notifications', link: '/documentation/usersguide/notifications' },
               { text: 'Information on the CGIs', link: '/documentation/usersguide/cgis' },
+              { text: 'Event handlers', link: '/documentation/usersguide/eventhandlers' },
+
+
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },
