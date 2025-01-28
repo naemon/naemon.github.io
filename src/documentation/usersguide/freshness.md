@@ -31,7 +31,7 @@ For example, if you have a freshness threshold of 60 for one of your services, N
 Here's what you need to do to enable freshness checking.
 
 
-- Enable freshness checking on a program-wide basis with the [check_service_freshness[configmain#check_service_freshness] and [check_host_freshness](configmain#check_host_freshness) directives.
+- Enable freshness checking on a program-wide basis with the [check_service_freshness](configmain#check_service_freshness) and [check_host_freshness](configmain#check_host_freshness) directives.
 - Use [service_freshness_check_interval](configmain#service_freshness_check_interval) and [host_freshness_check_interval](configmain#host_freshness_check_interval) options to tell Naemon how often in should check the freshness of service and host results.
 - Enable freshness checking on a host- and service-specific basis by setting the `check_freshness` option in your host and service definitions to a value of `1`.
 - Configure freshness thresholds by setting the `freshness_threshold` option in your host and service definitions.

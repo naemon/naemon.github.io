@@ -125,6 +125,7 @@ export default defineConfig({
               { text: 'Event handlers', link: '/documentation/usersguide/eventhandlers' },
               { text: 'Volatile services', link: '/documentation/usersguide/volatileservices' },
               { text: 'Freshness Checks'  , link: '/documentation/usersguide/freshness' },
+              { text: 'Distributed monitoring' , link: '/documentation/usersguide/distributed' },
 
               { text: 'Naemon Logo', link: '/logo' }
             ]

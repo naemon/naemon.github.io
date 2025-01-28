@@ -115,7 +115,7 @@
 
 [Service and host result freshness checks](freshness) :white_check_mark:
 
-[Distributed monitoring](distributed)
+[Distributed monitoring](distributed) :white_check_mark:
 
 [Redundant and failover monitoring](redundancy)
 
