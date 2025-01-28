@@ -117,7 +117,7 @@
 
 [Distributed monitoring](distributed) :white_check_mark:
 
-[Redundant and failover monitoring](redundancy)
+[Redundant and failover monitoring](redundancy) :white_check_mark:
 
 [Detection and handling of state flapping](flapping)
 

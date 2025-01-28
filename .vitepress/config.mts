@@ -126,6 +126,7 @@ export default defineConfig({
               { text: 'Volatile services', link: '/documentation/usersguide/volatileservices' },
               { text: 'Freshness Checks'  , link: '/documentation/usersguide/freshness' },
               { text: 'Distributed monitoring' , link: '/documentation/usersguide/distributed' },
+              { text: 'Redundancy monitoring', link: '/documentation/usersguide/redundancy' },
 
               { text: 'Naemon Logo', link: '/logo' }
             ]
