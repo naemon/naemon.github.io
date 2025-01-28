@@ -119,7 +119,7 @@
 
 [Redundant and failover monitoring](redundancy) :white_check_mark:
 
-[Detection and handling of state flapping](flapping)
+[Detection and handling of state flapping](flapping) :white_check_mark:
 
 [Notification escalations](escalations)
 

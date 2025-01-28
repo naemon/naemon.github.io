@@ -3,8 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "devDependencies": {
-    "vitepress": "^1.5.0",
-    "feed": "^4.2.2"
+    "feed": "^4.2.2",
+    "markdown-it-mathjax3": "^4.3.2",
+    "vitepress": "^1.5.0"
   },
   "scripts": {
     "docs:dev": "npx vitepress dev --host",
@@ -15,4 +16,3 @@
     "@fortawesome/fontawesome-free": "^6.7.0"
   }
 }
-

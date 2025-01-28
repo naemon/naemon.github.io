@@ -15,6 +15,10 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
 
+  markdown: {
+    math: true
+  },
+
   srcDir: 'src',
 
   // Can be removed as soon as the legacy content is removed
@@ -127,6 +131,7 @@ export default defineConfig({
               { text: 'Freshness Checks'  , link: '/documentation/usersguide/freshness' },
               { text: 'Distributed monitoring' , link: '/documentation/usersguide/distributed' },
               { text: 'Redundancy monitoring', link: '/documentation/usersguide/redundancy' },
+              { text: 'Flap Detection', link: '/documentation/usersguide/flapping' },
 
               { text: 'Naemon Logo', link: '/logo' }
             ]
