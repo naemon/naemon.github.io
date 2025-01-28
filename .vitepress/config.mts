@@ -124,7 +124,7 @@ export default defineConfig({
               { text: 'Information on the CGIs', link: '/documentation/usersguide/cgis' },
               { text: 'Event handlers', link: '/documentation/usersguide/eventhandlers' },
               { text: 'Volatile services', link: '/documentation/usersguide/volatileservices' },
-
+              { text: 'Freshness Checks'  , link: '/documentation/usersguide/freshness' },
 
               { text: 'Naemon Logo', link: '/logo' }
             ]

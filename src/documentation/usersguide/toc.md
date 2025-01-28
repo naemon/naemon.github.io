@@ -113,7 +113,7 @@
 
 [Volatile services](volatileservices) :white_check_mark:
 
-[Service and host result freshness checks](freshness)
+[Service and host result freshness checks](freshness) :white_check_mark:
 
 [Distributed monitoring](distributed)
 
