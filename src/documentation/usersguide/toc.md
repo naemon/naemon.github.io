@@ -111,7 +111,7 @@
 
 [Event handlers](eventhandlers) :white_check_mark:
 
-[Volatile services](volatileservices)
+[Volatile services](volatileservices) :white_check_mark:
 
 [Service and host result freshness checks](freshness)
 

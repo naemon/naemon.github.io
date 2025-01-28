@@ -123,6 +123,7 @@ export default defineConfig({
               { text: 'Notifications', link: '/documentation/usersguide/notifications' },
               { text: 'Information on the CGIs', link: '/documentation/usersguide/cgis' },
               { text: 'Event handlers', link: '/documentation/usersguide/eventhandlers' },
+              { text: 'Volatile services', link: '/documentation/usersguide/volatileservices' },
 
 
               { text: 'Naemon Logo', link: '/logo' }
