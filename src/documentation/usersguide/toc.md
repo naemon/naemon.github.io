@@ -121,7 +121,7 @@
 
 [Detection and handling of state flapping](flapping) :white_check_mark:
 
-[Notification escalations](escalations)
+[Notification escalations](escalations) :white_check_mark:
 
 [On-call notification rotations](oncallrotation)
 

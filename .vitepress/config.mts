@@ -132,6 +132,7 @@ export default defineConfig({
               { text: 'Distributed monitoring' , link: '/documentation/usersguide/distributed' },
               { text: 'Redundancy monitoring', link: '/documentation/usersguide/redundancy' },
               { text: 'Flap Detection', link: '/documentation/usersguide/flapping' },
+              { text: 'Notification escalations', link: '/documentation/usersguide/escalations' },
 
               { text: 'Naemon Logo', link: '/logo' }
             ]
