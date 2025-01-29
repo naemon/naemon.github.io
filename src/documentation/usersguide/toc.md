@@ -123,7 +123,7 @@
 
 [Notification escalations](escalations) :white_check_mark:
 
-[On-call notification rotations](oncallrotation)
+[On-call notification rotations](oncallrotation) :white_check_mark:
 
 [Monitoring service and host clusters](clusters)
 
