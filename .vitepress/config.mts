@@ -134,6 +134,7 @@ export default defineConfig({
               { text: 'Flap Detection', link: '/documentation/usersguide/flapping' },
               { text: 'Notification escalations', link: '/documentation/usersguide/escalations' },
               { text: 'On-call rotations', link: '/documentation/usersguide/oncallrotation' },
+              { text: 'Monitoring Clusters', link: '/documentation/usersguide/clusters' },
 
               { text: 'Naemon Logo', link: '/logo' }
             ]

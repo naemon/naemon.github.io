@@ -125,7 +125,7 @@
 
 [On-call notification rotations](oncallrotation) :white_check_mark:
 
-[Monitoring service and host clusters](clusters)
+[Monitoring service and host clusters](clusters) :white_check_mark:
 
 [Host and service dependencies](dependencies)
 
