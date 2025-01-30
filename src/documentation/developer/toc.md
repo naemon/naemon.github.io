@@ -11,7 +11,6 @@ Technical and api documentation for Naemon.
 
 [Naemon Event Broker Modules (NEB)](neb_broker) :white_check_mark:
 
-
 ## API
 
 [API Incompatibilities between Nagios 3 and Naemon](api-incompat3to4) :white_check_mark:
@@ -24,7 +23,6 @@ Technical and api documentation for Naemon.
 
 [Check Result Spoolfolder](spoolfolder) :white_check_mark:
 
-
 ## Naemon Plugins
 
 [Plugin API](/documentation/usersguide/pluginapi)
@@ -32,7 +30,6 @@ Technical and api documentation for Naemon.
 [Developing Plugins For Use With Embedded Perl](/documentation/usersguide/epnplugins)
 
 [Monitoring Plugins Developer Guidelines](https://www.monitoring-plugins.org/doc/guidelines.html) :white_check_mark:
-
 
 ## Documentation / Website
 
