@@ -44,7 +44,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Download', link: '/download' },
+      { text: 'Download', link: '/download/' },
       {
         text: 'Documentation',
         activeMatch: `^/documentation/`,
@@ -63,15 +63,11 @@ export default defineConfig({
     outline: [2, 3],
 
     sidebar: [
-      {
-        text: 'Download',
-        items: [
-          { text: 'Download', link: '/download' },
-        ]
-      },
+      { text: 'News', link: '/news/' },
+      { text: 'Download', link: '/download/' },
       {
         text: 'Documentation',
-        link: '/documentation',
+        link: '/documentation/',
         collapsed: false,
         items: [
           {
