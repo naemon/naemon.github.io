@@ -3,31 +3,27 @@ name: citest
 on:
   push:
   pull_request:
-  release:
+  workflow_dispatch:
+    inputs:
+      debug_enabled:
+        type: boolean
+        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
+        required: false
+        default: false
 
 jobs:
   citest:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v2
-      #- name: Setup tmate session, see https://github.com/marketplace/actions/debugging-with-tmate
-      #  uses: mxschmitt/action-tmate@v3
-      - name: prepare machine
+      - name: Setup tmate session, see https://github.com/marketplace/actions/debugging-with-tmate
+        uses: mxschmitt/action-tmate@v3
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
+
+      - name: install node dependencies
         run: |
-          sudo apt-get install autoconf
-          sudo apt-get install build-essential
-          sudo apt-get install devscripts
-          sudo apt-get install liburi-perl
-          sudo apt-get install libencode-perl
-          sudo apt-get install libwww-perl
-          sudo apt-get install libhtml-lint-perl
-          sudo apt-get install ruby-bundler
-          sudo bundle install
+          make node_modules
 
       - name: run build
         run: |
           make build
-
-      - name: run tests
-        run: |
-          make test

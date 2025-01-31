@@ -12,6 +12,12 @@ DOCKERRUN=docker run \
 	-v $(PWD)/package.json:/opt/node_app/package.json \
 	naemon/docs:latest
 
+build: node_modules
+	npm run docs:build
+
+node_modules:
+	npm install --verbose --include=dev && npm cache clean --force
+
 docker-build:
 	docker build -t naemon/docs .
 	$(DOCKERRUN) npm run docs:build
@@ -19,3 +25,6 @@ docker-build:
 docker-server:
 	docker build -t naemon/docs .
 	$(DOCKERRUN)
+
+clean:
+	rm -rf node_modules
