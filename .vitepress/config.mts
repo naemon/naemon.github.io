@@ -44,7 +44,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Download', link: '/download/' },
+      { text: 'Download', link: '/download' },
       {
         text: 'Documentation',
         activeMatch: `^/documentation/`,
@@ -64,7 +64,7 @@ export default defineConfig({
 
     sidebar: [
       { text: 'News', link: '/news/' },
-      { text: 'Download', link: '/download/' },
+      { text: 'Download', link: '/download' },
       {
         text: 'Documentation',
         link: '/documentation/',
@@ -102,35 +102,35 @@ export default defineConfig({
               },
 
 
-              { text: 'Verifying configuration', link: '/documentation/usersguide/verifyconfig/' },
-              { text: 'Restart Naemon', link: '/documentation/usersguide/startstop/' },
-              { text: 'Configuration Overview', link: '/documentation/usersguide/config/' },
-              { text: 'Main configuration file options', link: '/documentation/usersguide/configmain/' },
-              { text: 'Object configuration overview', link: '/documentation/usersguide/configobject/' },
-              { text: 'Object definitions', link: '/documentation/usersguide/objectdefinitions/' },
-              { text: 'CGI Configuration File Options', link: '/documentation/usersguide/configcgi/' },
-              { text: 'Authentication And Authorization CGIs', link: '/documentation/usersguide/cgiauth/' },
-              { text: 'Plugins', link: '/documentation/usersguide/plugins/' },
-              { text: 'Macros', link: '/documentation/usersguide/macros/' },
-              { text: 'Standard Macros in Naemon', link: '/documentation/usersguide/macrolist/' },
-              { text: 'Host Checks', link: '/documentation/usersguide/hostchecks/' },
-              { text: 'Service Checks', link: '/documentation/usersguide/servicechecks/' },
-              { text: 'Active Checks', link: '/documentation/usersguide/activechecks/' },
-              { text: 'Passive Checks', link: '/documentation/usersguide/passivechecks/' },
-              { text: 'State Types', link: '/documentation/usersguide/statetypes/' },
-              { text: 'Time Periods', link: '/documentation/usersguide/timeperiods/' },
-              { text: 'Network Reachability', link: '/documentation/usersguide/networkreachability/' },
-              { text: 'Notifications', link: '/documentation/usersguide/notifications/' },
-              { text: 'Information on the CGIs', link: '/documentation/usersguide/cgis/' },
-              { text: 'Event handlers', link: '/documentation/usersguide/eventhandlers/' },
-              { text: 'Volatile services', link: '/documentation/usersguide/volatileservices/' },
-              { text: 'Freshness Checks'  , link: '/documentation/usersguide/freshness/' },
-              { text: 'Distributed monitoring' , link: '/documentation/usersguide/distributed/' },
-              { text: 'Redundancy monitoring', link: '/documentation/usersguide/redundancy/' },
-              { text: 'Flap Detection', link: '/documentation/usersguide/flapping/' },
-              { text: 'Notification escalations', link: '/documentation/usersguide/escalations/' },
-              { text: 'On-call rotations', link: '/documentation/usersguide/oncallrotation/' },
-              { text: 'Monitoring Clusters', link: '/documentation/usersguide/clusters/' },
+              { text: 'Verifying configuration', link: '/documentation/usersguide/verifyconfig' },
+              { text: 'Restart Naemon', link: '/documentation/usersguide/startstop' },
+              { text: 'Configuration Overview', link: '/documentation/usersguide/config' },
+              { text: 'Main configuration file options', link: '/documentation/usersguide/configmain' },
+              { text: 'Object configuration overview', link: '/documentation/usersguide/configobject' },
+              { text: 'Object definitions', link: '/documentation/usersguide/objectdefinitions' },
+              { text: 'CGI Configuration File Options', link: '/documentation/usersguide/configcgi' },
+              { text: 'Authentication And Authorization CGIs', link: '/documentation/usersguide/cgiauth' },
+              { text: 'Plugins', link: '/documentation/usersguide/plugins' },
+              { text: 'Macros', link: '/documentation/usersguide/macros' },
+              { text: 'Standard Macros in Naemon', link: '/documentation/usersguide/macrolist' },
+              { text: 'Host Checks', link: '/documentation/usersguide/hostchecks' },
+              { text: 'Service Checks', link: '/documentation/usersguide/servicechecks' },
+              { text: 'Active Checks', link: '/documentation/usersguide/activechecks' },
+              { text: 'Passive Checks', link: '/documentation/usersguide/passivechecks' },
+              { text: 'State Types', link: '/documentation/usersguide/statetypes' },
+              { text: 'Time Periods', link: '/documentation/usersguide/timeperiods' },
+              { text: 'Network Reachability', link: '/documentation/usersguide/networkreachability' },
+              { text: 'Notifications', link: '/documentation/usersguide/notifications' },
+              { text: 'Information on the CGIs', link: '/documentation/usersguide/cgis' },
+              { text: 'Event handlers', link: '/documentation/usersguide/eventhandlers' },
+              { text: 'Volatile services', link: '/documentation/usersguide/volatileservices' },
+              { text: 'Freshness Checks'  , link: '/documentation/usersguide/freshness' },
+              { text: 'Distributed monitoring' , link: '/documentation/usersguide/distributed' },
+              { text: 'Redundancy monitoring', link: '/documentation/usersguide/redundancy' },
+              { text: 'Flap Detection', link: '/documentation/usersguide/flapping' },
+              { text: 'Notification escalations', link: '/documentation/usersguide/escalations' },
+              { text: 'On-call rotations', link: '/documentation/usersguide/oncallrotation' },
+              { text: 'Monitoring Clusters', link: '/documentation/usersguide/clusters' },
 
               { text: 'Naemon Logo', link: '/logo' }
             ]
@@ -141,14 +141,14 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'External Commands', link: '/documentation/developer/externalcommands/' },
-              { text: 'Query Handlers', link: '/documentation/developer/queryhandlers/' },
-              { text: 'Livestatus', link: '/documentation/developer/livestatus/' },
-              { text: 'Naemon Event Broker Modules (NEB)', link: '/documentation/developer/neb_broker/' },
-              { text: 'API Incompatibilities between Nagios 3', link: '/documentation/developer/api-incompat3to4/' },
-              { text: 'Check Result Spoolfolder', link: '/documentation/developer/spoolfolder/' },
-              { text: 'Worker Processes', link: '/documentation/developer/workers/' },
-              { text: 'Build Naemon From Scratch', link: '/documentation/developer/build/' },
-              { text: 'Naemon Website', link: '/documentation/developer/website/' }
+              { text: 'Query Handlers', link: '/documentation/developer/queryhandlers' },
+              { text: 'Livestatus', link: '/documentation/developer/livestatus' },
+              { text: 'Naemon Event Broker Modules (NEB)', link: '/documentation/developer/neb_broker' },
+              { text: 'API Incompatibilities between Nagios 3', link: '/documentation/developer/api-incompat3to4' },
+              { text: 'Check Result Spoolfolder', link: '/documentation/developer/spoolfolder' },
+              { text: 'Worker Processes', link: '/documentation/developer/workers' },
+              { text: 'Build Naemon From Scratch', link: '/documentation/developer/build' },
+              { text: 'Naemon Website', link: '/documentation/developer/website' }
             ]
           },
           {
@@ -156,8 +156,8 @@ export default defineConfig({
             link: '/documentation/faq',
             collapsed: true,
             items: [
-              { text: 'Usersguide guidelines', link: '/documentation/faq/usersguide-guidelines/' },
-              { text: 'Markdown guide', link: '/documentation/faq/vitepress-markdown-guide/' }
+              { text: 'Usersguide guidelines', link: '/documentation/faq/usersguide-guidelines' },
+              { text: 'Markdown guide', link: '/documentation/faq/vitepress-markdown-guide' }
             ]
           }
         ]
