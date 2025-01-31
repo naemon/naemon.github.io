@@ -2,7 +2,7 @@
 editLink: false
 prev:
     text: 'External Commands Reference'
-    link: 'index.html'
+    link: '/documentation/developer/externalcommands/'
 next: false
 breadcrumb: true
 ---

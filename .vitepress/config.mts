@@ -54,7 +54,7 @@ export default defineConfig({
           { text: 'FAQ', link: '/documentation/faq' },
         ]
       },
-      { text: 'News', link: '/news' },
+      { text: 'News', link: '/news/' },
       { text: 'Get involved', link: '/community' },
     ],
 
