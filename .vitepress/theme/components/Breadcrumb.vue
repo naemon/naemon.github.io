@@ -7,7 +7,7 @@ import { Ref, ref } from 'vue';
 
 const { frontmatter, page } = useData();
 const { sidebar } = useSidebar();
-const breadcrumbHtml: Ref<string> = ref('tst');
+const breadcrumbHtml: Ref<string> = ref('');
 
 if (frontmatter.value.breadcrumb === true || typeof frontmatter.value.breadcrumb === 'object') {
 	function resolveFilePath(filePath: string): string {
