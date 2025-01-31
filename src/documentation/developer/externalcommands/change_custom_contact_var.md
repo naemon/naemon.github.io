@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"contact_name","type":"contact"},{"name":"varname","type":"str"},{"name":"varvalue","type":"str"}],"name":"CHANGE_CUSTOM_CONTACT_VAR","description":"Changes the value of a custom contact variable.","classes":["contact"],"argsStr":";contact_name;varname;varvalue","exampleArgStr":";naemonadmin;SOMEVAR;some new value"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

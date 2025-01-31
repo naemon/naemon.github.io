@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[],"name":"DISABLE_EVENT_HANDLERS","description":"Disables host and service event handlers on a program-wide basis.","classes":["process"],"argsStr":"","exampleArgStr":""};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"hostgroup_name","type":"hostgroup"}],"name":"DISABLE_HOSTGROUP_SVC_CHECKS","description":"Disables active checks for all services associated with hosts in a particular hostgroup.","classes":["hostgroup","service"],"argsStr":";hostgroup_name","exampleArgStr":";hostgroup1"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

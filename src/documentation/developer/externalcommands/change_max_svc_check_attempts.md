@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"service","type":"service"},{"name":"check_attempts","type":"int"}],"name":"CHANGE_MAX_SVC_CHECK_ATTEMPTS","description":"Changes the maximum number of check attempts (retries) for a particular service.","classes":["service"],"argsStr":";service;check_attempts","exampleArgStr":";service1;10"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

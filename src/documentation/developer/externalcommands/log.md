@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[],"name":"LOG","description":"Adds custom entry to the default log file.","classes":["process"],"argsStr":";any text","exampleArgStr":";SERVICE NOTE: testhost;event handler restarted service successfully"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

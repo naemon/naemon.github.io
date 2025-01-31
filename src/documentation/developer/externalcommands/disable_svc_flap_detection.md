@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"service","type":"service"}],"name":"DISABLE_SVC_FLAP_DETECTION","description":"Disables flap detection for the specified service.","classes":["service"],"argsStr":";service","exampleArgStr":";service1"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

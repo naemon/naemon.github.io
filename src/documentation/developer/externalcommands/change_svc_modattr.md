@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"service","type":"service"},{"name":"value","type":"ulong"}],"name":"CHANGE_SVC_MODATTR","description":"This command changes the modified attributes value for the specified service. Modified attributes values are used by Naemon to determine which object properties should be retained across program restarts. Thus, modifying the value of the attributes can affect data retention. This is an advanced option and should only be used by people who are intimately familiar with the data retention logic in Naemon.","classes":["service"],"argsStr":";service;value","exampleArgStr":";service1;0"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

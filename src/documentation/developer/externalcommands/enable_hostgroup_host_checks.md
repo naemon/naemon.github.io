@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"hostgroup_name","type":"hostgroup"}],"name":"ENABLE_HOSTGROUP_HOST_CHECKS","description":"Enables active checks for all hosts in a particular hostgroup.","classes":["hostgroup"],"argsStr":";hostgroup_name","exampleArgStr":";hostgroup1"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"host_name","type":"host"}],"name":"ENABLE_HOST_SVC_NOTIFICATIONS","description":"Enables notifications for all services on the specified host. Note that notifications will not be sent out if notifications are disabled on a program-wide basis.","classes":["host","service"],"argsStr":";host_name","exampleArgStr":";host1"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

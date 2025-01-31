@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"service","type":"service"},{"name":"check_timeperiod","type":"timeperiod"}],"name":"CHANGE_SVC_CHECK_TIMEPERIOD","description":"Changes the check timeperiod for a particular service to what is specified by the 'check_timeperiod' option. The 'check_timeperiod' option should be the short name of the timeperod that is to be used as the service check timeperiod. The timeperiod must have been configured in Naemon before it was last (re)started.","classes":["service"],"argsStr":";service;check_timeperiod","exampleArgStr":";service1;24x7"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

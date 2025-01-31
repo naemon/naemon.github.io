@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[],"name":"READ_STATE_INFORMATION","description":"Causes Naemon to load all current monitoring status information from the state retention file. Normally, state retention information is loaded when the Naemon process starts up and before it starts monitoring. WARNING: This command will cause Naemon to discard all current monitoring status information and use the information stored in state retention file! Use with care.","classes":["process"],"argsStr":"","exampleArgStr":""};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

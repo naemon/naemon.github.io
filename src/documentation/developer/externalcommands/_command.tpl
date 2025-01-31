@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {% cmd %};
 </script>
 
-<h3>{{ command.name.replace("_", " ") }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

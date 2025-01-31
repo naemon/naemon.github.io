@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"service","type":"service"}],"name":"ENABLE_SVC_NOTIFICATIONS","description":"Enables notifications for a particular service. Notifications will be sent out for the service only if notifications are enabled on a program-wide basis as well.","classes":["service"],"argsStr":";service","exampleArgStr":";service1"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

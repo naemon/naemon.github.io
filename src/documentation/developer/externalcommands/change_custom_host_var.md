@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"host_name","type":"host"},{"name":"varname","type":"str"},{"name":"varvalue","type":"str"}],"name":"CHANGE_CUSTOM_HOST_VAR","description":"Changes the value of a custom host variable.","classes":["host"],"argsStr":";host_name;varname;varvalue","exampleArgStr":";host1;SOMEVAR;some new value"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"host_name","type":"host"},{"name":"check_attempts","type":"int"}],"name":"CHANGE_MAX_HOST_CHECK_ATTEMPTS","description":"Changes the maximum number of check attempts (retries) for a particular host.","classes":["host"],"argsStr":";host_name;check_attempts","exampleArgStr":";host1;10"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

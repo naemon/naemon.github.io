@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"service","type":"service"}],"name":"ENABLE_PASSIVE_SVC_CHECKS","description":"Enables passive checks for the specified service.","classes":["service"],"argsStr":";service","exampleArgStr":";service1"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

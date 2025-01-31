@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"comment_id","type":"ulong"}],"name":"DEL_SVC_COMMENT","description":"This command is used to delete a specific service comment.","classes":["service","comment"],"argsStr":";comment_id","exampleArgStr":";1234"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

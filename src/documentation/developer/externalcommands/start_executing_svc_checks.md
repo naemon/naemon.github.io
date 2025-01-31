@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[],"name":"START_EXECUTING_SVC_CHECKS","description":"Enables active checks of services on a program-wide basis.","classes":["service"],"argsStr":"","exampleArgStr":""};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

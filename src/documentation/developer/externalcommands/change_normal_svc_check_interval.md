@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"service","type":"service"},{"name":"check_interval","type":"timestamp"}],"name":"CHANGE_NORMAL_SVC_CHECK_INTERVAL","description":"Changes the normal (regularly scheduled) check interval for a particular service","classes":["service"],"argsStr":";service;check_interval","exampleArgStr":";service1;10"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

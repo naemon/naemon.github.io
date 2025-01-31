@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"host_name","type":"host"},{"name":"check_timeperiod","type":"timeperiod"}],"name":"CHANGE_HOST_CHECK_TIMEPERIOD","description":"Changes the valid check period for the specified host.","classes":["host"],"argsStr":";host_name;check_timeperiod","exampleArgStr":";host1;24x7"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"event_handler_command","type":"str"}],"name":"CHANGE_GLOBAL_SVC_EVENT_HANDLER","description":"Changes the global service event handler command to be that specified by the 'event_handler_command' option. The 'event_handler_command' option specifies the short name of the command that should be used as the new service event handler. The command must have been configured in Naemon before it was last (re)started.","classes":["service"],"argsStr":";event_handler_command","exampleArgStr":";restart_service"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

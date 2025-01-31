@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"host_name","type":"host"}],"name":"ENABLE_HOST_NOTIFICATIONS","description":"Enables notifications for a particular host. Notifications will be sent out for the host only if notifications are enabled on a program-wide basis as well.","classes":["host"],"argsStr":";host_name","exampleArgStr":";host1"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"host_name","type":"host"}],"name":"DISABLE_PASSIVE_HOST_CHECKS","description":"Disables acceptance and processing of passive host checks for the specified host.","classes":["host"],"argsStr":";host_name","exampleArgStr":";host1"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

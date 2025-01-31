@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"hostgroup_name","type":"hostgroup"}],"name":"DISABLE_HOSTGROUP_HOST_NOTIFICATIONS","description":"Disables notifications for all hosts in a particular hostgroup. This does not disable notifications for the services associated with the hosts in the hostgroup - see the DISABLE_HOSTGROUP_SVC_NOTIFICATIONS command for that.","classes":["hostgroup"],"argsStr":";hostgroup_name","exampleArgStr":";hostgroup1"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

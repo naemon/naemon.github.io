@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"contact_name","type":"contact"}],"name":"ENABLE_CONTACT_HOST_NOTIFICATIONS","description":"Enables host notifications for a particular contact.","classes":["host","contact"],"argsStr":";contact_name","exampleArgStr":";naemonadmin"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

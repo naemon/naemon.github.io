@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[],"name":"START_OBSESSING_OVER_HOST_CHECKS","description":"Enables processing of host checks via the OCHP command on a program-wide basis.","classes":["host"],"argsStr":"","exampleArgStr":""};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

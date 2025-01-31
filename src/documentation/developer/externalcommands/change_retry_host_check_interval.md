@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"host_name","type":"host"},{"name":"check_interval","type":"timestamp"}],"name":"CHANGE_RETRY_HOST_CHECK_INTERVAL","description":"Changes the retry check interval for a particular host.","classes":["host"],"argsStr":";host_name;check_interval","exampleArgStr":";host1;10"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

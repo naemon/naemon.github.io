@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[],"name":"STOP_OBSESSING_OVER_SVC_CHECKS","description":"Disables processing of service checks via the OCSP command on a program-wide basis.","classes":["service"],"argsStr":"","exampleArgStr":""};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

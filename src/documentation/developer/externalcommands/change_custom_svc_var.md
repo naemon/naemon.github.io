@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"service","type":"service"},{"name":"varname","type":"str"},{"name":"varvalue","type":"str"}],"name":"CHANGE_CUSTOM_SVC_VAR","description":"Changes the value of a custom service variable.","classes":["service"],"argsStr":";service;varname;varvalue","exampleArgStr":";service1;SOMEVAR;some new value"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

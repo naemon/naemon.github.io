@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[],"name":"DISABLE_HOST_FRESHNESS_CHECKS","description":"Disables freshness checks of all hosts on a program-wide basis.","classes":["host"],"argsStr":"","exampleArgStr":""};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

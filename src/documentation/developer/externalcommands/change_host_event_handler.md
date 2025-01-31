@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"host_name","type":"host"},{"name":"event_handler_command","type":"str"}],"name":"CHANGE_HOST_EVENT_HANDLER","description":"Changes the event handler command for a particular host to be that specified by the 'event_handler_command' option. The 'event_handler_command' option specifies the short name of the command that should be used as the new host event handler. The command must have been configured in Naemon before it was last (re)started.","classes":["host"],"argsStr":";host_name;event_handler_command","exampleArgStr":";host1;restart_service"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

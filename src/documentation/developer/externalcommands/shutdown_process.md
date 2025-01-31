@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[],"name":"SHUTDOWN_PROCESS","description":"Shuts down the Naemon process.","classes":["process"],"argsStr":"","exampleArgStr":""};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"downtime_id","type":"ulong"}],"name":"DEL_HOST_DOWNTIME","description":"Deletes the host downtime entry that has an ID number matching the 'downtime_id' argument. If the downtime is currently in effect, the host will come out of scheduled downtime (as long as there are no other overlapping active downtime entries).","classes":["host","downtime"],"argsStr":";downtime_id","exampleArgStr":";1234"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

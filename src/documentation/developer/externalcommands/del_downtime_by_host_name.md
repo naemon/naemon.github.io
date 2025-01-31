@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[],"name":"DEL_DOWNTIME_BY_HOST_NAME","description":"This command deletes all downtimes matching the specified filters.","classes":["host","downtime"],"argsStr":"","exampleArgStr":""};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

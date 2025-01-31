@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"servicegroup_name","type":"servicegroup"}],"name":"ENABLE_SERVICEGROUP_PASSIVE_HOST_CHECKS","description":"Enables the acceptance and processing of passive checks for all hosts that have services that are members of a particular service group.","classes":["host","servicegroup"],"argsStr":";servicegroup_name","exampleArgStr":";servicegroup1"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 

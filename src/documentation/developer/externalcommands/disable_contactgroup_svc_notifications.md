@@ -11,7 +11,7 @@ breadcrumb: true
 const command = {"args":[{"name":"contactgroup_name","type":"contactgroup"}],"name":"DISABLE_CONTACTGROUP_SVC_NOTIFICATIONS","description":"Disables service notifications for all contacts in a particular contactgroup.","classes":["service","contactgroup"],"argsStr":";contactgroup_name","exampleArgStr":";contactgroup1"};
 </script>
 
-<h3>{{ command.name }}</h3>
+<h3>{{ command.name.replace(/_/g, " ") }}</h3>
 
 #### Command Format
 
