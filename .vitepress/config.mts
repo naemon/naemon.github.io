@@ -174,7 +174,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/naemon/naemon.github.io/edit/main/:path'
+      pattern: 'https://github.com/naemon/naemon.github.io/edit/master/src/:path'
     }
   },
 
