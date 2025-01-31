@@ -15,6 +15,9 @@ DOCKERRUN=docker run \
 build: node_modules
 	npm run docs:build
 
+server: node_modules
+	npm run docs:dev
+
 node_modules:
 	npm install --verbose --include=dev && npm cache clean --force
 

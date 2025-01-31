@@ -1,8 +1,12 @@
 ---
-title:  On the road to 1.0
-date: 2014-08-27
-sidebar: false
+title: On the road to 1.0
+date:   2014-08-27
 layout: news
+prev:
+    text: 'News'
+    link: '/news/'
+next: false
+editLink: false
 ---
 
 Summer vacation is over and we are making good progress on the way to a stable

@@ -1,4 +1,5 @@
 <script setup>
+import VPDocFooter from 'vitepress/dist/client/theme-default/components/VPDocFooter.vue'
 import { useData } from 'vitepress'
 const { page, frontmatter } = useData()
 
@@ -39,8 +40,8 @@ h3 {
 
 <template>
 
-  <div class="main vp-doc">
-    <div class="news"><a href="/news/feed.rss"><i class="fas fa-rss"></i> News Feed</a></div>
+  <div class="main vp-doc" style="max-width: 700px; margin: 0 60px;">
+    <div class="news"><a href="/news/feed.xml"><i class="fas fa-rss"></i> News Feed</a></div>
 
     <div style="display: flex; flex-direction: row; justify-content: space-between;">
       <h3>{{ frontmatter.title }}</h3>
@@ -48,6 +49,7 @@ h3 {
     </div>
     <hr>
     <Content />
+    <VPDocFooter>
+    </VPDocFooter>
   </div>
-
 </template>

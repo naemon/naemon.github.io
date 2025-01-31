@@ -1,8 +1,12 @@
 ---
-title:  "Quality work"
-date: 2014-02-01
-sidebar: false
+title: "Quality work"
+date:   2014-02-01
 layout: news
+prev:
+    text: 'News'
+    link: '/news/'
+next: false
+editLink: false
 ---
 
 One of our frustrations with Nagios is that while it does have a lot of tests, very few of them actually pass. That's OK, though, because they're executed very rarely.

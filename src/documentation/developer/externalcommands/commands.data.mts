@@ -22,14 +22,14 @@ function hasArg(command: Command, argName: string): boolean {
   return command.args.some((arg) => (arg.type === argName || arg.name === argName));
 }
 
-declare const data: Command[]
+let data: Command[]
 export { data }
 
 // parse external commands from c source
 async function getCommands(): Promise<Command[]> {
   await fetchSource();
 
-  const data: Command[] = [];
+  data = [];
   var text = fs.readFileSync(CACHE_FILE, 'utf-8');
 
   text = text.replace(/(\/\*.*?\*\/)/g, '');

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Naemon</title>
+        <link>https://www.naemon.io</link>
+        <description>Naemon news blog</description>
+        <lastBuildDate>Fri, 31 Jan 2025 21:37:33 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <image>
+            <title>Naemon</title>
+            <url>https://www.naemon.io/public/images/logo/logo_small.png</url>
+            <link>https://www.naemon.io</link>
+        </image>
+        <copyright>Copyright (c) 2025-present, Naemon Team</copyright>
+        <item>
+            <title><![CDATA[Release 1.4.3]]></title>
+            <link>https://www.naemon.io/news/2024-11-19-release-1.4.3</link>
+            <guid>https://www.naemon.io/news/2024-11-19-release-1.4.3</guid>
+            <pubDate>Tue, 19 Nov 2024 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.4.3 of naemon-core and naemon-livestatus. This release
+contains performance improvements and some bugfixes as listed in detail on the changelog
+page.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.4.3 of naemon-core and naemon-livestatus. This release
+contains performance improvements and some bugfixes as listed in detail on the changelog
+page.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Open Source Monitoring Conference 2024]]></title>
+            <link>https://www.naemon.io/news/2024-11-13-OSMC-2024</link>
+            <guid>https://www.naemon.io/news/2024-11-13-OSMC-2024</guid>
+            <pubDate>Wed, 13 Nov 2024 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>We are excited to attend the Open Source Monitoring Conference 2024, which will take place from 19 - 21 November in Nuremberg.
+The OSMC is a great opportunity for professionals and enthusiasts in the open source monitoring community to come together, share knowledge, and network.</p>
+<p>If you would like to get in touch with the Naemon Developers Sven and Daniel, this is your chance!</p>
+<p>We look forward to seeing you there!</p>
+]]></description>
+            <content:encoded><![CDATA[<p>We are excited to attend the Open Source Monitoring Conference 2024, which will take place from 19 - 21 November in Nuremberg.
+The OSMC is a great opportunity for professionals and enthusiasts in the open source monitoring community to come together, share knowledge, and network.</p>
+<p>If you would like to get in touch with the Naemon Developers Sven and Daniel, this is your chance!</p>
+<p>We look forward to seeing you there!</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.4.2]]></title>
+            <link>https://www.naemon.io/news/2024-01-04-release-1.4.2</link>
+            <guid>https://www.naemon.io/news/2024-01-04-release-1.4.2</guid>
+            <pubDate>Thu, 04 Jan 2024 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.4.2 of naemon-core and naemon-livestatus. This release
+contains performance improvements and some bugfixes as listed in detail on the changelog
+page.</p>
+<p>Make sure to rebuild or update all NEB modules because the <code>CURRENT_NEB_API_VERSION</code>
+has changed. For example use naemon-livestatus &gt;= 1.4.2</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.4.2 of naemon-core and naemon-livestatus. This release
+contains performance improvements and some bugfixes as listed in detail on the changelog
+page.</p>
+<p>Make sure to rebuild or update all NEB modules because the <code>CURRENT_NEB_API_VERSION</code>
+has changed. For example use naemon-livestatus &gt;= 1.4.2</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.4.1]]></title>
+            <link>https://www.naemon.io/news/2023-02-02-release-1.4.1</link>
+            <guid>https://www.naemon.io/news/2023-02-02-release-1.4.1</guid>
+            <pubDate>Thu, 02 Feb 2023 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.4.1 of naemon-core and naemon-livestatus. This release
+includes bugfixes only and fixes a memory leak along with some packaging cleanup.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.4.1 of naemon-core and naemon-livestatus. This release
+includes bugfixes only and fixes a memory leak along with some packaging cleanup.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.4.0]]></title>
+            <link>https://www.naemon.io/news/2022-11-11-release-1.4.0</link>
+            <guid>https://www.naemon.io/news/2022-11-11-release-1.4.0</guid>
+            <pubDate>Fri, 11 Nov 2022 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.4.0 of naemon-core and naemon-livestatus. This release
+includes a new internal command to expire acknowledgements, and a few bugfixes.</p>
+<p>Due to object structure changes, NEB modules should be re-built when upgrading to 1.4.0</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.4.0 of naemon-core and naemon-livestatus. This release
+includes a new internal command to expire acknowledgements, and a few bugfixes.</p>
+<p>Due to object structure changes, NEB modules should be re-built when upgrading to 1.4.0</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.3.1]]></title>
+            <link>https://www.naemon.io/news/2022-04-22-release-1.3.1</link>
+            <guid>https://www.naemon.io/news/2022-04-22-release-1.3.1</guid>
+            <pubDate>Fri, 22 Apr 2022 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.3.1 of naemon-core and naemon-livestatus. This
+is a maintenance release with not too many changes.</p>
+<ul>
+<li>the main homepage url of the naemon project has changed to <a href="https://www.naemon.io" target="_blank" rel="noreferrer">https://www.naemon.io</a></li>
+<li>commands containing a tilde sign are now passed to the shell.</li>
+<li>updating the last_update attribute has been made more reliable.</li>
+<li>the livestatus python api has been made compatible with python 2 &amp; 3.</li>
+</ul>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.3.1 of naemon-core and naemon-livestatus. This
+is a maintenance release with not too many changes.</p>
+<ul>
+<li>the main homepage url of the naemon project has changed to <a href="https://www.naemon.io" target="_blank" rel="noreferrer">https://www.naemon.io</a></li>
+<li>commands containing a tilde sign are now passed to the shell.</li>
+<li>updating the last_update attribute has been made more reliable.</li>
+<li>the livestatus python api has been made compatible with python 2 &amp; 3.</li>
+</ul>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.3.0]]></title>
+            <link>https://www.naemon.io/news/2021-11-03-release-1.3.0</link>
+            <guid>https://www.naemon.io/news/2021-11-03-release-1.3.0</guid>
+            <pubDate>Wed, 03 Nov 2021 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.3.0 of naemon-core and naemon-livestatus. There
+is a new vault broker api along with more secure environment handling.</p>
+<p>Having environment variables in your command line in the form of:</p>
+<p><code>VARIABLE=value... $USER1$/check_something args...</code></p>
+<p>Then the environment variable is removed from the command line and set before
+the check command is started. Previously the hole command would have been
+passed to the shell and the variables would be visible in the ps process list.</p>
+<p>The vault broker api adds some extensions to the NEB api to move macro handling
+to neb modules. This makes it possible to fill macro values dynamically from
+broker modules. There is an example which uses a vim encrypted resource.cfg like
+vault at <a href="https://github.com/naemon/naemon-vimcrypt-vault-broker" target="_blank" rel="noreferrer">https://github.com/naemon/naemon-vimcrypt-vault-broker</a>
+But usage is not limited to encrypted macros, this is just an example of how this
+new api can be used.
+See an example in the <a href="/documentation/developer/neb_broker.html">Vault API documentation</a>.</p>
+<p>The Livestatus module got 2 bugfixes regarding an issue which prevented naemon
+reloads when using the tcp listener and another issue where contacts would be
+listed multiple times.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.3.0 of naemon-core and naemon-livestatus. There
+is a new vault broker api along with more secure environment handling.</p>
+<p>Having environment variables in your command line in the form of:</p>
+<p><code>VARIABLE=value... $USER1$/check_something args...</code></p>
+<p>Then the environment variable is removed from the command line and set before
+the check command is started. Previously the hole command would have been
+passed to the shell and the variables would be visible in the ps process list.</p>
+<p>The vault broker api adds some extensions to the NEB api to move macro handling
+to neb modules. This makes it possible to fill macro values dynamically from
+broker modules. There is an example which uses a vim encrypted resource.cfg like
+vault at <a href="https://github.com/naemon/naemon-vimcrypt-vault-broker" target="_blank" rel="noreferrer">https://github.com/naemon/naemon-vimcrypt-vault-broker</a>
+But usage is not limited to encrypted macros, this is just an example of how this
+new api can be used.
+See an example in the <a href="/documentation/developer/neb_broker.html">Vault API documentation</a>.</p>
+<p>The Livestatus module got 2 bugfixes regarding an issue which prevented naemon
+reloads when using the tcp listener and another issue where contacts would be
+listed multiple times.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[IRC]]></title>
+            <link>https://www.naemon.io/news/2021-05-27-irc</link>
+            <guid>https://www.naemon.io/news/2021-05-27-irc</guid>
+            <pubDate>Thu, 27 May 2021 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Due to the recent changes on freenode, the official Naemon support irc channel has moved to libera.chat.
+The new address is: irc://libera.chat/naemon and there is also a web chat available via
+<a href="https://kiwiirc.com/nextclient/irc.libera.chat/#naemon" target="_blank" rel="noreferrer">kiwiirc.com</a>
+Please update you irc clients and say hello if you like.</p>
+<p>The <a href="/community.html">community</a> section always contains a list of ways to contact us.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Due to the recent changes on freenode, the official Naemon support irc channel has moved to libera.chat.
+The new address is: irc://libera.chat/naemon and there is also a web chat available via
+<a href="https://kiwiirc.com/nextclient/irc.libera.chat/#naemon" target="_blank" rel="noreferrer">kiwiirc.com</a>
+Please update you irc clients and say hello if you like.</p>
+<p>The <a href="/community.html">community</a> section always contains a list of ways to contact us.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.2.4]]></title>
+            <link>https://www.naemon.io/news/2021-03-03-release-1.2.4</link>
+            <guid>https://www.naemon.io/news/2021-03-03-release-1.2.4</guid>
+            <pubDate>Wed, 03 Mar 2021 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.2.4 of naemon-core and naemon-livestatus. We made some performance improvements
+during the config check when using many servicegroups. And Livestatus has been made way faster when accessing
+the contacts column especially when having many contacts and contactgroups.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.2.4 of naemon-core and naemon-livestatus. We made some performance improvements
+during the config check when using many servicegroups. And Livestatus has been made way faster when accessing
+the contacts column especially when having many contacts and contactgroups.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.2.3]]></title>
+            <link>https://www.naemon.io/news/2020-12-07-release-1.2.3</link>
+            <guid>https://www.naemon.io/news/2020-12-07-release-1.2.3</guid>
+            <pubDate>Mon, 07 Dec 2020 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.2.3 of naemon-core as a bugfix release. The only change fixes an issue
+on debian and ubuntu after fully migrating to systemd.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.2.3 of naemon-core as a bugfix release. The only change fixes an issue
+on debian and ubuntu after fully migrating to systemd.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.2.2]]></title>
+            <link>https://www.naemon.io/news/2020-11-13-release-1.2.2</link>
+            <guid>https://www.naemon.io/news/2020-11-13-release-1.2.2</guid>
+            <pubDate>Fri, 13 Nov 2020 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.2.2 of naemon-core and naemon-livestatus. This
+release contains some bugfixes and improves synchronization when using
+<a href="https://github.com/sni/lmd" target="_blank" rel="noreferrer">LMD</a>.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.2.2 of naemon-core and naemon-livestatus. This
+release contains some bugfixes and improves synchronization when using
+<a href="https://github.com/sni/lmd" target="_blank" rel="noreferrer">LMD</a>.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.2.0]]></title>
+            <link>https://www.naemon.io/news/2020-02-17-release-1.2.0</link>
+            <guid>https://www.naemon.io/news/2020-02-17-release-1.2.0</guid>
+            <pubDate>Mon, 17 Feb 2020 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.2.0 of naemon-core and naemon-livestatus. Thanks to all
+people who were involved in this release. This release contains some bugfixes along with
+a new skip check option. For Livestatus support for TCP sockets and the statehist table
+has been added.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.2.0 of naemon-core and naemon-livestatus. Thanks to all
+people who were involved in this release. This release contains some bugfixes along with
+a new skip check option. For Livestatus support for TCP sockets and the statehist table
+has been added.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.1.0]]></title>
+            <link>https://www.naemon.io/news/2019-09-05-release-1.1.0</link>
+            <guid>https://www.naemon.io/news/2019-09-05-release-1.1.0</guid>
+            <pubDate>Thu, 05 Sep 2019 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.1.0 of naemon-core and naemon-livestatus. Thanks to all
+people who were involved in this release. This release contains several bugfixes along
+with performance improvements on initial configuration parsing and a new livestatus column
+to improve synchronisation.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.1.0 of naemon-core and naemon-livestatus. Thanks to all
+people who were involved in this release. This release contains several bugfixes along
+with performance improvements on initial configuration parsing and a new livestatus column
+to improve synchronisation.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.0.10]]></title>
+            <link>https://www.naemon.io/news/2019-03-19-release-1.0.10</link>
+            <guid>https://www.naemon.io/news/2019-03-19-release-1.0.10</guid>
+            <pubDate>Tue, 19 Mar 2019 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.0.10 of naemon-core and naemon-livestatus. Thanks to all
+people who were involved in this release. This release contains a bugfix for the newlinehandling
+in spoolfiles and new service parents and host/service-dependency columns for livestatus.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.0.10 of naemon-core and naemon-livestatus. Thanks to all
+people who were involved in this release. This release contains a bugfix for the newlinehandling
+in spoolfiles and new service parents and host/service-dependency columns for livestatus.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.0.9]]></title>
+            <link>https://www.naemon.io/news/2018-12-18-release-1.0.9</link>
+            <guid>https://www.naemon.io/news/2018-12-18-release-1.0.9</guid>
+            <pubDate>Tue, 18 Dec 2018 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.0.9 of naemon-core and naemon-livestatus. Thanks to all
+people who were involved in this release. This release contains various bugfixes as well
+two new configuration options, host_down_disable_service_checks and retained_scheduling_randomize_window.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.0.9 of naemon-core and naemon-livestatus. Thanks to all
+people who were involved in this release. This release contains various bugfixes as well
+two new configuration options, host_down_disable_service_checks and retained_scheduling_randomize_window.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[CVEs]]></title>
+            <link>https://www.naemon.io/news/2018-08-13-cve</link>
+            <guid>https://www.naemon.io/news/2018-08-13-cve</guid>
+            <pubDate>Mon, 13 Aug 2018 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>You might have read about the recent discovery of some security issues in nagios 4 and might be wondering if naemon is affected to.</p>
+<ul>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2018-13441" target="_blank" rel="noreferrer">CVE-2018-13441</a></li>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2018-13457" target="_blank" rel="noreferrer">CVE-2018-13457</a></li>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2018-13458" target="_blank" rel="noreferrer">CVE-2018-13458</a></li>
+</ul>
+<p>The good news is, Naemon is not affected by those issues.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>You might have read about the recent discovery of some security issues in nagios 4 and might be wondering if naemon is affected to.</p>
+<ul>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2018-13441" target="_blank" rel="noreferrer">CVE-2018-13441</a></li>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2018-13457" target="_blank" rel="noreferrer">CVE-2018-13457</a></li>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2018-13458" target="_blank" rel="noreferrer">CVE-2018-13458</a></li>
+</ul>
+<p>The good news is, Naemon is not affected by those issues.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.0.8]]></title>
+            <link>https://www.naemon.io/news/2018-07-16-release-1.0.8</link>
+            <guid>https://www.naemon.io/news/2018-07-16-release-1.0.8</guid>
+            <pubDate>Mon, 16 Jul 2018 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.0.8 of naemon-core and naemon-livestatus. Thanks to all
+people who were involved in this release. This release addresses some issues during package
+updates. If you still have problems, try to remove the obsolute naemon-tools package first.
+Naemon tools have been merged into the naemon-core package.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.0.8 of naemon-core and naemon-livestatus. Thanks to all
+people who were involved in this release. This release addresses some issues during package
+updates. If you still have problems, try to remove the obsolute naemon-tools package first.
+Naemon tools have been merged into the naemon-core package.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.0.7]]></title>
+            <link>https://www.naemon.io/news/2018-06-01-release-1.0.7</link>
+            <guid>https://www.naemon.io/news/2018-06-01-release-1.0.7</guid>
+            <pubDate>Fri, 01 Jun 2018 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.0.7 of naemon-core and naemon-livestatus. Thanks to all
+people who were involved in this release. This release includes general improvements and bugfixes.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.0.7 of naemon-core and naemon-livestatus. Thanks to all
+people who were involved in this release. This release includes general improvements and bugfixes.</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[CVE-2016-9565 and CVE-2016-9566]]></title>
+            <link>https://www.naemon.io/news/2017-11-01-vulnerabilities</link>
+            <guid>https://www.naemon.io/news/2017-11-01-vulnerabilities</guid>
+            <pubDate>Wed, 01 Nov 2017 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>A few few weeks ago two CVEs have been announced for the Nagios core and Nagios webinterface. Since Naemon inherits some code
+of Nagios, people might wonder if Naemon is also affected by those issues.</p>
+<h2 id="cve-2016-9565" tabindex="-1">CVE-2016-9565 <a class="header-anchor" href="#cve-2016-9565" aria-label="Permalink to &quot;CVE-2016-9565&quot;">&ZeroWidthSpace;</a></h2>
+<p>This is an issue with the Nagios webinterface which never made it into the Naemon codebase since we use Thruk
+as default web interface. So this issue simply doesn't exist in Naemon.</p>
+<p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9565" target="_blank" rel="noreferrer">Details about CVE-2016-9565</a></p>
+<h2 id="cve-2016-9566" tabindex="-1">CVE-2016-9566 <a class="header-anchor" href="#cve-2016-9566" aria-label="Permalink to &quot;CVE-2016-9566&quot;">&ZeroWidthSpace;</a></h2>
+<p>This issue uses the fact that systemV init scripts start the Nagios process as root and then the process itself drops privileges and continues as normal user. Naemon inherited that issue so you might be affected.</p>
+<p>However, you are not affected by this issue if you run Naemon either in <a href="https://labs.consol.de/omd/" target="_blank" rel="noreferrer">OMD-Labs</a> or on any Systemd based system like the OP5 Monitor.</p>
+<p>We are working on a fix right now and there will be a new release soon.</p>
+<p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9566" target="_blank" rel="noreferrer">Details about CVE-2016-9566</a></p>
+]]></description>
+            <content:encoded><![CDATA[<p>A few few weeks ago two CVEs have been announced for the Nagios core and Nagios webinterface. Since Naemon inherits some code
+of Nagios, people might wonder if Naemon is also affected by those issues.</p>
+<h2 id="cve-2016-9565" tabindex="-1">CVE-2016-9565 <a class="header-anchor" href="#cve-2016-9565" aria-label="Permalink to &quot;CVE-2016-9565&quot;">&ZeroWidthSpace;</a></h2>
+<p>This is an issue with the Nagios webinterface which never made it into the Naemon codebase since we use Thruk
+as default web interface. So this issue simply doesn't exist in Naemon.</p>
+<p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9565" target="_blank" rel="noreferrer">Details about CVE-2016-9565</a></p>
+<h2 id="cve-2016-9566" tabindex="-1">CVE-2016-9566 <a class="header-anchor" href="#cve-2016-9566" aria-label="Permalink to &quot;CVE-2016-9566&quot;">&ZeroWidthSpace;</a></h2>
+<p>This issue uses the fact that systemV init scripts start the Nagios process as root and then the process itself drops privileges and continues as normal user. Naemon inherited that issue so you might be affected.</p>
+<p>However, you are not affected by this issue if you run Naemon either in <a href="https://labs.consol.de/omd/" target="_blank" rel="noreferrer">OMD-Labs</a> or on any Systemd based system like the OP5 Monitor.</p>
+<p>We are working on a fix right now and there will be a new release soon.</p>
+<p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9566" target="_blank" rel="noreferrer">Details about CVE-2016-9566</a></p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.0.6]]></title>
+            <link>https://www.naemon.io/news/2017-01-23-release-1.0.6</link>
+            <guid>https://www.naemon.io/news/2017-01-23-release-1.0.6</guid>
+            <pubDate>Mon, 23 Jan 2017 12:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today we released the version 1.0.6 of naemon-core and naemon-livestatus. Thanks to all
+people who were involved in this release. This release fixes a critical bug (see previous news entry).</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></description>
+            <content:encoded><![CDATA[<p>Today we released the version 1.0.6 of naemon-core and naemon-livestatus. Thanks to all
+people who were involved in this release. This release fixes a critical bug (see previous news entry).</p>
+<p>Head on to <a href="/download.html">the download section</a> or check out the <a href="/documentation/usersguide/whatsnew.html">changelog</a> for
+a detailed list of changes.</p>
+]]></content:encoded>
+            <author>team@naemon.io (Naemon Team)</author>
+        </item>
+    </channel>
+</rss>

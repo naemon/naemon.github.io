@@ -1,8 +1,12 @@
 ---
-title:  "Release 0.8.0"
-date: 2014-02-14
-sidebar: false
+title: "Release 0.8.0"
+date:   2014-02-14
 layout: news
+prev:
+    text: 'News'
+    link: '/news/'
+next: false
+editLink: false
 ---
 
 Almost half a year after we started this project we can now announce the first release.
@@ -24,5 +28,5 @@ or not.
 Naemon is a community project. So if you like this project, talk about it - or even better,
 help make it better. See the [community page](/community) on how you can help.
 
-Now continue to [the download section](/download) or check out the [changelog](/documentation/usersguide/whatsnew.html) for
+Now continue to [the download section](/download) or check out the [changelog](/documentation/usersguide/whatsnew) for
 a detailed list of changes.
