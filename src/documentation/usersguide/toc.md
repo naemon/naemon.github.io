@@ -1,6 +1,5 @@
 # User Documentation
 
-
 ## About
 
 [What is Naemon?](about#whatis) :white_check_mark:
@@ -13,8 +12,6 @@
 
 [Downloading the latest version](about#downloading-the-latest-version) :white_check_mark:
 
-
-
 ## Release Notes
 
 [What's new in this version](whatsnew) :white_check_mark:
@@ -23,14 +20,11 @@
 
 [Configuration Incompatibilities Nagios 3 -> Naemon](config-incompat3to4) :white_check_mark:
 
-
-
 ## Support
 
 [Support](support) :white_check_mark:
 
 [Community](/community) :white_check_mark:
-
 
 ## Getting Started
 
@@ -62,20 +56,11 @@
 
 [Object definitions](objectdefinitions) :white_check_mark:
 
-[CGI configuration file options](configcgi) :white_check_mark:
-
-[Configuring authorization for the CGIs](cgiauth) :white_check_mark:
-
-
-
 ## Running Naemon
 
 [Verifying your configuration](verifyconfig) :white_check_mark:
 
 [Starting and stopping Naemon](startstop) :white_check_mark:
-
-
-
 
 ## The Basics {#basics}
 
@@ -100,10 +85,6 @@
 [Determining status and reachability of network hosts](networkreachability) :white_check_mark:
 
 [Notifications](notifications) :white_check_mark:
-
-[Information on the CGIs](cgis) :white_check_mark:
-
-
 
 ## Advanced Topics
 
@@ -143,18 +124,13 @@
 
 [Passive host state translation](passivestatetranslation)
 
-[Custom CGI headers and footers](cgiincludes)
-
 [Object inheritance](objectinheritance)
 
 [Time-saving tips for object definitions](objecttricks)
 
-
 ## Security and Performance Tuning
 
 [Security considerations](security)
-
-[Enhanced CGI security and authentication](cgisecurity)
 
 [Tuning Naemon for maximum performance](tuning)
 
@@ -194,8 +170,6 @@
 
 [Nagios Exchange](http://exchange.nagios.org/) :white_check_mark:
 
-
-
 ## Integration With Other Software
 
 [Integration Overview](integration)
@@ -203,8 +177,6 @@
 [SNMP Traps](int-snmptrap)
 
 [TCP Wrappers](int-tcpwrappers)
-
-
 
 ## Development
 
