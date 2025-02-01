@@ -135,8 +135,6 @@
 
 [Scheduled host and service downtime](downtime)
 
-[Using the embedded Perl interpreter](embeddedperl)
-
 [Adaptive monitoring](adaptive)
 
 [Predictive dependency checks](dependencychecks)
