@@ -139,7 +139,7 @@ export default defineConfig({
             items: [
               { text: 'External Commands', link: '/documentation/developer/externalcommands/' },
               { text: 'Query Handlers', link: '/documentation/developer/queryhandlers' },
-              { text: 'Livestatus', link: '/documentation/developer/livestatus' },
+              { text: 'Livestatus', link: '/documentation/usersguide/livestatus' },
               { text: 'Naemon Event Broker Modules (NEB)', link: '/documentation/developer/neb_broker' },
               { text: 'API Incompatibilities between Nagios 3', link: '/documentation/developer/api-incompat3to4' },
               { text: 'Check Result Spoolfolder', link: '/documentation/developer/spoolfolder' },

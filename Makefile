@@ -1,5 +1,6 @@
 #!/usr/bin/make -f
 
+SHELL=bash
 PWD=$(shell pwd)
 DOCKERRUN=docker run \
 	--rm -it \
@@ -31,3 +32,10 @@ docker-server:
 
 clean:
 	rm -rf node_modules
+
+update_livestatus_json:
+	docker run --rm -ti \
+		consol/omd-labs-rocky:nightly \
+		bash -c "omd start >/dev/null; sudo su - demo -c \"echo -e 'GET columns\nColumns: table name description type\nOutputFormat: json\n' | lq\"" \
+	> src/documentation/usersguide/livestatus.columns.json
+	fromdos src/documentation/usersguide/livestatus.columns.json

@@ -81,3 +81,8 @@
 DIV.VPDoc {
     padding-top: 20px !important;
 }
+
+TABLE.livestatus {
+    width: 100%;
+    display: table;
+}
