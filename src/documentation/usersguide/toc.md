@@ -158,7 +158,7 @@
 
 [PNP](addons#pnp)
 
-[Graphing Performance Info With MRTG](mrtggraphs)
+[Graphing Performance Info](graphs)
 
 [Merlin](addons#merlin)
 
