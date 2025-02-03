@@ -33,7 +33,7 @@ helpful hints on creating Perl plugins that work properly with the embedded inte
 It should be noted that "ePN", as used in this documentation, refers to embedded Perl Mod-Gearman,
 or if you prefer, Mod-Gearman compiled with an embedded Perl interpreter.
 
-![Embedded Perl Interpreter](/images/usersguide/svg/epn.svg)
+![Embedded Perl Interpreter](/images/usersguide/svg/epn.svg) {.img-bg}
 
 ### Advantages
 
