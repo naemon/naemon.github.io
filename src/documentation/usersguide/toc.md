@@ -108,7 +108,7 @@
 
 [Monitoring service and host clusters](clusters) :white_check_mark:
 
-[Host and service dependencies](dependencies)
+[Host and service dependencies](dependencies) :white_check_mark:
 
 [State stalking](stalking)
 

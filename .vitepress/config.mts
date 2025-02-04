@@ -125,6 +125,7 @@ export default defineConfig({
               { text: 'Notification escalations', link: '/documentation/usersguide/escalations' },
               { text: 'On-call rotations', link: '/documentation/usersguide/oncallrotation' },
               { text: 'Monitoring Clusters', link: '/documentation/usersguide/clusters' },
+              { text: 'Host and Service Dependencies', link: '/documentation/usersguide/dependencies' },
 
               { text: 'Naemon Logo', link: '/logo' }
             ]
