@@ -126,6 +126,7 @@ export default defineConfig({
               { text: 'On-call rotations', link: '/documentation/usersguide/oncallrotation' },
               { text: 'Monitoring Clusters', link: '/documentation/usersguide/clusters' },
               { text: 'Host and Service Dependencies', link: '/documentation/usersguide/dependencies' },
+              { text: 'State stalking', link: '/documentation/usersguide/stalking' },
 
               { text: 'Naemon Logo', link: '/logo' }
             ]

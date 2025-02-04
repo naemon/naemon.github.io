@@ -110,7 +110,7 @@
 
 [Host and service dependencies](dependencies) :white_check_mark:
 
-[State stalking](stalking)
+[State stalking](stalking) :white_check_mark:
 
 [Performance data](perfdata)
 

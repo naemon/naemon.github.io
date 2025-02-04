@@ -1,13 +1,7 @@
----
-layout: doctoc
-title: State Stalking
----
-
-<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="volatileservices.html">Volatile Services</a>
+# State Stalking
 
 
-
-### Introduction
+## Introduction
 
 State "stalking" is a feature which is probably not going to used by most users.
 
@@ -21,7 +15,7 @@ As you'll see, it can be very helpful to you in later analysis of the log files.
 
 
 
-### How Does It Work?
+## How Does It Work?
 
 Under normal circumstances, the result of a host or service check is only logged
 if the host or service has changed state since it was last checked.
@@ -34,25 +28,24 @@ check differs from the output from the previous check.
 
 Take the following example of eight consecutive checks of a service:
 
-<table border="1">
-<tr><th>Service Check #:</th><th>Service State:</th><th>Service Check Output:</th><th>Logged Normally</th><th>Logged With Stalking</th></tr>
-<tr><td>x</td><td>OK</td><td>RAID array optimal</td><td>-</td><td>-</td></tr>
-<tr><td>x+1</td><td>OK</td><td>RAID array optimal</td><td>-</td><td>-</td></tr>
-<tr><td>x+2</td><td>WARNING</td><td>RAID array degraded (1 drive bad, 1 hot spare rebuilding)</td><td><img src="images/checkmark.png" alt="Yes"></td><td><img src="images/checkmark.png" alt="Yes"></td></tr>
-<tr><td>x+3</td><td>CRITICAL</td><td>RAID array degraded (2 drives bad, 1 host spare online, 1 hot spare rebuilding)</td><td><img src="images/checkmark.png" alt="Yes"></td><td><img src="images/checkmark.png" alt="Yes"></td></tr>
-<tr><td>x+4</td><td>CRITICAL</td><td>RAID array degraded (3 drives bad, 2 hot spares online)</td><td>-</td><td><img src="images/checkmark.png" alt="Yes"></td></tr>
-<tr><td>x+5</td><td>CRITICAL</td><td>RAID array failed</td><td>-</td><td><img src="images/checkmark.png" alt="Yes"></td></tr>
-<tr><td>x+6</td><td>CRITICAL</td><td>RAID array failed</td><td>-</td><td>-</td></tr>
-<tr><td>x+7</td><td>CRITICAL</td><td>RAID array failed</td><td>-</td><td>-</td></tr>
-</table>
+| Service Check #    | Service State  |                              Service Check Output                               | Logged Normally    | Logged With Stalking |
+|:-------------------|:---------------|:--------------------------------------------------------------------------------|:------------------:|:--------------------:|
+| `x`                | OK             | RAID array optimal                                                              | -                  | -                    |
+| `x+1`              | OK             | RAID array optimal                                                              | -                  | -                    |
+| `x+2`              | WARNING        | RAID array degraded (1 drive bad, 1 hot spare rebuilding)                       | :white_check_mark: | :white_check_mark:   |
+| `x+3`              | CRITICAL       | RAID array degraded (2 drives bad, 1 host spare online, 1 hot spare rebuilding) | :white_check_mark: | :white_check_mark:   |
+| `x+4`              | CRITICAL       | RAID array degraded (3 drives bad, 2 hot spares online)                         | -                  | :white_check_mark:   |
+| `x+5`              | CRITICAL       | RAID array failed                                                               | -                  | :white_check_mark:   |
+| `x+6`              | CRITICAL       | RAID array failed                                                               | -                  | -                    |
+| `x+7`              | CRITICAL       | RAID array failed                                                               | -                  | -                    |
 
 Given this sequence of checks, you would normally only see two log entries for
 this catastrophe.
 
-The first one would occur at service check x+2 when the service changed from an OK
+The first one would occur at service check `x+2` when the service changed from an OK
 state to a WARNING state.
 
-The second log entry would occur at service check x+3 when the service changed from a WARNING state to a CRITICAL state.
+The second log entry would occur at service check `x+3` when the service changed from a WARNING state to a CRITICAL state.
 
 For whatever reason, you may like to have the complete history of this catastrophe
 in your log files.
@@ -61,7 +54,7 @@ Perhaps to help explain to your manager how quickly the situation got out of con
 perhaps just to laugh at it over a couple of drinks at the local pub...
 
 Well, if you had enabled stalking of this service for CRITICAL states, you would
-have events at x+4 and x+5 logged in addition to the events at x+2 and x+3.
+have events at `x+4` and `x+5` logged in addition to the events at `x+2` and `x+3`.
 
 Why is this?
 
@@ -85,7 +78,7 @@ returned web page.
 
 
 
-### Should I Enable Stalking?
+## Should I Enable Stalking?
 
 First, you must decide if you have a real need to analyze archived log data to
 find the exact cause of a problem.
@@ -106,28 +99,28 @@ is no reason to enable stalking for that state.
 
 
 
-### How Do I Enable Stalking?
+## How Do I Enable Stalking?
 
-You can enable state stalking for hosts and services by using the <i>stalking_options</i>
-directive in <a href="configobject.html">host and service definitions</a>.
+You can enable state stalking for hosts and services by using the `stalking_options`
+directive in [host and service definitions](configobject).
 
 
 
-### How Does Stalking Differ From Volatile Services?
+## How Does Stalking Differ From Volatile Services?
 
-<a href="volatileservices.html">Volatile services</a> are similar, but will cause
+[Volatile services](volatileservices) are similar, but will cause
 notifications and event handlers to run. Stalking is purely for logging purposes.
 
 
 
-### Caveats
+## Caveats
 
 You should be aware that there are some potential pitfalls with enabling stalking.
 
-These all relate to the reporting functions found in various <a href="cgis.html">CGIs</a> (alert summary, etc.).
+These all relate to the reporting functions found in various [CGIs](cgis) (alert summary, etc.).
 
 Because state stalking will cause additional alert entries to be logged, the data produced
 by the reports will show evidence of inflated numbers of alerts.
 
-As a general rule, it is recommended that you do <i>not</i> enable stalking for hosts
+As a general rule, it is recommended that you do _not_ enable stalking for hosts
 and services without thinking things through.
