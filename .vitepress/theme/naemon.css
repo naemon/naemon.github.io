@@ -22,6 +22,10 @@
     font-weight: bold;
 }
 
+.default-text {
+    color: var(--vp-c-text-1);
+}
+
 .text-red {
     color: var(--red-light) !important;
 }
@@ -29,6 +33,16 @@
 .dark .text-red {
     color: var(--red-dark) !important;
 }
+
+/* Overwrite the color of the flapping formular svg */
+.svg-color img {
+    filter: invert(0) sepia(1) saturate(5) hue-rotate(175deg);
+}
+
+.dark .svg-color img {
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+}
+
 
 /* Adds a background color to images to be better visible */
 .img-bg {

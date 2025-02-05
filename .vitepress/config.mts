@@ -9,9 +9,12 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
 
-  markdown: {
-    math: true
-  },
+  // The Math Extensions (mathjax3) requires to escape $-sign. The Naemon documentation uses a lot of $-signs
+  // So instead of escaping all $-signs, we disable the math extension and exported the generated SVG file into a file. (flapping.md)
+  // see: https://meta.stackexchange.com/a/263344
+  //markdown: {
+  //  math: true
+  //},
 
   srcDir: 'src',
 
@@ -127,6 +130,7 @@ export default defineConfig({
               { text: 'Monitoring Clusters', link: '/documentation/usersguide/clusters' },
               { text: 'Host and Service Dependencies', link: '/documentation/usersguide/dependencies' },
               { text: 'State stalking', link: '/documentation/usersguide/stalking' },
+              { text: 'Performance Data', link: '/documentation/usersguide/perfdata' },
 
               { text: 'Naemon Logo', link: '/logo' }
             ]

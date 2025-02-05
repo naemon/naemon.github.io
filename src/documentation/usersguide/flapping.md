@@ -35,7 +35,7 @@ When calculating the percent state change for the service, the flap detection al
 
 Using the images above, lets do a calculation of percent state change for the service.  You will notice that there are a total of 7 state changes (at t<sub>3</sub>, t<sub>4</sub>, t<sub>5</sub>, t<sub>9</sub>, t<sub>12</sub>, t<sub>16</sub>, and t<sub>19</sub>).  Without any weighting of the state changes over time, this would give us a total state change of 35%:
 
-$$ { 7\space observed\space state\space changes\space \over possible\space 20\space state\space changes } * 100 = 35\%  $$
+![7 observed state changes / possible 20 state changes * 100 = 35%](/images/usersguide/svg/flapping-formular.svg) {.img-bg .svg-color}
 
 Since the flap detection logic will give newer state changes a higher rate than older state changes, the actual calculated percent state change will be slightly less than 35% in this example.  Let's say that the weighted percent of state change turned out to be 31%...
 
