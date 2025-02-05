@@ -124,7 +124,7 @@
 
 [Passive host state translation](passivestatetranslation)
 
-[Object inheritance](objectinheritance)
+[Object inheritance](objectinheritance) :white_check_mark:
 
 [Time-saving tips for object definitions](objecttricks)
 

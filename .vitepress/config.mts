@@ -133,6 +133,8 @@ export default defineConfig({
               { text: 'Performance Data', link: '/documentation/usersguide/perfdata' },
               { text: 'Scheduled Downtime', link: '/documentation/usersguide/downtime' },
 
+              { text: 'Object Inheritance ', link: '/documentation/usersguide/objectinheritance' },
+
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },
