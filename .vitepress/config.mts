@@ -131,6 +131,7 @@ export default defineConfig({
               { text: 'Host and Service Dependencies', link: '/documentation/usersguide/dependencies' },
               { text: 'State stalking', link: '/documentation/usersguide/stalking' },
               { text: 'Performance Data', link: '/documentation/usersguide/perfdata' },
+              { text: 'Scheduled Downtime', link: '/documentation/usersguide/downtime' },
 
               { text: 'Naemon Logo', link: '/logo' }
             ]

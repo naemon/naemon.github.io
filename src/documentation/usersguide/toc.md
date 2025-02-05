@@ -112,9 +112,9 @@
 
 [State stalking](stalking) :white_check_mark:
 
-[Performance data](perfdata)
+[Performance data](perfdata) :white_check_mark:
 
-[Scheduled host and service downtime](downtime)
+[Scheduled host and service downtime](downtime) :white_check_mark:
 
 [Adaptive monitoring](adaptive)
 
