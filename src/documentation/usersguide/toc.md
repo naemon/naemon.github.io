@@ -88,7 +88,7 @@
 
 ## Advanced Topics
 
-[External commands](extcommands)
+[External commands](extcommands) :white_check_mark:
 
 [Event handlers](eventhandlers) :white_check_mark:
 

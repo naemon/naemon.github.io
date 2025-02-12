@@ -119,6 +119,7 @@ export default defineConfig({
               { text: 'Time Periods', link: '/documentation/usersguide/timeperiods' },
               { text: 'Network Reachability', link: '/documentation/usersguide/networkreachability' },
               { text: 'Notifications', link: '/documentation/usersguide/notifications' },
+              { text: 'External commands', link: '/documentation/usersguide/extcommands' },
               { text: 'Event handlers', link: '/documentation/usersguide/eventhandlers' },
               { text: 'Volatile services', link: '/documentation/usersguide/volatileservices' },
               { text: 'Freshness Checks'  , link: '/documentation/usersguide/freshness' },
