@@ -132,6 +132,7 @@ export default defineConfig({
               { text: 'State stalking', link: '/documentation/usersguide/stalking' },
               { text: 'Performance Data', link: '/documentation/usersguide/perfdata' },
               { text: 'Scheduled Downtime', link: '/documentation/usersguide/downtime' },
+              { text: 'Adaptive Monitoring', link: '/documentation/usersguide/adaptive' },
 
               { text: 'Object Inheritance ', link: '/documentation/usersguide/objectinheritance' },
 

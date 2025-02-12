@@ -116,7 +116,7 @@
 
 [Scheduled host and service downtime](downtime) :white_check_mark:
 
-[Adaptive monitoring](adaptive)
+[Adaptive monitoring](adaptive) :white_check_mark:
 
 [Predictive dependency checks](dependencychecks)
 
