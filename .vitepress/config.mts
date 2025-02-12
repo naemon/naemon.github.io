@@ -134,6 +134,7 @@ export default defineConfig({
               { text: 'Performance Data', link: '/documentation/usersguide/perfdata' },
               { text: 'Scheduled Downtime', link: '/documentation/usersguide/downtime' },
               { text: 'Adaptive Monitoring', link: '/documentation/usersguide/adaptive' },
+              { text: 'Predictive dependency checks', link: '/documentation/usersguide/dependencychecks' },
 
               { text: 'Object Inheritance ', link: '/documentation/usersguide/objectinheritance' },
 

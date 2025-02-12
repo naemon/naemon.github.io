@@ -118,7 +118,7 @@
 
 [Adaptive monitoring](adaptive) :white_check_mark:
 
-[Predictive dependency checks](dependencychecks)
+[Predictive dependency checks](dependencychecks) :white_check_mark:
 
 [Cached checks](cachedchecks)
 
