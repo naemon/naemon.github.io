@@ -122,7 +122,7 @@
 
 [Cached checks](cachedchecks)
 
-[Passive host state translation](passivestatetranslation)
+[Passive host state translation](passivestatetranslation) :white_check_mark:
 
 [Object inheritance](objectinheritance) :white_check_mark:
 

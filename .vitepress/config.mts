@@ -135,6 +135,8 @@ export default defineConfig({
               { text: 'Scheduled Downtime', link: '/documentation/usersguide/downtime' },
               { text: 'Adaptive Monitoring', link: '/documentation/usersguide/adaptive' },
               { text: 'Predictive dependency checks', link: '/documentation/usersguide/dependencychecks' },
+              { text: 'Cached checks', link: '/documentation/usersguide/cachedchecks' },
+              { text: 'Passive Host State Translation', link: '/documentation/usersguide/passivestatetranslation' },
 
               { text: 'Object Inheritance ', link: '/documentation/usersguide/objectinheritance' },
 
