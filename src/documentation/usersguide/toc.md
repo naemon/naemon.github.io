@@ -126,7 +126,7 @@
 
 [Object inheritance](objectinheritance) :white_check_mark:
 
-[Time-saving tips for object definitions](objecttricks)
+[Time-saving tips for object definitions](objecttricks) :white_check_mark:
 
 ## Security and Performance Tuning
 
