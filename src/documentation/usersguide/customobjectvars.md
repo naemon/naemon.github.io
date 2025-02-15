@@ -1,14 +1,6 @@
----
-layout: doctoc
-title: Custom Object Variables
----
+# Custom Object Variables
 
-<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="objectdefinitions.html">Object Configuration</a>,
-<a href="objectinheritance.html">Object Inheritance</a>, <a href="macros.html">Macros</a>
-
-
-
-### Introduction
+## Introduction
 
 Users often request that new variables be added to host, service, and contact definitions.
 
@@ -35,18 +27,18 @@ event handlers, and host and service checks.
 
 
 
-### Custom Variable Basics
+## Custom Variable Basics
 
 There are a few important things that you should note about custom variables:
 
-* Custom variable names must begin with an underscore (_) to prevent name collision with standard variables
-* Custom variable names are converted to all uppercase before use
-* Custom variables are <a href="objectinheritance.html">inherited</a> from object templates like normal variables
-* Scripts can reference custom variable values with <a href="macros.html">macros and environment variables</a>
+- Custom variable names must begin with an underscore (`_`) to prevent name collision with standard variables
+- Custom variable names are converted to all uppercase before use
+- Custom variables are [inherited](objectinheritance) from object templates like normal variables
+- Scripts can reference custom variable values with [macros and environment variables](macros)
 
 
 
-### Examples
+## Examples
 
 Here's an example of how custom variables can be defined in different types of object definitions:
 
@@ -76,35 +68,34 @@ define contact{
 
 
 
-### Custom Variables As Macros
+## Custom Variables As Macros
 
 Custom variable values can be referenced in scripts and executables that Naemon
-runs for checks, notifications, etc. by using <a href="macros.html">macros</a>
+runs for checks, notifications, etc. by using [macros](macros)
 or environment variables.
 
 Custom variable macros are trusted (because you define them) and therefore
 not cleaned/sanitized before they are made available to scripts.
 
 In order to prevent name collision among custom variables from different object
-types, Naemon prepends "_HOST", "_SERVICE", or "_CONTACT" to the beginning of
+types, Naemon prepends `_HOST`, `_SERVICE`, or `_CONTACT` to the beginning of
 custom host, service, or contact variables, respectively, in macro and environment variable names.
 
 The table below shows the corresponding macro and environment variable names
 for the custom variables that were defined in the example above.
 
-<table border="1">
-<tr><th>Object Type</th><th>Variable Name</th><th>Macro Name</th><th>Environment Variable</th></tr>
-<tr><td>Host</td><td>MAC_ADDRESS</td><td>$_HOSTMAC_ADDRESS$</td><td>NAGIOS__HOSTMAC_ADDRESS</td></tr>
-<tr><td>Host</td><td>RACK_NUMBER</td><td>$_HOSTRACK_NUMBER$</td><td>NAGIOS__HOSTRACK_NUMBER</td></tr>
-<tr><td>Service</td><td>SNMP_COMMUNITY</td><td>$_SERVICESNMP_COMMUNITY$</td><td>NAGIOS__SERVICESNMP_COMMUNITY</td></tr>
-<tr><td>Service</td><td>TECHCONTACT</td><td>$_SERVICETECHCONTACT$</td><td>NAGIOS__SERVICETECHCONTACT</td></tr>
-<tr><td>Contact</td><td>AIM_USERNAME</td><td>$_CONTACTAIM_USERNAME$</td><td>NAGIOS__CONTACTAIM_USERNAME</td></tr>
-<tr><td>Contact</td><td>YAHOOID</td><td>$_CONTACTYAHOOID$</td><td>NAGIOS__CONTACTYAHOOID</td></tr>
-</table>
+| Object Type |  Variable Name   |        Macro Name          |      Environment Variable       |
+|:------------|:-----------------|:---------------------------|:--------------------------------|
+| Host        | `MAC_ADDRESS`    | `$_HOSTMAC_ADDRESS$`       | `NAGIOS__HOSTMAC_ADDRESS`       |
+| Host        | `RACK_NUMBER`    | `$_HOSTRACK_NUMBER$`       | `NAGIOS__HOSTRACK_NUMBER`       |
+| Service     | `SNMP_COMMUNITY` | `$_SERVICESNMP_COMMUNITY$` | `NAGIOS__SERVICESNMP_COMMUNITY` |
+| Service     | `TECHCONTACT`    | `$_SERVICETECHCONTACT$`    | `NAGIOS__SERVICETECHCONTACT`    |
+| Contact     | `AIM_USERNAME`   | `$_CONTACTAIM_USERNAME$`   | `NAGIOS__CONTACTAIM_USERNAME`   |
+| Contact     | `YAHOOID`        | `$_CONTACTYAHOOID$`        | `NAGIOS__CONTACTYAHOOID`        |
 
 
 
-### Custom Variables And Inheritance
+## Custom Variables And Inheritance
 
-Custom object variables are <a href="objectinheritance.html">inherited</a> just
+Custom object variables are [inherited](objectinheritance) just
 like standard host, service, or contact variables.

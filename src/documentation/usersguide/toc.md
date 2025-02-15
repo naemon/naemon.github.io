@@ -70,6 +70,8 @@
 
 [Standard macros available in Naemon](macrolist) :white_check_mark:
 
+[Custom Object Variables](customobjectvars) :white_check_mark:
+
 [Host checks](hostchecks) :white_check_mark:
 
 [Service checks](servicechecks) :white_check_mark:

@@ -111,6 +111,7 @@ export default defineConfig({
               { text: 'Plugins', link: '/documentation/usersguide/plugins' },
               { text: 'Macros', link: '/documentation/usersguide/macros' },
               { text: 'Standard Macros in Naemon', link: '/documentation/usersguide/macrolist' },
+              { text: 'Custom Object Variables', link: '/documentation/usersguide/customobjectvars' },
               { text: 'Host Checks', link: '/documentation/usersguide/hostchecks' },
               { text: 'Service Checks', link: '/documentation/usersguide/servicechecks' },
               { text: 'Active Checks', link: '/documentation/usersguide/activechecks' },
