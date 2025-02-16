@@ -142,6 +142,7 @@ export default defineConfig({
               { text: 'Time-saving tips for object definitions', link: '/documentation/usersguide/objecttricks' },
               { text: 'Security considerations', link: '/documentation/usersguide/security' },
               { text: 'Performance Tuning', link: '/documentation/usersguide/tuning' },
+              { text: 'Fast startup options', link: '/documentation/usersguide/faststartup' },
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },

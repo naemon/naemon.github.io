@@ -136,7 +136,7 @@
 
 [Tuning Naemon for maximum performance](tuning) :white_check_mark:
 
-[Fast startup options](faststartup)
+[Fast startup options](faststartup) :white_check_mark:
 
 [Using the naemonstats utility](naemonstats)
 
