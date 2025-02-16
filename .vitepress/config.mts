@@ -143,6 +143,7 @@ export default defineConfig({
               { text: 'Security considerations', link: '/documentation/usersguide/security' },
               { text: 'Performance Tuning', link: '/documentation/usersguide/tuning' },
               { text: 'Fast startup options', link: '/documentation/usersguide/faststartup' },
+              { text: 'Naemonstats Utility ', link: '/documentation/usersguide/naemonstats' },
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },

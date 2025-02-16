@@ -138,7 +138,7 @@
 
 [Fast startup options](faststartup) :white_check_mark:
 
-[Using the naemonstats utility](naemonstats)
+[Using the naemonstats utility](naemonstats) :white_check_mark:
 
 ## Naemon Addons
 
