@@ -68,6 +68,10 @@
     margin-right: auto;
 }
 
+.img-250-h img {
+    max-height: 250px;
+}
+
 .fa-icon-bg {
     background-color: var(--vp-custom-block-note-bg);
     padding: 15px;
