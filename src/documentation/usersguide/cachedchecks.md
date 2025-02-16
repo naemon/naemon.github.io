@@ -1,44 +1,41 @@
----
-layout: doctoc
-title: Cached Checks
----
-<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="hostchecks.html">Host Checks</a>, <a href="servicechecks.html">Service Checks</a>, <a href="dependencychecks.html">Predictive Dependency Checks</a>
+# Cached Checks
 
-### Introduction
+## Introduction
 
-<img src="images/cachedchecks1.png" border="0" style="float: right;" alt="Cached Checks" title="Cached Checks">
+![Cached Checks](/images/usersguide/svg/cachedchecks1.svg) {.img-bg}
 
 The performance of Naemon's monitoring logic can be significantly improved by implementing the use of cached checks.  Cached checks allow Naemon to forgo executing a host or service check command if it determines a relatively recent check result will do instead.
 
-### For On-Demand Checks Only
+## For On-Demand Checks Only
 
 Regularly scheduled host and service checks will not see a performance improvement with use of cached checks.  Cached checks are only useful for improving the performance of on-demand host and service checks.  Scheduled checks help to ensure that host and service states are updated regularly, which may result in a greater possibility their results can be used as cached checks in the future.
 
 For reference, on-demand host checks occur...
 
-* When a service associated with the host changes state.
-* As needed as part of the <a href="networkreachability.html">host reachability</a> logic.
-* As needed for <a href="dependencychecks.html">predictive host dependency checks</a>.
+- When a service associated with the host changes state.
+- As needed as part of the [host reachability](networkreachability) logic.
+- As needed for [predictive host dependency checks](dependencychecks).
 
 And on-demand service checks occur...
 
-* As needed for <a href="dependencychecks.html">predictive service dependency checks</a>.
+- As needed for [predictive service dependency checks](dependencychecks).
 
-{{ site.note }}Unless you make use of service dependencies, Naemon will not be able to use cached check results to improve the performance of service checks.{{ site.end }}
+> [!NOTE]
+> Unless you make use of service dependencies, Naemon will not be able to use cached check results to improve the performance of service checks.
 
 Don't worry about that - its normal.
 
 Cached host checks are where the big performance improvements lie, and everyone should see a benefit there.
 
-### How Caching Works
+## How Caching Works
 
-<img src="images/cachedchecks.png" border="0" style="float: right; clear: both;" alt="Cached Check Logic" title="Cached Check Logic">
+![Cached Check Logic](/images/usersguide/svg/cachedchecks.svg) {.img-bg}
 
 When Naemon needs to perform an on-demand host or service check, it will make a determination as to whether  it can used a cached check result or if it needs to perform an actual check by executing a plugin.  It does this by checking to see if the last check of the host or service occurred within the last X minutes, where X is the cached host or service check horizon.
 
 If the last check was performed within the timeframe specified by the cached check horizon variable, Naemon will use the result of the last host or service check and will *not* execute a new check.  If the host or service has not yet been checked, or if the last check falls outside of the cached check horizon timeframe, Naemon will execute a new host or service check by running a plugin.
 
-### What This Really Means
+## What This Really Means
 
 Naemon performs on-demand checks because it need to know the current state of a host or service *at that exact moment* in time.  Utilizing cached checks allows you to make Naemon think that recent check results are "good enough" for determining the current state of hosts, and that it doesn't need to go out and actually re-check the status of that host or service.
 
@@ -52,32 +49,35 @@ Naemon will eventually determine the correct state of all hosts and services, so
 
 There is no standard cached check horizon or cache hit rate that will be acceptable to every Naemon users.  Some people will want a short horizon timeframe and a low cache hit rate, while others will want a larger horizon timeframe and a larger cache hit rate (with a low reliability rate).  Some users may even want to disable cached checks altogether to obtain a 100% reliability rate.  Testing different horizon timeframes, and their effect on the reliability of status information, is the only want that an individual user will find the "right" value for their situation.  More information on this is discussed below.
 
-### Configuration Variables
+## Configuration Variables
 
 The following variables determine the timeframes in which a previous host or service check result may be used as a cached host or service check result:
 
-* The <a href="configmain.html#cached_host_check_horizon">cached_host_check_horizon</a> variable controls cached host checks.
-* The <a href="configmain.html#cached_service_check_horizon">cached_service_check_horizon</a> variable controls cached service checks.
+- The [cached_host_check_horizon](configmain#cached_host_check_horizon) variable controls cached host checks.
+- The [cached_service_check_horizon](configmain#cached_service_check_horizon) variable controls cached service checks.
 
-### Optimizing Cache Effectiveness
+## Optimizing Cache Effectiveness
 
 In order to make the most effective use of cached checks, you should:
 
-* Schedule regular checks of your hosts
-* Use MRTG to graph statistics for 1) on-demand checks and 2) cached checks
-* Adjust cached check horizon variables to fit your needs
+- Schedule regular checks of your hosts
+- Use MRTG to graph statistics for
+  1. on-demand checks and
+  2. cached checks
+- Adjust cached check horizon variables to fit your needs
 
-You can schedule regular checks of your hosts by specifying a value greater than 0 for *check_interval* option in your <a href="objectdefinitions.html#host">host definitions</a>.  If you do this, make sure that you set the *max_check_attempts* option to a value greater than 1, or it will cause a big performance hit.  This potential performance hit is describe in detail <a href="hostchecks.html">here</a>.
+You can schedule regular checks of your hosts by specifying a value greater than `0` for `check_interval` option in your [host definitions](objectdefinitions#host).  If you do this, make sure that you set the `max_check_attempts` option to a value greater than `1`, or it will cause a big performance hit.  This potential performance hit is describe in detail [here](hostchecks).
 
-<img src="images/cachedcheckgraphs.png" border="0" style="float: right; clear: both;" alt="Cached Checks Graph" title="Cached Checks Graph">
+![Cached Checks Graph](/images/usersguide/pixel/cachedcheckgraphs.png) {.img-bg}
 
-A good way to determine the proper value for the cached check horizon options is to compare how many on-demand checks Naemon has to actually run versus how may it can use cached values for.  The <a href="naemonstats.html">naemonstats</a> utility can produce information on cached checks, which can then be <a href="mrtggraphs.html">graphed with MRTG</a>.  Example MRTG graphs that show cached vs. actual on-demand checks are shown to the right.
+
+A good way to determine the proper value for the cached check horizon options is to compare how many on-demand checks Naemon has to actually run versus how may it can use cached values for.  The [naemonstats](naemonstats) utility can produce information on cached checks, which can then be [graphed with MRTG](mrtggraphs).  Example MRTG graphs that show cached vs. actual on-demand checks are shown to the right.
 
 The monitoring installation which produced the graphs above had:
 
-* A total of 44 hosts, all of which were checked at regular intervals
-* An average (regularly scheduled) host check interval of 5 minutes
-* A <a href="configmain.html#cached_host_check_horizon">cached_host_check_horizon</a> of 15 seconds
+- A total of 44 hosts, all of which were checked at regular intervals
+- An average (regularly scheduled) host check interval of 5 minutes
+- A [cached_host_check_horizon](configmain#cached_host_check_horizon) of 15 seconds
 
 The first MRTG graph shows how many regularly scheduled host checks compared to how many cached host checks have occurred.  In this example, an average of 53 host checks occur every five minutes.  9 of these (17%) are on-demand checks.
 

@@ -122,7 +122,7 @@
 
 [Predictive dependency checks](dependencychecks) :white_check_mark:
 
-[Cached checks](cachedchecks)
+[Cached checks](cachedchecks) :white_check_mark:
 
 [Passive host state translation](passivestatetranslation) :white_check_mark:
 
