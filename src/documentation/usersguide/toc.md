@@ -138,8 +138,6 @@
 
 [Fast startup options](faststartup)
 
-[Large installation tweaks](largeinstalltweaks)
-
 [Using the naemonstats utility](naemonstats)
 
 ## Naemon Addons
