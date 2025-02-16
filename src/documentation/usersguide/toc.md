@@ -132,9 +132,9 @@
 
 ## Security and Performance Tuning
 
-[Security considerations](security)
+[Security considerations](security) :white_check_mark:
 
-[Tuning Naemon for maximum performance](tuning)
+[Tuning Naemon for maximum performance](tuning) :white_check_mark:
 
 [Fast startup options](faststartup)
 

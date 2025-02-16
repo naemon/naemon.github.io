@@ -1,6 +1,6 @@
 # Security Considerations
 
-### Introduction
+## Introduction
 
 This is intended to be a brief overview of some things you should keep in mind when
 installing Naemon, so as set it up in a secure manner.
@@ -43,7 +43,7 @@ resources (CPU, etc.) without being noticed.
 Here are some tips to help ensure that you keep your systems secure when implementing
 a Naemon-based monitoring solution...
 
-### Best Practices
+## Best Practices
 
 1. **Use a Dedicated Monitoring Box**.
   It is recommended that you install Naemon on a server that is dedicated to monitoring

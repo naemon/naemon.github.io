@@ -138,9 +138,10 @@ export default defineConfig({
               { text: 'Predictive dependency checks', link: '/documentation/usersguide/dependencychecks' },
               { text: 'Cached checks', link: '/documentation/usersguide/cachedchecks' },
               { text: 'Passive Host State Translation', link: '/documentation/usersguide/passivestatetranslation' },
-
               { text: 'Object Inheritance ', link: '/documentation/usersguide/objectinheritance' },
               { text: 'Time-saving tips for object definitions', link: '/documentation/usersguide/objecttricks' },
+              { text: 'Security considerations', link: '/documentation/usersguide/security' },
+              { text: 'Performance Tuning', link: '/documentation/usersguide/tuning' },
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },

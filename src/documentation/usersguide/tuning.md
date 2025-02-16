@@ -123,9 +123,11 @@ states), Naemon may miss the fact that the host has recovered.
 
 ### Optimize Hardware
 
-NOTE: Hardware performance shouldn't be an issue unless: 1) you're monitoring
-thousands of services, 2) you're doing a lot of post-processing of performance
-data, etc. Your system configuration and your hardware setup are going to
+NOTE: Hardware performance shouldn't be an issue unless:
+1. you're monitoring thousands of services,
+2. you're doing a lot of post-processing of performance data, etc.
+
+Your system configuration and your hardware setup are going to
 directly affect how your operating system performs, so they'll affect how
 Naemon performs. The most common hardware optimization you can make is with
 your hard drives. CPU and memory speed are obviously factors that affect
