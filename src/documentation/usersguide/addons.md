@@ -1,6 +1,6 @@
 # Addons
 
-### Introduction
+## Introduction
 
 There are a lot of `addon` software packages that are available for Naemon.
 Addons can be used to extend Naemons functionality or integrate Naemon with other applications.
@@ -20,19 +20,19 @@ You can find many addons for Naemon by visiting:
 
 I'll give a brief introduction to a few of the addons for Naemon...
 
-### Thruk
+## Thruk
 
 Thruk is the default GUI for Naemon and has [its own documentation](https://thruk.org/).
 It uses the Livestatus API to retrieve the content.
 
-### Livestatus
+## Livestatus
 
 Livestatus is one of the standard APIs in Naemon.
 A [detailed description](livestatus) is available on a dedicated page.
 
-### NRPE
+## NRPE
 
-![NRPE](/images/usersguide/svg/nrpe.svg)
+![NRPE](/images/usersguide/svg/nrpe.svg) {.img-bg}
 
 NRPE is an addon that allows you to execute [plugins](plugins) on remote Linux/Unix hosts.
 This is useful if you need to monitor local resources/attributes like disk usage, CPU load, memory usage,
@@ -41,16 +41,16 @@ it can impose a higher CPU load on the monitoring machine - especially if you ar
 
 The NRPE addon and documentation can be found at [www.nagios.org](http://www.nagios.org/).
 
-### NSCA
+## NSCA
 
-![NSCA](/images/usersguide/svg/nsca.svg)
+![NSCA](/images/usersguide/svg/nsca.svg) {.img-bg}
 
 NSCA is an addon that allows you to send [passive check](passivechecks) results from remote Linux/Unix
 hosts to the Naemon running on the monitoring server.
 
 The NSCA addon can be found at [www.nagios.org](http://www.nagios.org/).
 
-### NDOUtils
+## NDOUtils
 
 > [!WARNING] NDOUtils are only compatible up to Naemon version 1.0.3.
 > For a drop in replacement use [Statusengine 2](#statusengine-2).
@@ -60,7 +60,7 @@ Multiple instances of Naemon can all store their information in a central databa
 
 The NDOUtils addon and documentation can be found at [www.nagios.org](http://www.nagios.org/).
 
-### Statusengine 2
+## Statusengine 2
 
 Statusengine 2 is a drop in replacement for [NDOUtils](#ndoutils).
 
@@ -69,7 +69,7 @@ to RRDtool (compatible to [PNP](#pnp)) and Graphite and also comes with a respon
 
 Details can be found on [statusengine.org/oldstable/](https://statusengine.org/oldstable/)
 
-### Statusengine 3
+## Statusengine 3
 
 Statusengine 3 provide an easy way to scale Naemon monitoring across multiple nodes.
 
@@ -83,30 +83,30 @@ Statusengine UI is an responsive web frontend build on top of a JSON API.
 
 Details can be found on [statusengine.org](https://statusengine.org/)
 
-### PNP
+## PNP
 
-![pnp4nagios example with Naemon](/images/usersguide/pixel/pnp4nagios-example1.png)
+![pnp4nagios example with Naemon](/images/usersguide/pixel/pnp4nagios-example1.png) {.img-bg}
 
 PNP is a graphing addon. For installation step by step help see [Addon PNP4Nagios Quickstart](addon-pnp-quickstart).
 
 Author website can be found here: [pnp4nagios.org](http://pnp4nagios.org)
 
-### Merlin
+## Merlin
 
 Merlin is a addon for distributed monitoring. Details can be found in [Merlin repository](https://github.com/ITRS-Group/monitor-merlin).
 
-### Mod-Gearman
+## Mod-Gearman
 
 Mod-Gearman is a addon for distributed monitoring. Details can be found on [mod-gearman.org](http://mod-gearman.org).
 
-### OMD
+## OMD
 
 OMD (Open Monitoring Distribution) is not really an addon, but it comes bundled with
 Naemon. OMD is a single linux package (rpm/deb) which installs Naemon with a couple of
 common addons. Naemon is currently bundled in the OMD-Labs version, which is available
 via the [Consol Labs Repository](https://labs.consol.de/repo/).
 
-### others
+## others
 
 There are lots of addons for Nagios and Naemon. Most Nagios addons should be 1:1 compatible with Naemon.
 You might have to adjust some paths and users, but as both share a lot of code, most addons and plugins

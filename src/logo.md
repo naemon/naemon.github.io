@@ -6,43 +6,43 @@ Here you will find some resources if you need the naemon logo, for example to li
 
 ## Small
 
-![Small Naemon Logo](/images/logo/logo_small.png)
+![Small Naemon Logo](/images/logo/logo_small.png) {.img-bg}
 
 <i class="fa-regular fa-image"></i>&nbsp;
 Image size: 100x17px
 
 <i class="fa-solid fa-download"></i>&nbsp;
-[download as PNG](/images/logo/logo_small.png)
+[download as PNG](/images/logo/logo_small.png) {.img-bg}
 
 
 ## Mid Size
 
-![Mid Naemon Logo](/images/logo/logo_middle.png)
+![Mid Naemon Logo](/images/logo/logo_middle.png) {.img-bg}
 
 <i class="fa-regular fa-image"></i>&nbsp;
 Image size: 300x50px
 
 <i class="fa-solid fa-download"></i>&nbsp;
-[download as PNG](/images/logo/logo_middle.png)
+[download as PNG](/images/logo/logo_middle.png) {.img-bg}
 
 ## Large Size
 
-![Large Naemon Logo](/images/logo/logo_large.png)
+![Large Naemon Logo](/images/logo/logo_large.png) {.img-bg}
 
 <i class="fa-regular fa-image"></i>&nbsp;
 Image size: 1324x219px
 
 <i class="fa-solid fa-download"></i>&nbsp;
-[download as PNG](/images/logo/logo_large.png)
+[download as PNG](/images/logo/logo_large.png) {.img-bg}
 
 ## SVG
 
 Scalable Vector Graphic
 
-![Naemon Logo as SVG](/images/logo/naemonlogo.svg)
+![Naemon Logo as SVG](/images/logo/naemonlogo.svg) {.img-bg}
 
 <i class="fa-solid fa-download"></i>&nbsp;
-[download as SVG](/images/logo/naemonlogo.svg)
+[download as SVG](/images/logo/naemonlogo.svg) {.img-bg}
 
 
 
