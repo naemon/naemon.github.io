@@ -21,6 +21,25 @@ The main configuration file is usually named `naemon.cfg` and located in the `/e
 
 Below you will find descriptions of each main Naemon configuration file option...
 
+### Config Relative Path <Badge type="tip" text="1.4.4" /> {#config_rel_path}
+
+<table>
+<tbody>
+<tr>
+<td>Format:</td>
+<td><b>config_rel_path=&lt;path&gt;</b></td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><span class="text-red bold">log_file=/etc/naemon</span></td>
+</tr>
+</tbody>
+</table>
+
+All (not absolute) paths in the Naemon config file are relative to the folder of
+the `naemon.cfg` file. If you want use paths relative to a different folder,
+use this option.
+
 ### Log File {#log_file}
 
 <table>
