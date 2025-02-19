@@ -180,7 +180,7 @@
 
 ## Development
 
-[Plugin API](pluginapi)
+[Plugin API](pluginapi) :white_check_mark:
 
 [Developing Plugins For Use With Embedded Perl](epnplugins) :white_check_mark:
 

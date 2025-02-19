@@ -109,6 +109,7 @@ export default defineConfig({
               { text: 'Object configuration overview', link: '/documentation/usersguide/configobject' },
               { text: 'Object definitions', link: '/documentation/usersguide/objectdefinitions' },
               { text: 'Plugins', link: '/documentation/usersguide/plugins' },
+              { text: 'Plugin API', link: '/documentation/usersguide/pluginapi' },
               { text: 'Macros', link: '/documentation/usersguide/macros' },
               { text: 'Standard Macros in Naemon', link: '/documentation/usersguide/macrolist' },
               { text: 'Custom Object Variables', link: '/documentation/usersguide/customobjectvars' },
