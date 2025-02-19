@@ -172,9 +172,9 @@
 
 ## Integration With Other Software
 
-[Integration Overview](integration)
+[Integration Overview](integration) :white_check_mark:
 
-[SNMP Traps](int-snmptrap)
+[SNMP Traps](int-snmptrap) :white_check_mark:
 
 [TCP Wrappers](int-tcpwrappers)
 
