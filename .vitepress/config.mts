@@ -146,6 +146,7 @@ export default defineConfig({
               { text: 'Naemonstats Utility ', link: '/documentation/usersguide/naemonstats' },
               { text: 'Integration Overview', link: '/documentation/usersguide/integration' },
               { text: 'SNMP Traps', link: '/documentation/usersguide/int-snmptrap' },
+              { text: 'TCP Wrappers', link: '/documentation/usersguide/int-tcpwrappers' },
               { text: 'Naemon Logo', link: '/logo' }
             ]
           },

@@ -176,13 +176,13 @@
 
 [SNMP Traps](int-snmptrap) :white_check_mark:
 
-[TCP Wrappers](int-tcpwrappers)
+[TCP Wrappers](int-tcpwrappers) :white_check_mark:
 
 ## Development
 
 [Plugin API](pluginapi)
 
-[Developing Plugins For Use With Embedded Perl](epnplugins)
+[Developing Plugins For Use With Embedded Perl](epnplugins) :white_check_mark:
 
 [Developer Documentation](/documentation/developer/toc) :white_check_mark:
 
