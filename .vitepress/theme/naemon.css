@@ -19,6 +19,9 @@
     --green-light: #22863A;
     --green-dark: #85E89D;
 
+    --orange-light: #fd7e14;
+    --orange-dark: #f9b44e;
+
 }
 
 .bold {
@@ -43,6 +46,14 @@
 
 .dark .text-green {
     color: var(--green-dark) !important;
+}
+
+.text-orange {
+    color: var(--orange-light) !important;
+}
+
+.dark .text-orange {
+    color: var(--orange-dark) !important;
 }
 
 /* Overwrite the color of the flapping formular svg */
