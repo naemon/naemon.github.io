@@ -231,7 +231,7 @@ This directive is used to represent the value of the host to your organization. 
 <td valign="top"><strong>hostgroups</strong>:</td>
 <td>
 
-This directive is used to identify the *short name(s)* of the [hostgroup(s)](hostgroup) that the host belongs to.
+This directive is used to identify the *short name(s)* of the [hostgroup(s)](#hostgroup) that the host belongs to.
 
 Multiple hostgroups should be separated by commas.
 
@@ -2069,7 +2069,7 @@ Also, if you want to pass a dollar sign (`$`) on the command line, you have to e
 
 It is possible to escape semicolons with a backslash.
 
-You can work around this limitation by setting one of the [$USER$](macrolist.#user) macros in your
+You can work around this limitation by setting one of the [$USER$](macrolist#user) macros in your
 [resource file](configmain#resource_file) to a semicolon and then referencing the appropriate `$USER$` macro in the `command_line` directive in place of the semicolon.
 
 If you want to pass arguments to commands during runtime, you can use [$ARGn$ macros](macrolist#arg) in the `command_line` directive of the command definition and then separate individual arguments from the command name (and from each other) using bang (`!`) characters in the object definition directive (host check command, service event handler command, etc) that references the command.

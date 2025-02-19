@@ -21,7 +21,7 @@ for common linux systems and source rpms available. Unless you have good reasons
 you really should go for the binary releases - they are build to just work.
 
 We spend a lot of time to build tests and fix the most critical bugs of Nagios 4. There
-is a list of active issues in the [known issues page](/documentation/usersguide/knownissues.html). It's not yet
+is a list of active issues in the [known issues page](/documentation/usersguide/whatsnew). It's not yet
 completed and we have to walk through all issues and decide whether Naemon is affected
 or not.
 

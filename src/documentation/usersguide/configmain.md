@@ -360,7 +360,7 @@ This option determines whether or not Naemon will send out [notifications](notif
 If this option is disabled, Naemon will not send out notifications for any host or service.
 
 > [!NOTE]
-> If you have [state retention](#retain_state_information) enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the [state retention file](state_retention_file)), *unless* you disable the [use_retained_program_state](#use_retained_program_state) option.
+> If you have [state retention](#retain_state_information) enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the [state retention file](#state_retention_file)), *unless* you disable the [use_retained_program_state](#use_retained_program_state) option.
 
 If you want to change this option when state retention is active (and the [use_retained_program_state](#use_retained_program_state)  is enabled), you'll have to use the appropriate [external command](extcommands) or change it via the web interface.
 
@@ -391,7 +391,7 @@ If this option is disabled, Naemon will not actively execute any service checks 
 This option is most often used when configuring backup monitoring servers, as described in the documentation on [redundancy](redundancy), or when setting up a [distributed](distributed) monitoring environment.
 
 > [!NOTE]
-> If you have [state retention](#retain_state_information) enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the [state retention file](state_retention_file)), *unless* you disable the [use_retained_program_state](#use_retained_program_state)  option.
+> If you have [state retention](#retain_state_information) enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the [state retention file](#state_retention_file)), *unless* you disable the [use_retained_program_state](#use_retained_program_state)  option.
 
 If you want to change this option when state retention is active (and the [use_retained_program_state](#use_retained_program_state)  is enabled), you'll have to use the appropriate [external command](extcommands) or change it via the web interface.
 
@@ -420,7 +420,7 @@ This option determines whether or not Naemon will accept [passive service checks
 If this option is disabled, Naemon will not accept any passive service checks.
 
 > [!NOTE]
-> If you have [state retention](#retain_state_information) enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the [state retention file](state_retention_file)), *unless* you disable the [use_retained_program_state](#use_retained_program_state)  option.
+> If you have [state retention](#retain_state_information) enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the [state retention file](#state_retention_file)), *unless* you disable the [use_retained_program_state](#use_retained_program_state)  option.
 
 If you want to change this option when state retention is active (and the [use_retained_program_state](#use_retained_program_state)  is enabled), you'll have to use the appropriate [external command](extcommands) or change it via the web interface.
 
@@ -451,7 +451,7 @@ If this option is disabled, Naemon will not actively execute any host checks, al
 This option is most often used when configuring backup monitoring servers, as described in the documentation on [redundancy](redundancy), or when setting up a [distributed](distributed) monitoring environment.
 
 > [!NOTE]
-> If you have [state retention](#retain_state_information) enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the [state retention file](state_retention_file)), *unless* you disable the [use_retained_program_state](#use_retained_program_state)  option.
+> If you have [state retention](#retain_state_information) enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the [state retention file](#state_retention_file)), *unless* you disable the [use_retained_program_state](#use_retained_program_state)  option.
 
 If you want to change this option when state retention is active (and the [use_retained_program_state](#use_retained_program_state)  is enabled), you'll have to use the appropriate [external command](extcommands) or change it via the web interface.
 
@@ -480,7 +480,7 @@ This option determines whether or not Naemon will accept [passive host checks](p
 If this option is disabled, Naemon will not accept any passive host checks.
 
 > [!NOTE]
-> If you have [state retention](#retain_state_information) enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the [state retention file](state_retention_file)), *unless* you disable the [use_retained_program_state](#use_retained_program_state)  option.
+> If you have [state retention](#retain_state_information) enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the [state retention file](#state_retention_file)), *unless* you disable the [use_retained_program_state](#use_retained_program_state)  option.
 
 If you want to change this option when state retention is active (and the [use_retained_program_state](#use_retained_program_state)  is enabled), you'll have to use the appropriate [external command](extcommands) or change it via the web interface.
 
@@ -509,7 +509,7 @@ This option determines whether or not Naemon will run [event handlers](eventhand
 If this option is disabled, Naemon will not run any host or service event handlers.
 
 > [!NOTE]
-> If you have [state retention](#retain_state_information) enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the [state retention file](state_retention_file)), *unless* you disable the [use_retained_program_state](#use_retained_program_state)
+> If you have [state retention](#retain_state_information) enabled, Naemon will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the [state retention file](#state_retention_file)), *unless* you disable the [use_retained_program_state](#use_retained_program_state)
 
 If you want to change this option when state retention is active (and the [use_retained_program_state](#use_retained_program_state)  is enabled), you'll have to use the appropriate [external command](extcommands) or change it via the web interface.
 
@@ -533,7 +533,7 @@ Values are as follows:
 </tbody>
 </table>
 
-This option determines whether or not Naemon will check the [command file](command_file) for
+This option determines whether or not Naemon will check the [command file](#command_file) for
 
 commands that should be executed.
 
@@ -1769,7 +1769,7 @@ More information on how flap detection and handling works can be found [here](fl
 > [!NOTE]
 > If you have [state retention](#retain_state_information) enabled, Naemon
 > will ignore this setting when it (re)starts and use the last known setting for this option
-> (as stored in the [state retention file](state_retention_file)), *unless* you
+> (as stored in the [state retention file](#state_retention_file)), *unless* you
 > disable the [use_retained_program_state](#use_retained_program_state)  option.
 
 If you want to change this option when state retention is active
