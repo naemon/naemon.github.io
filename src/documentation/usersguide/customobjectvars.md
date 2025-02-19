@@ -1,5 +1,11 @@
 # Custom Object Variables
 
+## See Also
+- [Object Definitions](objectdefinitions)
+- [Object Inheritance](objectinheritance)
+- [How Macros Work](macros)
+- [Standard Macros in Naemon](macrolist)
+
 ## Introduction
 
 Users often request that new variables be added to host, service, and contact definitions.

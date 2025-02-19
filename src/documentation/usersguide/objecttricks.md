@@ -1,5 +1,9 @@
 # Time-Saving Tricks For Object Definitions
 
+## See Also
+- [Object Definitions](objectdefinitions)
+- [Object Inheritance](objectinheritance)
+
 ## Introduction
 
 This documentation explains how you can exploit the (somewhat) hidden features of [template-based object definitions](objectdefinitions).  Several types of objects allow you to specify multiple host names and/or hostgroup names in definitions, allowing you to "copy" the object definition to multiple hosts or services.  Each type of object that supports these features will be covered separately.  For starters, the object types which support this time-saving feature are as follows:

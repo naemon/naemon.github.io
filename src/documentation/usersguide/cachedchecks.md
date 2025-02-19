@@ -1,8 +1,15 @@
 # Cached Checks
 
+![Cached Checks](/images/usersguide/svg/cachedchecks1.svg) {.img-bg}
+
+## See Also
+- [Host Checks](hostchecks)
+- [Service Checks](servicechecks)
+- [Predictive Dependency Checks](dependencychecks)
+
+
 ## Introduction
 
-![Cached Checks](/images/usersguide/svg/cachedchecks1.svg) {.img-bg}
 
 The performance of Naemon's monitoring logic can be significantly improved by implementing the use of cached checks.  Cached checks allow Naemon to forgo executing a host or service check command if it determines a relatively recent check result will do instead.
 

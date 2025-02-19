@@ -1,5 +1,11 @@
 # SNMP Trap Integration
 
+## See Also
+- [Integration Overview](integration)
+- [External Commands](extcommands)
+- [List of external commands](/documentation/developer/externalcommands/)
+- [Passive Checks](passivechecks)
+
 ## Introduction
 
 > [!NOTE]

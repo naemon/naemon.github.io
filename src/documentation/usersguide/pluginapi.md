@@ -1,5 +1,9 @@
 # Plugin API
 
+## See Also
+- [Plugin Overview](plugins)
+- [Developing Plugins For Use With Embedded Perl](epnplugins)
+- [Performance Data](perfdata)
 
 ## Other Resources
 

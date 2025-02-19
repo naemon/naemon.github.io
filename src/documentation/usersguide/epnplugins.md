@@ -1,11 +1,16 @@
-## Developing Plugins For Use With Embedded Perl
+# Developing Plugins For Use With Embedded Perl
+
+## See Also
+- [Embedded Perl Interpreter Overview](embeddedperl)
+- [Plugin API](pluginapi)
+
 
 ::: warning
 Naemon does not include embedded Perl anymore, however, all ePN related information
 still applies to the [Mod-Gearman Worker](./addons#mod-gearman).
 :::
 
-### Introduction
+## Introduction
 
 Stanley Hopcroft has worked with the embedded Perl interpreter quite a bit and has commented on the advantages/disadvantages
 of using it. He has also given several helpful hints on creating Perl plugins that work properly with the embedded
@@ -14,7 +19,7 @@ interpreter. The majority of this documentation comes from his comments.
 It should be noted that "ePN", as used in this documentation, refers to embedded Perl in a Mod-Gearman worker,
 or if you prefer, Mod-Gearman compiled with an embedded Perl interpreter.
 
-### Target Audience
+## Target Audience
 
 * Average Perl developers; those with an appreciation of the languages powerful features
   without knowledge of internals or an in depth knowledge of those features.
@@ -22,7 +27,7 @@ or if you prefer, Mod-Gearman compiled with an embedded Perl interpreter.
 * If you are happy with Perl objects, name management, data structures, and the debugger,
   that's probably sufficient.
 
-### Things you should do when developing a Perl Plugin (ePN or not)
+## Things you should do when developing a Perl Plugin (ePN or not)
 
 * Always always generate some output
 * Use 'use utils' and import the stuff it exports ($TIMEOUT %ERRORS &print_revision &support)
@@ -33,7 +38,7 @@ or if you prefer, Mod-Gearman compiled with an embedded Perl interpreter.
 * Call print_usage (supplied by you) when there are no command line arguments
 * Use standard switch names (eg H 'host', V 'version')
 
-### Things you must do to develop a Perl plugin for ePN
+## Things you must do to develop a Perl plugin for ePN
 
 `<DATA>` can not be used; use here documents instead e.g.
 

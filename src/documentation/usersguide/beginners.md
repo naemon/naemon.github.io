@@ -1,5 +1,9 @@
 # Advice for Beginners
 
+## See Also
+- [Quickstart Installation Guide](/documentation/usersguide/quickstart)
+
+
 Congratulations on choosing Naemon!  Naemon is quite powerful and flexible, but it can take a lot of work to get it configured just the way you'd like.  Once you become familiar with how it works and what it can do for you, you'll never want to be without it. <i class="fa-solid fa-face-smile"></i>  Here are some important things to keep in mind for first-time Naemon users:
 
 * **Relax - it's going to take some time.**  Don't expect to be able to get things working exactly the way you want them right off the bat. It's not that easy.  Setting up Naemon can involve a bit of work - partly because of the options that Naemon offers, partly because you need to know what to monitor on your network (and how best to do it).

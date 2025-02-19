@@ -1,9 +1,13 @@
 # Monitoring Windows Machines
 
+## See Also
+- [Quickstart Installation Guides](quickstart)
+- [Monitoring network services](monitoring-networkservices)
+
+
 ## Introduction
 
 This document describes how you can monitor local services and attributes of Windows machines, such as:
-
 
  - Memory usage
  - CPU load

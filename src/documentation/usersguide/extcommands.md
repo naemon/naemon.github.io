@@ -1,7 +1,11 @@
-External Commands
+# External Commands
+
+## See Also
+- [Passive Checks](passivechecks)
+- [Adaptive Monitoring](adaptive)
+- [List of external commands](/documentation/developer/externalcommands/)
 
 <!--@include: ../../includes/review.md-->
-
 
 
 ## Introduction

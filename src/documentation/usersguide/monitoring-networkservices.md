@@ -1,5 +1,8 @@
 # Monitoring network services
 
+## See Also
+- [Quickstart Installation Guides](quickstart)
+
 ## Introduction
 
 This document describes how you can monitor network services, applications and protocols, either on the local network or the greater Internet.  Examples of network services include HTTP, POP3, IMAP, FTP, and SSH.  There are many more network services that you probably use on a daily basis.  These services and applications, as well as their underlying protocols, can usually be monitored by Naemon without any special access requirements.

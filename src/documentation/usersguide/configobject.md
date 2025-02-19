@@ -1,5 +1,10 @@
 # Object Configuration Overview
 
+
+## See Also
+- [Configuration Overview](config)
+- [Object Definitions](objectdefinitions)
+
 ## What Are Objects?
 
 Objects are all the elements that are involved in the monitoring and notification logic.  Types of objects include:

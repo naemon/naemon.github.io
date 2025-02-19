@@ -1,5 +1,11 @@
 # Active Checks
 
+## See Also
+- [Passive Checks](passivechecks)
+- [Plugins](plugins)
+- [Host Checks](hostchecks)
+- [Service Checks](servicechecks)
+
 ## Introduction
 
 Naemon is capable of monitoring hosts and services in two ways: actively and passively.  Passive checks are described [elsewhere](passivechecks), so we'll focus on active checks here.  Active checks are the most common method for monitoring hosts and services.  The main features of actives checks as as follows:

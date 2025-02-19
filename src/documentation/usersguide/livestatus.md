@@ -1,5 +1,9 @@
 # Livestatus API
 
+## See Also
+- [Addons](/documentation/usersguide/addons)
+
+
 Livestatus Query Language (LQL) is a lightweight and efficient way to query
 monitoring data from Naemon. It is designed for fast data retrieval and
 filtering of monitoring objects like hosts and services.

@@ -1,12 +1,17 @@
 # Tuning Naemon For Maximum Performance
 
+![No speed limit](/images/usersguide/svg/Zeichen_282_StVO.svg) {.img-bg .img-250-h}
+
+## See Also
+- [Fast Startup Options](faststartup)
+- [Graphing Performance Info](mrtggraphs)
+
 ## Introduction
 
 Tuning Naemon to increase performance can be necessary when
 you start monitoring a large number (> 10,000) of hosts and services. Here are
 a few things to look at for optimizing Naemon...
 
-![No speed limit](/images/usersguide/svg/Zeichen_282_StVO.svg) {.img-bg .img-250-h}
 
 ## Optimization Tips
 

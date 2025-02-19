@@ -1,5 +1,10 @@
 # Monitoring Service and Host Clusters
 
+## See Also
+- [Active Checks](activechecks)
+- [How Macros Work](macros)
+
+
 ## Introduction
 
 On this page you can find more information about how to monitor clusters.

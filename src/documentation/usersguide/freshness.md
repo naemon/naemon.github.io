@@ -3,6 +3,13 @@
 ![Minty Fresh](/images/usersguide/svg/freshness.svg) {.img-bg}
 
 
+## See Also
+- [Passive Checks](passivechecks)
+- [Distributed Monitoring](distributed)
+- [Redundant and Failover Monitoring](redundancy)
+
+
+
 ## Introduction
 
 Naemon supports a feature that does "freshness" checking on the results of host and service checks.  The purpose of freshness checking is to ensure that host and service checks are being provided passively by external applications on a regular basis.

@@ -2,6 +2,8 @@
 
 ![Scheduled Downtime](/images/usersguide/svg/downtime.svg) {.img-bg}
 
+## See Also
+- [Notifications](notifications)
 
 ## Introduction
 

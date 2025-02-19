@@ -1,5 +1,9 @@
 # Adaptive Monitoring
 
+## See Also
+- [External Commands](extcommands)
+- [List of external commands](/documentation/developer/externalcommands/)
+
 ## Introduction
 
 Naemon allows you to change certain commands and host and service check

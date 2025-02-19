@@ -1,8 +1,14 @@
 # Event Handlers
 
+![Event Handlers](/images/usersguide/svg/eventhandlers.svg) {.img-bg}
+
+## See Also
+- [State Types](statetypes)
+- [Host Checks](hostchecks)
+- [Service Checks](servicechecks)
+
 ## Introduction
 
-![Event Handlers](/images/usersguide/svg/eventhandlers.svg) {.img-bg}
 
 Event handlers are optional system commands (scripts or executables) that are run whenever a host or service state change occurs.
 

@@ -1,5 +1,8 @@
 # Volatile Services
 
+## See Also
+- [State Stalking](stalking)
+
 ## Introduction
 
 Naemon has the ability to distinguish between "normal" services and "volatile" services.

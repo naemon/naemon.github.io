@@ -1,5 +1,12 @@
 # Configuration Overview
 
+## See Also
+- [Main Configuration File](configmain)
+- [Object Configuration Overview](configobject)
+- [CGI Configuration File](configcgi)
+- [Standard Macros in Naemon](macrolist)
+
+
 ## Introduction
 
 There are several different configuration files that you're going to need to create or edit before you start monitoring anything (except from the preconfigured test of the local host).  Be patient!  Configuring Naemon can take quite a while, especially if you're first-time user.  Once you figure out how things work, it'll all be well worth your time. <i class="fa-solid fa-face-smile"></i>

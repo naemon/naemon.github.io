@@ -1,5 +1,9 @@
 # Understanding Macros and How They Work
 
+## See Also
+- [Standard Macros in Naemon](macrolist)
+- [Custom Object Variables](customobjectvars)
+
 
 ## Macros
 

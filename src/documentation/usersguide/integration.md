@@ -1,5 +1,12 @@
 ## Integration Overview
 
+## See Also
+- [External Commands](extcommands)
+- [List of external commands](/documentation/developer/externalcommands/)
+- [Passive Checks](passivechecks)
+- [Event Handlers](eventhandlers)
+- [Plugins](plugins)
+
 ## Introduction
 
 One of the reasons that Naemon is such a popular monitoring application is the fact that it can be easily integrated in your existing infrastructure.  There are several methods of integrating Naemon with the management software you're already using and you can monitor almost any type of new or custom hardware, service, or application that you might have.

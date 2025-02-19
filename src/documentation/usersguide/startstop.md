@@ -1,5 +1,8 @@
 # Starting, reload and stopping Naemon
 
+## See Also
+- [Verifying Your Configuration](verifyconfig)
+
 There's more than one way to start, reload, stop, and restart Naemon.
 Here are some of the more common ones.
 

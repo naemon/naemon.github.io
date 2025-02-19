@@ -1,5 +1,8 @@
 # Detection and Handling of State Flapping
 
+## See Also
+- [State Types](statetypes)
+
 ## Introduction
 
 Naemon supports optional detection of hosts and services that are "flapping".  Flapping occurs when a service or host changes state too frequently, resulting in a storm of problem and recovery notifications.  Flapping can be indicative of configuration problems (i.e. thresholds set too low), troublesome services, or real network problems.

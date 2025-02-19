@@ -1,5 +1,9 @@
 # CentOS Quickstart
 
+## See Also
+- [Quickstart Installation Guides](quickstart)
+- [Security Considerations](security)
+
 ## Introduction
 
 This guide is intended to provide you with simple instructions on how to install Naemon from packages on Ubuntu and have it monitoring your local machine within 10 minutes. No advanced installation options are discussed here - just the basics that will work for 95% of users who want to get started.

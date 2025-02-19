@@ -1,5 +1,8 @@
 # Using The Naemonstats Utility
 
+## See Also
+- [Performance Tuning](tuning)
+
 ## Introduction
 
 A utility called `naemonstats` is included in the Naemon distribution.

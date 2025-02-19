@@ -1,5 +1,10 @@
 # Plugins
 
+## See Also
+- [Plugin API](pluginapi)
+- [Embedded Perl Interpreter Overview](embeddedperl)
+- [Active Checks](activechecks)
+
 ## Introduction
 
 Unlike many other monitoring tools, Naemon does not include any internal mechanisms for checking the status of hosts and services on your network.  Instead, Naemon relies on external programs (called plugins) to do all the dirty work.

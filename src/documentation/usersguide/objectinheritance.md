@@ -1,5 +1,12 @@
 # Object Inheritance
 
+## See Also
+- [Object Definitions](objectdefinitions)
+- [Object Tricks](objecttricks)
+- [Custom Object Variables](customobjectvars)
+- [Fast Startup Options](faststartup)
+
+
 ## Introduction
 
 This documentation attempts to explain object inheritance and how it can be used in your [object definitions](objectdefinitions).

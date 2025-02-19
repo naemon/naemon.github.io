@@ -1,5 +1,11 @@
 # Object Definitions
 
+## See Also
+- [Object Configuration Overview](configobject)
+- [Object Tricks](objecttricks)
+- [Object Inheritance](objectinheritance)
+- [Custom Object Variables](customobjectvars)
+
 ## Introduction
 
 One of the features of Naemon' object configuration format is that you can create object

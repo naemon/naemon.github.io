@@ -1,5 +1,9 @@
 # Upgrading Naemon
 
+## See Also
+- [Quickstart Installation Guide](quickstart)
+
+
 ### Upgrading Naemon From an DEB/RPM Installation
 
 Upgrading an existing installation which is already installed from a package repository is

@@ -1,5 +1,10 @@
 # Passive Checks
 
+## See Also
+- [Active Checks](activechecks)
+- [Host Checks](hostchecks)
+- [Service Checks](servicechecks)
+
 ## Introduction
 
 In most cases you'll use Naemon to monitor your hosts and services using regularly scheduled [active checks](activechecks).  Active checks can be used to "poll" a device or service for status information every so often.  Naemon also supports a way to monitor hosts and services passively instead of actively.  They key features of passive checks are as follows:

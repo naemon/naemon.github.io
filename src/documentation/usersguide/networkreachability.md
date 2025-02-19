@@ -1,5 +1,9 @@
 # Determining Status and Reachability of Network Hosts
 
+## See Also
+- [Host Checks](hostchecks)
+- [Passive Host State Translation](passivestatetranslation)
+
 ## Introduction
 
 If you've ever work in tech support, you've undoubtedly had users tell you "the Internet is down".  As a techie, you're pretty sure that no one pulled the power cord from the Internet.  Something must be going wrong somewhere between the user's chair and the Internet.

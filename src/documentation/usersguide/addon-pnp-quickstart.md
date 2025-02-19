@@ -1,5 +1,8 @@
 # Addon PNP4Nagios Quickstart
 
+## See Also
+- [Addons](addons)
+
 ## Introduction
 
 ![pnp4nagios example with Naemon](/images/usersguide/pixel/pnp4nagios-example1.png) {.img-bg}

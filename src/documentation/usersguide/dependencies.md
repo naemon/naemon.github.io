@@ -1,5 +1,10 @@
 # Host and Service Dependencies
 
+## See Also
+- [Active Checks](activechecks)
+- [Host Checks](hostchecks)
+- [Predictive Dependency Checks](dependencychecks)
+
 ## Introduction
 
 Service and host dependencies are an advanced feature of Naemon that allow you to control the behavior of hosts and services based on the status of one or more other hosts or services.  I'll explain how dependencies work, along with the differences between host and service dependencies.

@@ -6,7 +6,10 @@ pageClass: page-large-content
 
 # Standard Macros in Naemon
 
-<span class="glyphicon glyphicon-arrow-right"></span> See Also: <a href="macros.html">How Macros Work</a>
+## See Also
+- [How Macros Work](macros)
+- [Custom Object Variables](customobjectvars)
+
 
 Standard macros that are available in Naemon are listed here. On-demand macros and macros for custom
 variables are described <a href="macros.html">here</a>.

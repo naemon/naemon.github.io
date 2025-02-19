@@ -1,5 +1,9 @@
 # Performance Data
 
+## See Also
+- [Plugins](plugins)
+- [Plugin API](pluginapi)
+
 ## Introduction
 
 Naemon is designed to allow [plugins](plugins) to return optional performance data in addition to normal status data, as well as allow you to pass that performance data to external applications for processing.  A description of the different types of performance data, as well as information on how to go about processing that data is described below...

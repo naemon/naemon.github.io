@@ -1,5 +1,12 @@
 # CGI Configuration File Options
 
+## See Also
+- [Configuration Overview](config)
+- [Information on the CGIs](cgis)
+- [Authentication And Authorization In The CGIs](cgiauth)
+- [CGI Footers and Headers](cgiincludes)
+
+
 > [!DANGER] The CGIs have been removed from Naemon
 > The documentation is only here for legacy reasons. Please see the [Addons](addons) page for alternatives.
 

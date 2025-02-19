@@ -1,5 +1,10 @@
 # Verifying Your Naemon Configuration
 
+## See Also
+- [Configuration Overview](config)
+- [Starting and Stopping Naemon](startstop)
+
+
 ## Verifying Your Configuration
 
 Every time you modify your [configuration files](config), you
