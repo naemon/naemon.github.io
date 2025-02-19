@@ -140,7 +140,7 @@
 
 [Using the naemonstats utility](naemonstats) :white_check_mark:
 
-## Naemon Addons
+## Naemon Addons :white_check_mark:
 
 [Thruk](addons#thruk)
 
@@ -168,7 +168,7 @@
 
 [Other addons](addons#others)
 
-[Nagios Exchange](http://exchange.nagios.org/) :white_check_mark:
+[Nagios Exchange](https://exchange.nagios.org/) :white_check_mark:
 
 ## Integration With Other Software
 
