@@ -182,7 +182,9 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/naemon' },
-      { icon: 'x', link: 'https://x.com/naemoncore' }
+      { icon: 'x', link: 'https://x.com/naemoncore' },
+      { icon: 'mastodon', link: 'https://floss.social/@naemon' },
+      { icon: 'rss', link: '/news/feed.xml' }
     ],
 
     search: {
