@@ -126,7 +126,7 @@ See upcoming changes from the next version on [Github](https://github.com/naemon
 
 ### 1.3.0 - 03 Nov 2021
 #### Features
-- add vault macro neb broker api
+- add vault macro neb broker API
 - set environment variables in a more secure way
 
 #### Livestatus

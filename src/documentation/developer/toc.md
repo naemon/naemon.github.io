@@ -1,7 +1,7 @@
 
 # Developer Documentation
 
-Technical and api documentation for Naemon.
+Technical and API documentation for Naemon.
 
 ## Core
 

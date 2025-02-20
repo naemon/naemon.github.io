@@ -43,11 +43,11 @@ fairly simple and very easy to debug. The breakdown goes as follows:
 > Keys are case sensitive. `JOB_ID` is *not* the same as `job_id`.
 
 
-### API's
+### APIs
 Worker processes communicate with Naemon using libnaemon API's
 exclusively. Since you're looking at a subpage of the documentation
 for that documentation right now, I'll just assume you've found it.
-Although using the libnaemon api's when writing a worker is
+Although using the libnaemon APIs when writing a worker is
 completely optional, it's highly recommended.
 
 The key API's to use are:
@@ -284,4 +284,3 @@ Step 4, Worker:
 ```
 
 Steps 3 and 4 in this chain repeat indefinitely.
-
