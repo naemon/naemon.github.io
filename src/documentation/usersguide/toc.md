@@ -2,145 +2,145 @@
 
 ## About
 
-[What is Naemon?](about#whatis) :white_check_mark:
+[What is Naemon?](about#whatis)
 
-[Components](about#components) :white_check_mark:
+[Components](about#components)
 
-[System requirements](about#system-requirements) :white_check_mark:
+[System requirements](about#system-requirements)
 
-[Licensing](about#licensing) :white_check_mark:
+[Licensing](about#licensing)
 
-[Downloading the latest version](about#downloading-the-latest-version) :white_check_mark:
+[Downloading the latest version](about#downloading-the-latest-version)
 
 ## Release Notes
 
-[What's new in this version](whatsnew) :white_check_mark:
+[What's new in this version](whatsnew)
 
-[Known issues](whatsnew#known-issues) :white_check_mark:
+[Known issues](whatsnew#known-issues)
 
-[Configuration Incompatibilities Nagios 3 -> Naemon](config-incompat3to4) :white_check_mark:
+[Configuration Incompatibilities Nagios 3 -> Naemon](config-incompat3to4)
 
 ## Support
 
-[Support](support) :white_check_mark:
+[Support](support)
 
-[Community](/community) :white_check_mark:
+[Community](/community)
 
 ## Getting Started
 
-[Advice for beginners](beginners) :white_check_mark:
+[Advice for beginners](beginners)
 
-[Quickstart installation guide](quickstart) :white_check_mark:
+[Quickstart installation guide](quickstart)
 
-[Upgrading from previous versions](upgrading) :white_check_mark:
+[Upgrading from previous versions](upgrading)
 
-[How to monitor a Windows machine](monitoring-windows) :white_check_mark:
+[How to monitor a Windows machine](monitoring-windows)
 
-[How to monitor a Linux/Unix machine](monitoring-linux) :white_check_mark:
+[How to monitor a Linux/Unix machine](monitoring-linux)
 
-[How to monitor a network printer](monitoring-printers) :white_check_mark:
+[How to monitor a network printer](monitoring-printers)
 
-[How to monitor a router/switch](monitoring-routers) :white_check_mark:
+[How to monitor a router/switch](monitoring-routers)
 
-[How to monitor network services (HTTP, FTP, SSH, etc.)](monitoring-networkservices) :white_check_mark:
+[How to monitor network services (HTTP, FTP, SSH, etc.)](monitoring-networkservices)
 
-[How to install PNP graphs](addon-pnp-quickstart) :white_check_mark:
+[How to install PNP graphs](addon-pnp-quickstart)
 
 ## Configuring Naemon
 
-[Configuration overview](config) :white_check_mark:
+[Configuration overview](config)
 
-[Main configuration file options](configmain) :white_check_mark:
+[Main configuration file options](configmain)
 
-[Object configuration overview](configobject) :white_check_mark:
+[Object configuration overview](configobject)
 
-[Object definitions](objectdefinitions) :white_check_mark:
+[Object definitions](objectdefinitions)
 
 ## Running Naemon
 
-[Verifying your configuration](verifyconfig) :white_check_mark:
+[Verifying your configuration](verifyconfig)
 
-[Starting and stopping Naemon](startstop) :white_check_mark:
+[Starting and stopping Naemon](startstop)
 
 ## The Basics {#basics}
 
-[Plugins](plugins) :white_check_mark:
+[Plugins](plugins)
 
-[Macros and how they work](macros) :white_check_mark:
+[Macros and how they work](macros)
 
-[Standard macros available in Naemon](macrolist) :white_check_mark:
+[Standard macros available in Naemon](macrolist)
 
-[Custom Object Variables](customobjectvars) :white_check_mark:
+[Custom Object Variables](customobjectvars)
 
-[Host checks](hostchecks) :white_check_mark:
+[Host checks](hostchecks)
 
-[Service checks](servicechecks) :white_check_mark:
+[Service checks](servicechecks)
 
-[Active checks](activechecks) :white_check_mark:
+[Active checks](activechecks)
 
-[Passive checks](passivechecks) :white_check_mark:
+[Passive checks](passivechecks)
 
-[State types](statetypes) :white_check_mark:
+[State types](statetypes)
 
-[Time periods](timeperiods) :white_check_mark:
+[Time periods](timeperiods)
 
-[Determining status and reachability of network hosts](networkreachability) :white_check_mark:
+[Determining status and reachability of network hosts](networkreachability)
 
-[Notifications](notifications) :white_check_mark:
+[Notifications](notifications)
 
 ## Advanced Topics
 
-[External commands](extcommands) :white_check_mark:
+[External commands](extcommands)
 
-[Event handlers](eventhandlers) :white_check_mark:
+[Event handlers](eventhandlers)
 
-[Volatile services](volatileservices) :white_check_mark:
+[Volatile services](volatileservices)
 
-[Service and host result freshness checks](freshness) :white_check_mark:
+[Service and host result freshness checks](freshness)
 
-[Distributed monitoring](distributed) :white_check_mark:
+[Distributed monitoring](distributed)
 
-[Redundant and failover monitoring](redundancy) :white_check_mark:
+[Redundant and failover monitoring](redundancy)
 
-[Detection and handling of state flapping](flapping) :white_check_mark:
+[Detection and handling of state flapping](flapping)
 
-[Notification escalations](escalations) :white_check_mark:
+[Notification escalations](escalations)
 
-[On-call notification rotations](oncallrotation) :white_check_mark:
+[On-call notification rotations](oncallrotation)
 
-[Monitoring service and host clusters](clusters) :white_check_mark:
+[Monitoring service and host clusters](clusters)
 
-[Host and service dependencies](dependencies) :white_check_mark:
+[Host and service dependencies](dependencies)
 
-[State stalking](stalking) :white_check_mark:
+[State stalking](stalking)
 
-[Performance data](perfdata) :white_check_mark:
+[Performance data](perfdata)
 
-[Scheduled host and service downtime](downtime) :white_check_mark:
+[Scheduled host and service downtime](downtime)
 
-[Adaptive monitoring](adaptive) :white_check_mark:
+[Adaptive monitoring](adaptive)
 
-[Predictive dependency checks](dependencychecks) :white_check_mark:
+[Predictive dependency checks](dependencychecks)
 
-[Cached checks](cachedchecks) :white_check_mark:
+[Cached checks](cachedchecks)
 
-[Passive host state translation](passivestatetranslation) :white_check_mark:
+[Passive host state translation](passivestatetranslation)
 
-[Object inheritance](objectinheritance) :white_check_mark:
+[Object inheritance](objectinheritance)
 
-[Time-saving tips for object definitions](objecttricks) :white_check_mark:
+[Time-saving tips for object definitions](objecttricks)
 
 ## Security and Performance Tuning
 
-[Security considerations](security) :white_check_mark:
+[Security considerations](security)
 
-[Tuning Naemon for maximum performance](tuning) :white_check_mark:
+[Tuning Naemon for maximum performance](tuning)
 
-[Fast startup options](faststartup) :white_check_mark:
+[Fast startup options](faststartup)
 
-[Using the naemonstats utility](naemonstats) :white_check_mark:
+[Using the naemonstats utility](naemonstats)
 
-## Naemon Addons :white_check_mark:
+## Naemon Addons
 
 [Thruk](addons#thruk)
 
@@ -168,27 +168,27 @@
 
 [Other addons](addons#others)
 
-[Nagios Exchange](https://exchange.nagios.org/) :white_check_mark:
+[Nagios Exchange](https://exchange.nagios.org/)
 
 ## Integration With Other Software
 
-[Integration Overview](integration) :white_check_mark:
+[Integration Overview](integration)
 
-[SNMP Traps](int-snmptrap) :white_check_mark:
+[SNMP Traps](int-snmptrap)
 
-[TCP Wrappers](int-tcpwrappers) :white_check_mark:
+[TCP Wrappers](int-tcpwrappers)
 
 ## Development
 
-[Plugin API](pluginapi) :white_check_mark:
+[Plugin API](pluginapi)
 
-[Developing Plugins For Use With Embedded Perl](epnplugins) :white_check_mark:
+[Developing Plugins For Use With Embedded Perl](epnplugins)
 
-[Developer Documentation](/documentation/developer/toc) :white_check_mark:
+[Developer Documentation](/documentation/developer/toc)
 
 ## Naemon Logo
 
-[Naemon Logo](/logo) :white_check_mark:
+[Naemon Logo](/logo)
 
 ## Licensing
 
