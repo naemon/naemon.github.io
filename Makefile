@@ -1,33 +1,41 @@
-GEM_HOME=.gem
-TESTPORT=4001
+#!/usr/bin/make -f
 
-.PHONY: .gem
+SHELL=bash
+PWD=$(shell pwd)
+DOCKERRUN=docker run \
+	--rm -it \
+	-p 5173:5173 \
+	--name=naemon-docs \
+	-v $(PWD):/opt/node_app/app \
+	-v /opt/node_app/node_modules/ \
+	-v /opt/node_app/app/.vitepress/cache \
+	-v /opt/node_app/app/.vitepress/dist \
+	-v $(PWD)/package.json:/opt/node_app/package.json \
+	naemon/docs:latest
 
-quick: .gem
-	JEKYLL_ENV=local NOCLEAN=1 bundle exec bash -c "time jekyll build --trace --limit_posts=15"
+build: node_modules
+	npm run docs:build
 
-build: .gem
-	bundle exec jekyll build --trace --limit_posts=5
+server: node_modules
+	npm run docs:dev
 
-server: .gem
-	bundle exec jekyll serve --host=\* --trace --watch
+node_modules:
+	npm install --verbose --include=dev && npm cache clean --force
 
-.gem:
-	# sudo apt-get install ruby ruby-dev ruby-bundler nodejs libmagickcore-dev libmagickwand-dev libreadline-gplv2-dev zlib1g-dev
-	bundle config set path '.gem'
-	bundler install --path $(GEM_HOME)
-	bundler update
+docker-build:
+	docker build -t naemon/docs .
+	$(DOCKERRUN) npm run docs:build
 
-test: .gem
-	NOCLEAN=1 bundle exec jekyll serve --port=$(TESTPORT) & SPID=$$!;  \
-		for i in $$(seq 100); do if lsof -i:$(TESTPORT) >/dev/null 2>&1; then break; else sleep 0.3; fi done; \
-		TESTEXPECT=Naemon TESTTARGET=http://localhost:$(TESTPORT) PERL_DL_NONLAZY=1 perl -MExtUtils::Command::MM -e "test_harness(0)" t/*.t; \
-		RC=$$?; \
-		kill -9 $$SPID; \
-		exit $$RC
-
-localtest: _site
-	TESTEXPECT=Naemon TESTTARGET=file://$(shell pwd)/_site/ PERL_DL_NONLAZY=1 perl -MExtUtils::Command::MM -e "test_harness(0)" t/*.t
+docker-server:
+	docker build -t naemon/docs .
+	$(DOCKERRUN)
 
 clean:
-	rm -rf _site
+	rm -rf node_modules
+
+update_livestatus_json:
+	docker run --rm -ti \
+		consol/omd-labs-rocky:nightly \
+		bash -c "omd start >/dev/null; sudo su - demo -c \"echo -e 'GET columns\nColumns: table name description type\nOutputFormat: json\n' | lq\"" \
+	> src/documentation/usersguide/livestatus.columns.json
+	fromdos src/documentation/usersguide/livestatus.columns.json

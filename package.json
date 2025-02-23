@@ -1,0 +1,19 @@
+{
+  "name": "naemon-docs",
+  "private": true,
+  "version": "0.0.0",
+  "devDependencies": {
+    "@types/node": "^22.12.0",
+    "feed": "^4.2.2",
+    "markdown-it-mathjax3": "^4.3.2",
+    "vitepress": "^1.5.0"
+  },
+  "scripts": {
+    "docs:dev": "npx vitepress dev --host",
+    "docs:build": "npx vitepress build",
+    "docs:preview": "npx vitepress preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.0"
+  }
+}

@@ -1,0 +1,33 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Seite-1" id="rNsdxIkiqMeCB4t6qaDR">
+    <mxGraphModel dx="2074" dy="1196" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="amHdWMX3TkzkMY_308Di-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;devweb1&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="475" y="487" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="amHdWMX3TkzkMY_308Di-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;elbow=vertical;curved=1;exitX=0.445;exitY=1.03;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="amHdWMX3TkzkMY_308Di-3" target="amHdWMX3TkzkMY_308Di-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="265" y="510" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="amHdWMX3TkzkMY_308Di-3" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;generic-host&lt;/b&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="375" y="290" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="amHdWMX3TkzkMY_308Di-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;curved=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="amHdWMX3TkzkMY_308Di-5" target="amHdWMX3TkzkMY_308Di-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="amHdWMX3TkzkMY_308Di-5" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;development-server&lt;/b&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="565" y="290" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="amHdWMX3TkzkMY_308Di-6" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;notification_options&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="625" y="420" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="amHdWMX3TkzkMY_308Di-7" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;active_checks,&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;check_interval&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="290" y="420" width="130" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,1 +1,0 @@
-<div class="alert alert-warning" style="margin: 10px;"><i class="glyphicon glyphicon-warning-sign"></i> This page must be reviewed. See <a href="/review_required.html">instructions</a> on how to do that. Then remove this tag.</div>

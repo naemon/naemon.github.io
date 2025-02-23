@@ -1,4 +1,45 @@
-_site
-.bundle
-.gem
-Gemfile.lock
+# Thanks to CakePHP for the good .gitignore
+# https://github.com/cakephp/cakephp/blob/33626a03197758f30a8ce8c2e0a75ed8ddbce40a/.gitignore
+
+# VitePress files #
+##################
+node_modules
+package-lock.json
+.vitepress/cache
+.vitepress/dist
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+*Zone.Identifier
+
+# Tool specific files #
+#######################
+# vim
+*~
+*.swp
+*.swo
+# sublime text & textmate
+*.sublime-*
+*.stTheme.cache
+*.tmlanguage.cache
+*.tmPreferences.cache
+# Eclipse
+.settings/*
+/.project
+/.buildpath
+# JetBrains, aka PHPStorm, IntelliJ IDEA
+.idea/*
+# NetBeans
+nbproject/*
+# Visual Studio Code
+.vscode
+
+

@@ -1,17 +1,21 @@
-FROM alpine:3.19
+# I choose the bookworm version over the alpine based one
+# because the bookworm image came with some essentials such as
+# bash which makes debugging WAY easier
+FROM node:22-bookworm
 
-# This is highly inspired from https://github.com/Starefossen/docker-github-pages
-# Many thanks
-# Also thanks to https://pmarinova.github.io/2023/10/10/running-github-pages-gem-locally-with-docker.html
+EXPOSE 5173
 
-RUN apk --update add --virtual build_deps \
-    build-base ruby-dev libc-dev linux-headers jekyll
-RUN gem install --verbose --no-document github-pages bundler
+RUN npm i npm@latest -g
 
-RUN mkdir -p /site
+WORKDIR /opt/node_app
 
-WORKDIR /site
+COPY package.json package-lock.json* ./
+RUN npm install --verbose --include=dev && npm cache clean --force
+ENV PATH=/opt/node_app/node_modules/.bin:$PATH
 
-EXPOSE 4000
+HEALTHCHECK --interval=30s CMD node healthcheck.js
 
-CMD bundle install && bundle exec jekyll serve --watch --force_polling -H 0.0.0.0 -P 4000
+WORKDIR /opt/node_app/app
+COPY . .
+
+CMD ["npm", "run", "docs:dev"]
