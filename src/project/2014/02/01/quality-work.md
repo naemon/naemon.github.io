@@ -1,0 +1,4 @@
+---
+layout: redirect
+url: /news/2014-02-01-quality-work
+---

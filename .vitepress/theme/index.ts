@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import '@fortawesome/fontawesome-free/css/all.css'
 import './naemon.css'
 import News from './News.vue'
+import Redirect from './Redirect.vue'
 import Breadcrumb from './components/Breadcrumb.vue'
 
 export default {
@@ -20,5 +21,6 @@ export default {
     app.config.globalProperties.$RELEASE_DATE = import.meta.env.VITE_RELEASE_DATE
 
     app.component('news', News)
+    app.component('redirect', Redirect)
   }
 } satisfies Theme

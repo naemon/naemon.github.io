@@ -195,10 +195,4 @@ export default defineConfig({
       pattern: 'https://github.com/naemon/naemon.github.io/edit/master/src/:path'
     }
   },
-
-  // rewrite urls from existing news
-  // https://vitepress.dev/reference/site-config#routing
-  rewrites: {
-    'news/:year(\\d+)-:mon(\\d+)-:day(\\d+)-:slug(.*\\.md)': 'project/:year/:mon/:day/:slug',
-  },
 })
