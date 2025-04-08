@@ -2,7 +2,7 @@
 editLink: false
 breadcrumb: true
 head: [
-  [ 'script', { src: 'index.js' } ]
+  [ 'script', { src: '/js/externalCommands.js' } ]
 ]
 ---
 
