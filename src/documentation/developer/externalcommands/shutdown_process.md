@@ -28,7 +28,5 @@ const command = {"args":[],"name":"SHUTDOWN_PROCESS","description":"Shuts down t
 # This is a shell script showing how to submit the {{ command.name }} command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%%lu] {{ command.name }}{{ command.exampleArgStr }}\n" \
-    `date +%%s` \
-    > /var/lib/naemon/naemon.cmd
+printf "[%lu] {{ command.name }}{{ command.exampleArgStr }}\n" `date +%s` > /var/lib/naemon/naemon.cmd
 ```
