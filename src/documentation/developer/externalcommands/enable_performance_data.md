@@ -5,6 +5,7 @@ prev:
     link: '/documentation/developer/externalcommands/'
 next: false
 breadcrumb: true
+aside: false
 ---
 
 <script setup>
@@ -28,5 +29,6 @@ const command = {"args":[],"name":"ENABLE_PERFORMANCE_DATA","description":"Enabl
 # This is a shell script showing how to submit the {{ command.name }} command
 # to Naemon. Adjust variables to fit your environment as necessary.
 
-printf "[%lu] {{ command.name }}{{ command.exampleArgStr }}\n" `date +%s` > /var/lib/naemon/naemon.cmd
+printf "[%lu] {{ command.name }}{{ command.exampleArgStr }}\n" \
+    `date +%s` > /var/lib/naemon/naemon.cmd
 ```
