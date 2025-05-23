@@ -266,7 +266,7 @@ You should run *tmpwatch*, or a similar utility, on this directory occasionally 
 </tr>
 <tr>
 <td>Example:</td>
-<td><span class="text-red bold">status_file=/var/lib/status.dat</span></td>
+<td><span class="text-red bold">status_file=/var/lib/naemon/status.dat</span></td>
 </tr>
 </tbody>
 </table>
