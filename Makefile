@@ -13,6 +13,8 @@ DOCKERRUN=docker run \
 	-v $(PWD)/package.json:/opt/node_app/package.json \
 	naemon/docs:latest
 
+.PHONY: test
+
 build: node_modules
 	npm run docs:build
 
@@ -32,6 +34,11 @@ docker-server:
 
 clean:
 	rm -rf node_modules
+	rm -rf .vitepress/dist/
+	rm -rf .vitepress/cache/
+	rm -rf package-lock.json
+	rm -rf src/documentation/developer/externalcommands/commands.c.cache
+	rm -rf src/public/news/feed.xml
 
 update_livestatus_json:
 	docker run --rm -ti \
@@ -39,3 +46,7 @@ update_livestatus_json:
 		bash -c "omd start >/dev/null; sudo su - demo -c \"echo -e 'GET columns\nColumns: table name description type\nOutputFormat: json\n' | lq\"" \
 	> src/documentation/usersguide/livestatus.columns.json
 	fromdos src/documentation/usersguide/livestatus.columns.json
+
+test:
+	$(MAKE) build
+	npm run test

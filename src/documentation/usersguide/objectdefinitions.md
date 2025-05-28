@@ -85,7 +85,7 @@ A host definition is used to define a physical server, workstation, device, etc.
 > [!IMPORTANT]
 > Directives in red are required, while those in black are optional.
 
-```
+```js
 define host {
     host_name                        host_name // [!code error]
     alias                            alias // [!code error]
@@ -421,7 +421,7 @@ Valid options are a combination of one or more of the following:
 - `o` = UP states
 - `d` = DOWN states
 - `u` = UNREACHABLE states
-- 
+-
 </td>
 </tr>
 
@@ -687,7 +687,7 @@ configuration with [object tricks](objecttricks) or display purposes in the [CGI
 > [!IMPORTANT]
 > Directives in red are required, while those in black are optional.
 
-```
+```js
 define hostgroup {
     hostgroup_name      hostgroup_name // [!code error]
     alias               alias // [!code error]
@@ -812,7 +812,7 @@ The different arguments to a service definition are outlined below.
 > [!IMPORTANT]
 > Directives in red are required, while those in black are optional.
 
-```
+```js
 define service {
     host_name                       host_name // [!code error]
     hostgroup_name                  hostgroup_name
@@ -1081,6 +1081,7 @@ If you set this directive to a value of `0`, Naemon will determine a freshness t
 
 </td>
 </tr>
+<tr>
 <td valign="top"><strong>event_handler</strong>:</td>
 <td>
 
@@ -1092,6 +1093,7 @@ Read the documentation on
 The maximum amount of time that the event handler command can run is controlled by the [event_handler_timeout](configmain#event_handler_timeout) option.
 
 </td>
+</tr>
 <tr>
 <td valign="top"><strong>event_handler_enabled <a href="#retention_notes" class="text-red">*</a></strong>:</td>
 <td>
@@ -1367,7 +1369,7 @@ configuration with [object tricks](objecttricks) or display purposes in the [CGI
 > [!IMPORTANT]
 > Directives in red are required, while those in black are optional.
 
-```
+```js
 define servicegroup {
     servicegroup_name       servicegroup_name // [!code error]
     alias                   alias // [!code error]
@@ -1496,7 +1498,7 @@ The different arguments to a contact definition are described below.
 > [!IMPORTANT]
 > Directives in red are required, while those in black are optional.
 
-```
+```js
 define contact {
     contact_name                    contact_name // [!code error]
     alias                           alias
@@ -1784,7 +1786,7 @@ together for the purpose of sending out alert/recovery <a href="notifications.ht
 > [!IMPORTANT]
 > Directives in red are required, while those in black are optional.
 
-```
+```js
 define contactgroup {
     contactgroup_name       contactgroup_name // [!code error]
     alias                   alias // [!code error]
@@ -1867,7 +1869,7 @@ including: specific weekdays, days of generic months, days of specific months, a
 > [!IMPORTANT]
 > Directives in red are required, while those in black are optional.
 
-```
+```js
 define timeperiod {
     timeperiod_name         timeperiod_name // [!code error]
     alias                   alias // [!code error]
@@ -2021,7 +2023,7 @@ found [here](macros). The different arguments to a command definition are outlin
 > [!IMPORTANT]
 > Directives in red are required, while those in black are optional.
 
-```
+```js
 define command {
     command_name        command_name // [!code error]
     command_line        command_line // [!code error]
@@ -2101,7 +2103,7 @@ found [here](dependencies).
 > [!TIP]Directives in red are required, while those in black are optional.
 > However, you must supply at least one type of criteria for the definition to be of much use.
 
-```
+```js
 define servicedependency {
     dependent_host_name                 host_name // [!code error]
     dependent_hostgroup_name            hostgroup_name
@@ -2294,7 +2296,7 @@ More information on how notification escalations work can be found <a href="esca
 > [!IMPORTANT]
 > Directives in red are required, while those in black are optional.
 
-```
+```js
 define serviceescalation {
 	host_name               host_name // [!code error]
 	hostgroup_name          hostgroup_name
@@ -2473,7 +2475,7 @@ More information on how host dependencies work (read this!) can be found
 > [!IMPORTANT]
 > Directives in red are required, while those in black are optional.
 
-```
+```js
 define hostdependency {
     dependent_host_name             host_name // [!code error]
     dependent_hostgroup_name        hostgroup_name
@@ -2622,7 +2624,7 @@ More information on how notification escalations work can be found [here](escala
 > [!IMPORTANT]
 > Directives in red are required, while those in black are optional.
 
-```
+```js
 define hostescalation {
     host_name               host_name // [!code error]
     hostgroup_name          hostgroup_name
