@@ -41,27 +41,27 @@ The third variable is `register`.  This variable is used to indicate whether or 
 Values are as follows:
 - `0` = do NOT register object definition,
 - `1` = register object definition (this is the default).
- 
+
 This variable is NOT inherited; every (partial) object definition used as a template must explicitly set the `register` directive to be `0`.  This prevents the need to override an inherited `register` directive with a value of `1` for every object that should be registered.
 
 ## Local Variables vs. Inherited Variables
 
 One important thing to understand with inheritance is that "local" object variables always take precedence over variables defined in the template object.  Take a look at the following example of two host definitions (not all required variables have been supplied):
 
-```
+```js
 define host{
     host_name               bighost1
     check_command           check-host-alive
     notification_options    d,u,r
     max_check_attempts      5
-    name                    hosttemplate1 // [!code highlight] 
+    name                    hosttemplate1 // [!code highlight]
 }
 
 
 define host{
     host_name               bighost2
     max_check_attempts      3
-    use                     hosttemplate1 // [!code highlight] 
+    use                     hosttemplate1 // [!code highlight]
 }
 ```
 
@@ -85,25 +85,25 @@ You can see that the `check_command` and `notification_options` variables were i
 
 Objects can inherit properties/variables from multiple levels of template objects.  Take the following example:
 
-```
+```js
 define host{
     host_name               bighost1
     check_command           check-host-alive
     notification_options    d,u,r
     max_check_attempts      5
-    name                    hosttemplate1 // [!code highlight] 
+    name                    hosttemplate1 // [!code highlight]
 }
 
 define host{
     host_name               bighost2
     max_check_attempts      3
-    use                     hosttemplate1 // [!code highlight] 
-    name                    hosttemplate2 // [!code highlight] 
+    use                     hosttemplate1 // [!code highlight]
+    name                    hosttemplate2 // [!code highlight]
 }
 
 define host{
     host_name               bighost3
-    use                     hosttemplate2 // [!code highlight] 
+    use                     hosttemplate2 // [!code highlight]
 }
 ```
 
@@ -138,25 +138,25 @@ There is no inherent limit on how "deep" inheritance can go, but you'll probably
 
 It is possible to use incomplete object definitions as templates for use by other object definitions.  By "incomplete" definition, as in that all required variables of the object have not been supplied in the object definition.  It may sound odd to use incomplete definitions as templates, but it is in fact recommended that you use them.  Why?  Well, they can serve as a set of defaults for use in all other object definitions.  Take the following example:
 
-```
+```js
 define host{
     check_command           check-host-alive
     notification_options    d,u,r
     max_check_attempts      5
-    name                    generichosttemplate // [!code highlight] 
-    register                0 // [!code highlight] 
+    name                    generichosttemplate // [!code highlight]
+    register                0 // [!code highlight]
 }
 
 define host{
     host_name               bighost1
     address                 192.168.1.3
-    use                     generichosttemplate // [!code highlight] 
+    use                     generichosttemplate // [!code highlight]
 }
 
 define host{
     host_name               bighost2
     address                 192.168.1.4
-    use                     generichosttemplate // [!code highlight] 
+    use                     generichosttemplate // [!code highlight]
 }
 ```
 
@@ -188,18 +188,18 @@ At the very least, using a template definition for default variables will save y
 
 Any [custom object variables](customobjectvars) that you define in your host, service, or contact definition templates will be inherited just like other standard variables.  Take the following example:
 
-```
+```js
 define host{
     _customvar1             somevalue   ; <-- Custom host variable
     _snmp_community         public      ; <-- Custom host variable
-    name                    generichosttemplate // [!code highlight] 
-    register                0 // [!code highlight] 
+    name                    generichosttemplate // [!code highlight]
+    register                0 // [!code highlight]
 }
 
 define host{
     host_name               bighost1
     address                 192.168.1.3
-    use                     generichosttemplate // [!code highlight] 
+    use                     generichosttemplate // [!code highlight]
 }
 ```
 
@@ -218,18 +218,18 @@ define host{
 
 In some cases you may not want your host, service, or contact definitions to inherit values of string variables from the templates they reference.  If this is the case, you can specify `null` as the value of the variable that you do not want to inherit.  Take the following example:
 
-```
+```js
 define host{
     event_handler           my-event-handler-command
-    name                    generichosttemplate // [!code highlight] 
-    register                0 // [!code highlight] 
+    name                    generichosttemplate // [!code highlight]
+    register                0 // [!code highlight]
 }
 
 define host{
     host_name               bighost1
     address                 192.168.1.3
-    event_handler           null // [!code highlight] 
-    use                     generichosttemplate // [!code highlight] 
+    event_handler           null // [!code highlight]
+    use                     generichosttemplate // [!code highlight]
 }
 ```
 
@@ -249,17 +249,17 @@ Naemon gives preference to local variables instead of values inherited from temp
 
 This "additive inheritance" can be accomplished by prepending the local variable value with a plus sign (`+`).  This features is only available for standard (non-custom) variables that contain string values.  Take the following example:
 
-```
+```js
 define host{
     hostgroups              all-servers
-    name                    generichosttemplate // [!code highlight] 
-    register                0 // [!code highlight] 
+    name                    generichosttemplate // [!code highlight]
+    register                0 // [!code highlight]
 }
 
 define host{
     host_name               linuxserver1
-    hostgroups              +linux-servers,web-servers // [!code highlight] 
-    use                     generichosttemplate // [!code highlight] 
+    hostgroups              +linux-servers,web-servers // [!code highlight]
+    use                     generichosttemplate // [!code highlight]
 }
 ```
 
@@ -340,14 +340,14 @@ Why is this useful? It is mainly useful when setting a different `check_command`
 
 For instance:
 
-```
+```js
 # On master
 define service {
     name                    service-distributed
     register                0
     active_checks_enabled   0
     check_freshness	        1
-    check_command           !set_to_stale // [!code highlight] 
+    check_command           !set_to_stale // [!code highlight]
 }
 
 # On slave
@@ -372,7 +372,7 @@ define service {
 
 Thus far, all examples of inheritance have shown object definitions inheriting variables/values from just a single source.  You are also able to inherit variables/values from multiple sources for more complex configurations, as shown below.
 
-```
+```js
 # Generic host template
 define host{
     name                    generic-host // [!code error]
@@ -393,7 +393,7 @@ define host{
 
 # Development web server
 define host{
-    use                     generic-host,development-server // [!code highlight] 
+    use                     generic-host,development-server // [!code highlight]
     host_name               devweb1
     ...
 }
@@ -401,7 +401,7 @@ define host{
 
 ![Multiple Inheritance Sources](/images/usersguide/svg/multiple-templates1.svg) {.img-bg}
 
-In the example above, `devweb1` is inheriting variables/values from two sources: `generic-host` and `development-server`.  You'll notice that a `check_interval` variable is defined in both sources. 
+In the example above, `devweb1` is inheriting variables/values from two sources: `generic-host` and `development-server`.  You'll notice that a `check_interval` variable is defined in both sources.
 Since `generic-host` was the first template specified in `devweb1`'s `use` directive, its value for the `check_interval` variable is inherited by the `devweb1` host.  After inheritance,
 the effective definition of `devweb1` would be as follows:
 
