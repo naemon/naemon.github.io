@@ -18,9 +18,6 @@ export default defineConfig({
 
   srcDir: 'src',
 
-  // Can be removed as soon as the legacy content is removed
-  srcExclude: ['**/legacy/**'],
-
   vite: {
     server: {
       fs: {
