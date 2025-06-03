@@ -16,6 +16,33 @@ See upcoming changes from the next version on [Github](https://github.com/naemon
 
 ## Changelog
 
+### 1.4.4 - Jun 03 2025
+#### Features
+- trim spaces from list of templates
+- add support for configurable relative configuration paths
+- postpone check until check period starts
+
+#### Changed
+- make ascii control characters in object names illegal
+- improve config parser performance
+- launch command worker earlier
+- remove backslashes before semicolons
+- trim whitespace at end of plugin output
+
+#### Bugfixes
+- fix handling performance data
+
+#### Livestatus
+- add more columns to `downtimes_with_info` and `comments_with_info`
+- add support for configurable relative paths
+- improve generic error message
+- fix 32bit response size limit
+- improve shutdown during log queries
+- fix unix timestamps beyond 2038
+- fix error message on unknown filter
+
+---
+
 ### 1.4.3 - Nov 19 2024
 #### Features
  - add global notifications handler

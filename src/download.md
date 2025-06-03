@@ -40,34 +40,27 @@ The binary packages can also be downloaded here:
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_12/">12 Bookworm</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_11/">11 Bullseye</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_10/">10 Buster</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_9.0/">9 Stretch</a><br>
    </td>
  </tr>
  <tr>
    <td><i class="fa-brands fa-ubuntu fa-2x"></i></td>
    <td>Ubuntu</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_25.04/">25.04 Plucky Puffin</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_24.10/">24.10 Oracular Oriole</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_24.04/">24.04 Noble Numbat</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_23.10/">23.10 Mantic Minotaur</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_23.04/">23.04 Lunar Lobster</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_22.10/">22.10 Kinetic Kudu</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_22.04/">22.04 Jammy Jellyfish</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_21.10/">21.10 Impish Indri</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_21.04/">21.04 Hirsute Hippo</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_20.10/">20.10 Groovy Gorilla</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_20.04/">20.04 Focal Fossa</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_18.04/">18.04 Bionic</a><br>
    </td>
  </tr>
  <tr>
    <td><i class="fa-brands fa-fedora fa-2x"></i></td>
    <td>Fedora</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_41/">fc41</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_40/">fc40</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_39/">fc39</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_38/">fc38</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_37/">fc37</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_36/">fc36</a><br>
    </td>
  </tr>
 </tbody>
