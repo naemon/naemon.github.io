@@ -7,9 +7,9 @@ The Naemon Website is build with [VitePress](https://vitepress.dev) and can run 
 
 ### Prerequisites
 
- - [Node.js](https://nodejs.org/) version 18 or higher.
- - Text Editor with [Markdown](https://en.wikipedia.org/wiki/Markdown) syntax support.
-   - [Visual Studio Code](https://code.visualstudio.com/) for example. 
+- [Node.js](https://nodejs.org/) version 18 or higher.
+- Text Editor with [Markdown](https://en.wikipedia.org/wiki/Markdown) syntax support.
+- [Visual Studio Code](https://code.visualstudio.com/) for example.
 
 ```bash
 git clone https://github.com/naemon/naemon.github.io.git
@@ -19,6 +19,7 @@ npm install
 ```
 
 Now you are ready to start the development server
+
 ```bash
 npm run docs:dev
 ```
