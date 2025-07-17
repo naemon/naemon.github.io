@@ -5,17 +5,30 @@ const COMMANDS_URL      = 'https://raw.githubusercontent.com/naemon/naemon-core/
 const CACHE_FILE        = path.join(__dirname, './commands.c.cache');
 const CACHE_DURATION_MS = 3600 * 1000; // 1 hour
 
+enum CommandType {
+  UNKNOWN_TYPE,
+  CONTACT,
+  CONTACTGROUP,
+  TIMEPERIOD,
+  HOST,
+  HOSTGROUP,
+  SERVICE,
+  SERVICEGROUP
+}
+
 interface CommandArg {
   name: string
   type: string
 }
 interface Command {
-  name:          string
-  description:   string
-  args:          CommandArg[]
-  argsStr:       string
-  classes:       string[]
-  exampleArgStr: string
+  name:                     string
+  description:              string
+  args:                     CommandArg[]
+  argsStr:                  string
+  classes:                  string[]
+  exampleArgStr:            string
+  commandType?:             CommandType
+  additionalInformation?:   string // Add additional information into the script header
 }
 
 function hasArg(command: Command, argName: string): boolean {
@@ -91,21 +104,27 @@ async function getCommands(): Promise<Command[]> {
 
     if(hasArg(command, "hostgroup") || command.name.match(/hostgroup/i)) {
         command.classes.push("hostgroup")
+        command.commandType = CommandType.HOSTGROUP;
     }
     else if(hasArg(command, "host") || command.name.match(/host/i)) {
         command.classes.push("host")
+        command.commandType = CommandType.HOST;
     }
     if(hasArg(command, "servicegroup") || command.name.match(/servicegroup/i)) {
         command.classes.push("servicegroup")
+        command.commandType = CommandType.SERVICEGROUP;
     }
     else if(hasArg(command, "service") || command.name.match(/_svc_|_service_/i)) {
         command.classes.push("service")
+        command.commandType = CommandType.SERVICE;
     }
     if(hasArg(command, "contactgroup")) {
       command.classes.push("contactgroup")
+      command.commandType = CommandType.CONTACTGROUP;
     }
     else if(hasArg(command, "contact")) {
       command.classes.push("contact")
+      command.commandType = CommandType.CONTACT;
     }
     if(hasArg(command, "downtime") || command.name.match(/downtime/i)) {
         command.classes.push("downtime")
@@ -122,7 +141,21 @@ async function getCommands(): Promise<Command[]> {
 
     var argStr  = ""
     var examStr = ""
+
+    if(command?.commandType == CommandType.SERVICE) {
+      // Prefix host_name to service commands
+      argStr += ";host_name";
+      examStr += ";host1";
+    }
+
     for(var ar of command.args) {
+        if(command?.commandType == CommandType.SERVICE) {
+          // Also rename service to service_description
+          if(ar.name == "service") {
+            ar.name = "service_description";
+          }
+        }
+
         argStr += ";"+ar.name;
         examStr += ";"+getExample(ar, command);
     }
@@ -133,6 +166,20 @@ async function getCommands(): Promise<Command[]> {
     if(command.name == "LOG") {
         command.argsStr = ";any text"
         command.exampleArgStr = ";SERVICE NOTE: testhost;event handler restarted service successfully"
+    }
+
+    if(command.exampleArgStr.includes("SOMEVAR")){
+      switch(command?.commandType) {
+        case CommandType.CONTACT:
+          command.additionalInformation = "# This will change value of the custom variable: $_CONTACTSOMEVAR$\n";
+          break;
+        case CommandType.HOST:
+          command.additionalInformation = "# This will change value of the custom variable: $_HOSTSOMEVAR$\n";
+          break;
+        case CommandType.SERVICE:
+          command.additionalInformation = "# This will change value of the custom variable: $_SERVICESOMEVAR$\n";
+          break;
+      }
     }
 
     var template = tpl.replace('{% cmd %}', JSON.stringify(command));

@@ -9,7 +9,7 @@ aside: false
 ---
 
 <script setup>
-const command = {"args":[{"name":"hostgroup_name","type":"hostgroup"}],"name":"DISABLE_HOSTGROUP_PASSIVE_HOST_CHECKS","description":"Disables passive checks for all hosts in a particular hostgroup.","classes":["hostgroup"],"argsStr":";hostgroup_name","exampleArgStr":";hostgroup1"};
+const command = {"args":[{"name":"hostgroup_name","type":"hostgroup"}],"name":"DISABLE_HOSTGROUP_PASSIVE_HOST_CHECKS","description":"Disables passive checks for all hosts in a particular hostgroup.","classes":["hostgroup"],"commandType":5,"argsStr":";hostgroup_name","exampleArgStr":";hostgroup1"};
 </script>
 
 <h3>{{ command.name.replace(/_/g, " ") }}</h3>
@@ -28,7 +28,7 @@ const command = {"args":[{"name":"hostgroup_name","type":"hostgroup"}],"name":"D
 #!/bin/sh
 # This is a shell script showing how to submit the {{ command.name }} command
 # to Naemon. Adjust variables to fit your environment as necessary.
-
+{{ command?.additionalInformation  }}
 printf "[%lu] {{ command.name }}{{ command.exampleArgStr }}\n" \
     `date +%s` > /var/lib/naemon/naemon.cmd
 ```

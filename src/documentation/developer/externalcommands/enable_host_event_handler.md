@@ -9,7 +9,7 @@ aside: false
 ---
 
 <script setup>
-const command = {"args":[{"name":"host_name","type":"host"}],"name":"ENABLE_HOST_EVENT_HANDLER","description":"Enables the event handler for the specified host.","classes":["host"],"argsStr":";host_name","exampleArgStr":";host1"};
+const command = {"args":[{"name":"host_name","type":"host"}],"name":"ENABLE_HOST_EVENT_HANDLER","description":"Enables the event handler for the specified host.","classes":["host"],"commandType":4,"argsStr":";host_name","exampleArgStr":";host1"};
 </script>
 
 <h3>{{ command.name.replace(/_/g, " ") }}</h3>
@@ -28,7 +28,7 @@ const command = {"args":[{"name":"host_name","type":"host"}],"name":"ENABLE_HOST
 #!/bin/sh
 # This is a shell script showing how to submit the {{ command.name }} command
 # to Naemon. Adjust variables to fit your environment as necessary.
-
+{{ command?.additionalInformation  }}
 printf "[%lu] {{ command.name }}{{ command.exampleArgStr }}\n" \
     `date +%s` > /var/lib/naemon/naemon.cmd
 ```
