@@ -9,7 +9,7 @@ aside: false
 ---
 
 <script setup>
-const command = {"args":[{"name":"service","type":"service"}],"name":"START_OBSESSING_OVER_SVC","description":"Enables processing of service checks via the OCSP command for the specified service.","classes":["service"],"argsStr":";service","exampleArgStr":";service1"};
+const command = {"args":[{"name":"service_description","type":"service"}],"name":"START_OBSESSING_OVER_SVC","description":"Enables processing of service checks via the OCSP command for the specified service.","classes":["service"],"commandType":6,"argsStr":";host_name;service_description","exampleArgStr":";host1;service1"};
 </script>
 
 <h3>{{ command.name.replace(/_/g, " ") }}</h3>
@@ -28,7 +28,7 @@ const command = {"args":[{"name":"service","type":"service"}],"name":"START_OBSE
 #!/bin/sh
 # This is a shell script showing how to submit the {{ command.name }} command
 # to Naemon. Adjust variables to fit your environment as necessary.
-
+{{ command?.additionalInformation  }}
 printf "[%lu] {{ command.name }}{{ command.exampleArgStr }}\n" \
     `date +%s` > /var/lib/naemon/naemon.cmd
 ```

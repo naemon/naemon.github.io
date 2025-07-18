@@ -9,7 +9,7 @@ aside: false
 ---
 
 <script setup>
-const command = {"args":[{"name":"contact_name","type":"contact"},{"name":"varname","type":"str"},{"name":"varvalue","type":"str"}],"name":"CHANGE_CUSTOM_CONTACT_VAR","description":"Changes the value of a custom contact variable.","classes":["contact"],"argsStr":";contact_name;varname;varvalue","exampleArgStr":";naemonadmin;SOMEVAR;some new value"};
+const command = {"args":[{"name":"contact_name","type":"contact"},{"name":"varname","type":"str"},{"name":"varvalue","type":"str"}],"name":"CHANGE_CUSTOM_CONTACT_VAR","description":"Changes the value of a custom contact variable.","classes":["contact"],"commandType":1,"argsStr":";contact_name;varname;varvalue","exampleArgStr":";naemonadmin;SOMEVAR;some new value","additionalInformation":"# This will change value of the custom variable: $_CONTACTSOMEVAR$\n"};
 </script>
 
 <h3>{{ command.name.replace(/_/g, " ") }}</h3>
@@ -28,7 +28,7 @@ const command = {"args":[{"name":"contact_name","type":"contact"},{"name":"varna
 #!/bin/sh
 # This is a shell script showing how to submit the {{ command.name }} command
 # to Naemon. Adjust variables to fit your environment as necessary.
-
+{{ command?.additionalInformation  }}
 printf "[%lu] {{ command.name }}{{ command.exampleArgStr }}\n" \
     `date +%s` > /var/lib/naemon/naemon.cmd
 ```

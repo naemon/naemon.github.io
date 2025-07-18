@@ -9,7 +9,7 @@ aside: false
 ---
 
 <script setup>
-const command = {"args":[{"name":"service","type":"service"},{"name":"check_attempts","type":"int"}],"name":"CHANGE_MAX_SVC_CHECK_ATTEMPTS","description":"Changes the maximum number of check attempts (retries) for a particular service.","classes":["service"],"argsStr":";service;check_attempts","exampleArgStr":";service1;10"};
+const command = {"args":[{"name":"service_description","type":"service"},{"name":"check_attempts","type":"int"}],"name":"CHANGE_MAX_SVC_CHECK_ATTEMPTS","description":"Changes the maximum number of check attempts (retries) for a particular service.","classes":["service"],"commandType":6,"argsStr":";host_name;service_description;check_attempts","exampleArgStr":";host1;service1;10"};
 </script>
 
 <h3>{{ command.name.replace(/_/g, " ") }}</h3>
@@ -28,7 +28,7 @@ const command = {"args":[{"name":"service","type":"service"},{"name":"check_atte
 #!/bin/sh
 # This is a shell script showing how to submit the {{ command.name }} command
 # to Naemon. Adjust variables to fit your environment as necessary.
-
+{{ command?.additionalInformation  }}
 printf "[%lu] {{ command.name }}{{ command.exampleArgStr }}\n" \
     `date +%s` > /var/lib/naemon/naemon.cmd
 ```

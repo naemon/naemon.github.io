@@ -9,7 +9,7 @@ aside: false
 ---
 
 <script setup>
-const command = {"args":[{"name":"servicegroup_name","type":"servicegroup"}],"name":"DISABLE_SERVICEGROUP_SVC_NOTIFICATIONS","description":"Disables notifications for all services that are members of a particular servicegroup.","classes":["servicegroup"],"argsStr":";servicegroup_name","exampleArgStr":";servicegroup1"};
+const command = {"args":[{"name":"servicegroup_name","type":"servicegroup"}],"name":"DISABLE_SERVICEGROUP_SVC_NOTIFICATIONS","description":"Disables notifications for all services that are members of a particular servicegroup.","classes":["servicegroup"],"commandType":7,"argsStr":";servicegroup_name","exampleArgStr":";servicegroup1"};
 </script>
 
 <h3>{{ command.name.replace(/_/g, " ") }}</h3>
@@ -28,7 +28,7 @@ const command = {"args":[{"name":"servicegroup_name","type":"servicegroup"}],"na
 #!/bin/sh
 # This is a shell script showing how to submit the {{ command.name }} command
 # to Naemon. Adjust variables to fit your environment as necessary.
-
+{{ command?.additionalInformation  }}
 printf "[%lu] {{ command.name }}{{ command.exampleArgStr }}\n" \
     `date +%s` > /var/lib/naemon/naemon.cmd
 ```

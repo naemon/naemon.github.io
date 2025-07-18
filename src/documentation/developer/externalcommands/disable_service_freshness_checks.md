@@ -9,7 +9,7 @@ aside: false
 ---
 
 <script setup>
-const command = {"args":[],"name":"DISABLE_SERVICE_FRESHNESS_CHECKS","description":"Disables freshness checks of all services on a program-wide basis.","classes":["service"],"argsStr":"","exampleArgStr":""};
+const command = {"args":[],"name":"DISABLE_SERVICE_FRESHNESS_CHECKS","description":"Disables freshness checks of all services on a program-wide basis.","classes":["service"],"commandType":6,"argsStr":";host_name","exampleArgStr":";host1"};
 </script>
 
 <h3>{{ command.name.replace(/_/g, " ") }}</h3>
@@ -28,7 +28,7 @@ const command = {"args":[],"name":"DISABLE_SERVICE_FRESHNESS_CHECKS","descriptio
 #!/bin/sh
 # This is a shell script showing how to submit the {{ command.name }} command
 # to Naemon. Adjust variables to fit your environment as necessary.
-
+{{ command?.additionalInformation  }}
 printf "[%lu] {{ command.name }}{{ command.exampleArgStr }}\n" \
     `date +%s` > /var/lib/naemon/naemon.cmd
 ```

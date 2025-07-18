@@ -9,7 +9,7 @@ aside: false
 ---
 
 <script setup>
-const command = {"args":[],"name":"STOP_EXECUTING_HOST_CHECKS","description":"Disables active host checks on a program-wide basis.","classes":["host"],"argsStr":"","exampleArgStr":""};
+const command = {"args":[],"name":"STOP_EXECUTING_HOST_CHECKS","description":"Disables active host checks on a program-wide basis.","classes":["host"],"commandType":4,"argsStr":"","exampleArgStr":""};
 </script>
 
 <h3>{{ command.name.replace(/_/g, " ") }}</h3>
@@ -28,7 +28,7 @@ const command = {"args":[],"name":"STOP_EXECUTING_HOST_CHECKS","description":"Di
 #!/bin/sh
 # This is a shell script showing how to submit the {{ command.name }} command
 # to Naemon. Adjust variables to fit your environment as necessary.
-
+{{ command?.additionalInformation  }}
 printf "[%lu] {{ command.name }}{{ command.exampleArgStr }}\n" \
     `date +%s` > /var/lib/naemon/naemon.cmd
 ```

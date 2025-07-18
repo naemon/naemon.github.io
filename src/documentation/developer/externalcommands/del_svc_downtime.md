@@ -9,7 +9,7 @@ aside: false
 ---
 
 <script setup>
-const command = {"args":[{"name":"downtime_id","type":"ulong"}],"name":"DEL_SVC_DOWNTIME","description":"Deletes the service downtime entry that has an ID number matching the 'downtime_id' argument. If the downtime is currently in effect, the service will come out of scheduled downtime (as long as there are no other overlapping active downtime entries).","classes":["service","downtime"],"argsStr":";downtime_id","exampleArgStr":";1234"};
+const command = {"args":[{"name":"downtime_id","type":"ulong"}],"name":"DEL_SVC_DOWNTIME","description":"Deletes the service downtime entry that has an ID number matching the 'downtime_id' argument. If the downtime is currently in effect, the service will come out of scheduled downtime (as long as there are no other overlapping active downtime entries).","classes":["service","downtime"],"commandType":6,"argsStr":";host_name;downtime_id","exampleArgStr":";host1;1234"};
 </script>
 
 <h3>{{ command.name.replace(/_/g, " ") }}</h3>
@@ -28,7 +28,7 @@ const command = {"args":[{"name":"downtime_id","type":"ulong"}],"name":"DEL_SVC_
 #!/bin/sh
 # This is a shell script showing how to submit the {{ command.name }} command
 # to Naemon. Adjust variables to fit your environment as necessary.
-
+{{ command?.additionalInformation  }}
 printf "[%lu] {{ command.name }}{{ command.exampleArgStr }}\n" \
     `date +%s` > /var/lib/naemon/naemon.cmd
 ```

@@ -9,7 +9,7 @@ aside: false
 ---
 
 <script setup>
-const command = {"args":[{"name":"contactgroup_name","type":"contactgroup"}],"name":"ENABLE_CONTACTGROUP_HOST_NOTIFICATIONS","description":"Enables host notifications for all contacts in a particular contactgroup.","classes":["host","contactgroup"],"argsStr":";contactgroup_name","exampleArgStr":";contactgroup1"};
+const command = {"args":[{"name":"contactgroup_name","type":"contactgroup"}],"name":"ENABLE_CONTACTGROUP_HOST_NOTIFICATIONS","description":"Enables host notifications for all contacts in a particular contactgroup.","classes":["host","contactgroup"],"commandType":2,"argsStr":";contactgroup_name","exampleArgStr":";contactgroup1"};
 </script>
 
 <h3>{{ command.name.replace(/_/g, " ") }}</h3>
@@ -28,7 +28,7 @@ const command = {"args":[{"name":"contactgroup_name","type":"contactgroup"}],"na
 #!/bin/sh
 # This is a shell script showing how to submit the {{ command.name }} command
 # to Naemon. Adjust variables to fit your environment as necessary.
-
+{{ command?.additionalInformation  }}
 printf "[%lu] {{ command.name }}{{ command.exampleArgStr }}\n" \
     `date +%s` > /var/lib/naemon/naemon.cmd
 ```
