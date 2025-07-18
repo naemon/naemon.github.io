@@ -137,6 +137,14 @@ CI suite build status: <a href="https://github.com/naemon/naemon/actions"><img s
 ### openSuse Build Service
 There are daily builds available for recent platforms at the [obs home:naemon:daily project](https://build.opensuse.org/project/show/home:naemon:daily)
 
+To enable a daily build repository, you need to replace `/home:/naemon/` with `/home:/naemon:/daily/` in the repository URL.
+
+#### Daily Ubuntu
+```bash
+curl -s -o /etc/apt/trusted.gpg.d/naemon.asc "https://build.opensuse.org/projects/home:naemon/signing_keys/download?kind=gpg"
+echo "deb [signed-by=/etc/apt/trusted.gpg.d/naemon.asc] http://download.opensuse.org/repositories/home:/naemon:/daily/xUbuntu_$(lsb_release -rs)/ ./" >> /etc/apt/sources.list.d/naemon-daily.list
+```
+
 ### Binary packages
 We build nightly packages for several versions of CentOS/RedHat, Debian, SLES, and Ubuntu. First [install the ConSol testing repository](http://labs.consol.de/repo/testing/), and then install the `naemon` package with your package manager.
 
