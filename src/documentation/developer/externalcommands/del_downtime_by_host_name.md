@@ -9,7 +9,7 @@ aside: false
 ---
 
 <script setup>
-const command = {"args":[],"name":"DEL_DOWNTIME_BY_HOST_NAME","description":"This command deletes all downtimes matching the specified filters.","classes":["host","downtime"],"commandType":4,"argsStr":"","exampleArgStr":""};
+const command = {"args":[{"name":"hostname","type":"STRING"},{"name":"service_description","type":"STRING"},{"name":"downtime_start_time","type":"TIMESTAMP"},{"name":"comment","type":"STRING"}],"name":"DEL_DOWNTIME_BY_HOST_NAME","description":"This command deletes all downtimes matching the specified filters.","classes":["host","downtime"],"commandType":4,"argsStr":";hostname;service_description;downtime_start_time;comment","exampleArgStr":";host1;service1;1478648441;This is an example comment."};
 </script>
 
 <h3>{{ command.name.replace(/_/g, " ") }}</h3>

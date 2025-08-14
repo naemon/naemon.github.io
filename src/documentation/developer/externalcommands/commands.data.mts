@@ -77,6 +77,9 @@ async function getCommands(): Promise<Command[]> {
 
     const matches = line.match(/command_create\s*\(\s*\"([^,]+)\"\s*,([^,]+),\s*"([^"]*)"\s*,\s*([^,]+)\)/);
     if (matches) {
+      lastCommand = {} as Command;
+      lastCommand.args = [];
+
       lastCommand.name = matches[1].trim();
       lastCommand.description = matches[3].trim();
       data.push(lastCommand);
@@ -87,9 +90,6 @@ async function getCommands(): Promise<Command[]> {
           lastCommand.args.push({ name: a[1].trim(), type: a[0].trim() });
         }
       }
-
-      lastCommand = {} as Command;
-      lastCommand.args = [];
     }
     const argmatches = line.match(/command_argument_add\s*\(([^,]+)\s*,\s*\"([^,]+)\"\s*,\s*([^,]+)\s*,\s*([^,]+)/);
     if (argmatches) {

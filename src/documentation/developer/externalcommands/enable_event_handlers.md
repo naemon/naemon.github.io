@@ -9,7 +9,7 @@ aside: false
 ---
 
 <script setup>
-const command = {"args":[{"name":"downtime_start_time","type":"TIMESTAMP"},{"name":"comment","type":"STRING"}],"name":"ENABLE_EVENT_HANDLERS","description":"Enables host and service event handlers on a program-wide basis.","classes":["comment"],"argsStr":";downtime_start_time;comment","exampleArgStr":";1478648441;This is an example comment."};
+const command = {"args":[],"name":"ENABLE_EVENT_HANDLERS","description":"Enables host and service event handlers on a program-wide basis.","classes":["process"],"argsStr":"","exampleArgStr":""};
 </script>
 
 <h3>{{ command.name.replace(/_/g, " ") }}</h3>
