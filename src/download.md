@@ -37,6 +37,7 @@ The binary packages can also be downloaded here:
    <td>Debian</td>
    <td>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_Testing/">Testing</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_13/">13 Trixie</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_12/">12 Bookworm</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_11/">11 Bullseye</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Debian_10/">10 Buster</a><br>
