@@ -33,4 +33,8 @@ Technical and API documentation for Naemon.
 
 ## Documentation / Website
 
-[Run Naemon Website Locally](website)
+[Run Naemon website locally](website)
+
+## Internal / Releases
+
+[How to create a release](releases)

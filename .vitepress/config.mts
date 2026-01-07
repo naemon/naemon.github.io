@@ -161,7 +161,8 @@ export default defineConfig({
               { text: 'Check Result Spoolfolder', link: '/documentation/developer/spoolfolder' },
               { text: 'Worker Processes', link: '/documentation/developer/workers' },
               { text: 'Build Naemon From Scratch', link: '/documentation/developer/build' },
-              { text: 'Naemon Website', link: '/documentation/developer/website' }
+              { text: 'Naemon Website', link: '/documentation/developer/website' },
+              { text: 'Releases', link: '/documentation/developer/releases' }
             ]
           },
           {
