@@ -14,18 +14,28 @@ Make sure all builds and CI pipelines are green.
 
 ### Naemon Core
 
+Please make sure you have installed the required dependencies first. For Debian based
+systems this can be done like so:
+```bash
+apt-get install vim git build-essential make devscripts dialog osc
+```
+
 1. Create release commit:
 
     ```shell
-    %> # git clone https://github.com/naemon/naemon-core
+    %> NEW_VERSION=1.5.0
+    %>
+    %> git clone https://github.com/naemon/naemon-core
     %> cd naemon-core
     %> git pull
+    %> git checkout -b "release_v${NEW_VERSION}"
+    %> ./autogen.sh
     %> make clean
     %> make version
     %> vim NEWS
-    %> git commit -avs -m "release v<VERSION>"
-    %> git tag "v<VERSION>"
-    %> git push
+    %> git commit -avs -m "release v${NEW_VERSION}"
+    %> git tag "v${NEW_VERSION}"
+    %> git push origin "release_v${NEW_VERSION}"
     %> git push --tags
     ```
 
