@@ -18,6 +18,7 @@ The binary packages can also be downloaded here:
    <td><i class="fa-brands fa-redhat fa-2x"></i></td>
    <td>Enterprise Linux (Red Hat, RockyLinux, AlmaLinux etc)</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/AlmaLinux_10/">EL10</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/AlmaLinux_9/">EL9</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/AlmaLinux_8/">EL8</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/CentOS_7/">EL7</a><br>
@@ -58,10 +59,10 @@ The binary packages can also be downloaded here:
    <td><i class="fa-brands fa-fedora fa-2x"></i></td>
    <td>Fedora</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_43/">fc43</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_42/">fc42</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_41/">fc41</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_40/">fc40</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_39/">fc39</a><br>
-        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_38/">fc38</a><br>
    </td>
  </tr>
 </tbody>
