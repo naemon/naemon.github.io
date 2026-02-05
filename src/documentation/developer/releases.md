@@ -34,16 +34,14 @@ apt-get install vim git build-essential make devscripts dialog osc
     %> make version
     %> vim NEWS
     %> git commit -avs -m "release v${NEW_VERSION}"
-    %> git tag "v${NEW_VERSION}"
     %> git push origin "release_v${NEW_VERSION}"
-    %> git push --tags
     ```
 
 2. Wait for pipeline actions on [GitHub](https://github.com/naemon/naemon-core/actions).
 
 3. Then create release on [naemon core releases](https://github.com/naemon/naemon-core/releases).
 
-    Use the tag name as title and the news entry as description.
+    Use `v1.x.x` as tag name and title and the news entry as description.
 
 4. Update OSB Builds
 
