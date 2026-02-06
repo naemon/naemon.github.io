@@ -61,8 +61,9 @@ apt-get install vim git build-essential make devscripts dialog osc
 
     ```shell
     %> # git clone https://github.com/naemon/naemon-livestatus
-    %> cd naemon-core
+    %> cd naemon-livestatus
     %> git pull
+    %> ./autogen.sh
     %> make clean
     %> make version
     %> git commit -avs -m "release v<VERSION>"
@@ -75,7 +76,7 @@ apt-get install vim git build-essential make devscripts dialog osc
 
 3. Then create release on [naemon livestatus releases](https://github.com/naemon/naemon-livestatus/releases).
 
-    Use the tag name as title and the news entry as description.
+    Use the tag name as title and write a description from the git log.
 
 4. Update OSB Builds
 
@@ -97,6 +98,7 @@ apt-get install vim git build-essential make devscripts dialog osc
     %> # git clone https://github.com/naemon/naemon-vimcrypt-vault-broker
     %> cd naemon-vimcrypt-vault-broker
     %> git pull
+    %> ./autogen.sh
     %> make clean
     %> make version
     %> git commit -avs -m "release v<VERSION>"
