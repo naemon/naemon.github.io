@@ -1895,11 +1895,11 @@ If you want it to use the latest state (regardless of whether its a soft or hard
 </tbody>
 </table>
 
-This is the maximum number of seconds that Naemon will allow service checks to run.
+This is the default value for the maximum number of seconds that Naemon will allow service checks to run.
 
-If checks exceed this limit, they are killed and a CRITICAL state is returned.
+If a service [definition](objectdefinitions#service) has its own check_timeout, it will be used instead of service_check_timeout.
 
- A timeout error will also be logged.
+If checks exceed this limit, they are killed and a CRITICAL state is returned. A timeout error will also be logged.
 
 There is often widespread confusion as to what this option really does.
 
@@ -1924,17 +1924,17 @@ If a service check runs longer than this limit, Naemon will kill it off thinking
 </tbody>
 </table>
 
-This is the maximum number of seconds that Naemon will allow host checks to run.
+This is the default value for the maximum number of seconds that Naemon will allow host checks to run.
 
-If checks exceed this limit, they are killed and a CRITICAL state is returned and the host will be assumed to be DOWN.
+If a host [definition](objectdefinitions#host) has its own check_timeout, it will be used instead of host_check_timeout.
 
-A timeout error will also be logged.
+If checks exceed this limit, they are killed and a CRITICAL state is returned and the host will be assumed to be DOWN. A timeout error will also be logged.
 
 There is often widespread confusion as to what this option really does.
 
 It is meant to be used as a last ditch mechanism to kill off plugins which are misbehaving and not exiting in a timely manner.
 
-It should be set to something high (like 60 seconds or more), so that each host check normally finishes executing within this time limit.
+It should be set to something high (like 30 seconds or more), so that each host check normally finishes executing within this time limit.
 
 If a host check runs longer than this limit, Naemon will kill it off thinking it is a runaway processes.
 

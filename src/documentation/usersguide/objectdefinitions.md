@@ -95,6 +95,7 @@ define host {
     hourly_value                     #
     hostgroups                       hostgroup_names
     check_command                    command_name
+    check_timeout                    #
     initial_state                    [o,d,u]
     max_check_attempts               # // [!code error]
     check_interval                   #
@@ -253,7 +254,28 @@ Thus, Naemon will likely always assume the host is up (it may show up as being i
 
 This is useful if you are monitoring printers or other devices that are frequently turned off.
 
-The maximum amount of time that the notification command can run is controlled by the [host_check_timeout](configmain#host_check_timeout) option.
+
+</td>
+</tr>
+<tr>
+<td valign="top"><strong>check_timeout</strong>:</td>
+<td>
+Timeout Naemon will use when performing the host check using its check_command, specified in seconds.
+
+When unspecified, it will take the default value from [host_check_timeout](configmain#host_check_timeout).
+
+Override the default host_check_timeout with this option if its fits better for your needs.
+
+If checks exceed this limit, they are killed and a CRITICAL state is returned and the host will be assumed to be DOWN. A timeout error will also be logged.
+
+There is often widespread confusion as to what this option really does.
+
+It is meant to be used as a last ditch mechanism to kill off plugins which are misbehaving and not exiting in a timely manner.
+
+It should be set to something high (like 30 seconds or more), so that each host check normally finishes executing within this time limit.
+
+If a host check runs longer than this limit, Naemon will kill it off thinking it is a runaway processes.
+
 </td>
 </tr>
 <tr>
@@ -823,6 +845,7 @@ define service {
     servicegroups                   servicegroup_names
     is_volatile                     [0/1]
     check_command                   command_name // [!code error]
+    check_timeout                   #
     initial_state                   [o,w,u,c]
     max_check_attempts              # // [!code error]
     check_interval                  # // [!code error]
@@ -969,7 +992,29 @@ Value: `0` = service is not volatile, `1` = service is volatile.
 
 This directive is used to specify the *short name* of the [command](#command) that Naemon will run in order to check the status of the service.
 
-The maximum amount of time that the service check command can run is controlled by the [service_check_timeout](configmain#service_check_timeout) option.
+The maximum amount of time that the service check command can run is controlled by the check_timeout option.
+
+</td>
+</tr>
+<tr>
+<td valign="top"><strong>check_timeout</strong>:</td>
+<td>
+Timeout Naemon will use when performing the service check using its check_command, specified in seconds.
+
+When unspecified, it will take the default value from [service_check_timeout](configmain#service_check_timeout).
+
+Override the default service_check_timeout with this option if its fits better for your needs.
+
+If checks exceed this limit, they are killed and a CRITICAL state is returned. A timeout error will also be logged.
+
+There is often widespread confusion as to what this option really does.
+
+It is meant to be used as a last ditch mechanism to kill off plugins which are misbehaving and not exiting in a timely manner.
+
+It should be set to something high (like 60 seconds or more), so that each service check normally finishes executing within this time limit.
+
+If a service check runs longer than this limit, Naemon will kill it off thinking it is a runaway processes.
+
 </td>
 </tr>
 <tr>
