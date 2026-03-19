@@ -23,6 +23,7 @@ apt-get install vim git build-essential make devscripts dialog osc
 1. Create release commit:
 
     ```shell
+    %> export LANG=c
     %> NEW_VERSION=1.5.0
     %>
     %> git clone https://github.com/naemon/naemon-core
