@@ -16,6 +16,16 @@ See upcoming changes from the next version on [Github](https://github.com/naemon
 
 ## Changelog
 
+### 1.5.1 - Mar 19 2026
+#### Breaking changes:
+- Due to object structure changes, it is recommended to recompile any NEB modules
+
+#### Features:
+- new attribute 'check_timeout' on `host` and `service` structs, overrides the global host / service check timeouts. (#525)
+
+#### Bugfixes:
+- fix memory corruption in `mkstr` caused by integer overflow (#527)
+
 ### 1.5.0 - Feb 03 2026
 #### Breaking changes:
 - Due to object structure changes, it is recommended to recompile any NEB modules
