@@ -16,6 +16,10 @@ See upcoming changes from the next version on [Github](https://github.com/naemon
 
 ## Changelog
 
+### 1.5.2 - May 18 2026
+#### Bugfixes:
+- Discarded-qualifiers errors in string searching functions (#531)
+
 ### 1.5.1 - Mar 19 2026
 #### Breaking changes:
 - Due to object structure changes, it is recommended to recompile any NEB modules
