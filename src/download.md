@@ -48,6 +48,7 @@ The binary packages can also be downloaded here:
    <td><i class="fa-brands fa-ubuntu fa-2x"></i></td>
    <td>Ubuntu</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_26.04/">26.04 Resolute Raccoon</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_25.04/">25.04 Plucky Puffin</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_24.10/">24.10 Oracular Oriole</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_24.04/">24.04 Noble Numbat</a><br>
