@@ -38,20 +38,56 @@ int nebmodule_deinit(int flags, int reason) {
 
 compile with:
 ```bash
-  %> gcc $(pkg-config --cflags naemon) -shared -fPIC  module.c -o module.o
+  %> gcc $(pkg-config --cflags naemon) -shared -fPIC  module.c -o module.so
 ```
 
 And load the module from your `naemon.cfg` with:
 ```
-broker_module=..../module.o
+broker_module=/path/to/module.so
 ```
 
 If everything worked, you should see something like this in your `naemon.log`
 
 ```
 [1636297273] module loaded
-[1636297273] Event broker module '/omd/sites/demo/var/tmp/mymodule.o' initialized successfully.
+[1636297273] Event broker module '/path/to/module.so' initialized successfully.
 ```
+
+
+### Writing a module
+
+**API version.** `NEB_API_VERSION(CURRENT_NEB_API_VERSION)` records the
+version your module was built against. Naemon only loads a module whose
+version matches its own exactly, so a module has to be recompiled whenever
+`CURRENT_NEB_API_VERSION` changes.
+
+**Arguments.** Everything after the path in the `broker_module` line is
+passed to `nebmodule_init()` as `arg`:
+```
+broker_module=/path/to/module.so config=/etc/mymodule.cfg debug=1
+```
+
+**Registering callbacks.** Call `neb_register_callback(type, handle,
+priority, func)` from `nebmodule_init()`. Callbacks of the same type run in
+ascending order of `priority`. Naemon deregisters all of a module's callbacks
+when it is unloaded.
+
+**Return values.** A callback normally returns `OK`. Some events, such as
+an upcoming check, notification, event handler or external command, also
+accept `NEBERROR_CALLBACKOVERRIDE` or `NEBERROR_CALLBACKCANCEL` to take over
+or stop the action; [Event Types](#event-types) says which, and what each
+does. Both also skip the callbacks of modules that come after yours.
+
+**Which events are sent.** `event_broker_options` in `naemon.cfg` decides
+which kinds of events Naemon sends to modules at all. The default `-1` sends
+everything; a narrower setting is the usual reason a callback never fires.
+The bits are the `BROKER_*` flags in `naemon/broker.h`.
+
+**Callbacks run in the event loop.** Naemon is single threaded and waits for
+every callback to return, so keep them short and never block on I/O. The
+data a callback receives is only valid during the call: copy what you want
+to keep. If your module runs threads of its own, they must not call into
+Naemon.
 
 
 ### Real World Examples
@@ -67,12 +103,12 @@ Also have a look at real world examples:
 * [https://github.com/ConSol/go-neb-wrapper](https://github.com/ConSol/go-neb-wrapper) (Go framework to write neb modules in Golang)
 
 
-### Callback Types
+### Example: Vault Macros
 
-#### `NEBCALLBACK_VAULT_MACRO_DATA`
-
-The vault callback can be used to dynamically set macro values. The module registers
-a single callback which sets the value of the supplied data structure.
+A `NEBCALLBACK_VAULT_MACRO_DATA` callback can set macro values dynamically. The
+module registers a single callback which sets the value of the supplied data
+structure. Naemon only calls it when `event_broker_options` includes
+`BROKER_VAULT_MACROS`, which the default `-1` does.
 
 ```C
 // module.c
@@ -88,7 +124,6 @@ static int handle_vault_macro(int cb, void *_ds) {
 }
 int nebmodule_init(__attribute__((unused)) int flags, char *arg, nebmodule *handle) {
 	neb_handle = (void *)handle;
-	event_broker_options = BROKER_EVERYTHING;
 	neb_register_callback(NEBCALLBACK_VAULT_MACRO_DATA, neb_handle, 0, handle_vault_macro);
 	return OK;
 }
@@ -100,12 +135,12 @@ int nebmodule_deinit(__attribute__((unused)) int flags, __attribute__((unused)) 
 
 compile with:
 ```bash
-  %> gcc $(pkg-config --cflags naemon) -shared -fPIC  module.c -o module.o
+  %> gcc $(pkg-config --cflags naemon) -shared -fPIC  module.c -o module.so
 ```
 
 And load the module from your `naemon.cfg` with:
 ```
-broker_module=/path/to/module.o
+broker_module=/path/to/module.so
 ```
 
 
@@ -144,22 +179,22 @@ for compatibility, but Naemon never emits them.
 
 #### `NEBCALLBACK_EVENT_HANDLER_DATA`
 
-- `NEBTYPE_EVENTHANDLER_START` (500): an event handler is started
+- `NEBTYPE_EVENTHANDLER_START` (500): an event handler is about to run; `NEBERROR_CALLBACKOVERRIDE` skips it
 - `NEBTYPE_EVENTHANDLER_END` (501): an event handler was handed to a worker
 
 #### `NEBCALLBACK_NOTIFICATION_DATA`
 
-- `NEBTYPE_NOTIFICATION_START` (600): a host or service notification begins
+- `NEBTYPE_NOTIFICATION_START` (600): a host or service notification begins; `NEBERROR_CALLBACKOVERRIDE` or `NEBERROR_CALLBACKCANCEL` stops it
 - `NEBTYPE_NOTIFICATION_END` (601): a host or service notification is done
 
 #### `NEBCALLBACK_CONTACT_NOTIFICATION_DATA`
 
-- `NEBTYPE_CONTACTNOTIFICATION_START` (602): a contact is about to be notified
+- `NEBTYPE_CONTACTNOTIFICATION_START` (602): a contact is about to be notified; `NEBERROR_CALLBACKOVERRIDE` or `NEBERROR_CALLBACKCANCEL` skips this contact
 - `NEBTYPE_CONTACTNOTIFICATION_END` (603): a contact has been notified
 
 #### `NEBCALLBACK_CONTACT_NOTIFICATION_METHOD_DATA`
 
-- `NEBTYPE_CONTACTNOTIFICATIONMETHOD_START` (604): a contact's notification command is about to run
+- `NEBTYPE_CONTACTNOTIFICATIONMETHOD_START` (604): a contact's notification command is about to run; `NEBERROR_CALLBACKOVERRIDE` skips this command, `NEBERROR_CALLBACKCANCEL` all remaining ones for this contact
 - `NEBTYPE_CONTACTNOTIFICATIONMETHOD_END` (605): a contact's notification command was handed to a worker
 
 #### `NEBCALLBACK_SERVICE_CHECK_DATA`
@@ -232,7 +267,7 @@ for compatibility, but Naemon never emits them.
 
 #### `NEBCALLBACK_EXTERNAL_COMMAND_DATA`
 
-- `NEBTYPE_EXTERNALCOMMAND_START` (1400): an external command is about to be processed
+- `NEBTYPE_EXTERNALCOMMAND_START` (1400): an external command is about to be processed; `NEBERROR_CALLBACKOVERRIDE` or `NEBERROR_CALLBACKCANCEL` drops it
 - `NEBTYPE_EXTERNALCOMMAND_END` (1401): an external command has been processed
 
 #### `NEBCALLBACK_AGGREGATED_STATUS_DATA`
