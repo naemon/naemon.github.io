@@ -62,7 +62,8 @@ Also have a look at real world examples:
 * [https://github.com/naemon/naemon-vimcrypt-vault-broker](https://github.com/naemon/naemon-vimcrypt-vault-broker) (Naemon vim vault macros)
 * [https://github.com/sni/mod_gearman](https://github.com/sni/mod_gearman) (Distributed checks with Gearman)
 * [https://github.com/ITRS-Group/monitor-merlin](https://github.com/ITRS-Group/monitor-merlin) (Loadbalancing in Naemon)
-* [https://github.com/statusengine/module](https://github.com/statusengine/module) (Export status information as JSON)
+* [https://github.com/statusengine/broker](https://github.com/statusengine/broker) (Export status information as JSON, C++)
+* [https://github.com/statusengine/module](https://github.com/statusengine/module/blob/master/src/statusengine.c) (End-of-life C broker that also exports status information as JSON. Although unmaintained, its straightforward codebase makes it a useful reference for developers.)
 * [https://github.com/ConSol/go-neb-wrapper](https://github.com/ConSol/go-neb-wrapper) (Go framework to write neb modules in Golang)
 
 
