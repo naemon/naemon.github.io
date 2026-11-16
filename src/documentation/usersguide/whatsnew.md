@@ -16,6 +16,52 @@ See upcoming changes from the next version on [Github](https://github.com/naemon
 
 ## Changelog
 
+### 1.6.0 - Nov 16 2026
+#### Breaking changes:
+- increased CURRENT_NEB_API_VERSION, you have to recompile your NEB modules
+- the command file worker no longer runs as a separate process; the external
+  command file is polled directly by the main process event loop
+
+#### Features:
+- new NEBTYPE_HOSTSTATUS_SCHEDULE / NEBTYPE_SERVICESTATUS_SCHEDULE callbacks,
+  sent when only the next check time changed
+- the 'timeout' field of check result spool files is now read, falling back to
+  the object's configured timeout (#539)
+- performance improvements for the main event loop
+- status.dat, retention.dat and objects.cache are written faster
+
+#### Changed:
+- refuse to start or reload when the retention file cannot be read completely
+- allow_empty_hostgroup_assignment: code and sample config now agree on 2,
+  which can also be set in the config; invalid values are rejected (#556)
+- log a warning when trailing characters in a boolean object directive
+  are ignored
+
+#### Bugfixes:
+- nsock_unix() rejects socket paths that do not fit in sockaddr_un.sun_path;
+  a query_socket path of 108 characters or more crashed naemon at startup
+- reading a file that shrank or failed while being read crashed Naemon
+- expired check result files were not removed from check_result_path
+- the perfdata file was opened even when no perfdata_file was configured
+- fix a second late next_check at startup and dropped acknowledgement
+  expirations that fired up to a millisecond early
+- check_result->timeout was not initialized (#539)
+
+#### Livestatus
+- fix statehist Sort: returning identical rows (#140)
+- prefix logfile lines with severity tag
+- cache host-state and service-state aggregates for faster stats queries
+- bulk-append untouched rows in the JSON string escaping (#142)
+- make the Aggregator destructor virtual
+
+#### Vimvault
+- Add `include` / `include_dir` directives plus `max_files` and
+  `warn_no_match` options; note: the last definition of a duplicate
+  macro now wins
+- Fix out-of-bounds key write and ciphertext over-read, reject truncated
+  vault files
+- Fix reload with a master password entered at startup
+
 ### 1.5.2 - May 18 2026
 #### Bugfixes:
 - Discarded-qualifiers errors in string searching functions (#531)
