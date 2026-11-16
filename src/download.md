@@ -28,6 +28,7 @@ The binary packages can also be downloaded here:
    <td><i class="fa-brands fa-suse fa-2x"></i></td>
    <td>SLES</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/16.0/">16</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/15.6/">15 SP6</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/15.5/">15 SP5</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/15.4/">15 SP4</a><br>
@@ -48,7 +49,9 @@ The binary packages can also be downloaded here:
    <td><i class="fa-brands fa-ubuntu fa-2x"></i></td>
    <td>Ubuntu</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_26.10/">26.10 Rusty Rat</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_26.04/">26.04 Resolute Raccoon</a><br>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_25.10/">25.10 Questing Quokka</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_25.04/">25.04 Plucky Puffin</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_24.10/">24.10 Oracular Oriole</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/xUbuntu_24.04/">24.04 Noble Numbat</a><br>
@@ -60,6 +63,7 @@ The binary packages can also be downloaded here:
    <td><i class="fa-brands fa-fedora fa-2x"></i></td>
    <td>Fedora</td>
    <td>
+        <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_44/">fc44</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_43/">fc43</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_42/">fc42</a><br>
         <a href="https://download.opensuse.org/repositories/home:/naemon/Fedora_41/">fc41</a><br>
@@ -129,6 +133,16 @@ zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/15.4/h
 #### SLES 15 SP5
 ```bash
 zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/15.5/home:naemon.repo
+```
+
+#### SLES 15 SP6
+```bash
+zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/15.6/home:naemon.repo
+```
+
+#### SLES 16
+```bash
+zypper addrepo -f https://download.opensuse.org/repositories/home:/naemon/16.0/home:naemon.repo
 ```
 
 ## Development snapshot {#development_snapshot}
