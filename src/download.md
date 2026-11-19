@@ -166,6 +166,10 @@ echo "deb [signed-by=/etc/apt/trusted.gpg.d/naemon.asc] http://download.opensuse
 We build nightly packages for several versions of CentOS/RedHat, Debian, SLES, and Ubuntu. First [install the ConSol testing repository](http://labs.consol.de/repo/testing/), and then install the `naemon` package with your package manager.
 
 ## Source
-Download the latest development source code from [GitHub](http://github.com/naemon/naemon).
+Download the latest development source code:
+
+- [Naemon Core](http://github.com/naemon/naemon-core).
+- [Naemon Livestatus](http://github.com/naemon/naemon-livestatus).
+- [Naemon Meta](http://github.com/naemon/naemon).
 
 See the [Build Naemon From Scratch](/documentation/developer/build) document in the developer guide.
